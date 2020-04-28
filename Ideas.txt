@@ -1,0 +1,4 @@
+-Crear una clase tipo controlador para poder ordenar mejor el input/output 
+
+-Buscar librerias para trabajar archivos de musica o parecidos
+
