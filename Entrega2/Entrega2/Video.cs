@@ -26,6 +26,17 @@ namespace Entrega2
         internal List<actor> Actores { get => actores; set => actores = value; }
         internal director Director { get => director; set => director = value; }
 
-        public Video(string nameVideo, string direccionmemoria, string genero, int vistos, List<actor> actores, director director, string )
+        public Video(string nameVideo, string direccionmemoria, string genero, int vistos, List<actor> actores, director director, string estudio, string caratula)
+        {
+            this.nameVideo = nameVideo;
+            this.direccionMemoria = direccionmemoria;
+            this.genero = genero;
+            this.vistos = vistos;
+            this.actores = actores;
+            this.director = director;
+            this.estudio = estudio;
+            this.caratula = caratula;
+
+        }
     }
 }

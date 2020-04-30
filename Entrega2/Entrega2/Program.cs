@@ -12,7 +12,7 @@ namespace Entrega2
         static void Main(string[] args)
         {
 
-            WindowsMediaPlayer sonido;
+            /*WindowsMediaPlayer sonido;
             
 
             try
@@ -47,7 +47,7 @@ namespace Entrega2
             catch (Exception ex)
             {
                 Console.WriteLine("Error. " + ex.Message);
-            }
+            }*/
 
         }
     }
