@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Entrega2
 {
-    public class Playlist
+    class Playlist
     {
         private string nombrePlaylist;
         private List<Cancion> canciones;
@@ -16,7 +16,7 @@ namespace Entrega2
         internal List<Video> Videos { get => videos; set => videos = value; }
 
         
-        public void Playlist(string nombrePlaylist, List<Cancion> canciones, List<Video> videos)
+        public Playlist(string nombrePlaylist, List<Cancion> canciones, List<Video> videos)
         {
             this.nombrePlaylist=nombrePlaylist;
             this.Canciones=canciones;

@@ -10,7 +10,7 @@ namespace Entrega2
         private string Nombre_Estudio;
         private string Genero;
         private string Rating;
-        private string Caratula;
+        private Caratula Caratula;
 
         public string Nombre_Compositor1 { get => Nombre_Compositor; set => Nombre_Compositor = value; }
         public string Titulo_Cancion1 { get => Titulo_Cancion; set => Titulo_Cancion = value; }
@@ -19,7 +19,7 @@ namespace Entrega2
         public string Nombre_Estudio1 { get => Nombre_Estudio; set => Nombre_Estudio = value; }
         public string Genero1 { get => Genero; set => Genero = value; }
         public string Rating1 { get => Rating; set => Rating = value; }
-        public string Caratula1 { get => Caratula; set => Caratula = value; }
+
 
         public Cancion(string Nombre_Compositor, string Titulo_Cancion, int Numero_Cancion_Album, DateTime Fecha_Lanzamiento, string Nombre_Estudio, string Genero, string Rating, string Caratula)
         {
@@ -30,7 +30,6 @@ namespace Entrega2
             this.Nombre_Estudio = Nombre_Estudio;
             this.Genero = Genero;
             this.Rating = Rating;
-            this.Caratula = Caratula;
         }
     }
 }
