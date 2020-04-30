@@ -13,7 +13,7 @@ namespace Entrega2
         private string genero;
         private int vistos;
         private List<Actor> actores;
-        private director director;
+        private Director director;
         private string estudio;
         private string caratula;
 
@@ -24,9 +24,9 @@ namespace Entrega2
         public string Estudio { get => estudio; set => estudio = value; }
         public string Caratula { get => caratula; set => caratula = value; }
         internal List<Actor> Actores { get => actores; set => actores = value; }
-        internal director Director { get => director; set => director = value; }
+        internal Director Director { get => director; set => director = value; }
 
-        public Video(string nameVideo, string direccionmemoria, string genero, int vistos, List<Actor> actores, director director, string estudio, string caratula)
+        public Video(string nameVideo, string direccionmemoria, string genero, int vistos, List<Actor> actores, Director director, string estudio, string caratula)
         {
             this.nameVideo = nameVideo;
             this.direccionMemoria = direccionmemoria;

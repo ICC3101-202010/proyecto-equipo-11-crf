@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actor.cs" />
-    <Compile Include="director.cs" />
+    <Compile Include="Director.cs" />
     <Compile Include="Video.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
