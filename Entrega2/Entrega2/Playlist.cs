@@ -11,10 +11,17 @@ namespace Entrega2
         private List<Cancion> canciones;
         private List<Video> videos;
 
+        public string NombrePlaylist { get => nombrePlaylist; set => nombrePlaylist = value; }
+        public List<Cancion> Canciones { get => canciones; set => canciones = value; }
+        internal List<Video> Videos { get => videos; set => videos = value; }
 
-        public void playlist()
+        
+        public void Playlist(string nombrePlaylist, List<Cancion> canciones, List<Video> videos)
         {
-            
+            this.nombrePlaylist=nombrePlaylist;
+            this.Canciones=canciones;
+            this.Videos=videos;
+
         }
     }
 }
