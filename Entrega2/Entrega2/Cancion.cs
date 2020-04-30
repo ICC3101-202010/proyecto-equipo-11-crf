@@ -21,9 +21,16 @@ namespace Entrega2
         public string Rating1 { get => Rating; set => Rating = value; }
         public string Caratula1 { get => Caratula; set => Caratula = value; }
 
-        public Cancion(string Nombre_Compositor)
+        public Cancion(string Nombre_Compositor, string Titulo_Cancion, int Numero_Cancion_Album, DateTime Fecha_Lanzamiento, string Nombre_Estudio, string Genero, string Rating, string Caratula)
         {
             this.Nombre_Compositor = Nombre_Compositor;
+            this.Titulo_Cancion = Titulo_Cancion;
+            this.Numero_Cancion_Album = Numero_Cancion_Album;
+            this.Fecha_Lanzamiento = Fecha_Lanzamiento;
+            this.Nombre_Estudio = Nombre_Estudio;
+            this.Genero = Genero;
+            this.Rating = Rating;
+            this.Caratula = Caratula;
         }
     }
 }
