@@ -5,7 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Entrega2
 {
+<<<<<<< HEAD
      class Playlist
+=======
+    class Playlist
+>>>>>>> 53e6c6566051308184c08e757ff1d17abcd632d9
     {
         private string nombrePlaylist;
         private List<Cancion> canciones;
