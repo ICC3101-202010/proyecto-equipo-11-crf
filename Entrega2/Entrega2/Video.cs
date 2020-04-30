@@ -9,14 +9,23 @@ namespace Entrega2
     class Video
     {
         private string nameVideo;
+        private string direccionMemoria;
         private string genero;
         private int vistos;
         private List<actor> actores;
         private director director;
-        private float duracion;
         private string estudio;
-        private int tamanoMemoria;
-        private string direccionMemoria;
         private string caratula;
+
+        public string NameVideo { get => nameVideo; set => nameVideo = value; }
+        public string DireccionMemoria { get => direccionMemoria; set => direccionMemoria = value; }
+        public string Genero { get => genero; set => genero = value; }
+        public int Vistos { get => vistos; set => vistos = value; }
+        public string Estudio { get => estudio; set => estudio = value; }
+        public string Caratula { get => caratula; set => caratula = value; }
+        internal List<actor> Actores { get => actores; set => actores = value; }
+        internal director Director { get => director; set => director = value; }
+
+        public Video(string nameVideo, string direccionmemoria, string genero, int vistos, List<actor> actores, director director, string )
     }
 }
