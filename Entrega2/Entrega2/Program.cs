@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,9 @@ namespace Entrega2
     {
         static void Main(string[] args)
         {
-
+            string path = @"C: \Users\Francisco\Desktop\proyecto - equipo - 11 - crf\Entrega2\Entrega2\bin\Debug\The Weeknd -Blinding Lights.mp3";
+            Cancion song = new Cancion(path);
+            song.Show_info(song);
             /*WindowsMediaPlayer sonido;
             
 

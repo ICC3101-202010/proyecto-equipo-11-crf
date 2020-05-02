@@ -1,16 +1,18 @@
 ﻿using System;
+using TagLib;
+
 namespace Entrega2
 {
     public class Caratula
     {
-        private string Direccion;
-
+        private string direccion;
         
-        public string Direccion1 { get => Direccion; set => Direccion = value; }
+        
+        public string Direccion { get => direccion; set => direccion = value; }
 
-        public Caratula(string Direccion)
+        public Caratula(IPicture[] imagen)
         {
-            this.Direccion = Direccion;
+            this.direccion = Direccion;
 
         }
 

@@ -5,6 +5,7 @@ using MetadataExtractor.Formats.Exif;
 using System.Reflection.Metadata;
 using System.IO;
 using TagLib;
+using System.Drawing;
 
 
 namespace Entrega2
@@ -18,7 +19,8 @@ namespace Entrega2
         private string nombre_Estudio;
         private string genero;
         private string rating;
-        private Caratula Caratula;
+        private Caratula caratula;
+
 
         public string[] Nombre_Compositor { get => nombre_Compositor; set => nombre_Compositor = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -27,22 +29,10 @@ namespace Entrega2
         public string Nombre_Estudio { get => nombre_Estudio; set => nombre_Estudio = value; }
         public string Genero { get => genero; set => genero = value; }
         public string Rating { get => rating; set => rating = value; }
-
-
-        public Cancion(string[] Nombre_Compositor, string Titulo_Cancion, uint Numero_Cancion_Album, uint Fecha_Lanzamiento, string Nombre_Estudio, string Genero, string Rating, string Caratula)
-        {
-            this.nombre_Compositor = Nombre_Compositor;
-            this.titulo_Cancion = Titulo_Cancion;
-            this.numero_Cancion_Album = Numero_Cancion_Album;
-            this.fecha_Lanzamiento = Fecha_Lanzamiento;
-            this.nombre_Estudio = Nombre_Estudio;
-            this.genero = Genero;
-            this.rating = Rating;
-        }
-
+        public Caratula Caratula { get => caratula; set => caratula = value; }
         public Cancion(string path)
         {
-            
+
             TagLib.File song = TagLib.File.Create(path);
 
             this.titulo_Cancion = song.Tag.Title;
@@ -51,17 +41,23 @@ namespace Entrega2
             this.fecha_Lanzamiento = song.Tag.Year;
             this.nombre_Estudio = song.Tag.Conductor;
             this.genero = song.Tag.FirstGenre;
-            
+            Caratula caratula = new Caratula(song.Tag.Pictures);
+
+
 
 
         }
         //@"C:Users/Francisco/Desktop/proyecto-equipo-1-crf/The Weeknd-Blinding Lights.mp3";
         string TW = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../The Weeknd-Blinding Lights.mp3");
-        TagLib.File music = TagLib.File.Create(TW);
-       
-      
+        //TagLib.File music = TagLib.File.Create(TW);
 
-        //Para testear
+        //Metodo momentaneo
+        public string Show_info(Cancion cancion)
+        {
+            string info;
+            info = "Nombre:" + cancion.titulo_Cancion + "Compositor: " + cancion.nombre_Compositor;
+            return info;
+        }
 
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Entrega2
 {
-    class Album: Cancion
+    class Album
     {
         private string Nombre_Album;
         private Caratula Caratula;
@@ -15,10 +15,10 @@ namespace Entrega2
         
         public string Nombre_Album1 { get => Nombre_Album; set => Nombre_Album = value; }
 
-        public Album(string Nombre_Album)
-        {
-            this.Nombre_Album = Nombre_Album;
-        }
+        //public Album(string Nombre_Album)
+        //{
+        //    this.Nombre_Album = Nombre_Album;
+        //}
 
     }
 }
