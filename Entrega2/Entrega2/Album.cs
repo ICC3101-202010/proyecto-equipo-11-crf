@@ -5,20 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Entrega2
 {
-    class Album
+    class Album : Persona
     {
-        private string Nombre_Album;
-        private Caratula Caratula;
+        private string nombre_Album;
+        private Caratula caratula;
         private List<Cancion> cancion;
-        private Banda Banda;
+        private Banda banda;
 
         
-        public string Nombre_Album1 { get => Nombre_Album; set => Nombre_Album = value; }
+        public string Nombre_Album { get => nombre_Album; set => nombre_Album = value; }
 
-        //public Album(string Nombre_Album)
-        //{
-        //    this.Nombre_Album = Nombre_Album;
-        //}
+        public Album(string Nombre_Album,  string namePerson, string lastName, string rut, string nation, DateTime birthDate, string gender): base(namePerson, lastName, rut, nation, birthDate, gender)
+        {
+            this.nombre_Album = Nombre_Album;
+        }
+
 
     }
 }

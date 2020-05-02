@@ -20,7 +20,8 @@ namespace Entrega2
         private string genero;
         private string rating;
         private Caratula caratula;
-
+        private string album;
+        private IPicture[] pre_caratula;
 
         public string[] Nombre_Compositor { get => nombre_Compositor; set => nombre_Compositor = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -30,6 +31,9 @@ namespace Entrega2
         public string Genero { get => genero; set => genero = value; }
         public string Rating { get => rating; set => rating = value; }
         public Caratula Caratula { get => caratula; set => caratula = value; }
+        public string Album { get => album; set => album = value; }
+        public IPicture[] Pre_caratula { get => pre_caratula; set => pre_caratula = value; }
+
         public Cancion(string path)
         {
 
@@ -41,8 +45,10 @@ namespace Entrega2
             this.fecha_Lanzamiento = song.Tag.Year;
             this.nombre_Estudio = song.Tag.Conductor;
             this.genero = song.Tag.FirstGenre;
-            Caratula caratula = new Caratula(song.Tag.Pictures);
-
+            this.Album = song.Tag.Album;
+            this.pre_caratula = song.Tag.Pictures;
+            //Caratula caratula = new Caratula(song.Tag.Pictures);
+            
 
 
 
@@ -55,8 +61,15 @@ namespace Entrega2
         public string Show_info(Cancion cancion)
         {
             string info;
-            info = "Nombre:" + cancion.titulo_Cancion + "Compositor: " + cancion.nombre_Compositor;
+            info = "Nombre:" + cancion.titulo_Cancion +"\n"+"Compositor: " + cancion.nombre_Compositor+"\n" + "N° pista: "+cancion.numero_Cancion_Album+"\n"
+                +"Lanzamiento: "+ cancion.fecha_Lanzamiento + "\n"+ "Estudio: " + cancion.nombre_Estudio+"\n"
+                +"Genero: "+ cancion.genero + "\n" + "Album: " + cancion.Album+ "\n";
             return info;
+        }
+
+        public void Show_image(Cancion cancion) 
+        {
+            
         }
 
     }
