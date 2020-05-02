@@ -1,4 +1,8 @@
 ﻿using System;
+using TagLib.Audible;
+using MetadataExtractor;
+using MetadataExtractor.Formats.Exif;
+using System.Reflection.Metadata;
 namespace Entrega2
 {
     public class Cancion
@@ -31,5 +35,14 @@ namespace Entrega2
             this.Genero = Genero;
             this.Rating = Rating;
         }
+
+        public Cancion(string path)
+        {
+            TagLib.File song = TagLib.File.Create(path);
+        }
+
+        TagLib.File song = TagLib.File.Create("C:/Users/Francisco/Desktop/proyecto-equipo-1-crf");
+        //Para testear
+
     }
 }

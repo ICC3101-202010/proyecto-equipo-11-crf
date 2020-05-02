@@ -2,3 +2,7 @@
 
 -Buscar librerias para trabajar archivos de musica o parecidos
 
+
+
+
+-Como va a funcionar el reproductor??
