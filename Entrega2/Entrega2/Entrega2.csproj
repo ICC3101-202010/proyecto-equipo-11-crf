@@ -44,7 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actor.cs" />
+    <Compile Include="Administrador.cs" />
     <Compile Include="Director.cs" />
+    <Compile Include="Finder.cs" />
+    <Compile Include="InputOutput .cs" />
+    <Compile Include="Mixer.cs" />
+    <Compile Include="Reproductor.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="Video.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
