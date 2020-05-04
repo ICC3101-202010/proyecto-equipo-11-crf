@@ -22,6 +22,7 @@ namespace Entrega2
         private Caratula caratula;
         private string album;
         private IPicture[] pre_caratula;
+        private string path;
 
         public string[] Nombre_Compositor { get => nombre_Compositor; set => nombre_Compositor = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -33,6 +34,7 @@ namespace Entrega2
         public Caratula Caratula { get => caratula; set => caratula = value; }
         public string Album { get => album; set => album = value; }
         public IPicture[] Pre_caratula { get => pre_caratula; set => pre_caratula = value; }
+        public string Path { get => path; set => path = value; }
 
         public Cancion(string path)
         {
@@ -47,6 +49,7 @@ namespace Entrega2
             this.genero = song.Tag.FirstGenre;
             this.Album = song.Tag.Album;
             this.pre_caratula = song.Tag.Pictures;
+            this.path = path;
             //Caratula caratula = new Caratula(song.Tag.Pictures);
             
 
@@ -54,7 +57,7 @@ namespace Entrega2
 
         }
         //@"C:Users/Francisco/Desktop/proyecto-equipo-1-crf/The Weeknd-Blinding Lights.mp3";
-        string TW = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../The Weeknd-Blinding Lights.mp3");
+        string TW = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../The Weeknd-Blinding Lights.mp3");
         //TagLib.File music = TagLib.File.Create(TW);
 
         //Metodo momentaneo

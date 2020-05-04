@@ -12,12 +12,18 @@ namespace Entrega2
     {
         static void Main(string[] args)
         {
-            
-            string path = @"C:\Users\Francisco\Desktop\proyecto-equipo-11-crf\14. Bad Bunny Ft. Jowell & Randy, Nengo Flow - Safaera.mp3";
+            Reproductor reproductor = new Reproductor();
+            WindowsMediaPlayer sonido = new WindowsMediaPlayer();
+
+            string path = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\The Weeknd - Blinding Lights.mp3";
             Cancion song = new Cancion(path);
             Caratula nueva = new Caratula();
-            nueva.Show_carat();
+            nueva.Show_carat(song);
             Console.WriteLine(song.Show_info(song));
+            reproductor.reproducirCancion(sonido,song);
+            Console.ReadLine();
+            
+            
             /*WindowsMediaPlayer sonido;
             
 

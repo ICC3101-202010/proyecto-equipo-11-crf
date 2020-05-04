@@ -22,9 +22,9 @@ namespace Entrega2
 
         }
 
-        public void Show_carat() 
+        public void Show_carat(Cancion cancion) 
         {
-            TagLib.File song = TagLib.File.Create(@"C:\Users\Francisco\Desktop\proyecto-equipo-11-crf\14. Bad Bunny Ft. Jowell & Randy, Nengo Flow - Safaera.mp3");
+            TagLib.File song = TagLib.File.Create(cancion.Path);
             
             MemoryStream ms = new MemoryStream(song.Tag.Pictures[0].Data.Data);
             System.Drawing.Image image = System.Drawing.Image.FromStream(ms);
