@@ -18,7 +18,7 @@ namespace Entrega2
         private uint fecha_Lanzamiento;
         private string nombre_Estudio;
         private string genero;
-        private string rating;
+        public int rating;
         private Caratula caratula;
         private string album;
         private IPicture[] pre_caratula;
