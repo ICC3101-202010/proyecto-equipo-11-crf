@@ -36,6 +36,31 @@ namespace Entrega2
 
             }
         }
+        public Playlist crearListaCanciones(Playlist todasCanciones)
+        {
+            
+            string nombreLista;
+            List<Cancion> nuevaLista = new List<Cancion>();
+            Console.WriteLine("Ingrese el nombre de la nueva lista");
+            nombreLista = Console.ReadLine();
+            
+            int i = 0;
+            while (i!=1)
+            {
+                todasCanciones.mostrarCanciones();
+                Console.WriteLine("Ingrese el numero de la cancion que desea agregar");
+                int agregada= Convert.ToInt32(Console.ReadLine());
+                nuevaLista.Add(todasCanciones.canciones[agregada]);
+                Console.WriteLine("Ingrese 1 para terminar");
+                i= Convert.ToInt32(Console.ReadLine());
+            }
+            Playlist nuevaPlaylist = new Playlist(nombreLista,nuevaLista,null);
+            return nuevaPlaylist;
+            
+            
+            
+
+        }
         
     }
 }

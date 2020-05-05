@@ -18,7 +18,7 @@ namespace Entrega2
         private uint fecha_Lanzamiento;
         private string nombre_Estudio;
         private string genero;
-        public int rating;
+        //public int rating;
         private Caratula caratula;
         private string album;
         private IPicture[] pre_caratula;
@@ -30,7 +30,7 @@ namespace Entrega2
         public uint Fecha_Lanzamiento { get => fecha_Lanzamiento; set => fecha_Lanzamiento = value; }
         public string Nombre_Estudio { get => nombre_Estudio; set => nombre_Estudio = value; }
         public string Genero { get => genero; set => genero = value; }
-        public string Rating { get => rating; set => rating = value; }
+        //public string Rating { get => rating; set => rating = value; }
         public Caratula Caratula { get => caratula; set => caratula = value; }
         public string Album { get => album; set => album = value; }
         public IPicture[] Pre_caratula { get => pre_caratula; set => pre_caratula = value; }

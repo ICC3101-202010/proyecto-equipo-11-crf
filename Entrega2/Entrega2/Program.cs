@@ -29,16 +29,19 @@ namespace Entrega2
             todasLasCanciones.Add(cancion2);
             todasLasCanciones.Add(cancion3);
 
+            Playlist todas = new Playlist("Todas", todasLasCanciones, null);
+            todas.mostrarCanciones();
+
             List<Cancion> Ranking_Canciones = new List<Cancion>();
             Ranking_Canciones.Add(cancion1);
             Ranking_Canciones.Add(cancion2);
             Ranking_Canciones.Add(cancion3);
 
 
-            List<Video> Ranking_Videos = new List<Video>();
-            Ranking_Videos.Add(video1);
-            Ranking_Videos.Add(video2);
-            Ranking_Videos.Add(video3);
+            // List<Video> Ranking_Videos = new List<Video>();
+            //Ranking_Videos.Add(video1);
+            //Ranking_Videos.Add(video2);
+            //Ranking_Videos.Add(video3);
 
             //sonido.URL = path;
             //sonido.openPlayer(path);

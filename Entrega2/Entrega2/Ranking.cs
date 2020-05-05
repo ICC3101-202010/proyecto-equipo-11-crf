@@ -39,7 +39,7 @@ namespace Entrega2
         }
 
 
-        public void Ordenar_Cancion_por_Rating(List<Cancion> Ranking_Canciones)
+        /*public void Ordenar_Cancion_por_Rating(List<Cancion> Ranking_Canciones)
         {
             Ranking_Canciones.Sort(Cancion.rating)
             foreach ( Cancion cancion in Ranking_Canciones)
@@ -48,6 +48,6 @@ namespace Entrega2
                 Ranking_Canciones_Rating.Add(cancion)
             }
 
-        }
+        }*/
     }
 }
