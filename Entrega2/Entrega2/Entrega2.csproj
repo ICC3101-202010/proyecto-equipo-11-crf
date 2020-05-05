@@ -96,6 +96,7 @@
     <Compile Include="Banda.cs" />
     <Compile Include="Album.cs" />
     <Compile Include="Caratula.cs" />
+    <Compile Include="Ranking.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
