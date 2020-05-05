@@ -16,10 +16,9 @@ namespace Entrega2
             Reproductor reproductor = new Reproductor();
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();
             
-            
-            string path1 = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\14. Bad Bunny Ft. Jowell & Randy, Nengo Flow - Safaera.mp3";
-            string path2 = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\Dalex - Cuaderno.mp3";
-            string path3= @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\The Weeknd - Blinding Lights.mp3";
+            string path1 = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\14. Bad Bunny Ft. Jowell & Randy, Nengo Flow - Safaera.mp3";
+            string path2 = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\Dalex - Cuaderno.mp3";
+            string path3= @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\Dalex - The Weeknd - Blinding Lights.mp3";
         
             Cancion cancion1 = new Cancion(path1);
             Cancion cancion2 = new Cancion(path2);
@@ -30,14 +29,16 @@ namespace Entrega2
             todasLasCanciones.Add(cancion2);
             todasLasCanciones.Add(cancion3);
 
-            Playlist cancionesTotales = new Playlist("Todas las canciones", todasLasCanciones, null);
-            cancionesTotales.mostrarCanciones();
-            Console.ReadLine();
+            List<Cancion> Ranking_Canciones = new List<Cancion>();
+            Ranking_Canciones.Add(cancion1);
+            Ranking_Canciones.Add(cancion2);
+            Ranking_Canciones.Add(cancion3);
 
 
-
-
-
+            List<Video> Ranking_Videos = new List<Video>();
+            Ranking_Videos.Add(video1);
+            Ranking_Videos.Add(video2);
+            Ranking_Videos.Add(video3);
 
             //sonido.URL = path;
             //sonido.openPlayer(path);
