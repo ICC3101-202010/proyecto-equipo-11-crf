@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WMPLib;
 
+
 namespace Entrega2
 {
     class Program
@@ -14,12 +15,17 @@ namespace Entrega2
         {
             Reproductor reproductor = new Reproductor();
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();
+            
+            
 
-            string path = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\The Weeknd - Blinding Lights.mp3";
+            string path = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\WIN_20200428_18_11_26_Pro.mp4";
+            sonido.URL = path;
+            sonido.openPlayer(path);
+            
             Cancion song = new Cancion(path);
             Caratula nueva = new Caratula();
-            nueva.Show_carat(song);
-            Console.WriteLine(song.Show_info(song));
+            //nueva.Show_carat(song);
+            //Console.WriteLine(song.Show_info(song));
             reproductor.reproducirCancion(sonido,song);
             Console.ReadLine();
             
