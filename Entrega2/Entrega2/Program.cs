@@ -16,18 +16,32 @@ namespace Entrega2
             Reproductor reproductor = new Reproductor();
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();
             
-            
+            string path1 = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\14. Bad Bunny Ft. Jowell & Randy, Nengo Flow - Safaera.mp3";
+            string path2 = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\Dalex - Cuaderno.mp3";
+            string path3= @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\Dalex - The Weeknd - Blinding Lights.mp3";
+        
+            Cancion cancion1 = new Cancion(path1);
+            Cancion cancion2 = new Cancion(path2);
+            Cancion cancion3 = new Cancion(path3);
 
-            string path = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\WIN_20200428_18_11_26_Pro.mp4";
-            sonido.URL = path;
-            sonido.openPlayer(path);
+            List<Cancion> todasLasCanciones = new List<Cancion>();
+            todasLasCanciones.Add(cancion1);
+            todasLasCanciones.Add(cancion2);
+            todasLasCanciones.Add(cancion3);
+
+
+           
+
+
+            //sonido.URL = path;
+            //sonido.openPlayer(path);
             
-            Cancion song = new Cancion(path);
-            Caratula nueva = new Caratula();
+            //Cancion song = new Cancion(path);
+            //Caratula nueva = new Caratula();
             //nueva.Show_carat(song);
             //Console.WriteLine(song.Show_info(song));
-            reproductor.reproducirCancion(sonido,song);
-            Console.ReadLine();
+            //reproductor.reproducirCancion(sonido,song);
+            //Console.ReadLine();
             
             
             /*WindowsMediaPlayer sonido;
