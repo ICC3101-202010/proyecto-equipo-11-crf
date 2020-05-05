@@ -25,6 +25,17 @@ namespace Entrega2
             this.Videos=videos;
 
         }
-       
+        public void mostrarCanciones()
+        {
+            for (int i = 0; i < canciones.Count; i++)
+            {
+                Console.WriteLine("Cancion "+ (i+1));
+                Console.WriteLine("Nombre Cancion: " + canciones[i].Titulo_Cancion);
+                Console.WriteLine("Artista :"+ canciones[i].Nombre_Compositor);
+                Console.WriteLine( "" );
+
+            }
+        }
+        
     }
 }
