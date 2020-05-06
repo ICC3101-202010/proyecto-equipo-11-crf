@@ -17,7 +17,28 @@ namespace Entrega2
             {
                 sonido.URL = cancion.Path;
                 sonido.controls.play();
-                
+                string n = null;
+                while (n != "3")
+                {
+                    Console.WriteLine("1-pausa 2-contiuar 3-salir");
+                    n = Console.ReadLine();
+                    if (n == "1")
+                    {
+                        sonido.controls.pause();
+
+                    }
+                    if (n == "2")
+                    {
+                        double tiempo = sonido.controls.currentPosition;
+                        sonido.controls.currentPosition = tiempo;
+                        sonido.controls.play();
+                    }
+
+                }
+
+            
+
+
             }
             catch (FileNotFoundException ex)
             {
@@ -26,6 +47,7 @@ namespace Entrega2
             
 
         }
-     
+        
+
     }
 }
