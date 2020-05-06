@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using WMPLib;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Entrega2
 {
@@ -36,16 +37,33 @@ namespace Entrega2
 
                 }
 
-            
-
-
+           
             }
             catch (FileNotFoundException ex)
             {
                 Console.WriteLine("Error: "+ex.Message);
             }
-            
+        }
 
+        public void reproducirLista(WindowsMediaPlayer sonido,Playlist playlist)
+        {
+            Console.WriteLine("1-Reproduccion Oredenada");
+            Console.WriteLine("Reproduccion Aleatoria");
+            string opcion1 = Console.ReadLine();
+            switch (opcion1)
+            {
+                case "1":
+                    {
+                        int i = 0;
+                        reproducirCancion(sonido, playlist.Canciones[i]);
+                    }
+                    
+                    
+                    
+                    
+                    break;
+            }
+           
         }
         
 

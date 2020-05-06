@@ -8,5 +8,9 @@ namespace Entrega2
 {
     class Finder
     {
+        public void buscarCancion()
+        {
+
+        }
     }
 }
