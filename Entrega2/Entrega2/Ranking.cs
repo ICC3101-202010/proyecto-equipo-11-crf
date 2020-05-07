@@ -39,15 +39,26 @@ namespace Entrega2
         }
 
 
-        /*public void Ordenar_Cancion_por_Rating(List<Cancion> Ranking_Canciones)
+        public void Ordenar_Cancion_por_Rating(List<Cancion> Ranking_Canciones)
         {
-            Ranking_Canciones.Sort(Cancion.rating)
+            Ranking_Canciones.Sort(Cancion cancion.rating)
             foreach ( Cancion cancion in Ranking_Canciones)
             {
                 List<Cancion> Ranking_Canciones_Rating = new List<Cancion>();
-                Ranking_Canciones_Rating.Add(cancion)
+                Ranking_Canciones_Rating.Add(cancion);
             }
 
-        }*/
+        }
+
+        public void Ordenar_Video_por_Rating(List<Cancion> Ranking_Videos)
+        {
+            Ranking_Canciones.Sort(Video.rating)
+            foreach (Video video in Ranking_Videos)
+            {
+                List<Video> Ranking_Video_Rating = new List<Video>();
+                Ranking_Video_Rating.Add(video);
+            }
+
+        }
     }
 }
