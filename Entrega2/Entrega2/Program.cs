@@ -15,7 +15,7 @@ namespace Entrega2
         {
             
             string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Tove Lo - Habits (Stay High).mp3");
-            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Moves Like Jagger (Ft. Christina Aguilera.mp3");
+            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Moves Like Jagger Ft. Christina Aguilera.mp3");
             string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../The Weeknd - Blinding Lights.mp3");
             //Console.Write(path1);
             //Console.Write(path3);

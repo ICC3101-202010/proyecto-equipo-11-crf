@@ -12,7 +12,7 @@ namespace Entrega2
 {
     public class Cancion
     {
-        private string nombre_Compositor;
+        
         private string titulo_Cancion;
         private uint numero_Cancion_Album;
         private uint fecha_Lanzamiento;
@@ -65,7 +65,7 @@ namespace Entrega2
         public string Show_info(Cancion cancion)
         {
             string info;
-            info = "Nombre:" + cancion.titulo_Cancion + "\n" + "Compositor: " + cancion.nombre_Compositor
+            info = "Nombre:" + cancion.titulo_Cancion + "\n" + "Compositor: " + cancion.Banda
             +"\n" + "N° pista: "+cancion.numero_Cancion_Album+"\n"
                 +"Lanzamiento: "+ cancion.fecha_Lanzamiento + "\n"+ "Estudio: " + cancion.nombre_Estudio+"\n"
                 +"Genero: "+ cancion.genero + "\n" + "Album: " + cancion.Album+ "\n";
