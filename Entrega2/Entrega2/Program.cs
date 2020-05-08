@@ -22,6 +22,7 @@ namespace Entrega2
 
             Cancion c1 = new Cancion(path1);
             Console.WriteLine(c1.Show_info(c1));
+            
 
             /*
             Reproductor reproductor = new Reproductor();
