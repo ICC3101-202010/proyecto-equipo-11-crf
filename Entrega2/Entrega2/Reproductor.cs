@@ -12,7 +12,7 @@ namespace Entrega2
     class Reproductor
     {
         
-        public void reproducirCancion(WindowsMediaPlayer sonido,Cancion cancion)
+        public virtual void reproducirCancion(WindowsMediaPlayer sonido,Cancion cancion)
         {
             try
             {
