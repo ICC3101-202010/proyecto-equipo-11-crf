@@ -92,7 +92,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Playlist.cs" />
     <Compile Include="Cancion.cs" />
-    <Compile Include="Musico.cs" />
     <Compile Include="Banda.cs" />
     <Compile Include="Album.cs" />
     <Compile Include="Caratula.cs" />

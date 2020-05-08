@@ -12,5 +12,20 @@ namespace Entrega2
         {
 
         }
+        public void buscarVideo()
+        {
+
+        }
+        public void buscarPlaylist()
+        {
+
+        }
+        public void buscarArtista()
+        {
+
+        }
+
+        
+
     }
 }
