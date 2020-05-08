@@ -37,8 +37,7 @@ namespace Entrega2
             this.mail = Mail;
             this.member = member;
             this.namePerson = NamePerson;
-            this.lastName = LastName;
-            this.rut = Rut; 
+            this.lastName = LastName;        
             this.nation = Nation;
             this.birthDate = BirthDate;          
         }

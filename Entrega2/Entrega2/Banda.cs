@@ -7,6 +7,7 @@ namespace Entrega2
 {
     class Banda
     {
+        //Ver si se implementa  o no porque está ambiguo
         private string Nombre_Banda;
         private List<Musico> musicos;
         private string Info;

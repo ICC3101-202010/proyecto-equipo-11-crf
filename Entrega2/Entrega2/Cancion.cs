@@ -50,13 +50,9 @@ namespace Entrega2
             this.genero = song.Tag.FirstGenre;
             this.Album = song.Tag.Album;
             this.pre_caratula = song.Tag.Pictures;
-            this.path = path;
-            
+            this.path = path;           
             //Caratula caratula = new Caratula(song.Tag.Pictures);
-            
-
-
-
+           
         }
 
 
@@ -70,11 +66,6 @@ namespace Entrega2
                 +"Lanzamiento: "+ cancion.fecha_Lanzamiento + "\n"+ "Estudio: " + cancion.nombre_Estudio+"\n"
                 +"Genero: "+ cancion.genero + "\n" + "Album: " + cancion.Album+ "\n";
             return info;
-        }
-
-        public void Show_image(Cancion cancion) 
-        {
-            
         }
 
     }

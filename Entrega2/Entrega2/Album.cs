@@ -14,6 +14,7 @@ namespace Entrega2
         private List<Cancion> cancion;
         private Banda banda;
 
+        //Album agregar canciones segun album , como cuando me meto a spotify y veo las canciones segun album
         
         public string Nombre_Album { get => nombre_Album; }
         public Caratula Caratula { get => caratula; }

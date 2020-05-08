@@ -8,6 +8,7 @@ namespace Entrega2
 {
     class Director:Persona
     {
+        //Está dudoso
         private List<Video> peliculas;
 
         public Director(List<Video> peliculas) 

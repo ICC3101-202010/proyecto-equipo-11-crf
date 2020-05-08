@@ -7,6 +7,7 @@ namespace Entrega2
 {
     class Ranking
     {
+           //Esta en duda si seguir implementando
         private List<Cancion> Ranking_Canciones;
         private List<Video> Ranking_Videos;
         private List<Cancion> Ranking_Canciones_Rating;

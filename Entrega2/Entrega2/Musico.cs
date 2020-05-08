@@ -7,6 +7,7 @@ namespace Entrega2
 {
      class Musico : Persona
      {
+        //Clase flotando porque vamos a ver si la implementamos
         private string rol;
         private Banda banda;
         private List<Cancion> canciones;
@@ -17,7 +18,8 @@ namespace Entrega2
         public List<Cancion> Canciones { get => canciones; }
         //string rol, Banda banda, List<Cancion> cancion,
         public Musico(string rol, Banda banda, List<Cancion> cancion, string namePerson, string lastName, string rut, string nation, DateTime birthDate, string gender)// : base(namePerson, lastName, rut, nation, birthDate, gender)
-        {   this.rol = rol;
+        {  
+            this.rol = rol;
             this.banda = banda;
             this.canciones = cancion;
         }
