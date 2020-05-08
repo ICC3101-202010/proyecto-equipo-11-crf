@@ -13,11 +13,15 @@ namespace Entrega2
     {
         static void Main(string[] args)
         {
-            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Tove Lo - Habits (Stay High).mp3");
+            
+            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Tove Lo - Habits (Stay High).mp3");
             string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Los Bunkers - Bailando Solo.mp33");
             string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../The Weeknd - Blinding Lights.mp3");
-            Console.Write(path1);
-            Console.Write(path3);
+            //Console.Write(path1);
+            //Console.Write(path3);
+
+            Cancion c1 = new Cancion(path1);
+            Console.WriteLine(c1.Show_info(c1));
 
             /*
             Reproductor reproductor = new Reproductor();

@@ -25,10 +25,8 @@ namespace Entrega2
         public void Show_carat(Cancion cancion) 
         {
             TagLib.File song = TagLib.File.Create(cancion.Path);
-            
-            MemoryStream ms = new MemoryStream(song.Tag.Pictures[0].Data.Data);
-            System.Drawing.Image image = System.Drawing.Image.FromStream(ms);
-            image.Save("lala.jpg", ImageFormat.Png);
+
+            //falta implementar para que muestre imagen
             
         }
     }
