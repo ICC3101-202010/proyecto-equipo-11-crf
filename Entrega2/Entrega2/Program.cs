@@ -13,13 +13,20 @@ namespace Entrega2
     {
         static void Main(string[] args)
         {
+            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Tove Lo - Habits (Stay High).mp3");
+            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Los Bunkers - Bailando Solo.mp33");
+            string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../The Weeknd - Blinding Lights.mp3");
+            Console.Write(path1);
+            Console.Write(path3);
+
+            /*
             Reproductor reproductor = new Reproductor();
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();
-            
-            string path1 = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\14. Bad Bunny Ft. Jowell & Randy, Nengo Flow - Safaera.mp3";
+
+            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Dalex - Cuaderno.mp3"");
             string path2 = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\Dalex - Cuaderno.mp3";
             string path3= @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\The Weeknd - Blinding Lights.mp3";
-        
+
             Cancion cancion1 = new Cancion(path1);
             Cancion cancion2 = new Cancion(path2);
             Cancion cancion3 = new Cancion(path3);
@@ -60,8 +67,8 @@ namespace Entrega2
                         break;
                 }
             }
-            
-            
+
+
             Console.WriteLine();
             todas.mostrarCanciones();
             Playlist playlist1=inputOutput.crearListaCanciones(todas);
@@ -92,17 +99,17 @@ namespace Entrega2
 
 
             /*WindowsMediaPlayer sonido;
-            
+
 
             try
             {
                 sonido = new WindowsMediaPlayer();
-             
+
 
 
                 sonido.URL = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\Safaera-BadBunny.mp3";
                 sonido.controls.play();
-                
+
                 string n = null;
                 while (n != "5")
                 {

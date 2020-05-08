@@ -39,9 +39,9 @@ namespace Entrega2
         }
 
 
-        public void Ordenar_Cancion_por_Rating(List<Cancion> Ranking_Canciones)
+        /* public void Ordenar_Cancion_por_Rating(List<Cancion> Ranking_Canciones)
         {
-            Ranking_Canciones.Sort(Cancion cancion.rating)
+            Ranking_Canciones.Sort(Cancion cancion.rating);
             foreach ( Cancion cancion in Ranking_Canciones)
             {
                 List<Cancion> Ranking_Canciones_Rating = new List<Cancion>();
@@ -59,6 +59,6 @@ namespace Entrega2
                 Ranking_Video_Rating.Add(video);
             }
 
-        }
+        }*/
     }
 }
