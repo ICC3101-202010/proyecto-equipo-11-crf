@@ -10,8 +10,8 @@ namespace Entrega2
     {
         private List<Video> peliculas;
 
-        public Director(List<Video> peliculas, string namePerson, string lastName, string rut, string nation, DateTime birthDate, string gender):base(namePerson,lastName,rut,nation,birthDate,gender)
-        {
+        public Director(List<Video> peliculas) 
+        { 
             this.peliculas = peliculas;
         }
     }

@@ -15,7 +15,7 @@ namespace Entrega2
         {
             
             string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Tove Lo - Habits (Stay High).mp3");
-            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Los Bunkers - Bailando Solo.mp33");
+            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Moves Like Jagger (Ft. Christina Aguilera.mp3");
             string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../The Weeknd - Blinding Lights.mp3");
             //Console.Write(path1);
             //Console.Write(path3);
@@ -23,6 +23,8 @@ namespace Entrega2
             Cancion c1 = new Cancion(path1);
             Console.WriteLine(c1.Show_info(c1));
 
+            Cancion c2 = new Cancion(path2);
+            Console.WriteLine(c2.Show_info(c2));
             /*
             Reproductor reproductor = new Reproductor();
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();

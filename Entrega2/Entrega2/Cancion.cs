@@ -12,7 +12,7 @@ namespace Entrega2
 {
     public class Cancion
     {
-        private string[] nombre_Compositor;
+        private string nombre_Compositor;
         private string titulo_Cancion;
         private uint numero_Cancion_Album;
         private uint fecha_Lanzamiento;
@@ -23,8 +23,9 @@ namespace Entrega2
         private string album;
         private IPicture[] pre_caratula;
         private string path;
+        private string banda;
 
-        public string[] Nombre_Compositor { get => nombre_Compositor; set => nombre_Compositor = value; }
+        public string Banda { get => banda; set => banda = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
         public uint Numero_Cancion_Album { get => numero_Cancion_Album; set => numero_Cancion_Album = value; }
         public uint Fecha_Lanzamiento { get => fecha_Lanzamiento; set => fecha_Lanzamiento = value; }
@@ -42,7 +43,7 @@ namespace Entrega2
             TagLib.File song = TagLib.File.Create(path);
 
             this.titulo_Cancion = song.Tag.Title;
-            this.nombre_Compositor = song.Tag.Composers;
+            this.Banda = song.Tag.FirstPerformer;
             this.numero_Cancion_Album = song.Tag.Track;
             this.fecha_Lanzamiento = song.Tag.Year;
             this.nombre_Estudio = song.Tag.Conductor;
@@ -58,13 +59,14 @@ namespace Entrega2
 
         }
 
-       
+
 
         //Metodo momentaneo
         public string Show_info(Cancion cancion)
         {
             string info;
-            info = "Nombre:" + cancion.titulo_Cancion +"\n"+"Compositor: " + cancion.nombre_Compositor+"\n" + "N° pista: "+cancion.numero_Cancion_Album+"\n"
+            info = "Nombre:" + cancion.titulo_Cancion + "\n" + "Compositor: " + cancion.nombre_Compositor
+            +"\n" + "N° pista: "+cancion.numero_Cancion_Album+"\n"
                 +"Lanzamiento: "+ cancion.fecha_Lanzamiento + "\n"+ "Estudio: " + cancion.nombre_Estudio+"\n"
                 +"Genero: "+ cancion.genero + "\n" + "Album: " + cancion.Album+ "\n";
             return info;

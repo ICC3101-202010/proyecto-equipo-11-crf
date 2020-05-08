@@ -2,7 +2,7 @@
 using TagLib;
 using System.Drawing;
 using System.IO;
-using TagLib;
+
 using System.Drawing.Imaging;
 
 namespace Entrega2
