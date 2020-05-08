@@ -22,6 +22,7 @@ namespace Entrega2
 
             Cancion c1 = new Cancion(path1);
             Console.WriteLine(c1.Show_info(c1));
+            
 
             Cancion c2 = new Cancion(path2);
             Console.WriteLine(c2.Show_info(c2));
