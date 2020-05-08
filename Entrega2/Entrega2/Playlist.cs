@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 namespace Entrega2
 {
      class Playlist
-
-
-    {
+     {
         private string nombrePlaylist;
         private List<Cancion> canciones;
         private List<Video> videos;
@@ -31,7 +29,7 @@ namespace Entrega2
             {
                 Console.WriteLine("Cancion "+ (i));
                 Console.WriteLine("Nombre Cancion: " + canciones[i].Titulo_Cancion);
-                Console.WriteLine("Artista :"+ canciones[i].Nombre_Compositor);
+                Console.WriteLine("Artista :"+ canciones[i].Banda);
                 Console.WriteLine( "" );
 
             }

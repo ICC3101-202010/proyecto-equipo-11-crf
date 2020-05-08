@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
-    class Persona
+     class Persona
     {
-        private string namePerson;
-        private string lastName;
-        private string rut;
-        private string nation;
-        private DateTime birthDate;
-        private string gender;
+        protected string namePerson;
+        protected string lastName;
+        protected string rut;
+        protected string nation;
+        protected DateTime birthDate;
+        protected string gender;
 
         public string NamePerson { get => namePerson; set => namePerson = value; }
         public string LastName { get => lastName; set => lastName = value; }
@@ -22,7 +22,7 @@ namespace Entrega2
         public DateTime BirthDate { get => birthDate; set => birthDate = value; }
         public string Gender { get => gender; set => gender = value; }
 
-        public Persona(string namePerson, string lastName, string rut, string nation, DateTime birthDate, string gender)
+        /*public Persona(string namePerson, string lastName, string rut, string nation, DateTime birthDate, string gender)
         {
             this.namePerson = namePerson;
             this.lastName = lastName;
@@ -30,6 +30,8 @@ namespace Entrega2
             this.nation = nation;
             this.birthDate = birthDate;
             this.gender = gender;
-        }
+        }*/
+        public Persona() { }
+       
     }
 }

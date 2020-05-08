@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using TagLib;
 namespace Entrega2
 {
-    class Album : Persona
+    class Album
     {
         private string nombre_Album;
         private Caratula caratula;
@@ -13,11 +15,15 @@ namespace Entrega2
         private Banda banda;
 
         
-        public string Nombre_Album { get => nombre_Album; set => nombre_Album = value; }
+        public string Nombre_Album { get => nombre_Album; }
+        public Caratula Caratula { get => caratula; }
+        public List<Cancion> Cancion { get => cancion; }
+        public Banda Banda { get =>banda;  }
 
-        public Album(string Nombre_Album,  string namePerson, string lastName, string rut, string nation, DateTime birthDate, string gender): base(namePerson, lastName, rut, nation, birthDate, gender)
+
+        public Album(Cancion song)
         {
-            this.nombre_Album = Nombre_Album;
+            
         }
 
 

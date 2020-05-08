@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MetadataExtractor.Formats.Mpeg;
 
 namespace Entrega2
 {
@@ -26,16 +27,11 @@ namespace Entrega2
         internal List<Actor> Actores { get => actores; set => actores = value; }
         internal Director Director { get => director; set => director = value; }
 
-        public Video(string nameVideo, string direccionmemoria, string genero, int vistos, List<Actor> actores, Director director, string estudio, string caratula)
+        public Video(string path)
         {
-            this.nameVideo = nameVideo;
-            this.direccionMemoria = direccionmemoria;
-            this.genero = genero;
-            this.vistos = vistos;
-            this.actores = actores;
-            this.director = director;
-            this.estudio = estudio;
-            this.caratula = caratula;
+            TagLib.File video = TagLib.File.Create(path);
+
+            
 
         }
     }
