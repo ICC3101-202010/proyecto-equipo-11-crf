@@ -16,6 +16,9 @@ namespace Entrega2
         protected string contraseña;
         protected int telefono;
         protected string username;
+ 
+
+
 
         public int ID  { get => id; set => id = value; }
         public bool Member { get => member; set => member = value; }
@@ -43,6 +46,12 @@ namespace Entrega2
         }
         public Usuario() 
         {
+        
+        }
+
+        public void addUser() 
+        { 
+            
         
         }
 

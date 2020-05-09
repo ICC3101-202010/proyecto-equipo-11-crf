@@ -13,28 +13,32 @@ namespace Entrega2
     {
         static void Main(string[] args)
         {
-            
-            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Tove Lo - Habits (Stay High).mp3");
-            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Moves Like Jagger Ft. Christina Aguilera.mp3");
-            string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/The Weeknd - Blinding Lights.mp3");
-            
+            Reproductor reproductor = new Reproductor();
+            Finder finder = new Finder();
+            //string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Tove Lo - Habits (Stay High).mp3");
+            //string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Moves Like Jagger Ft. Christina Aguilera.mp3");
+            //string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/The Weeknd - Blinding Lights.mp3");
+
             //Console.Write(path1);
             //Console.Write(path3);
 
-            Cancion c1 = new Cancion(path1);
-            Console.WriteLine(c1.Show_info(c1));
-            
+            //Cancion c1 = new Cancion(path1);
+            //Console.WriteLine(c1.Show_info(c1));
 
-            Cancion c2 = new Cancion(path2);
-            Console.WriteLine(c2.Show_info(c2));
+
+            //Cancion c2 = new Cancion(path2);
+            //Console.WriteLine(c2.Show_info(c2));
             Console.WriteLine("------------------------");
+
             
             
-            Reproductor reproductor = new Reproductor();
             List<Cancion> todasLasCanciones= reproductor.Library();
             List<Cancion> rating=reproductor.ratingEscuchadas(todasLasCanciones);
             Playlist ratingplaylist = new Playlist("rating", rating, null);
             ratingplaylist.mostrarCanciones();
+
+            
+
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();
          
 /*

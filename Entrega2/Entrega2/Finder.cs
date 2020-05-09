@@ -38,7 +38,7 @@ namespace Entrega2
         }
         public Playlist buscarPlaylist(string playlist_name, List<Playlist> playlists)
         {//busca una determinada cancion en una determinada lista
-                List<Playlist> final_search = new List<Playlist>();
+                List<Playlist> final_search = new List<Playlist>();  
                 foreach (var playlist in playlists)
                 {
                     if (playlist.NombrePlaylist.Contains(playlist_name) == true)
