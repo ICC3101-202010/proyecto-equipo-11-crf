@@ -25,6 +25,7 @@ namespace Entrega2
         private IPicture[] pre_caratula;
         private string path;
         private string banda;
+        private int likes;
 
         public string Banda { get => banda; set => banda = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -37,6 +38,7 @@ namespace Entrega2
         public string Album { get => album; set => album = value; }
         public IPicture[] Pre_caratula { get => pre_caratula; set => pre_caratula = value; }
         public string Path { get => path; set => path = value; }
+        public int Likes { get =>likes; set => likes = value; }
 
         public Cancion(string path)
         {
@@ -51,7 +53,8 @@ namespace Entrega2
             this.genero = song.Tag.FirstGenre;
             this.Album = song.Tag.Album;
             this.pre_caratula = song.Tag.Pictures;
-            this.path = path;           
+            this.path = path;
+            this.likes = likes;
             //Caratula caratula = new Caratula(song.Tag.Pictures);
            
         }
