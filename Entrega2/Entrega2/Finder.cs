@@ -63,11 +63,29 @@ namespace Entrega2
         {
 
         }
-        public void searchAlbum() 
-        { 
-        
-        
-        
+        public Album searchAlbum(string album_name, List<Album> albums) 
+        {
+          //busca un determinado album en una determinada lista de albums
+                List<Album> final_search = new List<Album>();
+                foreach (var album in albums)
+                {
+                    if (album.Nombre_Album.Contains(album_name) == true)
+                    {
+                        final_search.Add(album);
+                    }
+                }
+                Console.WriteLine("Select one");
+                int index = 0;
+                foreach (var album in final_search)
+                {
+                    Console.WriteLine("(" + index + ")" + album.Nombre_Album);
+                    index++;
+
+                }
+                int selected = Convert.ToInt32(Console.ReadLine());
+                return final_search[selected];
+
+
         }
 
         
