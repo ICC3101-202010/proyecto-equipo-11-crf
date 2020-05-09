@@ -31,7 +31,10 @@ namespace Entrega2
             
             
             Reproductor reproductor = new Reproductor();
-            reproductor.Library();
+            List<Cancion> todasLasCanciones= reproductor.Library();
+            List<Cancion> rating=reproductor.ratingEscuchadas(todasLasCanciones);
+            Playlist ratingplaylist = new Playlist("rating", rating, null);
+            ratingplaylist.mostrarCanciones();
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();
          
 /*

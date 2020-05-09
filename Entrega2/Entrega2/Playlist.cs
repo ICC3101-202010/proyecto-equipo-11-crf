@@ -51,6 +51,7 @@ namespace Entrega2
             Console.WriteLine("Cancion "+cancionEliminada.Titulo_Cancion+" eliminada");
 
         }
+        
        
         
     }
