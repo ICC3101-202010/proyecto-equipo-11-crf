@@ -16,7 +16,8 @@ namespace Entrega2
         protected string contraseña;
         protected int telefono;
         protected string username;
- 
+        private List<Cancion> canciones_favoritas;
+        private List<Video> videos_favoritos;
 
 
 
@@ -29,6 +30,8 @@ namespace Entrega2
         public int Telefono { get => telefono; set => telefono = value; }
 
         public string Username { get => username; set => username = value; }
+        public List<Cancion> Canciones_favoritas { get => canciones_favoritas; set => canciones_favoritas = value; }
+        internal List<Video> Videos_favoritos { get => videos_favoritos; set => videos_favoritos = value; }
 
         public Usuario(int ID, bool member, DateTime Member_expiration,bool Administrador,string Mail,string contraseña,int telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {
@@ -42,20 +45,43 @@ namespace Entrega2
             this.namePerson = NamePerson;
             this.lastName = LastName;        
             this.nation = Nation;
-            this.birthDate = BirthDate;          
+            this.birthDate = BirthDate;
+            this.canciones_favoritas = canciones_favoritas;
+            this.videos_favoritos = videos_favoritos;
         }
-        public Usuario() 
+
+        public Usuario()
         {
-        
         }
 
-        public void addUser() 
-        { 
-            
-        
+        // 1- Define a Delegate
+        public delegate void EmailVerifiedEventHandler(object source, EventArgs args);
+
+        // 2- Define an Event based on that Delegate
+        public event EmailVerifiedEventHandler EmailVerified;
+
+        // 3- Raise the Event
+        protected virtual void OnEmailVerified()
+        {
+            if (EmailVerified != null)
+            {
+                EmailVerified(this, EventArgs.Empty);
+            }
+        }
+        public void OnEmailSent(object source, EventArgs e)
+        {
+            Console.WriteLine("Quiere Verificar su Correo?  ( 1 = Si / 2 = No )");
+            int verificacion = Convert.ToInt16(Console.ReadLine());
+            if (verificacion == 1)
+            {
+                OnEmailVerified();
+
+            }
         }
 
-        
+
+
+
 
     }
 }
