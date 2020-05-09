@@ -1,82 +1,93 @@
 ﻿1. Importar canciones y vídeos!Agregar nuevos archivos multimedia de forma sencilla. Soportar
 al menos los formatos más comunes (mp3, wav, mp4, etc).
 
+		CHECK[]
+
 
 
 2. Información de las canciones (y vídeos)
 	a) Metadata ! Cada canción debe tener información como el género, cantante, compositor,
 	discografía, estudio, año de publicación, letra, etc. Por otra parte, los vídeos deben contener
 	información como género, categoría, actores, director, estudio. año de publicación,
-	descripción, calificación, etc.
+	descripción, calificación, etc.    CHECK[]
+	
 	b) Metadata al importar ! Al cargar canciones (y vídeos) agregar información para todas
-	las canciones que se importen.
+	las canciones que se importen.    CHECK[]
+	
 	c) Información intrínseca de cada canción (y vídeo) ! Información que puede ser obtenida
-	como resultado de operaciones simples como la duración, etc.
+	como resultado de operaciones simples como la duración, etc.    CHECK[]
+	
 	d) Información en la plataforma ! Cada canción y vídeo debe tener información que se
 	genere en la plataforma, por ejemplo, número de reproducciones, cantidad de usuarios
-	que les gusta, calificación (nota que ponen los usuarios), etc.
+	que les gusta, calificación (nota que ponen los usuarios), etc.   CHECK[]
 
 
 
 3. Búsquedas ! buscar canciones (y videos) definiendo distintos filtros.
 	a) Filtros para búsqueda ! cada filtro es una combinación entre alguna propiedad y uno o
 	más valores determinados.
+		
 		1) Por palabras clave ! definir una o más palabras que son buscadas entre la información
-		de las canciones (y videos)
+		de las canciones (y videos)  CHECK[]
+		
 		2) Por persona ! definir cuales personas deben estar (autores/actores) en la canción
-		(o video).
+		(o video).                  CHECK[] 
+		
 		3) Por características de personas ! definir valores para las distintas características de
-		personas que deben estar en la canción (o video) (sexo, edad, …).
-		4) Por resolución ! mayor, menor o igual a algún tamaño.
-		5) Por evaluación ! mayor, menor o igual a alguna nota definida.
-		6) Por categoría
+		personas que deben estar en la canción (o video) (sexo, edad, …).    CHECK[]
+		
+		4) Por resolución ! mayor, menor o igual a algún tamaño.       CHECK[]
+
+		5) Por evaluación ! mayor, menor o igual a alguna nota definida.     CHECK[]
+		
+		6) Por categoría   CHECK[]
 	
 	b) Múltiples filtros a la vez ! para cada búsqueda se deben poder combinar los filtros
 	utilizados. La combinación de los filtros puede ser tanto como un and, es decir, se buscan
 	aquellas que cumplan con todos los filtros, o como un or, se buscan las canciones o videos
 	que cumplan con al menos un filtro. Para los múltiples filtros se pueden combinar el uso
-	de and y or.
+	de and y or.       CHECK[]
 	
 	c) Listas inteligentes!poder almacenar una búsqueda arbitraria como una lista, de manera
 	que si en el futuro se agregan a la biblioteca de canciones o videos algunas que cumplen
-	con el criterio de búsqueda, se muestren automáticamente como parte de la lista.
+	con el criterio de búsqueda, se muestren automáticamente como parte de la lista.   CHECK[]
 
 
 
 4. Playlists
 	a) Playlist ! crear playlists con canciones (o videos). Un playlist no puede tener canciones
 	y videos, los archivos multimedia deben ser el mismo tipo. Estas pueden ser privadas o
-	públicas. Si un usuario es privado, no puede tener playlist públicas.
+	públicas. Si un usuario es privado, no puede tener playlist públicas.       CHECK[]
 
 
 5. En cola ! Se debe poder crear una cola de reproducción automática (lista que se reproduzca
-	automáticamente) tanto para video como para canciones
+	automáticamente) tanto para video como para canciones          CHECK[]
 
 
 
 6. Playlist específica de favoritos ! Se debe poder agregar canciones y videos a una lista de
-	favoritos. Canciones y vídeos deben estar en listas diferentes.
+	favoritos. Canciones y vídeos deben estar en listas diferentes.    CHECK[]
 
 
 
-7. Buscar y seguir: Usuarios, playlist, discos, cantantes, actores, etc.
+7. Buscar y seguir: Usuarios, playlist, discos, cantantes, actores, etc      CHECK[]
 
 
 
-8. Agregar imágenes, por ejemplo, una imagen para representar un disco o un película.
+8. Agregar imágenes, por ejemplo, una imagen para representar un disco o un película.    CHECK[]
 
 
 
 9. Administración de usuarios ! Crear perfiles de usuarios (con información y gustos por ejemplo),
-	modificarlos, definir si son privados o públicos, etc.
+	modificarlos, definir si son privados o públicos, etc.     CHECK[]
 
 
 
 10. Diferenciar usuarios pagos de no pagos: Esto es abierto, pero una buena base es ver como lo
-hace Spotify.
+hace Spotify.    CHECK[]
 
 
-11. Las canciones pueden o no ser descargadas, pero no las películas.
+11. Las canciones pueden o no ser descargadas, pero no las películas.   CHECK[]
 
 
 
@@ -84,4 +95,4 @@ hace Spotify.
 	entonces se debe guardar el tiempo de reproducción para que cuando vuelva a abrirla pueda
 	continuar desde ahí.
 	Recordar que estas son las funcionalidades mínimas exigidas, pero se espera que
-	ustedes realicen la aplicación de la manera más completa posible
+	ustedes realicen la aplicación de la manera más completa posible    CHECK[]
