@@ -98,6 +98,12 @@
     <Compile Include="Album.cs" />
     <Compile Include="Caratula.cs" />
     <Compile Include="Ranking.cs" />
+    <Compile Include="RegistroUsuarios.cs" />
+    <Compile Include="CambiarContrasena.cs" />
+    <Compile Include="EnvioMail.cs" />
+    <Compile Include="RegistrarEventArgs.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="EnvioSMS.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,0 +1,182 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entrega2
+{
+    public class Server
+    {
+        List<string> cantantes;
+        // 1- Define a Delegate
+        public delegate void RegisterEventHandler(object source, RegistrarEventArgs args);
+        // 2- Define an Event based on that Delegate
+        public event RegisterEventHandler Registered;
+        // 3- Raise the Event
+        protected virtual void OnRegistered(string username, string contrasena, string verificationlink, string email)
+        {
+            if (Registered != null)
+            {
+                Registered(this, new RegistrarEventArgs() { VerificationLink = verificationlink, Contrasena = contrasena, Username = username, Email = email });
+            }
+        }
+
+
+        
+        public delegate void ChangePasswordEventHandler(object source, CambiarContrasenaEventArgs args);
+        
+        public event ChangePasswordEventHandler PasswordChanged;
+       
+        protected virtual void OnPasswordChanged(string username, string email, string number)
+        {
+            if (PasswordChanged != null)
+            {
+                PasswordChanged(this, new CambiarContrasenaEventArgs() { Username = username, Email = email, Number = number });
+            }
+        }
+
+
+        public RegistroUsuarios Data { get; }
+
+        
+        public Server(RegistroUsuarios data)
+        {
+            this.Data = data;
+        }
+
+
+        
+        public void Registrarse()
+        {
+            
+            Console.Write("Bienvenido! Ingrese sus datos de registro en Spotflix\nUsuario: ");
+            string usuario = Console.ReadLine();
+            Console.Write("Correo: ");
+            string email = Console.ReadLine();
+            Console.Write("Contraseña: ");
+            string contrasena = Console.ReadLine();
+            Console.Write("Numero de celular: ");
+            string celular = Console.ReadLine();
+            string privacidad = "";
+            int a = 1;
+            while ( a== 1)
+            {
+                Console.WriteLine("Que tipo de privacidad quieres?");
+                Console.WriteLine("");
+                Console.WriteLine("1 --> Usuario Privado");
+                Console.WriteLine("2 --> Usuario Publico");
+                int resp = Convert.ToInt32(Console.ReadLine());
+                if (resp == 1)
+                {
+                    privacidad = "Privada";
+                    a = 0; 
+                }
+                else if (resp == 2)
+                {
+                    privacidad = "Publica";
+                    a = 0;
+                }
+                else
+                {
+                    a = 1;
+                }
+            }
+            int b = 0;
+            int c = 0;
+            
+            while (b == 0)
+            {
+                Console.WriteLine("Deseas agregar tus gustos?");
+                Console.WriteLine("1 --> Si");
+                Console.WriteLine("2 --> No");
+                int respuesta = Convert.ToInt32(Console.ReadLine());
+
+                if (respuesta == 1)
+                {
+                    Console.WriteLine("Te pediremos el nombre de 3 cantantes que te gusten");
+                    while (c<= 3)
+                    {
+                        Console.WriteLine("Escribe el nombre de 1 cantante: ");
+                        string cantante = Console.ReadLine();
+                        cantantes.Add(cantante);
+                        c += 1;
+                    }
+                    b = 1;
+                }
+                else if (respuesta == 2)
+                {
+                    
+                    b = 1;
+                }
+                else
+                {
+                    b = 0;
+                }
+            }
+            
+            string verificationLink = GenerateLink(usuario);
+           
+            string result = Data.AddUser(new List<string>()
+                {usuario, email, contrasena, privacidad, verificationLink, Convert.ToString(DateTime.Now), celular});
+            if (result == null)
+            {
+               
+                OnRegistered(usuario, contrasena,  verificationlink: verificationLink, email: email);
+            }
+            else
+            {
+                
+                Console.WriteLine("[!] ERROR: " + result + "\n");
+            }
+        }
+
+        
+        public void CambiarContrasena()
+        {
+            
+            Console.WriteLine("Ingresa tu nombre de usuario: ");
+            string usuario = Console.ReadLine();
+            Console.WriteLine("Ingresa tu contrasena: ");
+            string contrasena = Console.ReadLine();
+           
+            string result = Data.LogIn(usuario, contrasena);
+            if (result == null)
+            {
+                
+                Console.Write("Ingrese la nueva contrasena: ");
+                string NuevaContrasena = Console.ReadLine();
+                Data.ChangePassword(usuario, NuevaContrasena);
+                
+                List<string> data = Data.GetData(usuario);
+                OnPasswordChanged(data[0], data[1], data[5]);
+            }
+            else
+            {
+               
+                Console.WriteLine("[!] ERROR: " + result + "\n");
+            }
+        }
+
+        
+        private string GenerateLink(string usuario)
+        {
+            Random rnd = new Random();
+            string result = "";
+            for (int ctr = 0; ctr <= 99; ctr++)
+            {
+                char random = (char)rnd.Next(33, 126);
+                result += random;
+            }
+            return "http://spotflix.com/verificar-correo.php?=" + usuario + "_" + result;
+        }
+
+        
+        public void OnEmailVerified(object source, EventArgs e)
+        {
+            Console.WriteLine("MailService: Se ha enviado un email al correo indicado para Verificar su correo");
+        }
+
+    }
+}
+
