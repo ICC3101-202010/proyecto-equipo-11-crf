@@ -82,6 +82,7 @@
     <Compile Include="Administrador.cs" />
     <Compile Include="Director.cs" />
     <Compile Include="Finder.cs" />
+    <Compile Include="Importer.cs" />
     <Compile Include="InputOutput .cs" />
     <Compile Include="Mixer.cs" />
     <Compile Include="Reproductor.cs" />

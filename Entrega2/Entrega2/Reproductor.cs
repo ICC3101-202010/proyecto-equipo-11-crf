@@ -6,11 +6,27 @@ using System.Threading.Tasks;
 using System.IO;
 using WMPLib;
 using System.Security.Cryptography.X509Certificates;
+using System.Linq;
 
 namespace Entrega2
 {
     class Reproductor
     {
+        public List<Cancion> Library() 
+        {
+            string directory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca");
+            DirectoryInfo Biblioteca_folder = new DirectoryInfo(directory);
+            List<Cancion> Library = new List<Cancion>();
+            
+            foreach (var mp3_file in Biblioteca_folder.GetFiles())
+            { 
+                Cancion cancion = new Cancion(mp3_file.FullName);
+                Console.WriteLine(cancion.Show_info(cancion));
+                Library.Add(cancion);               
+            }
+            return Library;
+            //Retorna la lista con todas las canciones
+        }
         
         public virtual void reproducirCancion(WindowsMediaPlayer sonido,Cancion cancion)
         {
@@ -86,6 +102,18 @@ namespace Entrega2
             Playlist nuevaPlaylist = new Playlist(nombreLista, nuevaLista, null);
             return nuevaPlaylist;
 
+        }
+
+        public bool Check_if_premium(Usuario usuario) 
+        {
+            if (usuario.Member == false)
+            {
+                return false;
+            }
+            else 
+            {
+                return true;
+            }
         }
 
 

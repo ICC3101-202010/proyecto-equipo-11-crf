@@ -14,9 +14,10 @@ namespace Entrega2
         static void Main(string[] args)
         {
             
-            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Tove Lo - Habits (Stay High).mp3");
-            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Moves Like Jagger Ft. Christina Aguilera.mp3");
-            string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../The Weeknd - Blinding Lights.mp3");
+            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Tove Lo - Habits (Stay High).mp3");
+            string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Moves Like Jagger Ft. Christina Aguilera.mp3");
+            string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/The Weeknd - Blinding Lights.mp3");
+            
             //Console.Write(path1);
             //Console.Write(path3);
 
@@ -26,14 +27,14 @@ namespace Entrega2
 
             Cancion c2 = new Cancion(path2);
             Console.WriteLine(c2.Show_info(c2));
-            /*
+            Console.WriteLine("------------------------");
+            
+            
             Reproductor reproductor = new Reproductor();
+            reproductor.Library();
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();
-
-            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Dalex - Cuaderno.mp3"");
-            string path2 = @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\Dalex - Cuaderno.mp3";
-            string path3= @"C:\Users\corre\OneDrive\Escritorio\P.O.O. 20-01\proyecto-equipo-11-crf\The Weeknd - Blinding Lights.mp3";
-
+         
+/*
             Cancion cancion1 = new Cancion(path1);
             Cancion cancion2 = new Cancion(path2);
             Cancion cancion3 = new Cancion(path3);
@@ -103,7 +104,7 @@ namespace Entrega2
             //Console.WriteLine(song.Show_info(song));
             //reproductor.reproducirCancion(sonido,song);
             //Console.ReadLine();
-
+            */
 
             /*WindowsMediaPlayer sonido;
 
