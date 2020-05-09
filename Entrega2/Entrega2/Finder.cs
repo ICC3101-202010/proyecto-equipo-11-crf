@@ -59,8 +59,18 @@ namespace Entrega2
         return final_search[selected];
         }
         
-        public void buscarArtista()
+        public List<Cancion> buscarArtista(string artista, List<Cancion> todasLasCanciones)
         {
+            List<Cancion> finalSearch = new List<Cancion>();
+            foreach (Cancion song in todasLasCanciones)
+            {
+                if (song.Banda.Contains(artista)==true)
+                {
+                    finalSearch.Add(song);
+                }
+            }
+            return finalSearch;
+            
 
         }
         public Album searchAlbum(string album_name, List<Album> albums) 
