@@ -6,6 +6,8 @@ using System.Reflection.Metadata;
 using System.IO;
 using TagLib;
 using System.Drawing;
+using WMPLib;
+
 
 
 namespace Entrega2
@@ -73,7 +75,10 @@ namespace Entrega2
         }
         public void descargarCancion()
         {
-
+            string sourcePath = path;
+            string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Descargas");
+            string destPath = System.IO.Path.Combine(targetPath, titulo_Cancion);
+            System.IO.File.Copy(sourcePath, destPath, true);
         }
     }
 }
