@@ -1,7 +1,7 @@
 ﻿1. Importar canciones y vídeos!Agregar nuevos archivos multimedia de forma sencilla. Soportar
 al menos los formatos más comunes (mp3, wav, mp4, etc).
 
-		CHECK[]
+		CHECK[✔]
 
 
 
@@ -9,17 +9,17 @@ al menos los formatos más comunes (mp3, wav, mp4, etc).
 	a) Metadata ! Cada canción debe tener información como el género, cantante, compositor,
 	discografía, estudio, año de publicación, letra, etc. Por otra parte, los vídeos deben contener
 	información como género, categoría, actores, director, estudio. año de publicación,
-	descripción, calificación, etc.    CHECK[]
+	descripción, calificación, etc.    CHECK[✔]
 	
 	b) Metadata al importar ! Al cargar canciones (y vídeos) agregar información para todas
-	las canciones que se importen.    CHECK[]
+	las canciones que se importen.    CHECK[✔]
 	
 	c) Información intrínseca de cada canción (y vídeo) ! Información que puede ser obtenida
 	como resultado de operaciones simples como la duración, etc.    CHECK[]
 	
 	d) Información en la plataforma ! Cada canción y vídeo debe tener información que se
 	genere en la plataforma, por ejemplo, número de reproducciones, cantidad de usuarios
-	que les gusta, calificación (nota que ponen los usuarios), etc.   CHECK[]
+	que les gusta, calificación (nota que ponen los usuarios), etc.   CHECK[(mas o menos)]
 
 
 
@@ -28,7 +28,7 @@ al menos los formatos más comunes (mp3, wav, mp4, etc).
 	más valores determinados.
 		
 		1) Por palabras clave ! definir una o más palabras que son buscadas entre la información
-		de las canciones (y videos)  CHECK[]
+		de las canciones (y videos)  CHECK[✔]
 		
 		2) Por persona ! definir cuales personas deben estar (autores/actores) en la canción
 		(o video).                  CHECK[] 
@@ -57,7 +57,7 @@ al menos los formatos más comunes (mp3, wav, mp4, etc).
 4. Playlists
 	a) Playlist ! crear playlists con canciones (o videos). Un playlist no puede tener canciones
 	y videos, los archivos multimedia deben ser el mismo tipo. Estas pueden ser privadas o
-	públicas. Si un usuario es privado, no puede tener playlist públicas.       CHECK[]
+	públicas. Si un usuario es privado, no puede tener playlist públicas.       CHECK[✔]
 
 
 5. En cola ! Se debe poder crear una cola de reproducción automática (lista que se reproduzca
@@ -84,7 +84,7 @@ al menos los formatos más comunes (mp3, wav, mp4, etc).
 
 
 10. Diferenciar usuarios pagos de no pagos: Esto es abierto, pero una buena base es ver como lo
-hace Spotify.    CHECK[]
+hace Spotify.    CHECK[✔]
 
 
 11. Las canciones pueden o no ser descargadas, pero no las películas.   CHECK[]
