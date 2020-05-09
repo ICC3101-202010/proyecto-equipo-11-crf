@@ -7,6 +7,7 @@ using System.IO;
 using WMPLib;
 using System.Security.Cryptography.X509Certificates;
 using System.Linq;
+using TagLib.Gif;
 
 namespace Entrega2
 {
@@ -122,6 +123,22 @@ namespace Entrega2
 
         }
 
+        public List<Cancion> Queue(Cancion song)
+            
+        {
+            List<Cancion> queue = new List<Cancion>();
+            List<Cancion> Allsongs = new List<Cancion>();
+            Allsongs = Library();
 
+            Random rand_Num = new Random();
+            while (Allsongs.Count > 0)
+            {
+                int val = rand_Num.Next(0, Allsongs.Count - 1);
+                queue.Add(Allsongs[val]);
+                Allsongs.RemoveAt(val);
+            }
+
+            return queue;
+        }
     }
 }

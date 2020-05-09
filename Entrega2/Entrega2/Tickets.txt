@@ -61,7 +61,7 @@ al menos los formatos más comunes (mp3, wav, mp4, etc).
 
 
 5. En cola ! Se debe poder crear una cola de reproducción automática (lista que se reproduzca
-	automáticamente) tanto para video como para canciones          CHECK[]
+	automáticamente) tanto para video como para canciones          CHECK[✔]
 
 
 
@@ -87,7 +87,7 @@ al menos los formatos más comunes (mp3, wav, mp4, etc).
 hace Spotify.    CHECK[✔]
 
 
-11. Las canciones pueden o no ser descargadas, pero no las películas.   CHECK[]
+11. Las canciones pueden o no ser descargadas, pero no las películas.   CHECK[✔]
 
 
 
@@ -104,11 +104,11 @@ hace Spotify.    CHECK[✔]
 3[] a[]            b[]    c[]
 	1[] 2[] 3[]         
 4[✔]
-5[]
+5[✔]
 6[]
 7[]
 8[]
 9[]
-10[]
-11[]
+10[✔]
+11[✔]
 12[]
