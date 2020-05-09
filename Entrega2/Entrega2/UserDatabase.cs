@@ -8,5 +8,6 @@ namespace Entrega2
 {
     class UserDatabase
     {
+
     }
 }

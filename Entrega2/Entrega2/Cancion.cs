@@ -28,6 +28,8 @@ namespace Entrega2
         private string path;
         private string banda;
         private int likes;
+        private string duration;
+        private Image custom_image;
 
         public string Banda { get => banda; set => banda = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -41,6 +43,10 @@ namespace Entrega2
         public IPicture[] Pre_caratula { get => pre_caratula; set => pre_caratula = value; }
         public string Path { get => path; set => path = value; }
         public int Likes { get =>likes; set => likes = value; }
+      
+        public int Reproducciones { get => likes; set => likes = value; }
+        private Image Custom_image { get => Custom_image; set => Custom_image = value; }
+        public string Duration { get =>duration; set => duration = value; }
 
         public Cancion(string path)
         {
@@ -56,7 +62,16 @@ namespace Entrega2
             this.Album = song.Tag.Album;
             this.pre_caratula = song.Tag.Pictures;
             this.path = path;
-            this.likes = likes;
+            TimeSpan time_prev = song.Properties.Duration;
+            if (time_prev.Hours == 0)
+            {
+                this.duration = Convert.ToString(song.Properties.Duration.Minutes) + ":" + Convert.ToString(song.Properties.Duration.Seconds);
+            }
+            else if (time_prev.Minutes == 0) 
+            {
+                this.duration = Convert.ToString(song.Properties.Duration.Seconds);
+            }
+            
             //Caratula caratula = new Caratula(song.Tag.Pictures);
            
         }
@@ -70,7 +85,7 @@ namespace Entrega2
             info = "Nombre:" + cancion.titulo_Cancion + "\n" + "Compositor: " + cancion.Banda
             +"\n" + "N° pista: "+cancion.numero_Cancion_Album+"\n"
                 +"Lanzamiento: "+ cancion.fecha_Lanzamiento + "\n"+ "Estudio: " + cancion.nombre_Estudio+"\n"
-                +"Genero: "+ cancion.genero + "\n" + "Album: " + cancion.Album+ "\n";
+                +"Genero: "+ cancion.genero + "\n" + "Album: " + cancion.Album+ "\n" + cancion.duration + "\n";
             return info;
         }
         public void descargarCancion()

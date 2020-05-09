@@ -19,7 +19,7 @@ al menos los formatos más comunes (mp3, wav, mp4, etc).
 	
 	d) Información en la plataforma ! Cada canción y vídeo debe tener información que se
 	genere en la plataforma, por ejemplo, número de reproducciones, cantidad de usuarios
-	que les gusta, calificación (nota que ponen los usuarios), etc.   CHECK[(mas o menos)]
+	que les gusta, calificación (nota que ponen los usuarios), etc.   CHECK[✔]
 
 
 
@@ -99,8 +99,8 @@ hace Spotify.    CHECK[✔]
 
 
 1[✔]
-2[]
-	a[✔] b[✔] c[] d[]
+2[✔]
+	a[✔] b[✔] c[] d[✔]
 3[] a[]            b[]    c[]
 	1[] 2[] 3[]         
 4[✔]
@@ -109,10 +109,6 @@ hace Spotify.    CHECK[✔]
 7[]
 8[]
 9[]
-<<<<<<< HEAD
 10[✔]
-=======
-10[]
->>>>>>> 33fa8fb54f5d5147852ab0caef2f8e72873bf515
 11[✔]
-12[]
+

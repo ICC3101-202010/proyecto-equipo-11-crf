@@ -140,5 +140,10 @@ namespace Entrega2
 
             return queue;
         }
+
+        public void AddPictureT() 
+        { 
+        
+        }
     }
 }
