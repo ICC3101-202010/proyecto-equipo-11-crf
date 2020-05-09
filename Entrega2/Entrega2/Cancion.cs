@@ -71,6 +71,9 @@ namespace Entrega2
                 +"Genero: "+ cancion.genero + "\n" + "Album: " + cancion.Album+ "\n";
             return info;
         }
+        public void descargarCancion()
+        {
 
+        }
     }
 }
