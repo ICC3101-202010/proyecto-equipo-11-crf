@@ -9,7 +9,7 @@ using TagLib;
 using System.Linq;
 namespace Entrega2
 {
-    class Album
+    public class Album
     {
         private string nombre_Album;
         private Caratula caratula;

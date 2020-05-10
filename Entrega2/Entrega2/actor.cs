@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
-    class Actor : Persona
+    public class Actor : Persona
     {
         private List<Video> peliculas;
         internal List<Video> Peliculas { get => peliculas; set => peliculas = value; }

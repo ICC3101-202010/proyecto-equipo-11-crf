@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Entrega2
 {
-    class Banda
+    public class Banda
     {
         //Ver si se implementa  o no porque está ambiguo
         private string Nombre_Banda;

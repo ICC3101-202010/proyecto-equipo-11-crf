@@ -8,6 +8,7 @@ namespace Entrega2
 {
     class InputOutput
     {
+
        
     }
 }

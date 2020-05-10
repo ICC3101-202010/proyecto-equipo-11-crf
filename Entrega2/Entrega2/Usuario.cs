@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,15 +23,14 @@ namespace Entrega2
         public List<Cancion> canciones_favoritas;
         public List<Video> videos_favoritos;
 
+        private List<Usuario> seguidosUsuarios;
+        private List<Playlist> seguidosPlaylist;
+        private List<Album> seguidosAlbum;
+        private List<Banda> seguidosBanda;
+        private List<Actor> seguidosActor;
 
-        private Dictionary<string, List<string>> seguidos = new Dictionary<string, List<string>>()
-        { { "Usuario",  new List<string>() },
-            {"Playlist",new List<string>() },
-            {"Discos",new List<string>() },
-            { "Cantantes",new List<string>()},
-            {"Actores",new List<string>()
-            }};
-           
+
+
         public int ID  { get => id; set => id = value; }
         public bool Member { get => member; set => member = value; }
         public DateTime Member_expiration  { get => member_expiration; set => member_expiration = value; }
@@ -42,6 +42,11 @@ namespace Entrega2
         public string Username { get => username; set => username = value; }
         public List<Cancion> Canciones_favoritas { get => canciones_favoritas; set => canciones_favoritas = value; }
         internal List<Video> Videos_favoritos { get => videos_favoritos; set => videos_favoritos = value; }
+        public List<Usuario> SeguidosUsuarios { get => seguidosUsuarios; set => seguidosUsuarios = value; }
+        internal List<Playlist> SeguidosPlaylist { get => seguidosPlaylist; set => seguidosPlaylist = value; }
+        internal List<Album> SeguidosAlbum { get => seguidosAlbum; set => seguidosAlbum = value; }
+        internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
+        internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
 
         public Usuario(int ID, bool member, DateTime Member_expiration,bool Administrador,string Mail,string contraseña,int telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {
@@ -88,7 +93,27 @@ namespace Entrega2
 
             }
         }
-
+        public void seguirUsuario(Usuario user)
+        {
+            this.SeguidosUsuarios.Add(user);
+        }
+        public void seguirPlaylist(Playlist playlist)
+        {
+            this.seguidosPlaylist.Add(playlist);
+        }
+        public void seguirActor(Actor actor)
+        {
+            this.seguidosActor.Add(actor);
+        }
+        public void seguirAlbum(Album album)
+        {
+            this.seguidosAlbum.Add(album);
+            
+        }
+        public void seguirBanda(Banda banda)
+        {
+            this.seguidosBanda.Add(banda);
+        }
 
 
 

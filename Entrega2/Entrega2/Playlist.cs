@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace Entrega2
 {
-     class Playlist
+     public class Playlist
      {
         private string nombrePlaylist;
         private List<Cancion> canciones;
