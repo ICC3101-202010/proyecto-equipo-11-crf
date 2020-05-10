@@ -17,11 +17,26 @@ namespace Entrega2
         protected int telefono;
         protected string username;
 
+<<<<<<< HEAD
       
         public List<Cancion> canciones_favoritas;
         public List<Video> videos_favoritos;
 
  
+=======
+        private List<Cancion> canciones_favoritas;
+        private List<Video> videos_favoritos;
+        private Dictionary<string, List<string>> seguidos = new Dictionary<string, List<string>>() 
+        { { "Usuario",  new List<string>() },
+            {"Playlist",new List<string>() },
+            {"Discos",new List<string>() },
+            { "Cantantes",new List<string>()},
+            {"Actores",new List<string>() } };
+
+      
+        
+
+>>>>>>> 78254c7860cdcebb77ad56ea0c4262124fa53b5a
 
 
 
@@ -50,8 +65,8 @@ namespace Entrega2
             this.lastName = LastName;        
             this.nation = Nation;
             this.birthDate = BirthDate;
-            this.canciones_favoritas = canciones_favoritas;
-            this.videos_favoritos = videos_favoritos;
+            //this.canciones_favoritas = canciones_favoritas;
+            //this.videos_favoritos = videos_favoritos;
         }
 
         public Usuario()

@@ -58,6 +58,12 @@ namespace Entrega2
             this.nombre_Estudio = song.Tag.Conductor;
             this.genero = song.Tag.FirstGenre;
             this.Album = song.Tag.Album;
+<<<<<<< HEAD
+=======
+
+            this.Pre_caratula = song.Tag.Pictures.FirstOrDefault(); 
+
+>>>>>>> 78254c7860cdcebb77ad56ea0c4262124fa53b5a
             this.path = path;
             TimeSpan time_prev = song.Properties.Duration;
             this.Pre_caratula = song.Tag.Pictures.FirstOrDefault();
