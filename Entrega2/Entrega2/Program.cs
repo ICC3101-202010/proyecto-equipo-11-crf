@@ -178,12 +178,16 @@ namespace Entrega2
             while (exec)
             {
                 
-                string chosen = ShowOptions(new List<string>() { "Registrarse", "Cambiar contrasena", "Salir" });
+                string chosen = ShowOptions(new List<string>() { "Registrarse", "Log in", "Cambiar contrasena", "Salir" });
                 switch (chosen)
                 {
                     case "Registrarse":
                         Console.Clear();
                         server.Registrarse();
+                        break;
+                    case "Log in":
+                        Console.Clear();
+                        server.LogIn();
                         break;
                     case "Cambiar contrasena":
                         Console.Clear();
