@@ -16,6 +16,7 @@ namespace Entrega2
         protected string contraseña;
         protected int telefono;
         protected string username;
+      
         private List<Cancion> canciones_favoritas;
         private List<Video> videos_favoritos;
 
