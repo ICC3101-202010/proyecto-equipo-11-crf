@@ -66,11 +66,11 @@ al menos los formatos más comunes (mp3, wav, mp4, etc).
 
 
 6. Playlist específica de favoritos ! Se debe poder agregar canciones y videos a una lista de
-	favoritos. Canciones y vídeos deben estar en listas diferentes.    CHECK[]
+	favoritos. Canciones y vídeos deben estar en listas diferentes.    CHECK[✔]
 
 
 
-7. Buscar y seguir: Usuarios, playlist, discos, cantantes, actores, etc      CHECK[]
+7. Buscar y seguir: Usuarios, playlist, discos, cantantes, actores, etc      CHECK[✔]
 
 
 

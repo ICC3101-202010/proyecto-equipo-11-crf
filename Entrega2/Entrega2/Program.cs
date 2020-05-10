@@ -16,13 +16,14 @@ namespace Entrega2
             Reproductor reproductor = new Reproductor();
             Finder finder = new Finder();
             string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
+            string pat2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../narnia.mp4");
             //string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Moves Like Jagger Ft. Christina Aguilera.mp3");
             //string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/The Weeknd - Blinding Lights.mp3");
 
             //Console.Write(path1);
             //Console.Write(path3);
-
-
+            
+            Video v1 = new Video(pat2);
             Cancion c1 = new Cancion(path1);
             //Console.WriteLine(c1.Show_info(c1));
 

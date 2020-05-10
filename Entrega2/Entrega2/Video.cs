@@ -17,6 +17,10 @@ namespace Entrega2
         private Director director;
         private string estudio;
         private string caratula;
+        private string coment;
+        private int rating;
+        private uint year;
+        private string category;
 
         public string NameVideo { get => nameVideo; set => nameVideo = value; }
         public string DireccionMemoria { get => direccionMemoria; set => direccionMemoria = value; }
@@ -26,12 +30,35 @@ namespace Entrega2
         public string Caratula { get => caratula; set => caratula = value; }
         internal List<Actor> Actores { get => actores; set => actores = value; }
         internal Director Director { get => director; set => director = value; }
+        public string Coment { get => coment; set => coment = value; }
+        public uint Year { get => year; set => year = value; }
+        public int Rating { get => rating; set => rating = value; }
+
+        public string Categoria { get => category; set => category = value; }
 
         public Video(string path)
         {
             TagLib.File video = TagLib.File.Create(path);
+            this.nameVideo=video.Tag.Title;
+            this.genero = video.Tag.FirstGenre;
+            this.year = video.Tag.Year;
+            this.coment = video.Tag.Comment;
+            //this.director.NamePerson = video.Tag.FirstComposer;
+            //TagLib.Id3v2.Tag tag = (TagLib.Id3v2.Tag)video.GetTag(TagLib.TagTypes.AllTags);
+            //Console.WriteLine(tag);
+            //género, categoría, actores, director, estudio. año de publicación,
+            //descripción, calificación
+            Console.WriteLine(video.Tag.Title);
+            Console.WriteLine(video.Tag.FirstGenre);
+            Console.WriteLine(video.Tag.Title);
+            Console.WriteLine(video.Tag.Year);
+            Console.WriteLine(video.Tag.Comment);
+            Console.WriteLine(video.Tag.Genres);
+            Console.WriteLine(video.Tag.FirstComposer);
+            Console.WriteLine(video.Tag.TagTypes);
 
-            
+
+
 
         }
         public void agregarFavoritosVideo(Usuario user)
