@@ -49,7 +49,7 @@ namespace Entrega2
             this.Data = data;
         }
 
-        public void LogIn()
+        public string LogIn()
         {
             Console.WriteLine("Bienvenido de vuelta a Spotflix! Te extrañamos!");
             Console.WriteLine("Ingresa tu nombre de usuario: \n");
@@ -76,18 +76,18 @@ namespace Entrega2
                     switch (opcion)
                     {
                         case "1":
-                            break;
+                            return "Reproductor";
                         case "2":
-                            break;
+                            return "Mixer";
                         case "3":
-                            break;
+                            return "Listas";
                         case "4":
-                            break;
+                            return "Buscador";
                         case "5":
-                            break;
+                            return "Salir";
                         default:
                             Console.WriteLine("Ingree una opcion valida");
-                            break;
+                            return "";
 
                     }
                 }
@@ -96,7 +96,9 @@ namespace Entrega2
             {
 
                 Console.WriteLine("[!] ERROR: " + result + "\n");
+                return "[!] ERROR: " + result + "\n";
             }
+            return "";
         }
         
         public void Registrarse()
