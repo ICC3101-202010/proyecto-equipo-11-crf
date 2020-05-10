@@ -26,7 +26,7 @@ namespace Entrega2
         public void OnRegistered(object source, RegistrarEventArgs e)
         {
             Thread.Sleep(2000);
-            Console.WriteLine($"\nCorreo enviado a {e.Email}: \n Gracias por registrarte, {e.Username}!\n Por favor, para poder verificar tu correo, has click en: {e.VerificationLink}\n");
+            Console.WriteLine($"\nCorreo enviado a {e.Email}: \n Gracias por registrarte, {e.Username}!\n Por favor, para poder verificar tu correo, has click en: \n {e.VerificationLink}\n");
             Thread.Sleep(2000);
             OnEmailSent();
         }
