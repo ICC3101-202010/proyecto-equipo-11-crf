@@ -7,6 +7,7 @@ using System.IO;
 using WMPLib;
 using System.Security.Cryptography.X509Certificates;
 using System.Linq;
+using TagLib.Gif;
 
 namespace Entrega2
 {
@@ -115,13 +116,34 @@ namespace Entrega2
                 return true;
             }
         }
-        public List<Cancion> ratingEscuchadas(List<Cancion> todasLasCanciones)
+        public List<Cancion> ratingReproducciones(List<Cancion> todasLasCanciones)
         {
-            List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.reproducciones descending select canciones).ToList();
+            List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.Reproducciones descending select canciones).ToList();
             return lista;
 
         }
 
+        public List<Cancion> Queue(Cancion song)
+            
+        {
+            List<Cancion> queue = new List<Cancion>();
+            List<Cancion> Allsongs = new List<Cancion>();
+            Allsongs = Library();
 
+            Random rand_Num = new Random();
+            while (Allsongs.Count > 0)
+            {
+                int val = rand_Num.Next(0, Allsongs.Count - 1);
+                queue.Add(Allsongs[val]);
+                Allsongs.RemoveAt(val);
+            }
+
+            return queue;
+        }
+
+        public void AddPictureT() 
+        { 
+        
+        }
     }
 }
