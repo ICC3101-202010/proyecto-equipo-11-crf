@@ -4,6 +4,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Threading;
+
 namespace Entrega2
 {
      class Playlist
@@ -56,7 +59,30 @@ namespace Entrega2
             Console.WriteLine("Cancion "+cancionEliminada.Titulo_Cancion+" eliminada");
 
         }
+        public void addIamge() 
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Images");
+            DirectoryInfo Image_folder = new DirectoryInfo(path);
+            int index = 0;
+            foreach (var image_file in Image_folder.GetFiles())
+            {
+                Console.WriteLine(Convert.ToString(index) + image_file);
+                index++;
+            }
+            Console.WriteLine("Choose a picture");
+            int selecction = Convert.ToInt32(Console.ReadLine());
+            int Count = 0; 
+            foreach (var image_file in Image_folder.GetFiles())
+            {
+                if (Count == selecction) 
+                {
+                    Imagen_personalizada = Image.FromFile(image_file.FullName);
+                }
+                Count++;
+            }
+
         
+        }
        
         
     }
