@@ -16,6 +16,7 @@ namespace Entrega2
         protected string contraseña;
         protected int telefono;
         protected string username;
+<<<<<<< HEAD
         private List<Cancion> canciones_favoritas;
         private List<Video> videos_favoritos;
         private Dictionary<string, List<string>> seguidos = new Dictionary<string, List<string>>() 
@@ -24,6 +25,16 @@ namespace Entrega2
             {"Discos",new List<string>() },
             { "Cantantes",new List<string>()},
             {"Actores",new List<string>() } };
+=======
+<<<<<<< HEAD
+      
+        private List<Cancion> canciones_favoritas;
+        private List<Video> videos_favoritos;
+=======
+        public List<Cancion> canciones_favoritas;
+        public List<Video> videos_favoritos;
+>>>>>>> 6f90dcae4cd88c649818c6948be2323385e0dd15
+>>>>>>> 415a1845ec6a2fbbda72dba7d35d2a5096dac8a7
 
 
 

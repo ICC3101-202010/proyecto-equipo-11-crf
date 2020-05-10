@@ -42,8 +42,7 @@ namespace Entrega2
         public IPicture Pre_caratula { get => pre_caratula; set => pre_caratula = value; }
         public string Path { get => path; set => path = value; }
         public int Likes { get =>likes; set => likes = value; }
-      
-        public int Reproducciones { get => likes; set => likes = value; }
+        public int Reproducciones { get => reproducciones; set => reproducciones = value; }
         private Image Custom_image { get => Custom_image; set => Custom_image = value; }
         public string Duration { get =>duration; set => duration = value; }
 
@@ -59,9 +58,14 @@ namespace Entrega2
             this.nombre_Estudio = song.Tag.Conductor;
             this.genero = song.Tag.FirstGenre;
             this.Album = song.Tag.Album;
+<<<<<<< HEAD
+=======
             this.Pre_caratula = song.Tag.Pictures.FirstOrDefault(); 
+>>>>>>> 6f90dcae4cd88c649818c6948be2323385e0dd15
             this.path = path;
             TimeSpan time_prev = song.Properties.Duration;
+            this.Pre_caratula = song.Tag.Pictures.FirstOrDefault();
+
             if (time_prev.Hours == 0)
             {
                 this.duration = Convert.ToString(song.Properties.Duration.Minutes) + ":" + Convert.ToString(song.Properties.Duration.Seconds);
@@ -94,10 +98,14 @@ namespace Entrega2
             string destPath = System.IO.Path.Combine(targetPath, titulo_Cancion);
             System.IO.File.Copy(sourcePath, destPath, true);
         }
+<<<<<<< HEAD
+
+=======
         public void agregarFavoritos(Usuario user)
         {
             user.Canciones_favoritas.Add(this);
             Console.WriteLine("Cancion " + this.titulo_Cancion + " agregada a favoritos");
         }
+>>>>>>> 6f90dcae4cd88c649818c6948be2323385e0dd15
     }
 }
