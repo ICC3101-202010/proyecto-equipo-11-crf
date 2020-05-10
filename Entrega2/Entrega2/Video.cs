@@ -7,7 +7,7 @@ using MetadataExtractor.Formats.Mpeg;
 
 namespace Entrega2
 {
-    class Video
+    public class Video
     {
         private string nameVideo;
         private string direccionMemoria;
@@ -33,6 +33,11 @@ namespace Entrega2
 
             
 
+        }
+        public void agregarFavoritosVideo(Usuario user)
+        {
+            user.videos_favoritos.Add(this);
+            Console.WriteLine("Video " + this.nameVideo + " agregado a favoritos");
         }
     }
 }

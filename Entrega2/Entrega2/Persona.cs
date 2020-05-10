@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
-     class Persona
+     public class Persona
     {
         protected string namePerson;
         protected string lastName;

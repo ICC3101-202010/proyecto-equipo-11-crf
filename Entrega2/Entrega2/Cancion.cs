@@ -58,6 +58,10 @@ namespace Entrega2
             this.nombre_Estudio = song.Tag.Conductor;
             this.genero = song.Tag.FirstGenre;
             this.Album = song.Tag.Album;
+<<<<<<< HEAD
+=======
+            this.Pre_caratula = song.Tag.Pictures.FirstOrDefault(); 
+>>>>>>> 6f90dcae4cd88c649818c6948be2323385e0dd15
             this.path = path;
             TimeSpan time_prev = song.Properties.Duration;
             this.Pre_caratula = song.Tag.Pictures.FirstOrDefault();
@@ -94,6 +98,14 @@ namespace Entrega2
             string destPath = System.IO.Path.Combine(targetPath, titulo_Cancion);
             System.IO.File.Copy(sourcePath, destPath, true);
         }
+<<<<<<< HEAD
 
+=======
+        public void agregarFavoritos(Usuario user)
+        {
+            user.Canciones_favoritas.Add(this);
+            Console.WriteLine("Cancion " + this.titulo_Cancion + " agregada a favoritos");
+        }
+>>>>>>> 6f90dcae4cd88c649818c6948be2323385e0dd15
     }
 }
