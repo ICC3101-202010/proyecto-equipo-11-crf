@@ -49,7 +49,54 @@ namespace Entrega2
             this.Data = data;
         }
 
+        public void LogIn()
+        {
+            Console.WriteLine("Bienvenido de vuelta a Spotflix! Te extrañamos!");
+            Console.WriteLine("Ingresa tu nombre de usuario: \n");
+            string usuario = Console.ReadLine();
+            Console.Write("Ingresa tu Contraseña: \n");
+            string contrasena = Console.ReadLine();
 
+            string result = Data.LogIn(usuario, contrasena);
+            if (result == null)
+            {
+
+                Console.Write("Interfaz Spotflix ");
+
+                string opcion = null;
+                while (opcion != "5")
+                {
+                    Console.WriteLine("1- Reproductor");
+                    Console.WriteLine("2- Mixer");
+                    Console.WriteLine("3- Listas");
+                    Console.WriteLine("4- Buscador");
+                    Console.WriteLine("5- Salir");
+                    opcion = Console.ReadLine();
+                    switch (opcion)
+                    {
+                        case "1":
+                            break;
+                        case "2":
+                            break;
+                        case "3":
+                            break;
+                        case "4":
+                            break;
+                        case "5":
+                            break;
+                        default:
+                            Console.WriteLine("Ingree una opcion valida");
+                            break;
+
+                    }
+                }
+            }
+            else
+            {
+
+                Console.WriteLine("[!] ERROR: " + result + "\n");
+            }
+        }
         
         public void Registrarse()
         {
