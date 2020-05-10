@@ -24,8 +24,17 @@ namespace Entrega2
                 }
             }
         }
+        public void ChangeUsername(string usuario, string nuevo_usuario)
+        {
+            foreach (List<string> user in this.registrados.Values)
+            {
+                if (user[0] == usuario)
+                {
+                    user[0] = nuevo_usuario;
+                }
+            }
+        }
 
-        
         public string AddUser(List<string> data)
         {
             string descripcion = null;

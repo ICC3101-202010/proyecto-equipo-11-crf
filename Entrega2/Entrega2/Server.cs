@@ -217,16 +217,17 @@ namespace Entrega2
                 string NuevoNombre = Console.ReadLine();
                 foreach (List<string> user in registrados.Values)
                 {
-                    if (user[0] == usuario)
+                    if (user[0] == NuevoNombre)
                     {
                         Console.WriteLine("El nombre de Usuario ya existe") ;
                     }
                     else
                     {
-                        Data.ChangePassword(usuario, NuevoNombre);
+                        Data.ChangeUsername(usuario, NuevoNombre);
 
                         List<string> data = Data.GetData(usuario);
-                        OnPasswordChanged(data[0], data[1], data[5]);
+                        OnUsernameChanged(data[0], data[1], data[5]);
+                        
                     }
                 }
                 
