@@ -7,8 +7,7 @@ using System.IO;
 using TagLib;
 using System.Drawing;
 using WMPLib;
-
-
+using System.Linq;
 
 namespace Entrega2
 {
@@ -24,7 +23,7 @@ namespace Entrega2
         private int reproducciones = 0;
         private Caratula caratula;
         private string album;
-        private IPicture[] pre_caratula;
+        private IPicture pre_caratula;
         private string path;
         private string banda;
         private int likes;
@@ -40,7 +39,7 @@ namespace Entrega2
         public int Rating { get => rating; set => rating = value; }
         public Caratula Caratula { get => caratula; set => caratula = value; }
         public string Album { get => album; set => album = value; }
-        public IPicture[] Pre_caratula { get => pre_caratula; set => pre_caratula = value; }
+        public IPicture Pre_caratula { get => pre_caratula; set => pre_caratula = value; }
         public string Path { get => path; set => path = value; }
         public int Likes { get =>likes; set => likes = value; }
       
@@ -60,7 +59,7 @@ namespace Entrega2
             this.nombre_Estudio = song.Tag.Conductor;
             this.genero = song.Tag.FirstGenre;
             this.Album = song.Tag.Album;
-            this.pre_caratula = song.Tag.Pictures;
+            this.Pre_caratula = song.Tag.Pictures.FirstOrDefault(); 
             this.path = path;
             TimeSpan time_prev = song.Properties.Duration;
             if (time_prev.Hours == 0)
