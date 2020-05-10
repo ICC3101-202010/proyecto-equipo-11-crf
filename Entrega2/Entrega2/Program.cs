@@ -22,13 +22,12 @@ namespace Entrega2
             //Console.Write(path1);
             //Console.Write(path3);
 
-<<<<<<< HEAD
-            Cancion c1 = new Cancion(path1);
-            Console.WriteLine(c1.Show_info(c1));
-=======
+
             //Cancion c1 = new Cancion(path1);
             //Console.WriteLine(c1.Show_info(c1));
->>>>>>> c9ce40e7d30aa58aa6980c92c9166e0fb5e7dd7c
+
+            //Cancion c1 = new Cancion(path1);
+            //Console.WriteLine(c1.Show_info(c1));
 
 
             //Cancion c2 = new Cancion(path2);
@@ -38,7 +37,7 @@ namespace Entrega2
             
             
             List<Cancion> todasLasCanciones= reproductor.Library();
-            List<Cancion> rating=reproductor.ratingEscuchadas(todasLasCanciones);
+            List<Cancion> rating=reproductor.ratingReproducciones(todasLasCanciones);
             Playlist ratingplaylist = new Playlist("rating", rating, null);
             ratingplaylist.mostrarCanciones();
 

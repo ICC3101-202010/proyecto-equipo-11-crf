@@ -8,7 +8,11 @@ namespace Entrega2
 {
     public class Server
     {
-        List<string> cantantes;
+        private List<string>  cantantes;
+
+        List<string> cantantes_list = new List<string>();
+
+        public List<string> Cantantes { get => cantantes; set => cantantes = value; }
         // 1- Define a Delegate
         public delegate void RegisterEventHandler(object source, RegistrarEventArgs args);
         // 2- Define an Event based on that Delegate
@@ -95,11 +99,11 @@ namespace Entrega2
                 if (respuesta == 1)
                 {
                     Console.WriteLine("Te pediremos el nombre de 3 cantantes que te gusten");
-                    while (c<= 3)
+                    while (c<= 2)
                     {
                         Console.WriteLine("Escribe el nombre de 1 cantante: ");
                         string cantante = Console.ReadLine();
-                        cantantes.Add(cantante);
+                        cantantes_list.Add(cantante);
                         c += 1;
                     }
                     b = 1;

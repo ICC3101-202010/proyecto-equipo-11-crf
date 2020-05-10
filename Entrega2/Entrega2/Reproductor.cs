@@ -116,9 +116,9 @@ namespace Entrega2
                 return true;
             }
         }
-        public List<Cancion> ratingEscuchadas(List<Cancion> todasLasCanciones)
+        public List<Cancion> ratingReproducciones(List<Cancion> todasLasCanciones)
         {
-            List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.reproducciones descending select canciones).ToList();
+            List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.Reproducciones descending select canciones).ToList();
             return lista;
 
         }
