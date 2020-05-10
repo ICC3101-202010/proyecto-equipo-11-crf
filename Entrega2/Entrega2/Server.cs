@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
-    public class Server
+    public class Server : RegistroUsuarios
     {
+        
+
         private List<string>  cantantes;
 
         List<string> cantantes_list = new List<string>();
@@ -41,9 +43,23 @@ namespace Entrega2
         }
 
 
-        public RegistroUsuarios Data { get; }
 
+        public delegate void ChangeUsernameEventHandler(object source, CambiarNombreUsuarioEventArgs args);
+
+        public event ChangeUsernameEventHandler UsernameChanged;
+
+        protected virtual void OnUsernameChanged(string contrasena, string email, string number)
+        {
+            if (UsernameChanged != null)
+            {
+                UsernameChanged(this, new CambiarNombreUsuarioEventArgs { Contrasena = contrasena , Email = email, Number = number });
+            }
+        }
+
+
+        public RegistroUsuarios Data { get; }
         
+
         public Server(RegistroUsuarios data)
         {
             this.Data = data;
@@ -185,7 +201,44 @@ namespace Entrega2
             }
         }
 
-        
+        public void CambiarNombreUsuario()
+        {
+
+            Console.WriteLine("Ingresa tu nombre de usuario: ");
+            string usuario = Console.ReadLine();
+            Console.WriteLine("Ingresa tu contrasena: ");
+            string contrasena = Console.ReadLine();
+
+            string result = Data.LogIn(usuario, contrasena);
+            if (result == null)
+            {
+
+                Console.Write("Ingrese el nuevo nombre de usuario: ");
+                string NuevoNombre = Console.ReadLine();
+                foreach (List<string> user in registrados.Values)
+                {
+                    if (user[0] == usuario)
+                    {
+                        Console.WriteLine("El nombre de Usuario ya existe") ;
+                    }
+                    else
+                    {
+                        Data.ChangePassword(usuario, NuevoNombre);
+
+                        List<string> data = Data.GetData(usuario);
+                        OnPasswordChanged(data[0], data[1], data[5]);
+                    }
+                }
+                
+                
+            }
+            else
+            {
+
+                Console.WriteLine("[!] ERROR: " + result + "\n");
+            }
+        }
+
         public void CambiarContrasena()
         {
             
@@ -193,17 +246,33 @@ namespace Entrega2
             string usuario = Console.ReadLine();
             Console.WriteLine("Ingresa tu contrasena: ");
             string contrasena = Console.ReadLine();
-           
+            int a = 1;
             string result = Data.LogIn(usuario, contrasena);
             if (result == null)
             {
-                
-                Console.Write("Ingrese la nueva contrasena: ");
-                string NuevaContrasena = Console.ReadLine();
-                Data.ChangePassword(usuario, NuevaContrasena);
-                
-                List<string> data = Data.GetData(usuario);
-                OnPasswordChanged(data[0], data[1], data[5]);
+                while (a == 1)
+                {
+                    Console.Write("Ingrese la nueva contrasena: ");
+                    string NuevaContrasena1 = Console.ReadLine();
+                    Console.Write("Re-Ingrese la nueva contrasena: ");
+                    string NuevaContrasena2 = Console.ReadLine();
+                    if (NuevaContrasena1 == NuevaContrasena2)
+                    {
+                        Data.ChangePassword(usuario, NuevaContrasena1);
+
+                        List<string> data = Data.GetData(usuario);
+                        OnPasswordChanged(data[0], data[1], data[5]);
+                        a = 2;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Contrasenas no coinciden");
+                        a = 1;
+                    }
+
+
+                }
+
             }
             else
             {

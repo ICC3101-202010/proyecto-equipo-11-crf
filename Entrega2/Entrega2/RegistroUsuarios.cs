@@ -7,7 +7,7 @@ namespace Entrega2
     {
         // Diccionario para guardar todos los registros
         // Los datos de cada registro se guardan en List<string> con formato [usuario, correo, password, linkVerificacion, fecha, numero, privacidad, gustos]
-        private Dictionary<int, List<string>> registrados;
+        public Dictionary<int, List<string>> registrados;
 
         public RegistroUsuarios()
         {

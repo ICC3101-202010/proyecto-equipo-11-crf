@@ -37,7 +37,11 @@ namespace Entrega2
 
             server.PasswordChanged += mailSender.OnPasswordChanged;
 
+            server.UsernameChanged += mailSender.OnUsernameChanged;
+
             server.PasswordChanged += smsSender.OnPasswordChanged;
+
+            server.UsernameChanged += smsSender.OnUsernameChanged;
 
             mailSender.EmailSent += user.OnEmailSent;
 

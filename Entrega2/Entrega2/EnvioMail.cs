@@ -38,6 +38,13 @@ namespace Entrega2
             Thread.Sleep(2000);
         }
 
+        public void OnUsernameChanged(object source, CambiarNombreUsuarioEventArgs e)
+        {
+            Thread.Sleep(2000);
+            Console.WriteLine($"\nCorreo enviado a {e.Email}:  \n  Te notificamos que el nombre de usuario de una de tus cuentas Spotflix ha sido cambiado. \n");
+            Thread.Sleep(2000);
+        }
+
     }
 }
 

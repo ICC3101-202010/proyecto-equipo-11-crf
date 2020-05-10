@@ -118,8 +118,40 @@ namespace Entrega2
         }
         public List<Cancion> ratingReproducciones(List<Cancion> todasLasCanciones)
         {
-            List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.Reproducciones descending select canciones).ToList();
-            return lista;
+            Console.WriteLine("1.Todas las canciones");
+            Console.WriteLine("2. 5 primeras");
+            int opt = System.Convert.ToInt32(Console.ReadLine());
+            if (opt == 1)
+            {
+                List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.Reproducciones descending select canciones).ToList();
+                return lista;
+            }
+            else
+            {
+                List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.Reproducciones descending select canciones).Take(5).ToList();
+                return lista;
+            }
+
+           
+
+        }
+        public List<Cancion> ordenarPorNota(List<Cancion> canciones)
+        {
+            Console.WriteLine("1.Todas las canciones");
+            Console.WriteLine("2. 5 primeras");
+            int opt = System.Convert.ToInt32(Console.ReadLine());
+            if (opt == 1)
+            {
+                List<Cancion> lista = (from can in canciones orderby can.Rating descending select can).ToList();
+                return lista;
+
+            }
+            else
+            {
+                List<Cancion> lista = (from can in canciones orderby can.Rating descending select can).Take(5).ToList();
+                return lista;
+            }
+            
 
         }
 
