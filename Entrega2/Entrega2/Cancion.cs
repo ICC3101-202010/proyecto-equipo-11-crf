@@ -8,6 +8,7 @@ using TagLib;
 using System.Drawing;
 using WMPLib;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace Entrega2
 {
@@ -19,7 +20,7 @@ namespace Entrega2
         private uint fecha_Lanzamiento;
         private string nombre_Estudio;
         private string genero;
-        private int rating;
+        private int rating;//Metodo valorarCancion 
         private int reproducciones = 0;
         private Caratula caratula;
         private string album;
@@ -99,6 +100,19 @@ namespace Entrega2
         {
             user.Canciones_favoritas.Add(this);
             Console.WriteLine("Cancion " + this.titulo_Cancion + " agregada a favoritos");
+        }
+        public void valorarCancion()
+        {
+  
+            Console.WriteLine("Ingrese una nota de 0 a 5 a la cancion");
+            int nota = System.Convert.ToInt32(Console.ReadLine());
+            while (nota<0 ||nota >5)
+            {
+                Console.WriteLine("Ingrese una nota valida entre 1 y 5");
+                nota = System.Convert.ToInt32(Console.ReadLine());
+
+            }
+            this.rating = nota;
         }
 
     }
