@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,16 @@ namespace Entrega2
         private string nombrePlaylist;
         private List<Cancion> canciones;
         private List<Video> videos;
+        private Image imagen_personalizada;
 
         public string NombrePlaylist { get => nombrePlaylist; set => nombrePlaylist = value; }
         public List<Cancion> Canciones { get => canciones; set => canciones = value; }
         internal List<Video> Videos { get => videos; set => videos = value; }
 
-        
+        public Image Imagen_personalizada { get => imagen_personalizada; set => imagen_personalizada = value; }
+
+
+
         public Playlist(string nombrePlaylist, List<Cancion> canciones, List<Video> videos)
         {
             this.nombrePlaylist=nombrePlaylist;
