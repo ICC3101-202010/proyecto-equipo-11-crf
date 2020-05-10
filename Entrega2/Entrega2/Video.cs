@@ -21,6 +21,7 @@ namespace Entrega2
         private int rating;
         private uint year;
         private string category;
+        private string duration;
 
         public string NameVideo { get => nameVideo; set => nameVideo = value; }
         public string DireccionMemoria { get => direccionMemoria; set => direccionMemoria = value; }
@@ -36,6 +37,8 @@ namespace Entrega2
 
         public string Categoria { get => category; set => category = value; }
 
+        public string Duration { get => duration; set => duration = value; }
+
         public Video(string path)
         {
             TagLib.File video = TagLib.File.Create(path);
@@ -43,11 +46,12 @@ namespace Entrega2
             this.genero = video.Tag.FirstGenre;
             this.year = video.Tag.Year;
             this.coment = video.Tag.Comment;
+            TimeSpan time_prev = video.Properties.Duration;
             //this.director.NamePerson = video.Tag.FirstComposer;
             //TagLib.Id3v2.Tag tag = (TagLib.Id3v2.Tag)video.GetTag(TagLib.TagTypes.AllTags);
             //Console.WriteLine(tag);
-            //género, categoría, actores, director, estudio. año de publicación,
-            //descripción, calificación
+            //género[ok], categoría, actores, director, estudio. año de publicación[ok],
+            //descripción[ok], calificación[]
             Console.WriteLine(video.Tag.Title);
             Console.WriteLine(video.Tag.FirstGenre);
             Console.WriteLine(video.Tag.Title);
@@ -56,7 +60,14 @@ namespace Entrega2
             Console.WriteLine(video.Tag.Genres);
             Console.WriteLine(video.Tag.FirstComposer);
             Console.WriteLine(video.Tag.TagTypes);
-
+            if (time_prev.Hours == 0)
+            {
+                this.duration = Convert.ToString(video.Properties.Duration.Minutes) + ":" + Convert.ToString(video.Properties.Duration.Seconds);
+            }
+            else if (time_prev.Minutes == 0)
+            {
+                this.duration = Convert.ToString(video.Properties.Duration.Seconds);
+            }
 
 
 

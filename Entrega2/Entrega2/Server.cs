@@ -54,10 +54,11 @@ namespace Entrega2
             Console.WriteLine("Bienvenido de vuelta a Spotflix! Te extrañamos!");
             Console.WriteLine("Ingresa tu nombre de usuario: \n");
             string usuario = Console.ReadLine();
-            Console.Write("Ingresa tu Contraseña: \n");
+            Console.Write("Ingresa tu Contraseña: ");
             string contrasena = Console.ReadLine();
-
+            
             string result = Data.LogIn(usuario, contrasena);
+           
             if (result == null)
             {
 
