@@ -17,29 +17,20 @@ namespace Entrega2
         protected int telefono;
         protected string username;
 
-<<<<<<< HEAD
-      
+
+
         public List<Cancion> canciones_favoritas;
         public List<Video> videos_favoritos;
 
- 
-=======
-        private List<Cancion> canciones_favoritas;
-        private List<Video> videos_favoritos;
-        private Dictionary<string, List<string>> seguidos = new Dictionary<string, List<string>>() 
+
+        private Dictionary<string, List<string>> seguidos = new Dictionary<string, List<string>>()
         { { "Usuario",  new List<string>() },
             {"Playlist",new List<string>() },
             {"Discos",new List<string>() },
             { "Cantantes",new List<string>()},
-            {"Actores",new List<string>() } };
-
-      
-        
-
->>>>>>> 78254c7860cdcebb77ad56ea0c4262124fa53b5a
-
-
-
+            {"Actores",new List<string>()
+            }};
+           
         public int ID  { get => id; set => id = value; }
         public bool Member { get => member; set => member = value; }
         public DateTime Member_expiration  { get => member_expiration; set => member_expiration = value; }
