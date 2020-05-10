@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
-    class Usuario : Persona
+    public class Usuario : Persona
     {
         protected int id;
         protected bool member;
@@ -16,8 +16,8 @@ namespace Entrega2
         protected string contraseña;
         protected int telefono;
         protected string username;
-        private List<Cancion> canciones_favoritas;
-        private List<Video> videos_favoritos;
+        public List<Cancion> canciones_favoritas;
+        public List<Video> videos_favoritos;
 
 
 

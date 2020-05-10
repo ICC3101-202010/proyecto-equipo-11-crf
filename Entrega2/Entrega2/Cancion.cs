@@ -95,5 +95,10 @@ namespace Entrega2
             string destPath = System.IO.Path.Combine(targetPath, titulo_Cancion);
             System.IO.File.Copy(sourcePath, destPath, true);
         }
+        public void agregarFavoritos(Usuario user)
+        {
+            user.Canciones_favoritas.Add(this);
+            Console.WriteLine("Cancion " + this.titulo_Cancion + " agregada a favoritos");
+        }
     }
 }

@@ -7,7 +7,7 @@ using MetadataExtractor.Formats.Mpeg;
 
 namespace Entrega2
 {
-    class Video
+    public class Video
     {
         private string nameVideo;
         private string direccionMemoria;
