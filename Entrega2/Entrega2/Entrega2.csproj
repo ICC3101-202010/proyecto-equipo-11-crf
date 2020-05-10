@@ -84,6 +84,7 @@
     <Compile Include="Finder.cs" />
     <Compile Include="Importer.cs" />
     <Compile Include="InputOutput .cs" />
+    <Compile Include="LAUNCHER-Spotlix.cs" />
     <Compile Include="Mixer.cs" />
     <Compile Include="Reproductor.cs" />
     <Compile Include="UserDatabase.cs" />
