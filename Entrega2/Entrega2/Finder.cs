@@ -22,83 +22,112 @@ namespace Entrega2
             }
             Console.WriteLine("Select one");
             int index = 0;
-            foreach (var song in final_search)  
+            foreach (var song in final_search)
             {
-                Console.WriteLine("("+index+")" + song.Titulo_Cancion);
+                Console.WriteLine("(" + index + ")" + song.Titulo_Cancion);
                 index++;
 
             }
             int selected = Convert.ToInt32(Console.ReadLine());
             return final_search[selected];
-        }    
-        
+        }
+
         public void buscarVideo()
         {
 
         }
         public Playlist buscarPlaylist(string playlist_name, List<Playlist> playlists)
         {//busca una determinada cancion en una determinada lista
-                List<Playlist> final_search = new List<Playlist>();  
-                foreach (var playlist in playlists)
+            List<Playlist> final_search = new List<Playlist>();
+            foreach (var playlist in playlists)
+            {
+                if (playlist.NombrePlaylist.Contains(playlist_name) == true)
                 {
-                    if (playlist.NombrePlaylist.Contains(playlist_name) == true)
-                    {
-                        final_search.Add(playlist);
-                    }
+                    final_search.Add(playlist);
                 }
-                Console.WriteLine("Select one");
-                int index = 0;
-                foreach (var playlist in final_search)
-                {
-                    Console.WriteLine("(" + index + ")" + playlist.NombrePlaylist);
-                    index++;
+            }
+            Console.WriteLine("Select one");
+            int index = 0;
+            foreach (var playlist in final_search)
+            {
+                Console.WriteLine("(" + index + ")" + playlist.NombrePlaylist);
+                index++;
 
-                }
-                int selected = Convert.ToInt32(Console.ReadLine());
-       
-        return final_search[selected];
+            }
+            int selected = Convert.ToInt32(Console.ReadLine());
+
+            return final_search[selected];
         }
-        
+
         public List<Cancion> buscarArtista(string artista, List<Cancion> todasLasCanciones)
         {
             List<Cancion> finalSearch = new List<Cancion>();
             foreach (Cancion song in todasLasCanciones)
             {
-                if (song.Banda.Contains(artista)==true)
+                if (song.Banda.Contains(artista) == true)
                 {
                     finalSearch.Add(song);
                 }
             }
+            int index = 0;
+            foreach (Cancion song in finalSearch)
+            {
+                Console.WriteLine("(" + index + ")" + song.Titulo_Cancion);
+                index++;
+            }
             return finalSearch;
-            
+
 
         }
-        public Album searchAlbum(string album_name, List<Album> albums) 
+        public Album searchAlbum(string album_name, List<Album> albums)
         {
-          //busca un determinado album en una determinada lista de albums
-                List<Album> final_search = new List<Album>();
-                foreach (var album in albums)
+            //busca un determinado album en una determinada lista de albums
+            List<Album> final_search = new List<Album>();
+            foreach (var album in albums)
+            {
+                if (album.Nombre_Album.Contains(album_name) == true)
                 {
-                    if (album.Nombre_Album.Contains(album_name) == true)
+                    final_search.Add(album);
+                }
+            }
+            Console.WriteLine("Select one");
+            int index = 0;
+            foreach (var album in final_search)
+            {
+                Console.WriteLine("(" + index + ")" + album.Nombre_Album);
+                index++;
+
+            }
+            int selected = Convert.ToInt32(Console.ReadLine());
+            return final_search[selected];
+
+
+        }
+        public List<Video> buscarActorDirector(string name, List<Video> todosLosVideos)
+        {
+            List<Video> finalSearch = new List<Video>();
+
+            {
+                foreach (Video vid in todosLosVideos)
+                {
+                    int i = 0;
+                    if (vid.Director.NamePerson == name)
                     {
-                        final_search.Add(album);
+                        finalSearch.Add(vid);
+                    }
+                    while (i < vid.Actores.Count())
+                    {
+                        if (vid.Actores[i].NamePerson == name)
+                        {
+                            finalSearch.Add(vid);
+                        }
                     }
                 }
-                Console.WriteLine("Select one");
-                int index = 0;
-                foreach (var album in final_search)
-                {
-                    Console.WriteLine("(" + index + ")" + album.Nombre_Album);
-                    index++;
 
-                }
-                int selected = Convert.ToInt32(Console.ReadLine());
-                return final_search[selected];
-
+            }
+            return finalSearch;
 
         }
-
-        
-
     }
 }
+
