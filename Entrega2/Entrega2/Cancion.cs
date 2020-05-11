@@ -114,6 +114,10 @@ namespace Entrega2
             }
             this.rating = nota;
         }
+        public void agregarAPlaylist(Playlist playlist)
+        {
+            playlist.Canciones.Add(this);
+        }
 
     }
 }
