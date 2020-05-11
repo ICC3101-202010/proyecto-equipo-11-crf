@@ -37,6 +37,7 @@ namespace Entrega2
             {
                 sonido.URL = Path.GetFullPath(cancion.Path);
                 sonido.controls.play();
+                cancion.Reproducciones += 1;
 
                 /*IFormatter formatter2 = new BinaryFormatter();
                 Stream stream2 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
@@ -168,6 +169,7 @@ namespace Entrega2
                 foreach (var song in songs)
 
                 {
+                    song.Reproducciones += 1;
                     sonido.URL = Path.GetFullPath(song.Path);
                     //sonido.controls.play();
                     while (n != "4")
@@ -217,8 +219,9 @@ namespace Entrega2
                         }
                         else if (n == "4")
                         {
-                            double tiempo = sonido.controls.currentPosition;
-                            double tiempo1 = tiempo;
+                            sonido.controls.pause();
+                            //double tiempo = sonido.controls.currentPosition;
+                            //double tiempo1 = tiempo;
                             /*IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, tiempo1);

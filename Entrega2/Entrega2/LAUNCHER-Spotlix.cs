@@ -101,8 +101,8 @@ namespace Entrega2
                                         
                                     }
 
-                                    break;
-                                    ;    
+                                    
+                                        
                                 }
                                 else if(a==2)
                                 {
