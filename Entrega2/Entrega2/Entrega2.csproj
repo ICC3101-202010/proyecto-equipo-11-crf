@@ -87,7 +87,6 @@
     <Compile Include="LAUNCHER-Spotlix.cs" />
     <Compile Include="Mixer.cs" />
     <Compile Include="Reproductor.cs" />
-    <Compile Include="UserDatabase.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Video.cs" />
     <Compile Include="Persona.cs" />
