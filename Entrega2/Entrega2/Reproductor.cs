@@ -66,7 +66,7 @@ namespace Entrega2
 
 
                     }
-                    if (n == "2")
+                    else if (n == "2")
                     {
                         double tiempo = sonido.controls.currentPosition;
                         sonido.controls.currentPosition = tiempo;
