@@ -20,6 +20,7 @@ namespace Entrega2
             Reproductor reproductor = new Reproductor();
             Finder finder = new Finder();
 
+
             //string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
             //string pat2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../narnia.mp4");
             //string pat3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../avengers-infinity.mov");
@@ -164,6 +165,20 @@ namespace Entrega2
             {
                 Console.WriteLine("Error. " + ex.Message);
             }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     } 
 }

@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Entrega2
 {
     public class server : RegistroUsuarios
     {
-        
 
+        List<Usuario> usuarios = new List<Usuario>();
         private List<string>  cantantes;
 
         List<string> cantantes_list = new List<string>();
@@ -65,8 +68,26 @@ namespace Entrega2
             this.Data = data;
         }
 
+        public void MostrarUsuarios()
+        {
+            foreach (var item in usuarios)
+            {
+                Console.WriteLine(item.Info_Personas());
+            }
+        }
         public string LogIn()
         {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Usuario usuario1 = (Usuario)formatter.Deserialize(stream);
+            stream.Close();
+
+            //IFormatter formatter = new BinaryFormatter();
+            //Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            //Usuario data = (Usuario)formatter.Deserialize(stream);
+            //stream.Close();
+
+
             Console.WriteLine("Bienvenido de vuelta a Spotflix! Te extrañamos!");
             Console.WriteLine("Ingresa tu nombre de usuario: \n");
             string usuario = Console.ReadLine();
@@ -83,15 +104,21 @@ namespace Entrega2
         public void Registrarse()
         {
             
+            Usuario usuario1 = new Usuario();
             Console.Write("Bienvenido! Ingrese sus datos de registro en Spotflix\nUsuario: ");
             string usuario = Console.ReadLine();
+            usuario1.Username = usuario;
             Console.Write("Correo: ");
             string email = Console.ReadLine();
+            usuario1.Mail = email;
             Console.Write("Contraseña: ");
             string contrasena = Console.ReadLine();
+            usuario1.Contraseña = contrasena;
             Console.Write("Numero de celular: ");
             string celular = Console.ReadLine();
+            usuario1.Telefono = celular;
             string privacidad = "";
+            
             int a = 1;
             while ( a== 1)
             {
@@ -103,11 +130,13 @@ namespace Entrega2
                 if (resp == 1)
                 {
                     privacidad = "Privada";
+                    usuario1.privacidad = privacidad;
                     a = 0; 
                 }
                 else if (resp == 2)
                 {
                     privacidad = "Publica";
+                    usuario1.privacidad = privacidad;
                     a = 0;
                 }
                 else
@@ -147,11 +176,16 @@ namespace Entrega2
                     b = 0;
                 }
             }
-            
+            usuarios.Add(usuario1);
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, usuario1);
+            stream.Close();
+
             string verificationLink = GenerateLink(usuario);
            
             string result = Data.AddUser(new List<string>()
-                {usuario, email, contrasena, privacidad, verificationLink, Convert.ToString(DateTime.Now), celular});
+                {usuario, email, contrasena, privacidad, verificationLink, Convert.ToString(DateTime.Now),  celular});
             if (result == null)
             {
                
