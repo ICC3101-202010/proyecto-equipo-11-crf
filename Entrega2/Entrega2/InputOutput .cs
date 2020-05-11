@@ -44,6 +44,22 @@ namespace Entrega2.IO
             Console.WriteLine("3- Biblioteca");
             Console.WriteLine("4- Mi perfil");
             Console.WriteLine("5- Salir");
+
+        }
+
+        public static void Menu_finder() 
+        {
+            Console.WriteLine("Buscar");
+            Console.WriteLine("1-Cancion");
+            Console.WriteLine("2-Video");
+            Console.WriteLine("3-Playlist");
+            Console.WriteLine("4-Actor");
+            Console.WriteLine("5-Banda");
+            Console.WriteLine("6-Album");
+            Console.WriteLine("7-Mas escuchadas");
+            Console.WriteLine("8-Mejor puntuadas");
+            Console.WriteLine("9-Salir");
+
         }
     }   
 }
