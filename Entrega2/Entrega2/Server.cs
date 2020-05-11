@@ -12,7 +12,7 @@ namespace Entrega2
     public class server : RegistroUsuarios
     {
 
-        List<Usuario> usuarios = new List<Usuario>();
+        
         private List<string>  cantantes;
 
         List<string> cantantes_list = new List<string>();
@@ -70,23 +70,26 @@ namespace Entrega2
 
         public void MostrarUsuarios()
         {
-            foreach (var item in usuarios)
+            foreach (List<string> user in this.registrados.Values)
             {
-                Console.WriteLine(item.Info_Personas());
+                Console.WriteLine(user[0]);
+                Console.WriteLine(user[1]);
+                Console.WriteLine(user[2]);  
+                
             }
         }
         public string LogIn()
         {
             
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Usuario usuario3 = formatter.Deserialize(stream) as Usuario;
-            stream.Close();
-
             //IFormatter formatter = new BinaryFormatter();
             //Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            //Usuario data = (Usuario)formatter.Deserialize(stream);
+            //Usuario usuario = formatter.Deserialize(stream) as Usuario;
             //stream.Close();
+
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<string> data = formatter.Deserialize(stream) as List<string>;
+            stream.Close();
 
 
             Console.WriteLine("Bienvenido de vuelta a Spotflix! Te extrañamos!");
@@ -177,11 +180,11 @@ namespace Entrega2
                     b = 0;
                 }
             }
-            usuarios.Add(usuario1);
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, usuario1);
-            stream.Close();
+            
+            //IFormatter formatter = new BinaryFormatter();
+            //Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            //formatter.Serialize(stream, usuario1);
+            //stream.Close();
 
             string verificationLink = GenerateLink(usuario);
            
