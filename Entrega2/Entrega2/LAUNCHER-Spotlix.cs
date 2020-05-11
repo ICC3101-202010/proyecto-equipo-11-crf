@@ -27,6 +27,8 @@ namespace Entrega2
 
         public void Spotlix() 
         {
+            InputOutput.ConsoleWelcome();
+
             RegistroUsuarios database = new RegistroUsuarios();
             server server = new server(database);
             EnvioMail mailSender = new EnvioMail();
@@ -46,6 +48,7 @@ namespace Entrega2
             mailSender.EmailSent += user.OnEmailSent;
 
             user.EmailVerified += server.OnEmailVerified;
+
 
             bool exec = true;
             while (exec)

@@ -13,8 +13,13 @@ namespace Entrega2
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             //Reproductor reproductor = new Reproductor();
             //Finder finder = new Finder();
+=======
+            Reproductor reproductor = new Reproductor();
+            Finder finder = new Finder();
+>>>>>>> 06036ca08b47fbfba3416c3d590d7a3a9e7af309
             //string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
             //string pat2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../narnia.mp4");
             //string pat3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../avengers-infinity.mov");
