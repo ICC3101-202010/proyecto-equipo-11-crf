@@ -99,7 +99,7 @@ namespace Entrega2
 
                                 else
                                 {
-                                    Console.WriteLine("Ingree una opcion valida");
+                                    Console.WriteLine("Ingrese una opcion valida");
                                 }
 
                             }
