@@ -13,9 +13,7 @@ namespace Entrega2
 
         public LAUNCHER_Spotlix() 
         {
-            
-
- 
+        
         }
         public List<string> Loginlist { get; set; }
 
@@ -29,6 +27,8 @@ namespace Entrega2
             EnvioMail mailSender = new EnvioMail();
             EnvioSMS smsSender = new EnvioSMS();
             Usuario user = new Usuario();
+
+            WindowsMediaPlayer Player = new WindowsMediaPlayer();
 
 
             List<Cancion> todasLasCanciones = new List<Cancion>();
@@ -73,7 +73,7 @@ namespace Entrega2
                         {
 
 
-                            Console.WriteLine("Interfaz Spotflix ");
+                            Console.WriteLine("Spotflix ");
                             int a = 0;
                             while (a != 5)
                             {
@@ -83,9 +83,18 @@ namespace Entrega2
                                 {
                                     Console.WriteLine("Home");
                                     All_songs.mostrarCanciones();
-                                    Console.WriteLine();
-                                    //ALGO
-                                    //PRUEBA 
+                                    Console.WriteLine("Select one");
+                                    int option_chosen = Convert.ToInt32(Console.ReadLine());
+                                    int count = 1;
+                                    foreach (var song in All_songs.Canciones)
+                                    {
+
+                                        if (option_chosen == count)
+                                        {
+                                            reproductor.reproducirLista(Player, reproductor.Queue(song));
+                                        }
+
+                                    }   
                                 }
                                 else if(a==2)
                                 {

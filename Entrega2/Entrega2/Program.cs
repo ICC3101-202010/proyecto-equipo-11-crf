@@ -59,8 +59,8 @@ namespace Entrega2
 
             //Caratula caratula1 = new Caratula(c1);
 
-            WindowsMediaPlayer sonido = new WindowsMediaPlayer();
-            reproductor.reproducirLista(sonido, reproductor.Library());
+            //WindowsMediaPlayer sonido = new WindowsMediaPlayer();
+            //reproductor.reproducirLista(sonido, reproductor.Library());
 
             /*try
             {
@@ -95,12 +95,12 @@ namespace Entrega2
             catch (Exception ex)
             {
                 Console.WriteLine("Error. " + ex.Message);
-            }
+            }*/
             
 
-            //LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
+            LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
 
-            //spotlix.Spotlix();/*
+            spotlix.Spotlix();
 
             //spotlix.Spotlix();
 
