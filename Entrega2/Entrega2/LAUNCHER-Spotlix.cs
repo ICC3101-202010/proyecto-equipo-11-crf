@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Entrega2.IO;
 using WMPLib;
@@ -130,7 +131,40 @@ namespace Entrega2
                                         {
                                             Console.WriteLine("Ingrese el nombre de la cancion");
                                             string nombreCancion = Console.ReadLine();
-                                            retornoBuscarCancion.Add(finder.buscarCancion(nombreCancion, todasLasCanciones));
+                                            Cancion seleccionada=finder.buscarCancion(nombreCancion, todasLasCanciones);
+                                            retornoBuscarCancion.Add(seleccionada);
+                                            if (seleccionada != null)
+                                            {
+                                                string opcion = null;
+                                                while (opcion != "4")
+                                                {
+                                                    Console.WriteLine("1.Añadir cancion a lista");
+                                                    Console.WriteLine("2.Puntuar cancion");
+                                                    Console.WriteLine("3.Reproducir cancion");
+                                                    Console.WriteLine("4.Salir");
+                                                    opcion = Console.ReadLine();
+                                                    if (opcion == "1")
+                                                    {
+
+                                                    }
+                                                    else if (opcion == "2")
+                                                    {
+                                                        seleccionada.valorarCancion();
+                                                    }
+                                                    else if (opcion == "3")
+                                                    {
+                                                        reproductor.reproducirCancion(Player, seleccionada);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.WriteLine("Salir"
+                                                            );
+                                                    }
+
+                                                }
+
+                                            }
+
                                         }
                                         else if (opcionB == 2)
                                         {
@@ -170,6 +204,7 @@ namespace Entrega2
                                         {
                                             Console.WriteLine("Mas reproducidas");
                                             retornoBuscarCancion = finder.ratingReproducciones(todasLasCanciones);
+                                            Thread.Sleep(5000);
                                         }
                                         else if (opcionB == 8)
                                         {
