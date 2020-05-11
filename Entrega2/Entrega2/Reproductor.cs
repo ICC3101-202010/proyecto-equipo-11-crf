@@ -125,7 +125,7 @@ namespace Entrega2
 
         public bool Check_if_premium(Usuario usuario)
         {
-            if (usuario.Member == false)
+            if (usuario.Member == "false")
             {
                 return false;
             }
