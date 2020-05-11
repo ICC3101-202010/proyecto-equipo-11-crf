@@ -11,7 +11,7 @@ namespace Entrega2
     public class Usuario : Persona
     {
         protected int id;
-        protected bool member;
+        protected string member;
         protected DateTime member_expiration;
         protected bool administrador;
         protected string mail;
@@ -34,7 +34,7 @@ namespace Entrega2
         
 
         public int ID  { get => id; set => id = value; }
-        public bool Member { get => member; set => member = value; }
+        public string Member { get => member; set => member = value; }
         public DateTime Member_expiration  { get => member_expiration; set => member_expiration = value; }
         public bool Administrador { get => administrador; set => administrador = value; }
         public string Mail { get => mail; set => mail = value; }
@@ -50,7 +50,7 @@ namespace Entrega2
         internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
         internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
 
-        public Usuario(int ID, bool member, DateTime Member_expiration,bool Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
+        public Usuario(int ID, string member, DateTime Member_expiration,bool Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {
             this.id = ID;
             this.member_expiration = Member_expiration;
@@ -122,7 +122,7 @@ namespace Entrega2
                 }
                 else if (respuesta == 3)
                 {
-                    if (member == true)
+                    if (member == "true")
                     {
                         Console.WriteLine("Actualmente eres un Miembro Premium de Spotflix");
                         Console.WriteLine("");
@@ -145,14 +145,14 @@ namespace Entrega2
                                 string confirmacion = Console.ReadLine();
                                 if (confirmacion== "")
                                 {
-                                    member = false;
+                                    member = "false";
                                     b = 1;
                                     Console.Clear();
                                 }
                             }
                             else
                             {
-                                member = true;
+                                member = "true";
                                 b = 1;
                             }
                         }
@@ -172,11 +172,11 @@ namespace Entrega2
                             Console.WriteLine("Bienvenido a Spotflix Premium!");
                             Console.WriteLine("");
                             Console.WriteLine("Ya puedes disfrutar de musica Ilimitada y sin Anuncios!");
-                            member = true;
+                            member = "true";
                         }
                         else
                         {
-                            member = false;
+                            member = "false";
                         }
                     }
                         
