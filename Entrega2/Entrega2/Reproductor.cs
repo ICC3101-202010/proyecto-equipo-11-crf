@@ -161,6 +161,9 @@ namespace Entrega2
         {
             try
             {
+                
+
+
                 string n = null;
                 foreach (var song in songs)
 
@@ -169,23 +172,71 @@ namespace Entrega2
                     sonido.controls.play();
                     while (n != "4")
                     {
-                        Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-salir");
+                        Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-Retroceder");
                         n = Console.ReadLine();
                         if (n == "1")
                         {
                             sonido.controls.pause();
+                            double tiempo = sonido.controls.currentPosition;
+                            double tiempo1 = tiempo;
+                            IFormatter formatter1 = new BinaryFormatter();
+                            Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter1.Serialize(stream1, tiempo1);
+                            stream1.Close();
 
+                            IFormatter formatter2 = new BinaryFormatter();
+                            Stream stream2 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter2.Serialize(stream2, song);
+                            stream2.Close();
+
+                            IFormatter formatter3 = new BinaryFormatter();
+                            Stream stream3 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter3.Serialize(stream3, song.path);
+                            stream3.Close();
+
+                            IFormatter formatter4 = new BinaryFormatter();
+                            Stream stream4 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter4.Serialize(stream4, songs);
+                            stream4.Close();
                         }
-                        if (n == "2")
+                        else if (n == "2")
                         {
                             double tiempo = sonido.controls.currentPosition;
                             sonido.controls.currentPosition = tiempo;
                             sonido.controls.play();
                         }
-                        if (n == "3") 
+                        else if (n == "3") 
                         {
-                           Console.WriteLine("next");
+                           Console.WriteLine("next...");
                            break;
+                        }
+                        else if (n == "4")
+                        {
+                            double tiempo = sonido.controls.currentPosition;
+                            double tiempo1 = tiempo;
+                            IFormatter formatter1 = new BinaryFormatter();
+                            Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter1.Serialize(stream1, tiempo1);
+                            stream1.Close();
+
+                            IFormatter formatter2 = new BinaryFormatter();
+                            Stream stream2 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter2.Serialize(stream2, song);
+                            stream2.Close();
+
+                            IFormatter formatter3 = new BinaryFormatter();
+                            Stream stream3 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter3.Serialize(stream3, song.path);
+                            stream3.Close();
+
+                            IFormatter formatter4 = new BinaryFormatter();
+                            Stream stream4 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter4.Serialize(stream4, songs);
+                            stream4.Close();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Opcion No Valida");
                         }
                         if (sonido.playState == WMPPlayState.wmppsMediaEnded)
                         {
