@@ -37,16 +37,19 @@ namespace Entrega2
             //Console.WriteLine(c2.Show_info(c2));
             Console.WriteLine("------------------------");
 
-            
-            
-            List<Cancion> todasLasCanciones= reproductor.Library();
-            List<Cancion> rating=reproductor.ratingReproducciones(todasLasCanciones);
+
+
+            List<Cancion> todasLasCanciones = reproductor.Library();
+            List<Cancion> rating = reproductor.ratingReproducciones(todasLasCanciones);
             Playlist ratingplaylist = new Playlist("rating", rating, null);
             ratingplaylist.mostrarCanciones();
 
             Caratula caratula1 = new Caratula(c1);
 
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();
+
+            LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
+            spotlix.Spotlix();
 
             /*
                         Cancion cancion1 = new Cancion(path1);
@@ -156,64 +159,6 @@ namespace Entrega2
             {
                 Console.WriteLine("Error. " + ex.Message);
             }*/
-
-
-            RegistroUsuarios database = new RegistroUsuarios();
-            Server server = new Server(database);
-            EnvioMail mailSender = new EnvioMail();
-            EnvioSMS smsSender = new EnvioSMS();
-            Usuario user = new Usuario();
-
-
-            
-            server.Registered += mailSender.OnRegistered;
-            
-            server.PasswordChanged += mailSender.OnPasswordChanged;
-           
-            server.PasswordChanged += smsSender.OnPasswordChanged;
-            
-            mailSender.EmailSent += user.OnEmailSent;
-            
-            user.EmailVerified += server.OnEmailVerified;
-           
-            bool exec = true;
-            while (exec)
-            {
-                
-                string chosen = ShowOptions(new List<string>() { "Registrarse", "Log in", "Opciones Usuario", "Salir" });
-                switch (chosen)
-                {
-                    case "Registrarse":
-                        Console.Clear();
-                        server.Registrarse();
-                        break;
-                    case "Log in":
-                        Console.Clear();
-                        server.LogIn();
-                        break;
-                    case "Opciones de Usuario":
-                        Console.Clear();
-                        user.OpcionesUsuario();
-                        break;
-                    case "Salir":
-                        exec = false;
-                        break;
-                }
-                
-                Console.Clear();
-            }
         }
-        private static string ShowOptions(List<string> options)
-        {
-            int i = 0;
-            Console.WriteLine("\n\nSelecciona una opcion:");
-            foreach (string option in options)
-            {
-                Console.WriteLine(Convert.ToString(i) + ". " + option);
-                i += 1;
-            }
-            return options[Convert.ToInt16(Console.ReadLine())];
-        }
-    }
-    
+    } 
 }

@@ -8,10 +8,7 @@ namespace Entrega2.IO
 {
     public static class InputOutput
     {
-<<<<<<< HEAD
-
-       
-=======
+    
         public static string ShowOptions(List<string> options)
         {
             int i = 0;
@@ -23,6 +20,6 @@ namespace Entrega2.IO
             }
             return options[Convert.ToInt16(Console.ReadLine())];
         }
->>>>>>> 8ff71925ba76b98f108d4c6baefe8e5d2f2f1637
+
     }
 }

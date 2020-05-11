@@ -72,9 +72,11 @@ namespace Entrega2
             string usuario = Console.ReadLine();
             Console.Write("Ingresa tu Contraseña: ");
             string contrasena = Console.ReadLine();
-            
+
             string result = Data.LogIn(usuario, contrasena);
-           
+
+            return result;
+
             if (result == null)
             {
 
@@ -111,11 +113,13 @@ namespace Entrega2
             else
             {
 
+
                 Console.WriteLine("[!] ERROR: " + result + "\n");
                 return "[!] ERROR: " + result + "\n";
             }
             return "";
         }
+        
         
         public void Registrarse()
         {

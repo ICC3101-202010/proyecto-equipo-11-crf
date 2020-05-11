@@ -60,15 +60,70 @@ namespace Entrega2
                         break;
                     case "Log in":
                         Console.Clear();
+
                         server.LogIn();
+                        if (server.LogIn() == null)
+                        {
+                            Console.Write("Interfaz Spotflix ");
+
+                            string opcion = null;
+                            while (opcion != "5")
+                            {
+                                Console.WriteLine("1- Re");
+                                Console.WriteLine("2- Buscar");
+                                Console.WriteLine("3- Biblioteca");
+                                Console.WriteLine("4- Mi perfil");
+                                Console.WriteLine("5- Salir");
+                                opcion = Console.ReadLine();
+                                switch (opcion)
+                                {
+                                    case "1":
+                                        Console.WriteLine("Reproductor");
+                                    case "2":
+                                        Console.WriteLine("Reproductor");
+                                    case "3":
+                                        Console.WriteLine("Reproductor");
+                                    case "4":
+                                        Console.WriteLine("Reproductor");
+                                    case "5":
+                                        Console.WriteLine("Reproductor");
+                                    default:
+                                        Console.WriteLine("Ingree una opcion valida");
+                                        return "";
+
+                                }
+                            }
+                        }
+                        else
+                        {
+
+                            Console.WriteLine("[!] ERROR: " + result + "\n");
+                            return "[!] ERROR: " + result + "\n";
+                        }
+
+
+
+
+                }        
+                        
+                        
                         break;
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     case "Opciones Usuario":
                         Console.Clear();
                         user.OpcionesUsuario();
                         break;
                     case "Salir":
                         exec = false;
-                        break;
+                            break;
                 }
 
                 Console.Clear();
