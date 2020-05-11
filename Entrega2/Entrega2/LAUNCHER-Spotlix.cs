@@ -106,7 +106,7 @@ namespace Entrega2
                         else
                         {
 
-                            Console.WriteLine("[!] ERROR: Usuario o contrasena incorrecta\n");
+                            Console.WriteLine("[!] ERROR: "+ server1 +"\n");
                             
                         }
 
