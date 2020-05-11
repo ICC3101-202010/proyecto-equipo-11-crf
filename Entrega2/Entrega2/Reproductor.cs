@@ -11,7 +11,7 @@ using TagLib.Gif;
 
 namespace Entrega2
 {
-    class Reproductor
+    class Reproductor: Usuario
     {
         public List<Cancion> Library() 
         {
@@ -82,11 +82,13 @@ namespace Entrega2
             }
            
         }
+        Usuario Usuario = new Usuario;
         public Playlist crearListaCanciones(Playlist todasCanciones)
         {
 
             string nombreLista;
             List<Cancion> nuevaLista = new List<Cancion>();
+            
             Console.WriteLine("Ingrese el nombre de la nueva lista");
             nombreLista = Console.ReadLine();
 
@@ -100,7 +102,7 @@ namespace Entrega2
                 Console.WriteLine("Ingrese 1 para terminar, otro numero para continuar");
                 i = Convert.ToInt32(Console.ReadLine());
             }
-            Playlist nuevaPlaylist = new Playlist(nombreLista, nuevaLista, null);
+            Playlist nuevaPlaylist = new Playlist(nombreLista, nuevaLista, null, username);
             return nuevaPlaylist;
 
         }
