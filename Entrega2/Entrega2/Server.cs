@@ -80,15 +80,16 @@ namespace Entrega2
         }
         public string LogIn()
         {
-            
+
             //IFormatter formatter = new BinaryFormatter();
             //Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             //Usuario usuario = formatter.Deserialize(stream) as Usuario;
             //stream.Close();
-
+            RegistroUsuarios reg = new RegistroUsuarios();
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<string> data = formatter.Deserialize(stream) as List<string>;
+            List<string> data = formatter.Deserialize(stream) as List<string> ;
+            reg.registrados.Add(registrados.Count + 1, data);
             stream.Close();
 
 

@@ -38,7 +38,7 @@ namespace Entrega2
             Usuario user = new Usuario();
 
 
-            List<Cancion> todasLasCanciones = reproductor.Library();
+            List<Cancion> todasLasCanciones = new List<Cancion>();
             List<Video> todosVideos = new List<Video>();
             List<Playlist> todasPlaylists = new List<Playlist>();
             
