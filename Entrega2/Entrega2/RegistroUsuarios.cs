@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 namespace Entrega2
 {
+    [Serializable]
     public class RegistroUsuarios
     {
         // Diccionario para guardar todos los registros
@@ -52,6 +56,10 @@ namespace Entrega2
             if (descripcion == null)
             {
                 this.registrados.Add(registrados.Count + 1, data);
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter.Serialize(stream, data);
+                stream.Close();
             }
             return descripcion;
         }

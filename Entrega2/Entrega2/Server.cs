@@ -82,7 +82,12 @@ namespace Entrega2
             Usuario usuario1 = (Usuario)formatter.Deserialize(stream);
             stream.Close();
 
-            
+            //IFormatter formatter = new BinaryFormatter();
+            //Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            //Usuario data = (Usuario)formatter.Deserialize(stream);
+            //stream.Close();
+
+
             Console.WriteLine("Bienvenido de vuelta a Spotflix! Te extrañamos!");
             Console.WriteLine("Ingresa tu nombre de usuario: \n");
             string usuario = Console.ReadLine();
