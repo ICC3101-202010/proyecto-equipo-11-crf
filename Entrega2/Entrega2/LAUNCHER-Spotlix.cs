@@ -254,11 +254,7 @@ namespace Entrega2
                                         Console.WriteLine("Ingrese una opcion valida");
                                     }
 
-<<<<<<< HEAD
 
-                                        
-=======
->>>>>>> 3e3004b26986a5e17174bb784747a9e277f3b7ee
                                 }
                             }
 
@@ -267,16 +263,19 @@ namespace Entrega2
                                 int a = 0;
                                 while (a != 3)
                                 {
-
+                                    if (user.Member== "true")
+                                    {
+                                        break;
+                                       
+                                    }
                                     InputOutput.Main_Menu_No_Premium();
                                     Player.controls.stop();
                                     a = Convert.ToInt32(Console.ReadLine());
                                     if (a == 1)
                                     {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                                        
-                                        retornoBuscarCancion.Clear();
+                                        /*retornoBuscarCancion.Clear();
                                         retornoBuscarVideo.Clear();
                                         InputOutput.Menu_finder();
                                         opcionB = System.Convert.ToInt32(Console.ReadLine());
@@ -333,18 +332,18 @@ namespace Entrega2
                                             string nombreActorDirector = Console.ReadLine();
                                             retornoBuscarVideo=finder.buscarActorDirector(nombreActorDirector, todosVideos);
                                         }
-                                        else if (opcionB == 5)
-=======
-=======
+                                        else if (opcionB == 5)*/
+
+
                                         Console.Clear();
->>>>>>> 223f00a821992553edb61d3aa0545983e2705253
+
                                         Console.WriteLine("Home");
                                         All_songs.mostrarCanciones();
                                         Console.WriteLine("Select one");
                                         int option_chosen = Convert.ToInt32(Console.ReadLine());
                                         int count = 0;
                                         foreach (var song in All_songs.Canciones)
->>>>>>> 3e3004b26986a5e17174bb784747a9e277f3b7ee
+
                                         {
 
                                             if (option_chosen == count)
@@ -368,6 +367,7 @@ namespace Entrega2
                                     {
                                         Console.WriteLine("Mi perfil");
                                         user.OpcionesUsuario();
+                                        
                                     }
                                     else if (a == 3)
                                     {
