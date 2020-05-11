@@ -32,11 +32,31 @@ namespace Entrega2
             return final_search[selected];
         }
 
-        public void buscarVideo()
+        public Video buscarVideo(string videoName,List<Video> todos)
         {
+            List<Video> final_search = new List<Video>();
+            foreach (var vid in todos)
+            {
+                if (vid.NameVideo.Contains(videoName) == true)
+                {
+                    final_search.Add(vid);
+                }
+            }
+            Console.WriteLine("Select one");
+            int index = 0;
+            foreach (var vid in final_search)
+            {
+                Console.WriteLine("(" + index + ")" + vid.NameVideo);
+                index++;
 
+            }
+            int selected = Convert.ToInt32(Console.ReadLine());
+            return final_search[selected];
         }
-        public Playlist buscarPlaylist(string playlist_name, List<Playlist> playlists)
+
+
+    
+    public Playlist buscarPlaylist(string playlist_name, List<Playlist> playlists)
         {//busca una determinada cancion en una determinada lista
             List<Playlist> final_search = new List<Playlist>();
             foreach (var playlist in playlists)

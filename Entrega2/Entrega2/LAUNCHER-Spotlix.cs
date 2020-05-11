@@ -34,6 +34,7 @@ namespace Entrega2
             EnvioMail mailSender = new EnvioMail();
             EnvioSMS smsSender = new EnvioSMS();
             Usuario user = new Usuario();
+            List<Cancion> todasLasCanciones = new List<Cancion>();
             
             server.Registered += mailSender.OnRegistered;
 
@@ -67,15 +68,14 @@ namespace Entrega2
                         string server1=server.LogIn();
                         if (server1 == null)
                         {
-<<<<<<< HEAD
+
 
                             Console.WriteLine("Interfaz Spotflix ");
 
                             
                             Console.Write("Interfaz Spotflix ");
 
-=======
->>>>>>> a9915e439174a6203fc73a44102220cb18b4a6bb
+
 
                             int a = 0;
                             while (a != 5)
@@ -90,9 +90,39 @@ namespace Entrega2
                                 }
                                 else if(a==2)
                                 {
-                                    Console.WriteLine("Buscar");
-                                    Console.WriteLine("Prueba prueba");
-                                    //Algo
+                                    Finder finder = new Finder();
+                                    int opcionB = 0;
+                                    while (opcionB != 9)
+                                    {
+                                        Console.WriteLine("Buscar");
+                                        Console.WriteLine("1-Cancion");
+                                        Console.WriteLine("2-Video");
+                                        Console.WriteLine("3-Playlist");
+                                        Console.WriteLine("4-Actor");
+                                        Console.WriteLine("5-Banda");
+                                        Console.WriteLine("6-Album");
+                                        Console.WriteLine("7-Mas escuchadas");
+                                        Console.WriteLine("8-Mejor puntuadas");
+                                        Console.WriteLine("9-Salir");
+                                        opcionB = System.Convert.ToInt32(Console.ReadLine());
+                                        if (opcionB == 1)
+                                        {
+                                            Console.WriteLine("Ingrese el nombre de la cancion");
+                                            string nombreCancion=Console.ReadLine();
+                                            finder.buscarCancion(nombreCancion, todasLasCanciones);
+                                        }
+                                        else if (opcionB == 2)
+                                        {
+
+                                        }
+
+                                    }
+                                    
+
+
+
+
+                                    
                                 }
 
                                 else if (a == 3)
