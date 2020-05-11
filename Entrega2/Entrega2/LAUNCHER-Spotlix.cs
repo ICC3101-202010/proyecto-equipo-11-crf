@@ -36,6 +36,8 @@ namespace Entrega2
             EnvioSMS smsSender = new EnvioSMS();
             Usuario user = new Usuario();
             List<Cancion> todasLasCanciones = new List<Cancion>();
+            List<Video> todosVideos = new List<Video>();
+            List<Playlist> todasPlaylists = new List<Playlist>();
             
             server.Registered += mailSender.OnRegistered;
 
@@ -114,7 +116,15 @@ namespace Entrega2
                                         }
                                         else if (opcionB == 2)
                                         {
-
+                                            Console.WriteLine("Ingrese el nombre del video");
+                                            string nombreVideo = Console.ReadLine();
+                                            finder.buscarVideo(nombreVideo, todosVideos);
+                                        }
+                                        else if (opcionB == 3)
+                                        {
+                                            Console.WriteLine("Ingrese nombre playlist");
+                                            string nombrePlaylist = Console.ReadLine();
+                                            finder.buscarPlaylist(nombrePlaylist, todasPlaylists);
                                         }
 
                                     }
