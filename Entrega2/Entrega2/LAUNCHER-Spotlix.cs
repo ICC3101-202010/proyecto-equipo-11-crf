@@ -69,54 +69,50 @@ namespace Entrega2
                             string opcion = null;
                             while (opcion != "5")
                             {
-                                Console.WriteLine("1- Re");
+                                Console.WriteLine("1- Reproductor");
                                 Console.WriteLine("2- Buscar");
                                 Console.WriteLine("3- Biblioteca");
                                 Console.WriteLine("4- Mi perfil");
                                 Console.WriteLine("5- Salir");
-                                opcion = Console.ReadLine();
-                                switch (opcion)
+                                int a =Convert.ToInt32(Console.ReadLine());
+                                if (a == 1)
                                 {
-                                    case "1":
-                                        Console.WriteLine("Reproductor");
-                                    case "2":
-                                        Console.WriteLine("Reproductor");
-                                    case "3":
-                                        Console.WriteLine("Reproductor");
-                                    case "4":
-                                        Console.WriteLine("Reproductor");
-                                    case "5":
-                                        Console.WriteLine("Reproductor");
-                                    default:
-                                        Console.WriteLine("Ingree una opcion valida");
-                                        return "";
-
+                                    Console.WriteLine("Reproductor");
                                 }
+                                else if(a==2)
+                                {
+                                    Console.WriteLine("Buscar");
+                                }
+
+                                else if (a == 2)
+                                {
+                                    Console.WriteLine("Biblioteca");
+                                }
+                                else if (a == 2)
+                                {
+                                    Console.WriteLine("Mi perfil");
+                                }
+                                else if (a == 2)
+                                {
+                                    Console.WriteLine("Salir");
+                                }
+
+                                else
+                                {
+                                    Console.WriteLine("Ingree una opcion valida");
+                                }
+
                             }
                         }
                         else
                         {
 
-                            Console.WriteLine("[!] ERROR: " + result + "\n");
-                            return "[!] ERROR: " + result + "\n";
+                            Console.WriteLine("[!] ERROR: Usuario o contrasena incorrecta\n");
+                            
                         }
 
-
-
-
-                }        
-                        
-                        
                         break;
                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     case "Opciones Usuario":
                         Console.Clear();
                         user.OpcionesUsuario();

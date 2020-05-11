@@ -77,47 +77,6 @@ namespace Entrega2
 
             return result;
 
-            if (result == null)
-            {
-
-                Console.Write("Interfaz Spotflix ");
-
-                string opcion = null;
-                while (opcion != "5")
-                {
-                    Console.WriteLine("1- Reproductor");
-                    Console.WriteLine("2- Mixer");
-                    Console.WriteLine("3- Listas");
-                    Console.WriteLine("4- Buscador");
-                    Console.WriteLine("5- Salir");
-                    opcion = Console.ReadLine();
-                    switch (opcion)
-                    {
-                        case "1":
-                            return "Reproductor";
-                        case "2":
-                            return "Mixer";
-                        case "3":
-                            return "Listas";
-                        case "4":
-                            return "Buscador";
-                        case "5":
-                            return "Salir";
-                        default:
-                            Console.WriteLine("Ingree una opcion valida");
-                            return "";
-
-                    }
-                }
-            }
-            else
-            {
-
-
-                Console.WriteLine("[!] ERROR: " + result + "\n");
-                return "[!] ERROR: " + result + "\n";
-            }
-            return "";
         }
         
         
