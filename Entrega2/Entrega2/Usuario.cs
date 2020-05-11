@@ -47,6 +47,7 @@ namespace Entrega2
         internal List<Album> SeguidosAlbum { get => seguidosAlbum; set => seguidosAlbum = value; }
         internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
         internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
+        public Server Server { get => server; set => server = value; }
 
         public Usuario(int ID, bool member, DateTime Member_expiration,bool Administrador,string Mail,string contraseña,int telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {
@@ -107,12 +108,12 @@ namespace Entrega2
             {
                 if (respuesta == 1)
                 {
-                    server.CambiarNombreUsuario();
+                    Server.CambiarNombreUsuario();
                     a = 0;
                 }
                 else if (respuesta == 2)
                 {
-                    server.CambiarContrasena();
+                    Server.CambiarContrasena();
                     a = 0;
                 }
                 else if (respuesta == 3)
