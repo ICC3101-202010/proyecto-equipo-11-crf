@@ -254,6 +254,11 @@ namespace Entrega2
                                         Console.WriteLine("Ingrese una opcion valida");
                                     }
 
+<<<<<<< HEAD
+
+                                        
+=======
+>>>>>>> 3e3004b26986a5e17174bb784747a9e277f3b7ee
                                 }
                             }
 
@@ -268,13 +273,78 @@ namespace Entrega2
                                     a = Convert.ToInt32(Console.ReadLine());
                                     if (a == 1)
                                     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+                                       
+                                        retornoBuscarCancion.Clear();
+                                        retornoBuscarVideo.Clear();
+                                        InputOutput.Menu_finder();
+                                        opcionB = System.Convert.ToInt32(Console.ReadLine());
+                                        if (opcionB == 1)
+                                        {
+                                            Console.WriteLine("Ingrese el nombre de la cancion");
+                                            string nombreCancion=Console.ReadLine();
+                                            Cancion seleccionada= finder.buscarCancion(nombreCancion, todasLasCanciones);
+                                            retornoBuscarCancion.Add(finder.buscarCancion(nombreCancion, todasLasCanciones));
+                                            if (seleccionada != null)
+                                            {
+                                                int opcion = 0;
+                                                while (opcion != 4)
+                                                {
+                                                    Console.WriteLine("1.Agregar cancion a una lista");
+                                                    Console.WriteLine("2.Puntuar cancion");
+                                                    Console.WriteLine("3.Reproducir");
+                                                    Console.WriteLine("4.Salir");
+                                                    opcion = System.Convert.ToInt32(Console.ReadLine());
+                                                    if (opcion == 1)
+                                                    {
+                                                        Console.WriteLine("Ingrese nombre lista");
+                                                        string lista = Console.ReadLine();
+
+                                                    }
+                                                    else if (opcion == 2)
+                                                    {
+                                                        seleccionada.valorarCancion();
+                                                    }
+                                                    else if (opcion == 3)
+                                                    {
+                                                        reproductor.reproducirCancion(Player,seleccionada);
+                                                    }
+                                                }
+                                                
+                                            }
+                                        }
+                                        else if (opcionB == 2)
+                                        {
+                                            Console.WriteLine("Ingrese el nombre del video");
+                                            string nombreVideo = Console.ReadLine();
+                                            retornoBuscarVideo.Add(finder.buscarVideo(nombreVideo, todosVideos));
+                                        }
+                                        else if (opcionB == 3)
+                                        {
+                                            Console.WriteLine("Ingrese nombre playlist");
+                                            string nombrePlaylist = Console.ReadLine();
+                                            retornoBuscarCancion=finder.buscarPlaylist(nombrePlaylist, todasPlaylists).Canciones;
+                                            
+                                        }
+                                        else if (opcionB == 4)
+                                        {
+                                            Console.WriteLine("Ingrese nombre Actor/Director");
+                                            string nombreActorDirector = Console.ReadLine();
+                                            retornoBuscarVideo=finder.buscarActorDirector(nombreActorDirector, todosVideos);
+                                        }
+                                        else if (opcionB == 5)
+=======
+=======
                                         Console.Clear();
+>>>>>>> 223f00a821992553edb61d3aa0545983e2705253
                                         Console.WriteLine("Home");
                                         All_songs.mostrarCanciones();
                                         Console.WriteLine("Select one");
                                         int option_chosen = Convert.ToInt32(Console.ReadLine());
                                         int count = 0;
                                         foreach (var song in All_songs.Canciones)
+>>>>>>> 3e3004b26986a5e17174bb784747a9e277f3b7ee
                                         {
 
                                             if (option_chosen == count)
@@ -289,9 +359,6 @@ namespace Entrega2
 
                                                 count++;
                                             }
-
-
-
 
 
                                         }
