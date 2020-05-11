@@ -72,12 +72,6 @@ namespace Entrega2
 
 
                             Console.WriteLine("Interfaz Spotflix ");
-
-                            
-                            Console.Write("Interfaz Spotflix ");
-
-
-
                             int a = 0;
                             while (a != 5)
                             {
@@ -95,16 +89,7 @@ namespace Entrega2
                                     int opcionB = 0;
                                     while (opcionB != 9)
                                     {
-                                        Console.WriteLine("Buscar");
-                                        Console.WriteLine("1-Cancion");
-                                        Console.WriteLine("2-Video");
-                                        Console.WriteLine("3-Playlist");
-                                        Console.WriteLine("4-Actor");
-                                        Console.WriteLine("5-Banda");
-                                        Console.WriteLine("6-Album");
-                                        Console.WriteLine("7-Mas escuchadas");
-                                        Console.WriteLine("8-Mejor puntuadas");
-                                        Console.WriteLine("9-Salir");
+
                                         opcionB = System.Convert.ToInt32(Console.ReadLine());
                                         if (opcionB == 1)
                                         {
