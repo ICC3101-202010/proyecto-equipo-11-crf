@@ -67,6 +67,7 @@ namespace Entrega2
                         string server1=server.LogIn();
                         if (server1 == null)
                         {
+                            
                             Console.Write("Interfaz Spotflix ");
 
                             int a = 0;
@@ -81,6 +82,7 @@ namespace Entrega2
                                 else if(a==2)
                                 {
                                     Console.WriteLine("Buscar");
+                                    Console.WriteLine("Prueba prueba");
                                 }
 
                                 else if (a == 3)
