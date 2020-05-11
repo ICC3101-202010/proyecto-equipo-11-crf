@@ -15,20 +15,21 @@ namespace Entrega2
         private List<Cancion> canciones;
         private List<Video> videos;
         private Image imagen_personalizada;
+        private string NombreCreador;
 
         public string NombrePlaylist { get => nombrePlaylist; set => nombrePlaylist = value; }
         public List<Cancion> Canciones { get => canciones; set => canciones = value; }
         internal List<Video> Videos { get => videos; set => videos = value; }
 
         public Image Imagen_personalizada { get => imagen_personalizada; set => imagen_personalizada = value; }
+        public string NombreCreador1 { get => NombreCreador; set => NombreCreador = value; }
 
-
-
-        public Playlist(string nombrePlaylist, List<Cancion> canciones, List<Video> videos)
+        public Playlist(string nombrePlaylist, List<Cancion> canciones, List<Video> videos, string NombreCreador)
         {
             this.nombrePlaylist=nombrePlaylist;
             this.Canciones=canciones;
             this.Videos=videos;
+            this.NombreCreador = NombreCreador;
 
         }
         public void mostrarCanciones()
