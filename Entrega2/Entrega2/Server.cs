@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
-    public class Server : RegistroUsuarios
+    public class server : RegistroUsuarios
     {
         
 
@@ -60,7 +60,7 @@ namespace Entrega2
         public RegistroUsuarios Data { get; }
         
 
-        public Server(RegistroUsuarios data)
+        public server(RegistroUsuarios data)
         {
             this.Data = data;
         }

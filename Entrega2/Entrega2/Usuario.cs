@@ -18,7 +18,7 @@ namespace Entrega2
         protected int telefono;
         protected string username;
 
-
+        
 
         public List<Cancion> canciones_favoritas;
         public List<Video> videos_favoritos;
@@ -29,7 +29,7 @@ namespace Entrega2
         private List<Banda> seguidosBanda;
         private List<Actor> seguidosActor;
 
-        //Server server = new Server(database);
+        
 
         public int ID  { get => id; set => id = value; }
         public bool Member { get => member; set => member = value; }
@@ -47,7 +47,6 @@ namespace Entrega2
         internal List<Album> SeguidosAlbum { get => seguidosAlbum; set => seguidosAlbum = value; }
         internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
         internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
-        public Server Server { get => server; set => server = value; }
 
         public Usuario(int ID, bool member, DateTime Member_expiration,bool Administrador,string Mail,string contraseña,int telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {
@@ -98,6 +97,8 @@ namespace Entrega2
 
         public void OpcionesUsuario()
         {
+            RegistroUsuarios database = new RegistroUsuarios();
+            server server = new server(database);
             Console.WriteLine("Que te gustaria hacer?");
             Console.WriteLine("1 --> Cambiar Nombre de Usuario");
             Console.WriteLine("2 --> Cambiar Contrasena");
@@ -108,12 +109,12 @@ namespace Entrega2
             {
                 if (respuesta == 1)
                 {
-                    Server.CambiarNombreUsuario();
+                    server.CambiarNombreUsuario();
                     a = 0;
                 }
                 else if (respuesta == 2)
                 {
-                    Server.CambiarContrasena();
+                    server.CambiarContrasena();
                     a = 0;
                 }
                 else if (respuesta == 3)

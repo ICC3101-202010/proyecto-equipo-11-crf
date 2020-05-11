@@ -28,7 +28,7 @@ namespace Entrega2
         public void Spotlix() 
         {
             RegistroUsuarios database = new RegistroUsuarios();
-            Server server = new Server(database);
+            server server = new server(database);
             EnvioMail mailSender = new EnvioMail();
             EnvioSMS smsSender = new EnvioSMS();
             Usuario user = new Usuario();
