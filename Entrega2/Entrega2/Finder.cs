@@ -156,11 +156,30 @@ namespace Entrega2
             if (opt == 1)
             {
                 List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.Reproducciones descending select canciones).ToList();
+                int cont = 0;
+                foreach(Cancion can in lista)
+                {
+                    Console.WriteLine(cont);
+                    Console.WriteLine("Artista: "+can.Banda);
+                    Console.WriteLine("Cancion: " + can.Titulo_Cancion);
+                    cont++;
+
+                }
                 return lista;
             }
             else
             {
                 List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.Reproducciones descending select canciones).Take(5).ToList();
+                int cont = 0;
+                foreach (Cancion can in lista)
+                {
+                    Console.WriteLine(cont);
+                    Console.WriteLine("Artista: " + can.Banda);
+                    Console.WriteLine("Cancion: " + can.Titulo_Cancion);
+                    cont++;
+
+                }
+
                 return lista;
             }
 
@@ -175,12 +194,30 @@ namespace Entrega2
             if (opt == 1)
             {
                 List<Cancion> lista = (from can in canciones orderby can.Rating descending select can).ToList();
+                int cont = 0;
+                foreach (Cancion can in lista)
+                {
+                    Console.WriteLine(cont);
+                    Console.WriteLine("Artista: " + can.Banda);
+                    Console.WriteLine("Cancion: " + can.Titulo_Cancion);
+                    cont++;
+
+                }
                 return lista;
 
             }
             else
             {
                 List<Cancion> lista = (from can in canciones orderby can.Rating descending select can).Take(5).ToList();
+                int cont = 0;
+                foreach (Cancion can in lista)
+                {
+                    Console.WriteLine(cont);
+                    Console.WriteLine("Artista: " + can.Banda);
+                    Console.WriteLine("Cancion: " + can.Titulo_Cancion);
+                    cont++;
+
+                }
                 return lista;
             }
 

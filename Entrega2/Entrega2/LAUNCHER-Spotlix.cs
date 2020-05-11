@@ -110,7 +110,11 @@ namespace Entrega2
 
                                     }
 
+<<<<<<< HEAD
+                                    
+=======
                                  
+>>>>>>> 62c64dfd009d8abfe4584559b1f69dd6426703d7
                                         
                                 }
                                 else if(a==2)
