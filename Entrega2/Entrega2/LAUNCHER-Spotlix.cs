@@ -93,16 +93,17 @@ namespace Entrega2
                                         if (option_chosen == count)
                                         {
                                             reproductor.reproducirCancion(Player, song);
-                                            
+
                                             reproductor.reproducirLista(Player, reproductor.Queue(song));
+                                            Player.controls.pause();
                                             break;
                                         }
                                         count++;
-                                        
+
                                     }
 
-                                    break;
-                                    ;    
+                                 
+                                        
                                 }
                                 else if(a==2)
                                 {
