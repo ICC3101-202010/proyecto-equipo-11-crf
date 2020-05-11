@@ -19,6 +19,7 @@ namespace Entrega2
 
             Reproductor reproductor = new Reproductor();
             Finder finder = new Finder();
+            
 
 
             string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
@@ -43,7 +44,7 @@ namespace Entrega2
             //Console.WriteLine(c2.Show_info(c2));
             Console.WriteLine("------------------------");
 
-
+            
 
             //List<Cancion> todasLasCanciones = reproductor.Library();
             //List<Cancion> rating = reproductor.ratingReproducciones(todasLasCanciones);
@@ -53,8 +54,9 @@ namespace Entrega2
             //Caratula caratula1 = new Caratula(c1);
 
             WindowsMediaPlayer sonido = new WindowsMediaPlayer();
+            reproductor.reproducirLista(sonido, reproductor.Library());
 
-            try
+            /*try
             {
                 sonido = new WindowsMediaPlayer();
 
@@ -91,7 +93,7 @@ namespace Entrega2
             
 
             //LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
-            //spotlix.Spotlix();
+            //spotlix.Spotlix();/*
 
             /*
                         Cancion cancion1 = new Cancion(path1);

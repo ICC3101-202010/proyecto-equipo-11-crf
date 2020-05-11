@@ -11,25 +11,25 @@ using TagLib.Gif;
 
 namespace Entrega2
 {
-    class Reproductor: Usuario
+    class Reproductor : Usuario
     {
-        public List<Cancion> Library() 
+        public List<Cancion> Library()
         {
             string directory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca");
             DirectoryInfo Biblioteca_folder = new DirectoryInfo(directory);
             List<Cancion> Library = new List<Cancion>();
-            
+
             foreach (var mp3_file in Biblioteca_folder.GetFiles())
-            { 
+            {
                 Cancion cancion = new Cancion(mp3_file.FullName);
                 //Console.WriteLine(cancion.Show_info(cancion));
-                Library.Add(cancion);               
+                Library.Add(cancion);
             }
             return Library;
             //Retorna la lista con todas las canciones
         }
-        
-        public virtual void reproducirCancion(WindowsMediaPlayer sonido,Cancion cancion)
+
+        public virtual void reproducirCancion(WindowsMediaPlayer sonido, Cancion cancion)
         {
             try
             {
@@ -54,15 +54,15 @@ namespace Entrega2
 
                 }
 
-           
+
             }
             catch (FileNotFoundException ex)
             {
-                Console.WriteLine("Error: "+ex.Message);
+                Console.WriteLine("Error: " + ex.Message);
             }
         }
 
-        public void reproducirLista(WindowsMediaPlayer sonido,Playlist playlist)
+        public void reproducirLista(WindowsMediaPlayer sonido, Playlist playlist)
         {
             Console.WriteLine("1-Reproduccion Oredenada");
             Console.WriteLine("Reproduccion Aleatoria");
@@ -74,21 +74,21 @@ namespace Entrega2
                         int i = 0;
                         reproducirCancion(sonido, playlist.Canciones[i]);
                     }
-                    
-                    
-                    
-                    
+
+
+
+
                     break;
             }
-           
+
         }
-        
+
         public Playlist crearListaCanciones(Playlist todasCanciones)
         {
 
             string nombreLista;
             List<Cancion> nuevaLista = new List<Cancion>();
-            
+
             Console.WriteLine("Ingrese el nombre de la nueva lista");
             nombreLista = Console.ReadLine();
 
@@ -107,21 +107,21 @@ namespace Entrega2
 
         }
 
-        public bool Check_if_premium(Usuario usuario) 
+        public bool Check_if_premium(Usuario usuario)
         {
             if (usuario.Member == false)
             {
                 return false;
             }
-            else 
+            else
             {
                 return true;
             }
         }
-       
+
 
         public List<Cancion> Queue(Cancion song)
-            
+
         {
             List<Cancion> queue = new List<Cancion>();
             List<Cancion> Allsongs = new List<Cancion>();
@@ -138,9 +138,54 @@ namespace Entrega2
             return queue;
         }
 
-        public void AddPictureT() 
-        { 
-        
+        public void AddPictureT()
+        {
+
+        }
+        public virtual void reproducirLista(WindowsMediaPlayer sonido, List<Cancion> songs)
+        {
+            try
+            {
+                string n = null;
+                foreach (var song in songs)
+
+                {
+                    sonido.URL = Path.GetFullPath(song.Path);
+                    sonido.controls.play();
+                    while (n != "4")
+                    {
+                        Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-salir");
+                        n = Console.ReadLine();
+                        if (n == "1")
+                        {
+                            sonido.controls.pause();
+
+                        }
+                        if (n == "2")
+                        {
+                            double tiempo = sonido.controls.currentPosition;
+                            sonido.controls.currentPosition = tiempo;
+                            sonido.controls.play();
+                        }
+                        if (n == "3") 
+                        {
+                           Console.WriteLine("next");
+                           break;
+                        }
+                        if (sonido.playState == WMPPlayState.wmppsMediaEnded)
+                        {
+                            continue;
+                        }
+
+                    }
+
+                }
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
     }
-}
+}  
+
