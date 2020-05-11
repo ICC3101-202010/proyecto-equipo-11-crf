@@ -77,12 +77,28 @@ namespace Entrega2
                             Console.WriteLine("Spotflix ");
                             if (user.Member== "true")
                             {
+<<<<<<< HEAD
                                 int a = 0;
                                 while (a != 5)
                                 {
                                     InputOutput.Main_menu();
                                     a = Convert.ToInt32(Console.ReadLine());
                                     if (a == 1)
+=======
+
+                                InputOutput.Main_menu();
+                                Player.controls.stop();
+                                a =Convert.ToInt32(Console.ReadLine());
+                                if (a == 1)
+                                {
+                                    Console.Clear();
+                                    Console.WriteLine("Home");
+                                    All_songs.mostrarCanciones();
+                                    Console.WriteLine("Select one");
+                                    int option_chosen = Convert.ToInt32(Console.ReadLine());
+                                    int count = 0;
+                                    foreach (var song in All_songs.Canciones)
+>>>>>>> a6c87a604bac2e6a813047eecb972e87b5f20698
                                     {
                                         Console.WriteLine("Home");
                                         All_songs.mostrarCanciones();
@@ -91,10 +107,25 @@ namespace Entrega2
                                         int count = 0;
                                         foreach (var song in All_songs.Canciones)
                                         {
+<<<<<<< HEAD
 
                                             if (option_chosen == count)
                                             {
                                                 reproductor.reproducirCancion(Player, song);
+=======
+                                            reproductor.reproducirCancion(Player, song);
+                                            reproductor.reproducirLista(Player, reproductor.Queue(song));                                           
+                                            Player.controls.pause();
+                                            break;
+                                        }
+                                        else 
+                                        {
+                                            
+                                            count++;
+                                        }
+                                        
+                                        Console.WriteLine(song.Titulo_Cancion);
+>>>>>>> a6c87a604bac2e6a813047eecb972e87b5f20698
 
                                                 reproductor.reproducirLista(Player, reproductor.Queue(song));
                                                 Player.controls.pause();
@@ -105,6 +136,7 @@ namespace Entrega2
                                         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                                  
@@ -112,6 +144,19 @@ namespace Entrega2
 
                                     }
                                     else if (a == 2)
+=======
+
+                                        
+                                }
+                                else if(a==2)
+                                {
+                                    List<Cancion> retornoBuscarCancion = new List<Cancion>();
+                                    List<Video> retornoBuscarVideo = new List<Video>();
+                                 
+                                    Finder finder = new Finder();
+                                    int opcionB = 0;
+                                    while (opcionB != 9)
+>>>>>>> a6c87a604bac2e6a813047eecb972e87b5f20698
                                     {
                                         List<Cancion> retornoBuscarCancion = new List<Cancion>();
                                         List<Video> retornoBuscarVideo = new List<Video>();

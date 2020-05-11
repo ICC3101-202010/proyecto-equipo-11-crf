@@ -40,7 +40,7 @@ namespace Entrega2.IO
 
         public static void Main_menu()
         {
-            Console.WriteLine("1- Reproductor");
+            Console.WriteLine("1- HOME");
             Console.WriteLine("2- Buscar");
             Console.WriteLine("3- Biblioteca");
             Console.WriteLine("4- Mi perfil");
