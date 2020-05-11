@@ -84,15 +84,15 @@ namespace Entrega2
                                     Console.WriteLine("Buscar");
                                 }
 
-                                else if (a == 2)
+                                else if (a == 3)
                                 {
                                     Console.WriteLine("Biblioteca");
                                 }
-                                else if (a == 2)
+                                else if (a == 4)
                                 {
                                     Console.WriteLine("Mi perfil");
                                 }
-                                else if (a == 2)
+                                else if (a == 5)
                                 {
                                     Console.WriteLine("Salir");
                                 }
