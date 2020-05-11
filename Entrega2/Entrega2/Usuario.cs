@@ -50,7 +50,7 @@ namespace Entrega2
         internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
         internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
 
-        public Usuario(int ID, bool member, DateTime Member_expiration,bool Administrador,string Mail,string contraseña,int telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
+        public Usuario(int ID, bool member, DateTime Member_expiration,bool Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {
             this.id = ID;
             this.member_expiration = Member_expiration;
