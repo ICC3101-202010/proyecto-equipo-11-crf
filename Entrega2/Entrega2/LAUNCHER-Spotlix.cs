@@ -29,13 +29,16 @@ namespace Entrega2
         public void Spotlix() 
         {
             InputOutput.ConsoleWelcome();
-            
+
+            Reproductor reproductor = new Reproductor();
             RegistroUsuarios database = new RegistroUsuarios();
             server server = new server(database);
             EnvioMail mailSender = new EnvioMail();
             EnvioSMS smsSender = new EnvioSMS();
             Usuario user = new Usuario();
-            List<Cancion> todasLasCanciones = new List<Cancion>();
+
+
+            List<Cancion> todasLasCanciones = reproductor.Library();
             List<Video> todosVideos = new List<Video>();
             List<Playlist> todasPlaylists = new List<Playlist>();
             
