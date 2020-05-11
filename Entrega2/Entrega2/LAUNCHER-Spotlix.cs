@@ -334,7 +334,10 @@ namespace Entrega2
                                         }
                                         else if (opcionB == 5)*/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 68745ba3b6a9e2ec0b8cc64262b4b60848874088
                                         Console.Clear();
 
                                         Console.WriteLine("Home");
