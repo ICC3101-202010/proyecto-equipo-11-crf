@@ -193,7 +193,7 @@ namespace Entrega2
             if (result == null)
             {
                
-                OnRegistered(usuario, contrasena,  verificationlink: verificationLink, email: email);
+                OnRegistered(usuario1.Username, usuario1.Contraseña,  verificationlink: verificationLink, email: usuario1.Mail);
             }
             else
             {
