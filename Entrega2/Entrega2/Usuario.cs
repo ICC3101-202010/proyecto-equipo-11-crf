@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
+    [Serializable]
     public class Usuario : Persona
     {
         protected int id;
@@ -15,8 +16,9 @@ namespace Entrega2
         protected bool administrador;
         protected string mail;
         protected string contraseña;
-        protected int telefono;
+        protected string telefono;
         protected string username;
+        public string privacidad;
 
         
 
@@ -37,7 +39,7 @@ namespace Entrega2
         public bool Administrador { get => administrador; set => administrador = value; }
         public string Mail { get => mail; set => mail = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
-        public int Telefono { get => telefono; set => telefono = value; }
+        public string Telefono { get => telefono; set => telefono = value; }
 
         public string Username { get => username; set => username = value; }
         public List<Cancion> Canciones_favoritas { get => canciones_favoritas; set => canciones_favoritas = value; }
@@ -155,7 +157,11 @@ namespace Entrega2
         }
 
 
-
+        public string Info_Personas()
+        {
+            string a = "Nombre de Usuario: " + username +  ", Mail: " + mail;
+            return a;
+        }
 
 
     }

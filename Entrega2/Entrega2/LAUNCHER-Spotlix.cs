@@ -9,6 +9,7 @@ namespace Entrega2
 {
     class LAUNCHER_Spotlix
     {
+
         public LAUNCHER_Spotlix() 
         {
             // LIST OF Loging
@@ -28,7 +29,7 @@ namespace Entrega2
         public void Spotlix() 
         {
             InputOutput.ConsoleWelcome();
-
+            
             RegistroUsuarios database = new RegistroUsuarios();
             server server = new server(database);
             EnvioMail mailSender = new EnvioMail();
