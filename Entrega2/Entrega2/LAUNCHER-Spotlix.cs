@@ -29,14 +29,15 @@ namespace Entrega2
             Usuario user = new Usuario();
 
             WindowsMediaPlayer Player = new WindowsMediaPlayer();
-
+            
 
             List<Cancion> todasLasCanciones = new List<Cancion>();
+            todasLasCanciones = reproductor.Library();
             List<Video> todosVideos = new List<Video>();
             List<Playlist> todasPlaylists = new List<Playlist>();
             List<Album> todosAlbum = new List<Album>();
 
-           Playlist All_songs = new Playlist("Library",todasLasCanciones,null,null);
+            Playlist All_songs = new Playlist("Library",todasLasCanciones,null,null);
              
 
             server.Registered += mailSender.OnRegistered;
@@ -85,16 +86,23 @@ namespace Entrega2
                                     All_songs.mostrarCanciones();
                                     Console.WriteLine("Select one");
                                     int option_chosen = Convert.ToInt32(Console.ReadLine());
-                                    int count = 1;
+                                    int count = 0;
                                     foreach (var song in All_songs.Canciones)
                                     {
 
                                         if (option_chosen == count)
                                         {
+                                            reproductor.reproducirCancion(Player, song);
+                                            
                                             reproductor.reproducirLista(Player, reproductor.Queue(song));
+                                            break;
                                         }
+                                        count++;
+                                        
+                                    }
 
-                                    }   
+                                    break;
+                                    ;    
                                 }
                                 else if(a==2)
                                 {

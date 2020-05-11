@@ -110,12 +110,12 @@ namespace Entrega2
             Data.AddUser(new List<string>()
                 {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono});
 
-            IFormatter formatter1 = new BinaryFormatter();
+            /*IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Double tiempo1 = (Double)formatter1.Deserialize(stream1);
-            stream1.Close();
+            Double tiempo1 = (Double)formatter1.Deserialize(stream1)  ;
+            stream1.Close();*/
 
-            IFormatter formatter2 = new BinaryFormatter();
+            /*IFormatter formatter2 = new BinaryFormatter();
             Stream stream2 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Cancion cancion = (Cancion)formatter2.Deserialize(stream2);
             stream2.Close();
@@ -123,9 +123,9 @@ namespace Entrega2
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             string path = (string)formatter3.Deserialize(stream3);
-            stream3.Close();
+            stream3.Close();*/
             
-            Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
+            //Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
             
 
 

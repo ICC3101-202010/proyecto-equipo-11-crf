@@ -35,10 +35,10 @@ namespace Entrega2
         {
             try
             {
-                sonido.URL = cancion.Path;
+                sonido.URL = Path.GetFullPath(cancion.Path);
                 sonido.controls.play();
 
-                IFormatter formatter2 = new BinaryFormatter();
+                /*IFormatter formatter2 = new BinaryFormatter();
                 Stream stream2 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                 formatter2.Serialize(stream2, cancion);
                 stream2.Close();
@@ -46,7 +46,7 @@ namespace Entrega2
                 IFormatter formatter3 = new BinaryFormatter();
                 Stream stream3 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                 formatter3.Serialize(stream3, cancion.path);
-                stream3.Close();
+                stream3.Close();*/
 
                 string n = null;
                 while (n != "3")
@@ -59,10 +59,10 @@ namespace Entrega2
                         double tiempo1 = tiempo;
                         sonido.controls.pause();
 
-                        IFormatter formatter1 = new BinaryFormatter();
+                        /*IFormatter formatter1 = new BinaryFormatter();
                         Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                         formatter1.Serialize(stream1, tiempo1);
-                        stream1.Close();
+                        stream1.Close();*/
 
 
                     }
@@ -74,12 +74,12 @@ namespace Entrega2
                     }
                     else if (n == "3")
                     {
-                        double tiempo = sonido.controls.currentPosition;
-                        double tiempo1 = tiempo;
+                        /*double tiempo = sonido.controls.currentPosition;
+                        Double tiempo1 = tiempo;
                         IFormatter formatter1 = new BinaryFormatter();
                         Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                         formatter1.Serialize(stream1, tiempo1);
-                        stream1.Close();
+                        stream1.Close();*/
                     }
                     else
                     {
@@ -166,9 +166,10 @@ namespace Entrega2
 
                 {
                     sonido.URL = Path.GetFullPath(song.Path);
-                    sonido.controls.play();
+                    //sonido.controls.play();
                     while (n != "4")
                     {
+                        sonido.controls.play();
                         Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-salir");
                         n = Console.ReadLine();
                         if (n == "1")
