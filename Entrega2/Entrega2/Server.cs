@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 
 namespace Entrega2
 {
@@ -93,11 +94,21 @@ namespace Entrega2
             //reg.registrados.Add(registrados.Count + 1, data);
 
             
+
             IFormatter formatter2 = new BinaryFormatter();
             Stream stream2 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Usuario usuario2= formatter2.Deserialize(stream2) as Usuario;
 
             stream2.Close();
+
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Usuario usuario1 = formatter.Deserialize(stream) as Usuario;
+            stream.Close();
+            string verificationLink = GenerateLink(usuario1.Username);
+            Data.AddUser(new List<string>()
+                {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono});
+
 
             //IFormatter formatter = new BinaryFormatter();
             //Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -206,7 +217,7 @@ namespace Entrega2
             if (result == null)
             {
                
-                OnRegistered(usuario, contrasena,  verificationlink: verificationLink, email: email);
+                OnRegistered(usuario1.Username, usuario1.Contraseña,  verificationlink: verificationLink, email: usuario1.Mail);
             }
             else
             {
@@ -313,6 +324,7 @@ namespace Entrega2
         public void OnEmailVerified(object source, EventArgs e)
         {
             Console.WriteLine("MailService: Se ha enviado un email al correo indicado para Verificar su correo");
+            Thread.Sleep(2000);
         }
 
     }
