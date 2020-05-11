@@ -78,10 +78,13 @@ namespace Entrega2
                             int a = 0;
                             while (a != 5)
                             {
+
                                 InputOutput.Main_menu();
+                                Player.controls.stop();
                                 a =Convert.ToInt32(Console.ReadLine());
                                 if (a == 1)
                                 {
+                                    
                                     Console.WriteLine("Home");
                                     All_songs.mostrarCanciones();
                                     Console.WriteLine("Select one");
@@ -93,12 +96,17 @@ namespace Entrega2
                                         if (option_chosen == count)
                                         {
                                             reproductor.reproducirCancion(Player, song);
-
-                                            reproductor.reproducirLista(Player, reproductor.Queue(song));
+                                            reproductor.reproducirLista(Player, reproductor.Queue(song));                                           
                                             Player.controls.pause();
                                             break;
                                         }
-                                        count++;
+                                        else 
+                                        {
+                                            
+                                            count++;
+                                        }
+                                        
+                                        Console.WriteLine(song.Titulo_Cancion);
 
                                     }
 
