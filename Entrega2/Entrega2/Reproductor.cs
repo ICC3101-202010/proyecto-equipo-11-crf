@@ -62,26 +62,7 @@ namespace Entrega2
             }
         }
 
-        public void reproducirLista(WindowsMediaPlayer sonido, Playlist playlist)
-        {
-            Console.WriteLine("1-Reproduccion Oredenada");
-            Console.WriteLine("Reproduccion Aleatoria");
-            string opcion1 = Console.ReadLine();
-            switch (opcion1)
-            {
-                case "1":
-                    {
-                        int i = 0;
-                        reproducirCancion(sonido, playlist.Canciones[i]);
-                    }
 
-
-
-
-                    break;
-            }
-
-        }
 
         public Playlist crearListaCanciones(Playlist todasCanciones)
         {
