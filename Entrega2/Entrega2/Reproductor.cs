@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using System.IO;
 using WMPLib;
 using System.Security.Cryptography.X509Certificates;
-using System.Linq;
 using TagLib.Gif;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 
 namespace Entrega2
 {
@@ -35,6 +37,17 @@ namespace Entrega2
             {
                 sonido.URL = cancion.Path;
                 sonido.controls.play();
+
+                IFormatter formatter2 = new BinaryFormatter();
+                Stream stream2 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter2.Serialize(stream2, cancion);
+                stream2.Close();
+
+                IFormatter formatter3 = new BinaryFormatter();
+                Stream stream3 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter3.Serialize(stream3, cancion.path);
+                stream3.Close();
+
                 string n = null;
                 while (n != "3")
                 {
@@ -42,7 +55,15 @@ namespace Entrega2
                     n = Console.ReadLine();
                     if (n == "1")
                     {
+                        double tiempo = sonido.controls.currentPosition;
+                        double tiempo1 = tiempo;
                         sonido.controls.pause();
+
+                        IFormatter formatter1 = new BinaryFormatter();
+                        Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                        formatter1.Serialize(stream1, tiempo1);
+                        stream1.Close();
+
 
                     }
                     if (n == "2")
@@ -50,6 +71,19 @@ namespace Entrega2
                         double tiempo = sonido.controls.currentPosition;
                         sonido.controls.currentPosition = tiempo;
                         sonido.controls.play();
+                    }
+                    else if (n == "3")
+                    {
+                        double tiempo = sonido.controls.currentPosition;
+                        double tiempo1 = tiempo;
+                        IFormatter formatter1 = new BinaryFormatter();
+                        Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                        formatter1.Serialize(stream1, tiempo1);
+                        stream1.Close();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Opcion No Valida");
                     }
 
                 }

@@ -25,7 +25,7 @@ namespace Entrega2
         private Caratula caratula;
         private string album;
         private IPicture pre_caratula;
-        private string path;
+        public string path;
         private string banda;
         private int likes;
         private string duration;
