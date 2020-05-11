@@ -12,15 +12,7 @@ namespace Entrega2
 
         public LAUNCHER_Spotlix() 
         {
-            // LIST OF Loging
-            Loginlist = new List<string>()
-            {
-                "Registarse",
-                "Login",
-                "Cambiar contraseña",
-                "Salir",
-
-            };
+            
 
  
         }
@@ -61,7 +53,7 @@ namespace Entrega2
             while (exec)
             {
 
-                string chosen = InputOutput.ShowOptions(new List<string>() { "Registrarse", "Log in", "Opciones Usuario", "Mostrar Usuarios","Salir" });
+                string chosen = InputOutput.ShowOptions(new List<string>() { "Registrarse", "Log in", "Log Out" });
                 switch (chosen)
                 {
                     case "Registrarse":
@@ -117,11 +109,6 @@ namespace Entrega2
 
                                     }
                                     
-
-
-
-
-                                    
                                 }
 
                                 else if (a == 3)
@@ -131,10 +118,11 @@ namespace Entrega2
                                 else if (a == 4)
                                 {
                                     Console.WriteLine("Mi perfil");
+                                    user.OpcionesUsuario();
                                 }
                                 else if (a == 5)
                                 {
-                                    Console.WriteLine("Salir");
+                                    Console.WriteLine("Retroceder");
                                 }
 
                                 else
@@ -152,18 +140,8 @@ namespace Entrega2
                         }
 
                         break;
-                   
-                    case "Opciones Usuario":
-                        Console.Clear();
-                        user.OpcionesUsuario();
-                        break;
 
-                    case "Mostrar Usuarios":
-                        Console.Clear();
-                        server.MostrarUsuarios();
-                        break;
-
-                    case "Salir":
+                    case "Log Out":
                         exec = false;
                             break;
                     

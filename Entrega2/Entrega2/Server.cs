@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 
 namespace Entrega2
 {
@@ -303,6 +304,7 @@ namespace Entrega2
         public void OnEmailVerified(object source, EventArgs e)
         {
             Console.WriteLine("MailService: Se ha enviado un email al correo indicado para Verificar su correo");
+            Thread.Sleep(2000);
         }
 
     }
