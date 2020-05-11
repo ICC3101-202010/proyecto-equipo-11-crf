@@ -53,7 +53,7 @@ namespace Entrega2.IO
             Console.WriteLine("1-Cancion");
             Console.WriteLine("2-Video");
             Console.WriteLine("3-Playlist");
-            Console.WriteLine("4-Actor");
+            Console.WriteLine("4-Actor/Director");
             Console.WriteLine("5-Banda");
             Console.WriteLine("6-Album");
             Console.WriteLine("7-Mas escuchadas");

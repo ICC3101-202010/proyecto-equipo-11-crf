@@ -33,6 +33,8 @@ namespace Entrega2
             List<Cancion> todasLasCanciones = new List<Cancion>();
             List<Video> todosVideos = new List<Video>();
             List<Playlist> todasPlaylists = new List<Playlist>();
+            List<Album> todosAlbum = new List<Album>();
+            
             
             server.Registered += mailSender.OnRegistered;
 
@@ -86,7 +88,7 @@ namespace Entrega2
                                     int opcionB = 0;
                                     while (opcionB != 9)
                                     {
-
+                                        InputOutput.Menu_finder();
                                         opcionB = System.Convert.ToInt32(Console.ReadLine());
                                         if (opcionB == 1)
                                         {
@@ -106,7 +108,39 @@ namespace Entrega2
                                             string nombrePlaylist = Console.ReadLine();
                                             finder.buscarPlaylist(nombrePlaylist, todasPlaylists);
                                         }
+                                        else if (opcionB == 4)
+                                        {
+                                            Console.WriteLine("Ingrese nombre Actor/Director");
+                                            string nombreActorDirector = Console.ReadLine();
+                                            finder.buscarActorDirector(nombreActorDirector, todosVideos);
+                                        }
+                                        else if (opcionB == 5)
+                                        {
+                                            Console.WriteLine("Ingrese nombre banda");
+                                            string nombreBanda = Console.ReadLine();
+                                            finder.buscarArtista(nombreBanda, todasLasCanciones);
+                                        }
+                                        else if (opcionB == 6)
+                                        {
+                                            Console.WriteLine("Ingrese nombre Abum");
+                                            string nombreAlbum = Console.ReadLine();
+                                            finder.searchAlbum(nombreAlbum, todosAlbum);
+                                        }
+                                        else if (opcionB == 7)
+                                        {
+                                            Console.WriteLine("Mas reproducidas");
+                                            finder.ratingReproducciones(todasLasCanciones);
+                                        }
+                                        else if (opcionB == 8)
+                                        {
+                                            Console.WriteLine("Mejor puntuadas");
+                                            finder.ordenarPorNota(todasLasCanciones);
 
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("Salir");
+                                        }
                                     }
                                     
                                 }
