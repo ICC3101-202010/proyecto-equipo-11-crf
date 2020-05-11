@@ -36,6 +36,7 @@ namespace Entrega2
             List<Playlist> todasPlaylists = new List<Playlist>();
             List<Album> todosAlbum = new List<Album>();
 
+
             Playlist All_songs = new Playlist("Library", todasLasCanciones, null, null);
 
 
@@ -216,6 +217,13 @@ namespace Entrega2
                                             Console.Clear();
                                             Console.Write("Crea tu playlist" + "\n" + "Elige un tipo" + "\n" + "[1] Canciones" + "\n" + "[2]  Video");
                                             int opcion_crear = Convert.ToInt32(Console.ReadLine());
+                                            if (opcion_crear == 1) 
+                                            {
+                                                Console.Clear();
+
+                                                Playlist All_new_user = new Playlist("Library", todasLasCanciones, null, user.NamePerson);
+                                                reproductor.crearListaCanciones(All_new_user);
+                                            }
 
                                         }
 
