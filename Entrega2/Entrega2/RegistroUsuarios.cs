@@ -12,6 +12,8 @@ namespace Entrega2
         // Diccionario para guardar todos los registros
         // Los datos de cada registro se guardan en List<string> con formato [usuario, correo, password, linkVerificacion, fecha, numero, privacidad, gustos]
         public Dictionary<int, List<string>> registrados;
+        public Dictionary<Cancion, List<Double>> retomar;
+        public List<string> paths;
 
         public RegistroUsuarios()
         {
@@ -62,6 +64,12 @@ namespace Entrega2
                 //stream.Close();
             }
             return descripcion;
+        }
+
+        public void RetomarCancion(Cancion cancion, string path, List<Double> tiempo)
+        {
+            this.retomar.Add(cancion, tiempo);
+            this.paths.Add(path);
         }
 
         
