@@ -29,7 +29,7 @@ namespace Entrega2
         private List<Banda> seguidosBanda;
         private List<Actor> seguidosActor;
 
-        Server server = new Server(database);
+        //Server server = new Server(database);
 
         public int ID  { get => id; set => id = value; }
         public bool Member { get => member; set => member = value; }

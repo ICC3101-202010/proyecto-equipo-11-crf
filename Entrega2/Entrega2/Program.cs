@@ -16,7 +16,7 @@ namespace Entrega2
             Reproductor reproductor = new Reproductor();
             Finder finder = new Finder();
             string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
-            string pat2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../narnia.mp4");
+            //string pat2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../narnia.mp4");
             //string pat3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../avengers-infinity.mov");
             //string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Moves Like Jagger Ft. Christina Aguilera.mp3");
             //string path3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/The Weeknd - Blinding Lights.mp3");
@@ -24,7 +24,7 @@ namespace Entrega2
             //Console.Write(path1);
             //Console.Write(path3);
 
-            Video v1 = new Video(pat2);
+            //Video v1 = new Video(pat2);
             //Video v2 = new Video(pat3);
             Cancion c1 = new Cancion(path1);
             //Console.WriteLine(c1.Show_info(c1));
@@ -41,7 +41,7 @@ namespace Entrega2
 
             List<Cancion> todasLasCanciones = reproductor.Library();
             List<Cancion> rating = reproductor.ratingReproducciones(todasLasCanciones);
-            Playlist ratingplaylist = new Playlist("rating", rating, null);
+            Playlist ratingplaylist = new Playlist("rating", rating, null,null);
             ratingplaylist.mostrarCanciones();
 
             Caratula caratula1 = new Caratula(c1);

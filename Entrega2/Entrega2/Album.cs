@@ -48,7 +48,7 @@ namespace Entrega2
                     {
                         album_names[names] = list_song.Banda;
                         List<Cancion> album_song = new List<Cancion>();
-                        Playlist album_playlist = new Playlist(list_song.Banda, album_song,null);
+                        Playlist album_playlist = new Playlist(list_song.Banda, album_song,null,null);
                         album_song.Add(list_song);
                         Albums.Add(album_playlist);
                         names++;
