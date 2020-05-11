@@ -85,13 +85,15 @@ namespace Entrega2
                                 else if(a==2)
                                 {
                                     List<Cancion> retornoBuscarCancion = new List<Cancion>();
-                                    
+                                    List<Video> retornoBuscarVideo = new List<Video>();
+                                 
                                     Finder finder = new Finder();
                                     int opcionB = 0;
                                     while (opcionB != 9)
                                     {
                                        
                                         retornoBuscarCancion.Clear();
+                                        retornoBuscarVideo.Clear();
                                         InputOutput.Menu_finder();
                                         opcionB = System.Convert.ToInt32(Console.ReadLine());
                                         if (opcionB == 1)
@@ -104,7 +106,7 @@ namespace Entrega2
                                         {
                                             Console.WriteLine("Ingrese el nombre del video");
                                             string nombreVideo = Console.ReadLine();
-                                            finder.buscarVideo(nombreVideo, todosVideos);
+                                            retornoBuscarVideo.Add(finder.buscarVideo(nombreVideo, todosVideos));
                                         }
                                         else if (opcionB == 3)
                                         {
@@ -117,7 +119,7 @@ namespace Entrega2
                                         {
                                             Console.WriteLine("Ingrese nombre Actor/Director");
                                             string nombreActorDirector = Console.ReadLine();
-                                            finder.buscarActorDirector(nombreActorDirector, todosVideos);
+                                            retornoBuscarVideo=finder.buscarActorDirector(nombreActorDirector, todosVideos);
                                         }
                                         else if (opcionB == 5)
                                         {
