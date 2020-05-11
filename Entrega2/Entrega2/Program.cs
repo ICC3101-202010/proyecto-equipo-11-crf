@@ -21,7 +21,7 @@ namespace Entrega2
             Finder finder = new Finder();
 
 
-            //string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
+            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
             //string pat2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../narnia.mp4");
             //string pat3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../avengers-infinity.mov");
             //string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Moves Like Jagger Ft. Christina Aguilera.mp3");
@@ -52,10 +52,46 @@ namespace Entrega2
 
             //Caratula caratula1 = new Caratula(c1);
 
-            //WindowsMediaPlayer sonido = new WindowsMediaPlayer();
+            WindowsMediaPlayer sonido = new WindowsMediaPlayer();
 
-            LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
-            spotlix.Spotlix();
+            try
+            {
+                sonido = new WindowsMediaPlayer();
+
+
+
+                sonido.URL = Path.GetFullPath(path1);
+                sonido.controls.play();
+                Console.WriteLine("sss");
+                Console.WriteLine(Convert.ToString(sonido.playState));
+                string n = null;
+                while (n != "5")
+                {
+                    Console.WriteLine("1-pausa 2-contiuar 5-salir");
+                    n = Console.ReadLine();
+                    if (n == "1")
+                    {
+                        sonido.controls.pause();
+                        Console.WriteLine(Convert.ToString(sonido.playState));
+                    }
+                    if (n == "2")
+                    {
+                        double tiempo = sonido.controls.currentPosition;
+                        sonido.controls.currentPosition = tiempo;
+                        sonido.controls.play();
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error. " + ex.Message);
+            }
+            
+
+            //LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
+            //spotlix.Spotlix();
 
             /*
                         Cancion cancion1 = new Cancion(path1);
