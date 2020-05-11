@@ -69,11 +69,11 @@ namespace Entrega2
                         {
                             Console.Write("Interfaz Spotflix ");
 
-                            string opcion = null;
-                            while (opcion != "5")
+                            int a = 0;
+                            while (a != 5)
                             {
                                 InputOutput.Main_menu();
-                                int a =Convert.ToInt32(Console.ReadLine());
+                                a =Convert.ToInt32(Console.ReadLine());
                                 if (a == 1)
                                 {
                                     Console.WriteLine("Reproductor");
