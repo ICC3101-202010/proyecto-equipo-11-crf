@@ -37,12 +37,12 @@ namespace Entrega2
             {
                 sonido.URL = Path.GetFullPath(cancion.Path);
                 sonido.controls.play();
-<<<<<<< HEAD
+
                 Console.WriteLine(cancion.Titulo_Cancion);
-=======
+
                 cancion.Reproducciones += 1;
 
->>>>>>> cf1ca3d8b164c95d7e77f4f4f9493d26b791662e
+
                 /*IFormatter formatter2 = new BinaryFormatter();
                 Stream stream2 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                 formatter2.Serialize(stream2, cancion);
@@ -226,13 +226,13 @@ namespace Entrega2
                         else if (n == "4")
                         {
                             sonido.controls.pause();
-<<<<<<< HEAD
+
                             double tiempo = sonido.controls.currentPosition;
                             double tiempo1 = tiempo;
-=======
+
                             //double tiempo = sonido.controls.currentPosition;
                             //double tiempo1 = tiempo;
->>>>>>> cf1ca3d8b164c95d7e77f4f4f9493d26b791662e
+
                             /*IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, tiempo1);

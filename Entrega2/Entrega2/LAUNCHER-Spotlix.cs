@@ -84,7 +84,7 @@ namespace Entrega2
                                 a =Convert.ToInt32(Console.ReadLine());
                                 if (a == 1)
                                 {
-                                    
+                                    Console.Clear();
                                     Console.WriteLine("Home");
                                     All_songs.mostrarCanciones();
                                     Console.WriteLine("Select one");
@@ -110,11 +110,7 @@ namespace Entrega2
 
                                     }
 
-<<<<<<< HEAD
-                                    
-=======
-                                 
->>>>>>> 62c64dfd009d8abfe4584559b1f69dd6426703d7
+
                                         
                                 }
                                 else if(a==2)
