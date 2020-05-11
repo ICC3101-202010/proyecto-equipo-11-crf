@@ -85,6 +85,9 @@ namespace Entrega2
             Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Usuario usuario1 = formatter.Deserialize(stream) as Usuario;
             stream.Close();
+            string verificationLink = GenerateLink(usuario1.Username);
+            Data.AddUser(new List<string>()
+                {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono});
 
             //IFormatter formatter = new BinaryFormatter();
             //Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
