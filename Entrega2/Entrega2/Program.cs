@@ -23,6 +23,14 @@ namespace Entrega2
 
 
             string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
+<<<<<<< HEAD
+=======
+            string path2 = Path.GetFullPath(path1);
+            WindowsMediaPlayer sonido = new WindowsMediaPlayer();
+            sonido.URL = path2;
+            sonido.controls.play();
+            Console.ReadLine();
+>>>>>>> ba2455fb93010834172b54657e0b7194e522ead5
             //string pat2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../narnia.mp4");
             //string pat3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../avengers-infinity.mov");
             //string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Moves Like Jagger Ft. Christina Aguilera.mp3");
@@ -93,7 +101,11 @@ namespace Entrega2
             
 
             //LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
+<<<<<<< HEAD
             //spotlix.Spotlix();/*
+=======
+            //spotlix.Spotlix();
+>>>>>>> ba2455fb93010834172b54657e0b7194e522ead5
 
             /*
                         Cancion cancion1 = new Cancion(path1);
