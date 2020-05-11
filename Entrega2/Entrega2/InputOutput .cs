@@ -39,6 +39,7 @@ namespace Entrega2.IO
 
         public static void Main_menu()
         {
+            Console.Clear();
             Console.WriteLine("1- HOME");
             Console.WriteLine("2- Buscar");
             Console.WriteLine("3- Biblioteca");
@@ -49,6 +50,7 @@ namespace Entrega2.IO
 
         public static void Menu_finder() 
         {
+            Console.Clear();
             Console.WriteLine("Buscar");
             Console.WriteLine("1-Cancion");
             Console.WriteLine("2-Video");
@@ -61,6 +63,15 @@ namespace Entrega2.IO
             Console.WriteLine("9-Salir");
 
         }
+        public static void Library_menu()
+        {
+            Console.Clear();
+            Console.WriteLine("1- Ver mis playlist");
+            Console.WriteLine("2- Ver mis canciones");
+            Console.WriteLine("3- Crear playlist");
+            Console.WriteLine("4- Retroceder");
+            
 
+        }
     }   
 }

@@ -189,6 +189,46 @@ namespace Entrega2
                                 else if (a == 3)
                                 {
                                     Console.WriteLine("Biblioteca");
+                                    int opcionC = 0;
+                                    while (opcionC != 4)
+                                    
+                                    {
+                                        InputOutput.Library_menu();
+                                        opcionC = Convert.ToInt32(Console.ReadLine());
+                                        
+                                        if (opcionC == 1)
+                                        {
+                                            Console.WriteLine("Ms canciones");
+
+                                        }
+                                        
+                                        else if (opcionC == 2)
+                                        {
+                                            Console.Clear();
+                                            Console.WriteLine("Mis playlist");
+                                            //MOSTRAR PLAYLISTS 
+                                            /*
+                                             * 
+                                             */
+                                        }
+                                        
+                                        else if (opcionC == 3) 
+                                        {
+                                            Console.Clear();
+                                            Console.Write("Crea tu playlist" +"\n"+ "Elige un tipo" +"\n" + "[1] Canciones" + "\n" +"[2]  Video"  );
+                                            int opcion_crear = Convert.ToInt32(Console.ReadLine());
+
+                                        }
+                                       
+                                        else if (opcionC == 4) 
+                                        {
+                                        
+                                        }
+                                    }
+
+                               
+
+
                                 }
                                 else if (a == 4)
                                 {
