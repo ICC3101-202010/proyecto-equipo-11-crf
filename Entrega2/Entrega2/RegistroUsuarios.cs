@@ -14,6 +14,7 @@ namespace Entrega2
         public Dictionary<int, List<string>> registrados;
         public Dictionary<Cancion, List<Double>> retomar;
         public List<string> paths;
+        public Dictionary<int, List<Cancion>> Listas;
 
         public RegistroUsuarios()
         {
@@ -72,7 +73,10 @@ namespace Entrega2
             this.paths.Add(path);
         }
 
-        
+        public void RetomarLista(List<Cancion> songs)
+        {
+            this.Listas.Add(Listas.Count + 1, songs);
+        }
         public List<string> GetData(string usuario)
         {
             foreach (List<string> user in this.registrados.Values)

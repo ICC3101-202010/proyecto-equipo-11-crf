@@ -125,9 +125,20 @@ namespace Entrega2
             string path = (string)formatter3.Deserialize(stream3);
             stream3.Close();*/
             
+<<<<<<< HEAD
             //Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
             
+=======
+            Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
+>>>>>>> 7410279baabdedb6551edbc4d1f2baa1b4acc57f
 
+            IFormatter formatter4 = new BinaryFormatter();
+            Stream stream4 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Cancion>  songs = formatter4.Deserialize(stream4)as List<Cancion>;
+            stream4.Close();
+
+            Data.RetomarLista(songs);
+            
 
 
             //IFormatter formatter = new BinaryFormatter();
