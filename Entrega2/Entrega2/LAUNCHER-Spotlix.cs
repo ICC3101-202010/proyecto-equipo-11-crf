@@ -238,7 +238,7 @@ namespace Entrega2
                                     }
                                     else if (a == 5)
                                     {
-                                        Console.WriteLine("Retroceder");
+                                        Console.WriteLine("Log Out");
                                     }
 
                                     else
@@ -255,7 +255,7 @@ namespace Entrega2
                                 while (a != 3)
                                 {
 
-                                    InputOutput.Main_menu();
+                                    InputOutput.Main_Menu_No_Premium();
                                     Player.controls.stop();
                                     a = Convert.ToInt32(Console.ReadLine());
                                     if (a == 1)
@@ -294,7 +294,7 @@ namespace Entrega2
                                     }
                                     else if (a == 3)
                                     {
-                                        Console.WriteLine("Retroceder");
+                                        Console.WriteLine("Log Out");
                                     }
 
                                     else
