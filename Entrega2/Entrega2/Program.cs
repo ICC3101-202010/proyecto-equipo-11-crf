@@ -13,9 +13,9 @@ namespace Entrega2
     {
         static void Main(string[] args)
         {
-            Reproductor reproductor = new Reproductor();
-            Finder finder = new Finder();
-            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
+            //Reproductor reproductor = new Reproductor();
+            //Finder finder = new Finder();
+            //string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
             //string pat2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../narnia.mp4");
             //string pat3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../avengers-infinity.mov");
             //string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Moves Like Jagger Ft. Christina Aguilera.mp3");
@@ -26,7 +26,7 @@ namespace Entrega2
 
             //Video v1 = new Video(pat2);
             //Video v2 = new Video(pat3);
-            Cancion c1 = new Cancion(path1);
+            //Cancion c1 = new Cancion(path1);
             //Console.WriteLine(c1.Show_info(c1));
 
             //Cancion c1 = new Cancion(path1);
@@ -39,14 +39,14 @@ namespace Entrega2
 
 
 
-            List<Cancion> todasLasCanciones = reproductor.Library();
-            List<Cancion> rating = reproductor.ratingReproducciones(todasLasCanciones);
-            Playlist ratingplaylist = new Playlist("rating", rating, null,null);
-            ratingplaylist.mostrarCanciones();
+            //List<Cancion> todasLasCanciones = reproductor.Library();
+            //List<Cancion> rating = reproductor.ratingReproducciones(todasLasCanciones);
+            //Playlist ratingplaylist = new Playlist("rating", rating, null,null);
+            //ratingplaylist.mostrarCanciones();
 
-            Caratula caratula1 = new Caratula(c1);
+            //Caratula caratula1 = new Caratula(c1);
 
-            WindowsMediaPlayer sonido = new WindowsMediaPlayer();
+            //WindowsMediaPlayer sonido = new WindowsMediaPlayer();
 
             LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
             spotlix.Spotlix();

@@ -61,8 +61,8 @@ namespace Entrega2
                     case "Log in":
                         Console.Clear();
 
-                        server.LogIn();
-                        if (server.LogIn() == null)
+                        string server1=server.LogIn();
+                        if (server1 == null)
                         {
                             Console.Write("Interfaz Spotflix ");
 
