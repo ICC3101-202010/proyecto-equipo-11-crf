@@ -104,7 +104,8 @@ namespace Entrega2
             Console.WriteLine("Que te gustaria hacer?");
             Console.WriteLine("1 --> Cambiar Nombre de Usuario");
             Console.WriteLine("2 --> Cambiar Contrasena");
-            Console.WriteLine("3 --> Salir");
+            Console.WriteLine("3 --> Cambiar Membresia");
+            Console.WriteLine("4 --> Salir");
             int respuesta = Convert.ToInt32(Console.ReadLine());
             int a = 1;
             while (a == 1)
@@ -120,6 +121,67 @@ namespace Entrega2
                     a = 0;
                 }
                 else if (respuesta == 3)
+                {
+                    if (member == true)
+                    {
+                        Console.WriteLine("Actualmente eres un Miembro Premium de Spotflix");
+                        Console.WriteLine("");
+                        Console.WriteLine("");
+                        Console.WriteLine("Deseas Cancelar tu Membresia?");
+                        Console.WriteLine("1 --> Si");
+                        Console.WriteLine("2 --> No");
+                        int b = 0;
+                        int cancelar = Convert.ToInt32(Console.ReadLine());
+                        while (b== 0)
+                        {
+                            if (cancelar == 1)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Lamentamos Verte Partir!");
+                                Console.WriteLine("");
+                                Console.WriteLine("Por favor escribenos el motivo de tu partida");
+                                string motivo = Console.ReadLine();
+                                Console.WriteLine("Presiona Enter para Confirmar la Cancelacion de tu Membresia");
+                                string confirmacion = Console.ReadLine();
+                                if (confirmacion== "")
+                                {
+                                    member = false;
+                                    b = 1;
+                                    Console.Clear();
+                                }
+                            }
+                            else
+                            {
+                                member = true;
+                                b = 1;
+                            }
+                        }
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Aun No eres un Usuario Premium de Spotflix!");
+                        Console.WriteLine("");
+                        Console.WriteLine("");
+                        Console.WriteLine("Deseas Contratar tu Membresia y formar parte de la Comunidad mas grande de Listeners en el Mundo?");
+                        Console.WriteLine("1 --> Si");
+                        Console.WriteLine("2 --> No");
+                        int contratar = Convert.ToInt32(Console.ReadLine());
+                        if (contratar == 1)
+                        {
+                            Console.WriteLine("Bienvenido a Spotflix Premium!");
+                            Console.WriteLine("");
+                            Console.WriteLine("Ya puedes disfrutar de musica Ilimitada y sin Anuncios!");
+                            member = true;
+                        }
+                        else
+                        {
+                            member = false;
+                        }
+                    }
+                        
+                }
+                else if (respuesta == 4)
                 {
                     a = 0;
                 }
