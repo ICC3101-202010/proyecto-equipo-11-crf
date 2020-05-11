@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entrega2.IO;
+using WMPLib;
 
 namespace Entrega2
 {
@@ -34,8 +35,10 @@ namespace Entrega2
             List<Video> todosVideos = new List<Video>();
             List<Playlist> todasPlaylists = new List<Playlist>();
             List<Album> todosAlbum = new List<Album>();
-            
-            
+
+           Playlist All_songs = new Playlist("Library",todasLasCanciones,null,null);
+             
+
             server.Registered += mailSender.OnRegistered;
 
             server.PasswordChanged += mailSender.OnPasswordChanged;
@@ -78,7 +81,9 @@ namespace Entrega2
                                 a =Convert.ToInt32(Console.ReadLine());
                                 if (a == 1)
                                 {
-                                    Console.WriteLine("Reproductor");
+                                    Console.WriteLine("Home");
+                                    All_songs.mostrarCanciones();
+                                    Console.WriteLine();
                                     //ALGO
                                     //PRUEBA 
                                 }
