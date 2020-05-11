@@ -172,19 +172,19 @@ namespace Entrega2
                     //sonido.controls.play();
                     while (n != "4")
                     {
-<<<<<<< HEAD
+
                         sonido.controls.play();
-                        Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-salir");
-=======
+                        //Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-salir");
+
                         Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-Retroceder");
->>>>>>> 7410279baabdedb6551edbc4d1f2baa1b4acc57f
+
                         n = Console.ReadLine();
                         if (n == "1")
                         {
                             sonido.controls.pause();
                             double tiempo = sonido.controls.currentPosition;
                             double tiempo1 = tiempo;
-                            IFormatter formatter1 = new BinaryFormatter();
+                            /*IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, tiempo1);
                             stream1.Close();
@@ -197,12 +197,12 @@ namespace Entrega2
                             IFormatter formatter3 = new BinaryFormatter();
                             Stream stream3 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter3.Serialize(stream3, song.path);
-                            stream3.Close();
+                            stream3.Close();*/
 
-                            IFormatter formatter4 = new BinaryFormatter();
+                            /*IFormatter formatter4 = new BinaryFormatter();
                             Stream stream4 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter4.Serialize(stream4, songs);
-                            stream4.Close();
+                            stream4.Close();*/
                         }
                         else if (n == "2")
                         {
@@ -219,7 +219,7 @@ namespace Entrega2
                         {
                             double tiempo = sonido.controls.currentPosition;
                             double tiempo1 = tiempo;
-                            IFormatter formatter1 = new BinaryFormatter();
+                            /*IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, tiempo1);
                             stream1.Close();
@@ -237,7 +237,7 @@ namespace Entrega2
                             IFormatter formatter4 = new BinaryFormatter();
                             Stream stream4 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter4.Serialize(stream4, songs);
-                            stream4.Close();
+                            stream4.Close();*/
                         }
                         else
                         {
