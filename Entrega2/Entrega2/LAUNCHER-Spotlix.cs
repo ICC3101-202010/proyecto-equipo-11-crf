@@ -16,7 +16,7 @@ namespace Entrega2
             {
                 "Registarse",
                 "Login",
-                //"Cambiar contraseña",
+                "Cambiar contraseña",
                 "Salir",
 
             };

@@ -29,7 +29,7 @@ namespace Entrega2
         private List<Banda> seguidosBanda;
         private List<Actor> seguidosActor;
 
-
+        Server server = new Server(database);
 
         public int ID  { get => id; set => id = value; }
         public bool Member { get => member; set => member = value; }
@@ -93,6 +93,43 @@ namespace Entrega2
 
             }
         }
+
+
+        public void OpcionesUsuario()
+        {
+            Console.WriteLine("Que te gustaria hacer?");
+            Console.WriteLine("1 --> Cambiar Nombre de Usuario");
+            Console.WriteLine("2 --> Cambiar Contrasena");
+            Console.WriteLine("3 --> Salir");
+            int respuesta = Convert.ToInt32(Console.ReadLine());
+            int a = 1;
+            while (a == 1)
+            {
+                if (respuesta == 1)
+                {
+                    server.CambiarNombreUsuario();
+                    a = 0;
+                }
+                else if (respuesta == 2)
+                {
+                    server.CambiarContrasena();
+                    a = 0;
+                }
+                else if (respuesta == 3)
+                {
+                    a = 0;
+                }
+                else
+                {
+                    Console.WriteLine("Opcion Invalida");
+                    a = 1;
+                }
+            }
+            
+        }
+
+
+
         public void seguirUsuario(Usuario user)
         {
             this.SeguidosUsuarios.Add(user);
@@ -114,6 +151,7 @@ namespace Entrega2
         {
             this.seguidosBanda.Add(banda);
         }
+
 
 
 
