@@ -21,7 +21,12 @@ namespace Entrega2
             Finder finder = new Finder();
 
 
-            //string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
+            string path1 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Left Alone.mp3");
+            string path2 = Path.GetFullPath(path1);
+            WindowsMediaPlayer sonido = new WindowsMediaPlayer();
+            sonido.URL = path2;
+            sonido.controls.play();
+            Console.ReadLine();
             //string pat2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../narnia.mp4");
             //string pat3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../avengers-infinity.mov");
             //string path2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca/Moves Like Jagger Ft. Christina Aguilera.mp3");
@@ -54,8 +59,8 @@ namespace Entrega2
 
             //WindowsMediaPlayer sonido = new WindowsMediaPlayer();
 
-            LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
-            spotlix.Spotlix();
+            //LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
+            //spotlix.Spotlix();
 
             /*
                         Cancion cancion1 = new Cancion(path1);

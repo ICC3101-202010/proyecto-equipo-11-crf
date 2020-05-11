@@ -84,17 +84,21 @@ namespace Entrega2
                                 }
                                 else if(a==2)
                                 {
+                                    List<Cancion> retornoBuscarCancion = new List<Cancion>();
+                                    
                                     Finder finder = new Finder();
                                     int opcionB = 0;
                                     while (opcionB != 9)
                                     {
+                                       
+                                        retornoBuscarCancion.Clear();
                                         InputOutput.Menu_finder();
                                         opcionB = System.Convert.ToInt32(Console.ReadLine());
                                         if (opcionB == 1)
                                         {
                                             Console.WriteLine("Ingrese el nombre de la cancion");
                                             string nombreCancion=Console.ReadLine();
-                                            finder.buscarCancion(nombreCancion, todasLasCanciones);
+                                            retornoBuscarCancion.Add(finder.buscarCancion(nombreCancion, todasLasCanciones));
                                         }
                                         else if (opcionB == 2)
                                         {
@@ -106,7 +110,8 @@ namespace Entrega2
                                         {
                                             Console.WriteLine("Ingrese nombre playlist");
                                             string nombrePlaylist = Console.ReadLine();
-                                            finder.buscarPlaylist(nombrePlaylist, todasPlaylists);
+                                            retornoBuscarCancion=finder.buscarPlaylist(nombrePlaylist, todasPlaylists).Canciones;
+                                            
                                         }
                                         else if (opcionB == 4)
                                         {
@@ -118,23 +123,26 @@ namespace Entrega2
                                         {
                                             Console.WriteLine("Ingrese nombre banda");
                                             string nombreBanda = Console.ReadLine();
-                                            finder.buscarArtista(nombreBanda, todasLasCanciones);
+                                            retornoBuscarCancion = finder.buscarArtista(nombreBanda, todasLasCanciones);
+                                            
+
                                         }
                                         else if (opcionB == 6)
                                         {
                                             Console.WriteLine("Ingrese nombre Abum");
                                             string nombreAlbum = Console.ReadLine();
-                                            finder.searchAlbum(nombreAlbum, todosAlbum);
+                                            retornoBuscarCancion=finder.searchAlbum(nombreAlbum, todosAlbum).Cancion;
+                                            
                                         }
                                         else if (opcionB == 7)
                                         {
                                             Console.WriteLine("Mas reproducidas");
-                                            finder.ratingReproducciones(todasLasCanciones);
+                                            retornoBuscarCancion =finder.ratingReproducciones(todasLasCanciones);
                                         }
                                         else if (opcionB == 8)
                                         {
                                             Console.WriteLine("Mejor puntuadas");
-                                            finder.ordenarPorNota(todasLasCanciones);
+                                            retornoBuscarCancion=finder.ordenarPorNota(todasLasCanciones);
 
                                         }
                                         else
