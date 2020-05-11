@@ -51,7 +51,7 @@ namespace Entrega2
             while (exec)
             {
 
-                string chosen = InputOutput.ShowOptions(new List<string>() { "Registrarse", "Log in", "Cambiar contrasena", "Salir" });
+                string chosen = InputOutput.ShowOptions(new List<string>() { "Registrarse", "Log in", "Opciones Usuario", "Salir" });
                 switch (chosen)
                 {
                     case "Registrarse":
@@ -62,9 +62,9 @@ namespace Entrega2
                         Console.Clear();
                         server.LogIn();
                         break;
-                    case "Cambiar contrasena":
+                    case "Opciones Usuario":
                         Console.Clear();
-                        server.CambiarContrasena();
+                        user.OpcionesUsuario();
                         break;
                     case "Salir":
                         exec = false;
