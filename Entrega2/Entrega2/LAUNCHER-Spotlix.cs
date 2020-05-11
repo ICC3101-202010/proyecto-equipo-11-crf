@@ -67,7 +67,8 @@ namespace Entrega2
                         string server1=server.LogIn();
                         if (server1 == null)
                         {
-                            Console.Write("Interfaz Spotflix ");
+                            //asignar usuario
+                            Console.WriteLine("Interfaz Spotflix ");
 
                             int a = 0;
                             while (a != 5)
@@ -77,6 +78,7 @@ namespace Entrega2
                                 if (a == 1)
                                 {
                                     Console.WriteLine("Reproductor");
+                                    //ALGO
                                 }
                                 else if(a==2)
                                 {
