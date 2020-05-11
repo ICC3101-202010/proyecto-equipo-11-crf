@@ -82,7 +82,7 @@ namespace Entrega2
             }
            
         }
-        Usuario Usuario = new Usuario;
+        
         public Playlist crearListaCanciones(Playlist todasCanciones)
         {
 
