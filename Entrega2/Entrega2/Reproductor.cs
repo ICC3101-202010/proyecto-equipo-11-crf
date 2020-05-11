@@ -37,7 +37,11 @@ namespace Entrega2
             {
                 sonido.URL = Path.GetFullPath(cancion.Path);
                 sonido.controls.play();
+
+                Console.WriteLine(cancion.Titulo_Cancion);
+
                 cancion.Reproducciones += 1;
+
 
                 /*IFormatter formatter2 = new BinaryFormatter();
                 Stream stream2 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
@@ -75,6 +79,7 @@ namespace Entrega2
                     }
                     else if (n == "3")
                     {
+                        sonido.controls.pause();
                         /*double tiempo = sonido.controls.currentPosition;
                         Double tiempo1 = tiempo;
                         IFormatter formatter1 = new BinaryFormatter();
@@ -89,7 +94,7 @@ namespace Entrega2
 
                 }
 
-
+                sonido.controls.stop();
             }
             catch (FileNotFoundException ex)
             {
@@ -125,7 +130,7 @@ namespace Entrega2
 
         public bool Check_if_premium(Usuario usuario)
         {
-            if (usuario.Member == false)
+            if (usuario.Member == "false")
             {
                 return false;
             }
@@ -173,16 +178,17 @@ namespace Entrega2
                     {
 
                         sonido.controls.play();
-                       
 
+                        Console.WriteLine(song.Titulo_Cancion);
                         Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-Retroceder");
 
                         n = Console.ReadLine();
                         if (n == "1")
                         {
+                            
                             sonido.controls.pause();
-                            double tiempo = sonido.controls.currentPosition;
-                            double tiempo1 = tiempo;
+                            //double tiempo = sonido.controls.currentPosition;
+                            //double tiempo1 = tiempo;
                             sonido.controls.pause();
                             Console.Clear();
                             /*IFormatter formatter1 = new BinaryFormatter();
@@ -220,8 +226,13 @@ namespace Entrega2
                         else if (n == "4")
                         {
                             sonido.controls.pause();
+
+                            double tiempo = sonido.controls.currentPosition;
+                            double tiempo1 = tiempo;
+
                             //double tiempo = sonido.controls.currentPosition;
                             //double tiempo1 = tiempo;
+
                             /*IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, tiempo1);
@@ -252,6 +263,7 @@ namespace Entrega2
                         }
 
                     }
+                    sonido.controls.stop();
 
                 }
             }

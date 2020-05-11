@@ -177,7 +177,7 @@ namespace Entrega2
             string celular = Console.ReadLine();
             usuario1.Telefono = celular;
             string privacidad = "";
-            
+            usuario1.Member = "false";
             int a = 1;
             while ( a== 1)
             {
@@ -244,7 +244,7 @@ namespace Entrega2
             string verificationLink = GenerateLink(usuario1.Username);
            
             string result = Data.AddUser(new List<string>()
-                {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono});
+                {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member});
             if (result == null)
             {
                

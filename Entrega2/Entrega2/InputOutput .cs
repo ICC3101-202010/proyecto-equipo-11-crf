@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Entrega2.IO
 {
@@ -39,16 +40,32 @@ namespace Entrega2.IO
 
         public static void Main_menu()
         {
-            Console.WriteLine("1- Reproductor");
+            Console.Clear();
+            Console.WriteLine("1- HOME");
             Console.WriteLine("2- Buscar");
             Console.WriteLine("3- Biblioteca");
             Console.WriteLine("4- Mi perfil");
-            Console.WriteLine("5- Salir");
+            Console.WriteLine("5- Log Out");
 
+        }
+
+        public static void Main_Menu_No_Premium()
+        {
+            Console.WriteLine("Aun No eres un Miembro Premium de Spotflix!");
+            Console.WriteLine("");
+            Console.WriteLine("Por el Momento solo podras reproducir canciones Aleatoriamente...");
+            Console.WriteLine("");
+            Console.WriteLine("Hazte Premium en la seccion (Mi Perfil) para disfrutar de las canciones que quieres!");
+            Thread.Sleep(6000);
+            Console.Clear();
+            Console.WriteLine("1- Reproductor");
+            Console.WriteLine("2- Mi perfil");
+            Console.WriteLine("3- Log Out");
         }
 
         public static void Menu_finder() 
         {
+            Console.Clear();
             Console.WriteLine("Buscar");
             Console.WriteLine("1-Cancion");
             Console.WriteLine("2-Video");
@@ -61,6 +78,15 @@ namespace Entrega2.IO
             Console.WriteLine("9-Salir");
 
         }
+        public static void Library_menu()
+        {
+            Console.Clear();
+            Console.WriteLine("1- Ver mis playlist");
+            Console.WriteLine("2- Ver mis canciones");
+            Console.WriteLine("3- Crear playlist");
+            Console.WriteLine("4- Retroceder");
+            
 
+        }
     }   
 }
