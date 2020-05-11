@@ -77,9 +77,10 @@ namespace Entrega2
         }
         public string LogIn()
         {
+            
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Usuario usuario1 = (Usuario)formatter.Deserialize(stream);
+            Usuario usuario3 = formatter.Deserialize(stream) as Usuario;
             stream.Close();
 
             //IFormatter formatter = new BinaryFormatter();
