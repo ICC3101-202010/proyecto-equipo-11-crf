@@ -162,9 +162,6 @@ namespace Entrega2
         {
             try
             {
-                
-
-
                 string n = null;
                 foreach (var song in songs)
 
@@ -176,7 +173,7 @@ namespace Entrega2
                     {
 
                         sonido.controls.play();
-                        //Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-salir");
+                       
 
                         Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-Retroceder");
 
@@ -186,6 +183,8 @@ namespace Entrega2
                             sonido.controls.pause();
                             double tiempo = sonido.controls.currentPosition;
                             double tiempo1 = tiempo;
+                            sonido.controls.pause();
+                            Console.Clear();
                             /*IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, tiempo1);
@@ -215,6 +214,7 @@ namespace Entrega2
                         else if (n == "3") 
                         {
                            Console.WriteLine("next...");
+                           Console.Clear();
                            break;
                         }
                         else if (n == "4")
