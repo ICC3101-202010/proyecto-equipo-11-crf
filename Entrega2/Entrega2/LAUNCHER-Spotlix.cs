@@ -102,11 +102,7 @@ namespace Entrega2
 
                                     }
 
-<<<<<<< HEAD
-                                    
-=======
-                                 
->>>>>>> 62c64dfd009d8abfe4584559b1f69dd6426703d7
+
                                         
                                 }
                                 else if(a==2)
@@ -127,7 +123,35 @@ namespace Entrega2
                                         {
                                             Console.WriteLine("Ingrese el nombre de la cancion");
                                             string nombreCancion=Console.ReadLine();
+                                            Cancion seleccionada= finder.buscarCancion(nombreCancion, todasLasCanciones);
                                             retornoBuscarCancion.Add(finder.buscarCancion(nombreCancion, todasLasCanciones));
+                                            if (seleccionada != null)
+                                            {
+                                                int opcion = 0;
+                                                while (opcion != 4)
+                                                {
+                                                    Console.WriteLine("1.Agregar cancion a una lista");
+                                                    Console.WriteLine("2.Puntuar cancion");
+                                                    Console.WriteLine("3.Reproducir");
+                                                    Console.WriteLine("4.Salir");
+                                                    opcion = System.Convert.ToInt32(Console.ReadLine());
+                                                    if (opcion == 1)
+                                                    {
+                                                        Console.WriteLine("Ingrese nombre lista");
+                                                        string lista = Console.ReadLine();
+
+                                                    }
+                                                    else if (opcion == 2)
+                                                    {
+                                                        seleccionada.valorarCancion();
+                                                    }
+                                                    else if (opcion == 3)
+                                                    {
+                                                        reproductor.reproducirCancion(Player,seleccionada);
+                                                    }
+                                                }
+                                                
+                                            }
                                         }
                                         else if (opcionB == 2)
                                         {

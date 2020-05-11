@@ -22,14 +22,23 @@ namespace Entrega2
             }
             Console.WriteLine("Select one");
             int index = 0;
-            foreach (var song in final_search)
+            if (final_search.Any() == true)
             {
-                Console.WriteLine("(" + index + ")" + song.Titulo_Cancion);
-                index++;
+                foreach (var song in final_search)
+                {
+                    Console.WriteLine("(" + index + ")" + song.Titulo_Cancion);
+                    index++;
 
+                }
+                int selected = Convert.ToInt32(Console.ReadLine());
+                return final_search[selected];
             }
-            int selected = Convert.ToInt32(Console.ReadLine());
-            return final_search[selected];
+            else
+            {
+                Console.WriteLine( "No hay canciones que cooincidan");
+                return null;
+            }
+            
         }
 
         public Video buscarVideo(string videoName,List<Video> todos)
