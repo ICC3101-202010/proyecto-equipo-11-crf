@@ -69,11 +69,7 @@ namespace Entrega2
                             string opcion = null;
                             while (opcion != "5")
                             {
-                                Console.WriteLine("1- Reproductor");
-                                Console.WriteLine("2- Buscar");
-                                Console.WriteLine("3- Biblioteca");
-                                Console.WriteLine("4- Mi perfil");
-                                Console.WriteLine("5- Salir");
+                                InputOutput.Main_menu();
                                 int a =Convert.ToInt32(Console.ReadLine());
                                 if (a == 1)
                                 {

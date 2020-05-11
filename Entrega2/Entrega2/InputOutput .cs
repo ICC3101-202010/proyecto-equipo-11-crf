@@ -20,6 +20,30 @@ namespace Entrega2.IO
             }
             return options[Convert.ToInt16(Console.ReadLine())];
         }
+        public static void ConsoleWelcome()
+        {
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("\n--S P O T L I X--");
+            Console.ResetColor();
+        }
+        public static void ConsoleExit()
+        {
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("\nGoodbye!");
+            Console.ResetColor();
+      
+        
+        }
 
-    }
+        public static void Main_menu()
+        {
+            Console.WriteLine("1- Reproductor");
+            Console.WriteLine("2- Buscar");
+            Console.WriteLine("3- Biblioteca");
+            Console.WriteLine("4- Mi perfil");
+            Console.WriteLine("5- Salir");
+        }
+    }   
 }
