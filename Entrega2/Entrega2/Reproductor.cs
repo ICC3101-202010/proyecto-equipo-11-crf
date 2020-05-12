@@ -31,7 +31,21 @@ namespace Entrega2
             return Library;
             //Retorna la lista con todas las canciones
         }
+        public List<Video> Video_Library()
+        {
+            string directory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Video");
+            DirectoryInfo Video_folder = new DirectoryInfo(directory);
+            List<Video> Video_Library = new List<Video>();
 
+            foreach (var video_file in Video_folder.GetFiles())
+            {
+                Video video = new Video(video_file.FullName);
+                //Console.WriteLine(cancion.Show_info(cancion));
+                Video_Library.Add(video);
+            }
+            return Video_Library;
+            //Retorna la lista con todas las canciones
+        }
         public virtual void reproducirCancion(WindowsMediaPlayer sonido, Cancion cancion)
         {
             try
