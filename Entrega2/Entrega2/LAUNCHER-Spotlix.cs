@@ -41,7 +41,7 @@ namespace Entrega2
             RegistroUsuarios data = new RegistroUsuarios();
 
             Playlist All_songs = new Playlist("Library", todasLasCanciones, null, null);
-            Playlist All_videos = new Playlist("LibraryVideo", todosVideos, null, null);
+            Playlist All_videos = new Playlist("LibraryVideo", null, todosVideos, null);
 
 
             server.Registered += mailSender.OnRegistered;
@@ -140,37 +140,10 @@ namespace Entrega2
                                                 Cancion seleccionada=finder.buscarCancion(nombreCancion, todasLasCanciones);
                                                 if (seleccionada !=null)
                                                 {
-                                                    string option = null;
-                                                    while (option != "3")
-                                                    {
-                                                        Console.WriteLine("1.Anadir a lista");
-                                                        Console.WriteLine("2.Puntuar Cancion");
-                                                        Console.WriteLine("3.Salir");
-                                                        option = Console.ReadLine();
-                                                        if (option == "1")
-                                                        {
-                                                            int index = 0;
-                                                            foreach(Playlist p in media_database.Playlists)
-                                                            {
-                                                                Console.WriteLine(index);
-                                                                Console.WriteLine(p.NombrePlaylist);
-                                                                index++;
-                                                            }
-                                                            Console.WriteLine("A que playlist la desea agregar");
-                                                            int agregada = System.Convert.ToInt32(Console.ReadLine());
-                                                            seleccionada.agregarAPlaylist(media_database.Playlists[agregada]);
-                                                        }
-                                                        else if (option == "2")
-                                                        {
-                                                            seleccionada.valorarCancion();
-                                                        }
-                                                        else
-                                                        {
-                                                            Console.WriteLine("Salir");
-                                                        }
-                                                        retornoBuscarCancion.Add(seleccionada);
+                                                    
+                                                    retornoBuscarCancion.Add(seleccionada);
 
-                                                    }
+                                                    
                                                 }
                                             }
                                             else if (opcionB == 2)
@@ -317,9 +290,20 @@ namespace Entrega2
                                                         Console.WriteLine(can.Banda);
                                                         index0++;
                                                     }
-                                                    Console.WriteLine("Seleccione cual desea puntuar");
+                                                    Console.WriteLine("Seleccione cual desea agregar");
                                                     int numero = System.Convert.ToInt32(Console.ReadLine());
-                                                    
+                                                    int index = 0;
+                                                    foreach (Playlist p in media_database.Playlists)
+                                                    {
+                                                        Console.WriteLine(index);
+                                                        Console.WriteLine(p.NombrePlaylist);
+                                                        index++;
+                                                    }
+                                                    Console.WriteLine("A que playlist la desea agregar");
+                                                    int agregada = System.Convert.ToInt32(Console.ReadLine());
+                                                    retornoBuscarCancion[numero].agregarAPlaylist(media_database.Playlists[agregada]);
+
+
 
                                                 }
                                                 
