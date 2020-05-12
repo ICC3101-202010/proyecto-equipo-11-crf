@@ -147,6 +147,23 @@ namespace Entrega2
             }
             return "Usuario o contrasena incorrecta";
         }
+        public string RetornarMembresia(string username)
+        {
+            foreach (List<string> user in this.registrados.Values)
+            {
+                if (user[0] == username)
+                {
+                    return user[7];
+                    
+                }
+                else
+                {
+                    return "false";
+                }
+                
+            }
+            return "";
+        }
     }
 
     

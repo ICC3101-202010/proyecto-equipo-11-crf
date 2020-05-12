@@ -237,10 +237,10 @@ namespace Entrega2
             List<Video> finalSearch = new List<Video>();
 
             {
-                foreach (Video vid in todosLosVideos)
+                foreach (Video video in todosLosVideos)
                 {
                     int Resolution = Convert.ToInt32(resolucion);
-
+                    
                 }
             }
             return finalSearch;

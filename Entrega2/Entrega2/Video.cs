@@ -22,7 +22,9 @@ namespace Entrega2
         private uint year;
         private string category;
         private string duration;
-        private double resolution;
+        private string resolution;
+        private int width;
+        private int weight;
 
         public string NameVideo { get => nameVideo; set => nameVideo = value; }
         public string DireccionMemoria { get => direccionMemoria; set => direccionMemoria = value; }
@@ -39,7 +41,9 @@ namespace Entrega2
         public string Categoria { get => category; set => category = value; }
 
         public string Duration { get => duration; set => duration = value; }
-        public double Resolution { get => resolution; set => resolution = value; }
+        public string Resolution { get => resolution; set => resolution = value; }
+        public int Width { get => width; set => width = value; }
+        public int Weight { get => weight; set => weight = value; }
 
         public Video(string path)
         {
@@ -49,19 +53,12 @@ namespace Entrega2
             this.year = video.Tag.Year;
             this.coment = video.Tag.Comment;
             TimeSpan time_prev = video.Properties.Duration;
+            this.weight = video.Properties.VideoHeight;
+            this.width = video.Properties.VideoWidth;
+            resolution = Weight.ToString() + " x " + Width.ToString();    
 
-                
 
-            foreach (var codec in video.Properties.Codecs)
-            {
-                if (codec is TagLib.Mpeg.VideoHeader)
-                {
-                    TagLib.Mpeg.VideoHeader G = (TagLib.Mpeg.VideoHeader)codec;
-                    this.resolution = G.VideoFrameRate;
-                    
-                }
-            }
-            Console.WriteLine(Resolution);
+            
             ;
 
             if (time_prev.Hours == 0)
