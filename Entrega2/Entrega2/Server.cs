@@ -108,8 +108,15 @@ namespace Entrega2
             stream.Close();
             string verificationLink = GenerateLink(usuario1.Username);
             Data.AddUser(new List<string>()
-                {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono});
-                
+                {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member});
+
+
+            IFormatter formatter1 = new BinaryFormatter();
+            Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Membresia_Usuario usuario2 = formatter1.Deserialize(stream1) as Membresia_Usuario;
+            stream.Close();
+
+            Data.RegistrarMembresia(usuario2);
             /*IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Double tiempo1 = (Double)formatter1.Deserialize(stream1)  ;
@@ -124,10 +131,10 @@ namespace Entrega2
             Stream stream3 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             string path = (string)formatter3.Deserialize(stream3);
             stream3.Close();*/
-            
+
 
             //Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
-            
+
 
             //Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
 
@@ -138,7 +145,7 @@ namespace Entrega2
             stream4.Close();
 
             Data.RetomarLista(songs);*/
-            
+
 
 
             /*IFormatter formatter = new BinaryFormatter();
@@ -177,7 +184,29 @@ namespace Entrega2
             string celular = Console.ReadLine();
             usuario1.Telefono = celular;
             string privacidad = "";
-            usuario1.Member = "false";
+            int d = 1;
+            while (d == 1)
+            {
+                Console.WriteLine("Deseas contratar Spotflix Premium?");
+                Console.WriteLine("1 --> Si");
+                Console.WriteLine("2 --> No");
+                string premium = Console.ReadLine();
+                if (premium == "1")
+                {
+                    usuario1.Member = "true";
+                    d = 0;
+                }
+                else if (premium == "2")
+                {
+                    usuario1.Member = "false";
+                    d = 0;
+                }
+                else
+                {
+                    Console.WriteLine("Opcion Invalida");
+                }
+            }
+            
             int a = 1;
             while ( a== 1)
             {
@@ -339,7 +368,7 @@ namespace Entrega2
         }
 
         
-        private string GenerateLink(string usuario)
+        public string GenerateLink(string usuario)
         {
             Random rnd = new Random();
             string result = "";

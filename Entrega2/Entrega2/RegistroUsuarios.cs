@@ -41,6 +41,50 @@ namespace Entrega2
                 }
             }
         }
+        public void RegistrarMembresia(Membresia_Usuario usuario)
+        {
+            foreach (List<string> value in this.registrados.Values)
+            {
+                if (value[0]== usuario.username)
+                {
+                    value[8] = usuario.member;
+                }
+            }
+        }
+        public void UpdateMembership(List<string> data)
+        {
+            if (data[8]== "false")
+            {
+                int a = 0;
+                foreach (List<string> value in this.registrados.Values)
+                {
+                    if (data[0] == value[0])
+                    {
+                        registrados[a][8] = "true";
+                    }
+                    else
+                    {
+                        a += 1;
+                    }
+                }
+            }
+            else if (data[8]== "true")
+            {
+                int a = 0;
+                foreach (List<string> value in this.registrados.Values)
+                {
+                    if (data[0] == value[0])
+                    {
+                        registrados[a][8] = "false";
+                    }
+                    else
+                    {
+                        a += 1;
+                    }
+                }
+            }
+            
+        }
 
         public string AddUser(List<string> data)
         {
