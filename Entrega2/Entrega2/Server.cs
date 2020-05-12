@@ -109,7 +109,14 @@ namespace Entrega2
             string verificationLink = GenerateLink(usuario1.Username);
             Data.AddUser(new List<string>()
                 {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member});
-                
+
+
+            IFormatter formatter1 = new BinaryFormatter();
+            Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Membresia_Usuario usuario = formatter1.Deserialize(stream1) as Membresia_Usuario;
+            stream.Close();
+
+            Data.RegistrarMembresia(usuario);
             /*IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Double tiempo1 = (Double)formatter1.Deserialize(stream1)  ;
@@ -124,10 +131,10 @@ namespace Entrega2
             Stream stream3 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             string path = (string)formatter3.Deserialize(stream3);
             stream3.Close();*/
-            
+
 
             //Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
-            
+
 
             //Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
 
@@ -138,7 +145,7 @@ namespace Entrega2
             stream4.Close();
 
             Data.RetomarLista(songs);*/
-            
+
 
 
             /*IFormatter formatter = new BinaryFormatter();

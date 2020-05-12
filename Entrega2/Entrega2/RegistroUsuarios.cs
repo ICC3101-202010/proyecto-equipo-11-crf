@@ -41,6 +41,16 @@ namespace Entrega2
                 }
             }
         }
+        public void RegistrarMembresia(Membresia_Usuario usuario)
+        {
+            foreach (List<string> value in this.registrados.Values)
+            {
+                if (value[0]== usuario.username)
+                {
+                    value[8] = usuario.member;
+                }
+            }
+        }
         public void UpdateMembership(List<string> data)
         {
             if (data[8]== "false")

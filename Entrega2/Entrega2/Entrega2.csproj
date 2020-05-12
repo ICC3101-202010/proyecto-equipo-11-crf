@@ -106,6 +106,7 @@
     <Compile Include="Server.cs" />
     <Compile Include="EnvioSMS.cs" />
     <Compile Include="CambiarNombreUsuarioEventArgs.cs" />
+    <Compile Include="Membresia Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
