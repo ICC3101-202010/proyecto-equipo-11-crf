@@ -101,14 +101,14 @@ namespace Entrega2
             int index = 0;
             foreach (Cancion song in finalSearch)
             {
-                Console.WriteLine("(" + index + ")" + song.Titulo_Cancion);
+                Console.WriteLine("(" + index + ")" + song.Titulo_Cancion+ "-"+ song.Banda);
                 index++;
             }
             return finalSearch;
 
 
         }
-        public Cancion searchAlbum(string album_name, List<Cancion> cancions)
+        public List<Cancion> searchAlbum(string album_name, List<Cancion> cancions)
         {
             //busca un determinado album en una determinada lista de albums
             List<Cancion> final_search = new List<Cancion>();
@@ -119,16 +119,16 @@ namespace Entrega2
                     final_search.Add(can);
                 }
             }
-            Console.WriteLine("Select one");
+            
             int index = 0;
             foreach (var can in final_search)
             {
-                Console.WriteLine("(" + index + ")" + can.Album);
+                Console.WriteLine("(" + index + ")" + can.Titulo_Cancion+" -"+can.Album);
                 index++;
 
             }
-            int selected = Convert.ToInt32(Console.ReadLine());
-            return final_search[selected];
+            
+            return final_search;
 
 
         }

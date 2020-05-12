@@ -201,7 +201,7 @@ namespace Entrega2
                                             {
                                                 Console.WriteLine("Ingrese nombre Abum");
                                                 string nombreAlbum = Console.ReadLine();
-                                                retornoBuscarCancion.Add(finder.searchAlbum(nombreAlbum,todasLasCanciones ));
+                                                retornoBuscarCancion=finder.searchAlbum(nombreAlbum,todasLasCanciones );
 
                                             }
                                             else if (opcionB == 7)
@@ -221,6 +221,29 @@ namespace Entrega2
                                             {
                                                 Console.WriteLine("Salir");
                                             }
+                                            Console.WriteLine("Desea reproducir la busqueda? 1.Si 2.No");
+                                            string op = Console.ReadLine();
+                                            if (op == "1")
+                                            {
+                                                int index0 = 0;
+                                                foreach (Cancion can in retornoBuscarCancion)
+                                                {
+                                                    Console.WriteLine(index0);
+                                                    Console.WriteLine(can.Titulo_Cancion);
+                                                    Console.WriteLine(can.Album);
+                                                    Console.WriteLine(can.Banda);
+                                                    index0++;
+                                                }
+                                                Console.WriteLine("Seleccione numero a reproducir");
+                                                int numero = System.Convert.ToInt32(Console.ReadLine());
+                                                reproductor.reproducirCancion(Player, retornoBuscarCancion[numero]);
+                                            }
+                                            
+                                            
+
+
+                                            
+
                                         }
 
                                     }
@@ -287,10 +310,11 @@ namespace Entrega2
 
 
 
-                                                else if (opcionC == 4)
-                                                {
+                                                
 
-                                                }
+                                            }
+                                            else if (opcionC == 4)
+                                            {
 
                                             }
 
