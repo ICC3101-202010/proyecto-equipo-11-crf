@@ -260,7 +260,7 @@ namespace Entrega2
                         }
                         if (sonido.playState == WMPPlayState.wmppsMediaEnded)
                         {
-                            continue;
+                            break;
                         }
 
                     }
