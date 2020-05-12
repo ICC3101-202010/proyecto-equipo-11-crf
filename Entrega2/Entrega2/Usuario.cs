@@ -26,8 +26,13 @@ namespace Entrega2
 
         
 
+<<<<<<< HEAD
+        private List<Cancion> canciones_favoritas=new List<Cancion>();
+        private List<Video> videos_favoritos;
+=======
         public List<Cancion> canciones_favoritas;
         public List<Video> videos_favoritos;
+>>>>>>> 763df5aa94c5889881695089e207461fdc633fb9
 
         private List<Usuario> seguidosUsuarios;
         private List<Playlist> seguidosPlaylist;
