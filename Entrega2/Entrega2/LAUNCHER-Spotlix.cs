@@ -37,6 +37,7 @@ namespace Entrega2
             List<Playlist> todasPlaylists = new List<Playlist>();
             List<Album> todosAlbum = new List<Album>();
             MediaDatabase media_database = new MediaDatabase();
+            RegistroUsuarios data = new RegistroUsuarios();
 
             Playlist All_songs = new Playlist("Library", todasLasCanciones, null, null);
 
@@ -226,8 +227,28 @@ namespace Entrega2
                                                     Console.WriteLine(can.Titulo_Cancion);
                                                 }
                                             }
-                                            
-                                            if (opcionB != 10)
+                                            else if (opcionB == 10)
+                                            {
+                                                List<string> datos = new List<string>();
+                                                Console.WriteLine("Ingrese Nombre de Usuario");
+                                                string username = Console.ReadLine();
+                                                datos = data.GetData(username);
+                                                if (username == datos[0])
+                                                {
+                                                    Console.WriteLine("Te Gustaria seguir a este Usuario?");
+                                                    Console.WriteLine("");
+                                                    Console.WriteLine("1 --> Si ");
+                                                    Console.WriteLine("2 --> No ");
+                                                    string re = Console.ReadLine();
+                                                    if (re == "1")
+                                                    {
+                                                        user.seguirUsuario(username);
+
+                                                    }
+                                                }
+                                            }
+
+                                                if (opcionB != 11)
                                             {
                                                 Console.WriteLine("1. Reproducir busqueda");
                                                 Console.WriteLine("2. Agregar a favoritos");

@@ -23,18 +23,17 @@ namespace Entrega2
         protected string telefono;
         protected string username;
         public string privacidad;
+        public string followers;
+        
+
+
+        private List<Cancion> canciones_favoritas=new List<Cancion>();
+        private List<Video> videos_favoritos;
 
         
 
-<<<<<<< HEAD
-        private List<Cancion> canciones_favoritas=new List<Cancion>();
-        private List<Video> videos_favoritos;
-=======
-        public List<Cancion> canciones_favoritas;
-        public List<Video> videos_favoritos;
->>>>>>> 763df5aa94c5889881695089e207461fdc633fb9
 
-        private List<Usuario> seguidosUsuarios;
+        private List<string> seguidosUsuarios;
         private List<Playlist> seguidosPlaylist;
         private List<Album> seguidosAlbum;
         private List<Banda> seguidosBanda;
@@ -53,7 +52,7 @@ namespace Entrega2
         public string Username { get => username; set => username = value; }
         public List<Cancion> Canciones_favoritas { get => canciones_favoritas; set => canciones_favoritas = value; }
         internal List<Video> Videos_favoritos { get => videos_favoritos; set => videos_favoritos = value; }
-        public List<Usuario> SeguidosUsuarios { get => seguidosUsuarios; set => seguidosUsuarios = value; }
+        public List<string> SeguidosUsuarios { get => seguidosUsuarios; set => seguidosUsuarios = value; }
         internal List<Playlist> SeguidosPlaylist { get => seguidosPlaylist; set => seguidosPlaylist = value; }
         internal List<Album> SeguidosAlbum { get => seguidosAlbum; set => seguidosAlbum = value; }
         internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
@@ -237,7 +236,7 @@ namespace Entrega2
 
 
 
-        public void seguirUsuario(Usuario user)
+        public void seguirUsuario(string user)
         {
             this.SeguidosUsuarios.Add(user);
         }

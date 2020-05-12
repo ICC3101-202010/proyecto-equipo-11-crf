@@ -56,7 +56,7 @@ namespace Entrega2.IO
             Console.WriteLine("Por el Momento solo podras reproducir canciones Aleatoriamente...");
             Console.WriteLine("");
             Console.WriteLine("Hazte Premium en la seccion (Mi Perfil) para disfrutar de las canciones que quieres!");
-            Thread.Sleep(6000);
+            Thread.Sleep(4000);
             Console.Clear();
             Console.WriteLine("1- Reproductor");
             Console.WriteLine("2- Mi perfil");
@@ -76,7 +76,9 @@ namespace Entrega2.IO
             Console.WriteLine("7-Mas escuchadas");
             Console.WriteLine("8-Mejor puntuadas");
             Console.WriteLine("9-Favoritas");
-            Console.WriteLine("10.Salir");
+            Console.WriteLine("10-Usuarios");
+            Console.WriteLine("11-Salir");
+            Console.WriteLine("");
                 
               
 
