@@ -161,8 +161,39 @@ namespace Entrega2
                                             if (seleccionada != null)
                                             {
 
+<<<<<<< HEAD
+                                                    
+                                                }
+                                            }
+                                            else if (opcionB == 2)
+                                            {
+                                                Console.WriteLine("Ingrese el nombre del video");
+                                                string nombreVideo = Console.ReadLine();
+                                                finder.buscarVideo(nombreVideo, todosVideos);
+                                            }
+                                            else if (opcionB == 3)
+                                            {
+                                                Console.WriteLine("Ingrese nombre playlist");
+                                                string nombrePlaylist = Console.ReadLine();
+                                                retornoBuscarCancion = finder.buscarPlaylist(nombrePlaylist, media_database.Playlists).Canciones;
+
+                                            }
+                                            else if (opcionB == 4)
+                                            {
+                                                Console.WriteLine("Ingrese nombre Actor/Director");
+                                                string nombreActorDirector = Console.ReadLine();
+                                                finder.buscarActorDirector(nombreActorDirector, todosVideos);
+                                            }
+                                            else if (opcionB == 5)
+                                            {
+                                                Console.WriteLine("Ingrese nombre banda");
+                                                string nombreBanda = Console.ReadLine();
+                                                retornoBuscarCancion = finder.buscarArtista(nombreBanda, todasLasCanciones);
+                                                Thread.Sleep(5000);
+=======
                                                 retornoBuscarCancion.Add(seleccionada);
 
+>>>>>>> 2283487ff6d2fac9ed00daec8d14d63288e0a4f6
 
                                             }
                                         }
@@ -243,10 +274,14 @@ namespace Entrega2
                                             }
                                         }
 
+<<<<<<< HEAD
+                                            if (opcionB != 11 &&opcionB!=3&&opcionB!=2&&opcionB!=4)
+=======
                                         if (opcionB != "11")
                                         {
                                             string op = "";
                                             while (op != "6")
+>>>>>>> 2283487ff6d2fac9ed00daec8d14d63288e0a4f6
                                             {
                                                 Console.WriteLine("1. Reproducir busqueda");
                                                 Console.WriteLine("2. Agregar a favoritos");
