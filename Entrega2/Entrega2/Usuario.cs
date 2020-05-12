@@ -29,12 +29,7 @@ namespace Entrega2
 
         private List<Cancion> canciones_favoritas=new List<Cancion>();
         private List<Video> videos_favoritos;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> a685cf581845765570e24f638811a9c84aa4b7a2
 
         
 
