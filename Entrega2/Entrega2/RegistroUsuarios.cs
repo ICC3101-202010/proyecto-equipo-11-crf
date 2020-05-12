@@ -53,14 +53,14 @@ namespace Entrega2
         }
         public void UpdateMembership(List<string> data)
         {
-            if (data[8]== "false")
+            if (data[7]== "false")
             {
                 int a = 0;
                 foreach (List<string> value in this.registrados.Values)
                 {
                     if (data[0] == value[0])
                     {
-                        registrados[a][8] = "true";
+                        registrados[a][7] = "true";
                     }
                     else
                     {
@@ -68,7 +68,7 @@ namespace Entrega2
                     }
                 }
             }
-            else if (data[8]== "true")
+            else if (data[7]== "true")
             {
                 int a = 0;
                 foreach (List<string> value in this.registrados.Values)
