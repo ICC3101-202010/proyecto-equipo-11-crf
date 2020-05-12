@@ -76,7 +76,7 @@ namespace Entrega2
                     Console.Clear();
                     server.Registrarse();
                     exec = true;
-                    break;
+                    
                 }
                         
 
@@ -533,7 +533,7 @@ namespace Entrega2
 
                     }
 
-                    break;
+                    
                 }
                         
 
