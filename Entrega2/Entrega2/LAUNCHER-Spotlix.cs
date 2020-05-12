@@ -73,10 +73,11 @@ namespace Entrega2
                     case "Log in":
                         Console.Clear();
 
-                        string server1 = server.LogIn();
-                        if (server1 == null)
+                        List<string> server1 = server.LogIn();
+                        if (server1[0] == null)
                         {
 
+                            //user.Member= data.RetornarMembresia(server1[1]);
 
                             Console.WriteLine("Spotflix ");
                             if (user.Member == "true")

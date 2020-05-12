@@ -22,6 +22,9 @@ namespace Entrega2
         private uint year;
         private string category;
         private string duration;
+        private string resolution;
+        private int width;
+        private int weight;
 
         public string NameVideo { get => nameVideo; set => nameVideo = value; }
         public string DireccionMemoria { get => direccionMemoria; set => direccionMemoria = value; }
@@ -38,6 +41,9 @@ namespace Entrega2
         public string Categoria { get => category; set => category = value; }
 
         public string Duration { get => duration; set => duration = value; }
+        public string Resolution { get => resolution; set => resolution = value; }
+        public int Width { get => width; set => width = value; }
+        public int Weight { get => weight; set => weight = value; }
 
         public Video(string path)
         {
@@ -47,19 +53,14 @@ namespace Entrega2
             this.year = video.Tag.Year;
             this.coment = video.Tag.Comment;
             TimeSpan time_prev = video.Properties.Duration;
-            //this.director.NamePerson = video.Tag.FirstComposer;
-            //TagLib.Id3v2.Tag tag = (TagLib.Id3v2.Tag)video.GetTag(TagLib.TagTypes.AllTags);
-            //Console.WriteLine(tag);
-            //género[ok], categoría, actores, director, estudio. año de publicación[ok],
-            //descripción[ok], calificación[]
-            Console.WriteLine(video.Tag.Title);
-            Console.WriteLine(video.Tag.FirstGenre);
-            Console.WriteLine(video.Tag.Title);
-            Console.WriteLine(video.Tag.Year);
-            Console.WriteLine(video.Tag.Comment);
-            Console.WriteLine(video.Tag.Genres);
-            Console.WriteLine(video.Tag.FirstComposer);
-            Console.WriteLine(video.Tag.TagTypes);
+            this.weight = video.Properties.VideoHeight;
+            this.width = video.Properties.VideoWidth;
+            resolution = Weight.ToString() + " x " + Width.ToString();    
+
+
+            
+            ;
+
             if (time_prev.Hours == 0)
             {
                 this.duration = Convert.ToString(video.Properties.Duration.Minutes) + ":" + Convert.ToString(video.Properties.Duration.Seconds);

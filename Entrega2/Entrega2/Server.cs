@@ -79,7 +79,7 @@ namespace Entrega2
                 
             }
         }
-        public string LogIn()
+        public List<string> LogIn()
         {
 
 
@@ -153,7 +153,7 @@ namespace Entrega2
             List<string> data = formatter.Deserialize(stream) as List<string>;
             stream.Close();*/
 
-
+            List<string> datosLogin = new List<string>();
             Console.WriteLine("Bienvenido de vuelta a Spotflix! Te extrañamos!");
             Console.WriteLine("Ingresa tu nombre de usuario: \n");
             string usuario = Console.ReadLine();
@@ -161,8 +161,9 @@ namespace Entrega2
             string contrasena = Console.ReadLine();
 
             string result = Data.LogIn(usuario, contrasena);
-
-            return result;
+            datosLogin.Add(result);
+            datosLogin.Add(usuario);
+            return datosLogin;
 
         }
         
