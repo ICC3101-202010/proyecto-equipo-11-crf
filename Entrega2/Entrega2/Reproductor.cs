@@ -10,6 +10,7 @@ using TagLib.Gif;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
+using TagLib;
 
 namespace Entrega2
 {
@@ -55,7 +56,7 @@ namespace Entrega2
                 {
                     Console.Clear();
                     Console.WriteLine(cancion.Titulo_Cancion);
-                    cancion.Show_lyrics();
+                    this.Show_lyrics(cancion, sonido);
                     Console.WriteLine("1-pausa 2-contiuar 3-Siguiente");
                     n = Console.ReadLine();
                     if (n == "1")
@@ -158,11 +159,30 @@ namespace Entrega2
 
             return queue;
         }
-
-        public void AddPictureT()
+        public void Show_lyrics(Cancion song, WindowsMediaPlayer sonido)
         {
+            int total = song.Seconds;
 
+            int largo = 0;
+            foreach (var letra in song.Letra)
+            {
+                largo++;
+
+            }
+            int intervalo = total / largo;
+            foreach (var letra in song.Letra) 
+            {
+                Console.Write(letra);
+                Thread.Sleep(intervalo + 100);
+                if (letra == '\n') 
+                {
+                    Console.Write("\n");
+                }
+            
+            }
         }
+
+
         public virtual void reproducirLista(WindowsMediaPlayer sonido, List<Cancion> songs)
         {
             try
@@ -180,7 +200,8 @@ namespace Entrega2
                         sonido.controls.play();
 
                         Console.WriteLine(song.Titulo_Cancion);
-                        song.Show_lyrics();
+                        
+                        this.Show_lyrics(song, sonido);
                         Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-Retroceder");
 
                         n = Console.ReadLine();

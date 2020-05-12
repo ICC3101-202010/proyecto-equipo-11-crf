@@ -33,6 +33,8 @@ namespace Entrega2
         private string usuario_;
         private bool favorite;
         private string letra;
+        private int seconds;
+        private int Largo_letra;
 
         public string Banda { get => banda; set => banda = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -52,6 +54,8 @@ namespace Entrega2
         public string Usuario_ { get => usuario_; set => usuario_ = value; }
         public bool Favorite { get => favorite; set => favorite = value; }
         public string Letra { get => letra; set => letra = value; }
+        public int Seconds { get => seconds; set => seconds = value; }
+        public int Largoletra { get => Largo_letra; set => Largo_letra = value; }
 
         public Cancion(string path)
         {
@@ -67,6 +71,7 @@ namespace Entrega2
             this.Album = song.Tag.Album;
             this.path = path;
             TimeSpan time_prev = song.Properties.Duration;
+            
             this.Pre_caratula = song.Tag.Pictures.FirstOrDefault();
             this.letra = song.Tag.Lyrics;
 
@@ -79,8 +84,10 @@ namespace Entrega2
                 this.duration = Convert.ToString(song.Properties.Duration.Seconds);
             }
 
-            //Caratula caratula = new Caratula(song.Tag.Pictures);
 
+
+            //Caratula caratula = new Caratula(song.Tag.Pictures);
+            this.seconds = Convert.ToInt32(song.Properties.Duration.Seconds);
         }
 
 

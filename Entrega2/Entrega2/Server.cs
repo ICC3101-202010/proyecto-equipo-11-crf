@@ -111,12 +111,12 @@ namespace Entrega2
                 {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member, usuario1.followers});
 
 
-            IFormatter formatter1 = new BinaryFormatter();
+            /*IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Membresia_Usuario usuario2 = formatter1.Deserialize(stream1) as Membresia_Usuario;
             stream.Close();
 
-            Data.RegistrarMembresia(usuario2);
+            Data.RegistrarMembresia(usuario2);*/
             /*IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Double tiempo1 = (Double)formatter1.Deserialize(stream1)  ;
