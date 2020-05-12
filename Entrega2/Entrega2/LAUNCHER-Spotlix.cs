@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Entrega2.IO;
 using WMPLib;
@@ -265,7 +266,11 @@ namespace Entrega2
                                 int a = 0;
                                 while (a != 3)
                                 {
-
+                                    if (user.Member== "true")
+                                    {
+                                        break;
+                                       
+                                    }
                                     InputOutput.Main_Menu_No_Premium();
                                     Player.controls.stop();
                                     a = Convert.ToInt32(Console.ReadLine());
@@ -280,6 +285,43 @@ namespace Entrega2
                                         if (opcionB == 1)
                                         {
                                             Console.WriteLine("Ingrese el nombre de la cancion");
+<<<<<<< HEAD
+                                            string nombreCancion = Console.ReadLine();
+                                            Cancion seleccionada=finder.buscarCancion(nombreCancion, todasLasCanciones);
+                                            retornoBuscarCancion.Add(seleccionada);
+                                            if (seleccionada != null)
+                                            {
+                                                string opcion = null;
+                                                while (opcion != "4")
+                                                {
+                                                    Console.WriteLine("1.Añadir cancion a lista");
+                                                    Console.WriteLine("2.Puntuar cancion");
+                                                    Console.WriteLine("3.Reproducir cancion");
+                                                    Console.WriteLine("4.Salir");
+                                                    opcion = Console.ReadLine();
+                                                    if (opcion == "1")
+                                                    {
+
+                                                    }
+                                                    else if (opcion == "2")
+                                                    {
+                                                        seleccionada.valorarCancion();
+                                                    }
+                                                    else if (opcion == "3")
+                                                    {
+                                                        reproductor.reproducirCancion(Player, seleccionada);
+                                                    }
+                                                    else
+                                                    {
+                                                        Console.WriteLine("Salir"
+                                                            );
+                                                    }
+
+                                                }
+
+                                            }
+
+=======
                                             string nombreCancion=Console.ReadLine();
                                             Cancion seleccionada= finder.buscarCancion(nombreCancion, todasLasCanciones);
                                             retornoBuscarCancion.Add(finder.buscarCancion(nombreCancion, todasLasCanciones));
@@ -310,6 +352,7 @@ namespace Entrega2
                                                 }
                                                 
                                             }
+>>>>>>> 86f4524235d82bcd3a2b0cb84b3f0f65d2d99168
                                         }
                                         else if (opcionB == 2)
                                         {
@@ -332,14 +375,29 @@ namespace Entrega2
                                         }
                                         else if (opcionB == 5)*/
 
+
                                         Console.Clear();
 
+<<<<<<< HEAD
+                                        }
+                                        else if (opcionB == 7)
+                                        {
+                                            Console.WriteLine("Mas reproducidas");
+                                            retornoBuscarCancion = finder.ratingReproducciones(todasLasCanciones);
+                                            Thread.Sleep(5000);
+                                        }
+                                        else if (opcionB == 8)
+                                        {
+                                            Console.WriteLine("Mejor puntuadas");
+                                            retornoBuscarCancion = finder.ordenarPorNota(todasLasCanciones);
+=======
                                         Console.WriteLine("Home");
                                         All_songs.mostrarCanciones();
                                         Console.WriteLine("Select one");
                                         int option_chosen = Convert.ToInt32(Console.ReadLine());
                                         int count = 0;
                                         foreach (var song in All_songs.Canciones)
+>>>>>>> 86f4524235d82bcd3a2b0cb84b3f0f65d2d99168
 
                                         {
 
@@ -364,6 +422,7 @@ namespace Entrega2
                                     {
                                         Console.WriteLine("Mi perfil");
                                         user.OpcionesUsuario();
+                                        
                                     }
                                     else if (a == 3)
                                     {
