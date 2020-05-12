@@ -89,6 +89,7 @@ namespace Entrega2
 
             //Caratula caratula = new Caratula(song.Tag.Pictures);
             this.seconds = Convert.ToInt32(song.Properties.Duration.Seconds);
+            
         }
 
 
@@ -144,5 +145,6 @@ namespace Entrega2
         {
             Console.WriteLine(this.letra);
         }
+
     }
 }

@@ -60,7 +60,13 @@ namespace Entrega2
 
             }
             int selected = Convert.ToInt32(Console.ReadLine());
-            return final_search[selected];
+            if (final_search.Any() == true)
+            {
+                return final_search[selected];
+
+            }
+            return null;
+            
         }
 
 
