@@ -56,9 +56,9 @@ namespace Entrega2
                 {
                     Console.Clear();
                     Console.WriteLine(cancion.Titulo_Cancion);
-                    this.Show_lyrics(cancion, sonido);
                     Console.WriteLine("1-pausa 2-contiuar 3-Siguiente");
                     n = Console.ReadLine();
+                    
                     if (n == "1")
                     {
                         double tiempo = sonido.controls.currentPosition;
@@ -201,10 +201,11 @@ namespace Entrega2
 
                         Console.WriteLine(song.Titulo_Cancion);
                         
-                        this.Show_lyrics(song, sonido);
+                       
                         Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-Retroceder");
-
+                        
                         n = Console.ReadLine();
+                        this.Show_lyrics(song, sonido);
                         if (n == "1")
                         {
                             
