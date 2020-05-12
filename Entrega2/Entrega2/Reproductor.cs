@@ -308,6 +308,68 @@ namespace Entrega2
             {
                 Console.WriteLine("Error: " + ex.Message);
             }
+            
+        }
+        public List<Efecto> bibliotecaEfectos()
+        {
+            string directory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Efectos");
+            DirectoryInfo Efectos_folder = new DirectoryInfo(directory);
+            List<Efecto> Efecto_Library = new List<Efecto>();
+
+            foreach (var video_file in Efectos_folder.GetFiles())
+            {
+                Efecto efecto = new Efecto(video_file.FullName);
+                //Console.WriteLine(cancion.Show_info(cancion));
+                Efecto_Library.Add(efecto);
+            }
+            return Efecto_Library;
+            //Retorna la lista con todas las canciones
+        }
+        public void mixer(List<Cancion> songs,List<Efecto> allEfects)
+        {
+
+            WindowsMediaPlayer player1 = new WindowsMediaPlayer();
+            WindowsMediaPlayer player2 = new WindowsMediaPlayer();
+            int index = 0;
+            foreach(Cancion song1 in songs)
+            {
+                Console.WriteLine(index);
+                Console.WriteLine(song1.Titulo_Cancion);
+                Console.WriteLine(song1.Banda);
+                index++;
+            }
+            Console.WriteLine("Ingrese numero de cancion");
+            int chosen = System.Convert.ToInt32(Console.ReadLine());
+            Cancion song = songs[chosen];
+            player1.URL = song.Path;
+            player1.controls.play();
+            Console.WriteLine("Anadir efecto");
+            string opt = null;
+            while (opt != "1")
+            {
+                player2.controls.pause();
+                int index1 = 0;
+                foreach (Efecto efecto in allEfects)
+                {
+                    Console.WriteLine(index1);
+                    Console.WriteLine(efecto.name);
+                    index1++;
+                }
+                Console.WriteLine("Ingrese numero de efecto a reproducir");
+                int chosen1 = System.Convert.ToInt32(Console.ReadLine());
+                player2.URL = allEfects[chosen1].path;
+                player2.controls.play();
+                Console.WriteLine("1.Salir ");
+                Console.WriteLine("2.Continuar en efectos");
+                opt = Console.ReadLine();
+                if (opt == "1")
+                {
+                    player1.controls.pause();
+                    player2.controls.pause();
+                }
+                
+            }
+            
         }
     }
 }  

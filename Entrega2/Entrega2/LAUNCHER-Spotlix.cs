@@ -35,6 +35,8 @@ namespace Entrega2
             todasLasCanciones = reproductor.Library();
             List<Video> todosVideos = new List<Video>();
             todosVideos = reproductor.Video_Library();
+            List<Efecto> todosEfecto = new List<Efecto>();
+            todosEfecto = reproductor.bibliotecaEfectos();
             List<Playlist> todasPlaylists = new List<Playlist>();
             List<Album> todosAlbum = new List<Album>();
             MediaDatabase media_database = new MediaDatabase();
@@ -83,7 +85,7 @@ namespace Entrega2
                             if (user.Member == "true")
                             {
                                 int a = 0;
-                                while (a != 5)
+                                while (a != 6)
                                 {
 
                                     InputOutput.Main_menu();
@@ -416,6 +418,12 @@ namespace Entrega2
                                         user.OpcionesUsuario();
                                     }
                                     else if (a == 5)
+                                    {
+                                        Console.WriteLine("Mixer");
+                                        reproductor.mixer(todasLasCanciones, todosEfecto);
+                                        
+                                    }
+                                    else if (a == 6)
                                     {
                                         Console.WriteLine("Log Out");
                                     }
