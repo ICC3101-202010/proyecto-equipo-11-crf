@@ -86,7 +86,9 @@ namespace Entrega2
         }
         public void Lista_favoritos(List<Cancion> all_songs, Usuario usuario)
         {
-          Playlist favoritos = new Playlist("Favortitos",all_songs,null,usuario.NamePerson);
+
+            
+            
             
         }
        

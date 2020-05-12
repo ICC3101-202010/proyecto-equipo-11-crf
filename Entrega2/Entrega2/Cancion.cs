@@ -14,7 +14,7 @@ namespace Entrega2
 {
     public class Cancion
     {
-        
+
         private string titulo_Cancion;
         private uint numero_Cancion_Album;
         private uint fecha_Lanzamiento;
@@ -32,6 +32,7 @@ namespace Entrega2
         private Image custom_image;
         private string usuario_;
         private bool favorite;
+        private string letra;
 
         public string Banda { get => banda; set => banda = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -44,12 +45,13 @@ namespace Entrega2
         public string Album { get => album; set => album = value; }
         public IPicture Pre_caratula { get => pre_caratula; set => pre_caratula = value; }
         public string Path { get => path; set => path = value; }
-        public int Likes { get =>likes; set => likes = value; }
+        public int Likes { get => likes; set => likes = value; }
         public int Reproducciones { get => reproducciones; set => reproducciones = value; }
         private Image Custom_image { get => Custom_image; set => Custom_image = value; }
-        public string Duration { get =>duration; set => duration = value; }
+        public string Duration { get => duration; set => duration = value; }
         public string Usuario_ { get => usuario_; set => usuario_ = value; }
         public bool Favorite { get => favorite; set => favorite = value; }
+        public string Letra { get => letra; set => letra = value; }
 
         public Cancion(string path)
         {
@@ -66,18 +68,19 @@ namespace Entrega2
             this.path = path;
             TimeSpan time_prev = song.Properties.Duration;
             this.Pre_caratula = song.Tag.Pictures.FirstOrDefault();
+            this.letra = song.Tag.Lyrics;
 
             if (time_prev.Hours == 0)
             {
                 this.duration = Convert.ToString(song.Properties.Duration.Minutes) + ":" + Convert.ToString(song.Properties.Duration.Seconds);
             }
-            else if (time_prev.Minutes == 0) 
+            else if (time_prev.Minutes == 0)
             {
                 this.duration = Convert.ToString(song.Properties.Duration.Seconds);
             }
-            
+
             //Caratula caratula = new Caratula(song.Tag.Pictures);
-           
+
         }
 
 
@@ -87,9 +90,9 @@ namespace Entrega2
         {
             string info;
             info = "Nombre:" + cancion.titulo_Cancion + "\n" + "Compositor: " + cancion.Banda
-            +"\n" + "N° pista: "+cancion.numero_Cancion_Album+"\n"
-                +"Lanzamiento: "+ cancion.fecha_Lanzamiento + "\n"+ "Estudio: " + cancion.nombre_Estudio+"\n"
-                +"Genero: "+ cancion.genero + "\n" + "Album: " + cancion.Album+ "\n" + cancion.duration + "\n";
+            + "\n" + "N° pista: " + cancion.numero_Cancion_Album + "\n"
+                + "Lanzamiento: " + cancion.fecha_Lanzamiento + "\n" + "Estudio: " + cancion.nombre_Estudio + "\n"
+                + "Genero: " + cancion.genero + "\n" + "Album: " + cancion.Album + "\n" + cancion.duration + "\n";
             return info;
         }
         public void descargarCancion(Cancion song, Usuario usuario)
@@ -107,10 +110,10 @@ namespace Entrega2
         }
         public void valorarCancion()
         {
-  
+
             Console.WriteLine("Ingrese una nota de 0 a 5 a la cancion");
             int nota = System.Convert.ToInt32(Console.ReadLine());
-            while (nota<0 ||nota >5)
+            while (nota < 0 || nota > 5)
             {
                 Console.WriteLine("Ingrese una nota valida entre 1 y 5");
                 nota = System.Convert.ToInt32(Console.ReadLine());
@@ -122,6 +125,9 @@ namespace Entrega2
         {
             playlist.Canciones.Add(this);
         }
-
+        public void Show_lyrics()
+        {
+            Console.WriteLine(this.letra);
+        }
     }
 }

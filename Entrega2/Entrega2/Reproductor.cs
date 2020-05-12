@@ -37,9 +37,6 @@ namespace Entrega2
             {
                 sonido.URL = Path.GetFullPath(cancion.Path);
                 sonido.controls.play();
-
-                Console.WriteLine(cancion.Titulo_Cancion);
-
                 cancion.Reproducciones += 1;
 
 
@@ -56,7 +53,10 @@ namespace Entrega2
                 string n = null;
                 while (n != "3")
                 {
-                    Console.WriteLine("1-pausa 2-contiuar 3-salir");
+                    Console.Clear();
+                    Console.WriteLine(cancion.Titulo_Cancion);
+                    cancion.Show_lyrics();
+                    Console.WriteLine("1-pausa 2-contiuar 3-Siguiente");
                     n = Console.ReadLine();
                     if (n == "1")
                     {
@@ -180,6 +180,7 @@ namespace Entrega2
                         sonido.controls.play();
 
                         Console.WriteLine(song.Titulo_Cancion);
+                        song.Show_lyrics();
                         Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-Retroceder");
 
                         n = Console.ReadLine();
