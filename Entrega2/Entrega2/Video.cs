@@ -47,19 +47,7 @@ namespace Entrega2
             this.year = video.Tag.Year;
             this.coment = video.Tag.Comment;
             TimeSpan time_prev = video.Properties.Duration;
-            //this.director.NamePerson = video.Tag.FirstComposer;
-            //TagLib.Id3v2.Tag tag = (TagLib.Id3v2.Tag)video.GetTag(TagLib.TagTypes.AllTags);
-            //Console.WriteLine(tag);
-            //género[ok], categoría, actores, director, estudio. año de publicación[ok],
-            //descripción[ok], calificación[]
-            Console.WriteLine(video.Tag.Title);
-            Console.WriteLine(video.Tag.FirstGenre);
-            Console.WriteLine(video.Tag.Title);
-            Console.WriteLine(video.Tag.Year);
-            Console.WriteLine(video.Tag.Comment);
-            Console.WriteLine(video.Tag.Genres);
-            Console.WriteLine(video.Tag.FirstComposer);
-            Console.WriteLine(video.Tag.TagTypes);
+
             if (time_prev.Hours == 0)
             {
                 this.duration = Convert.ToString(video.Properties.Duration.Minutes) + ":" + Convert.ToString(video.Properties.Duration.Seconds);
