@@ -126,7 +126,7 @@ hace Spotify.    CHECK[✔]
 	1[] 2[] 3[]         
 4[✔]
 5[✔]
-6[]-->falta crear lista automatica de favoritos
+6[✔]-->falta implementar
 7[]-->falta seguir usuarios
 8[✔]
 9[✔]
