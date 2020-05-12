@@ -113,10 +113,10 @@ namespace Entrega2
 
             IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Membresia_Usuario usuario = formatter1.Deserialize(stream1) as Membresia_Usuario;
+            Membresia_Usuario usuario2 = formatter1.Deserialize(stream1) as Membresia_Usuario;
             stream.Close();
 
-            Data.RegistrarMembresia(usuario);
+            Data.RegistrarMembresia(usuario2);
             /*IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Double tiempo1 = (Double)formatter1.Deserialize(stream1)  ;
