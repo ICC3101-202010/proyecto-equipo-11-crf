@@ -62,18 +62,21 @@ namespace Entrega2
 
 
             bool exec = true;
-            while (exec)
+            while (exec == true)
             {
-
-                InputOutput.ShowOptions(new List<string>() { "Registrarse", "Log in", "Log Out" });
+                Console.WriteLine("1 --> Registrarse");
+                Console.WriteLine("2 --> Log in");
+                Console.WriteLine("3 --> Log Out");
+                
                 int chosen = Convert.ToInt32(Console.ReadLine());
                 
                 
                 if (chosen == 1)
                 {
-                        Console.Clear();
-                        server.Registrarse();
-                        break;
+                    Console.Clear();
+                    server.Registrarse();
+                    exec = true;
+                    break;
                 }
                         
 
@@ -534,7 +537,9 @@ namespace Entrega2
 
                 else
                 {
+                    exec = true;
                     Console.WriteLine("Opcion Invalida");
+                    Thread.Sleep(1000);
                 }
                 
             }
