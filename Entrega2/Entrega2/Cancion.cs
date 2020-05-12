@@ -31,6 +31,7 @@ namespace Entrega2
         private string duration;
         private Image custom_image;
         private string usuario_;
+        private bool favorite;
 
         public string Banda { get => banda; set => banda = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -48,6 +49,7 @@ namespace Entrega2
         private Image Custom_image { get => Custom_image; set => Custom_image = value; }
         public string Duration { get =>duration; set => duration = value; }
         public string Usuario_ { get => usuario_; set => usuario_ = value; }
+        public bool Favorite { get => favorite; set => favorite = value; }
 
         public Cancion(string path)
         {

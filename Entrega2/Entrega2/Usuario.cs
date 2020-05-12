@@ -177,6 +177,7 @@ namespace Entrega2
                             Console.WriteLine("");
                             Console.WriteLine("Ya puedes disfrutar de musica Ilimitada y sin Anuncios!");
                             member = "true";
+                            break;
                             
                         }
                         else

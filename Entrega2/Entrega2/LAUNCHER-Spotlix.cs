@@ -236,7 +236,11 @@ namespace Entrega2
                                             if (opcionC == 1)
                                             {
                                                 Console.WriteLine("Ms canciones");
+                                                foreach (var song in media_database.Show_songs_by_user(todasLasCanciones, user))
+                                                {
+                                                    Console.WriteLine(song.Titulo_Cancion);
 
+                                                }
                                             }
 
                                             else if (opcionC == 2)
@@ -254,7 +258,7 @@ namespace Entrega2
                                             else if (opcionC == 3)
                                             {
                                                 Console.Clear();
-                                                Console.Write("Crea tu playlist" + "\n" + "Elige un tipo" + "\n" + "[1] Canciones" + "\n" + "[2]  Video");
+                                                Console.Write("Crea tu playlist" + "\n" + "Elige un tipo" + "\n" + "[1] Canciones" + "\n" + "[2]  Video" + "\n" + "[0]  Salir");
                                                 int opcion_crear = Convert.ToInt32(Console.ReadLine());
                                                 if (opcion_crear == 1)
                                                 {
@@ -262,6 +266,21 @@ namespace Entrega2
 
                                                     Playlist All_new_user = new Playlist("Library", todasLasCanciones, null, user.NamePerson);
                                                     reproductor.crearListaCanciones(All_new_user);
+                                                    Console.WriteLine("Deseas agregar una imagen");
+                                                    int image_otion = Convert.ToInt32(Console.ReadLine());
+                                                    if (image_otion == 1)
+                                                    {
+                                                        reproductor.crearListaCanciones(All_new_user).addIamge();
+                                                    }
+                                                    else if (image_otion == 2)
+                                                    {
+                                                        continue;
+
+                                                    }
+                                                    else if (opcion_crear == 0) 
+                                                    {
+                                                        break;
+                                                    }
                                                 }
 
 
@@ -300,7 +319,10 @@ namespace Entrega2
                                 int a = 0;
                                 while (a != 3)
                                 {
-
+                                    if (user.Member == "true")
+                                    {
+                                        break;
+                                    }
                                     InputOutput.Main_Menu_No_Premium();
                                     Player.controls.stop();
                                     a = Convert.ToInt32(Console.ReadLine());
@@ -308,64 +330,7 @@ namespace Entrega2
                                     {
 
 
-                                        /*retornoBuscarCancion.Clear();
-                                        retornoBuscarVideo.Clear();
-                                        InputOutput.Menu_finder();
-                                        opcionB = System.Convert.ToInt32(Console.ReadLine());
-                                        if (opcionB == 1)
-                                        {
-                                            Console.WriteLine("Ingrese el nombre de la cancion");
-                                            string nombreCancion=Console.ReadLine();
-                                            Cancion seleccionada= finder.buscarCancion(nombreCancion, todasLasCanciones);
-                                            retornoBuscarCancion.Add(finder.buscarCancion(nombreCancion, todasLasCanciones));
-                                            if (seleccionada != null)
-                                            {
-                                                int opcion = 0;
-                                                while (opcion != 4)
-                                                {
-                                                    Console.WriteLine("1.Agregar cancion a una lista");
-                                                    Console.WriteLine("2.Puntuar cancion");
-                                                    Console.WriteLine("3.Reproducir");
-                                                    Console.WriteLine("4.Salir");
-                                                    opcion = System.Convert.ToInt32(Console.ReadLine());
-                                                    if (opcion == 1)
-                                                    {
-                                                        Console.WriteLine("Ingrese nombre lista");
-                                                        string lista = Console.ReadLine();
-
-                                                    }
-                                                    else if (opcion == 2)
-                                                    {
-                                                        seleccionada.valorarCancion();
-                                                    }
-                                                    else if (opcion == 3)
-                                                    {
-                                                        reproductor.reproducirCancion(Player,seleccionada);
-                                                    }
-                                                }
-                                                
-                                            }
-                                        }
-                                        else if (opcionB == 2)
-                                        {
-                                            Console.WriteLine("Ingrese el nombre del video");
-                                            string nombreVideo = Console.ReadLine();
-                                            retornoBuscarVideo.Add(finder.buscarVideo(nombreVideo, todosVideos));
-                                        }
-                                        else if (opcionB == 3)
-                                        {
-                                            Console.WriteLine("Ingrese nombre playlist");
-                                            string nombrePlaylist = Console.ReadLine();
-                                            retornoBuscarCancion=finder.buscarPlaylist(nombrePlaylist, todasPlaylists).Canciones;
-                                            
-                                        }
-                                        else if (opcionB == 4)
-                                        {
-                                            Console.WriteLine("Ingrese nombre Actor/Director");
-                                            string nombreActorDirector = Console.ReadLine();
-                                            retornoBuscarVideo=finder.buscarActorDirector(nombreActorDirector, todosVideos);
-                                        }
-                                        else if (opcionB == 5)*/
+                                        
 
                                         Console.Clear();
 
@@ -390,8 +355,6 @@ namespace Entrega2
 
                                                 count++;
                                             }
-
-
                                         }
 
                                     }
