@@ -108,7 +108,7 @@ namespace Entrega2
             stream.Close();
             string verificationLink = GenerateLink(usuario1.Username);
             Data.AddUser(new List<string>()
-                {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono});
+                {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member});
                 
             /*IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -177,7 +177,29 @@ namespace Entrega2
             string celular = Console.ReadLine();
             usuario1.Telefono = celular;
             string privacidad = "";
-            usuario1.Member = "false";
+            int d = 1;
+            while (d == 1)
+            {
+                Console.WriteLine("Deseas contratar Spotflix Premium?");
+                Console.WriteLine("1 --> Si");
+                Console.WriteLine("2 --> No");
+                string premium = Console.ReadLine();
+                if (premium == "1")
+                {
+                    usuario1.Member = "true";
+                    d = 0;
+                }
+                else if (premium == "2")
+                {
+                    usuario1.Member = "false";
+                    d = 0;
+                }
+                else
+                {
+                    Console.WriteLine("Opcion Invalida");
+                }
+            }
+            
             int a = 1;
             while ( a== 1)
             {
@@ -339,7 +361,7 @@ namespace Entrega2
         }
 
         
-        private string GenerateLink(string usuario)
+        public string GenerateLink(string usuario)
         {
             Random rnd = new Random();
             string result = "";
