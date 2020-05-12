@@ -95,14 +95,14 @@ namespace Entrega2
                         Console.WriteLine("Spotflix ");
                         if (user.Member == "true")
                         {
-                            int a = 0;
-                            while (a != 6)
+                            string a = "0";
+                            while (a != "6")
                             {
 
                                 InputOutput.Main_menu();
                                 Player.controls.stop();
-                                a = Convert.ToInt32(Console.ReadLine());
-                                if (a == 1)
+                                a = Console.ReadLine();
+                                if (a == "1")
                                 {
                                     Console.Clear();
                                     Console.WriteLine("Home");
@@ -139,21 +139,21 @@ namespace Entrega2
 
 
                                 }
-                                else if (a == 2)
+                                else if (a == "2")
                                 {
                                     List<Cancion> retornoBuscarCancion = new List<Cancion>();
                                     List<Video> retornoBuscarVideo = new List<Video>();
 
                                     Finder finder = new Finder();
-                                    int opcionB = 0;
-                                    while (opcionB != 11)
+                                    string opcionB = "0";
+                                    while (opcionB != "11")
                                     {
 
                                         retornoBuscarCancion.Clear();
                                         retornoBuscarVideo.Clear();
                                         InputOutput.Menu_finder();
-                                        opcionB = System.Convert.ToInt32(Console.ReadLine());
-                                        if (opcionB == 1)
+                                        opcionB = Console.ReadLine();
+                                        if (opcionB == "1")
                                         {
                                             Console.WriteLine("Ingrese el nombre de la cancion");
                                             string nombreCancion = Console.ReadLine();
@@ -166,26 +166,26 @@ namespace Entrega2
 
                                             }
                                         }
-                                        else if (opcionB == 2)
+                                        else if (opcionB == "2")
                                         {
                                             Console.WriteLine("Ingrese el nombre del video");
                                             string nombreVideo = Console.ReadLine();
                                             retornoBuscarVideo.Add(finder.buscarVideo(nombreVideo, todosVideos));
                                         }
-                                        else if (opcionB == 3)
+                                        else if (opcionB == "3")
                                         {
                                             Console.WriteLine("Ingrese nombre playlist");
                                             string nombrePlaylist = Console.ReadLine();
                                             retornoBuscarCancion = finder.buscarPlaylist(nombrePlaylist, media_database.Playlists).Canciones;
 
                                         }
-                                        else if (opcionB == 4)
+                                        else if (opcionB == "4")
                                         {
                                             Console.WriteLine("Ingrese nombre Actor/Director");
                                             string nombreActorDirector = Console.ReadLine();
                                             retornoBuscarVideo = finder.buscarActorDirector(nombreActorDirector, todosVideos);
                                         }
-                                        else if (opcionB == 5)
+                                        else if (opcionB == "5")
                                         {
                                             Console.WriteLine("Ingrese nombre banda");
                                             string nombreBanda = Console.ReadLine();
@@ -193,27 +193,27 @@ namespace Entrega2
                                             Thread.Sleep(5000);
 
                                         }
-                                        else if (opcionB == 6)
+                                        else if (opcionB == "6")
                                         {
                                             Console.WriteLine("Ingrese nombre Abum");
                                             string nombreAlbum = Console.ReadLine();
                                             retornoBuscarCancion = finder.searchAlbum(nombreAlbum, todasLasCanciones);
 
                                         }
-                                        else if (opcionB == 7)
+                                        else if (opcionB == "7")
                                         {
                                             Console.WriteLine("Mas reproducidas");
                                             retornoBuscarCancion = finder.ratingReproducciones(todasLasCanciones);
                                             Thread.Sleep(5000);
                                         }
-                                        else if (opcionB == 8)
+                                        else if (opcionB == "8")
                                         {
                                             Console.WriteLine("Mejor puntuadas");
                                             retornoBuscarCancion = finder.ordenarPorNota(todasLasCanciones);
                                             Thread.Sleep(5000);
 
                                         }
-                                        else if (opcionB == 9)
+                                        else if (opcionB == "9")
                                         {
                                             Console.WriteLine("Favoritas");
                                             retornoBuscarCancion = user.Canciones_favoritas;
@@ -222,7 +222,7 @@ namespace Entrega2
                                                 Console.WriteLine(can.Titulo_Cancion);
                                             }
                                         }
-                                        else if (opcionB == 10)
+                                        else if (opcionB == "10")
                                         {
                                             List<string> datos = new List<string>();
                                             Console.WriteLine("Ingrese Nombre de Usuario");
@@ -243,130 +243,139 @@ namespace Entrega2
                                             }
                                         }
 
-                                        if (opcionB != 11)
+                                        if (opcionB != "11")
                                         {
-                                            Console.WriteLine("1. Reproducir busqueda");
-                                            Console.WriteLine("2. Agregar a favoritos");
-                                            Console.WriteLine("3. Puntuar Cancion");
-                                            Console.WriteLine("4. Anadir a Lista");
-                                            Console.WriteLine("5. Descargar");
-                                            Console.WriteLine("6. Salir");
-                                            string op = Console.ReadLine();
-                                            if (op == "1")
+                                            string op = "";
+                                            while (op != "6")
                                             {
-                                                int index0 = 0;
-                                                foreach (Cancion can in retornoBuscarCancion)
+                                                Console.WriteLine("1. Reproducir busqueda");
+                                                Console.WriteLine("2. Agregar a favoritos");
+                                                Console.WriteLine("3. Puntuar Cancion");
+                                                Console.WriteLine("4. Anadir a Lista");
+                                                Console.WriteLine("5. Descargar");
+                                                Console.WriteLine("6. Salir");
+                                                op = Console.ReadLine();
+                                                if (op == "1")
                                                 {
-                                                    Console.WriteLine(index0);
-                                                    Console.WriteLine(can.Titulo_Cancion);
-                                                    Console.WriteLine(can.Album);
-                                                    Console.WriteLine(can.Banda);
-                                                    index0++;
+                                                    int index0 = 0;
+                                                    foreach (Cancion can in retornoBuscarCancion)
+                                                    {
+                                                        Console.WriteLine(index0);
+                                                        Console.WriteLine(can.Titulo_Cancion);
+                                                        Console.WriteLine(can.Album);
+                                                        Console.WriteLine(can.Banda);
+                                                        index0++;
+                                                    }
+                                                    Console.WriteLine("Seleccione numero a reproducir");
+                                                    int numero = System.Convert.ToInt32(Console.ReadLine());
+                                                    reproductor.reproducirCancion(Player, retornoBuscarCancion[numero]);
                                                 }
-                                                Console.WriteLine("Seleccione numero a reproducir");
-                                                int numero = System.Convert.ToInt32(Console.ReadLine());
-                                                reproductor.reproducirCancion(Player, retornoBuscarCancion[numero]);
+                                                else if (op == "2")
+                                                {
+                                                    int index0 = 0;
+                                                    foreach (Cancion can in retornoBuscarCancion)
+                                                    {
+                                                        Console.WriteLine(index0);
+                                                        Console.WriteLine(can.Titulo_Cancion);
+                                                        Console.WriteLine(can.Album);
+                                                        Console.WriteLine(can.Banda);
+                                                        index0++;
+                                                    }
+                                                    Console.WriteLine("Seleccione cual desea anadir a favoritos");
+                                                    int numero = System.Convert.ToInt32(Console.ReadLine());
+                                                    retornoBuscarCancion[numero].agregarFavoritos(user);
+
+                                                }
+                                                else if (op == "3")
+                                                {
+                                                    int index0 = 0;
+                                                    foreach (Cancion can in retornoBuscarCancion)
+                                                    {
+                                                        Console.WriteLine(index0);
+                                                        Console.WriteLine(can.Titulo_Cancion);
+                                                        Console.WriteLine(can.Album);
+                                                        Console.WriteLine(can.Banda);
+                                                        index0++;
+                                                    }
+                                                    Console.WriteLine("Seleccione cual desea puntuar");
+                                                    int numero = System.Convert.ToInt32(Console.ReadLine());
+                                                    retornoBuscarCancion[numero].valorarCancion();
+
+                                                }
+                                                else if (op == "4")
+                                                {
+                                                    int index0 = 0;
+                                                    foreach (Cancion can in retornoBuscarCancion)
+                                                    {
+                                                        Console.WriteLine(index0);
+                                                        Console.WriteLine(can.Titulo_Cancion);
+                                                        Console.WriteLine(can.Album);
+                                                        Console.WriteLine(can.Banda);
+                                                        index0++;
+                                                    }
+                                                    Console.WriteLine("Seleccione cual desea agregar");
+                                                    int numero = System.Convert.ToInt32(Console.ReadLine());
+                                                    int index = 0;
+                                                    foreach (Playlist p in media_database.Playlists)
+                                                    {
+                                                        Console.WriteLine(index);
+                                                        Console.WriteLine(p.NombrePlaylist);
+                                                        index++;
+                                                    }
+                                                    Console.WriteLine("A que playlist la desea agregar");
+                                                    int agregada = System.Convert.ToInt32(Console.ReadLine());
+                                                    retornoBuscarCancion[numero].agregarAPlaylist(media_database.Playlists[agregada]);
+
+
+
+                                                }
+                                                else if (op == "5")
+                                                {
+                                                    int index0 = 0;
+                                                    foreach (Cancion can in retornoBuscarCancion)
+                                                    {
+                                                        Console.WriteLine(index0);
+                                                        Console.WriteLine(can.Titulo_Cancion);
+                                                        Console.WriteLine(can.Album);
+                                                        Console.WriteLine(can.Banda);
+                                                        index0++;
+                                                    }
+                                                    Console.WriteLine("Seleccione cual desea descargar");
+                                                    int numero = System.Convert.ToInt32(Console.ReadLine());
+                                                    retornoBuscarCancion[numero].descargarCancion(user);
+
+                                                }
+                                                else if (op == "6")
+                                                {
+
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("Opcion Invalida");
+                                                }
                                             }
-                                            else if (op == "2")
-                                            {
-                                                int index0 = 0;
-                                                foreach (Cancion can in retornoBuscarCancion)
-                                                {
-                                                    Console.WriteLine(index0);
-                                                    Console.WriteLine(can.Titulo_Cancion);
-                                                    Console.WriteLine(can.Album);
-                                                    Console.WriteLine(can.Banda);
-                                                    index0++;
-                                                }
-                                                Console.WriteLine("Seleccione cual desea anadir a favoritos");
-                                                int numero = System.Convert.ToInt32(Console.ReadLine());
-                                                retornoBuscarCancion[numero].agregarFavoritos(user);
-
-                                            }
-                                            else if (op == "3")
-                                            {
-                                                int index0 = 0;
-                                                foreach (Cancion can in retornoBuscarCancion)
-                                                {
-                                                    Console.WriteLine(index0);
-                                                    Console.WriteLine(can.Titulo_Cancion);
-                                                    Console.WriteLine(can.Album);
-                                                    Console.WriteLine(can.Banda);
-                                                    index0++;
-                                                }
-                                                Console.WriteLine("Seleccione cual desea puntuar");
-                                                int numero = System.Convert.ToInt32(Console.ReadLine());
-                                                retornoBuscarCancion[numero].valorarCancion();
-
-                                            }
-                                            else if (op == "4")
-                                            {
-                                                int index0 = 0;
-                                                foreach (Cancion can in retornoBuscarCancion)
-                                                {
-                                                    Console.WriteLine(index0);
-                                                    Console.WriteLine(can.Titulo_Cancion);
-                                                    Console.WriteLine(can.Album);
-                                                    Console.WriteLine(can.Banda);
-                                                    index0++;
-                                                }
-                                                Console.WriteLine("Seleccione cual desea agregar");
-                                                int numero = System.Convert.ToInt32(Console.ReadLine());
-                                                int index = 0;
-                                                foreach (Playlist p in media_database.Playlists)
-                                                {
-                                                    Console.WriteLine(index);
-                                                    Console.WriteLine(p.NombrePlaylist);
-                                                    index++;
-                                                }
-                                                Console.WriteLine("A que playlist la desea agregar");
-                                                int agregada = System.Convert.ToInt32(Console.ReadLine());
-                                                retornoBuscarCancion[numero].agregarAPlaylist(media_database.Playlists[agregada]);
-
-
-
-                                            }
-                                            else if (op == "5")
-                                            {
-                                                int index0 = 0;
-                                                foreach (Cancion can in retornoBuscarCancion)
-                                                {
-                                                    Console.WriteLine(index0);
-                                                    Console.WriteLine(can.Titulo_Cancion);
-                                                    Console.WriteLine(can.Album);
-                                                    Console.WriteLine(can.Banda);
-                                                    index0++;
-                                                }
-                                                Console.WriteLine("Seleccione cual desea descargar");
-                                                int numero = System.Convert.ToInt32(Console.ReadLine());
-                                                retornoBuscarCancion[numero].descargarCancion(user);
-
-                                            }
+                                                
+                                            
 
 
                                         }
-
-
-
-
-
 
 
                                     }
 
                                 }
 
-                                else if (a == 3)
+                                else if (a == "3")
                                 {
                                     Console.WriteLine("Biblioteca");
-                                    int opcionC = 0;
-                                    while (opcionC != 4)
+                                    string opcionC = "0";
+                                    while (opcionC != "4")
 
                                     {
                                         InputOutput.Library_menu();
-                                        opcionC = Convert.ToInt32(Console.ReadLine());
+                                        opcionC = Console.ReadLine();
 
-                                        if (opcionC == 1)
+                                        if (opcionC == "1")
                                         {
                                             Console.WriteLine("Ms canciones");
                                             foreach (var song in media_database.Show_songs_by_user(todasLasCanciones, user))
@@ -376,7 +385,7 @@ namespace Entrega2
                                             }
                                         }
 
-                                        else if (opcionC == 2)
+                                        else if (opcionC == "2")
                                         {
                                             Console.Clear();
                                             Console.WriteLine("Mis playlist");
@@ -388,7 +397,7 @@ namespace Entrega2
                                             }
                                         }
 
-                                        else if (opcionC == 3)
+                                        else if (opcionC == "3")
                                         {
                                             Console.Clear();
                                             Console.Write("Crea tu playlist" + "\n" + "Elige un tipo" + "\n" + "[1] Canciones" + "\n" + "[2]  Video" + "\n" + "[0]  Salir");
@@ -421,26 +430,29 @@ namespace Entrega2
 
 
                                         }
-                                        else if (opcionC == 4)
+                                        else if (opcionC == "4")
                                         {
 
                                         }
-
+                                        else
+                                        {
+                                            Console.WriteLine("Opcion Invalida");
+                                        }
                                     }
 
                                 }
-                                else if (a == 4)
+                                else if (a == "4")
                                 {
                                     Console.WriteLine("Mi perfil");
                                     user.OpcionesUsuario();
                                 }
-                                else if (a == 5)
+                                else if (a == "5")
                                 {
                                     Console.WriteLine("Mixer");
                                     reproductor.mixer(todasLasCanciones, todosEfecto);
 
                                 }
-                                else if (a == 6)
+                                else if (a == "6")
                                 {
                                     Console.WriteLine("Log Out");
                                 }
@@ -456,8 +468,8 @@ namespace Entrega2
 
                         else
                         {
-                            int a = 0;
-                            while (a != 3)
+                            string a = "0";
+                            while (a != "3")
                             {
                                 if (user.Member == "true")
                                 {
@@ -465,13 +477,9 @@ namespace Entrega2
                                 }
                                 InputOutput.Main_Menu_No_Premium();
                                 Player.controls.stop();
-                                a = Convert.ToInt32(Console.ReadLine());
-                                if (a == 1)
+                                a = Console.ReadLine();
+                                if (a == "1")
                                 {
-
-
-
-
                                     Console.Clear();
 
                                     Console.WriteLine("Home");
@@ -498,14 +506,15 @@ namespace Entrega2
                                     }
 
                                 }
-                                else if (a == 2)
+                                else if (a == "2")
                                 {
                                     Console.WriteLine("Mi perfil");
                                     user.OpcionesUsuario();
                                 }
-                                else if (a == 3)
+                                else if (a == "3")
                                 {
                                     Console.WriteLine("Log Out");
+
                                 }
 
                                 else
