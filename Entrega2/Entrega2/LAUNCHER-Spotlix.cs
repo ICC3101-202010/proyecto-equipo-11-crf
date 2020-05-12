@@ -202,7 +202,11 @@ namespace Entrega2
                                             if (opcionC == 1)
                                             {
                                                 Console.WriteLine("Ms canciones");
+                                                foreach (var song in media_database.Show_songs_by_user(todasLasCanciones, user))
+                                                {
+                                                    Console.WriteLine(song.Titulo_Cancion);
 
+                                                }
                                             }
 
                                             else if (opcionC == 2)
@@ -220,7 +224,7 @@ namespace Entrega2
                                             else if (opcionC == 3)
                                             {
                                                 Console.Clear();
-                                                Console.Write("Crea tu playlist" + "\n" + "Elige un tipo" + "\n" + "[1] Canciones" + "\n" + "[2]  Video");
+                                                Console.Write("Crea tu playlist" + "\n" + "Elige un tipo" + "\n" + "[1] Canciones" + "\n" + "[2]  Video" + "\n" + "[0]  Salir");
                                                 int opcion_crear = Convert.ToInt32(Console.ReadLine());
                                                 if (opcion_crear == 1)
                                                 {
@@ -228,6 +232,21 @@ namespace Entrega2
 
                                                     Playlist All_new_user = new Playlist("Library", todasLasCanciones, null, user.NamePerson);
                                                     reproductor.crearListaCanciones(All_new_user);
+                                                    Console.WriteLine("Deseas agregar una imagen");
+                                                    int image_otion = Convert.ToInt32(Console.ReadLine());
+                                                    if (image_otion == 1)
+                                                    {
+                                                        reproductor.crearListaCanciones(All_new_user).addIamge();
+                                                    }
+                                                    else if (image_otion == 2)
+                                                    {
+                                                        continue;
+
+                                                    }
+                                                    else if (opcion_crear == 0) 
+                                                    {
+                                                        break;
+                                                    }
                                                 }
 
 
