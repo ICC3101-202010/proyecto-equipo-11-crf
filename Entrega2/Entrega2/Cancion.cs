@@ -85,7 +85,7 @@ namespace Entrega2
                 this.duration = Convert.ToString(song.Properties.Duration.Seconds);
             }
 
-
+            
 
             //Caratula caratula = new Caratula(song.Tag.Pictures);
             this.seconds = Convert.ToInt32(song.Properties.Duration.Seconds);

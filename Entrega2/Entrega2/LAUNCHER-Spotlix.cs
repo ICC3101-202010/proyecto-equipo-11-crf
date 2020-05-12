@@ -102,8 +102,14 @@ namespace Entrega2
 
                                             if (option_chosen == count)
                                             {
-                                                reproductor.reproducirCancion(Player, song);
-                                                reproductor.reproducirLista(Player, reproductor.Queue(song));
+                                                //reproductor.reproducirCancion(Player, song);
+                                                Action[] metodos = new Action[] { ()=>reproductor.reproducirCancion(Player, song),()=>reproductor.Show_lyrics(song,Player)};
+                                                Parallel.Invoke(metodos);
+                                                //reproductor.reproducirLista(Player, reproductor.Queue(song));
+                                                Parallel.Invoke(() => reproductor.reproducirLista(Player, reproductor.Queue(song)), () => reproductor.Show_lyrics(song, Player));
+                                                {
+
+                                                }
                                                 Player.controls.pause();
                                                 break;
                                             }
@@ -224,7 +230,7 @@ namespace Entrega2
                                                 }
                                             }
 
-                                                if (opcionB != 11)
+                                            if (opcionB != 11)
                                             {
                                                 Console.WriteLine("1. Reproducir busqueda");
                                                 Console.WriteLine("2. Agregar a favoritos");
