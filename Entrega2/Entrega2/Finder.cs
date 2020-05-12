@@ -232,6 +232,20 @@ namespace Entrega2
 
 
         }
+        public List<Video> buscarVideoResolucion(string resolucion, List<Video> todosLosVideos)
+        {
+            List<Video> finalSearch = new List<Video>();
+
+            {
+                foreach (Video vid in todosLosVideos)
+                {
+                    int Resolution = Convert.ToInt32(resolucion);
+
+                }
+            }
+            return finalSearch;
+
+        }
     }
 }
 
