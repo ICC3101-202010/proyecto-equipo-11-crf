@@ -306,6 +306,22 @@ namespace Entrega2
 
 
                                                 }
+                                                else if (op == "5")
+                                                {
+                                                    int index0 = 0;
+                                                    foreach (Cancion can in retornoBuscarCancion)
+                                                    {
+                                                        Console.WriteLine(index0);
+                                                        Console.WriteLine(can.Titulo_Cancion);
+                                                        Console.WriteLine(can.Album);
+                                                        Console.WriteLine(can.Banda);
+                                                        index0++;
+                                                    }
+                                                    Console.WriteLine("Seleccione cual desea descargar");
+                                                    int numero = System.Convert.ToInt32(Console.ReadLine());
+                                                    retornoBuscarCancion[numero].descargarCancion(user);
+
+                                                }
                                                 
 
                                             }
