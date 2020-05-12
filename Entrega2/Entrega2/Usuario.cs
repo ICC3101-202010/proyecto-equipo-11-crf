@@ -136,6 +136,7 @@ namespace Entrega2
                     List<string> usuario1 = new List<string>();
                     Membresia_Usuario usuario = new Membresia_Usuario();
                     usuario.username = username;
+                    member = database.RetornarMembresia(username);
                     usuario.member = member;
                     usuario1.Add(username);
                     usuario1.Add(mail);
@@ -201,11 +202,14 @@ namespace Entrega2
                         int contratar = Convert.ToInt32(Console.ReadLine());
                         if (contratar == 1)
                         {
+                            
                             database.UpdateMembership(usuario1);
+                            Console.Clear();
                             Console.WriteLine("Bienvenido a Spotflix Premium!");
                             Console.WriteLine("");
                             Console.WriteLine("Ya puedes disfrutar de musica Ilimitada y sin Anuncios!");
                             member = "true";
+                            Thread.Sleep(2000);
 
                             /*IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);

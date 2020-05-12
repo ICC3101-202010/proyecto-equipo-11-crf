@@ -77,7 +77,7 @@ namespace Entrega2
                         if (server1[0] == null)
                         {
 
-                            user.Member= data.RetornarMembresia(server1[1]);
+                            //user.Member= data.RetornarMembresia(server1[1]);
 
                             Console.WriteLine("Spotflix ");
                             if (user.Member == "true")
