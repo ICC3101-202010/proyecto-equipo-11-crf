@@ -3,8 +3,7 @@ namespace Entrega2
 {
     public class Membresia_Usuario
     {
-        public Membresia_Usuario()
-        {
-        }
+        public string member;
+        public string username;
     }
 }
