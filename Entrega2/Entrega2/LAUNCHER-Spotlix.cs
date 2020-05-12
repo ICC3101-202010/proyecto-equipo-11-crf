@@ -68,10 +68,10 @@ namespace Entrega2
                 Console.WriteLine("2 --> Log in");
                 Console.WriteLine("3 --> Log Out");
                 
-                int chosen = Convert.ToInt32(Console.ReadLine());
+                string chosen = Console.ReadLine();
                 
                 
-                if (chosen == 1)
+                if (chosen == "1")
                 {
                     Console.Clear();
                     server.Registrarse();
@@ -82,7 +82,7 @@ namespace Entrega2
 
                     
                         
-                else if  (chosen == 2)
+                else if  (chosen == "2")
                 {
                     Console.Clear();
 
@@ -528,7 +528,7 @@ namespace Entrega2
                 }
                         
 
-                else if  (chosen == 3)
+                else if  (chosen == "3")
                 {
                     exec = false;
                     Console.Clear();
