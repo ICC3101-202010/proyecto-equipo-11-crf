@@ -297,9 +297,8 @@ namespace Entrega2
             string contrasena = Console.ReadLine();
 
             string result = Data.LogIn(usuario, contrasena);
-            Console.WriteLine("########################");
-            Console.WriteLine(result);
-            Console.WriteLine("########################");
+            
+            result = null;
             if (result == null)
             {
 
@@ -340,9 +339,8 @@ namespace Entrega2
             int a = 1;
             string result = Data.LogIn(usuario, contrasena);
 
-            Console.WriteLine("########################");
-            Console.WriteLine(result);
-            Console.WriteLine("########################");
+            
+            result = null;
             if (result == null)
             {
                 while (a == 1)
