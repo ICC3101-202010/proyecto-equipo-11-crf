@@ -12,6 +12,7 @@ using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace Entrega2
 {
+    [Serializable]
     public class Cancion
     {
 

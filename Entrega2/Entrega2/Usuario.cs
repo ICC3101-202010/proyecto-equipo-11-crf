@@ -174,10 +174,10 @@ namespace Entrega2
                                     member = "false";
                                     b = 1;
                                     Console.Clear();
-                                    IFormatter formatter1 = new BinaryFormatter();
+                                    /*IFormatter formatter1 = new BinaryFormatter();
                                     Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                                     formatter1.Serialize(stream1, usuario);
-                                    stream1.Close();
+                                    stream1.Close();*/
 
                                 }
                             }
@@ -207,10 +207,10 @@ namespace Entrega2
                             Console.WriteLine("Ya puedes disfrutar de musica Ilimitada y sin Anuncios!");
                             member = "true";
 
-                            IFormatter formatter1 = new BinaryFormatter();
+                            /*IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, usuario);
-                            stream1.Close();
+                            stream1.Close();*/
                             break;
                             
                         }
