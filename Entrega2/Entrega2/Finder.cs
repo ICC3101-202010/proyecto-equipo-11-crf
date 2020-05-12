@@ -20,29 +20,14 @@ namespace Entrega2
                     final_search.Add(song);
                 }
             }
-<<<<<<< HEAD
-            if (final_search.Any() ==true)
-            {
-                Console.WriteLine("Select one");
-                int index = 0;
-
-=======
             Console.WriteLine("Select one");
             int index = 0;
             if (final_search.Any() == true)
             {
->>>>>>> 86f4524235d82bcd3a2b0cb84b3f0f65d2d99168
                 foreach (var song in final_search)
                 {
                     Console.WriteLine("(" + index + ")" + song.Titulo_Cancion);
                     index++;
-<<<<<<< HEAD
-
-                }
-                int selected = Convert.ToInt32(Console.ReadLine());
-                return final_search[selected];
-=======
->>>>>>> 86f4524235d82bcd3a2b0cb84b3f0f65d2d99168
 
                 }
                 int selected = Convert.ToInt32(Console.ReadLine());
@@ -50,17 +35,13 @@ namespace Entrega2
             }
             else
             {
-<<<<<<< HEAD
-                Console.WriteLine("Ninguna cancion coincide con la busqueda");
-=======
-                Console.WriteLine( "No hay canciones que cooincidan");
->>>>>>> 86f4524235d82bcd3a2b0cb84b3f0f65d2d99168
+                Console.WriteLine("No hay canciones que cooincidan");
                 return null;
             }
-            
+
         }
 
-        public Video buscarVideo(string videoName,List<Video> todos)
+        public Video buscarVideo(string videoName, List<Video> todos)
         {
             List<Video> final_search = new List<Video>();
             foreach (var vid in todos)
@@ -83,8 +64,8 @@ namespace Entrega2
         }
 
 
-    
-    public Playlist buscarPlaylist(string playlist_name, List<Playlist> playlists)
+
+        public Playlist buscarPlaylist(string playlist_name, List<Playlist> playlists)
         {//busca una determinada cancion en una determinada lista
             List<Playlist> final_search = new List<Playlist>();
             foreach (var playlist in playlists)
@@ -185,10 +166,10 @@ namespace Entrega2
             {
                 List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.Reproducciones descending select canciones).ToList();
                 int cont = 0;
-                foreach(Cancion can in lista)
+                foreach (Cancion can in lista)
                 {
                     Console.WriteLine(cont);
-                    Console.WriteLine("Artista: "+can.Banda);
+                    Console.WriteLine("Artista: " + can.Banda);
                     Console.WriteLine("Cancion: " + can.Titulo_Cancion);
                     cont++;
 
