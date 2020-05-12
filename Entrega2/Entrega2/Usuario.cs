@@ -101,24 +101,26 @@ namespace Entrega2
         {
             RegistroUsuarios database = new RegistroUsuarios();
             server server = new server(database);
-            Console.WriteLine("Que te gustaria hacer?");
-            Console.WriteLine("1 --> Cambiar Nombre de Usuario");
-            Console.WriteLine("2 --> Cambiar Contrasena");
-            Console.WriteLine("3 --> Cambiar Membresia");
-            Console.WriteLine("4 --> Salir");
-            int respuesta = Convert.ToInt32(Console.ReadLine());
+            
+            
             int a = 1;
             while (a == 1)
             {
+                Console.WriteLine("Que te gustaria hacer?");
+                Console.WriteLine("1 --> Cambiar Nombre de Usuario");
+                Console.WriteLine("2 --> Cambiar Contrasena");
+                Console.WriteLine("3 --> Cambiar Membresia");
+                Console.WriteLine("4 --> Salir");
+                int respuesta = Convert.ToInt32(Console.ReadLine());
                 if (respuesta == 1)
                 {
                     server.CambiarNombreUsuario();
-                    a = 0;
+                    
                 }
                 else if (respuesta == 2)
                 {
                     server.CambiarContrasena();
-                    a = 0;
+                   
                 }
                 else if (respuesta == 3)
                 {
@@ -148,12 +150,14 @@ namespace Entrega2
                                     member = "false";
                                     b = 1;
                                     Console.Clear();
+                                    
                                 }
                             }
                             else
                             {
                                 member = "true";
                                 b = 1;
+                               
                             }
                         }
                         
@@ -173,10 +177,12 @@ namespace Entrega2
                             Console.WriteLine("");
                             Console.WriteLine("Ya puedes disfrutar de musica Ilimitada y sin Anuncios!");
                             member = "true";
+                            
                         }
                         else
                         {
                             member = "false";
+                            
                         }
                     }
                         

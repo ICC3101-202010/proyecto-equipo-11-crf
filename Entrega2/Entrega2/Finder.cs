@@ -20,24 +20,41 @@ namespace Entrega2
                     final_search.Add(song);
                 }
             }
+<<<<<<< HEAD
             if (final_search.Any() ==true)
             {
                 Console.WriteLine("Select one");
                 int index = 0;
 
+=======
+            Console.WriteLine("Select one");
+            int index = 0;
+            if (final_search.Any() == true)
+            {
+>>>>>>> 86f4524235d82bcd3a2b0cb84b3f0f65d2d99168
                 foreach (var song in final_search)
                 {
                     Console.WriteLine("(" + index + ")" + song.Titulo_Cancion);
                     index++;
+<<<<<<< HEAD
 
                 }
                 int selected = Convert.ToInt32(Console.ReadLine());
                 return final_search[selected];
+=======
+>>>>>>> 86f4524235d82bcd3a2b0cb84b3f0f65d2d99168
 
+                }
+                int selected = Convert.ToInt32(Console.ReadLine());
+                return final_search[selected];
             }
             else
             {
+<<<<<<< HEAD
                 Console.WriteLine("Ninguna cancion coincide con la busqueda");
+=======
+                Console.WriteLine( "No hay canciones que cooincidan");
+>>>>>>> 86f4524235d82bcd3a2b0cb84b3f0f65d2d99168
                 return null;
             }
             
