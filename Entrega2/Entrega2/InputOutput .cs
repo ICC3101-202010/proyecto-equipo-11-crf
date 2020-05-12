@@ -75,7 +75,10 @@ namespace Entrega2.IO
             Console.WriteLine("6-Album");
             Console.WriteLine("7-Mas escuchadas");
             Console.WriteLine("8-Mejor puntuadas");
-            Console.WriteLine("9-Salir");
+            Console.WriteLine("9-Favoritas");
+            Console.WriteLine("10.Salir");
+                
+              
 
         }
         public static void Library_menu()

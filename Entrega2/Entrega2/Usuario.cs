@@ -22,7 +22,7 @@ namespace Entrega2
 
         
 
-        private List<Cancion> canciones_favoritas;
+        private List<Cancion> canciones_favoritas=new List<Cancion>();
         private List<Video> videos_favoritos;
 
         private List<Usuario> seguidosUsuarios;

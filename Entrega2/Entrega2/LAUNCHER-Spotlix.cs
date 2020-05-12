@@ -141,8 +141,8 @@ namespace Entrega2
                                                     while (option != "3")
                                                     {
                                                         Console.WriteLine("1.Anadir a lista");
-                                                        Console.WriteLine("Puntuar Cancion");
-                                                        Console.WriteLine("Salir");
+                                                        Console.WriteLine("2.Puntuar Cancion");
+                                                        Console.WriteLine("3.Salir");
                                                         option = Console.ReadLine();
                                                         if (option == "1")
                                                         {
@@ -217,8 +217,17 @@ namespace Entrega2
                                                 Thread.Sleep(5000);
 
                                             }
+                                            else if (opcionB == 9)
+                                            {
+                                                Console.WriteLine("Favoritas");
+                                                retornoBuscarCancion = user.Canciones_favoritas;
+                                                foreach(Cancion can in retornoBuscarCancion)
+                                                {
+                                                    Console.WriteLine(can.Titulo_Cancion);
+                                                }
+                                            }
                                             
-                                            if (opcionB != 9)
+                                            if (opcionB != 10)
                                             {
                                                 Console.WriteLine("1. Reproducir busqueda");
                                                 Console.WriteLine("2. Agregar a favoritos");
