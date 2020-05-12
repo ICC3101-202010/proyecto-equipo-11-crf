@@ -102,12 +102,19 @@ namespace Entrega2
                 + "Genero: " + cancion.genero + "\n" + "Album: " + cancion.Album + "\n" + cancion.duration + "\n";
             return info;
         }
-        public void descargarCancion(Cancion song, Usuario usuario)
+        public void descargarCancion( Usuario usuario)
         {
+            
             string sourcePath = path;
             string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Descargas");
-            string destPath = System.IO.Path.Combine(targetPath, titulo_Cancion);
-            System.IO.File.Copy(sourcePath, destPath, true);
+            string ruta = System.IO.Path.Combine(targetPath, usuario.NamePerson);
+            if (!System.IO.Directory.Exists(ruta))
+            {
+                Console.WriteLine("Creando Carpeta Usuario");
+                DirectoryInfo di = System.IO.Directory.CreateDirectory(ruta);
+            }
+            string destPath = System.IO.Path.Combine(ruta, titulo_Cancion);
+            System.IO.File.Copy(sourcePath, ruta, true);
         }
 
         public void agregarFavoritos(Usuario user)
