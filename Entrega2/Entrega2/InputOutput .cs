@@ -45,7 +45,8 @@ namespace Entrega2.IO
             Console.WriteLine("2- Buscar");
             Console.WriteLine("3- Biblioteca");
             Console.WriteLine("4- Mi perfil");
-            Console.WriteLine("5- Log Out");
+            Console.WriteLine("5- Mixer");
+            Console.WriteLine("6- Log Out");
 
         }
 

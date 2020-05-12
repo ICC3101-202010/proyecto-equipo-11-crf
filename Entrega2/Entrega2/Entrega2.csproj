@@ -81,6 +81,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Administrador.cs" />
     <Compile Include="Director.cs" />
+    <Compile Include="Efecto.cs" />
     <Compile Include="Finder.cs" />
     <Compile Include="Importer.cs" />
     <Compile Include="InputOutput .cs" />
