@@ -146,17 +146,27 @@ namespace Entrega2
                 foreach (Video vid in todosLosVideos)
                 {
                     int i = 0;
-                    if (vid.Director.NamePerson == name)
+                    try
                     {
-                        finalSearch.Add(vid);
-                    }
-                    while (i < vid.Actores.Count())
-                    {
-                        if (vid.Actores[i].NamePerson == name)
+                        if (vid.Director.NamePerson == name)
                         {
                             finalSearch.Add(vid);
                         }
+                        while (i < vid.Actores.Count())
+                        {
+                            if (vid.Actores[i].NamePerson == name)
+                            {
+                                finalSearch.Add(vid);
+                            }
+                        }
+
                     }
+                    catch (System.NullReferenceException ex)
+                    {
+                        Console.WriteLine("Error: "+ex.Message);
+                    }
+
+                   
                 }
 
             }

@@ -159,7 +159,7 @@ namespace Entrega2
                                             {
                                                 Console.WriteLine("Ingrese el nombre del video");
                                                 string nombreVideo = Console.ReadLine();
-                                                retornoBuscarVideo.Add(finder.buscarVideo(nombreVideo, todosVideos));
+                                                finder.buscarVideo(nombreVideo, todosVideos);
                                             }
                                             else if (opcionB == 3)
                                             {
@@ -172,7 +172,7 @@ namespace Entrega2
                                             {
                                                 Console.WriteLine("Ingrese nombre Actor/Director");
                                                 string nombreActorDirector = Console.ReadLine();
-                                                retornoBuscarVideo = finder.buscarActorDirector(nombreActorDirector, todosVideos);
+                                                finder.buscarActorDirector(nombreActorDirector, todosVideos);
                                             }
                                             else if (opcionB == 5)
                                             {
@@ -232,7 +232,7 @@ namespace Entrega2
                                                 }
                                             }
 
-                                            if (opcionB != 11)
+                                            if (opcionB != 11 &&opcionB!=3&&opcionB!=2&&opcionB!=4)
                                             {
                                                 Console.WriteLine("1. Reproducir busqueda");
                                                 Console.WriteLine("2. Agregar a favoritos");
