@@ -4,6 +4,10 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
+using System.IO;
 
 namespace Entrega2
 {
@@ -22,8 +26,8 @@ namespace Entrega2
 
         
 
-        private List<Cancion> canciones_favoritas;
-        private List<Video> videos_favoritos;
+        public List<Cancion> canciones_favoritas;
+        public List<Video> videos_favoritos;
 
         private List<Usuario> seguidosUsuarios;
         private List<Playlist> seguidosPlaylist;
@@ -124,6 +128,19 @@ namespace Entrega2
                 }
                 else if (respuesta == 3)
                 {
+                    List<string> usuario1 = new List<string>();
+                    Usuario usuario = new Usuario();
+                    usuario.username = username;
+                    usuario.member = member;
+                    usuario1.Add(username);
+                    usuario1.Add(mail);
+                    usuario1.Add(contraseña);
+                    usuario1.Add(privacidad);
+                    string link= server.GenerateLink(username);
+                    usuario1.Add(link);
+                    usuario1.Add(Convert.ToString(DateTime.Now));
+                    usuario1.Add(telefono);
+                    usuario1.Add(member);
                     if (member == "true")
                     {
                         Console.WriteLine("Actualmente eres un Miembro Premium de Spotflix");
@@ -147,10 +164,16 @@ namespace Entrega2
                                 string confirmacion = Console.ReadLine();
                                 if (confirmacion== "")
                                 {
+                                    database.UpdateMembership(usuario1);
+
                                     member = "false";
                                     b = 1;
                                     Console.Clear();
-                                    
+                                    /*IFormatter formatter1 = new BinaryFormatter();
+                                    Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                                    formatter1.Serialize(stream1, usuario);
+                                    stream1.Close();*/
+
                                 }
                             }
                             else
@@ -173,10 +196,12 @@ namespace Entrega2
                         int contratar = Convert.ToInt32(Console.ReadLine());
                         if (contratar == 1)
                         {
+                            database.UpdateMembership(usuario1);
                             Console.WriteLine("Bienvenido a Spotflix Premium!");
                             Console.WriteLine("");
                             Console.WriteLine("Ya puedes disfrutar de musica Ilimitada y sin Anuncios!");
                             member = "true";
+                            
                             break;
                             
                         }
