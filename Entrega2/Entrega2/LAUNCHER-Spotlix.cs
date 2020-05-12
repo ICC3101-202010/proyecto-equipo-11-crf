@@ -35,8 +35,8 @@ namespace Entrega2
             List<Video> todosVideos = new List<Video>();
             List<Playlist> todasPlaylists = new List<Playlist>();
             List<Album> todosAlbum = new List<Album>();
-
-
+            PlayLIstDatabase playLIstDatabase = new PlayLIstDatabase();
+            
             Playlist All_songs = new Playlist("Library", todasLasCanciones, null, null);
 
 
@@ -208,10 +208,7 @@ namespace Entrega2
                                             {
                                                 Console.Clear();
                                                 Console.WriteLine("Mis playlist");
-                                                //MOSTRAR PLAYLISTS 
-                                                /*
-                                                 * 
-                                                 */
+                                                playLIstDatabase.Show_playlist_by_user(todasPlaylists,user);
                                             }
 
                                             else if (opcionC == 3)
