@@ -194,25 +194,27 @@ namespace Entrega2
                                                 Console.WriteLine("Ingrese nombre banda");
                                                 string nombreBanda = Console.ReadLine();
                                                 retornoBuscarCancion = finder.buscarArtista(nombreBanda, todasLasCanciones);
-
+                                                Thread.Sleep(5000);
 
                                             }
                                             else if (opcionB == 6)
                                             {
                                                 Console.WriteLine("Ingrese nombre Abum");
                                                 string nombreAlbum = Console.ReadLine();
-                                                retornoBuscarCancion = finder.searchAlbum(nombreAlbum, todosAlbum).Cancion;
+                                                retornoBuscarCancion.Add(finder.searchAlbum(nombreAlbum,todasLasCanciones ));
 
                                             }
                                             else if (opcionB == 7)
                                             {
                                                 Console.WriteLine("Mas reproducidas");
                                                 retornoBuscarCancion = finder.ratingReproducciones(todasLasCanciones);
+                                                Thread.Sleep(5000);
                                             }
                                             else if (opcionB == 8)
                                             {
                                                 Console.WriteLine("Mejor puntuadas");
                                                 retornoBuscarCancion = finder.ordenarPorNota(todasLasCanciones);
+                                                Thread.Sleep(5000);
 
                                             }
                                             else
