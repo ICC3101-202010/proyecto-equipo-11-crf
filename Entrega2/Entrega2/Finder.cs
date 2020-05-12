@@ -235,12 +235,27 @@ namespace Entrega2
         public List<Video> buscarVideoResolucion(string resolucion, List<Video> todosLosVideos)
         {
             List<Video> finalSearch = new List<Video>();
-
+            Console.Write("[1]Mayor '\n' [2]Menor ");
+            string res_op = Console.ReadLine();
+            
             {
                 foreach (Video video in todosLosVideos)
                 {
                     int Resolution = Convert.ToInt32(resolucion);
-                    
+                    if (res_op == "1")
+                    {
+                        if (video.Weight > Resolution) 
+                        {
+                            finalSearch.Add(video);
+                        }
+                    }
+                    else if (res_op == "2") 
+                    {
+                        if (video.Weight < Resolution)
+                        {
+                            finalSearch.Add(video);
+                        }
+                    }
                 }
             }
             return finalSearch;
