@@ -186,7 +186,7 @@ namespace Entrega2
             usuario1.Telefono = celular;
             string privacidad = "";
             int d = 1;
-            while (d == 1)
+            /*while (d == 1)
             {
                 Console.WriteLine("Deseas contratar Spotflix Premium?");
                 Console.WriteLine("1 --> Si");
@@ -206,7 +206,8 @@ namespace Entrega2
                 {
                     Console.WriteLine("Opcion Invalida");
                 }
-            }
+            }*/
+            usuario1.Member = "false";
             
             int a = 1;
             while ( a== 1)
