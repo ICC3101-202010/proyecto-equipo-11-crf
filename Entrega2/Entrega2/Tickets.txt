@@ -119,20 +119,20 @@ hace Spotify.    CHECK[✔]
 
 
 
-1[]
-2[]
+1[✔]
+2[✔]-->falta letra
 	a[] b[] c[] d[]
 3[] a[]            b[]    c[]
 	1[] 2[] 3[]         
-4[]
-5[]
-6[]
-7[]
-8[]
-9[]
-10[]
+4[✔]
+5[✔]
+6[]-->falta crear lista automatica de favoritos
+7[]-->falta seguir usuarios
+8[✔]
+9[✔]
+10[✔]
 11[]
-12[]
+12[]-->serializar
 
     class LAUNCHER_Spotlix
     {

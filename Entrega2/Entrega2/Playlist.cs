@@ -9,8 +9,8 @@ using System.Threading;
 
 namespace Entrega2
 {
-     public class Playlist
-     {
+    public class Playlist
+    {
         private string nombrePlaylist;
         private List<Cancion> canciones;
         private List<Video> videos;
@@ -26,9 +26,9 @@ namespace Entrega2
 
         public Playlist(string nombrePlaylist, List<Cancion> canciones, List<Video> videos, string NombreCreador)
         {
-            this.nombrePlaylist=nombrePlaylist;
-            this.Canciones=canciones;
-            this.Videos=videos;
+            this.nombrePlaylist = nombrePlaylist;
+            this.Canciones = canciones;
+            this.Videos = videos;
             this.NombreCreador = NombreCreador;
 
         }
@@ -36,19 +36,19 @@ namespace Entrega2
         {
             for (int i = 0; i < canciones.Count; i++)
             {
-                Console.WriteLine("Cancion "+ (i));
+                Console.WriteLine("Cancion " + (i));
                 Console.WriteLine("Nombre Cancion: " + canciones[i].Titulo_Cancion);
-                Console.WriteLine("Artista :"+ canciones[i].Banda);
-                Console.WriteLine( "" );
+                Console.WriteLine("Artista :" + canciones[i].Banda);
+                Console.WriteLine("");
 
             }
         }
         public void agregarCancionPlaylist(Cancion cancion)
         {
-            
+
             canciones.Add(cancion);
-            Console.WriteLine("Cancion "+ cancion.Titulo_Cancion + " agregada");
-            
+            Console.WriteLine("Cancion " + cancion.Titulo_Cancion + " agregada");
+
         }
         public void eliminarCancionPlaylist()
         {
@@ -57,10 +57,10 @@ namespace Entrega2
             int eliminada = Convert.ToInt32(Console.ReadLine());
             Cancion cancionEliminada = canciones[eliminada];
             canciones.Remove(canciones[eliminada]);
-            Console.WriteLine("Cancion "+cancionEliminada.Titulo_Cancion+" eliminada");
+            Console.WriteLine("Cancion " + cancionEliminada.Titulo_Cancion + " eliminada");
 
         }
-        public void addIamge() 
+        public void addIamge()
         {
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Images");
             DirectoryInfo Image_folder = new DirectoryInfo(path);
@@ -72,17 +72,22 @@ namespace Entrega2
             }
             Console.WriteLine("Choose a picture");
             int selecction = Convert.ToInt32(Console.ReadLine());
-            int Count = 0; 
+            int Count = 0;
             foreach (var image_file in Image_folder.GetFiles())
             {
-                if (Count == selecction) 
+                if (Count == selecction)
                 {
                     Imagen_personalizada = Image.FromFile(image_file.FullName);
                 }
                 Count++;
             }
 
-        
+
+        }
+        public void Lista_favoritos(List<Cancion> all_songs, Usuario usuario)
+        {
+          Playlist favoritos = new Playlist("Favortitos",all_songs,null,usuario.NamePerson);
+            
         }
        
         
