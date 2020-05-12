@@ -34,12 +34,14 @@ namespace Entrega2
             List<Cancion> todasLasCanciones = new List<Cancion>();
             todasLasCanciones = reproductor.Library();
             List<Video> todosVideos = new List<Video>();
+            todosVideos = reproductor.Video_Library();
             List<Playlist> todasPlaylists = new List<Playlist>();
             List<Album> todosAlbum = new List<Album>();
             MediaDatabase media_database = new MediaDatabase();
             RegistroUsuarios data = new RegistroUsuarios();
 
             Playlist All_songs = new Playlist("Library", todasLasCanciones, null, null);
+            Playlist All_videos = new Playlist("LibraryVideo", todosVideos, null, null);
 
 
             server.Registered += mailSender.OnRegistered;
@@ -252,7 +254,10 @@ namespace Entrega2
                                             {
                                                 Console.WriteLine("1. Reproducir busqueda");
                                                 Console.WriteLine("2. Agregar a favoritos");
-                                                Console.WriteLine("3. Salir");
+                                                Console.WriteLine("3. Puntuar Cancion");
+                                                Console.WriteLine("4. Anadir a Lista");
+                                                Console.WriteLine("5. Descargar");
+                                                Console.WriteLine("6. Salir");
                                                 string op = Console.ReadLine();
                                                 if (op == "1")
                                                 {
@@ -285,6 +290,39 @@ namespace Entrega2
                                                     retornoBuscarCancion[numero].agregarFavoritos(user);
 
                                                 }
+                                                else if (op == "3")
+                                                {
+                                                    int index0 = 0;
+                                                    foreach (Cancion can in retornoBuscarCancion)
+                                                    {
+                                                        Console.WriteLine(index0);
+                                                        Console.WriteLine(can.Titulo_Cancion);
+                                                        Console.WriteLine(can.Album);
+                                                        Console.WriteLine(can.Banda);
+                                                        index0++;
+                                                    }
+                                                    Console.WriteLine("Seleccione cual desea puntuar");
+                                                    int numero = System.Convert.ToInt32(Console.ReadLine());
+                                                    retornoBuscarCancion[numero].valorarCancion();
+
+                                                }
+                                                else if (op == "4")
+                                                {
+                                                    int index0 = 0;
+                                                    foreach (Cancion can in retornoBuscarCancion)
+                                                    {
+                                                        Console.WriteLine(index0);
+                                                        Console.WriteLine(can.Titulo_Cancion);
+                                                        Console.WriteLine(can.Album);
+                                                        Console.WriteLine(can.Banda);
+                                                        index0++;
+                                                    }
+                                                    Console.WriteLine("Seleccione cual desea puntuar");
+                                                    int numero = System.Convert.ToInt32(Console.ReadLine());
+                                                    
+
+                                                }
+                                                
 
                                             }
                                             
