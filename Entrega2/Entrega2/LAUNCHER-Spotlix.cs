@@ -127,7 +127,7 @@ namespace Entrega2
 
                                         Finder finder = new Finder();
                                         int opcionB = 0;
-                                        while (opcionB != 9)
+                                        while (opcionB != 11)
                                         {
 
                                             retornoBuscarCancion.Clear();

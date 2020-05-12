@@ -108,14 +108,14 @@ namespace Entrega2
             
             string sourcePath = path;
             string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Descargas");
-            string ruta = System.IO.Path.Combine(targetPath, usuario.NamePerson);
+            string ruta = System.IO.Path.Combine(targetPath, "usuario.Username");
             if (!System.IO.Directory.Exists(ruta))
             {
                 Console.WriteLine("Creando Carpeta Usuario");
                 DirectoryInfo di = System.IO.Directory.CreateDirectory(ruta);
             }
             string destPath = System.IO.Path.Combine(ruta, titulo_Cancion);
-            System.IO.File.Copy(sourcePath, ruta, true);
+            System.IO.File.Copy(sourcePath, destPath, true);
         }
 
         public void agregarFavoritos(Usuario user)
