@@ -140,9 +140,9 @@ namespace Entrega2
         {
             playlist.Canciones.Add(this);
         }
-        public void Show_lyrics()
+        public string lyrics()
         {
-            Console.WriteLine(this.letra);
+            return Letra;
         }
     }
 }
