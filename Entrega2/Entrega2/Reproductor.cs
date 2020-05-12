@@ -173,28 +173,7 @@ namespace Entrega2
 
             return queue;
         }
-        public void Show_lyrics(Cancion song, WindowsMediaPlayer sonido)
-        {
-            int total = song.Seconds;
 
-            int largo = 0;
-            foreach (var letra in song.Letra)
-            {
-                largo++;
-
-            }
-            int intervalo = total / largo;
-            foreach (var letra in song.Letra) 
-            {
-                Console.Write(letra);
-                Thread.Sleep(intervalo + 100);
-                if (letra == '\n') 
-                {
-                    Console.Write("\n");
-                }
-            
-            }
-        }
 
 
         public virtual void reproducirLista(WindowsMediaPlayer sonido, List<Cancion> songs)
@@ -219,7 +198,7 @@ namespace Entrega2
                         Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-Retroceder");
                         
                         n = Console.ReadLine();
-                        this.Show_lyrics(song, sonido);
+                        //this.Show_lyrics(song, sonido);
                         if (n == "1")
                         {
                             
