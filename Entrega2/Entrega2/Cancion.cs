@@ -30,6 +30,7 @@ namespace Entrega2
         private int likes;
         private string duration;
         private Image custom_image;
+        private string usuario_;
 
         public string Banda { get => banda; set => banda = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -46,6 +47,7 @@ namespace Entrega2
         public int Reproducciones { get => reproducciones; set => reproducciones = value; }
         private Image Custom_image { get => Custom_image; set => Custom_image = value; }
         public string Duration { get =>duration; set => duration = value; }
+        public string Usuario_ { get => usuario_; set => usuario_ = value; }
 
         public Cancion(string path)
         {
@@ -88,7 +90,7 @@ namespace Entrega2
                 +"Genero: "+ cancion.genero + "\n" + "Album: " + cancion.Album+ "\n" + cancion.duration + "\n";
             return info;
         }
-        public void descargarCancion()
+        public void descargarCancion(Cancion song, Usuario usuario)
         {
             string sourcePath = path;
             string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Descargas");
