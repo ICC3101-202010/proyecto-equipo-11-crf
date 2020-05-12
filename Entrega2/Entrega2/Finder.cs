@@ -108,22 +108,22 @@ namespace Entrega2
 
 
         }
-        public Album searchAlbum(string album_name, List<Album> albums)
+        public Cancion searchAlbum(string album_name, List<Cancion> cancions)
         {
             //busca un determinado album en una determinada lista de albums
-            List<Album> final_search = new List<Album>();
-            foreach (var album in albums)
+            List<Cancion> final_search = new List<Cancion>();
+            foreach (var can in cancions)
             {
-                if (album.Nombre_Album.Contains(album_name) == true)
+                if (can.Album.Contains(album_name) == true)
                 {
-                    final_search.Add(album);
+                    final_search.Add(can);
                 }
             }
             Console.WriteLine("Select one");
             int index = 0;
-            foreach (var album in final_search)
+            foreach (var can in final_search)
             {
-                Console.WriteLine("(" + index + ")" + album.Nombre_Album);
+                Console.WriteLine("(" + index + ")" + can.Album);
                 index++;
 
             }
