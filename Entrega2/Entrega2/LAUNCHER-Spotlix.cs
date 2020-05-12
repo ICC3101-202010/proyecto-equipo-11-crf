@@ -134,7 +134,41 @@ namespace Entrega2
                                             {
                                                 Console.WriteLine("Ingrese el nombre de la cancion");
                                                 string nombreCancion = Console.ReadLine();
-                                                retornoBuscarCancion.Add(finder.buscarCancion(nombreCancion, todasLasCanciones));
+                                                Cancion seleccionada=finder.buscarCancion(nombreCancion, todasLasCanciones);
+                                                if (seleccionada !=null)
+                                                {
+                                                    string option = null;
+                                                    while (option != "3")
+                                                    {
+                                                        Console.WriteLine("1.Anadir a lista");
+                                                        Console.WriteLine("Puntuar Cancion");
+                                                        Console.WriteLine("Salir");
+                                                        option = Console.ReadLine();
+                                                        if (option == "1")
+                                                        {
+                                                            int index = 0;
+                                                            foreach(Playlist p in media_database.Playlists)
+                                                            {
+                                                                Console.WriteLine(index);
+                                                                Console.WriteLine(p.NombrePlaylist);
+                                                                index++;
+                                                            }
+                                                            Console.WriteLine("A que playlist la desea agregar");
+                                                            int agregada = System.Convert.ToInt32(Console.ReadLine());
+                                                            seleccionada.agregarAPlaylist(media_database.Playlists[agregada]);
+                                                        }
+                                                        else if (option == "2")
+                                                        {
+                                                            seleccionada.valorarCancion();
+                                                        }
+                                                        else
+                                                        {
+                                                            Console.WriteLine("Salir");
+                                                        }
+                                                        retornoBuscarCancion.Add(seleccionada);
+
+                                                    }
+                                                }
                                             }
                                             else if (opcionB == 2)
                                             {
@@ -146,7 +180,7 @@ namespace Entrega2
                                             {
                                                 Console.WriteLine("Ingrese nombre playlist");
                                                 string nombrePlaylist = Console.ReadLine();
-                                                retornoBuscarCancion = finder.buscarPlaylist(nombrePlaylist, todasPlaylists).Canciones;
+                                                retornoBuscarCancion = finder.buscarPlaylist(nombrePlaylist, media_database.Playlists).Canciones;
 
                                             }
                                             else if (opcionB == 4)

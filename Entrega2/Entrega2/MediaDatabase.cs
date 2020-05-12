@@ -8,15 +8,14 @@ namespace Entrega2
 {
     public class MediaDatabase
     {
-        List<Playlist> playlists;
+        List<Playlist> playlists=new List<Playlist>();
 
-        List<Cancion> user_songs;
+        List<Cancion> user_songs=new List<Cancion>();
 
         public List<Playlist> Playlists { get => playlists; set => playlists = value; }
         public List<Cancion> User_songs { get => user_songs; set => user_songs = value; }
 
-        List<Playlist> All_Playlists = new List<Playlist>();
-        List<Cancion> All_songs = new List<Cancion>();
+        
 
         public MediaDatabase()
         {
@@ -24,7 +23,7 @@ namespace Entrega2
 
         public void AgregarPlaylist(Playlist user_playlist) 
         {
-            All_Playlists.Add(user_playlist);
+            playlists.Add(user_playlist);
         }
 
         public List<Playlist> Show_playlist_by_user(List<Playlist> all_playlist, Usuario usuario)
@@ -43,7 +42,7 @@ namespace Entrega2
             
         public void AgregarCancion(Cancion song)
         {
-            All_songs.Add(song);
+            user_songs.Add(song);
         }
 
         public List<Cancion> Show_songs_by_user(List<Cancion> all_songs, Usuario usuario)
