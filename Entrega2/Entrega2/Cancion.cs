@@ -23,7 +23,6 @@ namespace Entrega2
         private string genero;
         private int rating;//Metodo valorarCancion 
         private int reproducciones = 0;
-        private Caratula caratula;
         private string album;
         private IPicture pre_caratula;
         public string path;
@@ -44,7 +43,6 @@ namespace Entrega2
         public string Nombre_Estudio { get => nombre_Estudio; set => nombre_Estudio = value; }
         public string Genero { get => genero; set => genero = value; }
         public int Rating { get => rating; set => rating = value; }
-        public Caratula Caratula { get => caratula; set => caratula = value; }
         public string Album { get => album; set => album = value; }
         public IPicture Pre_caratula { get => pre_caratula; set => pre_caratula = value; }
         public string Path { get => path; set => path = value; }
@@ -87,23 +85,11 @@ namespace Entrega2
 
             
 
-            //Caratula caratula = new Caratula(song.Tag.Pictures);
+            
             this.seconds = Convert.ToInt32(song.Properties.Duration.Seconds);
             
         }
 
-
-
-        //Metodo momentaneo
-        public string Show_info(Cancion cancion)
-        {
-            string info;
-            info = "Nombre:" + cancion.titulo_Cancion + "\n" + "Compositor: " + cancion.Banda
-            + "\n" + "N° pista: " + cancion.numero_Cancion_Album + "\n"
-                + "Lanzamiento: " + cancion.fecha_Lanzamiento + "\n" + "Estudio: " + cancion.nombre_Estudio + "\n"
-                + "Genero: " + cancion.genero + "\n" + "Album: " + cancion.Album + "\n" + cancion.duration + "\n";
-            return info;
-        }
         public void descargarCancion( Usuario usuario)
         {
             

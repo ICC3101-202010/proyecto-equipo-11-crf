@@ -83,10 +83,8 @@
     <Compile Include="Director.cs" />
     <Compile Include="Efecto.cs" />
     <Compile Include="Finder.cs" />
-    <Compile Include="Importer.cs" />
     <Compile Include="InputOutput .cs" />
     <Compile Include="LAUNCHER-Spotlix.cs" />
-    <Compile Include="Mixer.cs" />
     <Compile Include="Mediadatabase.cs" />
     <Compile Include="Reproductor.cs" />
     <Compile Include="Usuario.cs" />
@@ -98,8 +96,6 @@
     <Compile Include="Cancion.cs" />
     <Compile Include="Banda.cs" />
     <Compile Include="Album.cs" />
-    <Compile Include="Caratula.cs" />
-    <Compile Include="Ranking.cs" />
     <Compile Include="RegistroUsuarios.cs" />
     <Compile Include="CambiarContrasena.cs" />
     <Compile Include="EnvioMail.cs" />

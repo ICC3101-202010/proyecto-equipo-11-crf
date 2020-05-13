@@ -25,7 +25,7 @@ namespace Entrega2
             foreach (var mp3_file in Biblioteca_folder.GetFiles())
             {
                 Cancion cancion = new Cancion(mp3_file.FullName);
-                //Console.WriteLine(cancion.Show_info(cancion));
+                
                 Library.Add(cancion);
             }
             return Library;
