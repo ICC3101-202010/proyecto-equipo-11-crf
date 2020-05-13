@@ -164,6 +164,8 @@ namespace Entrega2
                                 Console.Clear();
                                 Console.WriteLine("Lamentamos Verte Partir!");
                                 Console.WriteLine("");
+                                Console.WriteLine("Ingresa tu nombre de Usuario");
+                                string nombre = Console.ReadLine();
                                 Console.WriteLine("Por favor escribenos el motivo de tu partida");
                                 string motivo = Console.ReadLine();
                                 Console.WriteLine("Presiona Enter para Confirmar la Cancelacion de tu Membresia");
@@ -175,6 +177,21 @@ namespace Entrega2
                                     member = "false";
                                     b = 1;
                                     Console.Clear();
+                                    List<string> data = database.GetData(nombre);
+                                    Usuario usuario4 = new Usuario();
+                                    usuario4.Username = data[0];
+                                    usuario4.Username = data[1];
+                                    usuario4.Mail = data[2];
+                                    usuario4.Contraseña = data[3];
+                                    usuario4.privacidad = data[4];
+                                    usuario4.Telefono = data[7];
+                                    usuario4.Member = member;
+                                    usuario4.followers = data[9];
+
+                                    IFormatter formatter1 = new BinaryFormatter();
+                                    Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                                    formatter1.Serialize(stream1, usuario4);
+                                    stream1.Close();
                                     /*IFormatter formatter1 = new BinaryFormatter();
                                     Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                                     formatter1.Serialize(stream1, usuario);
@@ -200,6 +217,8 @@ namespace Entrega2
                         Console.WriteLine("1 --> Si");
                         Console.WriteLine("2 --> No");
                         int contratar = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingresa tu nombre de Usuario");
+                        string nombre = Console.ReadLine();
                         if (contratar == 1)
                         {
                             
@@ -209,6 +228,21 @@ namespace Entrega2
                             Console.WriteLine("");
                             Console.WriteLine("Ya puedes disfrutar de musica Ilimitada y sin Anuncios!");
                             member = "true";
+                            List<string> data = database.GetData(nombre);
+                            Usuario usuario4 = new Usuario();
+                            usuario4.Username = data[0];
+                            usuario4.Username = data[1];
+                            usuario4.Mail = data[2];
+                            usuario4.Contraseña = data[3];
+                            usuario4.privacidad = data[4];
+                            usuario4.Telefono = data[7];
+                            usuario4.Member = member;
+                            usuario4.followers = data[9];
+
+                            IFormatter formatter1 = new BinaryFormatter();
+                            Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter1.Serialize(stream1, usuario4);
+                            stream1.Close();
                             Thread.Sleep(2000);
 
                             /*IFormatter formatter1 = new BinaryFormatter();
