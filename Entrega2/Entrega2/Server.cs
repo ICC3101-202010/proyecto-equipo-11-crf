@@ -312,21 +312,12 @@ namespace Entrega2
                 {
                     Console.Write("Ingrese el nuevo nombre de usuario: ");
                     string NuevoNombre = Console.ReadLine();
-                    foreach (List<string> user in registrados.Values)
-                    {
-                        if (user[0] == NuevoNombre)
-                        {
-                            Console.WriteLine("El nombre de Usuario ya existe");
-                        }
-                        else
-                        {
-                            Data.ChangeUsername(usuario, NuevoNombre);
+                    Data.ChangeUsername(usuario, NuevoNombre);
 
-                            List<string> data = Data.GetData(usuario);
-                            OnUsernameChanged(data[0], data[1], data[5]);
-                            b = "2";
-                        }
-                    }
+                    List<string> data = Data.GetData(usuario);
+                    OnUsernameChanged(data[0], data[1], data[5]);
+                    b = "2";
+
                 }
                 
                 
