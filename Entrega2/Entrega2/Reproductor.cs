@@ -70,6 +70,7 @@ namespace Entrega2
                 {
                     Console.Clear();
                     Console.WriteLine(cancion.Titulo_Cancion);
+                    this.show_lyrics(cancion);
                     Console.WriteLine("1-pausa 2-contiuar 3-Siguiente");
                     n = Console.ReadLine();
                     
@@ -352,10 +353,14 @@ namespace Entrega2
         
             
         }
-        public void show_lyrics(Cancion song) 
+        public void show_lyrics(Cancion song)
         {
             string letra = song.Letra;
-            Console.WriteLine(letra);
+            foreach (var caracter in letra)
+            {
+                Console.WriteLine(caracter);
+
+            }
         }
     }
 }  
