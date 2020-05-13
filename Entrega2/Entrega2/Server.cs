@@ -93,7 +93,7 @@ namespace Entrega2
             List<string> data = formatter.Deserialize(stream) as List<string> ;
             reg.registrados.Add(registrados.Count + 1, data); */
 
-            
+
 
             /*IFormatter formatter2 = new BinaryFormatter();
             Stream stream2 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -101,15 +101,27 @@ namespace Entrega2
 
             stream2.Close();
             */
-            
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Usuario usuario1 = formatter.Deserialize(stream) as Usuario;
-            stream.Close();
-            string verificationLink = GenerateLink(usuario1.Username);
-            Data.AddUser(new List<string>()
+            try
+            {
+                IFormatter formatter1 = new BinaryFormatter();
+                Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                Usuario usuario1 = formatter1.Deserialize(stream1) as Usuario;
+                stream1.Close();
+                string verificationLink = GenerateLink(usuario1.Username);
+                Data.AddUser(new List<string>()
                 {usuario1.Username,  usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member, usuario1.followers});
-
+            }
+            catch (Exception ex)
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                Usuario usuario1 = formatter.Deserialize(stream) as Usuario;
+                stream.Close();
+                string verificationLink = GenerateLink(usuario1.Username);
+                Data.AddUser(new List<string>()
+                {usuario1.Username,  usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member, usuario1.followers});
+            }
+            
 
             /*IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -317,7 +329,20 @@ namespace Entrega2
                     List<string> data = Data.GetData(NuevoNombre);
                     OnUsernameChanged( data[1], data[5]);
                     b = "2";
-
+                    /*Usuario usuario4 = new Usuario();
+                    usuario4.Username = data[0];
+                    usuario4.Username = data[1];
+                    usuario4.Mail = data[2];
+                    usuario4.Contraseña = data[3];
+                    usuario4.privacidad = data[4];
+                    usuario4.Telefono = data[7];
+                    usuario4.Member = data[8];
+                    usuario4.followers = data[9];*/
+                    usuario1.Username = NuevoNombre;
+                    IFormatter formatter1 = new BinaryFormatter();
+                    Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                    formatter1.Serialize(stream1, usuario1);
+                    stream1.Close();
                 }
                 
                 
@@ -363,6 +388,21 @@ namespace Entrega2
                         List<string> data = Data.GetData(usuario);
                         OnPasswordChanged(data[0], data[1], data[5]);
                         a = "2";
+                        /*Usuario usuario4 = new Usuario();
+                        usuario4.Username = usuario1.Username;
+                        usuario4.Mail = data[2];
+                        usuario4.Contraseña = data[3];
+                        usuario4.privacidad = data[4];
+                        usuario4.Telefono = data[7];
+                        usuario4.Member = data[8];
+                        usuario4.followers = data[9];*/
+                        usuario1.Contraseña = NuevaContrasena1;
+
+                        IFormatter formatter1 = new BinaryFormatter();
+                        Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                        formatter1.Serialize(stream1, usuario1);
+                        stream1.Close();
+
                     }
                     else
                     {

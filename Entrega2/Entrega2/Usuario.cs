@@ -133,6 +133,7 @@ namespace Entrega2
                 }
                 else if (respuesta == 3)
                 {
+
                     List<string> usuario1 = new List<string>();
                     Membresia_Usuario usuario = new Membresia_Usuario();
                     usuario.username = username;
@@ -147,6 +148,13 @@ namespace Entrega2
                     usuario1.Add(Convert.ToString(DateTime.Now));
                     usuario1.Add(telefono);
                     usuario1.Add(member);
+                    IFormatter formatter = new BinaryFormatter();
+                    Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                    Usuario usuario2 = formatter.Deserialize(stream) as Usuario;
+                    stream.Close();
+                    string verificationLink = server.GenerateLink(usuario2.Username);
+                    database.AddUser(new List<string>() {usuario2.Username,  usuario2.Mail, usuario2.Contraseña, usuario2.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario2.Telefono, usuario2.Member, usuario2.followers});
+
                     if (member == "true")
                     {
                         Console.WriteLine("Actualmente eres un Miembro Premium de Spotflix");
@@ -164,6 +172,8 @@ namespace Entrega2
                                 Console.Clear();
                                 Console.WriteLine("Lamentamos Verte Partir!");
                                 Console.WriteLine("");
+                                Console.WriteLine("Ingresa tu nombre de Usuario");
+                                string nombre = Console.ReadLine();
                                 Console.WriteLine("Por favor escribenos el motivo de tu partida");
                                 string motivo = Console.ReadLine();
                                 Console.WriteLine("Presiona Enter para Confirmar la Cancelacion de tu Membresia");
@@ -171,10 +181,26 @@ namespace Entrega2
                                 if (confirmacion== "")
                                 {
                                     database.UpdateMembership(usuario1);
-
+                                    
                                     member = "false";
+                                    usuario2.Member = member;
                                     b = 1;
                                     Console.Clear();
+                                    List<string> data = database.GetData(nombre);
+                                    /*Usuario usuario4 = new Usuario();
+                                    usuario4.Username = data[0];
+                                    usuario4.Username = data[1];
+                                    usuario4.Mail = data[2];
+                                    usuario4.Contraseña = data[3];
+                                    usuario4.privacidad = data[4];
+                                    usuario4.Telefono = data[7];
+                                    usuario4.Member = member;
+                                    usuario4.followers = data[9];*/
+
+                                    IFormatter formatter1 = new BinaryFormatter();
+                                    Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                                    formatter1.Serialize(stream1, usuario2);
+                                    stream1.Close();
                                     /*IFormatter formatter1 = new BinaryFormatter();
                                     Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                                     formatter1.Serialize(stream1, usuario);
@@ -200,6 +226,8 @@ namespace Entrega2
                         Console.WriteLine("1 --> Si");
                         Console.WriteLine("2 --> No");
                         int contratar = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingresa tu nombre de Usuario");
+                        string nombre = Console.ReadLine();
                         if (contratar == 1)
                         {
                             
@@ -209,6 +237,22 @@ namespace Entrega2
                             Console.WriteLine("");
                             Console.WriteLine("Ya puedes disfrutar de musica Ilimitada y sin Anuncios!");
                             member = "true";
+                            usuario2.Member = member;
+                            List<string> data = database.GetData(nombre);
+                            /*Usuario usuario4 = new Usuario();
+                            usuario4.Username = data[0];
+                            usuario4.Username = data[1];
+                            usuario4.Mail = data[2];
+                            usuario4.Contraseña = data[3];
+                            usuario4.privacidad = data[4];
+                            usuario4.Telefono = data[7];
+                            usuario4.Member = member;
+                            usuario4.followers = data[9];*/
+
+                            IFormatter formatter1 = new BinaryFormatter();
+                            Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter1.Serialize(stream1, usuario2);
+                            stream1.Close();
                             Thread.Sleep(2000);
 
                             /*IFormatter formatter1 = new BinaryFormatter();
