@@ -52,11 +52,11 @@ namespace Entrega2
 
         public event ChangeUsernameEventHandler UsernameChanged;
 
-        protected virtual void OnUsernameChanged(string contrasena, string email, string number)
+        protected virtual void OnUsernameChanged( string email, string number)
         {
             if (UsernameChanged != null)
             {
-                UsernameChanged(this, new CambiarNombreUsuarioEventArgs { Contrasena = contrasena , Email = email, Number = number });
+                UsernameChanged(this, new CambiarNombreUsuarioEventArgs {  Email = email, Number = number });
             }
         }
 
@@ -314,8 +314,8 @@ namespace Entrega2
                     string NuevoNombre = Console.ReadLine();
                     Data.ChangeUsername(usuario, NuevoNombre);
 
-                    List<string> data = Data.GetData(usuario);
-                    OnUsernameChanged(data[0], data[1], data[5]);
+                    List<string> data = Data.GetData(NuevoNombre);
+                    OnUsernameChanged( data[1], data[5]);
                     b = "2";
 
                 }
