@@ -140,7 +140,7 @@ namespace Entrega2
             string descripcion = null;
             foreach (List<string> user in this.registrados.Values)
             {
-                Console.WriteLine(user[2]);
+                
                 
                 if (user[0] == username && user[2] == contrasena)
                 {

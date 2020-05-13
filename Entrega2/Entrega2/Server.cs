@@ -324,7 +324,7 @@ namespace Entrega2
 
                             List<string> data = Data.GetData(usuario);
                             OnUsernameChanged(data[0], data[1], data[5]);
-
+                            b = "2";
                         }
                     }
                 }
