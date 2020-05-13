@@ -236,7 +236,7 @@ namespace Entrega2
                         else if (n == "3") 
                         {
                            Console.WriteLine("next...");
-                           Console.Clear();
+                           //Console.Clear();
                            break;
                         }
                         else if (n == "4")
@@ -348,7 +348,14 @@ namespace Entrega2
                 }
                 
             }
+
+        
             
+        }
+        public void show_lyrics(Cancion song) 
+        {
+            string letra = song.Letra;
+            Console.WriteLine(letra);
         }
     }
 }  

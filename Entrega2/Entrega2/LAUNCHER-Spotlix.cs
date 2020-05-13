@@ -119,8 +119,8 @@ namespace Entrega2
                                             reproductor.reproducirCancion(Player, song);
                                             //Action[] metodos = new Action[] { ()=>reproductor.reproducirCancion(Player, song),()=>reproductor.Show_lyrics(song,Player)};
                                             //Parallel.Invoke(metodos);
-                                            reproductor.reproducirLista(Player, reproductor.Queue(song));
-                                            //Parallel.Invoke(() => reproductor.reproducirLista(Player, reproductor.Queue(song)), () => reproductor.Show_lyrics(song, Player));
+                                            //reproductor.reproducirLista(Player, reproductor.Queue(song));
+                                            Parallel.Invoke(() => reproductor.reproducirLista(Player, reproductor.Queue(song)), () => reproductor.show_lyrics(song));
                                             {
 
                                             }
