@@ -169,9 +169,24 @@ namespace Entrega2
                                         }
                                         else if (opcionB == "2")
                                         {
-                                            Console.WriteLine("Ingrese el nombre del video");
-                                            string nombreVideo = Console.ReadLine();
-                                            retornoBuscarVideo.Add(finder.buscarVideo(nombreVideo, todosVideos));
+                                            Console.Write("[1]Nombre \n [2]Resolucion");
+                                            string opcionVid = Convert.ToString(Console.ReadLine());
+                                            if (opcionVid == "1")
+                                            {
+                                                Console.WriteLine("Ingrese nombre");
+                                                string nombreVideo = Console.ReadLine();
+                                                retornoBuscarVideo.Add(finder.buscarVideo(nombreVideo, todosVideos));
+
+                                            }
+                                            else if (opcionVid == "2") 
+                                            {
+                                                Console.WriteLine("Ingrese resolucion");
+                                                string resolucion = Console.ReadLine();
+                                                finder.buscarVideoResolucion(resolucion, todosVideos);
+
+                                            
+                                            }
+
                                         }
                                         else if (opcionB == "3")
                                         {

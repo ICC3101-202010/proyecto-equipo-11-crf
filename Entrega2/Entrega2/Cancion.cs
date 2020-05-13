@@ -29,7 +29,6 @@ namespace Entrega2
         private string banda;
         private int likes;
         private string duration;
-        private Image custom_image;
         private string usuario_;
         private bool favorite;
         private string letra;
