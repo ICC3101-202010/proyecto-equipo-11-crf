@@ -666,14 +666,14 @@ namespace Entrega2
                                                 {
                                                     Console.WriteLine("Ingrese nombre playlist");
                                                     string nombrePlaylist = Console.ReadLine();
-                                                    retornoBuscarCancion = finder.buscarPlaylist(nombrePlaylist, media_database.Playlists).Canciones;
+                                                    //retornoBuscarCancion = finder.buscarPlaylist(nombrePlaylist, media_database.Playlists).Canciones;
 
                                                 }
                                                 else if (opcionB == "4")
                                                 {
                                                     Console.WriteLine("Ingrese nombre Actor/Director");
                                                     string nombreActorDirector = Console.ReadLine();
-                                                    retornoBuscarVideo = finder.buscarActorDirector(nombreActorDirector, todosVideos);
+                                                    //retornoBuscarVideo = finder.buscarActorDirector(nombreActorDirector, todosVideos);
                                                 }
                                                 else if (opcionB == "5")
                                                 {
