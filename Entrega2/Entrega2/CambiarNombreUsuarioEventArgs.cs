@@ -5,6 +5,6 @@ namespace Entrega2
     {
         public string Email { get; set; }
         public string Number { get; set; }
-        public string Contrasena { get; set; }
+        
     }
 }
