@@ -194,8 +194,8 @@ namespace Entrega2
                         sonido.controls.play();
 
                         Console.WriteLine(song.Titulo_Cancion);
-                        
-                       
+
+                        this.show_lyrics(song);
                         Console.WriteLine("1-pausa 2-contiuar 3-Siguiente 4-Retroceder");
                         
                         n = Console.ReadLine();
@@ -356,11 +356,10 @@ namespace Entrega2
         public void show_lyrics(Cancion song)
         {
             string letra = song.Letra;
-            foreach (var caracter in letra)
-            {
-                Console.WriteLine(caracter);
 
-            }
+                Console.WriteLine(letra);
+
+            
         }
     }
 }  
