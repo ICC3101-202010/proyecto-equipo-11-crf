@@ -108,7 +108,7 @@ namespace Entrega2
             stream.Close();
             string verificationLink = GenerateLink(usuario1.Username);
             Data.AddUser(new List<string>()
-                {usuario1.Username, usuario1.Contraseña, usuario1.Mail, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member, usuario1.followers});
+                {usuario1.Username,  usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member, usuario1.followers});
 
 
             /*IFormatter formatter1 = new BinaryFormatter();
