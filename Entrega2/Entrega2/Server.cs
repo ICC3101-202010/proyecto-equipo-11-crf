@@ -329,7 +329,7 @@ namespace Entrega2
                     List<string> data = Data.GetData(NuevoNombre);
                     OnUsernameChanged( data[1], data[5]);
                     b = "2";
-                    Usuario usuario4 = new Usuario();
+                    /*Usuario usuario4 = new Usuario();
                     usuario4.Username = data[0];
                     usuario4.Username = data[1];
                     usuario4.Mail = data[2];
@@ -337,11 +337,11 @@ namespace Entrega2
                     usuario4.privacidad = data[4];
                     usuario4.Telefono = data[7];
                     usuario4.Member = data[8];
-                    usuario4.followers = data[9];
-
+                    usuario4.followers = data[9];*/
+                    usuario1.Username = NuevoNombre;
                     IFormatter formatter1 = new BinaryFormatter();
                     Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-                    formatter1.Serialize(stream1, usuario4);
+                    formatter1.Serialize(stream1, usuario1);
                     stream1.Close();
                 }
                 
@@ -388,19 +388,19 @@ namespace Entrega2
                         List<string> data = Data.GetData(usuario);
                         OnPasswordChanged(data[0], data[1], data[5]);
                         a = "2";
-                        Usuario usuario4 = new Usuario();
-                        usuario4.Username = data[0];
-                        usuario4.Username = data[1];
+                        /*Usuario usuario4 = new Usuario();
+                        usuario4.Username = usuario1.Username;
                         usuario4.Mail = data[2];
                         usuario4.Contraseña = data[3];
                         usuario4.privacidad = data[4];
                         usuario4.Telefono = data[7];
                         usuario4.Member = data[8];
-                        usuario4.followers = data[9];
+                        usuario4.followers = data[9];*/
+                        usuario1.Contraseña = NuevaContrasena1;
 
                         IFormatter formatter1 = new BinaryFormatter();
                         Stream stream1 = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-                        formatter1.Serialize(stream1, usuario4);
+                        formatter1.Serialize(stream1, usuario1);
                         stream1.Close();
 
                     }
