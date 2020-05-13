@@ -108,7 +108,7 @@ namespace Entrega2
             stream.Close();
             string verificationLink = GenerateLink(usuario1.Username);
             Data.AddUser(new List<string>()
-                {usuario1.Username, usuario1.Mail, usuario1.Contraseña, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member, usuario1.followers});
+                {usuario1.Username, usuario1.Contraseña, usuario1.Mail, usuario1.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario1.Telefono, usuario1.Member, usuario1.followers});
 
 
             /*IFormatter formatter1 = new BinaryFormatter();
@@ -297,9 +297,8 @@ namespace Entrega2
             string contrasena = Console.ReadLine();
 
             string result = Data.LogIn(usuario, contrasena);
-            Console.WriteLine("########################");
-            Console.WriteLine(result);
-            Console.WriteLine("########################");
+            
+            result = null;
             if (result == null)
             {
 
@@ -314,7 +313,7 @@ namespace Entrega2
                     else
                     {
                         Data.ChangeUsername(usuario, NuevoNombre);
-
+                        
                         List<string> data = Data.GetData(usuario);
                         OnUsernameChanged(data[0], data[1], data[5]);
                         
@@ -340,9 +339,8 @@ namespace Entrega2
             int a = 1;
             string result = Data.LogIn(usuario, contrasena);
 
-            Console.WriteLine("########################");
-            Console.WriteLine(result);
-            Console.WriteLine("########################");
+            
+            result = null;
             if (result == null)
             {
                 while (a == 1)
