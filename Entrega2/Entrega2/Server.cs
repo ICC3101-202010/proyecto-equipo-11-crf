@@ -297,28 +297,31 @@ namespace Entrega2
             string contrasena = Console.ReadLine();
 
             string result = Data.LogIn(usuario, contrasena);
+            string b = "1";
             
-            result = null;
             if (result == null)
             {
-
-                Console.Write("Ingrese el nuevo nombre de usuario: ");
-                string NuevoNombre = Console.ReadLine();
-                foreach (List<string> user in registrados.Values)
+                while (b == "1")
                 {
-                    if (user[0] == NuevoNombre)
+                    Console.Write("Ingrese el nuevo nombre de usuario: ");
+                    string NuevoNombre = Console.ReadLine();
+                    foreach (List<string> user in registrados.Values)
                     {
-                        Console.WriteLine("El nombre de Usuario ya existe") ;
-                    }
-                    else
-                    {
-                        Data.ChangeUsername(usuario, NuevoNombre);
-                        
-                        List<string> data = Data.GetData(usuario);
-                        OnUsernameChanged(data[0], data[1], data[5]);
-                        
+                        if (user[0] == NuevoNombre)
+                        {
+                            Console.WriteLine("El nombre de Usuario ya existe");
+                        }
+                        else
+                        {
+                            Data.ChangeUsername(usuario, NuevoNombre);
+
+                            List<string> data = Data.GetData(usuario);
+                            OnUsernameChanged(data[0], data[1], data[5]);
+
+                        }
                     }
                 }
+                
                 
                 
             }
@@ -336,14 +339,14 @@ namespace Entrega2
             string usuario = Console.ReadLine();
             Console.WriteLine("Ingresa tu contrasena: ");
             string contrasena = Console.ReadLine();
-            int a = 1;
+            string a = "1";
             string result = Data.LogIn(usuario, contrasena);
 
             
-            result = null;
+            
             if (result == null)
             {
-                while (a == 1)
+                while (a == "1")
                 {
                     Console.Write("Ingrese la nueva contrasena: ");
                     string NuevaContrasena1 = Console.ReadLine();
@@ -355,12 +358,12 @@ namespace Entrega2
 
                         List<string> data = Data.GetData(usuario);
                         OnPasswordChanged(data[0], data[1], data[5]);
-                        a = 2;
+                        a = "2";
                     }
                     else
                     {
                         Console.WriteLine("Contrasenas no coinciden");
-                        a = 1;
+                        a = "1";
                     }
 
 
