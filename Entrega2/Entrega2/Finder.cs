@@ -161,7 +161,7 @@ namespace Entrega2
                         }
 
                     }
-                    catch (System.NullReferenceException ex)
+                    catch (Exception ex)
                     {
                         Console.WriteLine("Error: "+ex.Message);
                     }

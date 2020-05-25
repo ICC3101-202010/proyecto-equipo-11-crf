@@ -673,7 +673,15 @@ namespace Entrega2
                                                 {
                                                     Console.WriteLine("Ingrese nombre Actor/Director");
                                                     string nombreActorDirector = Console.ReadLine();
-                                                    retornoBuscarVideo = finder.buscarActorDirector(nombreActorDirector, todosVideos);
+                                                    try
+                                                    {
+                                                        //retornoBuscarVideo = finder.buscarActorDirector(nombreActorDirector, todosVideos);
+                                                    }
+                                                    catch(Exception exep)
+                                                    {
+                                                        Console.WriteLine(exep.Message);
+                                                    }
+                                                    
                                                 }
                                                 else if (opcionB == "5")
                                                 {
