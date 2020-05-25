@@ -666,13 +666,14 @@ namespace Entrega2
                                                 {
                                                     Console.WriteLine("Ingrese nombre playlist");
                                                     string nombrePlaylist = Console.ReadLine();
-                                                    retornoBuscarCancion = finder.buscarPlaylist(nombrePlaylist, media_database.Playlists).Canciones;
+                                                    //retornoBuscarCancion = finder.buscarPlaylist(nombrePlaylist, media_database.Playlists).Canciones;
 
                                                 }
                                                 else if (opcionB == "4")
                                                 {
                                                     Console.WriteLine("Ingrese nombre Actor/Director");
                                                     string nombreActorDirector = Console.ReadLine();
+<<<<<<< HEAD
                                                     try
                                                     {
                                                         //retornoBuscarVideo = finder.buscarActorDirector(nombreActorDirector, todosVideos);
@@ -682,6 +683,9 @@ namespace Entrega2
                                                         Console.WriteLine(exep.Message);
                                                     }
                                                     
+=======
+                                                    //retornoBuscarVideo = finder.buscarActorDirector(nombreActorDirector, todosVideos);
+>>>>>>> 645ed2a10658da8cd8032c33efe65c66769e0ad1
                                                 }
                                                 else if (opcionB == "5")
                                                 {
