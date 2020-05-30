@@ -14,9 +14,13 @@ namespace Entrega3
     {
         List<Panel> stackPanels = new List<Panel>();
         Dictionary<string, Panel> panels = new Dictionary<string, Panel>();
+        //UCRegister UCRegister uCRegister = new UCRegister();
         public Form1()
         {
             InitializeComponent();
+            //UCWelcome uCWelcome = new UCWelcome();
+            //uCWelcome.BringToFront();
+            //uCWelcome.Show();
         }
         private void ShowLastPanel()
         {
@@ -40,6 +44,18 @@ namespace Entrega3
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ucWelcome1.BringToFront();
+            
+
+        }
+
+        private void ucRegister1_Load(object sender, EventArgs e)
         {
 
         }
