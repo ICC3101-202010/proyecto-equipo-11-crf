@@ -31,6 +31,7 @@
             this.ucPreferencesRegister1 = new Entrega3.UCPreferencesRegister();
             this.ucRegister1 = new Entrega3.UCRegister();
             this.ucWelcome1 = new Entrega3.UCWelcome();
+            this.ucMailValidation1 = new Entrega3.UCMailValidation();
             this.SuspendLayout();
             // 
             // ucPreferencesRegister1
@@ -40,6 +41,7 @@
             this.ucPreferencesRegister1.Name = "ucPreferencesRegister1";
             this.ucPreferencesRegister1.Size = new System.Drawing.Size(643, 356);
             this.ucPreferencesRegister1.TabIndex = 2;
+            this.ucPreferencesRegister1.Load += new System.EventHandler(this.ucPreferencesRegister1_Load);
             // 
             // ucRegister1
             // 
@@ -58,11 +60,20 @@
             this.ucWelcome1.Size = new System.Drawing.Size(643, 356);
             this.ucWelcome1.TabIndex = 0;
             // 
+            // ucMailValidation1
+            // 
+            this.ucMailValidation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucMailValidation1.Location = new System.Drawing.Point(0, 0);
+            this.ucMailValidation1.Name = "ucMailValidation1";
+            this.ucMailValidation1.Size = new System.Drawing.Size(643, 356);
+            this.ucMailValidation1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 356);
+            this.Controls.Add(this.ucMailValidation1);
             this.Controls.Add(this.ucPreferencesRegister1);
             this.Controls.Add(this.ucRegister1);
             this.Controls.Add(this.ucWelcome1);
@@ -78,6 +89,7 @@
         private UCWelcome ucWelcome1;
         private UCRegister ucRegister1;
         private UCPreferencesRegister ucPreferencesRegister1;
+        private UCMailValidation ucMailValidation1;
     }
 }
 
