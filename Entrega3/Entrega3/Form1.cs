@@ -19,7 +19,7 @@ namespace Entrega3
         private static UserControl ucRegister;
         private static UserControl ucPreferences;
         private static UserControl ucMailVerified;
-        private static UCLoading ucLoading;
+        private static UserControl ucLoading;
         private static UserControl ucMainmenu;
 
         UserControl Main_Menu = new UCMainMenu();
@@ -34,19 +34,17 @@ namespace Entrega3
         public static UserControl UcPreferences { get => ucPreferences; set => ucPreferences = value; }
         public static UserControl UcMailVerified { get => ucMailVerified; set => ucMailVerified = value; }
         public static UserControl UcLogin { get => ucLogin; set => ucLogin = value; }
-        public static UCLoading UcLoading { get => ucLoading; set => ucLoading = value; }
+        public static UserControl UcLoading { get => ucLoading; set => ucLoading = value; }
         public static UserControl UcMainMenu { get => ucMainmenu; set => ucMainmenu = value; }
 
 
 
 
-        //UCRegister UCRegister uCRegister = new UCRegister();
+  
         public Form1()
         {
             InitializeComponent();
-            //UCWelcome uCWelcome = new UCWelcome();
-            //uCWelcome.BringToFront();
-            //uCWelcome.Show();
+
             
         }
         
@@ -78,21 +76,22 @@ namespace Entrega3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            UcMainMenu = ucMainMenu1;
+            ucLoading = ucLoading1;
             ucLogin = ucLoging1;        
             ucWelcome = ucWelcome1;
             ucPreferences = ucPreferencesRegister1;
             ucMailVerified = ucMailValidation1;
-            ucLoading = ucLoading1;
+            UcMainMenu = ucMainMenu1;
             
             ucWelcome1.BringToFront();
             
             ucRegister = ucRegister1;
+            UcMainMenu.Hide();
+            ucLoading.Hide();
             ucLogin.Hide();
             ucPreferences.Hide();
             ucMailVerified.Hide();
-            ucLoading.Hide();
-            UcMainMenu.Hide();
+
             
         }
 
@@ -106,23 +105,10 @@ namespace Entrega3
 
         }
 
-        private void ucMainMenu1_Load(object sender, EventArgs e)
-        {
-            
-            
-        }
 
-        private void ucLoading1_Load(object sender, EventArgs e)
-        {
-            Thread.Sleep(2000);
-            //this.UcLoading.Label_pause();
-            Thread.Sleep(2000);
-            UcLoading.Label_pause();
-            
-            //this.UcLoading.Hide();
-            //UcMainMenu.Show();
-            
-        }
+
+
+
 
     }
 }

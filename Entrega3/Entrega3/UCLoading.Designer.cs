@@ -56,7 +56,6 @@
             this.labelLoading.Size = new System.Drawing.Size(89, 25);
             this.labelLoading.TabIndex = 1;
             this.labelLoading.Text = "Loading";
-            this.labelLoading.Visible = false;
             this.labelLoading.Click += new System.EventHandler(this.labelLoading_Click);
             // 
             // UCLoading
@@ -71,6 +70,7 @@
             this.Name = "UCLoading";
             this.Size = new System.Drawing.Size(643, 356);
             this.Load += new System.EventHandler(this.UCLoading_Load);
+            this.EnabledChanged += new System.EventHandler(this.UCLoading_EnabledChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

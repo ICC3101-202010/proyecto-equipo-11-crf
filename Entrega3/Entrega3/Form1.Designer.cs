@@ -28,14 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ucMainMenu1 = new Entrega3.UCMainMenu();
             this.ucLoading1 = new Entrega3.UCLoading();
             this.ucLoging1 = new Entrega3.UCLoging();
             this.ucMailValidation1 = new Entrega3.UCMailValidation();
             this.ucPreferencesRegister1 = new Entrega3.UCPreferencesRegister();
             this.ucRegister1 = new Entrega3.UCRegister();
             this.ucWelcome1 = new Entrega3.UCWelcome();
-            this.ucMainMenu1 = new Entrega3.UCMainMenu();
             this.SuspendLayout();
+            // 
+            // ucMainMenu1
+            // 
+            this.ucMainMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.ucMainMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucMainMenu1.Location = new System.Drawing.Point(0, 0);
+            this.ucMainMenu1.Name = "ucMainMenu1";
+            this.ucMainMenu1.Size = new System.Drawing.Size(643, 356);
+            this.ucMainMenu1.TabIndex = 6;
             // 
             // ucLoading1
             // 
@@ -47,7 +56,6 @@
             this.ucLoading1.Name = "ucLoading1";
             this.ucLoading1.Size = new System.Drawing.Size(643, 356);
             this.ucLoading1.TabIndex = 5;
-            this.ucLoading1.Load += new System.EventHandler(this.ucLoading1_Load);
             // 
             // ucLoging1
             // 
@@ -90,16 +98,6 @@
             this.ucWelcome1.Name = "ucWelcome1";
             this.ucWelcome1.Size = new System.Drawing.Size(643, 356);
             this.ucWelcome1.TabIndex = 0;
-            // 
-            // ucMainMenu1
-            // 
-            this.ucMainMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
-            this.ucMainMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucMainMenu1.Location = new System.Drawing.Point(0, 0);
-            this.ucMainMenu1.Name = "ucMainMenu1";
-            this.ucMainMenu1.Size = new System.Drawing.Size(643, 356);
-            this.ucMainMenu1.TabIndex = 6;
-            this.ucMainMenu1.Load += new System.EventHandler(this.ucMainMenu1_Load);
             // 
             // Form1
             // 

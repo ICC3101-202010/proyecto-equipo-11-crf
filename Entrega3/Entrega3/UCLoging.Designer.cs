@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.PanelRegisterInformation = new System.Windows.Forms.Panel();
+            this.labelError = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.labelLogIn = new System.Windows.Forms.Label();
             this.textBoxPasswordLogin = new System.Windows.Forms.TextBox();
             this.textBoxUsernameLogIn = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsernameRegister = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.labelError = new System.Windows.Forms.Label();
             this.PanelRegisterInformation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,28 @@
             this.PanelRegisterInformation.Name = "PanelRegisterInformation";
             this.PanelRegisterInformation.Size = new System.Drawing.Size(643, 356);
             this.PanelRegisterInformation.TabIndex = 7;
+            this.PanelRegisterInformation.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelRegisterInformation_Paint);
+            // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Location = new System.Drawing.Point(169, 271);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(294, 16);
+            this.labelError.TabIndex = 17;
+            this.labelError.Text = "ERROR, please fill all the field, or incorrect users";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(281, 319);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 16;
+            this.btnLogin.Text = "Log In";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // labelLogIn
             // 
@@ -107,27 +129,6 @@
             this.labelUsernameRegister.Size = new System.Drawing.Size(77, 18);
             this.labelUsernameRegister.TabIndex = 0;
             this.labelUsernameRegister.Text = "Username";
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(281, 319);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 16;
-            this.btnLogin.Text = "Log In";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // labelError
-            // 
-            this.labelError.AutoSize = true;
-            this.labelError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(169, 271);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(294, 16);
-            this.labelError.TabIndex = 17;
-            this.labelError.Text = "ERROR, please fill all the field, or incorrect users";
             // 
             // UCLoging
             // 

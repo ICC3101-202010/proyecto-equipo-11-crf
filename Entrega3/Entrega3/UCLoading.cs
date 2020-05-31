@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
+
 namespace Entrega3
 {
     public partial class UCLoading : UserControl
@@ -27,12 +28,13 @@ namespace Entrega3
         {
 
         }
-        public void Label_pause() 
+
+        private void UCLoading_EnabledChanged(object sender, EventArgs e)
         {
-            labelLoading.Visible = true;
+           // Thread.Sleep(2000);
+            //Form1.UcLoading.Hide();
+            //Form1.UcMainMenu.Show();
             
         }
-        
-        
     }
 }
