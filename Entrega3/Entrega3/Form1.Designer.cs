@@ -28,11 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.ucLoading1 = new Entrega3.UCLoading();
+            this.ucLoging1 = new Entrega3.UCLoging();
+            this.ucMailValidation1 = new Entrega3.UCMailValidation();
             this.ucPreferencesRegister1 = new Entrega3.UCPreferencesRegister();
             this.ucRegister1 = new Entrega3.UCRegister();
             this.ucWelcome1 = new Entrega3.UCWelcome();
-            this.ucMailValidation1 = new Entrega3.UCMailValidation();
+            this.ucMainMenu1 = new Entrega3.UCMainMenu();
             this.SuspendLayout();
+            // 
+            // ucLoading1
+            // 
+            this.ucLoading1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.ucLoading1.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.ucLoading1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLoading1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.ucLoading1.Location = new System.Drawing.Point(0, 0);
+            this.ucLoading1.Name = "ucLoading1";
+            this.ucLoading1.Size = new System.Drawing.Size(643, 356);
+            this.ucLoading1.TabIndex = 5;
+            this.ucLoading1.Load += new System.EventHandler(this.ucLoading1_Load);
+            // 
+            // ucLoging1
+            // 
+            this.ucLoging1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLoging1.Location = new System.Drawing.Point(0, 0);
+            this.ucLoging1.Name = "ucLoging1";
+            this.ucLoging1.Size = new System.Drawing.Size(643, 356);
+            this.ucLoging1.TabIndex = 4;
+            // 
+            // ucMailValidation1
+            // 
+            this.ucMailValidation1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucMailValidation1.Location = new System.Drawing.Point(0, 0);
+            this.ucMailValidation1.Name = "ucMailValidation1";
+            this.ucMailValidation1.Size = new System.Drawing.Size(643, 356);
+            this.ucMailValidation1.TabIndex = 3;
             // 
             // ucPreferencesRegister1
             // 
@@ -60,19 +91,24 @@
             this.ucWelcome1.Size = new System.Drawing.Size(643, 356);
             this.ucWelcome1.TabIndex = 0;
             // 
-            // ucMailValidation1
+            // ucMainMenu1
             // 
-            this.ucMailValidation1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucMailValidation1.Location = new System.Drawing.Point(0, 0);
-            this.ucMailValidation1.Name = "ucMailValidation1";
-            this.ucMailValidation1.Size = new System.Drawing.Size(643, 356);
-            this.ucMailValidation1.TabIndex = 3;
+            this.ucMainMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.ucMainMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucMainMenu1.Location = new System.Drawing.Point(0, 0);
+            this.ucMainMenu1.Name = "ucMainMenu1";
+            this.ucMainMenu1.Size = new System.Drawing.Size(643, 356);
+            this.ucMainMenu1.TabIndex = 6;
+            this.ucMainMenu1.Load += new System.EventHandler(this.ucMainMenu1_Load);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 356);
+            this.Controls.Add(this.ucMainMenu1);
+            this.Controls.Add(this.ucLoading1);
+            this.Controls.Add(this.ucLoging1);
             this.Controls.Add(this.ucMailValidation1);
             this.Controls.Add(this.ucPreferencesRegister1);
             this.Controls.Add(this.ucRegister1);
@@ -90,6 +126,9 @@
         private UCRegister ucRegister1;
         private UCPreferencesRegister ucPreferencesRegister1;
         private UCMailValidation ucMailValidation1;
+        private UCLoging ucLoging1;
+        private UCLoading ucLoading1;
+        private UCMainMenu ucMainMenu1;
     }
 }
 

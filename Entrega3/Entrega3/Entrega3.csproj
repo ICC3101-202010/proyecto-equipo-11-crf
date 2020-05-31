@@ -54,11 +54,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLoading.Designer.cs">
+      <DependentUpon>UCLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCLoging.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLoging.Designer.cs">
+      <DependentUpon>UCLoging.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCMailValidation.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCMailValidation.Designer.cs">
       <DependentUpon>UCMailValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCMainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMainMenu.Designer.cs">
+      <DependentUpon>UCMainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="UCPreferencesRegister.cs">
       <SubType>UserControl</SubType>
@@ -90,8 +108,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCLoading.resx">
+      <DependentUpon>UCLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLoging.resx">
+      <DependentUpon>UCLoging.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCMailValidation.resx">
       <DependentUpon>UCMailValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCMainMenu.resx">
+      <DependentUpon>UCMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCPreferencesRegister.resx">
       <DependentUpon>UCPreferencesRegister.cs</DependentUpon>

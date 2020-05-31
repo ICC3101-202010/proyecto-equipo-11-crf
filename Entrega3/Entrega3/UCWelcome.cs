@@ -47,5 +47,11 @@ namespace Entrega3
         {
 
         }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            Form1.UcWelcome.Hide();
+            Form1.UcLogin.Show();
+        }
     }
 }
