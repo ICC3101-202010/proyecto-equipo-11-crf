@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,19 +93,6 @@ namespace Entrega3
             
         }
 
-        private void ucRegister1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void ucPreferencesRegister1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ucMainMenu1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

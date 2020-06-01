@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{878571BE-A3F4-47EE-B6AC-63E91B59B874}</ProjectGuid>
+    <ProjectGuid>{C88BADC8-27CA-4351-A883-133E7C476276}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Entrega3</RootNamespace>
-    <AssemblyName>Entrega3</AssemblyName>
+    <RootNamespace>Spotflix</RootNamespace>
+    <AssemblyName>Spotflix</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -21,7 +21,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>3</WarningLevel>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,62 +46,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sasa.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="sasa.Designer.cs">
-      <DependentUpon>sasa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Spotflix.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Spotflix.Designer.cs">
-      <DependentUpon>Spotflix.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCLoading.cs">
+    <Compile Include="Loading.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCLoading.Designer.cs">
-      <DependentUpon>UCLoading.cs</DependentUpon>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCLoging.cs">
+    <Compile Include="LogIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCLoging.Designer.cs">
-      <DependentUpon>UCLoging.cs</DependentUpon>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCMailValidation.cs">
+    <Compile Include="MailValidation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCMailValidation.Designer.cs">
-      <DependentUpon>UCMailValidation.cs</DependentUpon>
+    <Compile Include="MailValidation.Designer.cs">
+      <DependentUpon>MailValidation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCMainMenu.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCMainMenu.Designer.cs">
-      <DependentUpon>UCMainMenu.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCPreferencesRegister.cs">
+    <Compile Include="Preferences.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCPreferencesRegister.Designer.cs">
-      <DependentUpon>UCPreferencesRegister.cs</DependentUpon>
+    <Compile Include="Preferences.Designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCRegister.cs">
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCRegister.Designer.cs">
-      <DependentUpon>UCRegister.cs</DependentUpon>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCWelcome.cs">
+    <Compile Include="Welcome.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCWelcome.Designer.cs">
-      <DependentUpon>UCWelcome.cs</DependentUpon>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailValidation.resx">
+      <DependentUpon>MailValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferences.resx">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -111,32 +123,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="sasa.resx">
-      <DependentUpon>sasa.cs</DependentUpon>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Spotflix.resx">
-      <DependentUpon>Spotflix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCLoading.resx">
-      <DependentUpon>UCLoading.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCLoging.resx">
-      <DependentUpon>UCLoging.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCMailValidation.resx">
-      <DependentUpon>UCMailValidation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCMainMenu.resx">
-      <DependentUpon>UCMainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCPreferencesRegister.resx">
-      <DependentUpon>UCPreferencesRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCRegister.resx">
-      <DependentUpon>UCRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCWelcome.resx">
-      <DependentUpon>UCWelcome.cs</DependentUpon>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -150,12 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Entrega2\Entrega2\Entrega2.csproj">
-      <Project>{6da9e48e-ac94-4673-934b-5206cb42db15}</Project>
-      <Name>Entrega2</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

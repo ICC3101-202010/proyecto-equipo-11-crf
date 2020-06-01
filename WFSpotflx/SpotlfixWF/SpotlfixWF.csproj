@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{878571BE-A3F4-47EE-B6AC-63E91B59B874}</ProjectGuid>
+    <ProjectGuid>{DC7D6A4C-546A-4237-B6A1-07E3E1023E11}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Entrega3</RootNamespace>
-    <AssemblyName>Entrega3</AssemblyName>
+    <RootNamespace>SpotlfixWF</RootNamespace>
+    <AssemblyName>SpotlfixWF</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -21,7 +21,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>3</WarningLevel>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,19 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sasa.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="sasa.Designer.cs">
-      <DependentUpon>sasa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Spotflix.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Spotflix.Designer.cs">
-      <DependentUpon>Spotflix.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tester.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tester.Designer.cs">
+      <DependentUpon>tester.cs</DependentUpon>
     </Compile>
     <Compile Include="UCLoading.cs">
       <SubType>UserControl</SubType>
@@ -111,12 +111,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="sasa.resx">
-      <DependentUpon>sasa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Spotflix.resx">
-      <DependentUpon>Spotflix.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UCLoading.resx">
       <DependentUpon>UCLoading.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,12 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Entrega2\Entrega2\Entrega2.csproj">
-      <Project>{6da9e48e-ac94-4673-934b-5206cb42db15}</Project>
-      <Name>Entrega2</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
