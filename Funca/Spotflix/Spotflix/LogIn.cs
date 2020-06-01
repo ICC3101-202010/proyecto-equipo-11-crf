@@ -16,5 +16,10 @@ namespace Spotflix
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Form1.MainMenu.Show();
+        }
     }
 }

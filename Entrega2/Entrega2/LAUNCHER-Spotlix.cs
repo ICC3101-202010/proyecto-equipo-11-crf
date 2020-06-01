@@ -41,7 +41,7 @@ namespace Entrega2
             List<Video> todosVideos = new List<Video>();
             todosVideos = reproductor.Video_Library();
             List<Efecto> todosEfecto = new List<Efecto>();
-            todosEfecto = reproductor.bibliotecaEfectos();
+            todosEfecto = reproductor.BibliotecaEfectos();
             List<Playlist> todasPlaylists = new List<Playlist>();
             List<Album> todosAlbum = new List<Album>();
             MediaDatabase media_database = new MediaDatabase();

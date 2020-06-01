@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entrega2
 {
-    class Efecto
+    public class Efecto
     {
         public string name;
         public string path;

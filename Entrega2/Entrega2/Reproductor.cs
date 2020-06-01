@@ -14,8 +14,9 @@ using TagLib;
 
 namespace Entrega2
 {
-    class Reproductor : Usuario
+    public class Reproductor : Usuario
     {
+        //public Reproductor() { }
         public List<Cancion> Library()
         {
             string directory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca");
@@ -290,7 +291,7 @@ namespace Entrega2
             }
             
         }
-        public List<Efecto> bibliotecaEfectos()
+        public List<Efecto> BibliotecaEfectos()
         {
             string directory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Efectos");
             DirectoryInfo Efectos_folder = new DirectoryInfo(directory);

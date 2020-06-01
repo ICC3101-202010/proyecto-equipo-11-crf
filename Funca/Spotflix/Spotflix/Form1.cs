@@ -79,13 +79,13 @@ namespace Spotflix
             Welcome = welcome1;
             MailVerified = mailValidation1;
             Preferences = preferences1;
-           
+            MainMenu = mainMenu1; 
 
             Welcome.BringToFront();
 
-            
-            
-           
+
+
+            MainMenu.Hide();
             Login.Hide();
             Preferences.Hide();
             MailVerified.Hide();

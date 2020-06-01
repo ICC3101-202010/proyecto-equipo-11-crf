@@ -34,6 +34,7 @@ namespace Entrega2
         private string letra;
         private int seconds;
         private int Largo_letra;
+        private Image custom_image;
 
         public string Banda { get => banda; set => banda = value; }
         public string Titulo_Cancion { get => titulo_Cancion; set => titulo_Cancion = value; }
@@ -47,7 +48,7 @@ namespace Entrega2
         public string Path { get => path; set => path = value; }
         public int Likes { get => likes; set => likes = value; }
         public int Reproducciones { get => reproducciones; set => reproducciones = value; }
-        private Image Custom_image { get => Custom_image; set => Custom_image = value; }
+        public Image Custom_image { get => custom_image; set => custom_image = value; }
         public string Duration { get => duration; set => duration = value; }
         public string Usuario_ { get => usuario_; set => usuario_ = value; }
         public bool Favorite { get => favorite; set => favorite = value; }
@@ -82,11 +83,17 @@ namespace Entrega2
                 this.duration = Convert.ToString(song.Properties.Duration.Seconds);
             }
 
-            
+            MemoryStream ms = new MemoryStream(song.Tag.Pictures[0].Data.Data);
+            this.Custom_image = Image.FromStream(ms);
 
-            
+
+
             this.seconds = Convert.ToInt32(song.Properties.Duration.Seconds);
             
+        }
+        public Cancion() 
+        { 
+        
         }
 
         public void descargarCancion( Usuario usuario)
@@ -130,6 +137,16 @@ namespace Entrega2
         {
             return Letra;
         }
+
+
+        public Cancion TNL() 
+        {
+            Cancion tnl = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/TheManWhoNeveLied.mp3");
+            return tnl;
+        
+        
+        } 
+ 
 
     }
 }
