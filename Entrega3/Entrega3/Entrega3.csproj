@@ -142,5 +142,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Entrega2\Entrega2\Entrega2.csproj">
+      <Project>{6da9e48e-ac94-4673-934b-5206cb42db15}</Project>
+      <Name>Entrega2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -45,6 +45,7 @@
             this.pictureBoxLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLoading.TabIndex = 0;
             this.pictureBoxLoading.TabStop = false;
+            this.pictureBoxLoading.Click += new System.EventHandler(this.pictureBoxLoading_Click);
             // 
             // labelLoading
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Entrega2;
 
 
 namespace Entrega3
@@ -34,6 +35,11 @@ namespace Entrega3
            // Thread.Sleep(2000);
             //Form1.UcLoading.Hide();
             //Form1.UcMainMenu.Show();
+            
+        }
+
+        private void pictureBoxLoading_Click(object sender, EventArgs e)
+        {
             
         }
     }

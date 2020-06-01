@@ -22,11 +22,12 @@ namespace Entrega3
         private static UserControl ucLoading;
         private static UserControl ucMainmenu;
 
-        UserControl Main_Menu = new UCMainMenu();
+        UserControl Main_Menu = new UCMainMenuLoading();
         UserControl Loading = new UCLoading();
 
 
         List<Panel> stackPanels = new List<Panel>();
+        static List<UserControl> stackUserControls = new List<UserControl>();
         Dictionary<string, Panel> panels = new Dictionary<string, Panel>();
 
         public static UserControl UcWelcome { get => ucWelcome; set => ucWelcome = value; }
@@ -36,11 +37,8 @@ namespace Entrega3
         public static UserControl UcLogin { get => ucLogin; set => ucLogin = value; }
         public static UserControl UcLoading { get => ucLoading; set => ucLoading = value; }
         public static UserControl UcMainMenu { get => ucMainmenu; set => ucMainmenu = value; }
+        public static List<UserControl> StackUserControls { get => stackUserControls; set => stackUserControls = value; }
 
-
-
-
-  
         public Form1()
         {
             InitializeComponent();
@@ -105,10 +103,9 @@ namespace Entrega3
 
         }
 
+        private void ucMainMenu1_Load(object sender, EventArgs e)
+        {
 
-
-
-
-
+        }
     }
 }

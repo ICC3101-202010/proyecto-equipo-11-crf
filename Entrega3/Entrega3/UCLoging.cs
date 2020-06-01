@@ -27,7 +27,7 @@ namespace Entrega3
             Form1.UcLogin.Hide();
             //Form1.UcLoading.BringToFront();
             Form1.UcLoading.Show();
-            Thread.Sleep(4000);
+            
             //Form1.UcLoading.Hide();
             //Thread.Sleep(4000);
             //Form1.UcLogin.Show();

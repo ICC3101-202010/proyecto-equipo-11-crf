@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Entrega3
 {
-    public partial class UCMainMenu : UserControl
+    public partial class UCMainMenuLoading : UserControl
     {
-        public UCMainMenu()
+        public UCMainMenuLoading()
         {
             InitializeComponent();
         }
 
         private void UCMainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

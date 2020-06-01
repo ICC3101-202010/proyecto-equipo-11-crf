@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucMainMenu1 = new Entrega3.UCMainMenu();
+            this.ucMainMenu1 = new Entrega3.UCMainMenuLoading();
             this.ucLoading1 = new Entrega3.UCLoading();
             this.ucLoging1 = new Entrega3.UCLoging();
             this.ucMailValidation1 = new Entrega3.UCMailValidation();
@@ -45,6 +45,7 @@
             this.ucMainMenu1.Name = "ucMainMenu1";
             this.ucMainMenu1.Size = new System.Drawing.Size(643, 356);
             this.ucMainMenu1.TabIndex = 6;
+            this.ucMainMenu1.Load += new System.EventHandler(this.ucMainMenu1_Load);
             // 
             // ucLoading1
             // 
@@ -126,7 +127,7 @@
         private UCMailValidation ucMailValidation1;
         private UCLoging ucLoging1;
         private UCLoading ucLoading1;
-        private UCMainMenu ucMainMenu1;
+        private UCMainMenuLoading ucMainMenu1;
     }
 }
 
