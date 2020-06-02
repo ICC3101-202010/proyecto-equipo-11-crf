@@ -32,5 +32,11 @@ namespace Spotflix
                 Form1.MailVerified.Show();
             }
         }
+
+        private void bAtrasRegistration_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1.Welcome.Show();
+        }
     }
 }

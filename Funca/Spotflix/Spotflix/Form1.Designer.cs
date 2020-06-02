@@ -28,20 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.mainMenu1 = new Spotflix.MainMenu();
             this.preferences1 = new Spotflix.Preferences();
             this.logIn1 = new Spotflix.LogIn();
             this.mailValidation1 = new Spotflix.MailValidation();
             this.register1 = new Spotflix.Register();
             this.welcome1 = new Spotflix.Welcome();
-            this.mainMenu1 = new Spotflix.MainMenu();
             this.SuspendLayout();
+            // 
+            // mainMenu1
+            // 
+            this.mainMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainMenu1.Location = new System.Drawing.Point(0, 0);
+            this.mainMenu1.Name = "mainMenu1";
+            this.mainMenu1.Size = new System.Drawing.Size(644, 372);
+            this.mainMenu1.TabIndex = 5;
+            this.mainMenu1.Load += new System.EventHandler(this.mainMenu1_Load);
             // 
             // preferences1
             // 
             this.preferences1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.preferences1.Location = new System.Drawing.Point(0, 0);
             this.preferences1.Name = "preferences1";
-            this.preferences1.Size = new System.Drawing.Size(643, 360);
+            this.preferences1.Size = new System.Drawing.Size(644, 372);
             this.preferences1.TabIndex = 4;
             // 
             // logIn1
@@ -49,7 +58,7 @@
             this.logIn1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logIn1.Location = new System.Drawing.Point(0, 0);
             this.logIn1.Name = "logIn1";
-            this.logIn1.Size = new System.Drawing.Size(643, 360);
+            this.logIn1.Size = new System.Drawing.Size(644, 372);
             this.logIn1.TabIndex = 3;
             // 
             // mailValidation1
@@ -58,7 +67,7 @@
             this.mailValidation1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mailValidation1.Location = new System.Drawing.Point(0, 0);
             this.mailValidation1.Name = "mailValidation1";
-            this.mailValidation1.Size = new System.Drawing.Size(643, 360);
+            this.mailValidation1.Size = new System.Drawing.Size(644, 372);
             this.mailValidation1.TabIndex = 2;
             // 
             // register1
@@ -66,7 +75,7 @@
             this.register1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.register1.Location = new System.Drawing.Point(0, 0);
             this.register1.Name = "register1";
-            this.register1.Size = new System.Drawing.Size(643, 360);
+            this.register1.Size = new System.Drawing.Size(644, 372);
             this.register1.TabIndex = 1;
             // 
             // welcome1
@@ -74,22 +83,14 @@
             this.welcome1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.welcome1.Location = new System.Drawing.Point(0, 0);
             this.welcome1.Name = "welcome1";
-            this.welcome1.Size = new System.Drawing.Size(643, 360);
+            this.welcome1.Size = new System.Drawing.Size(644, 372);
             this.welcome1.TabIndex = 0;
-            // 
-            // mainMenu1
-            // 
-            this.mainMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainMenu1.Location = new System.Drawing.Point(0, 0);
-            this.mainMenu1.Name = "mainMenu1";
-            this.mainMenu1.Size = new System.Drawing.Size(643, 360);
-            this.mainMenu1.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 360);
+            this.ClientSize = new System.Drawing.Size(644, 372);
             this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.preferences1);
             this.Controls.Add(this.logIn1);

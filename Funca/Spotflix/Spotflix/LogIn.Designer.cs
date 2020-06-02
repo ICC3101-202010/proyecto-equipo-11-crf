@@ -36,12 +36,14 @@
             this.textBoxUsernameLogIn = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsernameRegister = new System.Windows.Forms.Label();
+            this.bAtrasLogIn = new System.Windows.Forms.Button();
             this.PanelRegisterInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelRegisterInformation
             // 
             this.PanelRegisterInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.PanelRegisterInformation.Controls.Add(this.bAtrasLogIn);
             this.PanelRegisterInformation.Controls.Add(this.labelError);
             this.PanelRegisterInformation.Controls.Add(this.btnLogin);
             this.PanelRegisterInformation.Controls.Add(this.labelLogIn);
@@ -62,15 +64,15 @@
             this.labelError.ForeColor = System.Drawing.Color.Red;
             this.labelError.Location = new System.Drawing.Point(169, 271);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(294, 16);
+            this.labelError.Size = new System.Drawing.Size(301, 16);
             this.labelError.TabIndex = 17;
-            this.labelError.Text = "ERROR, please fill all the field, or incorrect users";
+            this.labelError.Text = "ERROR, please fill all the fields, or incorrect users";
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(281, 319);
+            this.btnLogin.Location = new System.Drawing.Point(349, 319);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(102, 23);
             this.btnLogin.TabIndex = 16;
             this.btnLogin.Text = "Log In";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -128,6 +130,16 @@
             this.labelUsernameRegister.TabIndex = 0;
             this.labelUsernameRegister.Text = "Username";
             // 
+            // bAtrasLogIn
+            // 
+            this.bAtrasLogIn.Location = new System.Drawing.Point(172, 319);
+            this.bAtrasLogIn.Name = "bAtrasLogIn";
+            this.bAtrasLogIn.Size = new System.Drawing.Size(102, 23);
+            this.bAtrasLogIn.TabIndex = 9;
+            this.bAtrasLogIn.Text = "back";
+            this.bAtrasLogIn.UseVisualStyleBackColor = true;
+            this.bAtrasLogIn.Click += new System.EventHandler(this.bAtrasLogIn_Click);
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.TextBox textBoxUsernameLogIn;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelUsernameRegister;
+        private System.Windows.Forms.Button bAtrasLogIn;
     }
 }

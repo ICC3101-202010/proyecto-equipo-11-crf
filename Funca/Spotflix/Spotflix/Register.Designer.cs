@@ -43,12 +43,14 @@
             this.labelMobileRegister = new System.Windows.Forms.Label();
             this.labelMailRegister = new System.Windows.Forms.Label();
             this.labelUsernameRegister = new System.Windows.Forms.Label();
+            this.bAtrasRegistration = new System.Windows.Forms.Button();
             this.PanelRegisterInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelRegisterInformation
             // 
             this.PanelRegisterInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.PanelRegisterInformation.Controls.Add(this.bAtrasRegistration);
             this.PanelRegisterInformation.Controls.Add(this.labelRegistrationRegister);
             this.PanelRegisterInformation.Controls.Add(this.btnSubmitRegister);
             this.PanelRegisterInformation.Controls.Add(this.checkBoxNoRegister);
@@ -86,7 +88,7 @@
             this.btnSubmitRegister.BackColor = System.Drawing.Color.Lavender;
             this.btnSubmitRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnSubmitRegister.Location = new System.Drawing.Point(270, 309);
+            this.btnSubmitRegister.Location = new System.Drawing.Point(350, 309);
             this.btnSubmitRegister.Name = "btnSubmitRegister";
             this.btnSubmitRegister.Size = new System.Drawing.Size(127, 23);
             this.btnSubmitRegister.TabIndex = 14;
@@ -218,6 +220,16 @@
             this.labelUsernameRegister.TabIndex = 0;
             this.labelUsernameRegister.Text = "Username";
             // 
+            // bAtrasRegistration
+            // 
+            this.bAtrasRegistration.Location = new System.Drawing.Point(180, 309);
+            this.bAtrasRegistration.Name = "bAtrasRegistration";
+            this.bAtrasRegistration.Size = new System.Drawing.Size(127, 23);
+            this.bAtrasRegistration.TabIndex = 8;
+            this.bAtrasRegistration.Text = "back";
+            this.bAtrasRegistration.UseVisualStyleBackColor = true;
+            this.bAtrasRegistration.Click += new System.EventHandler(this.bAtrasRegistration_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,5 +260,6 @@
         private System.Windows.Forms.Label labelMobileRegister;
         private System.Windows.Forms.Label labelMailRegister;
         private System.Windows.Forms.Label labelUsernameRegister;
+        private System.Windows.Forms.Button bAtrasRegistration;
     }
 }

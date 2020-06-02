@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.PanelMainMenu = new System.Windows.Forms.Panel();
-            this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelSpotflix = new System.Windows.Forms.Label();
             this.buttonRegistrar = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@
             // PanelMainMenu
             // 
             this.PanelMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
-            this.PanelMainMenu.Controls.Add(this.buttonSalir);
             this.PanelMainMenu.Controls.Add(this.buttonLogin);
             this.PanelMainMenu.Controls.Add(this.labelSpotflix);
             this.PanelMainMenu.Controls.Add(this.buttonRegistrar);
@@ -52,15 +50,6 @@
             this.PanelMainMenu.Name = "PanelMainMenu";
             this.PanelMainMenu.Size = new System.Drawing.Size(643, 356);
             this.PanelMainMenu.TabIndex = 2;
-            // 
-            // buttonSalir
-            // 
-            this.buttonSalir.Location = new System.Drawing.Point(276, 261);
-            this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(75, 23);
-            this.buttonSalir.TabIndex = 4;
-            this.buttonSalir.Text = "Salir";
-            this.buttonSalir.UseVisualStyleBackColor = true;
             // 
             // buttonLogin
             // 
@@ -129,7 +118,6 @@
         #endregion
 
         private System.Windows.Forms.Panel PanelMainMenu;
-        private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label labelSpotflix;
         private System.Windows.Forms.Button buttonRegistrar;

@@ -71,7 +71,7 @@ namespace Entrega2
             {
                 Console.WriteLine("1 --> Registrarse");
                 Console.WriteLine("2 --> Log in");
-                Console.WriteLine("3 --> Log Out");
+                Console.WriteLine("3 --> Cerrar");
 
                 string chosen = Console.ReadLine();
 

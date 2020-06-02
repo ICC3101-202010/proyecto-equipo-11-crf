@@ -93,6 +93,9 @@ namespace Spotflix
 
         }
 
+        private void mainMenu1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
