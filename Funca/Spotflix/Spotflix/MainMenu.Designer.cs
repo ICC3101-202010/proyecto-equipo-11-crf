@@ -33,18 +33,20 @@
             this.panelMainmenu = new System.Windows.Forms.Panel();
             this.panelMusicLibrary = new System.Windows.Forms.Panel();
             this.panelTestSOng = new System.Windows.Forms.Panel();
+            this.labelNameSong = new System.Windows.Forms.Label();
             this.pbTestSong = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelOptions = new System.Windows.Forms.Panel();
-            this.panelUserSettings = new System.Windows.Forms.Panel();
-            this.panelLibrary = new System.Windows.Forms.Panel();
-            this.panelMixer = new System.Windows.Forms.Panel();
             this.panelSearch = new System.Windows.Forms.Panel();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.labelNameSong = new System.Windows.Forms.Label();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.buttonFinder = new System.Windows.Forms.Button();
+            this.buttonLibrary = new System.Windows.Forms.Button();
+            this.buttonProfile = new System.Windows.Forms.Button();
+            this.buttonMixer = new System.Windows.Forms.Button();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.panelMusicLibrary.SuspendLayout();
@@ -52,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelOptions.SuspendLayout();
+            this.panelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +103,16 @@
             this.panelTestSOng.TabIndex = 0;
             this.panelTestSOng.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTestSOng_Paint);
             // 
+            // labelNameSong
+            // 
+            this.labelNameSong.AutoSize = true;
+            this.labelNameSong.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelNameSong.Location = new System.Drawing.Point(141, 19);
+            this.labelNameSong.Name = "labelNameSong";
+            this.labelNameSong.Size = new System.Drawing.Size(35, 13);
+            this.labelNameSong.TabIndex = 1;
+            this.labelNameSong.Text = "label2";
+            // 
             // pbTestSong
             // 
             this.pbTestSong.Dock = System.Windows.Forms.DockStyle.Left;
@@ -137,12 +150,10 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(643, 38);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panelOptions
             // 
-            this.panelOptions.Controls.Add(this.panelUserSettings);
-            this.panelOptions.Controls.Add(this.panelLibrary);
-            this.panelOptions.Controls.Add(this.panelMixer);
             this.panelOptions.Controls.Add(this.panelSearch);
             this.panelOptions.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelOptions.Location = new System.Drawing.Point(0, 304);
@@ -150,36 +161,17 @@
             this.panelOptions.Size = new System.Drawing.Size(643, 52);
             this.panelOptions.TabIndex = 0;
             // 
-            // panelUserSettings
-            // 
-            this.panelUserSettings.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelUserSettings.Location = new System.Drawing.Point(480, 0);
-            this.panelUserSettings.Name = "panelUserSettings";
-            this.panelUserSettings.Size = new System.Drawing.Size(163, 52);
-            this.panelUserSettings.TabIndex = 3;
-            // 
-            // panelLibrary
-            // 
-            this.panelLibrary.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLibrary.Location = new System.Drawing.Point(320, 0);
-            this.panelLibrary.Name = "panelLibrary";
-            this.panelLibrary.Size = new System.Drawing.Size(160, 52);
-            this.panelLibrary.TabIndex = 2;
-            // 
-            // panelMixer
-            // 
-            this.panelMixer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMixer.Location = new System.Drawing.Point(160, 0);
-            this.panelMixer.Name = "panelMixer";
-            this.panelMixer.Size = new System.Drawing.Size(160, 52);
-            this.panelMixer.TabIndex = 1;
-            // 
             // panelSearch
             // 
+            this.panelSearch.Controls.Add(this.buttonMixer);
+            this.panelSearch.Controls.Add(this.buttonProfile);
+            this.panelSearch.Controls.Add(this.buttonLibrary);
+            this.panelSearch.Controls.Add(this.buttonFinder);
+            this.panelSearch.Controls.Add(this.buttonHome);
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSearch.Location = new System.Drawing.Point(0, 0);
             this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(160, 52);
+            this.panelSearch.Size = new System.Drawing.Size(643, 52);
             this.panelSearch.TabIndex = 0;
             // 
             // labelLoading
@@ -206,15 +198,60 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
-            // labelNameSong
+            // buttonHome
             // 
-            this.labelNameSong.AutoSize = true;
-            this.labelNameSong.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelNameSong.Location = new System.Drawing.Point(141, 19);
-            this.labelNameSong.Name = "labelNameSong";
-            this.labelNameSong.Size = new System.Drawing.Size(35, 13);
-            this.labelNameSong.TabIndex = 1;
-            this.labelNameSong.Text = "label2";
+            this.buttonHome.BackColor = System.Drawing.Color.Purple;
+            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHome.Location = new System.Drawing.Point(3, 3);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(124, 46);
+            this.buttonHome.TabIndex = 1;
+            this.buttonHome.Text = "Home";
+            this.buttonHome.UseVisualStyleBackColor = false;
+            // 
+            // buttonFinder
+            // 
+            this.buttonFinder.BackColor = System.Drawing.Color.Purple;
+            this.buttonFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFinder.Location = new System.Drawing.Point(133, 3);
+            this.buttonFinder.Name = "buttonFinder";
+            this.buttonFinder.Size = new System.Drawing.Size(124, 46);
+            this.buttonFinder.TabIndex = 2;
+            this.buttonFinder.Text = "Finder";
+            this.buttonFinder.UseVisualStyleBackColor = false;
+            // 
+            // buttonLibrary
+            // 
+            this.buttonLibrary.BackColor = System.Drawing.Color.Purple;
+            this.buttonLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLibrary.Location = new System.Drawing.Point(261, 3);
+            this.buttonLibrary.Name = "buttonLibrary";
+            this.buttonLibrary.Size = new System.Drawing.Size(124, 46);
+            this.buttonLibrary.TabIndex = 3;
+            this.buttonLibrary.Text = "Library";
+            this.buttonLibrary.UseVisualStyleBackColor = false;
+            // 
+            // buttonProfile
+            // 
+            this.buttonProfile.BackColor = System.Drawing.Color.Purple;
+            this.buttonProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonProfile.Location = new System.Drawing.Point(391, 3);
+            this.buttonProfile.Name = "buttonProfile";
+            this.buttonProfile.Size = new System.Drawing.Size(119, 46);
+            this.buttonProfile.TabIndex = 4;
+            this.buttonProfile.Text = "Profile";
+            this.buttonProfile.UseVisualStyleBackColor = false;
+            // 
+            // buttonMixer
+            // 
+            this.buttonMixer.BackColor = System.Drawing.Color.Purple;
+            this.buttonMixer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMixer.Location = new System.Drawing.Point(516, 3);
+            this.buttonMixer.Name = "buttonMixer";
+            this.buttonMixer.Size = new System.Drawing.Size(124, 46);
+            this.buttonMixer.TabIndex = 5;
+            this.buttonMixer.Text = "Mixer";
+            this.buttonMixer.UseVisualStyleBackColor = false;
             // 
             // MainMenu
             // 
@@ -234,6 +271,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelOptions.ResumeLayout(false);
+            this.panelSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
             this.ResumeLayout(false);
 
@@ -247,9 +285,6 @@
         private System.Windows.Forms.Panel panelMainmenu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelOptions;
-        private System.Windows.Forms.Panel panelUserSettings;
-        private System.Windows.Forms.Panel panelLibrary;
-        private System.Windows.Forms.Panel panelMixer;
         private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.Panel panelMusicLibrary;
         private System.Windows.Forms.Panel panel2;
@@ -257,5 +292,10 @@
         private System.Windows.Forms.Panel panelTestSOng;
         private System.Windows.Forms.PictureBox pbTestSong;
         private System.Windows.Forms.Label labelNameSong;
+        private System.Windows.Forms.Button buttonMixer;
+        private System.Windows.Forms.Button buttonProfile;
+        private System.Windows.Forms.Button buttonLibrary;
+        private System.Windows.Forms.Button buttonFinder;
+        private System.Windows.Forms.Button buttonHome;
     }
 }
