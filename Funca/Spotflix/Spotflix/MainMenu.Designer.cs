@@ -219,6 +219,7 @@
             this.buttonFinder.TabIndex = 2;
             this.buttonFinder.Text = "Finder";
             this.buttonFinder.UseVisualStyleBackColor = false;
+            this.buttonFinder.Click += new System.EventHandler(this.buttonFinder_Click);
             // 
             // buttonLibrary
             // 
