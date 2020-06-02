@@ -60,5 +60,10 @@ namespace Spotflix
         {
 
         }
+
+        private void buttonFinder_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

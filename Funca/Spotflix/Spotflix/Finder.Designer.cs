@@ -29,29 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelFinder = new System.Windows.Forms.Label();
             this.comboBoxFind = new System.Windows.Forms.ComboBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonSearch);
             this.panel1.Controls.Add(this.comboBoxFind);
             this.panel1.Controls.Add(this.labelFinder);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(179, 385);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
             // 
             // labelFinder
             // 
@@ -68,24 +60,42 @@
             // comboBoxFind
             // 
             this.comboBoxFind.FormattingEnabled = true;
+            this.comboBoxFind.Items.AddRange(new object[] {
+            "Song",
+            "Video",
+            "Playlist",
+            "Actor/Director",
+            "Band",
+            "Album",
+            "Top Streamed",
+            "Top Rated",
+            "User"});
             this.comboBoxFind.Location = new System.Drawing.Point(28, 80);
             this.comboBoxFind.Name = "comboBoxFind";
             this.comboBoxFind.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFind.TabIndex = 2;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(56, 297);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 3;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // Finder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "Finder";
             this.Size = new System.Drawing.Size(650, 385);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -94,6 +104,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBoxFind;
         private System.Windows.Forms.Label labelFinder;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSearch;
     }
 }

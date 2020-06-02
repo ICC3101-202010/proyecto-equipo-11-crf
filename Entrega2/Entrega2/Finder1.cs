@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace Entrega2
 {
-    class Finder
+    class Finder1
     {
         public Cancion buscarCancion(string song_name, List<Cancion> songs)
         {//busca una determinada cancion en una determinada lista

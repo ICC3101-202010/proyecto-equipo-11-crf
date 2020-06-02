@@ -161,7 +161,7 @@ namespace Entrega2
                                             List<Cancion> retornoBuscarCancion = new List<Cancion>();
                                             List<Video> retornoBuscarVideo = new List<Video>();
 
-                                            Finder finder = new Finder();
+                                            Finder1 finder = new Finder1();
                                             string opcionB = "0";
                                             while (opcionB != "11")
                                             {
@@ -619,7 +619,7 @@ namespace Entrega2
                                             List<Cancion> retornoBuscarCancion = new List<Cancion>();
                                             List<Video> retornoBuscarVideo = new List<Video>();
 
-                                            Finder finder = new Finder();
+                                            Finder1 finder = new Finder1();
                                             string opcionB = "0";
                                             while (opcionB != "11")
                                             {

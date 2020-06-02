@@ -18,7 +18,7 @@ namespace Entrega2
             //Finder finder = new Finder();
 
             Reproductor reproductor = new Reproductor();
-            Finder finder = new Finder();
+            Finder1 finder = new Finder1();
             
 
 
