@@ -13,13 +13,21 @@ namespace Entrega2
         public List<Cancion> buscarCancion(string song_name, List<Cancion> songs)
         {//busca una determinada cancion en una determinada lista
             List<Cancion> final_search = new List<Cancion>();
-            foreach (var song in songs)
+            try
             {
-                if (song.Titulo_Cancion.Contains(song_name) == true)
+                foreach (var song in songs)
                 {
-                    final_search.Add(song);
+                    if (song.Titulo_Cancion.Contains(song_name) == true)
+                    {
+                        final_search.Add(song);
+                    }
                 }
             }
+            catch(Exception ex)
+            {
+                string error = ex.Message;
+            }
+            
             return final_search;
             int index = 0;
             if (final_search.Any() == true)
@@ -41,7 +49,7 @@ namespace Entrega2
 
         }
 
-        public Video buscarVideo(string videoName, List<Video> todos)
+        public List<Video> buscarVideo(string videoName, List<Video> todos)
         {
             List<Video> final_search = new List<Video>();
             foreach (var vid in todos)
@@ -52,6 +60,7 @@ namespace Entrega2
                 }
             }
             Console.WriteLine("Select one");
+            return final_search;
             int index = 0;
             foreach (var vid in final_search)
             {
@@ -62,7 +71,7 @@ namespace Entrega2
             int selected = Convert.ToInt32(Console.ReadLine());
             if (final_search.Any() == true)
             {
-                return final_search[selected];
+                //return final_search[selected];
 
             }
             return null;

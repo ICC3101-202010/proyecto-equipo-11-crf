@@ -14,6 +14,7 @@ namespace Spotflix
     public partial class Finderr : UserControl
     {
         Finder1 finder1 = new Entrega2.Finder1();
+        
         public Finderr()
         {
             InitializeComponent();
@@ -21,19 +22,23 @@ namespace Spotflix
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            
+            panelMostrar.Visible = true;
             if (comboBoxFind.Text == "Song")
             {
                 List<Cancion> canciones= finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
-                    listBoxPrueba.Items.Add(cancion);
+                    listBoxPrueba.Items.Add(cancion.Titulo_Cancion);
                 }
                 
             }
             else if (comboBoxFind.Text == "Video")
             {
-
+                List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Global.allVideos);
+                foreach(Video video in videos)
+                {
+                    listBoxPrueba.Items.Add(video.NameVideo);
+                }
             }
             else if (comboBoxFind.Text == "Playlist")
             {

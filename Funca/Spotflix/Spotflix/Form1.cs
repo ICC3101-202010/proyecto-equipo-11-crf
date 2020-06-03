@@ -79,6 +79,7 @@ namespace Spotflix
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             Login = logIn1;
             Register = register1;
             Welcome = welcome1;

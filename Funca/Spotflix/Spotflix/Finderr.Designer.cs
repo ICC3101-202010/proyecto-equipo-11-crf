@@ -35,6 +35,11 @@
             this.labelFinder = new System.Windows.Forms.Label();
             this.panelMostrar = new System.Windows.Forms.Panel();
             this.listBoxPrueba = new System.Windows.Forms.ListBox();
+            this.buttonPlay = new System.Windows.Forms.Button();
+            this.ButtonFavorite = new System.Windows.Forms.Button();
+            this.buttonRate = new System.Windows.Forms.Button();
+            this.buttonDownload = new System.Windows.Forms.Button();
+            this.buttonMetadata = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelMostrar.SuspendLayout();
             this.SuspendLayout();
@@ -99,11 +104,17 @@
             // 
             // panelMostrar
             // 
+            this.panelMostrar.Controls.Add(this.buttonMetadata);
+            this.panelMostrar.Controls.Add(this.buttonDownload);
+            this.panelMostrar.Controls.Add(this.buttonRate);
+            this.panelMostrar.Controls.Add(this.ButtonFavorite);
+            this.panelMostrar.Controls.Add(this.buttonPlay);
             this.panelMostrar.Controls.Add(this.listBoxPrueba);
             this.panelMostrar.Location = new System.Drawing.Point(305, 0);
             this.panelMostrar.Name = "panelMostrar";
             this.panelMostrar.Size = new System.Drawing.Size(345, 385);
             this.panelMostrar.TabIndex = 1;
+            this.panelMostrar.Visible = false;
             // 
             // listBoxPrueba
             // 
@@ -113,6 +124,51 @@
             this.listBoxPrueba.Name = "listBoxPrueba";
             this.listBoxPrueba.Size = new System.Drawing.Size(102, 277);
             this.listBoxPrueba.TabIndex = 0;
+            // 
+            // buttonPlay
+            // 
+            this.buttonPlay.Location = new System.Drawing.Point(195, 53);
+            this.buttonPlay.Name = "buttonPlay";
+            this.buttonPlay.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlay.TabIndex = 1;
+            this.buttonPlay.Text = "Play";
+            this.buttonPlay.UseVisualStyleBackColor = true;
+            // 
+            // ButtonFavorite
+            // 
+            this.ButtonFavorite.Location = new System.Drawing.Point(195, 91);
+            this.ButtonFavorite.Name = "ButtonFavorite";
+            this.ButtonFavorite.Size = new System.Drawing.Size(75, 23);
+            this.ButtonFavorite.TabIndex = 2;
+            this.ButtonFavorite.Text = "Favorite";
+            this.ButtonFavorite.UseVisualStyleBackColor = true;
+            // 
+            // buttonRate
+            // 
+            this.buttonRate.Location = new System.Drawing.Point(195, 135);
+            this.buttonRate.Name = "buttonRate";
+            this.buttonRate.Size = new System.Drawing.Size(75, 23);
+            this.buttonRate.TabIndex = 3;
+            this.buttonRate.Text = "Rate";
+            this.buttonRate.UseVisualStyleBackColor = true;
+            // 
+            // buttonDownload
+            // 
+            this.buttonDownload.Location = new System.Drawing.Point(195, 177);
+            this.buttonDownload.Name = "buttonDownload";
+            this.buttonDownload.Size = new System.Drawing.Size(75, 23);
+            this.buttonDownload.TabIndex = 4;
+            this.buttonDownload.Text = "Download";
+            this.buttonDownload.UseVisualStyleBackColor = true;
+            // 
+            // buttonMetadata
+            // 
+            this.buttonMetadata.Location = new System.Drawing.Point(195, 222);
+            this.buttonMetadata.Name = "buttonMetadata";
+            this.buttonMetadata.Size = new System.Drawing.Size(75, 23);
+            this.buttonMetadata.TabIndex = 5;
+            this.buttonMetadata.Text = "Metadata";
+            this.buttonMetadata.UseVisualStyleBackColor = true;
             // 
             // Finderr
             // 
@@ -139,5 +195,10 @@
         private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.Panel panelMostrar;
         private System.Windows.Forms.ListBox listBoxPrueba;
+        private System.Windows.Forms.Button buttonDownload;
+        private System.Windows.Forms.Button buttonRate;
+        private System.Windows.Forms.Button ButtonFavorite;
+        private System.Windows.Forms.Button buttonPlay;
+        private System.Windows.Forms.Button buttonMetadata;
     }
 }
