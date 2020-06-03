@@ -34,6 +34,7 @@
             this.mailValidation1 = new Spotflix.MailValidation();
             this.register1 = new Spotflix.Register();
             this.welcome1 = new Spotflix.Welcome();
+            this.finderr1 = new Spotflix.Finderr();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -86,11 +87,20 @@
             this.welcome1.Size = new System.Drawing.Size(644, 372);
             this.welcome1.TabIndex = 0;
             // 
+            // finderr1
+            // 
+            this.finderr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.finderr1.Location = new System.Drawing.Point(0, 0);
+            this.finderr1.Name = "finderr1";
+            this.finderr1.Size = new System.Drawing.Size(644, 372);
+            this.finderr1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 372);
+            this.Controls.Add(this.finderr1);
             this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.preferences1);
             this.Controls.Add(this.logIn1);
@@ -112,6 +122,7 @@
         private LogIn logIn1;
         private Preferences preferences1;
         private MainMenu mainMenu1;
+        private Finderr finderr1;
     }
 }
 

@@ -83,6 +83,7 @@
     <Compile Include="Director.cs" />
     <Compile Include="Efecto.cs" />
     <Compile Include="Finder1.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="InputOutput .cs" />
     <Compile Include="LAUNCHER-Spotlix.cs" />
     <Compile Include="Mediadatabase.cs" />

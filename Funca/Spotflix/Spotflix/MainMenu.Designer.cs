@@ -40,13 +40,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelOptions = new System.Windows.Forms.Panel();
             this.panelSearch = new System.Windows.Forms.Panel();
+            this.buttonMixer = new System.Windows.Forms.Button();
+            this.buttonProfile = new System.Windows.Forms.Button();
+            this.buttonLibrary = new System.Windows.Forms.Button();
+            this.buttonFinder = new System.Windows.Forms.Button();
+            this.buttonHome = new System.Windows.Forms.Button();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.buttonFinder = new System.Windows.Forms.Button();
-            this.buttonLibrary = new System.Windows.Forms.Button();
-            this.buttonProfile = new System.Windows.Forms.Button();
-            this.buttonMixer = new System.Windows.Forms.Button();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.panelMusicLibrary.SuspendLayout();
@@ -174,6 +174,63 @@
             this.panelSearch.Size = new System.Drawing.Size(643, 52);
             this.panelSearch.TabIndex = 0;
             // 
+            // buttonMixer
+            // 
+            this.buttonMixer.BackColor = System.Drawing.Color.Purple;
+            this.buttonMixer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMixer.Location = new System.Drawing.Point(516, 3);
+            this.buttonMixer.Name = "buttonMixer";
+            this.buttonMixer.Size = new System.Drawing.Size(124, 46);
+            this.buttonMixer.TabIndex = 5;
+            this.buttonMixer.Text = "Mixer";
+            this.buttonMixer.UseVisualStyleBackColor = false;
+            // 
+            // buttonProfile
+            // 
+            this.buttonProfile.BackColor = System.Drawing.Color.Purple;
+            this.buttonProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonProfile.Location = new System.Drawing.Point(391, 3);
+            this.buttonProfile.Name = "buttonProfile";
+            this.buttonProfile.Size = new System.Drawing.Size(119, 46);
+            this.buttonProfile.TabIndex = 4;
+            this.buttonProfile.Text = "Profile";
+            this.buttonProfile.UseVisualStyleBackColor = false;
+            // 
+            // buttonLibrary
+            // 
+            this.buttonLibrary.BackColor = System.Drawing.Color.Purple;
+            this.buttonLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLibrary.Location = new System.Drawing.Point(261, 3);
+            this.buttonLibrary.Name = "buttonLibrary";
+            this.buttonLibrary.Size = new System.Drawing.Size(124, 46);
+            this.buttonLibrary.TabIndex = 3;
+            this.buttonLibrary.Text = "Library";
+            this.buttonLibrary.UseVisualStyleBackColor = false;
+            // 
+            // buttonFinder
+            // 
+            this.buttonFinder.BackColor = System.Drawing.Color.Purple;
+            this.buttonFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFinder.Location = new System.Drawing.Point(133, 3);
+            this.buttonFinder.Name = "buttonFinder";
+            this.buttonFinder.Size = new System.Drawing.Size(124, 46);
+            this.buttonFinder.TabIndex = 2;
+            this.buttonFinder.Text = "Finder";
+            this.buttonFinder.UseVisualStyleBackColor = false;
+            this.buttonFinder.Click += new System.EventHandler(this.buttonFinder_Click);
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.BackColor = System.Drawing.Color.Purple;
+            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHome.Location = new System.Drawing.Point(3, 3);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(124, 46);
+            this.buttonHome.TabIndex = 1;
+            this.buttonHome.Text = "Home";
+            this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
             // labelLoading
             // 
             this.labelLoading.AutoSize = true;
@@ -197,62 +254,6 @@
             this.pictureBoxLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.BackColor = System.Drawing.Color.Purple;
-            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.Location = new System.Drawing.Point(3, 3);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(124, 46);
-            this.buttonHome.TabIndex = 1;
-            this.buttonHome.Text = "Home";
-            this.buttonHome.UseVisualStyleBackColor = false;
-            // 
-            // buttonFinder
-            // 
-            this.buttonFinder.BackColor = System.Drawing.Color.Purple;
-            this.buttonFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFinder.Location = new System.Drawing.Point(133, 3);
-            this.buttonFinder.Name = "buttonFinder";
-            this.buttonFinder.Size = new System.Drawing.Size(124, 46);
-            this.buttonFinder.TabIndex = 2;
-            this.buttonFinder.Text = "Finder";
-            this.buttonFinder.UseVisualStyleBackColor = false;
-            this.buttonFinder.Click += new System.EventHandler(this.buttonFinder_Click);
-            // 
-            // buttonLibrary
-            // 
-            this.buttonLibrary.BackColor = System.Drawing.Color.Purple;
-            this.buttonLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLibrary.Location = new System.Drawing.Point(261, 3);
-            this.buttonLibrary.Name = "buttonLibrary";
-            this.buttonLibrary.Size = new System.Drawing.Size(124, 46);
-            this.buttonLibrary.TabIndex = 3;
-            this.buttonLibrary.Text = "Library";
-            this.buttonLibrary.UseVisualStyleBackColor = false;
-            // 
-            // buttonProfile
-            // 
-            this.buttonProfile.BackColor = System.Drawing.Color.Purple;
-            this.buttonProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProfile.Location = new System.Drawing.Point(391, 3);
-            this.buttonProfile.Name = "buttonProfile";
-            this.buttonProfile.Size = new System.Drawing.Size(119, 46);
-            this.buttonProfile.TabIndex = 4;
-            this.buttonProfile.Text = "Profile";
-            this.buttonProfile.UseVisualStyleBackColor = false;
-            // 
-            // buttonMixer
-            // 
-            this.buttonMixer.BackColor = System.Drawing.Color.Purple;
-            this.buttonMixer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMixer.Location = new System.Drawing.Point(516, 3);
-            this.buttonMixer.Name = "buttonMixer";
-            this.buttonMixer.Size = new System.Drawing.Size(124, 46);
-            this.buttonMixer.TabIndex = 5;
-            this.buttonMixer.Text = "Mixer";
-            this.buttonMixer.UseVisualStyleBackColor = false;
             // 
             // MainMenu
             // 

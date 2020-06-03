@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entrega2;
 
 namespace Spotflix
 {
-    public partial class Finder : UserControl
+    public partial class Finderr : UserControl
     {
-        public Finder()
+        Finder1 finder1 = new Entrega2.Finder1();
+        public Finderr()
         {
             InitializeComponent();
         }
@@ -22,6 +24,11 @@ namespace Spotflix
             
             if (comboBoxFind.Text == "Song")
             {
+                List<Cancion> canciones= finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
+                foreach (Cancion cancion in canciones)
+                {
+                    listBoxPrueba.Items.Add(cancion);
+                }
                 
             }
             else if (comboBoxFind.Text == "Video")

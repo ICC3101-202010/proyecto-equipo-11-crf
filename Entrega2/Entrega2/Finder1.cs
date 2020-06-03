@@ -8,9 +8,9 @@ using System.Linq;
 
 namespace Entrega2
 {
-    class Finder1
+    public class Finder1
     {
-        public Cancion buscarCancion(string song_name, List<Cancion> songs)
+        public List<Cancion> buscarCancion(string song_name, List<Cancion> songs)
         {//busca una determinada cancion en una determinada lista
             List<Cancion> final_search = new List<Cancion>();
             foreach (var song in songs)
@@ -20,7 +20,7 @@ namespace Entrega2
                     final_search.Add(song);
                 }
             }
-            Console.WriteLine("Select one");
+            return final_search;
             int index = 0;
             if (final_search.Any() == true)
             {
@@ -31,7 +31,7 @@ namespace Entrega2
 
                 }
                 int selected = Convert.ToInt32(Console.ReadLine());
-                return final_search[selected];
+                
             }
             else
             {

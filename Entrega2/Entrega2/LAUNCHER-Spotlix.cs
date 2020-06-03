@@ -174,11 +174,11 @@ namespace Entrega2
                                                 {
                                                     Console.WriteLine("Ingrese el nombre de la cancion");
                                                     string nombreCancion = Console.ReadLine();
-                                                    Cancion seleccionada = finder.buscarCancion(nombreCancion, todasLasCanciones);
-                                                    if (seleccionada != null)
+                                                    //Cancion seleccionada = finder.buscarCancion(nombreCancion, todasLasCanciones);
+                                                   // if (seleccionada != null)
                                                     {
 
-                                                        retornoBuscarCancion.Add(seleccionada);
+                                                     //   retornoBuscarCancion.Add(seleccionada);
 
 
                                                     }
@@ -632,14 +632,14 @@ namespace Entrega2
                                                 {
                                                     Console.WriteLine("Ingrese el nombre de la cancion");
                                                     string nombreCancion = Console.ReadLine();
-                                                    Cancion seleccionada = finder.buscarCancion(nombreCancion, todasLasCanciones);
+                                                    /*Cancion seleccionada = finder.buscarCancion(nombreCancion, todasLasCanciones);
                                                     if (seleccionada != null)
                                                     {
 
                                                         retornoBuscarCancion.Add(seleccionada);
 
 
-                                                    }
+                                                    }*/
                                                 }
                                                 else if (opcionB == "2")
                                                 {
