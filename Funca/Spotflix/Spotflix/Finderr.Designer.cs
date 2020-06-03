@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxFind = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxFind = new System.Windows.Forms.ComboBox();
             this.labelFinder = new System.Windows.Forms.Label();
-            this.textBoxFind = new System.Windows.Forms.TextBox();
             this.panelMostrar = new System.Windows.Forms.Panel();
             this.listBoxPrueba = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
@@ -45,10 +45,17 @@
             this.panel1.Controls.Add(this.buttonSearch);
             this.panel1.Controls.Add(this.comboBoxFind);
             this.panel1.Controls.Add(this.labelFinder);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(299, 385);
+            this.panel1.Size = new System.Drawing.Size(296, 382);
             this.panel1.TabIndex = 0;
+            // 
+            // textBoxFind
+            // 
+            this.textBoxFind.Location = new System.Drawing.Point(160, 88);
+            this.textBoxFind.Name = "textBoxFind";
+            this.textBoxFind.Size = new System.Drawing.Size(116, 20);
+            this.textBoxFind.TabIndex = 4;
             // 
             // buttonSearch
             // 
@@ -90,13 +97,6 @@
             this.labelFinder.TabIndex = 0;
             this.labelFinder.Text = "Finder";
             // 
-            // textBoxFind
-            // 
-            this.textBoxFind.Location = new System.Drawing.Point(160, 88);
-            this.textBoxFind.Name = "textBoxFind";
-            this.textBoxFind.Size = new System.Drawing.Size(116, 20);
-            this.textBoxFind.TabIndex = 4;
-            // 
             // panelMostrar
             // 
             this.panelMostrar.Controls.Add(this.listBoxPrueba);
@@ -114,14 +114,14 @@
             this.listBoxPrueba.Size = new System.Drawing.Size(102, 277);
             this.listBoxPrueba.TabIndex = 0;
             // 
-            // Finder
+            // Finderr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.panelMostrar);
             this.Controls.Add(this.panel1);
-            this.Name = "Finder";
+            this.Name = "Finderr";
             this.Size = new System.Drawing.Size(650, 385);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

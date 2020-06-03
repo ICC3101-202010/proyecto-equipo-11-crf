@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-
+using Entrega2;
 
 namespace Spotflix
 {
@@ -21,6 +21,7 @@ namespace Spotflix
         private static UserControl mailVerified;
         private static UserControl loading;
         private static UserControl mainmenu;
+        private static UserControl finderr;
 
         //UserControl Main_Menu = new UCMainMenuLoading();
         //UserControl Loading = new UCLoading();
@@ -38,6 +39,7 @@ namespace Spotflix
         public static UserControl Loading { get => loading; set => loading = value; }
         public static UserControl MainMenu { get => mainmenu; set => mainmenu = value; }
         public static List<UserControl> StackUserControls { get => stackUserControls; set => stackUserControls = value; }
+        public static UserControl Finderr { get => finderr; set => finderr = value; }
 
         public Form1()
         {
@@ -79,7 +81,9 @@ namespace Spotflix
             Welcome = welcome1;
             MailVerified = mailValidation1;
             Preferences = preferences1;
-            MainMenu = mainMenu1; 
+            MainMenu = mainMenu1;
+            Finderr = finderr1;
+            
 
             Welcome.BringToFront();
 
@@ -89,13 +93,18 @@ namespace Spotflix
             Login.Hide();
             Preferences.Hide();
             MailVerified.Hide();
-
+            Finderr.Hide();
 
         }
 
         private void mainMenu1_Load(object sender, EventArgs e)
         {
-            finderr1.Show();
+            
+        }
+
+        private void finderr1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

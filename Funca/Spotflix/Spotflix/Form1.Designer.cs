@@ -92,7 +92,7 @@
             this.finderr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.finderr1.Location = new System.Drawing.Point(0, 0);
             this.finderr1.Name = "finderr1";
-            this.finderr1.Size = new System.Drawing.Size(644, 372);
+            this.finderr1.Size = new System.Drawing.Size(650, 385);
             this.finderr1.TabIndex = 6;
             // 
             // Form1
