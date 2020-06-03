@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.profile1 = new Spotflix.Profile();
             this.mainMenu1 = new Spotflix.MainMenu();
             this.preferences1 = new Spotflix.Preferences();
             this.logIn1 = new Spotflix.LogIn();
@@ -36,6 +37,14 @@
             this.welcome1 = new Spotflix.Welcome();
             this.finderr1 = new Spotflix.Finderr();
             this.SuspendLayout();
+            // 
+            // profile1
+            // 
+            this.profile1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.profile1.Location = new System.Drawing.Point(-12, 0);
+            this.profile1.Name = "profile1";
+            this.profile1.Size = new System.Drawing.Size(656, 484);
+            this.profile1.TabIndex = 7;
             // 
             // mainMenu1
             // 
@@ -92,7 +101,7 @@
             this.finderr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.finderr1.Location = new System.Drawing.Point(0, 0);
             this.finderr1.Name = "finderr1";
-            this.finderr1.Size = new System.Drawing.Size(650, 385);
+            this.finderr1.Size = new System.Drawing.Size(644, 372);
             this.finderr1.TabIndex = 6;
             // 
             // Form1
@@ -100,13 +109,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 372);
-            this.Controls.Add(this.finderr1);
+            this.Controls.Add(this.profile1);
             this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.preferences1);
             this.Controls.Add(this.logIn1);
             this.Controls.Add(this.mailValidation1);
             this.Controls.Add(this.register1);
             this.Controls.Add(this.welcome1);
+            this.Controls.Add(this.finderr1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -123,6 +133,7 @@
         private Preferences preferences1;
         private MainMenu mainMenu1;
         private Finderr finderr1;
+        private Profile profile1;
     }
 }
 

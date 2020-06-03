@@ -22,6 +22,8 @@ namespace Spotflix
         private static UserControl loading;
         private static UserControl mainmenu;
         private static UserControl finderr;
+        private static UserControl profile;
+
 
         //UserControl Main_Menu = new UCMainMenuLoading();
         //UserControl Loading = new UCLoading();
@@ -40,6 +42,7 @@ namespace Spotflix
         public static UserControl MainMenu { get => mainmenu; set => mainmenu = value; }
         public static List<UserControl> StackUserControls { get => stackUserControls; set => stackUserControls = value; }
         public static UserControl Finderr { get => finderr; set => finderr = value; }
+        public static UserControl Profile { get => profile; set => profile = value; }
 
         public Form1()
         {
@@ -83,7 +86,7 @@ namespace Spotflix
             Preferences = preferences1;
             MainMenu = mainMenu1;
             Finderr = finderr1;
-            
+            Profile = profile1;
 
             Welcome.BringToFront();
 
@@ -94,6 +97,7 @@ namespace Spotflix
             Preferences.Hide();
             MailVerified.Hide();
             Finderr.Hide();
+            Profile.Hide();
 
         }
 

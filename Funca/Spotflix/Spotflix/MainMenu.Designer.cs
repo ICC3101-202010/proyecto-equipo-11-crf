@@ -195,6 +195,7 @@
             this.buttonProfile.TabIndex = 4;
             this.buttonProfile.Text = "Profile";
             this.buttonProfile.UseVisualStyleBackColor = false;
+            this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
             // 
             // buttonLibrary
             // 

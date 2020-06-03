@@ -28,12 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.bAtrasProfile = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // bAtrasProfile
+            // 
+            this.bAtrasProfile.Location = new System.Drawing.Point(164, 292);
+            this.bAtrasProfile.Name = "bAtrasProfile";
+            this.bAtrasProfile.Size = new System.Drawing.Size(75, 23);
+            this.bAtrasProfile.TabIndex = 0;
+            this.bAtrasProfile.Text = "back";
+            this.bAtrasProfile.UseVisualStyleBackColor = true;
+            this.bAtrasProfile.Click += new System.EventHandler(this.bAtrasProfile_Click);
             // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Controls.Add(this.bAtrasProfile);
             this.Name = "Profile";
             this.Size = new System.Drawing.Size(623, 382);
             this.ResumeLayout(false);
@@ -41,5 +54,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button bAtrasProfile;
     }
 }

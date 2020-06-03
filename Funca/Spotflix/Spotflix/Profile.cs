@@ -16,5 +16,11 @@ namespace Spotflix
         {
             InitializeComponent();
         }
+
+        private void bAtrasProfile_Click(object sender, EventArgs e)
+        {
+            Form1.Profile.Hide();
+            
+        }
     }
 }

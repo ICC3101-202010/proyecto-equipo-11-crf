@@ -63,12 +63,18 @@ namespace Spotflix
 
         private void buttonFinder_Click(object sender, EventArgs e)
         {
+            
             Form1.Finderr.Show();
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void buttonProfile_Click(object sender, EventArgs e)
+        {
+            Form1.Profile.Show();
         }
     }
 }

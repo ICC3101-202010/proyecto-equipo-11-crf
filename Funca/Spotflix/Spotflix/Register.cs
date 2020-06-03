@@ -31,6 +31,11 @@ namespace Spotflix
                 Form1.MailVerified.BringToFront();
                 Form1.MailVerified.Show();
             }
+            
+            if (checkBoxNoRegister.Checked == false & checkBoxYesRegister.Checked == false)
+            {
+                Form1.Welcome.Show();
+            }
         }
 
         private void bAtrasRegistration_Click(object sender, EventArgs e)
