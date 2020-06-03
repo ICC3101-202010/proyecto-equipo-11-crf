@@ -23,9 +23,9 @@ namespace Entrega2
                     }
                 }
             }
-            catch(Exception ex)
+            catch
             {
-                string error = ex.Message;
+                
             }
             
             return final_search;
@@ -80,7 +80,7 @@ namespace Entrega2
 
 
 
-        public Playlist buscarPlaylist(string playlist_name, List<Playlist> playlists)
+        public List<Playlist> buscarPlaylist(string playlist_name, List<Playlist> playlists)
         {//busca una determinada cancion en una determinada lista
             List<Playlist> final_search = new List<Playlist>();
             foreach (var playlist in playlists)
@@ -92,6 +92,7 @@ namespace Entrega2
             }
             Console.WriteLine("Select one");
             int index = 0;
+            return final_search;
             foreach (var playlist in final_search)
             {
                 Console.WriteLine("(" + index + ")" + playlist.NombrePlaylist);
@@ -100,7 +101,7 @@ namespace Entrega2
             }
             int selected = Convert.ToInt32(Console.ReadLine());
 
-            return final_search[selected];
+            //return final_search[selected];
         }
 
         public List<Cancion> buscarArtista(string artista, List<Cancion> todasLasCanciones)
@@ -135,13 +136,13 @@ namespace Entrega2
                 }
             }
             
-            int index = 0;
-            foreach (var can in final_search)
+            //int index = 0;
+            /*foreach (var can in final_search)
             {
                 Console.WriteLine("(" + index + ")" + can.Titulo_Cancion+" -"+can.Album);
                 index++;
 
-            }
+            }*/
             
             return final_search;
 
@@ -184,7 +185,7 @@ namespace Entrega2
         }
         public List<Cancion> ratingReproducciones(List<Cancion> todasLasCanciones)
         {
-            Console.WriteLine("1.Todas las canciones");
+            /*Console.WriteLine("1.Todas las canciones");
             Console.WriteLine("2. 5 primeras");
             int opt = System.Convert.ToInt32(Console.ReadLine());
             if (opt == 1)
@@ -200,8 +201,8 @@ namespace Entrega2
 
                 }
                 return lista;
-            }
-            else
+            }*/
+            
             {
                 List<Cancion> lista = (from canciones in todasLasCanciones orderby canciones.Reproducciones descending select canciones).Take(5).ToList();
                 int cont = 0;
@@ -225,7 +226,7 @@ namespace Entrega2
             Console.WriteLine("1.Todas las canciones");
             Console.WriteLine("2. 5 primeras");
             int opt = System.Convert.ToInt32(Console.ReadLine());
-            if (opt == 1)
+            /*if (opt == 1)
             {
                 List<Cancion> lista = (from can in canciones orderby can.Rating descending select can).ToList();
                 int cont = 0;
@@ -239,19 +240,19 @@ namespace Entrega2
                 }
                 return lista;
 
-            }
-            else
+            }*/
+            
             {
                 List<Cancion> lista = (from can in canciones orderby can.Rating descending select can).Take(5).ToList();
                 int cont = 0;
-                foreach (Cancion can in lista)
+                /*foreach (Cancion can in lista)
                 {
                     Console.WriteLine(cont);
                     Console.WriteLine("Artista: " + can.Banda);
                     Console.WriteLine("Cancion: " + can.Titulo_Cancion);
                     cont++;
 
-                }
+                }*/
                 return lista;
             }
 

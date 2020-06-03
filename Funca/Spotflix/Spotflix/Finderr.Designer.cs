@@ -40,12 +40,14 @@
             this.buttonRate = new System.Windows.Forms.Button();
             this.buttonDownload = new System.Windows.Forms.Button();
             this.buttonMetadata = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelMostrar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonBack);
             this.panel1.Controls.Add(this.textBoxFind);
             this.panel1.Controls.Add(this.buttonSearch);
             this.panel1.Controls.Add(this.comboBoxFind);
@@ -170,6 +172,15 @@
             this.buttonMetadata.Text = "Metadata";
             this.buttonMetadata.UseVisualStyleBackColor = true;
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(107, 340);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 5;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            // 
             // Finderr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,5 +211,6 @@
         private System.Windows.Forms.Button ButtonFavorite;
         private System.Windows.Forms.Button buttonPlay;
         private System.Windows.Forms.Button buttonMetadata;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

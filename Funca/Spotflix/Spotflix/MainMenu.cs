@@ -63,7 +63,7 @@ namespace Spotflix
 
         private void buttonFinder_Click(object sender, EventArgs e)
         {
-            
+            Form1.Register.Hide();
             Form1.Login.Hide();
             Form1.MainMenu.Hide();
             Form1.Preferences.Hide();

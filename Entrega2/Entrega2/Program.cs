@@ -98,9 +98,9 @@ namespace Entrega2
             }*/
             
 
-            LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
+            //LAUNCHER_Spotlix spotlix = new LAUNCHER_Spotlix();
 
-            spotlix.Spotlix();
+           // spotlix.Spotlix();
 
             //spotlix.Spotlix();
 
