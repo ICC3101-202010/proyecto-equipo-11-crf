@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entrega2;
 using System.IO;
 using TagLib;
+using WMPLib;
 
 
 namespace Spotflix
@@ -17,14 +18,15 @@ namespace Spotflix
     public partial class MainMenu : UserControl
     {
         Reproductor tester = new Reproductor();
-
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
+        
         public MainMenu()
         {
             InitializeComponent();
             //string ss = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Biblioteca/Love.mp3");
 
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
-            Cancion song = tester.Library()[0];
+            Cancion song = tester.Library()[1];
             //Cancion song = new Cancion(ss);
             pbTestSong.Image = song.Custom_image;
             labelNameSong.Text = song.Titulo_Cancion;
@@ -107,6 +109,11 @@ namespace Spotflix
         private void panelTestSOng_MouseLeave(object sender, EventArgs e)
         {
             panelTestSOng.BackColor = Color.FromArgb(41, 22, 39);
+        }
+
+        private void panelTestSOng_Click(object sender, EventArgs e)
+        {
+            tester.reproducirCancion(player,tester.Library()[1]);
         }
     }
 }
