@@ -96,7 +96,7 @@ namespace Entrega2
         
         }
 
-        public void descargarCancion( Usuario usuario)
+        public void descargarCancion( )
         {
             
             string sourcePath = path;
@@ -116,11 +116,11 @@ namespace Entrega2
             user.Canciones_favoritas.Add(this);
             Console.WriteLine("Cancion " + this.titulo_Cancion + " agregada a favoritos");
         }
-        public void valorarCancion()
+        public void valorarCancion(int nota)
         {
 
-            Console.WriteLine("Ingrese una nota de 0 a 5 a la cancion");
-            int nota = System.Convert.ToInt32(Console.ReadLine());
+            
+            
             while (nota < 0 || nota > 5)
             {
                 Console.WriteLine("Ingrese una nota valida entre 1 y 5");

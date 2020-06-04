@@ -16,21 +16,24 @@ namespace Spotflix
     {
         Finder1 finder1 = new Entrega2.Finder1();
         
+        
+        
         public Finderr()
         {
             InitializeComponent();
+            
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            Reproductor reproductor = new Reproductor();
-            List<Cancion> allCanciones=reproductor.Library();
+            comboBoxFound.Items.Clear();
+            
             List<Cancion> canciones;
             
             panelMostrar.Visible = true;
             if (comboBoxFind.Text == "Song")
             {
-                canciones= finder1.buscarCancion(textBoxFind.Text, allCanciones);
+                canciones= finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
                     comboBoxFound.Items.Add(cancion.Titulo_Cancion);
@@ -101,6 +104,91 @@ namespace Spotflix
         {
             Form1.MainMenu.Show();
             Form1.Finderr.Hide();
+            Form1.Register.Hide();
+            Form1.Login.Hide();
+            Form1.Preferences.Hide();
+            Form1.MailVerified.Hide();
+            Form1.Profile.Hide();
+            
+        }
+
+        private void ButtonFavorite_Click(object sender, EventArgs e)
+        {
+            Cancion seleccionada;
+            foreach(Cancion cancion in Global.allSongs)
+            {
+                if (cancion.Titulo_Cancion == comboBoxFound.Text)
+                {
+                    seleccionada = cancion;
+                }
+            }
+
+        }
+
+        private void buttonRate_Click(object sender, EventArgs e)
+        {
+            
+            if(panelRate.Visible == false)
+            {
+                panelRate.Visible = true;
+            }
+            else
+            {
+                panelRate.Visible = false;
+            }
+            
+
+        }
+
+        private void buttonAccept_Click(object sender, EventArgs e)
+        {
+            int puntuation = Int32.Parse(textBoxRate.Text);
+            List<Cancion> canciones = Global.allSongs;
+            Cancion seleccionada;
+            
+            if (puntuation<0 || puntuation > 5)
+            {
+                labelRate.Visible = true;
+            }
+            else
+            {
+                labelRate.Visible = false;
+                foreach (Cancion cancion in canciones)
+                {
+                    if (cancion.Titulo_Cancion == comboBoxFound.Text)
+                    {
+                        seleccionada = cancion;
+                        seleccionada.Rating = puntuation;
+                    }
+                }
+                
+            }
+            Thread.Sleep(1000);
+            panelRate.Visible = false;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonDownload_Click(object sender, EventArgs e)
+        {
+            Cancion seleccionada;
+            List<Cancion> canciones = Global.allSongs;
+            foreach (Cancion cancion in canciones)
+            {
+                if (cancion.Titulo_Cancion == comboBoxFound.Text)
+                {
+                    seleccionada = cancion;
+                    seleccionada.descargarCancion();
+                    labelDonload.Visible = true;
+                                       
+                }
+            }
+
+            
+
         }
     }
 }

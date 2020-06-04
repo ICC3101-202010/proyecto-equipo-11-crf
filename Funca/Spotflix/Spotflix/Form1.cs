@@ -100,6 +100,12 @@ namespace Spotflix
             Finderr.Hide();
             Profile.Hide();
 
+            Reproductor reproducto = new Reproductor();
+            Global.allSongs = reproducto.Library();
+
+
+
+
         }
 
         private void mainMenu1_Load(object sender, EventArgs e)
