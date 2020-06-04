@@ -82,6 +82,12 @@ namespace Spotflix
         {
             Form1.Profile.Show();
             Form1.MainMenu.Hide();
+            Form1.Register.Hide();
+            Form1.Login.Hide();
+            Form1.MainMenu.Hide();
+            Form1.Preferences.Hide();
+            Form1.MailVerified.Hide();
+            Form1.Finderr.Hide();
         }
     }
 }
