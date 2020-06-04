@@ -21,10 +21,12 @@ namespace Spotflix
         public MainMenu()
         {
             InitializeComponent();
-            string ss = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../Biblioteca/06.Love Somebody 2");
+            string ss = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Biblioteca/Love.mp3");
+
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
-            //pbTestSong.Image = song.Custom_image;
-            //labelNameSong.Text = song.Titulo_Cancion;
+            Cancion song = new Cancion(ss);
+            pbTestSong.Image = song.Custom_image;
+            labelNameSong.Text = song.Titulo_Cancion;
         }
 
         private void labelLoading_Click(object sender, EventArgs e)
@@ -70,11 +72,11 @@ namespace Spotflix
             Form1.MailVerified.Hide();
             Form1.Profile.Hide();
             Form1.Finderr.Show();
-<<<<<<< HEAD
-            Form1.MainMenu.Hide();
-=======
 
->>>>>>> 8d9bda8c3107f7e699d526a3ca86c6c0de5d338f
+            Form1.MainMenu.Hide();
+
+
+
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -86,6 +88,18 @@ namespace Spotflix
         {
             Form1.Profile.Show();
             Form1.MainMenu.Hide();
+        }
+
+        private void panelTestSOng_MouseHover(object sender, EventArgs e)
+        {
+            panelTestSOng.BackColor = Color.FromArgb(63,33,65);
+
+
+        }
+
+        private void panelTestSOng_MouseLeave(object sender, EventArgs e)
+        {
+            panelTestSOng.BackColor = Color.FromArgb(41, 22, 39);
         }
     }
 }
