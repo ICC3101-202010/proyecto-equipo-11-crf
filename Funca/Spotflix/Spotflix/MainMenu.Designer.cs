@@ -94,6 +94,7 @@
             // 
             // panelTestSOng
             // 
+            this.panelTestSOng.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.panelTestSOng.Controls.Add(this.labelNameSong);
             this.panelTestSOng.Controls.Add(this.pbTestSong);
             this.panelTestSOng.Dock = System.Windows.Forms.DockStyle.Top;
@@ -102,6 +103,8 @@
             this.panelTestSOng.Size = new System.Drawing.Size(643, 49);
             this.panelTestSOng.TabIndex = 0;
             this.panelTestSOng.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTestSOng_Paint);
+            this.panelTestSOng.MouseLeave += new System.EventHandler(this.panelTestSOng_MouseLeave);
+            this.panelTestSOng.MouseHover += new System.EventHandler(this.panelTestSOng_MouseHover);
             // 
             // labelNameSong
             // 
