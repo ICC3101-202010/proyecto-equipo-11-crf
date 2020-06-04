@@ -122,12 +122,12 @@
             this.panelMostrar.Controls.Add(this.buttonRate);
             this.panelMostrar.Controls.Add(this.ButtonFavorite);
             this.panelMostrar.Controls.Add(this.buttonPlay);
-<<<<<<< HEAD
+
             this.panelMostrar.Location = new System.Drawing.Point(305, 0);
-=======
-            this.panelMostrar.Controls.Add(this.listBoxPrueba);
+
+            
             this.panelMostrar.Location = new System.Drawing.Point(305, 3);
->>>>>>> cc9aa330d587c6c8a10106430e52d9f7b31ffd64
+
             this.panelMostrar.Name = "panelMostrar";
             this.panelMostrar.Size = new System.Drawing.Size(345, 385);
             this.panelMostrar.TabIndex = 1;

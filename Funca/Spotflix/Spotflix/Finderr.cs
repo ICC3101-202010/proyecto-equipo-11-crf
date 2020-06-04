@@ -23,13 +23,14 @@ namespace Spotflix
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
+            Reproductor reproductor = new Reproductor();
+            List<Cancion> allCanciones=reproductor.Library();
             List<Cancion> canciones;
-            Cancion cancion1=new Cancion(@"C:\Users\corre\OneDrive\Escritorio\Entrega3Bien\proyecto-equipo-11-crf\Biblioteca\01 - Milky Chance - Blossom 2.mp3");
-            Global.allSongs.Add(cancion1);
+            
             panelMostrar.Visible = true;
             if (comboBoxFind.Text == "Song")
             {
-                canciones= finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
+                canciones= finder1.buscarCancion(textBoxFind.Text, allCanciones);
                 foreach (Cancion cancion in canciones)
                 {
                     comboBoxFound.Items.Add(cancion.Titulo_Cancion);
