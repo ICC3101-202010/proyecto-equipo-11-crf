@@ -102,6 +102,7 @@
             this.panelTestSOng.Name = "panelTestSOng";
             this.panelTestSOng.Size = new System.Drawing.Size(643, 49);
             this.panelTestSOng.TabIndex = 0;
+            this.panelTestSOng.Click += new System.EventHandler(this.panelTestSOng_Click);
             this.panelTestSOng.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTestSOng_Paint);
             this.panelTestSOng.MouseLeave += new System.EventHandler(this.panelTestSOng_MouseLeave);
             this.panelTestSOng.MouseHover += new System.EventHandler(this.panelTestSOng_MouseHover);
