@@ -12,7 +12,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace Entrega2
 {
     
-    class LAUNCHER_Spotlix
+    /*class LAUNCHER_Spotlix
     {
 
         public LAUNCHER_Spotlix()
@@ -640,7 +640,7 @@ namespace Entrega2
 
 
                                                     }*/
-                                                }
+                                                /*}
                                                 else if (opcionB == "2")
                                                 {
                                                     Console.Write("[1]Nombre \n [2]Resolucion");
@@ -1068,7 +1068,7 @@ namespace Entrega2
 
 
 
-    }
+    }*/
 }
 
 

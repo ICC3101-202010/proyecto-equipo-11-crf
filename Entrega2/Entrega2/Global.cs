@@ -10,5 +10,6 @@ namespace Entrega2
     {
         public static List<Cancion> allSongs;
         public static List<Video> allVideos;
+        public static List<Playlist> allPlaylists;
     }
 }

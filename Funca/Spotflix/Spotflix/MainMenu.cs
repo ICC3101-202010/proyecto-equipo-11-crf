@@ -63,9 +63,18 @@ namespace Spotflix
 
         private void buttonFinder_Click(object sender, EventArgs e)
         {
-            
-            Form1.Finderr.Show();
+            Form1.Register.Hide();
+            Form1.Login.Hide();
             Form1.MainMenu.Hide();
+            Form1.Preferences.Hide();
+            Form1.MailVerified.Hide();
+            Form1.Profile.Hide();
+            Form1.Finderr.Show();
+<<<<<<< HEAD
+            Form1.MainMenu.Hide();
+=======
+
+>>>>>>> 8d9bda8c3107f7e699d526a3ca86c6c0de5d338f
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -76,6 +85,7 @@ namespace Spotflix
         private void buttonProfile_Click(object sender, EventArgs e)
         {
             Form1.Profile.Show();
+            Form1.MainMenu.Hide();
         }
     }
 }
