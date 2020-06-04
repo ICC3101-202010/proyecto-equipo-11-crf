@@ -67,6 +67,7 @@ namespace Spotflix
                 song_stack.Add(song_panel);
 
             }
+            
             //Cancion song = new Cancion(ss);
             //pbTestSong.Image = song.Custom_image;
            // labelNameSong.Text = song.Titulo_Cancion;
@@ -157,5 +158,6 @@ namespace Spotflix
             player.URL = tester.Library()[1].path;
             player.controls.play();
         }
+        
     }
 }
