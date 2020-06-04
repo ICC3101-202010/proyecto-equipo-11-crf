@@ -19,7 +19,7 @@ namespace Entrega2
         //public Reproductor() { }
         public List<Cancion> Library()
         {
-            string directory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca");
+            string directory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Biblioteca");
             DirectoryInfo Biblioteca_folder = new DirectoryInfo(directory);
             List<Cancion> Library = new List<Cancion>();
 

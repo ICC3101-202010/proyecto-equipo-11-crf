@@ -109,6 +109,12 @@
     <Compile Include="Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="VideoPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VideoPlayer.Designer.cs">
+      <DependentUpon>VideoPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VideoPlayer.resx">
+      <DependentUpon>VideoPlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +182,25 @@
       <Project>{6da9e48e-ac94-4673-934b-5206cb42db15}</Project>
       <Name>Entrega2</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
