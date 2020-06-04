@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Spotflix
 {
@@ -29,17 +30,20 @@ namespace Spotflix
 
         private void btnSubmitPreferencesRegister_Click(object sender, EventArgs e)
         {
-            if (checkBoxNoVerified.Checked == true)
+            if (checkBoxYesVerified.Checked == true)
             {
+
                 MessageBox.Show("MailService: Se ha enviado un email al correo indicado para Verificar su correo");
+                Thread.Sleep(500);
                 Form1.MailVerified.Hide();
                 Form1.Welcome.BringToFront();
                 Form1.Welcome.Show();
 
 
             }
-            else
+            if (checkBoxNoVerified.Checked == true)
             {
+                
                 Form1.MailVerified.Hide();
                 Form1.Welcome.BringToFront();
                 Form1.Welcome.Show();

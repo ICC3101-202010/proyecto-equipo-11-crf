@@ -51,11 +51,10 @@
             this.tNombreProfile.BackColor = System.Drawing.SystemColors.MenuText;
             this.tNombreProfile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tNombreProfile.ForeColor = System.Drawing.SystemColors.Window;
-            this.tNombreProfile.Location = new System.Drawing.Point(279, 184);
+            this.tNombreProfile.Location = new System.Drawing.Point(256, 186);
             this.tNombreProfile.Name = "tNombreProfile";
-            this.tNombreProfile.Size = new System.Drawing.Size(100, 13);
+            this.tNombreProfile.Size = new System.Drawing.Size(123, 13);
             this.tNombreProfile.TabIndex = 1;
-            this.tNombreProfile.Text = "Nombre Usuario";
             // 
             // panel1
             // 

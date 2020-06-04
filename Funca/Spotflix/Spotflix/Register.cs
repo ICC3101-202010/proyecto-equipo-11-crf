@@ -76,41 +76,48 @@ namespace Spotflix
                 string privacidad = "Publica";
                 usuario.privacidad = privacidad;
             }
+            usuario.Member = "false";
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, usuario);
             stream.Close();
 
             string verificationLink = GenerateLink(usuario.Username);
-            string result = Data.AddUser(new List<string>()
-                {usuario.Username, usuario.Mail, usuario.Contraseña, usuario.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario.Telefono, usuario.Member, usuario.followers});
+            string result = null;
+            //string result = Data.AddUser(new List<string>()
+            //    {usuario.Username, usuario.Mail, usuario.Contraseña, usuario.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario.Telefono, usuario.Member, usuario.followers});
             if (result == null)
             {
 
                 OnRegistered(usuario.Username, usuario.Contraseña, verificationlink: verificationLink, email: usuario.Mail);
+                if (checkBoxYesRegister.Checked == true)
+                {
+                    Form1.Preferences.BringToFront();
+                    Form1.Preferences.Show();
+
+                }
+                if (checkBoxNoRegister.Checked == true)
+                {
+                    Form1.MailVerified.BringToFront();
+                    Form1.MailVerified.Show();
+                }
+                if (checkBoxNoRegister.Checked == false & checkBoxYesRegister.Checked == false)
+                {
+                    Form1.Welcome.Show();
+                }
             }
             else
             {
 
                 MessageBox.Show("[!] ERROR: " + result + "\n");
-            }
-            if (checkBoxYesRegister.Checked == true)
-            {
-                Form1.Preferences.BringToFront();
-                Form1.Preferences.Show();
+                Form1.Register.Show();
+                Form1.Register.BringToFront();
 
             }
-            if (checkBoxNoRegister.Checked == true)
-            {
-                Form1.MailVerified.BringToFront();
-                Form1.MailVerified.Show();
-            }
+            
 
             
-            if (checkBoxNoRegister.Checked == false & checkBoxYesRegister.Checked == false)
-            {
-                Form1.Welcome.Show();
-            }
+            
         }
 
         private void bAtrasRegistration_Click(object sender, EventArgs e)
