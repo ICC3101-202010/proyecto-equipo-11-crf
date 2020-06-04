@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entrega2;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 
 namespace Spotflix
 {
@@ -18,8 +22,20 @@ namespace Spotflix
         public Profile()
         {
             InitializeComponent();
-            tNombreProfile.Text = "Nombre Usuario";
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<string> nombre = formatter.Deserialize(stream) as List<string>;
+            stream.Close();
+            foreach (string name in nombre)
+            {
+                tNombreProfile.Text += "Nombre Usuario: ";
+                tNombreProfile.Text += name;
+                
+            }
+            
         }
+
+        
 
         private void bAtrasProfile_Click(object sender, EventArgs e)
         {

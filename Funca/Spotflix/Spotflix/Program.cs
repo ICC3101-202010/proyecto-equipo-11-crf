@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Entrega2;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading;
 
 namespace Spotflix
 {
@@ -16,6 +20,13 @@ namespace Spotflix
         [STAThread]
         static void Main()
         {
+            List<string> nombre = new List<string>();
+            string name = "";
+            nombre.Add(name);
+            IFormatter formatter1 = new BinaryFormatter();
+            Stream stream1 = new FileStream("nombre.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter1.Serialize(stream1, nombre);
+            stream1.Close();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

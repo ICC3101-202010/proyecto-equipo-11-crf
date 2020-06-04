@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using Entrega2;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
+
 
 namespace Spotflix
 {
@@ -29,8 +34,17 @@ namespace Spotflix
             }
             else
             {
-                Usuario usuario = new Usuario();
-                usuario.Username = textBoxUsernameLogIn.Text;
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<string> nombre = formatter.Deserialize(stream) as List<string>;
+                stream.Close();
+                nombre.Add(textBoxUsernameLogIn.Text);
+                string name = "carlo";
+                nombre.Add(name);
+                IFormatter formatter1 = new BinaryFormatter();
+                Stream stream1 = new FileStream("nombre.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter1.Serialize(stream1, nombre);
+                stream1.Close();
                 Form1.MainMenu.Show();
             }
         }

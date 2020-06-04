@@ -1,4 +1,5 @@
-﻿namespace Spotflix
+﻿
+namespace Spotflix
 {
     partial class Form1
     {
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            
             this.profile1 = new Spotflix.Profile();
             this.mainMenu1 = new Spotflix.MainMenu();
             this.preferences1 = new Spotflix.Preferences();

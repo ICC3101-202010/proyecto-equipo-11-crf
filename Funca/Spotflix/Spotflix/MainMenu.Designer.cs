@@ -36,7 +36,6 @@
             this.labelNameSong = new System.Windows.Forms.Label();
             this.pbTestSong = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelOptions = new System.Windows.Forms.Panel();
             this.panelSearch = new System.Windows.Forms.Panel();
@@ -52,7 +51,6 @@
             this.panelMusicLibrary.SuspendLayout();
             this.panelTestSOng.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panelOptions.SuspendLayout();
             this.panelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
@@ -130,22 +128,13 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(643, 40);
             this.panel2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(254, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "AQUI VA EL MAIN MENU";
             // 
             // panel1
             // 
@@ -180,7 +169,7 @@
             // 
             // buttonMixer
             // 
-            this.buttonMixer.BackColor = System.Drawing.Color.Purple;
+            this.buttonMixer.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonMixer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMixer.Location = new System.Drawing.Point(516, 3);
             this.buttonMixer.Name = "buttonMixer";
@@ -191,7 +180,7 @@
             // 
             // buttonProfile
             // 
-            this.buttonProfile.BackColor = System.Drawing.Color.Purple;
+            this.buttonProfile.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonProfile.Location = new System.Drawing.Point(391, 3);
             this.buttonProfile.Name = "buttonProfile";
@@ -203,7 +192,7 @@
             // 
             // buttonLibrary
             // 
-            this.buttonLibrary.BackColor = System.Drawing.Color.Purple;
+            this.buttonLibrary.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLibrary.Location = new System.Drawing.Point(261, 3);
             this.buttonLibrary.Name = "buttonLibrary";
@@ -214,7 +203,7 @@
             // 
             // buttonFinder
             // 
-            this.buttonFinder.BackColor = System.Drawing.Color.Purple;
+            this.buttonFinder.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFinder.Location = new System.Drawing.Point(133, 3);
             this.buttonFinder.Name = "buttonFinder";
@@ -226,7 +215,7 @@
             // 
             // buttonHome
             // 
-            this.buttonHome.BackColor = System.Drawing.Color.Purple;
+            this.buttonHome.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHome.Location = new System.Drawing.Point(3, 3);
             this.buttonHome.Name = "buttonHome";
@@ -275,8 +264,6 @@
             this.panelTestSOng.ResumeLayout(false);
             this.panelTestSOng.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panelOptions.ResumeLayout(false);
             this.panelSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
@@ -295,7 +282,6 @@
         private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.Panel panelMusicLibrary;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelTestSOng;
         private System.Windows.Forms.PictureBox pbTestSong;
         private System.Windows.Forms.Label labelNameSong;

@@ -11,6 +11,10 @@ using Entrega2;
 using System.IO;
 using TagLib;
 using WMPLib;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 
 
 namespace Spotflix
@@ -89,6 +93,8 @@ namespace Spotflix
 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
+            
+            
             Form1.Profile.Show();
             Form1.MainMenu.Hide();
             Form1.Register.Hide();
