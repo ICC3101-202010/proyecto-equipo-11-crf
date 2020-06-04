@@ -116,9 +116,9 @@
             this.labelMobileRlabel3thPreferenceRegister.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelMobileRlabel3thPreferenceRegister.Location = new System.Drawing.Point(169, 204);
             this.labelMobileRlabel3thPreferenceRegister.Name = "labelMobileRlabel3thPreferenceRegister";
-            this.labelMobileRlabel3thPreferenceRegister.Size = new System.Drawing.Size(67, 13);
+            this.labelMobileRlabel3thPreferenceRegister.Size = new System.Drawing.Size(76, 13);
             this.labelMobileRlabel3thPreferenceRegister.TabIndex = 2;
-            this.labelMobileRlabel3thPreferenceRegister.Text = "Enter 1 Artist";
+            this.labelMobileRlabel3thPreferenceRegister.Text = "Enter 3rd Artist";
             // 
             // label2ndPreference
             // 
@@ -126,9 +126,9 @@
             this.label2ndPreference.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2ndPreference.Location = new System.Drawing.Point(169, 151);
             this.label2ndPreference.Name = "label2ndPreference";
-            this.label2ndPreference.Size = new System.Drawing.Size(67, 13);
+            this.label2ndPreference.Size = new System.Drawing.Size(79, 13);
             this.label2ndPreference.TabIndex = 1;
-            this.label2ndPreference.Text = "Enter 1 Artist";
+            this.label2ndPreference.Text = "Enter 2nd Artist";
             // 
             // label1rstPreference
             // 
@@ -136,9 +136,9 @@
             this.label1rstPreference.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1rstPreference.Location = new System.Drawing.Point(169, 105);
             this.label1rstPreference.Name = "label1rstPreference";
-            this.label1rstPreference.Size = new System.Drawing.Size(67, 13);
+            this.label1rstPreference.Size = new System.Drawing.Size(75, 13);
             this.label1rstPreference.TabIndex = 0;
-            this.label1rstPreference.Text = "Enter 1 Artist";
+            this.label1rstPreference.Text = "Enter 1st Artist";
             // 
             // Preferences
             // 

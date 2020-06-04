@@ -30,12 +30,10 @@
         {
             this.PanelRegisterInformation = new System.Windows.Forms.Panel();
             this.btnSubmitPreferencesRegister = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.checkBoxNoVerified = new System.Windows.Forms.CheckBox();
             this.checkBoxYesVerified = new System.Windows.Forms.CheckBox();
             this.labelMailVerification = new System.Windows.Forms.Label();
             this.labelRegistrationPreferencesRegister = new System.Windows.Forms.Label();
-            this.labelMailSentRegister = new System.Windows.Forms.Label();
             this.PanelRegisterInformation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,12 +41,10 @@
             // 
             this.PanelRegisterInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.PanelRegisterInformation.Controls.Add(this.btnSubmitPreferencesRegister);
-            this.PanelRegisterInformation.Controls.Add(this.label1);
             this.PanelRegisterInformation.Controls.Add(this.checkBoxNoVerified);
             this.PanelRegisterInformation.Controls.Add(this.checkBoxYesVerified);
             this.PanelRegisterInformation.Controls.Add(this.labelMailVerification);
             this.PanelRegisterInformation.Controls.Add(this.labelRegistrationPreferencesRegister);
-            this.PanelRegisterInformation.Controls.Add(this.labelMailSentRegister);
             this.PanelRegisterInformation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelRegisterInformation.Location = new System.Drawing.Point(0, 0);
             this.PanelRegisterInformation.Name = "PanelRegisterInformation";
@@ -68,16 +64,6 @@
             this.btnSubmitPreferencesRegister.Text = "Submit";
             this.btnSubmitPreferencesRegister.UseVisualStyleBackColor = false;
             this.btnSubmitPreferencesRegister.Click += new System.EventHandler(this.btnSubmitPreferencesRegister_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(202, 288);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "if answer was yes notice it.....";
             // 
             // checkBoxNoVerified
             // 
@@ -105,11 +91,11 @@
             // 
             this.labelMailVerification.AutoSize = true;
             this.labelMailVerification.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelMailVerification.Location = new System.Drawing.Point(205, 164);
+            this.labelMailVerification.Location = new System.Drawing.Point(180, 153);
             this.labelMailVerification.Name = "labelMailVerification";
-            this.labelMailVerification.Size = new System.Drawing.Size(142, 13);
+            this.labelMailVerification.Size = new System.Drawing.Size(188, 13);
             this.labelMailVerification.TabIndex = 17;
-            this.labelMailVerification.Text = "Here insert mail verification...";
+            this.labelMailVerification.Text = "Would you like us to Verify your email?";
             // 
             // labelRegistrationPreferencesRegister
             // 
@@ -122,16 +108,6 @@
             this.labelRegistrationPreferencesRegister.TabIndex = 16;
             this.labelRegistrationPreferencesRegister.Text = "Registration";
             this.labelRegistrationPreferencesRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelMailSentRegister
-            // 
-            this.labelMailSentRegister.AutoSize = true;
-            this.labelMailSentRegister.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelMailSentRegister.Location = new System.Drawing.Point(205, 102);
-            this.labelMailSentRegister.Name = "labelMailSentRegister";
-            this.labelMailSentRegister.Size = new System.Drawing.Size(149, 13);
-            this.labelMailSentRegister.TabIndex = 0;
-            this.labelMailSentRegister.Text = "Here insert mail sent to user....";
             // 
             // MailValidation
             // 
@@ -152,11 +128,9 @@
 
         private System.Windows.Forms.Panel PanelRegisterInformation;
         private System.Windows.Forms.Button btnSubmitPreferencesRegister;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxNoVerified;
         private System.Windows.Forms.CheckBox checkBoxYesVerified;
         private System.Windows.Forms.Label labelMailVerification;
         private System.Windows.Forms.Label labelRegistrationPreferencesRegister;
-        private System.Windows.Forms.Label labelMailSentRegister;
     }
 }

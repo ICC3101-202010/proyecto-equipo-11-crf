@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using Entrega2;
 
 namespace Spotflix
 {
@@ -28,6 +29,8 @@ namespace Spotflix
             }
             else
             {
+                Usuario usuario = new Usuario();
+                usuario.Username = textBoxUsernameLogIn.Text;
                 Form1.MainMenu.Show();
             }
         }

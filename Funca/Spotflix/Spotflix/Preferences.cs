@@ -24,6 +24,7 @@ namespace Spotflix
 
         private void btnSubmitPreferencesRegister_Click(object sender, EventArgs e)
         {
+
             Form1.MailVerified.BringToFront();
         }
     }

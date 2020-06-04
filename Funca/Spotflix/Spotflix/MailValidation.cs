@@ -31,11 +31,18 @@ namespace Spotflix
         {
             if (checkBoxNoVerified.Checked == true)
             {
+                MessageBox.Show("MailService: Se ha enviado un email al correo indicado para Verificar su correo");
                 Form1.MailVerified.Hide();
                 Form1.Welcome.BringToFront();
                 Form1.Welcome.Show();
 
 
+            }
+            else
+            {
+                Form1.MailVerified.Hide();
+                Form1.Welcome.BringToFront();
+                Form1.Welcome.Show();
             }
         }
     }
