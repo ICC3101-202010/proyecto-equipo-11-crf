@@ -21,10 +21,11 @@ namespace Spotflix
         public MainMenu()
         {
             InitializeComponent();
-            string ss = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Biblioteca/Love.mp3");
+            //string ss = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Biblioteca/Love.mp3");
 
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
-            Cancion song = new Cancion(ss);
+            Cancion song = tester.Library()[0];
+            //Cancion song = new Cancion(ss);
             pbTestSong.Image = song.Custom_image;
             labelNameSong.Text = song.Titulo_Cancion;
         }
