@@ -40,7 +40,7 @@
             this.buttonRate = new System.Windows.Forms.Button();
             this.ButtonFavorite = new System.Windows.Forms.Button();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.listBoxPrueba = new System.Windows.Forms.ListBox();
+            this.comboBoxFound = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panelMostrar.SuspendLayout();
             this.SuspendLayout();
@@ -116,12 +116,12 @@
             // 
             // panelMostrar
             // 
+            this.panelMostrar.Controls.Add(this.comboBoxFound);
             this.panelMostrar.Controls.Add(this.buttonMetadata);
             this.panelMostrar.Controls.Add(this.buttonDownload);
             this.panelMostrar.Controls.Add(this.buttonRate);
             this.panelMostrar.Controls.Add(this.ButtonFavorite);
             this.panelMostrar.Controls.Add(this.buttonPlay);
-            this.panelMostrar.Controls.Add(this.listBoxPrueba);
             this.panelMostrar.Location = new System.Drawing.Point(305, 0);
             this.panelMostrar.Name = "panelMostrar";
             this.panelMostrar.Size = new System.Drawing.Size(345, 385);
@@ -173,14 +173,13 @@
             this.buttonPlay.Text = "Play";
             this.buttonPlay.UseVisualStyleBackColor = true;
             // 
-            // listBoxPrueba
+            // comboBoxFound
             // 
-            this.listBoxPrueba.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.listBoxPrueba.FormattingEnabled = true;
-            this.listBoxPrueba.Location = new System.Drawing.Point(42, 47);
-            this.listBoxPrueba.Name = "listBoxPrueba";
-            this.listBoxPrueba.Size = new System.Drawing.Size(102, 277);
-            this.listBoxPrueba.TabIndex = 0;
+            this.comboBoxFound.FormattingEnabled = true;
+            this.comboBoxFound.Location = new System.Drawing.Point(43, 90);
+            this.comboBoxFound.Name = "comboBoxFound";
+            this.comboBoxFound.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxFound.TabIndex = 6;
             // 
             // Finderr
             // 
@@ -206,12 +205,12 @@
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.TextBox textBoxFind;
         private System.Windows.Forms.Panel panelMostrar;
-        private System.Windows.Forms.ListBox listBoxPrueba;
         private System.Windows.Forms.Button buttonDownload;
         private System.Windows.Forms.Button buttonRate;
         private System.Windows.Forms.Button ButtonFavorite;
         private System.Windows.Forms.Button buttonPlay;
         private System.Windows.Forms.Button buttonMetadata;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.ComboBox comboBoxFound;
     }
 }

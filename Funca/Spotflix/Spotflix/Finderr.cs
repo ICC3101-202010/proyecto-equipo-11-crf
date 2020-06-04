@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entrega2;
+using System.Threading;
 
 namespace Spotflix
 {
@@ -31,8 +32,9 @@ namespace Spotflix
                 canciones= finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
-                    listBoxPrueba.Items.Add(cancion.Titulo_Cancion);
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
                 }
+                
                 
             }
             else if (comboBoxFind.Text == "Video")
@@ -40,7 +42,7 @@ namespace Spotflix
                 List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Global.allVideos);
                 foreach(Video video in videos)
                 {
-                    listBoxPrueba.Items.Add(video.NameVideo);
+                    comboBoxFound.Items.Add(video.NameVideo);
                 }
             }
             else if (comboBoxFind.Text == "Playlist")
@@ -48,7 +50,7 @@ namespace Spotflix
                 List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
                 foreach (Playlist playlist in playlists)
                 {
-                    listBoxPrueba.Items.Add(playlist);
+                    comboBoxFound.Items.Add(playlist);
                 }
             }
             else if (comboBoxFind.Text == "Actor/Director")
@@ -68,7 +70,8 @@ namespace Spotflix
                 canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
-                    listBoxPrueba.Items.Add(cancion.Titulo_Cancion);
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                    
                 }
             }
             else if (comboBoxFind.Text == "Top Streamed")
@@ -76,7 +79,7 @@ namespace Spotflix
                 canciones = finder1.ratingReproducciones(Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
-                    listBoxPrueba.Items.Add(cancion.Titulo_Cancion);
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
                 }
             }
             else if (comboBoxFind.Text == "Top Rated")
@@ -84,7 +87,7 @@ namespace Spotflix
                 canciones = finder1.ordenarPorNota(Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
-                    listBoxPrueba.Items.Add(cancion.Titulo_Cancion);
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
                 }
             }
             else if (comboBoxFind.Text == "User")

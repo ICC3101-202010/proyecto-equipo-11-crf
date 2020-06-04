@@ -13,8 +13,8 @@ namespace Entrega2
         public List<Cancion> buscarCancion(string song_name, List<Cancion> songs)
         {//busca una determinada cancion en una determinada lista
             List<Cancion> final_search = new List<Cancion>();
-            try
-            {
+            
+            
                 foreach (var song in songs)
                 {
                     if (song.Titulo_Cancion.Contains(song_name) == true)
@@ -22,11 +22,11 @@ namespace Entrega2
                         final_search.Add(song);
                     }
                 }
-            }
-            catch
-            {
+            
+            
+            
                 
-            }
+            
             
             return final_search;
             int index = 0;
