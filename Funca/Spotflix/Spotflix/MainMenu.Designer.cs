@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.panelLoadingMainMenu = new System.Windows.Forms.Panel();
             this.panelMainmenu = new System.Windows.Forms.Panel();
-            this.panelMusicLibrary = new System.Windows.Forms.Panel();
             this.panelTestSOng = new System.Windows.Forms.Panel();
             this.labelNameSong = new System.Windows.Forms.Label();
             this.pbTestSong = new System.Windows.Forms.PictureBox();
@@ -46,14 +45,16 @@
             this.buttonHome = new System.Windows.Forms.Button();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
+            this.SongsContainerPanelFlow = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
-            this.panelMusicLibrary.SuspendLayout();
             this.panelTestSOng.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).BeginInit();
             this.panelOptions.SuspendLayout();
             this.panelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
+            this.SongsContainerPanelFlow.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLoadingMainMenu
@@ -70,7 +71,7 @@
             // 
             // panelMainmenu
             // 
-            this.panelMainmenu.Controls.Add(this.panelMusicLibrary);
+            this.panelMainmenu.Controls.Add(this.SongsContainerPanelFlow);
             this.panelMainmenu.Controls.Add(this.panel2);
             this.panelMainmenu.Controls.Add(this.panel1);
             this.panelMainmenu.Controls.Add(this.panelOptions);
@@ -80,25 +81,16 @@
             this.panelMainmenu.Size = new System.Drawing.Size(643, 356);
             this.panelMainmenu.TabIndex = 4;
             // 
-            // panelMusicLibrary
-            // 
-            this.panelMusicLibrary.Controls.Add(this.panelTestSOng);
-            this.panelMusicLibrary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMusicLibrary.Location = new System.Drawing.Point(0, 40);
-            this.panelMusicLibrary.Name = "panelMusicLibrary";
-            this.panelMusicLibrary.Size = new System.Drawing.Size(643, 226);
-            this.panelMusicLibrary.TabIndex = 3;
-            this.panelMusicLibrary.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMusicLibrary_Paint);
-            // 
             // panelTestSOng
             // 
             this.panelTestSOng.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.panelTestSOng.Controls.Add(this.label2);
             this.panelTestSOng.Controls.Add(this.labelNameSong);
             this.panelTestSOng.Controls.Add(this.pbTestSong);
             this.panelTestSOng.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTestSOng.Location = new System.Drawing.Point(0, 0);
+            this.panelTestSOng.Location = new System.Drawing.Point(3, 3);
             this.panelTestSOng.Name = "panelTestSOng";
-            this.panelTestSOng.Size = new System.Drawing.Size(643, 49);
+            this.panelTestSOng.Size = new System.Drawing.Size(637, 67);
             this.panelTestSOng.TabIndex = 0;
             this.panelTestSOng.Click += new System.EventHandler(this.panelTestSOng_Click);
             this.panelTestSOng.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTestSOng_Paint);
@@ -109,7 +101,7 @@
             // 
             this.labelNameSong.AutoSize = true;
             this.labelNameSong.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelNameSong.Location = new System.Drawing.Point(141, 19);
+            this.labelNameSong.Location = new System.Drawing.Point(167, 28);
             this.labelNameSong.Name = "labelNameSong";
             this.labelNameSong.Size = new System.Drawing.Size(35, 13);
             this.labelNameSong.TabIndex = 1;
@@ -120,7 +112,7 @@
             this.pbTestSong.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbTestSong.Location = new System.Drawing.Point(0, 0);
             this.pbTestSong.Name = "pbTestSong";
-            this.pbTestSong.Size = new System.Drawing.Size(99, 49);
+            this.pbTestSong.Size = new System.Drawing.Size(99, 67);
             this.pbTestSong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTestSong.TabIndex = 0;
             this.pbTestSong.TabStop = false;
@@ -249,6 +241,26 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
+            // SongsContainerPanelFlow
+            // 
+            this.SongsContainerPanelFlow.AutoScroll = true;
+            this.SongsContainerPanelFlow.Controls.Add(this.panelTestSOng);
+            this.SongsContainerPanelFlow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SongsContainerPanelFlow.Location = new System.Drawing.Point(0, 40);
+            this.SongsContainerPanelFlow.Name = "SongsContainerPanelFlow";
+            this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 226);
+            this.SongsContainerPanelFlow.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(528, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "label2";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,13 +272,13 @@
             this.panelLoadingMainMenu.ResumeLayout(false);
             this.panelLoadingMainMenu.PerformLayout();
             this.panelMainmenu.ResumeLayout(false);
-            this.panelMusicLibrary.ResumeLayout(false);
             this.panelTestSOng.ResumeLayout(false);
             this.panelTestSOng.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).EndInit();
             this.panelOptions.ResumeLayout(false);
             this.panelSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
+            this.SongsContainerPanelFlow.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -280,7 +292,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelOptions;
         private System.Windows.Forms.Panel panelSearch;
-        private System.Windows.Forms.Panel panelMusicLibrary;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelTestSOng;
         private System.Windows.Forms.PictureBox pbTestSong;
@@ -290,5 +301,7 @@
         private System.Windows.Forms.Button buttonLibrary;
         private System.Windows.Forms.Button buttonFinder;
         private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.FlowLayoutPanel SongsContainerPanelFlow;
+        private System.Windows.Forms.Label label2;
     }
 }
