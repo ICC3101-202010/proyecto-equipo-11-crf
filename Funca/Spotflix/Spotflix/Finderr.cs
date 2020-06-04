@@ -92,5 +92,11 @@ namespace Spotflix
 
             }
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Form1.MainMenu.Show();
+            Form1.Finderr.Hide();
+        }
     }
 }
