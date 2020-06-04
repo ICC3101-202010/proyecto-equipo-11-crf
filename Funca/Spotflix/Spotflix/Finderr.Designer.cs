@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxFind = new System.Windows.Forms.ComboBox();
             this.labelFinder = new System.Windows.Forms.Label();
             this.panelMostrar = new System.Windows.Forms.Panel();
-            this.listBoxPrueba = new System.Windows.Forms.ListBox();
-            this.buttonPlay = new System.Windows.Forms.Button();
-            this.ButtonFavorite = new System.Windows.Forms.Button();
-            this.buttonRate = new System.Windows.Forms.Button();
-            this.buttonDownload = new System.Windows.Forms.Button();
             this.buttonMetadata = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonDownload = new System.Windows.Forms.Button();
+            this.buttonRate = new System.Windows.Forms.Button();
+            this.ButtonFavorite = new System.Windows.Forms.Button();
+            this.buttonPlay = new System.Windows.Forms.Button();
+            this.listBoxPrueba = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panelMostrar.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +56,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(296, 382);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(107, 340);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.TabIndex = 5;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // textBoxFind
             // 
@@ -118,41 +128,14 @@
             this.panelMostrar.TabIndex = 1;
             this.panelMostrar.Visible = false;
             // 
-            // listBoxPrueba
+            // buttonMetadata
             // 
-            this.listBoxPrueba.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.listBoxPrueba.FormattingEnabled = true;
-            this.listBoxPrueba.Location = new System.Drawing.Point(42, 47);
-            this.listBoxPrueba.Name = "listBoxPrueba";
-            this.listBoxPrueba.Size = new System.Drawing.Size(102, 277);
-            this.listBoxPrueba.TabIndex = 0;
-            // 
-            // buttonPlay
-            // 
-            this.buttonPlay.Location = new System.Drawing.Point(195, 53);
-            this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(75, 23);
-            this.buttonPlay.TabIndex = 1;
-            this.buttonPlay.Text = "Play";
-            this.buttonPlay.UseVisualStyleBackColor = true;
-            // 
-            // ButtonFavorite
-            // 
-            this.ButtonFavorite.Location = new System.Drawing.Point(195, 91);
-            this.ButtonFavorite.Name = "ButtonFavorite";
-            this.ButtonFavorite.Size = new System.Drawing.Size(75, 23);
-            this.ButtonFavorite.TabIndex = 2;
-            this.ButtonFavorite.Text = "Favorite";
-            this.ButtonFavorite.UseVisualStyleBackColor = true;
-            // 
-            // buttonRate
-            // 
-            this.buttonRate.Location = new System.Drawing.Point(195, 135);
-            this.buttonRate.Name = "buttonRate";
-            this.buttonRate.Size = new System.Drawing.Size(75, 23);
-            this.buttonRate.TabIndex = 3;
-            this.buttonRate.Text = "Rate";
-            this.buttonRate.UseVisualStyleBackColor = true;
+            this.buttonMetadata.Location = new System.Drawing.Point(195, 222);
+            this.buttonMetadata.Name = "buttonMetadata";
+            this.buttonMetadata.Size = new System.Drawing.Size(75, 23);
+            this.buttonMetadata.TabIndex = 5;
+            this.buttonMetadata.Text = "Metadata";
+            this.buttonMetadata.UseVisualStyleBackColor = true;
             // 
             // buttonDownload
             // 
@@ -163,23 +146,41 @@
             this.buttonDownload.Text = "Download";
             this.buttonDownload.UseVisualStyleBackColor = true;
             // 
-            // buttonMetadata
+            // buttonRate
             // 
-            this.buttonMetadata.Location = new System.Drawing.Point(195, 222);
-            this.buttonMetadata.Name = "buttonMetadata";
-            this.buttonMetadata.Size = new System.Drawing.Size(75, 23);
-            this.buttonMetadata.TabIndex = 5;
-            this.buttonMetadata.Text = "Metadata";
-            this.buttonMetadata.UseVisualStyleBackColor = true;
+            this.buttonRate.Location = new System.Drawing.Point(195, 135);
+            this.buttonRate.Name = "buttonRate";
+            this.buttonRate.Size = new System.Drawing.Size(75, 23);
+            this.buttonRate.TabIndex = 3;
+            this.buttonRate.Text = "Rate";
+            this.buttonRate.UseVisualStyleBackColor = true;
             // 
-            // buttonBack
+            // ButtonFavorite
             // 
-            this.buttonBack.Location = new System.Drawing.Point(107, 340);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(75, 23);
-            this.buttonBack.TabIndex = 5;
-            this.buttonBack.Text = "Back";
-            this.buttonBack.UseVisualStyleBackColor = true;
+            this.ButtonFavorite.Location = new System.Drawing.Point(195, 91);
+            this.ButtonFavorite.Name = "ButtonFavorite";
+            this.ButtonFavorite.Size = new System.Drawing.Size(75, 23);
+            this.ButtonFavorite.TabIndex = 2;
+            this.ButtonFavorite.Text = "Favorite";
+            this.ButtonFavorite.UseVisualStyleBackColor = true;
+            // 
+            // buttonPlay
+            // 
+            this.buttonPlay.Location = new System.Drawing.Point(195, 53);
+            this.buttonPlay.Name = "buttonPlay";
+            this.buttonPlay.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlay.TabIndex = 1;
+            this.buttonPlay.Text = "Play";
+            this.buttonPlay.UseVisualStyleBackColor = true;
+            // 
+            // listBoxPrueba
+            // 
+            this.listBoxPrueba.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.listBoxPrueba.FormattingEnabled = true;
+            this.listBoxPrueba.Location = new System.Drawing.Point(42, 47);
+            this.listBoxPrueba.Name = "listBoxPrueba";
+            this.listBoxPrueba.Size = new System.Drawing.Size(102, 277);
+            this.listBoxPrueba.TabIndex = 0;
             // 
             // Finderr
             // 

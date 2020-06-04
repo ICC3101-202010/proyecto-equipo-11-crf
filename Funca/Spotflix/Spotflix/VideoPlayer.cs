@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Spotflix
 {
-    public partial class Profile : UserControl
+    public partial class VideoPlayer : UserControl
     {
-        public Profile()
+        public VideoPlayer()
         {
             InitializeComponent();
-        }
-
-        private void bAtrasProfile_Click(object sender, EventArgs e)
-        {
-            Form1.Profile.Hide();
-            Form1.MainMenu.Show();
-            
         }
     }
 }
