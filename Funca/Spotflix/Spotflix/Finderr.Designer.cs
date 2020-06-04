@@ -100,7 +100,7 @@
             // panelMostrar
             // 
             this.panelMostrar.Controls.Add(this.listBoxPrueba);
-            this.panelMostrar.Location = new System.Drawing.Point(305, 0);
+            this.panelMostrar.Location = new System.Drawing.Point(305, 3);
             this.panelMostrar.Name = "panelMostrar";
             this.panelMostrar.Size = new System.Drawing.Size(345, 385);
             this.panelMostrar.TabIndex = 1;

@@ -65,6 +65,7 @@ namespace Spotflix
         {
             
             Form1.Finderr.Show();
+            Form1.MainMenu.Hide();
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
