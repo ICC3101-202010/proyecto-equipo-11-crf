@@ -34,6 +34,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bEditProfile = new System.Windows.Forms.Button();
             this.bUserOptions = new System.Windows.Forms.Button();
+            this.pIntroProfile = new System.Windows.Forms.Panel();
+            this.bAtrasIntroProfile = new System.Windows.Forms.Button();
+            this.bVerUsuario = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pIntroProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // bAtrasProfile
@@ -51,10 +56,11 @@
             this.tNombreProfile.BackColor = System.Drawing.SystemColors.MenuText;
             this.tNombreProfile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tNombreProfile.ForeColor = System.Drawing.SystemColors.Window;
-            this.tNombreProfile.Location = new System.Drawing.Point(256, 186);
+            this.tNombreProfile.Location = new System.Drawing.Point(296, 185);
             this.tNombreProfile.Name = "tNombreProfile";
             this.tNombreProfile.Size = new System.Drawing.Size(123, 13);
             this.tNombreProfile.TabIndex = 1;
+            this.tNombreProfile.Text = "Nombre Usuario";
             // 
             // panel1
             // 
@@ -85,11 +91,53 @@
             this.bUserOptions.UseVisualStyleBackColor = true;
             this.bUserOptions.Click += new System.EventHandler(this.bUserOptions_Click);
             // 
+            // pIntroProfile
+            // 
+            this.pIntroProfile.Controls.Add(this.label1);
+            this.pIntroProfile.Controls.Add(this.bVerUsuario);
+            this.pIntroProfile.Controls.Add(this.bAtrasIntroProfile);
+            this.pIntroProfile.Location = new System.Drawing.Point(0, 0);
+            this.pIntroProfile.Name = "pIntroProfile";
+            this.pIntroProfile.Size = new System.Drawing.Size(623, 382);
+            this.pIntroProfile.TabIndex = 5;
+            // 
+            // bAtrasIntroProfile
+            // 
+            this.bAtrasIntroProfile.Location = new System.Drawing.Point(198, 231);
+            this.bAtrasIntroProfile.Name = "bAtrasIntroProfile";
+            this.bAtrasIntroProfile.Size = new System.Drawing.Size(75, 23);
+            this.bAtrasIntroProfile.TabIndex = 0;
+            this.bAtrasIntroProfile.Text = "atras";
+            this.bAtrasIntroProfile.UseVisualStyleBackColor = true;
+            this.bAtrasIntroProfile.Click += new System.EventHandler(this.bAtrasIntroProfile_Click);
+            // 
+            // bVerUsuario
+            // 
+            this.bVerUsuario.Location = new System.Drawing.Point(358, 231);
+            this.bVerUsuario.Name = "bVerUsuario";
+            this.bVerUsuario.Size = new System.Drawing.Size(75, 23);
+            this.bVerUsuario.TabIndex = 1;
+            this.bVerUsuario.Text = "Ver Usuario";
+            this.bVerUsuario.UseVisualStyleBackColor = true;
+            this.bVerUsuario.Click += new System.EventHandler(this.bVerUsuario_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(163, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(290, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Quieres Proceder a ver tu Usuario?";
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Controls.Add(this.pIntroProfile);
             this.Controls.Add(this.bUserOptions);
             this.Controls.Add(this.bEditProfile);
             this.Controls.Add(this.panel1);
@@ -97,6 +145,8 @@
             this.Controls.Add(this.bAtrasProfile);
             this.Name = "Profile";
             this.Size = new System.Drawing.Size(623, 382);
+            this.pIntroProfile.ResumeLayout(false);
+            this.pIntroProfile.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +159,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button bEditProfile;
         private System.Windows.Forms.Button bUserOptions;
+        private System.Windows.Forms.Panel pIntroProfile;
+        private System.Windows.Forms.Button bVerUsuario;
+        private System.Windows.Forms.Button bAtrasIntroProfile;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -81,6 +81,16 @@ namespace Spotflix
                     string privacidad = "Publica";
                     usuario.privacidad = privacidad;
                 }
+                if (checkboxAdminYes.Checked == true)
+                {
+                    string admin = "True";
+                    usuario.Administrador = admin;
+                }
+                if (checkBoxAdminNo.Checked == true)
+                {
+                    string admin = "False";
+                    usuario.Administrador = admin;
+                }
                 usuario.followers = "0";
                 usuario.Member = "false";
                 IFormatter formatter = new BinaryFormatter();
@@ -102,6 +112,7 @@ namespace Spotflix
                 data.Add(usuario.Telefono);
                 data.Add(usuario.Member);
                 data.Add(usuario.followers);
+                data.Add(usuario.Administrador);
                 string descripcion = null;
                 foreach (List<string> value in this.registrados.Values)
                 {

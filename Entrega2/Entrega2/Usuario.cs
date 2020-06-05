@@ -18,7 +18,7 @@ namespace Entrega2
         protected int id;
         protected string member;
         protected DateTime member_expiration;
-        protected bool administrador;
+        protected string administrador;
         protected string mail;
         protected string contraseña;
         protected string telefono;
@@ -46,7 +46,7 @@ namespace Entrega2
         public int ID  { get => id; set => id = value; }
         public string Member { get => member; set => member = value; }
         public DateTime Member_expiration  { get => member_expiration; set => member_expiration = value; }
-        public bool Administrador { get => administrador; set => administrador = value; }
+        public string Administrador { get => administrador; set => administrador = value; }
         public string Mail { get => mail; set => mail = value; }
         public string Contraseña { get => contraseña; set => contraseña = value; }
         public string Telefono { get => telefono; set => telefono = value; }
@@ -60,7 +60,7 @@ namespace Entrega2
         internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
         internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
 
-        public Usuario(int ID, string member, DateTime Member_expiration,bool Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
+        public Usuario(int ID, string member, DateTime Member_expiration,string Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {
             this.id = ID;
             this.member_expiration = Member_expiration;

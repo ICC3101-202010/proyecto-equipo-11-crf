@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.PanelRegisterInformation = new System.Windows.Forms.Panel();
+            this.tConfirmPasswordRegistration = new System.Windows.Forms.TextBox();
+            this.tPasswordRegistration = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.bAtrasRegistration = new System.Windows.Forms.Button();
             this.labelRegistrationRegister = new System.Windows.Forms.Label();
             this.btnSubmitRegister = new System.Windows.Forms.Button();
@@ -44,16 +48,18 @@
             this.labelMobileRegister = new System.Windows.Forms.Label();
             this.labelMailRegister = new System.Windows.Forms.Label();
             this.labelUsernameRegister = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tPasswordRegistration = new System.Windows.Forms.TextBox();
-            this.tConfirmPasswordRegistration = new System.Windows.Forms.TextBox();
+            this.checkboxAdminYes = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkBoxAdminNo = new System.Windows.Forms.CheckBox();
             this.PanelRegisterInformation.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelRegisterInformation
             // 
             this.PanelRegisterInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.PanelRegisterInformation.Controls.Add(this.checkBoxAdminNo);
+            this.PanelRegisterInformation.Controls.Add(this.label3);
+            this.PanelRegisterInformation.Controls.Add(this.checkboxAdminYes);
             this.PanelRegisterInformation.Controls.Add(this.tConfirmPasswordRegistration);
             this.PanelRegisterInformation.Controls.Add(this.tPasswordRegistration);
             this.PanelRegisterInformation.Controls.Add(this.label2);
@@ -78,6 +84,44 @@
             this.PanelRegisterInformation.Name = "PanelRegisterInformation";
             this.PanelRegisterInformation.Size = new System.Drawing.Size(643, 360);
             this.PanelRegisterInformation.TabIndex = 7;
+            // 
+            // tConfirmPasswordRegistration
+            // 
+            this.tConfirmPasswordRegistration.BackColor = System.Drawing.Color.SteelBlue;
+            this.tConfirmPasswordRegistration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tConfirmPasswordRegistration.Location = new System.Drawing.Point(174, 174);
+            this.tConfirmPasswordRegistration.Name = "tConfirmPasswordRegistration";
+            this.tConfirmPasswordRegistration.Size = new System.Drawing.Size(126, 20);
+            this.tConfirmPasswordRegistration.TabIndex = 21;
+            // 
+            // tPasswordRegistration
+            // 
+            this.tPasswordRegistration.BackColor = System.Drawing.Color.SteelBlue;
+            this.tPasswordRegistration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tPasswordRegistration.Location = new System.Drawing.Point(174, 137);
+            this.tPasswordRegistration.Name = "tPasswordRegistration";
+            this.tPasswordRegistration.Size = new System.Drawing.Size(126, 20);
+            this.tPasswordRegistration.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(21, 176);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Confirm Password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(59, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Password";
             // 
             // bAtrasRegistration
             // 
@@ -118,7 +162,7 @@
             // 
             this.checkBoxNoRegister.AutoSize = true;
             this.checkBoxNoRegister.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.checkBoxNoRegister.Location = new System.Drawing.Point(342, 273);
+            this.checkBoxNoRegister.Location = new System.Drawing.Point(260, 258);
             this.checkBoxNoRegister.Name = "checkBoxNoRegister";
             this.checkBoxNoRegister.Size = new System.Drawing.Size(40, 17);
             this.checkBoxNoRegister.TabIndex = 13;
@@ -130,7 +174,7 @@
             // 
             this.checkBoxYesRegister.AutoSize = true;
             this.checkBoxYesRegister.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.checkBoxYesRegister.Location = new System.Drawing.Point(281, 273);
+            this.checkBoxYesRegister.Location = new System.Drawing.Point(201, 258);
             this.checkBoxYesRegister.Name = "checkBoxYesRegister";
             this.checkBoxYesRegister.Size = new System.Drawing.Size(44, 17);
             this.checkBoxYesRegister.TabIndex = 12;
@@ -142,17 +186,17 @@
             // 
             this.labelPreferencesRegister.AutoSize = true;
             this.labelPreferencesRegister.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelPreferencesRegister.Location = new System.Drawing.Point(59, 277);
+            this.labelPreferencesRegister.Location = new System.Drawing.Point(3, 258);
             this.labelPreferencesRegister.Name = "labelPreferencesRegister";
-            this.labelPreferencesRegister.Size = new System.Drawing.Size(165, 13);
+            this.labelPreferencesRegister.Size = new System.Drawing.Size(175, 13);
             this.labelPreferencesRegister.TabIndex = 11;
-            this.labelPreferencesRegister.Text = "Do you want to add preferences?";
+            this.labelPreferencesRegister.Text = "Would you like to add preferences?";
             // 
             // checkBoxPublicRegister
             // 
             this.checkBoxPublicRegister.AutoSize = true;
             this.checkBoxPublicRegister.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.checkBoxPublicRegister.Location = new System.Drawing.Point(342, 248);
+            this.checkBoxPublicRegister.Location = new System.Drawing.Point(552, 109);
             this.checkBoxPublicRegister.Name = "checkBoxPublicRegister";
             this.checkBoxPublicRegister.Size = new System.Drawing.Size(55, 17);
             this.checkBoxPublicRegister.TabIndex = 10;
@@ -164,7 +208,7 @@
             // 
             this.checkBoxPrivateRegister.AutoSize = true;
             this.checkBoxPrivateRegister.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBoxPrivateRegister.Location = new System.Drawing.Point(281, 248);
+            this.checkBoxPrivateRegister.Location = new System.Drawing.Point(460, 108);
             this.checkBoxPrivateRegister.Name = "checkBoxPrivateRegister";
             this.checkBoxPrivateRegister.Size = new System.Drawing.Size(59, 17);
             this.checkBoxPrivateRegister.TabIndex = 9;
@@ -175,7 +219,7 @@
             // 
             this.labelPrivacityRegister.AutoSize = true;
             this.labelPrivacityRegister.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelPrivacityRegister.Location = new System.Drawing.Point(177, 248);
+            this.labelPrivacityRegister.Location = new System.Drawing.Point(365, 109);
             this.labelPrivacityRegister.Name = "labelPrivacityRegister";
             this.labelPrivacityRegister.Size = new System.Drawing.Size(47, 13);
             this.labelPrivacityRegister.TabIndex = 6;
@@ -185,7 +229,7 @@
             // 
             this.textBoxMobileRegister.BackColor = System.Drawing.Color.SteelBlue;
             this.textBoxMobileRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMobileRegister.Location = new System.Drawing.Point(280, 211);
+            this.textBoxMobileRegister.Location = new System.Drawing.Point(174, 216);
             this.textBoxMobileRegister.Name = "textBoxMobileRegister";
             this.textBoxMobileRegister.Size = new System.Drawing.Size(126, 20);
             this.textBoxMobileRegister.TabIndex = 5;
@@ -194,7 +238,7 @@
             // 
             this.textBoxMailRegister.BackColor = System.Drawing.Color.SteelBlue;
             this.textBoxMailRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxMailRegister.Location = new System.Drawing.Point(280, 102);
+            this.textBoxMailRegister.Location = new System.Drawing.Point(174, 102);
             this.textBoxMailRegister.Name = "textBoxMailRegister";
             this.textBoxMailRegister.Size = new System.Drawing.Size(126, 20);
             this.textBoxMailRegister.TabIndex = 4;
@@ -203,7 +247,7 @@
             // 
             this.textBoxUsernameRegister.BackColor = System.Drawing.Color.SteelBlue;
             this.textBoxUsernameRegister.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxUsernameRegister.Location = new System.Drawing.Point(281, 61);
+            this.textBoxUsernameRegister.Location = new System.Drawing.Point(174, 68);
             this.textBoxUsernameRegister.Name = "textBoxUsernameRegister";
             this.textBoxUsernameRegister.Size = new System.Drawing.Size(126, 20);
             this.textBoxUsernameRegister.TabIndex = 3;
@@ -212,7 +256,7 @@
             // 
             this.labelMobileRegister.AutoSize = true;
             this.labelMobileRegister.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelMobileRegister.Location = new System.Drawing.Point(186, 213);
+            this.labelMobileRegister.Location = new System.Drawing.Point(74, 218);
             this.labelMobileRegister.Name = "labelMobileRegister";
             this.labelMobileRegister.Size = new System.Drawing.Size(38, 13);
             this.labelMobileRegister.TabIndex = 2;
@@ -222,7 +266,7 @@
             // 
             this.labelMailRegister.AutoSize = true;
             this.labelMailRegister.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelMailRegister.Location = new System.Drawing.Point(198, 104);
+            this.labelMailRegister.Location = new System.Drawing.Point(86, 104);
             this.labelMailRegister.Name = "labelMailRegister";
             this.labelMailRegister.Size = new System.Drawing.Size(26, 13);
             this.labelMailRegister.TabIndex = 1;
@@ -232,49 +276,43 @@
             // 
             this.labelUsernameRegister.AutoSize = true;
             this.labelUsernameRegister.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelUsernameRegister.Location = new System.Drawing.Point(169, 63);
+            this.labelUsernameRegister.Location = new System.Drawing.Point(57, 68);
             this.labelUsernameRegister.Name = "labelUsernameRegister";
             this.labelUsernameRegister.Size = new System.Drawing.Size(55, 13);
             this.labelUsernameRegister.TabIndex = 0;
             this.labelUsernameRegister.Text = "Username";
             // 
-            // label1
+            // checkboxAdminYes
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(171, 141);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Password";
+            this.checkboxAdminYes.AutoSize = true;
+            this.checkboxAdminYes.ForeColor = System.Drawing.SystemColors.Window;
+            this.checkboxAdminYes.Location = new System.Drawing.Point(460, 75);
+            this.checkboxAdminYes.Name = "checkboxAdminYes";
+            this.checkboxAdminYes.Size = new System.Drawing.Size(44, 17);
+            this.checkboxAdminYes.TabIndex = 8;
+            this.checkboxAdminYes.Text = "Yes";
+            this.checkboxAdminYes.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(133, 178);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Confirm Password";
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(370, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Admin?";
             // 
-            // tPasswordRegistration
+            // checkBoxAdminNo
             // 
-            this.tPasswordRegistration.BackColor = System.Drawing.Color.SteelBlue;
-            this.tPasswordRegistration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tPasswordRegistration.Location = new System.Drawing.Point(281, 139);
-            this.tPasswordRegistration.Name = "tPasswordRegistration";
-            this.tPasswordRegistration.Size = new System.Drawing.Size(126, 20);
-            this.tPasswordRegistration.TabIndex = 20;
-            // 
-            // tConfirmPasswordRegistration
-            // 
-            this.tConfirmPasswordRegistration.BackColor = System.Drawing.Color.SteelBlue;
-            this.tConfirmPasswordRegistration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tConfirmPasswordRegistration.Location = new System.Drawing.Point(280, 176);
-            this.tConfirmPasswordRegistration.Name = "tConfirmPasswordRegistration";
-            this.tConfirmPasswordRegistration.Size = new System.Drawing.Size(126, 20);
-            this.tConfirmPasswordRegistration.TabIndex = 21;
+            this.checkBoxAdminNo.AutoSize = true;
+            this.checkBoxAdminNo.ForeColor = System.Drawing.SystemColors.Window;
+            this.checkBoxAdminNo.Location = new System.Drawing.Point(552, 75);
+            this.checkBoxAdminNo.Name = "checkBoxAdminNo";
+            this.checkBoxAdminNo.Size = new System.Drawing.Size(40, 17);
+            this.checkBoxAdminNo.TabIndex = 23;
+            this.checkBoxAdminNo.Text = "No";
+            this.checkBoxAdminNo.UseVisualStyleBackColor = true;
             // 
             // Register
             // 
@@ -311,5 +349,8 @@
         private System.Windows.Forms.TextBox tPasswordRegistration;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBoxAdminNo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkboxAdminYes;
     }
 }
