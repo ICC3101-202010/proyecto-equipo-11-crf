@@ -35,21 +35,27 @@
             this.comboBoxFind = new System.Windows.Forms.ComboBox();
             this.labelFinder = new System.Windows.Forms.Label();
             this.panelMostrar = new System.Windows.Forms.Panel();
+            this.labelDonload = new System.Windows.Forms.Label();
+            this.panelRate = new System.Windows.Forms.Panel();
+            this.labelRate = new System.Windows.Forms.Label();
+            this.buttonAccept = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxRate = new System.Windows.Forms.TextBox();
             this.comboBoxFound = new System.Windows.Forms.ComboBox();
             this.buttonMetadata = new System.Windows.Forms.Button();
             this.buttonDownload = new System.Windows.Forms.Button();
             this.buttonRate = new System.Windows.Forms.Button();
             this.ButtonFavorite = new System.Windows.Forms.Button();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.panelRate = new System.Windows.Forms.Panel();
-            this.textBoxRate = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonAccept = new System.Windows.Forms.Button();
-            this.labelRate = new System.Windows.Forms.Label();
-            this.labelDonload = new System.Windows.Forms.Label();
+            this.panelMetadata = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelMetadata = new System.Windows.Forms.Label();
+            this.listBoxMetadata = new System.Windows.Forms.ListBox();
+            this.labelFavorite = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelMostrar.SuspendLayout();
             this.panelRate.SuspendLayout();
+            this.panelMetadata.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,19 +130,84 @@
             // 
             // panelMostrar
             // 
+            this.panelMostrar.Controls.Add(this.labelFavorite);
+            this.panelMostrar.Controls.Add(this.flowLayoutPanel1);
             this.panelMostrar.Controls.Add(this.labelDonload);
-            this.panelMostrar.Controls.Add(this.panelRate);
             this.panelMostrar.Controls.Add(this.comboBoxFound);
             this.panelMostrar.Controls.Add(this.buttonMetadata);
             this.panelMostrar.Controls.Add(this.buttonDownload);
             this.panelMostrar.Controls.Add(this.buttonRate);
             this.panelMostrar.Controls.Add(this.ButtonFavorite);
             this.panelMostrar.Controls.Add(this.buttonPlay);
+            this.panelMostrar.Controls.Add(this.panelRate);
+            this.panelMostrar.Controls.Add(this.panelMetadata);
             this.panelMostrar.Location = new System.Drawing.Point(305, 3);
             this.panelMostrar.Name = "panelMostrar";
             this.panelMostrar.Size = new System.Drawing.Size(345, 385);
             this.panelMostrar.TabIndex = 1;
             this.panelMostrar.Visible = false;
+            this.panelMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMostrar_Paint);
+            // 
+            // labelDonload
+            // 
+            this.labelDonload.AutoSize = true;
+            this.labelDonload.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelDonload.Location = new System.Drawing.Point(275, 182);
+            this.labelDonload.Name = "labelDonload";
+            this.labelDonload.Size = new System.Drawing.Size(19, 13);
+            this.labelDonload.TabIndex = 8;
+            this.labelDonload.Text = "✅";
+            this.labelDonload.Visible = false;
+            // 
+            // panelRate
+            // 
+            this.panelRate.Controls.Add(this.labelRate);
+            this.panelRate.Controls.Add(this.buttonAccept);
+            this.panelRate.Controls.Add(this.label1);
+            this.panelRate.Controls.Add(this.textBoxRate);
+            this.panelRate.Location = new System.Drawing.Point(15, 251);
+            this.panelRate.Name = "panelRate";
+            this.panelRate.Size = new System.Drawing.Size(311, 112);
+            this.panelRate.TabIndex = 7;
+            this.panelRate.Visible = false;
+            // 
+            // labelRate
+            // 
+            this.labelRate.AutoSize = true;
+            this.labelRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelRate.Location = new System.Drawing.Point(25, 73);
+            this.labelRate.Name = "labelRate";
+            this.labelRate.Size = new System.Drawing.Size(105, 13);
+            this.labelRate.TabIndex = 6;
+            this.labelRate.Text = "Insert a valid number";
+            this.labelRate.Visible = false;
+            // 
+            // buttonAccept
+            // 
+            this.buttonAccept.Location = new System.Drawing.Point(180, 30);
+            this.buttonAccept.Name = "buttonAccept";
+            this.buttonAccept.Size = new System.Drawing.Size(75, 23);
+            this.buttonAccept.TabIndex = 5;
+            this.buttonAccept.Text = "Accept";
+            this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(25, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Stars (0-5)";
+            // 
+            // textBoxRate
+            // 
+            this.textBoxRate.Location = new System.Drawing.Point(28, 33);
+            this.textBoxRate.Name = "textBoxRate";
+            this.textBoxRate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRate.TabIndex = 0;
             // 
             // comboBoxFound
             // 
@@ -154,6 +225,7 @@
             this.buttonMetadata.TabIndex = 5;
             this.buttonMetadata.Text = "Metadata";
             this.buttonMetadata.UseVisualStyleBackColor = true;
+            this.buttonMetadata.Click += new System.EventHandler(this.buttonMetadata_Click);
             // 
             // buttonDownload
             // 
@@ -194,72 +266,58 @@
             this.buttonPlay.Text = "Play";
             this.buttonPlay.UseVisualStyleBackColor = true;
             // 
-            // panelRate
+            // panelMetadata
             // 
-            this.panelRate.Controls.Add(this.labelRate);
-            this.panelRate.Controls.Add(this.buttonAccept);
-            this.panelRate.Controls.Add(this.label1);
-            this.panelRate.Controls.Add(this.textBoxRate);
-            this.panelRate.Location = new System.Drawing.Point(15, 251);
-            this.panelRate.Name = "panelRate";
-            this.panelRate.Size = new System.Drawing.Size(311, 112);
-            this.panelRate.TabIndex = 7;
-            this.panelRate.Visible = false;
+            this.panelMetadata.Controls.Add(this.listBoxMetadata);
+            this.panelMetadata.Controls.Add(this.labelMetadata);
+            this.panelMetadata.Location = new System.Drawing.Point(3, 251);
+            this.panelMetadata.Name = "panelMetadata";
+            this.panelMetadata.Size = new System.Drawing.Size(323, 128);
+            this.panelMetadata.TabIndex = 7;
+            this.panelMetadata.Visible = false;
+            this.panelMetadata.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // textBoxRate
+            // flowLayoutPanel1
             // 
-            this.textBoxRate.Location = new System.Drawing.Point(28, 33);
-            this.textBoxRate.Name = "textBoxRate";
-            this.textBoxRate.Size = new System.Drawing.Size(100, 20);
-            this.textBoxRate.TabIndex = 0;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 244);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.TabIndex = 9;
             // 
-            // label1
+            // labelMetadata
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(25, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Stars (0-5)";
+            this.labelMetadata.AutoSize = true;
+            this.labelMetadata.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelMetadata.Location = new System.Drawing.Point(9, 4);
+            this.labelMetadata.Name = "labelMetadata";
+            this.labelMetadata.Size = new System.Drawing.Size(55, 13);
+            this.labelMetadata.TabIndex = 0;
+            this.labelMetadata.Text = "Metadada";
             // 
-            // buttonAccept
+            // listBoxMetadata
             // 
-            this.buttonAccept.Location = new System.Drawing.Point(180, 30);
-            this.buttonAccept.Name = "buttonAccept";
-            this.buttonAccept.Size = new System.Drawing.Size(75, 23);
-            this.buttonAccept.TabIndex = 5;
-            this.buttonAccept.Text = "Accept";
-            this.buttonAccept.UseVisualStyleBackColor = true;
-            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
+            this.listBoxMetadata.FormattingEnabled = true;
+            this.listBoxMetadata.Location = new System.Drawing.Point(12, 19);
+            this.listBoxMetadata.Name = "listBoxMetadata";
+            this.listBoxMetadata.Size = new System.Drawing.Size(279, 95);
+            this.listBoxMetadata.TabIndex = 1;
             // 
-            // labelRate
+            // labelFavorite
             // 
-            this.labelRate.AutoSize = true;
-            this.labelRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelRate.Location = new System.Drawing.Point(25, 73);
-            this.labelRate.Name = "labelRate";
-            this.labelRate.Size = new System.Drawing.Size(105, 13);
-            this.labelRate.TabIndex = 6;
-            this.labelRate.Text = "Insert a valid number";
-            this.labelRate.Visible = false;
-            // 
-            // labelDonload
-            // 
-            this.labelDonload.AutoSize = true;
-            this.labelDonload.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelDonload.Location = new System.Drawing.Point(275, 182);
-            this.labelDonload.Name = "labelDonload";
-            this.labelDonload.Size = new System.Drawing.Size(19, 13);
-            this.labelDonload.TabIndex = 8;
-            this.labelDonload.Text = "✅";
-            this.labelDonload.Visible = false;
+            this.labelFavorite.AutoSize = true;
+            this.labelFavorite.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelFavorite.Location = new System.Drawing.Point(276, 96);
+            this.labelFavorite.Name = "labelFavorite";
+            this.labelFavorite.Size = new System.Drawing.Size(19, 13);
+            this.labelFavorite.TabIndex = 10;
+            this.labelFavorite.Text = "✅";
+            this.labelFavorite.Visible = false;
             // 
             // Finderr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.Controls.Add(this.panelMostrar);
             this.Controls.Add(this.panel1);
             this.Name = "Finderr";
@@ -270,6 +328,8 @@
             this.panelMostrar.PerformLayout();
             this.panelRate.ResumeLayout(false);
             this.panelRate.PerformLayout();
+            this.panelMetadata.ResumeLayout(false);
+            this.panelMetadata.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -295,5 +355,10 @@
         private System.Windows.Forms.Button buttonAccept;
         private System.Windows.Forms.Label labelRate;
         private System.Windows.Forms.Label labelDonload;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panelMetadata;
+        private System.Windows.Forms.ListBox listBoxMetadata;
+        private System.Windows.Forms.Label labelMetadata;
+        private System.Windows.Forms.Label labelFavorite;
     }
 }

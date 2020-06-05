@@ -58,6 +58,7 @@ namespace Spotflix
                     IFormatter formatter1 = new BinaryFormatter();
                     Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
                     Usuario usuario1 = formatter1.Deserialize(stream1) as Usuario;
+                    Global.UserNow = usuario1;
                     stream1.Close();
                     string verificationLink = GenerateLink(usuario1.Username);
                     registro.AddUser(new List<string>()

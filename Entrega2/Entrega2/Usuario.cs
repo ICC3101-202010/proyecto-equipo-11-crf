@@ -28,7 +28,7 @@ namespace Entrega2
         
 
 
-        private List<Cancion> canciones_favoritas=new List<Cancion>();
+        public List<Cancion> canciones_favoritas=new List<Cancion>();
         private List<Video> videos_favoritos;
 
 
