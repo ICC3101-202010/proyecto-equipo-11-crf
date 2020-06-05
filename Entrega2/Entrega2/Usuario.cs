@@ -25,7 +25,9 @@ namespace Entrega2
         protected string username;
         public string privacidad;
         public string followers;
-        
+        public string following;
+
+
 
 
         private List<Cancion> canciones_favoritas=new List<Cancion>();

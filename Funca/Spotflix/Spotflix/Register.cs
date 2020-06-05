@@ -92,6 +92,7 @@ namespace Spotflix
                     usuario.Administrador = admin;
                 }
                 usuario.followers = "0";
+                usuario.following = "0";
                 usuario.Member = "false";
                 IFormatter formatter = new BinaryFormatter();
                 Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
@@ -113,6 +114,7 @@ namespace Spotflix
                 data.Add(usuario.Member);
                 data.Add(usuario.followers);
                 data.Add(usuario.Administrador);
+                data.Add(usuario.following);
                 string descripcion = null;
                 foreach (List<string> value in this.registrados.Values)
                 {
