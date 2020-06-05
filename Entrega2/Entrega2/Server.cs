@@ -123,47 +123,7 @@ namespace Entrega2
             }
             
 
-            /*IFormatter formatter1 = new BinaryFormatter();
-            Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Membresia_Usuario usuario2 = formatter1.Deserialize(stream1) as Membresia_Usuario;
-            stream.Close();
-
-            Data.RegistrarMembresia(usuario2);*/
-            /*IFormatter formatter1 = new BinaryFormatter();
-            Stream stream1 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Double tiempo1 = (Double)formatter1.Deserialize(stream1)  ;
-            stream1.Close();*/
-
-            /*IFormatter formatter2 = new BinaryFormatter();
-            Stream stream2 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Cancion cancion = (Cancion)formatter2.Deserialize(stream2);
-            stream2.Close();
-
-            IFormatter formatter3 = new BinaryFormatter();
-            Stream stream3 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            string path = (string)formatter3.Deserialize(stream3);
-            stream3.Close();*/
-
-
-            //Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
-
-
-            //Data.RetomarCancion(cancion, path, new List<Double>() { tiempo1 });
-
-
-            /*IFormatter formatter4 = new BinaryFormatter();
-            Stream stream4 = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<Cancion>  songs = formatter4.Deserialize(stream4)as List<Cancion>;
-            stream4.Close();
-
-            Data.RetomarLista(songs);*/
-
-
-
-            /*IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<string> data = formatter.Deserialize(stream) as List<string>;
-            stream.Close();*/
+            
 
             List<string> datosLogin = new List<string>();
             Console.WriteLine("Bienvenido de vuelta a Spotflix! Te extrañamos!");

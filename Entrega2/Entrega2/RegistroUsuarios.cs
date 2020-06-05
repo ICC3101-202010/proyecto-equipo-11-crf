@@ -103,10 +103,7 @@ namespace Entrega2
             if (descripcion == null)
             {
                 this.registrados.Add(registrados.Count + 1, data);
-                /*IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-                formatter.Serialize(stream, data);
-                stream.Close();*/
+                
             }
             return descripcion;
         }

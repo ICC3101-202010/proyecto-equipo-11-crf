@@ -22,16 +22,7 @@ namespace Spotflix
         public Profile()
         {
             InitializeComponent();
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<string> nombre = formatter.Deserialize(stream) as List<string>;
-            stream.Close();
-            foreach (string name in nombre)
-            {
-                tNombreProfile.Text += "Nombre Usuario: ";
-                tNombreProfile.Text += name;
-                
-            }
+            
             
         }
 
@@ -46,7 +37,18 @@ namespace Spotflix
 
         private void bUserOptions_Click(object sender, EventArgs e)
         {
-
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<string> nombre = formatter.Deserialize(stream) as List<string>;
+            stream.Close();
+            
+            foreach (string name in nombre)
+            {
+                
+                tNombreProfile.Text += "Nombre Usuario: ";
+                tNombreProfile.Text += name;
+                
+            }
         }
 
         private void bEditProfile_Click(object sender, EventArgs e)

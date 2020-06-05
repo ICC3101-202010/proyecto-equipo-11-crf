@@ -15,13 +15,15 @@ using System.Threading;
 
 namespace Spotflix
 {
+    [Serializable]
     public partial class Register : UserControl
     {
 
-        
+        public Dictionary<int, List<string>> registrados;
         public Register()
         {
             InitializeComponent();
+            registrados = new Dictionary<int, List<string>>();
         }
         // 1- Define a Delegate
         public delegate void RegisterEventHandler(object source, RegistrarEventArgs args);
@@ -56,64 +58,124 @@ namespace Spotflix
 
         private void btnSubmitRegister_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Usuario usuario = new Usuario();
-            string nombre_usuario = textBoxUsernameRegister.Text;
-            usuario.Username = nombre_usuario;
-            string email = textBoxMailRegister.Text;
-            usuario.Mail = email;
-            string contrasena = tPasswordRegistration.Text;
-            usuario.Contraseña = contrasena;
-            string celular = textBoxMobileRegister.Text;
-            usuario.Telefono = celular;
-            if (checkBoxPrivateRegister.Checked == true)
+            //RegistroUsuarios registroUsuarios = new RegistroUsuarios();
+            if (tConfirmPasswordRegistration.Text == tPasswordRegistration.Text)
             {
-                string privacidad = "Privada";
-                usuario.privacidad = privacidad;
-            }
-            if (checkBoxPublicRegister.Checked == true)
-            {
-                string privacidad = "Publica";
-                usuario.privacidad = privacidad;
-            }
-            usuario.Member = "false";
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, usuario);
-            stream.Close();
-
-            string verificationLink = GenerateLink(usuario.Username);
-            string result = null;
-            //string result = Data.AddUser(new List<string>()
-            //    {usuario.Username, usuario.Mail, usuario.Contraseña, usuario.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario.Telefono, usuario.Member, usuario.followers});
-            if (result == null)
-            {
-
-                OnRegistered(usuario.Username, usuario.Contraseña, verificationlink: verificationLink, email: usuario.Mail);
-                if (checkBoxYesRegister.Checked == true)
+                this.Hide();
+                Usuario usuario = new Usuario();
+                string nombre_usuario = textBoxUsernameRegister.Text;
+                usuario.Username = nombre_usuario;
+                string email = textBoxMailRegister.Text;
+                usuario.Mail = email;
+                string contrasena = tPasswordRegistration.Text;
+                usuario.Contraseña = contrasena;
+                string celular = textBoxMobileRegister.Text;
+                usuario.Telefono = celular;
+                if (checkBoxPrivateRegister.Checked == true)
                 {
-                    Form1.Preferences.BringToFront();
-                    Form1.Preferences.Show();
-
+                    string privacidad = "Privada";
+                    usuario.privacidad = privacidad;
                 }
-                if (checkBoxNoRegister.Checked == true)
+                if (checkBoxPublicRegister.Checked == true)
                 {
-                    Form1.MailVerified.BringToFront();
-                    Form1.MailVerified.Show();
+                    string privacidad = "Publica";
+                    usuario.privacidad = privacidad;
                 }
-                if (checkBoxNoRegister.Checked == false & checkBoxYesRegister.Checked == false)
+                usuario.followers = "0";
+                usuario.Member = "false";
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter.Serialize(stream, usuario);
+                stream.Close();
+
+                string verificationLink = GenerateLink(usuario.Username);
+
+
+                //MessageBox.Show("nombre:  " + usuario.Username + "\n" + usuario.Mail + "\n" + usuario.Contraseña + "\n" + usuario.privacidad + "\n" + verificationLink + "\n" + Convert.ToString(DateTime.Now) + "\n" + usuario.Telefono + "\n" + usuario.Member + "\n" + usuario.followers);
+                List<string> data = new List<string>();
+                data.Add(usuario.Username);
+                data.Add(usuario.Mail);
+                data.Add(usuario.Contraseña);
+                data.Add(usuario.privacidad);
+                data.Add(verificationLink);
+                data.Add(Convert.ToString(DateTime.Now));
+                data.Add(usuario.Telefono);
+                data.Add(usuario.Member);
+                data.Add(usuario.followers);
+                string descripcion = null;
+                foreach (List<string> value in this.registrados.Values)
                 {
-                    Form1.Welcome.Show();
+                    if (data[0] == value[0])
+                    {
+                        descripcion = "El nombre de usuario especificado ya existe";
+                    }
+                    else if (data[1] == value[1])
+                    {
+                        descripcion = "El correo ingresado ya existe";
+                    }
+                }
+                if (descripcion == null)
+                {
+                    try
+                    {
+                        IFormatter formatter3 = new BinaryFormatter();
+                        Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                        Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+                        stream3.Close();
+                        registrados.Add(registrados.Count + 1, data);
+                        IFormatter formatter1 = new BinaryFormatter();
+                        Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                        formatter1.Serialize(stream1, registrados);
+                        stream1.Close();
+                    }
+                    catch (Exception)
+                    {
+                        registrados.Add(registrados.Count + 1, data);
+                        IFormatter formatter1 = new BinaryFormatter();
+                        Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                        formatter1.Serialize(stream1, registrados);
+                        stream1.Close();
+                        throw;
+
+                    }
+                }
+                string result = descripcion;
+                //string result = Data.AddUser(new List<string>()
+                //{usuario.Username, usuario.Mail, usuario.Contraseña, usuario.privacidad, verificationLink, Convert.ToString(DateTime.Now),  usuario.Telefono, usuario.Member, usuario.followers});
+                if (result == null)
+                {
+
+                    OnRegistered(usuario.Username, usuario.Contraseña, verificationlink: verificationLink, email: usuario.Mail);
+                    if (checkBoxYesRegister.Checked == true)
+                    {
+                        Form1.Preferences.BringToFront();
+                        Form1.Preferences.Show();
+
+                    }
+                    if (checkBoxNoRegister.Checked == true)
+                    {
+                        Form1.MailVerified.BringToFront();
+                        Form1.MailVerified.Show();
+                    }
+                    if (checkBoxNoRegister.Checked == false & checkBoxYesRegister.Checked == false)
+                    {
+                        Form1.Welcome.Show();
+                    }
+                }
+                else
+                {
+
+                    MessageBox.Show("[!] ERROR: " + result + "\n");
+                    Form1.Register.Show();
+                    Form1.Register.BringToFront();
+
                 }
             }
             else
             {
-
-                MessageBox.Show("[!] ERROR: " + result + "\n");
-                Form1.Register.Show();
-                Form1.Register.BringToFront();
-
+                MessageBox.Show("[!] ERROR: " + "Las Contraseñas deben Coincidir!" + "\n");
             }
+            
             
 
             

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelRegisterInformation = new System.Windows.Forms.Panel();
+            this.bAtrasLogIn = new System.Windows.Forms.Button();
             this.labelError = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.labelLogIn = new System.Windows.Forms.Label();
@@ -36,7 +37,6 @@
             this.textBoxUsernameLogIn = new System.Windows.Forms.TextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUsernameRegister = new System.Windows.Forms.Label();
-            this.bAtrasLogIn = new System.Windows.Forms.Button();
             this.PanelRegisterInformation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,16 @@
             this.PanelRegisterInformation.Name = "PanelRegisterInformation";
             this.PanelRegisterInformation.Size = new System.Drawing.Size(643, 360);
             this.PanelRegisterInformation.TabIndex = 8;
+            // 
+            // bAtrasLogIn
+            // 
+            this.bAtrasLogIn.Location = new System.Drawing.Point(172, 319);
+            this.bAtrasLogIn.Name = "bAtrasLogIn";
+            this.bAtrasLogIn.Size = new System.Drawing.Size(102, 23);
+            this.bAtrasLogIn.TabIndex = 9;
+            this.bAtrasLogIn.Text = "back";
+            this.bAtrasLogIn.UseVisualStyleBackColor = true;
+            this.bAtrasLogIn.Click += new System.EventHandler(this.bAtrasLogIn_Click);
             // 
             // labelError
             // 
@@ -107,6 +117,7 @@
             this.textBoxUsernameLogIn.Name = "textBoxUsernameLogIn";
             this.textBoxUsernameLogIn.Size = new System.Drawing.Size(170, 20);
             this.textBoxUsernameLogIn.TabIndex = 3;
+            this.textBoxUsernameLogIn.TextChanged += new System.EventHandler(this.textBoxUsernameLogIn_TextChanged);
             // 
             // labelPassword
             // 
@@ -129,16 +140,6 @@
             this.labelUsernameRegister.Size = new System.Drawing.Size(77, 18);
             this.labelUsernameRegister.TabIndex = 0;
             this.labelUsernameRegister.Text = "Username";
-            // 
-            // bAtrasLogIn
-            // 
-            this.bAtrasLogIn.Location = new System.Drawing.Point(172, 319);
-            this.bAtrasLogIn.Name = "bAtrasLogIn";
-            this.bAtrasLogIn.Size = new System.Drawing.Size(102, 23);
-            this.bAtrasLogIn.TabIndex = 9;
-            this.bAtrasLogIn.Text = "back";
-            this.bAtrasLogIn.UseVisualStyleBackColor = true;
-            this.bAtrasLogIn.Click += new System.EventHandler(this.bAtrasLogIn_Click);
             // 
             // LogIn
             // 

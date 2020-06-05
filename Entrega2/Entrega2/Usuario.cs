@@ -9,6 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.IO;
 
+
 namespace Entrega2
 {
     [Serializable]
