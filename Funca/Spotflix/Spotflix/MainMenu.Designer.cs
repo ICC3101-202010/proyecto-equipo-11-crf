@@ -31,30 +31,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.panelLoadingMainMenu = new System.Windows.Forms.Panel();
             this.panelMainmenu = new System.Windows.Forms.Panel();
+            this.SongsContainerPanelFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTestSOng = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.labelNameSong = new System.Windows.Forms.Label();
             this.pbTestSong = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelOptions = new System.Windows.Forms.Panel();
             this.panelSearch = new System.Windows.Forms.Panel();
             this.buttonMixer = new System.Windows.Forms.Button();
             this.buttonProfile = new System.Windows.Forms.Button();
             this.buttonLibrary = new System.Windows.Forms.Button();
             this.buttonFinder = new System.Windows.Forms.Button();
-            this.buttonHome = new System.Windows.Forms.Button();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.SongsContainerPanelFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.PanelMiniPlayerFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
+            this.SongsContainerPanelFlow.SuspendLayout();
             this.panelTestSOng.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).BeginInit();
             this.panelOptions.SuspendLayout();
             this.panelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
-            this.SongsContainerPanelFlow.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLoadingMainMenu
@@ -71,15 +70,24 @@
             // 
             // panelMainmenu
             // 
+            this.panelMainmenu.Controls.Add(this.PanelMiniPlayerFlow);
             this.panelMainmenu.Controls.Add(this.SongsContainerPanelFlow);
             this.panelMainmenu.Controls.Add(this.panel2);
-            this.panelMainmenu.Controls.Add(this.panel1);
             this.panelMainmenu.Controls.Add(this.panelOptions);
             this.panelMainmenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainmenu.Location = new System.Drawing.Point(0, 0);
             this.panelMainmenu.Name = "panelMainmenu";
             this.panelMainmenu.Size = new System.Drawing.Size(643, 356);
             this.panelMainmenu.TabIndex = 4;
+            // 
+            // SongsContainerPanelFlow
+            // 
+            this.SongsContainerPanelFlow.AutoScroll = true;
+            this.SongsContainerPanelFlow.Controls.Add(this.panelTestSOng);
+            this.SongsContainerPanelFlow.Location = new System.Drawing.Point(0, 40);
+            this.SongsContainerPanelFlow.Name = "SongsContainerPanelFlow";
+            this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 236);
+            this.SongsContainerPanelFlow.TabIndex = 3;
             // 
             // panelTestSOng
             // 
@@ -88,7 +96,8 @@
             this.panelTestSOng.Controls.Add(this.labelNameSong);
             this.panelTestSOng.Controls.Add(this.pbTestSong);
             this.panelTestSOng.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTestSOng.Location = new System.Drawing.Point(3, 3);
+            this.panelTestSOng.Location = new System.Drawing.Point(1, 1);
+            this.panelTestSOng.Margin = new System.Windows.Forms.Padding(1);
             this.panelTestSOng.Name = "panelTestSOng";
             this.panelTestSOng.Size = new System.Drawing.Size(637, 67);
             this.panelTestSOng.TabIndex = 0;
@@ -96,6 +105,16 @@
             this.panelTestSOng.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTestSOng_Paint);
             this.panelTestSOng.MouseLeave += new System.EventHandler(this.panelTestSOng_MouseLeave);
             this.panelTestSOng.MouseHover += new System.EventHandler(this.panelTestSOng_MouseHover);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(528, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "label2";
             // 
             // labelNameSong
             // 
@@ -128,15 +147,6 @@
             this.panel2.Size = new System.Drawing.Size(643, 40);
             this.panel2.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 266);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(643, 38);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
             // panelOptions
             // 
             this.panelOptions.Controls.Add(this.panelSearch);
@@ -152,7 +162,6 @@
             this.panelSearch.Controls.Add(this.buttonProfile);
             this.panelSearch.Controls.Add(this.buttonLibrary);
             this.panelSearch.Controls.Add(this.buttonFinder);
-            this.panelSearch.Controls.Add(this.buttonHome);
             this.panelSearch.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSearch.Location = new System.Drawing.Point(0, 0);
             this.panelSearch.Name = "panelSearch";
@@ -205,18 +214,6 @@
             this.buttonFinder.UseVisualStyleBackColor = false;
             this.buttonFinder.Click += new System.EventHandler(this.buttonFinder_Click);
             // 
-            // buttonHome
-            // 
-            this.buttonHome.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.Location = new System.Drawing.Point(3, 3);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(124, 46);
-            this.buttonHome.TabIndex = 1;
-            this.buttonHome.Text = "Home";
-            this.buttonHome.UseVisualStyleBackColor = false;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
-            // 
             // labelLoading
             // 
             this.labelLoading.AutoSize = true;
@@ -241,25 +238,13 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
-            // SongsContainerPanelFlow
+            // PanelMiniPlayerFlow
             // 
-            this.SongsContainerPanelFlow.AutoScroll = true;
-            this.SongsContainerPanelFlow.Controls.Add(this.panelTestSOng);
-            this.SongsContainerPanelFlow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SongsContainerPanelFlow.Location = new System.Drawing.Point(0, 40);
-            this.SongsContainerPanelFlow.Name = "SongsContainerPanelFlow";
-            this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 226);
-            this.SongsContainerPanelFlow.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(528, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.PanelMiniPlayerFlow.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelMiniPlayerFlow.Location = new System.Drawing.Point(0, 276);
+            this.PanelMiniPlayerFlow.Name = "PanelMiniPlayerFlow";
+            this.PanelMiniPlayerFlow.Size = new System.Drawing.Size(643, 28);
+            this.PanelMiniPlayerFlow.TabIndex = 4;
             // 
             // MainMenu
             // 
@@ -272,13 +257,13 @@
             this.panelLoadingMainMenu.ResumeLayout(false);
             this.panelLoadingMainMenu.PerformLayout();
             this.panelMainmenu.ResumeLayout(false);
+            this.SongsContainerPanelFlow.ResumeLayout(false);
             this.panelTestSOng.ResumeLayout(false);
             this.panelTestSOng.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).EndInit();
             this.panelOptions.ResumeLayout(false);
             this.panelSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
-            this.SongsContainerPanelFlow.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -289,7 +274,6 @@
         private System.Windows.Forms.PictureBox pictureBoxLoading;
         private System.Windows.Forms.Label labelLoading;
         private System.Windows.Forms.Panel panelMainmenu;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelOptions;
         private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.Panel panel2;
@@ -300,8 +284,8 @@
         private System.Windows.Forms.Button buttonProfile;
         private System.Windows.Forms.Button buttonLibrary;
         private System.Windows.Forms.Button buttonFinder;
-        private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.FlowLayoutPanel SongsContainerPanelFlow;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.FlowLayoutPanel PanelMiniPlayerFlow;
     }
 }

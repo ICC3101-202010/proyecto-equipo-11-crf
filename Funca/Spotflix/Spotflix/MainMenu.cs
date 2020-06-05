@@ -15,12 +15,13 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
-
+using System.Drawing.Printing;
 
 namespace Spotflix
 {
     public partial class MainMenu : UserControl
     {
+
         Reproductor tester = new Reproductor();
         WindowsMediaPlayer player = new WindowsMediaPlayer();
         private Cancion actual;
@@ -39,6 +40,7 @@ namespace Spotflix
                 Panel song_panel = new Panel();
                 song_panel.Size = new Size(640, 67);
                 PictureBox song_image = new PictureBox();
+                song_image.Size = new Size(99, 67);
                 Label name_label = new Label();
                 Label durartion_label = new Label();
 
@@ -47,6 +49,8 @@ namespace Spotflix
                 durartion_label.Location = new Point(528, 25);
 
                 song_panel.Dock = DockStyle.Top;
+                //song_panel.BorderStyle = BorderStyle.FixedSingle;
+                song_panel.Margin = new Padding(0, 0, 3, 0);
 
                 song_image.Image = song.Custom_image;
                 song_image.SizeMode = PictureBoxSizeMode.Zoom;
@@ -54,21 +58,35 @@ namespace Spotflix
                 name_label.Text = song.Titulo_Cancion;
                 name_label.ForeColor = Color.White;
                 name_label.AutoSize = false;
-                name_label.Size = new Size(100,17);
-                
-                
+                name_label.Size = new Size(100, 17);
+
+
                 song_panel.Controls.Add(song_image);
                 song_panel.Controls.Add(durartion_label);
-                //durartion_label.Dock = DockStyle.Right;
-                //song_image.Dock = DockStyle.Left;
+
                 song_panel.Controls.Add(name_label);
 
-                //durartion_label.Location = new Point(240, 25);
                 name_label.Location = new Point(158, 25);
 
 
                 SongsContainerPanelFlow.Controls.Add(song_panel);
                 song_stack.Add(song_panel);
+                song_panel.MouseHover += delegate (object sender, EventArgs e)
+                {
+                    song_panel.BackColor = Color.FromArgb(63, 33, 65);
+
+                };
+                song_panel.MouseLeave += delegate (object sender, EventArgs e)
+                {
+                    song_panel.BackColor = Color.FromArgb(41, 22, 39);
+
+                };
+                song_panel.Click += delegate (object sender, EventArgs e)
+                {
+                    player.URL =song.path;
+                    player.controls.play();
+
+                };
 
             }
             
