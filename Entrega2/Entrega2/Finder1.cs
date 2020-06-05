@@ -114,12 +114,12 @@ namespace Entrega2
                     finalSearch.Add(song);
                 }
             }
-            int index = 0;
+            /*int index = 0;
             foreach (Cancion song in finalSearch)
             {
                 Console.WriteLine("(" + index + ")" + song.Titulo_Cancion+ "-"+ song.Banda);
                 index++;
-            }
+            }*/
             return finalSearch;
 
 

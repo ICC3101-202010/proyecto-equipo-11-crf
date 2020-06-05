@@ -9,12 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entrega2;
 using System.Threading;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 namespace Spotflix
 {
+    [Serializable]
     public partial class Finderr : UserControl
     {
         Finder1 finder1 = new Entrega2.Finder1();
+
+        
         
         
         
@@ -27,6 +34,9 @@ namespace Spotflix
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             comboBoxFound.Items.Clear();
+            labelDonload.Visible = false;
+            labelFavorite.Visible = false;
+
             
             List<Cancion> canciones;
             
@@ -63,12 +73,15 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Band")
             {
-
-            }
-            else if (comboBoxFind.Text == "Album")
-            {
                 
+                canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
+                foreach (Cancion cancion in canciones)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+
+                }
             }
+           
             else if (comboBoxFind.Text == "Album")
             {
                 canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
@@ -114,12 +127,24 @@ namespace Spotflix
 
         private void ButtonFavorite_Click(object sender, EventArgs e)
         {
+            
+
             Cancion seleccionada;
             foreach(Cancion cancion in Global.allSongs)
             {
                 if (cancion.Titulo_Cancion == comboBoxFound.Text)
                 {
                     seleccionada = cancion;
+                    seleccionada.agregarFavoritos(Global.UserNow);
+                    
+                    labelFavorite.Visible = true;
+                    /*Usuario usuario1 = Global.UserNow;
+                    IFormatter formatter = new BinaryFormatter();
+                    Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                    formatter.Serialize(stream, usuario1);
+                    stream.Close();*/
+
+
                 }
             }
 
@@ -127,7 +152,7 @@ namespace Spotflix
 
         private void buttonRate_Click(object sender, EventArgs e)
         {
-            
+            panelMetadata.Visible = false;
             if(panelRate.Visible == false)
             {
                 panelRate.Visible = true;
@@ -161,10 +186,10 @@ namespace Spotflix
                         seleccionada.Rating = puntuation;
                     }
                 }
-                
+                Thread.Sleep(1000);
+                panelRate.Visible = false;
             }
-            Thread.Sleep(1000);
-            panelRate.Visible = false;
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -174,6 +199,7 @@ namespace Spotflix
 
         private void buttonDownload_Click(object sender, EventArgs e)
         {
+
             Cancion seleccionada;
             List<Cancion> canciones = Global.allSongs;
             foreach (Cancion cancion in canciones)
@@ -183,11 +209,45 @@ namespace Spotflix
                     seleccionada = cancion;
                     seleccionada.descargarCancion();
                     labelDonload.Visible = true;
-                                       
+                    
                 }
             }
+        }
 
+        private void buttonMetadata_Click(object sender, EventArgs e)
+        {
+            panelRate.Visible = false;
+            listBoxMetadata.Items.Clear();
+            if(panelMetadata.Visible == false)
+            {
+                panelMetadata.Visible = true;
+                foreach (Cancion cancion in Global.allSongs)
+                {
+                    if (cancion.Titulo_Cancion == comboBoxFound.Text)
+                    {
+                        listBoxMetadata.Items.Add("Title: "+cancion.Titulo_Cancion);
+                        listBoxMetadata.Items.Add("Band: "+cancion.Banda);
+                        listBoxMetadata.Items.Add("Genre: "+cancion.Genero);
+                        listBoxMetadata.Items.Add("Album: "+cancion.Album);
+                        listBoxMetadata.Items.Add("Launching date: " + cancion.Fecha_Lanzamiento);
+                        
+                    }
+                }
+            }
+            else
+            {
+                panelMetadata.Visible = false;
+            }
             
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelMostrar_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
