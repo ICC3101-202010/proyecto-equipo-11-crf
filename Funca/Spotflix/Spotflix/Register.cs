@@ -135,7 +135,7 @@ namespace Spotflix
                         Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                         formatter1.Serialize(stream1, registrados);
                         stream1.Close();
-                        throw;
+                        
 
                     }
                 }
