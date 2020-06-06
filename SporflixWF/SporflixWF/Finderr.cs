@@ -64,7 +64,7 @@ namespace Spotflix
                 List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
                 foreach (Playlist playlist in playlists)
                 {
-                    comboBoxFound.Items.Add(playlist);
+                    comboBoxFound.Items.Add(playlist.NombrePlaylist);
                 }
             }
             else if (comboBoxFind.Text == "Actor/Director")

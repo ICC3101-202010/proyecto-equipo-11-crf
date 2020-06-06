@@ -115,7 +115,8 @@ namespace Spotflix
 
             Reproductor reproducto = new Reproductor();
             Global.allSongs = reproducto.Library();
-
+            Playlist allSongs = new Playlist("allSongs", Global.allSongs, null, "Defect");
+            Global.allPlaylists.Add(allSongs);
 
 
 

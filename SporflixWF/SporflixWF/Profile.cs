@@ -468,14 +468,10 @@ namespace Spotflix
                 string path = textBoxPath.Text;
                 string titulo_Cancion = textBoxNombreCancion.Text;
                 string sourcePath = path;
-                string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Descargas");
-                string ruta = System.IO.Path.Combine(targetPath, "usuario.Username");
-                if (!System.IO.Directory.Exists(ruta))
-                {
-                    Console.WriteLine("Creando Carpeta Usuario");
-                    DirectoryInfo di = System.IO.Directory.CreateDirectory(ruta);
-                }
-                string destPath = System.IO.Path.Combine(ruta, titulo_Cancion);
+                string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca");
+                
+                
+                string destPath = System.IO.Path.Combine(targetPath, titulo_Cancion);
                 System.IO.File.Copy(sourcePath, destPath, true);
                 MessageBox.Show("You´ve Successfully Added a Song!");
                 labelPath.Visible = false;

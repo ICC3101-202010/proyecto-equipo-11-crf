@@ -229,7 +229,8 @@ namespace Spotflix
                         listBoxMetadata.Items.Add("Band: "+cancion.Banda);
                         listBoxMetadata.Items.Add("Genre: "+cancion.Genero);
                         listBoxMetadata.Items.Add("Album: "+cancion.Album);
-                        listBoxMetadata.Items.Add("Launching date: " + cancion.Fecha_Lanzamiento);
+                        listBoxMetadata.Items.Add("Release date: " + cancion.Fecha_Lanzamiento);
+                        listBoxMetadata.Items.Add("Duration" + cancion.Duration.ToString());
                         
                     }
                 }
