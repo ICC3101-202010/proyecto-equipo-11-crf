@@ -82,11 +82,13 @@
             this.ProgressBarSong.TrackLineHeight = 3;
             this.ProgressBarSong.TrackLineSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
             this.ProgressBarSong.Value = 0;
+            this.ProgressBarSong.ValueChanged += new XComponent.SliderBar.ValueChangedHandler(this.ProgressBarSong_ValueChanged);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PlayerBar
             // 

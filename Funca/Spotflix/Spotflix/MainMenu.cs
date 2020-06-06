@@ -21,8 +21,8 @@ namespace Spotflix
 {
     public partial class MainMenu : UserControl
     {
-        List<Cancion> vacia = new List<Cancion>();
-        //List<Cancion> library = Form1.Reproductor.Library();
+        //List<Cancion> vacia = new List<Cancion>();
+        List<Cancion> library = Form1.Reproductor.Library();
         Reproductor tester = new Reproductor();
         
 
@@ -36,7 +36,7 @@ namespace Spotflix
 
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
             //Cancion song1 = tester.Library()[1];
-            foreach (Cancion song in vacia)
+            foreach (Cancion song in library)
             {
                 Panel song_panel = new Panel();
                 song_panel.Size = new Size(640, 67);

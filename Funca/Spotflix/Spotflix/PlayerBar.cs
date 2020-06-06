@@ -18,16 +18,45 @@ namespace Spotflix
         {
             InitializeComponent();
             pbPlayStop.BackColor = Color.Transparent;
+            
 
         }
         public void RefreshSongStatus() 
         {
             if (player.playState == WMPLib.WMPPlayState.wmppsPlaying) 
             {
-                ProgressBarSong.
+                ProgressBarSong.Maximum =(int)player.controls.currentItem.duration;
+                timer1.Start();
             
             }
-        
+            else if(player.playState == WMPLib.WMPPlayState.wmppsPaused)
+            {
+
+                timer1.Stop();
+            }
+            else if (player.playState == WMPLib.WMPPlayState.wmppsStopped)
+            {
+
+                timer1.Stop();
+                ProgressBarSong.Value = 0;
+            }
+
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            RefreshSongStatus();
+            ProgressBarSong.Value = (int)player.controls.currentPosition;
+        }
+
+        private void ProgressBarSong_ValueChanged(object sender, decimal value)
+        {
+
+        }
+        
+        
+        
+        
+
     }
 }
