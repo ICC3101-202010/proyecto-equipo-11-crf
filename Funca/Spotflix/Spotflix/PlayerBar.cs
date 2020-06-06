@@ -15,6 +15,13 @@ namespace Spotflix
         public PlayerBar()
         {
             InitializeComponent();
+            pbPlayStop.BackColor = Color.Transparent;
+
+        }
+        public void RefreshSongStatus() 
+        { 
+        
+        
         }
     }
 }

@@ -21,8 +21,8 @@ namespace Spotflix
 {
     public partial class MainMenu : UserControl
     {
-        
-        List<Cancion> library = Form1.Reproductor.Library();
+        List<Cancion> vacia = new List<Cancion>();
+        //List<Cancion> library = Form1.Reproductor.Library();
         Reproductor tester = new Reproductor();
         
 
@@ -35,8 +35,8 @@ namespace Spotflix
             //string ss = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Biblioteca/Love.mp3");
 
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
-            Cancion song1 = tester.Library()[1];
-            foreach (Cancion song in library)
+            //Cancion song1 = tester.Library()[1];
+            foreach (Cancion song in vacia)
             {
                 Panel song_panel = new Panel();
                 song_panel.Size = new Size(640, 67);
@@ -50,7 +50,6 @@ namespace Spotflix
                 durartion_label.Location = new Point(528, 25);
 
                 song_panel.Dock = DockStyle.Top;
-                //song_panel.BorderStyle = BorderStyle.FixedSingle;
                 song_panel.Margin = new Padding(0, 0, 3, 0);
 
                 song_image.Image = song.Custom_image;
@@ -86,6 +85,7 @@ namespace Spotflix
                 {
                     Form1.Player.URL =song.path;
                     Form1.Player.controls.play();
+                    
 
                 };
 
