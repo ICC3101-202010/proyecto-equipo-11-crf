@@ -29,7 +29,6 @@ namespace Spotflix
         /// </summary>
         private void InitializeComponent()
         {
-            
             this.profile1 = new Spotflix.Profile();
             this.mainMenu1 = new Spotflix.MainMenu();
             this.preferences1 = new Spotflix.Preferences();
@@ -38,6 +37,7 @@ namespace Spotflix
             this.register1 = new Spotflix.Register();
             this.welcome1 = new Spotflix.Welcome();
             this.finderr1 = new Spotflix.Finderr();
+            this.playerBar1 = new Spotflix.PlayerBar();
             this.SuspendLayout();
             // 
             // profile1
@@ -106,11 +106,19 @@ namespace Spotflix
             this.finderr1.Size = new System.Drawing.Size(644, 372);
             this.finderr1.TabIndex = 6;
             // 
+            // playerBar1
+            // 
+            this.playerBar1.Location = new System.Drawing.Point(7, 285);
+            this.playerBar1.Name = "playerBar1";
+            this.playerBar1.Size = new System.Drawing.Size(637, 35);
+            this.playerBar1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 372);
+            this.Controls.Add(this.playerBar1);
             this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.preferences1);
             this.Controls.Add(this.logIn1);
@@ -136,6 +144,7 @@ namespace Spotflix
         private MainMenu mainMenu1;
         private Finderr finderr1;
         private Profile profile1;
+        private PlayerBar playerBar1;
     }
 }
 

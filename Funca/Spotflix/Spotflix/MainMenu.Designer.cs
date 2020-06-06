@@ -70,7 +70,6 @@
             // 
             // panelMainmenu
             // 
-            this.panelMainmenu.Controls.Add(this.PanelMiniPlayerFlow);
             this.panelMainmenu.Controls.Add(this.SongsContainerPanelFlow);
             this.panelMainmenu.Controls.Add(this.panel2);
             this.panelMainmenu.Controls.Add(this.panelOptions);
@@ -92,9 +91,10 @@
             // 
             this.SongsContainerPanelFlow.AutoScroll = true;
             this.SongsContainerPanelFlow.Controls.Add(this.panelTestSOng);
+            this.SongsContainerPanelFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SongsContainerPanelFlow.Location = new System.Drawing.Point(0, 40);
             this.SongsContainerPanelFlow.Name = "SongsContainerPanelFlow";
-            this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 236);
+            this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 264);
             this.SongsContainerPanelFlow.TabIndex = 3;
             // 
             // panelTestSOng
@@ -288,6 +288,5 @@
         private System.Windows.Forms.Button buttonFinder;
         private System.Windows.Forms.FlowLayoutPanel SongsContainerPanelFlow;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel PanelMiniPlayerFlow;
     }
 }

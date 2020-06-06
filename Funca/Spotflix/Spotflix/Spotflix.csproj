@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MACTrackBarLib, Version=1.0.5896.38740, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MACTrackBarLib.dll.1.0.2\lib\net40\MACTrackBarLib.dll</HintPath>
+    </Reference>
     <Reference Include="policy.2.0.taglib-sharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
       <HintPath>..\packages\taglib.2.1.0.0\lib\policy.2.0.taglib-sharp.dll</HintPath>
     </Reference>
@@ -95,11 +98,19 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Mixer.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Mixer.Designer.cs">
       <DependentUpon>Mixer.cs</DependentUpon>
+=======
+    <Compile Include="PlayerBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerBar.Designer.cs">
+      <DependentUpon>PlayerBar.cs</DependentUpon>
+>>>>>>> 17da02a0f174b642763ec3769950596bbb088e8f
     </Compile>
     <Compile Include="Preferences.cs">
       <SubType>UserControl</SubType>
@@ -154,8 +165,13 @@
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Mixer.resx">
       <DependentUpon>Mixer.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="PlayerBar.resx">
+      <DependentUpon>PlayerBar.cs</DependentUpon>
+>>>>>>> 17da02a0f174b642763ec3769950596bbb088e8f
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences.resx">
       <DependentUpon>Preferences.cs</DependentUpon>

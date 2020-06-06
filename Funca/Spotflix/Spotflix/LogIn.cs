@@ -118,6 +118,7 @@ namespace Spotflix
                     formatter1.Serialize(stream1, nombre);
                     stream1.Close();
                     Form1.MainMenu.Show();
+                    Form1.ProgresBar.Show();
                 }
                 else
                 {
