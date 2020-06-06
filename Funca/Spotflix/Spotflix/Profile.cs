@@ -112,28 +112,29 @@ namespace Spotflix
 
             
 
-            if (comboBoxEditarProfile.Text == "Cambiar Nombre de Usuario")
+            if (comboBoxEditarProfile.Text == "Change Username")
             {
                 
                 checkBoxPublica.Visible = false;
                 checkBoxPrivada.Visible = false;
                 panelEditarNombre.Visible = true;
+                LabelIngresarNuevo.Text = "Enter the new Username";
                 textBoxIngresarNuevo.Visible = true;
                 LabelIngresarNuevo.Visible = true;
-                
+                textBoxIngresarNuevo.Text = "";
             }
-            if (comboBoxEditarProfile.Text == "Cambiar Contraseña")
+            if (comboBoxEditarProfile.Text == "Change Password")
             {
                 checkBoxPublica.Visible = false;
                 checkBoxPrivada.Visible = false;
                 panelEditarNombre.Visible = true;
                 textBoxIngresarNuevo.Visible = true;
                 LabelIngresarNuevo.Visible = true;
-                LabelIngresarNuevo.Text = "Ingresa la Nueva Contraseña";
+                LabelIngresarNuevo.Text = "Enter the new Password";
                 textBoxIngresarNuevo.Text = "";
                 
             }
-            if (comboBoxEditarProfile.Text == "Cambiar Privacidad")
+            if (comboBoxEditarProfile.Text == "Change Privacy")
             {
                 IFormatter formatter = new BinaryFormatter();
                 Stream stream = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -153,7 +154,8 @@ namespace Spotflix
                 {
                     if (nombre[0] == value[0])
                     {
-                        LabelIngresarNuevo.Text = "Tu cuenta es:   " + value[3] + "\n"+ "\n" + "Elige La Nueva Privacidad";
+                        LabelIngresarNuevo.Visible = true;
+                        LabelIngresarNuevo.Text = "Your Account is:   " + value[3] + "\n"+ "\n" + "Select the new Privacy";
                     }
                 }        
             }
@@ -169,7 +171,7 @@ namespace Spotflix
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
             stream3.Close();
-            if (comboBoxEditarProfile.Text == "Cambiar Nombre de Usuario")
+            if (comboBoxEditarProfile.Text == "Change Username")
             {
                 string nuevo_nombre = textBoxIngresarNuevo.Text;
                 int a = 1;
@@ -182,7 +184,7 @@ namespace Spotflix
                             if (nuevo_nombre == valor[0])
                             {
                                 a = 2;
-                                MessageBox.Show("El Nombre de Usuario ya Existe!");
+                                MessageBox.Show("The Username already exists!");
                                 break;
                             }
                             else
@@ -199,15 +201,16 @@ namespace Spotflix
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, registrados);
                             stream1.Close();
-                            MessageBox.Show("Cambiaste el Nombre de Usuario con Exito!");
-                            
+                            MessageBox.Show("You´ve successfully changed your Username!");
+                            textBoxIngresarNuevo.Text = "";
                             pEditarProfile.Visible = true;
                             panelEditarNombre.Visible = false;
+                            comboBoxEditarProfile.Text = "";
                         }
                     }
                 }
             }
-            if (comboBoxEditarProfile.Text == "Cambiar Contraseña")
+            if (comboBoxEditarProfile.Text == "Change Password")
             {
                 string nueva_contrasena = textBoxIngresarNuevo.Text;
                 foreach (List<string> value in registrados.Values)
@@ -220,13 +223,14 @@ namespace Spotflix
                         Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                         formatter1.Serialize(stream1, registrados);
                         stream1.Close();
-                        MessageBox.Show("Cambiaste la Contraseña con Exito!");
+                        MessageBox.Show("You´ve Successfully changed your Password!");
+                        textBoxIngresarNuevo.Text = "";
                         pEditarProfile.Visible = true;
                         panelEditarNombre.Visible = false;
                     }
                 }
             }
-            if (comboBoxEditarProfile.Text == "Cambiar Privacidad")
+            if (comboBoxEditarProfile.Text == "Change Privacy")
             {
                 foreach (List<string> value in registrados.Values)
                 {
@@ -241,7 +245,7 @@ namespace Spotflix
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, registrados);
                             stream1.Close();
-                            MessageBox.Show("Cambiaste la Privacidad con Exito!");
+                            MessageBox.Show("You´ve Successfully Changed your Privacy!");
                             pEditarProfile.Visible = true;
                             panelEditarNombre.Visible = false;
 
@@ -253,7 +257,7 @@ namespace Spotflix
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, registrados);
                             stream1.Close();
-                            MessageBox.Show("Cambiaste la Privacidad con Exito!");
+                            MessageBox.Show("You´ve Successfully Changed your Privacy!");
                             pEditarProfile.Visible = true;
                             panelEditarNombre.Visible = false;
                         }
@@ -279,7 +283,7 @@ namespace Spotflix
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
             stream3.Close();
-            if (comboBoxOpcionesUsuario.Text == "Cambiar Membresia")
+            if (comboBoxOpcionesUsuario.Text == "Change Membership")
             {
                 panelCambiarOpcionesUsuario.Visible = true;
                 labelCambio.Visible = true;
@@ -294,7 +298,7 @@ namespace Spotflix
                     {
                         if (value[7] == "false")
                         {
-                            labelPremium.Text = "Aun No eres Un Usuario Premium! Contrata Spotflix Premium para disfrutar de la Mejor Musica y Videos!";
+                            labelPremium.Text = "You´re not a Premium User Yet! Purchase Spotflix Premium to Enjoy the best Music & Videos!";
                             
                         }
                         if (value[7] == "true")
@@ -309,7 +313,7 @@ namespace Spotflix
                 checkBoxNo.Text = "Free";
                 
             }
-            if (comboBoxOpcionesUsuario.Text == "Agregar Cancion")
+            if (comboBoxOpcionesUsuario.Text == "Add Song")
             {
                 foreach (List<string> value in registrados.Values)
                 {
@@ -319,6 +323,7 @@ namespace Spotflix
                         {
                             labelPremium.Text = "You´re not an Admin Yet! Update to Admin to be able to Add Songs!";
                             labelPremium.Visible = true;
+                            labelInsertTitle.Visible = false;
                             panelCambiarOpcionesUsuario.Visible = true;
                         }
                         if (value[9] == "True")
@@ -328,13 +333,16 @@ namespace Spotflix
                             panelCambiarOpcionesUsuario.Visible = true;
                             labelPath.Visible = true;
                             textBoxPath.Visible = true;
+                            labelInsertTitle.Visible = true;
+                            labelInsertTitle.Text = "Insert the Title of the Song";
+                            textBoxNombreCancion.Visible = true;
                         }
 
                     }
                 }
                 
             }
-            if (comboBoxOpcionesUsuario.Text == "Agregar Video")
+            if (comboBoxOpcionesUsuario.Text == "Add Video")
             {
                 foreach (List<string> value in registrados.Values)
                 {
@@ -344,6 +352,7 @@ namespace Spotflix
                         {
                             labelPremium.Text = "You´re not an Admin Yet! Update to Admin to be able to Add Videos!";
                             labelPremium.Visible = true;
+                            labelInsertTitle.Visible = false;
                             panelCambiarOpcionesUsuario.Visible = true;
                         }
                         if (value[9] == "True")
@@ -353,13 +362,16 @@ namespace Spotflix
                             panelCambiarOpcionesUsuario.Visible = true;
                             labelPath.Visible = true;
                             textBoxPath.Visible = true;
+                            labelInsertTitle.Visible = true;
+                            labelInsertTitle.Text = "Insert the Title of the Video";
+                            textBoxNombreCancion.Visible = true;
                         }
 
                     }
                 }
                 
             }
-            if (comboBoxOpcionesUsuario.Text == "Cambiar Atributo Administrador")
+            if (comboBoxOpcionesUsuario.Text == "Change Admin Attribute")
             {
                 panelCambiarOpcionesUsuario.Visible = true;
                 labelCambio.Visible = true;
@@ -399,6 +411,7 @@ namespace Spotflix
             labelPremium.Visible = false;
             labelPath.Visible = false;
             textBoxPath.Visible = false;
+            comboBoxOpcionesUsuario.Text = "";
         }
 
         private void buttonUpdateOpciones_Click(object sender, EventArgs e)
@@ -411,7 +424,7 @@ namespace Spotflix
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
             stream3.Close();
-            if (comboBoxOpcionesUsuario.Text == "Cambiar Membresia")
+            if (comboBoxOpcionesUsuario.Text == "Change Membership")
             {
                 foreach (List<string> value in registrados.Values)
                 {
@@ -450,28 +463,56 @@ namespace Spotflix
                 }
                 
             }
-            if (comboBoxOpcionesUsuario.Text == "Agregar Cancion")
+            if (comboBoxOpcionesUsuario.Text == "Add Song")
             {
                 string path = textBoxPath.Text;
+                string titulo_Cancion = textBoxNombreCancion.Text;
+                string sourcePath = path;
+                string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Descargas");
+                string ruta = System.IO.Path.Combine(targetPath, "usuario.Username");
+                if (!System.IO.Directory.Exists(ruta))
+                {
+                    Console.WriteLine("Creando Carpeta Usuario");
+                    DirectoryInfo di = System.IO.Directory.CreateDirectory(ruta);
+                }
+                string destPath = System.IO.Path.Combine(ruta, titulo_Cancion);
+                System.IO.File.Copy(sourcePath, destPath, true);
                 MessageBox.Show("You´ve Successfully Added a Song!");
                 labelPath.Visible = false;
+                labelInsertTitle.Visible = false;
+                textBoxNombreCancion.Text = "";
+                textBoxNombreCancion.Visible = false;
                 textBoxPath.Text = "";
                 textBoxPath.Visible = false;
                 panelCambiarOpcionesUsuario.Visible = false;
                 labelPremium.Visible = false;
 
             }
-            if (comboBoxOpcionesUsuario.Text == "Agregar Video")
+            if (comboBoxOpcionesUsuario.Text == "Add Video")
             {
                 string path = textBoxPath.Text;
+                string titulo_Video = textBoxNombreCancion.Text;
+                string sourcePath = path;
+                string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Descargas");
+                string ruta = System.IO.Path.Combine(targetPath, "usuario.Username");
+                if (!System.IO.Directory.Exists(ruta))
+                {
+                    Console.WriteLine("Creando Carpeta Usuario");
+                    DirectoryInfo di = System.IO.Directory.CreateDirectory(ruta);
+                }
+                string destPath = System.IO.Path.Combine(ruta, titulo_Video);
+                System.IO.File.Copy(sourcePath, destPath, true);
                 MessageBox.Show("You´ve Successfully Added a Video!");
                 textBoxPath.Text = "";
                 labelPath.Visible = false;
+                labelInsertTitle.Visible = false;
+                textBoxNombreCancion.Text = "";
+                textBoxNombreCancion.Visible = false;
                 textBoxPath.Visible = false;
                 panelCambiarOpcionesUsuario.Visible = false;
                 labelPremium.Visible = false;
             }
-            if (comboBoxOpcionesUsuario.Text == "Cambiar Atributo Administrador")
+            if (comboBoxOpcionesUsuario.Text == "Change Admin Attribute")
             {
                 foreach (List<string> value in registrados.Values)
                 {

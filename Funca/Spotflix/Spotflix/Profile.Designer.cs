@@ -67,6 +67,8 @@
             this.labelPremium = new System.Windows.Forms.Label();
             this.labelPath = new System.Windows.Forms.Label();
             this.textBoxPath = new System.Windows.Forms.TextBox();
+            this.textBoxNombreCancion = new System.Windows.Forms.TextBox();
+            this.labelInsertTitle = new System.Windows.Forms.Label();
             this.pIntroProfile.SuspendLayout();
             this.pEditarProfile.SuspendLayout();
             this.panelEditarNombre.SuspendLayout();
@@ -142,9 +144,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(163, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 20);
+            this.label1.Size = new System.Drawing.Size(280, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Quieres Proceder a ver tu Usuario?";
+            this.label1.Text = "Would you Like to See your User?";
             // 
             // bVerUsuario
             // 
@@ -152,7 +154,7 @@
             this.bVerUsuario.Name = "bVerUsuario";
             this.bVerUsuario.Size = new System.Drawing.Size(75, 23);
             this.bVerUsuario.TabIndex = 1;
-            this.bVerUsuario.Text = "Ver Usuario";
+            this.bVerUsuario.Text = "See User";
             this.bVerUsuario.UseVisualStyleBackColor = true;
             this.bVerUsuario.Click += new System.EventHandler(this.bVerUsuario_Click);
             // 
@@ -162,7 +164,7 @@
             this.bAtrasIntroProfile.Name = "bAtrasIntroProfile";
             this.bAtrasIntroProfile.Size = new System.Drawing.Size(75, 23);
             this.bAtrasIntroProfile.TabIndex = 0;
-            this.bAtrasIntroProfile.Text = "atras";
+            this.bAtrasIntroProfile.Text = "back";
             this.bAtrasIntroProfile.UseVisualStyleBackColor = true;
             this.bAtrasIntroProfile.Click += new System.EventHandler(this.bAtrasIntroProfile_Click);
             // 
@@ -216,9 +218,9 @@
             // 
             this.comboBoxEditarProfile.FormattingEnabled = true;
             this.comboBoxEditarProfile.Items.AddRange(new object[] {
-            "Cambiar Nombre de Usuario",
-            "Cambiar Contraseña",
-            "Cambiar Privacidad"});
+            "Change Username",
+            "Change Password",
+            "Change Privacy"});
             this.comboBoxEditarProfile.Location = new System.Drawing.Point(173, 170);
             this.comboBoxEditarProfile.Name = "comboBoxEditarProfile";
             this.comboBoxEditarProfile.Size = new System.Drawing.Size(238, 21);
@@ -229,11 +231,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(191, 115);
+            this.label2.Location = new System.Drawing.Point(169, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 20);
+            this.label2.Size = new System.Drawing.Size(245, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Que Te Gustaria Editar?";
+            this.label2.Text = "What Would you Like to Edit?";
             // 
             // buttonAtrasEditarProfile
             // 
@@ -241,7 +243,7 @@
             this.buttonAtrasEditarProfile.Name = "buttonAtrasEditarProfile";
             this.buttonAtrasEditarProfile.Size = new System.Drawing.Size(75, 23);
             this.buttonAtrasEditarProfile.TabIndex = 2;
-            this.buttonAtrasEditarProfile.Text = "atras";
+            this.buttonAtrasEditarProfile.Text = "back";
             this.buttonAtrasEditarProfile.UseVisualStyleBackColor = true;
             this.buttonAtrasEditarProfile.Click += new System.EventHandler(this.buttonAtrasEditarProfile_Click);
             // 
@@ -251,7 +253,7 @@
             this.bEditarProfile.Name = "bEditarProfile";
             this.bEditarProfile.Size = new System.Drawing.Size(75, 23);
             this.bEditarProfile.TabIndex = 3;
-            this.bEditarProfile.Text = "Editar";
+            this.bEditarProfile.Text = "Edit";
             this.bEditarProfile.UseVisualStyleBackColor = true;
             this.bEditarProfile.Click += new System.EventHandler(this.bEditarProfile_Click);
             // 
@@ -264,7 +266,7 @@
             this.panelEditarNombre.Controls.Add(this.textBoxIngresarNuevo);
             this.panelEditarNombre.Location = new System.Drawing.Point(56, 48);
             this.panelEditarNombre.Name = "panelEditarNombre";
-            this.panelEditarNombre.Size = new System.Drawing.Size(528, 295);
+            this.panelEditarNombre.Size = new System.Drawing.Size(551, 289);
             this.panelEditarNombre.TabIndex = 4;
             this.panelEditarNombre.Visible = false;
             // 
@@ -281,9 +283,8 @@
             this.LabelIngresarNuevo.ForeColor = System.Drawing.SystemColors.Window;
             this.LabelIngresarNuevo.Location = new System.Drawing.Point(20, 125);
             this.LabelIngresarNuevo.Name = "LabelIngresarNuevo";
-            this.LabelIngresarNuevo.Size = new System.Drawing.Size(140, 13);
+            this.LabelIngresarNuevo.Size = new System.Drawing.Size(0, 13);
             this.LabelIngresarNuevo.TabIndex = 1;
-            this.LabelIngresarNuevo.Text = "Ingresa El Nuevo Username";
             // 
             // checkBoxPrivada
             // 
@@ -291,9 +292,9 @@
             this.checkBoxPrivada.ForeColor = System.Drawing.SystemColors.Window;
             this.checkBoxPrivada.Location = new System.Drawing.Point(189, 149);
             this.checkBoxPrivada.Name = "checkBoxPrivada";
-            this.checkBoxPrivada.Size = new System.Drawing.Size(62, 17);
+            this.checkBoxPrivada.Size = new System.Drawing.Size(59, 17);
             this.checkBoxPrivada.TabIndex = 2;
-            this.checkBoxPrivada.Text = "Privada";
+            this.checkBoxPrivada.Text = "Private";
             this.checkBoxPrivada.UseVisualStyleBackColor = true;
             this.checkBoxPrivada.Visible = false;
             // 
@@ -303,9 +304,9 @@
             this.checkBoxPublica.ForeColor = System.Drawing.SystemColors.Window;
             this.checkBoxPublica.Location = new System.Drawing.Point(294, 149);
             this.checkBoxPublica.Name = "checkBoxPublica";
-            this.checkBoxPublica.Size = new System.Drawing.Size(61, 17);
+            this.checkBoxPublica.Size = new System.Drawing.Size(55, 17);
             this.checkBoxPublica.TabIndex = 3;
-            this.checkBoxPublica.Text = "Publica";
+            this.checkBoxPublica.Text = "Public";
             this.checkBoxPublica.UseVisualStyleBackColor = true;
             this.checkBoxPublica.Visible = false;
             // 
@@ -315,7 +316,7 @@
             this.bCambiarEditar.Name = "bCambiarEditar";
             this.bCambiarEditar.Size = new System.Drawing.Size(174, 23);
             this.bCambiarEditar.TabIndex = 4;
-            this.bCambiarEditar.Text = "Cambiar";
+            this.bCambiarEditar.Text = "Change";
             this.bCambiarEditar.UseVisualStyleBackColor = true;
             this.bCambiarEditar.Click += new System.EventHandler(this.bCambiarEditar_Click);
             // 
@@ -329,7 +330,7 @@
             this.panelOpcionesUsuario.Controls.Add(this.bAtrasOpciones);
             this.panelOpcionesUsuario.Location = new System.Drawing.Point(0, 0);
             this.panelOpcionesUsuario.Name = "panelOpcionesUsuario";
-            this.panelOpcionesUsuario.Size = new System.Drawing.Size(631, 388);
+            this.panelOpcionesUsuario.Size = new System.Drawing.Size(628, 385);
             this.panelOpcionesUsuario.TabIndex = 3;
             this.panelOpcionesUsuario.Visible = false;
             // 
@@ -339,7 +340,7 @@
             this.bAtrasOpciones.Name = "bAtrasOpciones";
             this.bAtrasOpciones.Size = new System.Drawing.Size(107, 23);
             this.bAtrasOpciones.TabIndex = 0;
-            this.bAtrasOpciones.Text = "atras";
+            this.bAtrasOpciones.Text = "back";
             this.bAtrasOpciones.UseVisualStyleBackColor = true;
             this.bAtrasOpciones.Click += new System.EventHandler(this.bAtrasOpciones_Click);
             // 
@@ -347,10 +348,10 @@
             // 
             this.comboBoxOpcionesUsuario.FormattingEnabled = true;
             this.comboBoxOpcionesUsuario.Items.AddRange(new object[] {
-            "Cambiar Membresia",
-            "Agregar Cancion",
-            "Agregar Video",
-            "Cambiar Atributo Administrador"});
+            "Change Membership",
+            "Add Song",
+            "Add Video",
+            "Change Admin Attribute"});
             this.comboBoxOpcionesUsuario.Location = new System.Drawing.Point(258, 169);
             this.comboBoxOpcionesUsuario.Name = "comboBoxOpcionesUsuario";
             this.comboBoxOpcionesUsuario.Size = new System.Drawing.Size(225, 21);
@@ -362,20 +363,20 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
             this.label3.Location = new System.Drawing.Point(96, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 13);
+            this.label3.Size = new System.Drawing.Size(151, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Que Te Gustaria Hacer?";
+            this.label3.Text = "What Would You Like To Do?";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(207, 38);
+            this.label4.Location = new System.Drawing.Point(248, 39);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 24);
+            this.label4.Size = new System.Drawing.Size(131, 24);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Opciones de Usuario";
+            this.label4.Text = "User Options";
             // 
             // buttonSeleccionarOpcionUsuario
             // 
@@ -383,12 +384,14 @@
             this.buttonSeleccionarOpcionUsuario.Name = "buttonSeleccionarOpcionUsuario";
             this.buttonSeleccionarOpcionUsuario.Size = new System.Drawing.Size(107, 23);
             this.buttonSeleccionarOpcionUsuario.TabIndex = 4;
-            this.buttonSeleccionarOpcionUsuario.Text = "Seleccionar";
+            this.buttonSeleccionarOpcionUsuario.Text = "Select";
             this.buttonSeleccionarOpcionUsuario.UseVisualStyleBackColor = true;
             this.buttonSeleccionarOpcionUsuario.Click += new System.EventHandler(this.buttonSeleccionarOpcionUsuario_Click);
             // 
             // panelCambiarOpcionesUsuario
             // 
+            this.panelCambiarOpcionesUsuario.Controls.Add(this.labelInsertTitle);
+            this.panelCambiarOpcionesUsuario.Controls.Add(this.textBoxNombreCancion);
             this.panelCambiarOpcionesUsuario.Controls.Add(this.textBoxPath);
             this.panelCambiarOpcionesUsuario.Controls.Add(this.labelPath);
             this.panelCambiarOpcionesUsuario.Controls.Add(this.labelPremium);
@@ -399,7 +402,7 @@
             this.panelCambiarOpcionesUsuario.Controls.Add(this.checkBoxSi);
             this.panelCambiarOpcionesUsuario.Location = new System.Drawing.Point(6, 82);
             this.panelCambiarOpcionesUsuario.Name = "panelCambiarOpcionesUsuario";
-            this.panelCambiarOpcionesUsuario.Size = new System.Drawing.Size(622, 261);
+            this.panelCambiarOpcionesUsuario.Size = new System.Drawing.Size(607, 255);
             this.panelCambiarOpcionesUsuario.TabIndex = 5;
             this.panelCambiarOpcionesUsuario.Visible = false;
             // 
@@ -444,7 +447,7 @@
             this.bAtrasCambiarOpciones.Name = "bAtrasCambiarOpciones";
             this.bAtrasCambiarOpciones.Size = new System.Drawing.Size(117, 23);
             this.bAtrasCambiarOpciones.TabIndex = 3;
-            this.bAtrasCambiarOpciones.Text = "atras";
+            this.bAtrasCambiarOpciones.Text = "back";
             this.bAtrasCambiarOpciones.UseVisualStyleBackColor = true;
             this.bAtrasCambiarOpciones.Click += new System.EventHandler(this.bAtrasCambiarOpciones_Click);
             // 
@@ -487,6 +490,25 @@
             this.textBoxPath.Size = new System.Drawing.Size(269, 20);
             this.textBoxPath.TabIndex = 7;
             this.textBoxPath.Visible = false;
+            // 
+            // textBoxNombreCancion
+            // 
+            this.textBoxNombreCancion.Location = new System.Drawing.Point(253, 137);
+            this.textBoxNombreCancion.Name = "textBoxNombreCancion";
+            this.textBoxNombreCancion.Size = new System.Drawing.Size(269, 20);
+            this.textBoxNombreCancion.TabIndex = 6;
+            this.textBoxNombreCancion.Visible = false;
+            // 
+            // labelInsertTitle
+            // 
+            this.labelInsertTitle.AutoSize = true;
+            this.labelInsertTitle.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelInsertTitle.Location = new System.Drawing.Point(39, 140);
+            this.labelInsertTitle.Name = "labelInsertTitle";
+            this.labelInsertTitle.Size = new System.Drawing.Size(74, 13);
+            this.labelInsertTitle.TabIndex = 8;
+            this.labelInsertTitle.Text = "Insert the Title";
+            this.labelInsertTitle.Visible = false;
             // 
             // Profile
             // 
@@ -561,5 +583,7 @@
         private System.Windows.Forms.Label labelPremium;
         private System.Windows.Forms.TextBox textBoxPath;
         private System.Windows.Forms.Label labelPath;
+        private System.Windows.Forms.Label labelInsertTitle;
+        private System.Windows.Forms.TextBox textBoxNombreCancion;
     }
 }
