@@ -27,9 +27,11 @@ namespace Spotflix
         private Cancion actual;
         List<Panel> song_stack = new List<Panel>();
         
+
         public MainMenu()
         {
             InitializeComponent();
+            
             
             //string ss = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Biblioteca/Love.mp3");
 
@@ -182,6 +184,15 @@ namespace Spotflix
             player.URL = tester.Library()[1].path;
             player.controls.play();
         }
-        
+
+        private void buttonMixer_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonLibrary_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

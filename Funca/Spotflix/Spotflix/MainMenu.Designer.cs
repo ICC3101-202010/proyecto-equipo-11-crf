@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.panelLoadingMainMenu = new System.Windows.Forms.Panel();
             this.panelMainmenu = new System.Windows.Forms.Panel();
+            this.PanelMiniPlayerFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.SongsContainerPanelFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTestSOng = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.buttonFinder = new System.Windows.Forms.Button();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.PanelMiniPlayerFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
@@ -79,6 +79,14 @@
             this.panelMainmenu.Name = "panelMainmenu";
             this.panelMainmenu.Size = new System.Drawing.Size(643, 356);
             this.panelMainmenu.TabIndex = 4;
+            // 
+            // PanelMiniPlayerFlow
+            // 
+            this.PanelMiniPlayerFlow.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelMiniPlayerFlow.Location = new System.Drawing.Point(0, 276);
+            this.PanelMiniPlayerFlow.Name = "PanelMiniPlayerFlow";
+            this.PanelMiniPlayerFlow.Size = new System.Drawing.Size(643, 28);
+            this.PanelMiniPlayerFlow.TabIndex = 4;
             // 
             // SongsContainerPanelFlow
             // 
@@ -178,12 +186,13 @@
             this.buttonMixer.TabIndex = 5;
             this.buttonMixer.Text = "Mixer";
             this.buttonMixer.UseVisualStyleBackColor = false;
+            this.buttonMixer.Click += new System.EventHandler(this.buttonMixer_Click);
             // 
             // buttonProfile
             // 
             this.buttonProfile.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProfile.Location = new System.Drawing.Point(391, 3);
+            this.buttonProfile.Location = new System.Drawing.Point(352, 3);
             this.buttonProfile.Name = "buttonProfile";
             this.buttonProfile.Size = new System.Drawing.Size(119, 46);
             this.buttonProfile.TabIndex = 4;
@@ -195,18 +204,19 @@
             // 
             this.buttonLibrary.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLibrary.Location = new System.Drawing.Point(261, 3);
+            this.buttonLibrary.Location = new System.Drawing.Point(171, 3);
             this.buttonLibrary.Name = "buttonLibrary";
             this.buttonLibrary.Size = new System.Drawing.Size(124, 46);
             this.buttonLibrary.TabIndex = 3;
             this.buttonLibrary.Text = "Library";
             this.buttonLibrary.UseVisualStyleBackColor = false;
+            this.buttonLibrary.Click += new System.EventHandler(this.buttonLibrary_Click);
             // 
             // buttonFinder
             // 
             this.buttonFinder.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFinder.Location = new System.Drawing.Point(133, 3);
+            this.buttonFinder.Location = new System.Drawing.Point(3, 3);
             this.buttonFinder.Name = "buttonFinder";
             this.buttonFinder.Size = new System.Drawing.Size(124, 46);
             this.buttonFinder.TabIndex = 2;
@@ -237,14 +247,6 @@
             this.pictureBoxLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
-            // 
-            // PanelMiniPlayerFlow
-            // 
-            this.PanelMiniPlayerFlow.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelMiniPlayerFlow.Location = new System.Drawing.Point(0, 276);
-            this.PanelMiniPlayerFlow.Name = "PanelMiniPlayerFlow";
-            this.PanelMiniPlayerFlow.Size = new System.Drawing.Size(643, 28);
-            this.PanelMiniPlayerFlow.TabIndex = 4;
             // 
             // MainMenu
             // 
