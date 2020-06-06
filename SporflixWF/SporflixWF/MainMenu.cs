@@ -31,13 +31,14 @@ namespace Spotflix
         public MainMenu()
         {
             InitializeComponent();
-            
-            
+
+
             //string ss = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../../Biblioteca/Love.mp3");
 
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
             //Cancion song1 = tester.Library()[1];
-            foreach (Cancion song in library)
+            Cancion song1 = library[7];
+            foreach (Cancion song in vacia)
             {
                 Panel song_panel = new Panel();
                 song_panel.Size = new Size(640, 67);
@@ -94,8 +95,8 @@ namespace Spotflix
             }
             
             //Cancion song = new Cancion(ss);
-            //pbTestSong.Image = song.Custom_image;
-           // labelNameSong.Text = song.Titulo_Cancion;
+            pbTestSong.Image = song1.Custom_image;
+            labelNameSong.Text = song1.Titulo_Cancion;
         }
 
         private void labelLoading_Click(object sender, EventArgs e)
@@ -194,6 +195,29 @@ namespace Spotflix
         private void buttonLibrary_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void panelTestSOng_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) 
+            {
+                panelSongOptions.Enabled = true;
+                panelSongOptions.Visible = true;
+
+            
+            
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            panelInfoSong.Enabled = true;
+            panelInfoSong.Visible = true;
+            labelAlbum.Text = library[7].Album;
+            labelGenre.Text = library[7].Genero;
+            labelLaunchDate.Text = library[7].Fecha_Lanzamiento.ToString();
+            label6.Text = library[7].Banda;
+            labelRate.Text = library[7].Rating.ToString();
         }
     }
 }

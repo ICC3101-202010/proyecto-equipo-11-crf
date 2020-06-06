@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.panelLoadingMainMenu = new System.Windows.Forms.Panel();
             this.panelMainmenu = new System.Windows.Forms.Panel();
-            
             this.SongsContainerPanelFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.panelTestSOng = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +45,16 @@
             this.buttonFinder = new System.Windows.Forms.Button();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
+            this.panelSongOptions = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelInfo = new System.Windows.Forms.Label();
+            this.panelInfoSong = new System.Windows.Forms.Panel();
+            this.labelGenre = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelAlbum = new System.Windows.Forms.Label();
+            this.labelLaunchDate = new System.Windows.Forms.Label();
+            this.labelRate = new System.Windows.Forms.Label();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
@@ -54,6 +63,8 @@
             this.panelOptions.SuspendLayout();
             this.panelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
+            this.panelSongOptions.SuspendLayout();
+            this.panelInfoSong.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLoadingMainMenu
@@ -79,14 +90,12 @@
             this.panelMainmenu.Size = new System.Drawing.Size(643, 356);
             this.panelMainmenu.TabIndex = 4;
             // 
-            // PanelMiniPlayerFlow
-            // 
-
-            // 
             // SongsContainerPanelFlow
             // 
             this.SongsContainerPanelFlow.AutoScroll = true;
             this.SongsContainerPanelFlow.Controls.Add(this.panelTestSOng);
+            this.SongsContainerPanelFlow.Controls.Add(this.panelSongOptions);
+            this.SongsContainerPanelFlow.Controls.Add(this.panelInfoSong);
             this.SongsContainerPanelFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SongsContainerPanelFlow.Location = new System.Drawing.Point(0, 40);
             this.SongsContainerPanelFlow.Name = "SongsContainerPanelFlow";
@@ -107,6 +116,7 @@
             this.panelTestSOng.TabIndex = 0;
             this.panelTestSOng.Click += new System.EventHandler(this.panelTestSOng_Click);
             this.panelTestSOng.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTestSOng_Paint);
+            this.panelTestSOng.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTestSOng_MouseDown);
             this.panelTestSOng.MouseLeave += new System.EventHandler(this.panelTestSOng_MouseLeave);
             this.panelTestSOng.MouseHover += new System.EventHandler(this.panelTestSOng_MouseHover);
             // 
@@ -244,6 +254,123 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
+            // panelSongOptions
+            // 
+            this.panelSongOptions.Controls.Add(this.labelInfo);
+            this.panelSongOptions.Controls.Add(this.label3);
+            this.panelSongOptions.Controls.Add(this.label1);
+            this.panelSongOptions.Enabled = false;
+            this.panelSongOptions.Location = new System.Drawing.Point(3, 72);
+            this.panelSongOptions.Name = "panelSongOptions";
+            this.panelSongOptions.Size = new System.Drawing.Size(200, 97);
+            this.panelSongOptions.TabIndex = 3;
+            this.panelSongOptions.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Rate";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(0, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Favorite";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelInfo
+            // 
+            this.labelInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelInfo.Location = new System.Drawing.Point(0, 60);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(200, 30);
+            this.labelInfo.TabIndex = 2;
+            this.labelInfo.Text = "Info";
+            this.labelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelInfo.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // panelInfoSong
+            // 
+            this.panelInfoSong.Controls.Add(this.labelRate);
+            this.panelInfoSong.Controls.Add(this.labelLaunchDate);
+            this.panelInfoSong.Controls.Add(this.labelAlbum);
+            this.panelInfoSong.Controls.Add(this.label6);
+            this.panelInfoSong.Controls.Add(this.labelGenre);
+            this.panelInfoSong.Enabled = false;
+            this.panelInfoSong.Location = new System.Drawing.Point(209, 72);
+            this.panelInfoSong.Name = "panelInfoSong";
+            this.panelInfoSong.Size = new System.Drawing.Size(200, 113);
+            this.panelInfoSong.TabIndex = 4;
+            this.panelInfoSong.Visible = false;
+            // 
+            // labelGenre
+            // 
+            this.labelGenre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelGenre.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelGenre.Location = new System.Drawing.Point(0, 0);
+            this.labelGenre.Name = "labelGenre";
+            this.labelGenre.Size = new System.Drawing.Size(200, 21);
+            this.labelGenre.TabIndex = 1;
+            this.labelGenre.Text = "Genre";
+            this.labelGenre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(0, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(200, 21);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Artista";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelAlbum
+            // 
+            this.labelAlbum.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelAlbum.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelAlbum.Location = new System.Drawing.Point(0, 42);
+            this.labelAlbum.Name = "labelAlbum";
+            this.labelAlbum.Size = new System.Drawing.Size(200, 21);
+            this.labelAlbum.TabIndex = 3;
+            this.labelAlbum.Text = "Album";
+            this.labelAlbum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelLaunchDate
+            // 
+            this.labelLaunchDate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelLaunchDate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelLaunchDate.Location = new System.Drawing.Point(0, 63);
+            this.labelLaunchDate.Name = "labelLaunchDate";
+            this.labelLaunchDate.Size = new System.Drawing.Size(200, 21);
+            this.labelLaunchDate.TabIndex = 4;
+            this.labelLaunchDate.Text = "Launch";
+            this.labelLaunchDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelRate
+            // 
+            this.labelRate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelRate.Enabled = false;
+            this.labelRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelRate.Location = new System.Drawing.Point(0, 84);
+            this.labelRate.Name = "labelRate";
+            this.labelRate.Size = new System.Drawing.Size(200, 21);
+            this.labelRate.TabIndex = 5;
+            this.labelRate.Text = "Rate";
+            this.labelRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRate.Visible = false;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,6 +389,8 @@
             this.panelOptions.ResumeLayout(false);
             this.panelSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
+            this.panelSongOptions.ResumeLayout(false);
+            this.panelInfoSong.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -284,5 +413,15 @@
         private System.Windows.Forms.Button buttonFinder;
         private System.Windows.Forms.FlowLayoutPanel SongsContainerPanelFlow;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelSongOptions;
+        private System.Windows.Forms.Label labelInfo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelInfoSong;
+        private System.Windows.Forms.Label labelRate;
+        private System.Windows.Forms.Label labelLaunchDate;
+        private System.Windows.Forms.Label labelAlbum;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelGenre;
     }
 }
