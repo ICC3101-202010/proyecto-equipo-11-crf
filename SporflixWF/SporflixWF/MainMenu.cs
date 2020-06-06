@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using Entrega2;
 using System.IO;
 using WMPLib;
-using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
