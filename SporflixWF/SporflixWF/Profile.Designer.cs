@@ -42,33 +42,33 @@
             this.labelFollowers = new System.Windows.Forms.Label();
             this.labelFollowing = new System.Windows.Forms.Label();
             this.pEditarProfile = new System.Windows.Forms.Panel();
-            this.comboBoxEditarProfile = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonAtrasEditarProfile = new System.Windows.Forms.Button();
-            this.bEditarProfile = new System.Windows.Forms.Button();
             this.panelEditarNombre = new System.Windows.Forms.Panel();
-            this.textBoxIngresarNuevo = new System.Windows.Forms.TextBox();
-            this.LabelIngresarNuevo = new System.Windows.Forms.Label();
-            this.checkBoxPrivada = new System.Windows.Forms.CheckBox();
-            this.checkBoxPublica = new System.Windows.Forms.CheckBox();
             this.bCambiarEditar = new System.Windows.Forms.Button();
+            this.checkBoxPublica = new System.Windows.Forms.CheckBox();
+            this.checkBoxPrivada = new System.Windows.Forms.CheckBox();
+            this.LabelIngresarNuevo = new System.Windows.Forms.Label();
+            this.textBoxIngresarNuevo = new System.Windows.Forms.TextBox();
+            this.bEditarProfile = new System.Windows.Forms.Button();
+            this.buttonAtrasEditarProfile = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxEditarProfile = new System.Windows.Forms.ComboBox();
             this.panelOpcionesUsuario = new System.Windows.Forms.Panel();
-            this.bAtrasOpciones = new System.Windows.Forms.Button();
-            this.comboBoxOpcionesUsuario = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.buttonSeleccionarOpcionUsuario = new System.Windows.Forms.Button();
             this.panelCambiarOpcionesUsuario = new System.Windows.Forms.Panel();
-            this.checkBoxSi = new System.Windows.Forms.CheckBox();
-            this.checkBoxNo = new System.Windows.Forms.CheckBox();
-            this.labelCambio = new System.Windows.Forms.Label();
-            this.bAtrasCambiarOpciones = new System.Windows.Forms.Button();
-            this.buttonUpdateOpciones = new System.Windows.Forms.Button();
-            this.labelPremium = new System.Windows.Forms.Label();
-            this.labelPath = new System.Windows.Forms.Label();
-            this.textBoxPath = new System.Windows.Forms.TextBox();
-            this.textBoxNombreCancion = new System.Windows.Forms.TextBox();
             this.labelInsertTitle = new System.Windows.Forms.Label();
+            this.textBoxNombreCancion = new System.Windows.Forms.TextBox();
+            this.textBoxPath = new System.Windows.Forms.TextBox();
+            this.labelPath = new System.Windows.Forms.Label();
+            this.labelPremium = new System.Windows.Forms.Label();
+            this.buttonUpdateOpciones = new System.Windows.Forms.Button();
+            this.bAtrasCambiarOpciones = new System.Windows.Forms.Button();
+            this.labelCambio = new System.Windows.Forms.Label();
+            this.checkBoxNo = new System.Windows.Forms.CheckBox();
+            this.checkBoxSi = new System.Windows.Forms.CheckBox();
+            this.buttonSeleccionarOpcionUsuario = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxOpcionesUsuario = new System.Windows.Forms.ComboBox();
+            this.bAtrasOpciones = new System.Windows.Forms.Button();
             this.pIntroProfile.SuspendLayout();
             this.pEditarProfile.SuspendLayout();
             this.panelEditarNombre.SuspendLayout();
@@ -214,49 +214,6 @@
             this.pEditarProfile.TabIndex = 3;
             this.pEditarProfile.Visible = false;
             // 
-            // comboBoxEditarProfile
-            // 
-            this.comboBoxEditarProfile.FormattingEnabled = true;
-            this.comboBoxEditarProfile.Items.AddRange(new object[] {
-            "Change Username",
-            "Change Password",
-            "Change Privacy"});
-            this.comboBoxEditarProfile.Location = new System.Drawing.Point(173, 170);
-            this.comboBoxEditarProfile.Name = "comboBoxEditarProfile";
-            this.comboBoxEditarProfile.Size = new System.Drawing.Size(238, 21);
-            this.comboBoxEditarProfile.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(169, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "What Would you Like to Edit?";
-            // 
-            // buttonAtrasEditarProfile
-            // 
-            this.buttonAtrasEditarProfile.Location = new System.Drawing.Point(173, 260);
-            this.buttonAtrasEditarProfile.Name = "buttonAtrasEditarProfile";
-            this.buttonAtrasEditarProfile.Size = new System.Drawing.Size(75, 23);
-            this.buttonAtrasEditarProfile.TabIndex = 2;
-            this.buttonAtrasEditarProfile.Text = "back";
-            this.buttonAtrasEditarProfile.UseVisualStyleBackColor = true;
-            this.buttonAtrasEditarProfile.Click += new System.EventHandler(this.buttonAtrasEditarProfile_Click);
-            // 
-            // bEditarProfile
-            // 
-            this.bEditarProfile.Location = new System.Drawing.Point(336, 260);
-            this.bEditarProfile.Name = "bEditarProfile";
-            this.bEditarProfile.Size = new System.Drawing.Size(75, 23);
-            this.bEditarProfile.TabIndex = 3;
-            this.bEditarProfile.Text = "Edit";
-            this.bEditarProfile.UseVisualStyleBackColor = true;
-            this.bEditarProfile.Click += new System.EventHandler(this.bEditarProfile_Click);
-            // 
             // panelEditarNombre
             // 
             this.panelEditarNombre.Controls.Add(this.bCambiarEditar);
@@ -270,33 +227,15 @@
             this.panelEditarNombre.TabIndex = 4;
             this.panelEditarNombre.Visible = false;
             // 
-            // textBoxIngresarNuevo
+            // bCambiarEditar
             // 
-            this.textBoxIngresarNuevo.Location = new System.Drawing.Point(189, 122);
-            this.textBoxIngresarNuevo.Name = "textBoxIngresarNuevo";
-            this.textBoxIngresarNuevo.Size = new System.Drawing.Size(185, 20);
-            this.textBoxIngresarNuevo.TabIndex = 0;
-            // 
-            // LabelIngresarNuevo
-            // 
-            this.LabelIngresarNuevo.AutoSize = true;
-            this.LabelIngresarNuevo.ForeColor = System.Drawing.SystemColors.Window;
-            this.LabelIngresarNuevo.Location = new System.Drawing.Point(20, 125);
-            this.LabelIngresarNuevo.Name = "LabelIngresarNuevo";
-            this.LabelIngresarNuevo.Size = new System.Drawing.Size(0, 13);
-            this.LabelIngresarNuevo.TabIndex = 1;
-            // 
-            // checkBoxPrivada
-            // 
-            this.checkBoxPrivada.AutoSize = true;
-            this.checkBoxPrivada.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkBoxPrivada.Location = new System.Drawing.Point(189, 149);
-            this.checkBoxPrivada.Name = "checkBoxPrivada";
-            this.checkBoxPrivada.Size = new System.Drawing.Size(59, 17);
-            this.checkBoxPrivada.TabIndex = 2;
-            this.checkBoxPrivada.Text = "Private";
-            this.checkBoxPrivada.UseVisualStyleBackColor = true;
-            this.checkBoxPrivada.Visible = false;
+            this.bCambiarEditar.Location = new System.Drawing.Point(189, 229);
+            this.bCambiarEditar.Name = "bCambiarEditar";
+            this.bCambiarEditar.Size = new System.Drawing.Size(174, 23);
+            this.bCambiarEditar.TabIndex = 4;
+            this.bCambiarEditar.Text = "Change";
+            this.bCambiarEditar.UseVisualStyleBackColor = true;
+            this.bCambiarEditar.Click += new System.EventHandler(this.bCambiarEditar_Click);
             // 
             // checkBoxPublica
             // 
@@ -310,15 +249,76 @@
             this.checkBoxPublica.UseVisualStyleBackColor = true;
             this.checkBoxPublica.Visible = false;
             // 
-            // bCambiarEditar
+            // checkBoxPrivada
             // 
-            this.bCambiarEditar.Location = new System.Drawing.Point(189, 229);
-            this.bCambiarEditar.Name = "bCambiarEditar";
-            this.bCambiarEditar.Size = new System.Drawing.Size(174, 23);
-            this.bCambiarEditar.TabIndex = 4;
-            this.bCambiarEditar.Text = "Change";
-            this.bCambiarEditar.UseVisualStyleBackColor = true;
-            this.bCambiarEditar.Click += new System.EventHandler(this.bCambiarEditar_Click);
+            this.checkBoxPrivada.AutoSize = true;
+            this.checkBoxPrivada.ForeColor = System.Drawing.SystemColors.Window;
+            this.checkBoxPrivada.Location = new System.Drawing.Point(189, 149);
+            this.checkBoxPrivada.Name = "checkBoxPrivada";
+            this.checkBoxPrivada.Size = new System.Drawing.Size(59, 17);
+            this.checkBoxPrivada.TabIndex = 2;
+            this.checkBoxPrivada.Text = "Private";
+            this.checkBoxPrivada.UseVisualStyleBackColor = true;
+            this.checkBoxPrivada.Visible = false;
+            // 
+            // LabelIngresarNuevo
+            // 
+            this.LabelIngresarNuevo.AutoSize = true;
+            this.LabelIngresarNuevo.ForeColor = System.Drawing.SystemColors.Window;
+            this.LabelIngresarNuevo.Location = new System.Drawing.Point(20, 125);
+            this.LabelIngresarNuevo.Name = "LabelIngresarNuevo";
+            this.LabelIngresarNuevo.Size = new System.Drawing.Size(0, 13);
+            this.LabelIngresarNuevo.TabIndex = 1;
+            // 
+            // textBoxIngresarNuevo
+            // 
+            this.textBoxIngresarNuevo.Location = new System.Drawing.Point(189, 122);
+            this.textBoxIngresarNuevo.Name = "textBoxIngresarNuevo";
+            this.textBoxIngresarNuevo.Size = new System.Drawing.Size(185, 20);
+            this.textBoxIngresarNuevo.TabIndex = 0;
+            // 
+            // bEditarProfile
+            // 
+            this.bEditarProfile.Location = new System.Drawing.Point(336, 260);
+            this.bEditarProfile.Name = "bEditarProfile";
+            this.bEditarProfile.Size = new System.Drawing.Size(75, 23);
+            this.bEditarProfile.TabIndex = 3;
+            this.bEditarProfile.Text = "Edit";
+            this.bEditarProfile.UseVisualStyleBackColor = true;
+            this.bEditarProfile.Click += new System.EventHandler(this.bEditarProfile_Click);
+            // 
+            // buttonAtrasEditarProfile
+            // 
+            this.buttonAtrasEditarProfile.Location = new System.Drawing.Point(173, 260);
+            this.buttonAtrasEditarProfile.Name = "buttonAtrasEditarProfile";
+            this.buttonAtrasEditarProfile.Size = new System.Drawing.Size(75, 23);
+            this.buttonAtrasEditarProfile.TabIndex = 2;
+            this.buttonAtrasEditarProfile.Text = "back";
+            this.buttonAtrasEditarProfile.UseVisualStyleBackColor = true;
+            this.buttonAtrasEditarProfile.Click += new System.EventHandler(this.buttonAtrasEditarProfile_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(169, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(245, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "What Would you Like to Edit?";
+            // 
+            // comboBoxEditarProfile
+            // 
+            this.comboBoxEditarProfile.FormattingEnabled = true;
+            this.comboBoxEditarProfile.Items.AddRange(new object[] {
+            "Change Username",
+            "Change Password",
+            "Change Privacy"});
+            this.comboBoxEditarProfile.Location = new System.Drawing.Point(173, 170);
+            this.comboBoxEditarProfile.Name = "comboBoxEditarProfile";
+            this.comboBoxEditarProfile.Size = new System.Drawing.Size(238, 21);
+            this.comboBoxEditarProfile.TabIndex = 0;
             // 
             // panelOpcionesUsuario
             // 
@@ -333,60 +333,6 @@
             this.panelOpcionesUsuario.Size = new System.Drawing.Size(628, 385);
             this.panelOpcionesUsuario.TabIndex = 3;
             this.panelOpcionesUsuario.Visible = false;
-            // 
-            // bAtrasOpciones
-            // 
-            this.bAtrasOpciones.Location = new System.Drawing.Point(144, 263);
-            this.bAtrasOpciones.Name = "bAtrasOpciones";
-            this.bAtrasOpciones.Size = new System.Drawing.Size(107, 23);
-            this.bAtrasOpciones.TabIndex = 0;
-            this.bAtrasOpciones.Text = "back";
-            this.bAtrasOpciones.UseVisualStyleBackColor = true;
-            this.bAtrasOpciones.Click += new System.EventHandler(this.bAtrasOpciones_Click);
-            // 
-            // comboBoxOpcionesUsuario
-            // 
-            this.comboBoxOpcionesUsuario.FormattingEnabled = true;
-            this.comboBoxOpcionesUsuario.Items.AddRange(new object[] {
-            "Change Membership",
-            "Add Song",
-            "Add Video",
-            "Change Admin Attribute"});
-            this.comboBoxOpcionesUsuario.Location = new System.Drawing.Point(258, 169);
-            this.comboBoxOpcionesUsuario.Name = "comboBoxOpcionesUsuario";
-            this.comboBoxOpcionesUsuario.Size = new System.Drawing.Size(225, 21);
-            this.comboBoxOpcionesUsuario.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(96, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "What Would You Like To Do?";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(248, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "User Options";
-            // 
-            // buttonSeleccionarOpcionUsuario
-            // 
-            this.buttonSeleccionarOpcionUsuario.Location = new System.Drawing.Point(339, 263);
-            this.buttonSeleccionarOpcionUsuario.Name = "buttonSeleccionarOpcionUsuario";
-            this.buttonSeleccionarOpcionUsuario.Size = new System.Drawing.Size(107, 23);
-            this.buttonSeleccionarOpcionUsuario.TabIndex = 4;
-            this.buttonSeleccionarOpcionUsuario.Text = "Select";
-            this.buttonSeleccionarOpcionUsuario.UseVisualStyleBackColor = true;
-            this.buttonSeleccionarOpcionUsuario.Click += new System.EventHandler(this.buttonSeleccionarOpcionUsuario_Click);
             // 
             // panelCambiarOpcionesUsuario
             // 
@@ -406,70 +352,32 @@
             this.panelCambiarOpcionesUsuario.TabIndex = 5;
             this.panelCambiarOpcionesUsuario.Visible = false;
             // 
-            // checkBoxSi
+            // labelInsertTitle
             // 
-            this.checkBoxSi.AutoSize = true;
-            this.checkBoxSi.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkBoxSi.Location = new System.Drawing.Point(268, 115);
-            this.checkBoxSi.Name = "checkBoxSi";
-            this.checkBoxSi.Size = new System.Drawing.Size(80, 17);
-            this.checkBoxSi.TabIndex = 0;
-            this.checkBoxSi.Text = "checkBox1";
-            this.checkBoxSi.UseVisualStyleBackColor = true;
-            this.checkBoxSi.Visible = false;
+            this.labelInsertTitle.AutoSize = true;
+            this.labelInsertTitle.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelInsertTitle.Location = new System.Drawing.Point(39, 140);
+            this.labelInsertTitle.Name = "labelInsertTitle";
+            this.labelInsertTitle.Size = new System.Drawing.Size(74, 13);
+            this.labelInsertTitle.TabIndex = 8;
+            this.labelInsertTitle.Text = "Insert the Title";
+            this.labelInsertTitle.Visible = false;
             // 
-            // checkBoxNo
+            // textBoxNombreCancion
             // 
-            this.checkBoxNo.AutoSize = true;
-            this.checkBoxNo.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkBoxNo.Location = new System.Drawing.Point(442, 114);
-            this.checkBoxNo.Name = "checkBoxNo";
-            this.checkBoxNo.Size = new System.Drawing.Size(80, 17);
-            this.checkBoxNo.TabIndex = 1;
-            this.checkBoxNo.Text = "checkBox2";
-            this.checkBoxNo.UseVisualStyleBackColor = true;
-            this.checkBoxNo.Visible = false;
+            this.textBoxNombreCancion.Location = new System.Drawing.Point(253, 137);
+            this.textBoxNombreCancion.Name = "textBoxNombreCancion";
+            this.textBoxNombreCancion.Size = new System.Drawing.Size(269, 20);
+            this.textBoxNombreCancion.TabIndex = 6;
+            this.textBoxNombreCancion.Visible = false;
             // 
-            // labelCambio
+            // textBoxPath
             // 
-            this.labelCambio.AutoSize = true;
-            this.labelCambio.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelCambio.Location = new System.Drawing.Point(39, 116);
-            this.labelCambio.Name = "labelCambio";
-            this.labelCambio.Size = new System.Drawing.Size(35, 13);
-            this.labelCambio.TabIndex = 2;
-            this.labelCambio.Text = "label5";
-            this.labelCambio.Visible = false;
-            // 
-            // bAtrasCambiarOpciones
-            // 
-            this.bAtrasCambiarOpciones.Location = new System.Drawing.Point(150, 181);
-            this.bAtrasCambiarOpciones.Name = "bAtrasCambiarOpciones";
-            this.bAtrasCambiarOpciones.Size = new System.Drawing.Size(117, 23);
-            this.bAtrasCambiarOpciones.TabIndex = 3;
-            this.bAtrasCambiarOpciones.Text = "back";
-            this.bAtrasCambiarOpciones.UseVisualStyleBackColor = true;
-            this.bAtrasCambiarOpciones.Click += new System.EventHandler(this.bAtrasCambiarOpciones_Click);
-            // 
-            // buttonUpdateOpciones
-            // 
-            this.buttonUpdateOpciones.Location = new System.Drawing.Point(323, 181);
-            this.buttonUpdateOpciones.Name = "buttonUpdateOpciones";
-            this.buttonUpdateOpciones.Size = new System.Drawing.Size(117, 23);
-            this.buttonUpdateOpciones.TabIndex = 4;
-            this.buttonUpdateOpciones.Text = "Update";
-            this.buttonUpdateOpciones.UseVisualStyleBackColor = true;
-            this.buttonUpdateOpciones.Click += new System.EventHandler(this.buttonUpdateOpciones_Click);
-            // 
-            // labelPremium
-            // 
-            this.labelPremium.AutoSize = true;
-            this.labelPremium.BackColor = System.Drawing.Color.Red;
-            this.labelPremium.Location = new System.Drawing.Point(90, 52);
-            this.labelPremium.Name = "labelPremium";
-            this.labelPremium.Size = new System.Drawing.Size(35, 13);
-            this.labelPremium.TabIndex = 5;
-            this.labelPremium.Text = "label5";
+            this.textBoxPath.Location = new System.Drawing.Point(253, 74);
+            this.textBoxPath.Name = "textBoxPath";
+            this.textBoxPath.Size = new System.Drawing.Size(269, 20);
+            this.textBoxPath.TabIndex = 7;
+            this.textBoxPath.Visible = false;
             // 
             // labelPath
             // 
@@ -483,32 +391,124 @@
             this.labelPath.Text = "Insert the Path to Add Media";
             this.labelPath.Visible = false;
             // 
-            // textBoxPath
+            // labelPremium
             // 
-            this.textBoxPath.Location = new System.Drawing.Point(253, 74);
-            this.textBoxPath.Name = "textBoxPath";
-            this.textBoxPath.Size = new System.Drawing.Size(269, 20);
-            this.textBoxPath.TabIndex = 7;
-            this.textBoxPath.Visible = false;
+            this.labelPremium.AutoSize = true;
+            this.labelPremium.BackColor = System.Drawing.Color.Red;
+            this.labelPremium.Location = new System.Drawing.Point(90, 52);
+            this.labelPremium.Name = "labelPremium";
+            this.labelPremium.Size = new System.Drawing.Size(35, 13);
+            this.labelPremium.TabIndex = 5;
+            this.labelPremium.Text = "label5";
             // 
-            // textBoxNombreCancion
+            // buttonUpdateOpciones
             // 
-            this.textBoxNombreCancion.Location = new System.Drawing.Point(253, 137);
-            this.textBoxNombreCancion.Name = "textBoxNombreCancion";
-            this.textBoxNombreCancion.Size = new System.Drawing.Size(269, 20);
-            this.textBoxNombreCancion.TabIndex = 6;
-            this.textBoxNombreCancion.Visible = false;
+            this.buttonUpdateOpciones.Location = new System.Drawing.Point(323, 181);
+            this.buttonUpdateOpciones.Name = "buttonUpdateOpciones";
+            this.buttonUpdateOpciones.Size = new System.Drawing.Size(117, 23);
+            this.buttonUpdateOpciones.TabIndex = 4;
+            this.buttonUpdateOpciones.Text = "Update";
+            this.buttonUpdateOpciones.UseVisualStyleBackColor = true;
+            this.buttonUpdateOpciones.Click += new System.EventHandler(this.buttonUpdateOpciones_Click);
             // 
-            // labelInsertTitle
+            // bAtrasCambiarOpciones
             // 
-            this.labelInsertTitle.AutoSize = true;
-            this.labelInsertTitle.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelInsertTitle.Location = new System.Drawing.Point(39, 140);
-            this.labelInsertTitle.Name = "labelInsertTitle";
-            this.labelInsertTitle.Size = new System.Drawing.Size(74, 13);
-            this.labelInsertTitle.TabIndex = 8;
-            this.labelInsertTitle.Text = "Insert the Title";
-            this.labelInsertTitle.Visible = false;
+            this.bAtrasCambiarOpciones.Location = new System.Drawing.Point(150, 181);
+            this.bAtrasCambiarOpciones.Name = "bAtrasCambiarOpciones";
+            this.bAtrasCambiarOpciones.Size = new System.Drawing.Size(117, 23);
+            this.bAtrasCambiarOpciones.TabIndex = 3;
+            this.bAtrasCambiarOpciones.Text = "back";
+            this.bAtrasCambiarOpciones.UseVisualStyleBackColor = true;
+            this.bAtrasCambiarOpciones.Click += new System.EventHandler(this.bAtrasCambiarOpciones_Click);
+            // 
+            // labelCambio
+            // 
+            this.labelCambio.AutoSize = true;
+            this.labelCambio.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelCambio.Location = new System.Drawing.Point(39, 116);
+            this.labelCambio.Name = "labelCambio";
+            this.labelCambio.Size = new System.Drawing.Size(35, 13);
+            this.labelCambio.TabIndex = 2;
+            this.labelCambio.Text = "label5";
+            this.labelCambio.Visible = false;
+            // 
+            // checkBoxNo
+            // 
+            this.checkBoxNo.AutoSize = true;
+            this.checkBoxNo.ForeColor = System.Drawing.SystemColors.Window;
+            this.checkBoxNo.Location = new System.Drawing.Point(442, 114);
+            this.checkBoxNo.Name = "checkBoxNo";
+            this.checkBoxNo.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxNo.TabIndex = 1;
+            this.checkBoxNo.Text = "checkBox2";
+            this.checkBoxNo.UseVisualStyleBackColor = true;
+            this.checkBoxNo.Visible = false;
+            // 
+            // checkBoxSi
+            // 
+            this.checkBoxSi.AutoSize = true;
+            this.checkBoxSi.ForeColor = System.Drawing.SystemColors.Window;
+            this.checkBoxSi.Location = new System.Drawing.Point(268, 115);
+            this.checkBoxSi.Name = "checkBoxSi";
+            this.checkBoxSi.Size = new System.Drawing.Size(80, 17);
+            this.checkBoxSi.TabIndex = 0;
+            this.checkBoxSi.Text = "checkBox1";
+            this.checkBoxSi.UseVisualStyleBackColor = true;
+            this.checkBoxSi.Visible = false;
+            // 
+            // buttonSeleccionarOpcionUsuario
+            // 
+            this.buttonSeleccionarOpcionUsuario.Location = new System.Drawing.Point(339, 263);
+            this.buttonSeleccionarOpcionUsuario.Name = "buttonSeleccionarOpcionUsuario";
+            this.buttonSeleccionarOpcionUsuario.Size = new System.Drawing.Size(107, 23);
+            this.buttonSeleccionarOpcionUsuario.TabIndex = 4;
+            this.buttonSeleccionarOpcionUsuario.Text = "Select";
+            this.buttonSeleccionarOpcionUsuario.UseVisualStyleBackColor = true;
+            this.buttonSeleccionarOpcionUsuario.Click += new System.EventHandler(this.buttonSeleccionarOpcionUsuario_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkRed;
+            this.label4.Location = new System.Drawing.Point(248, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 24);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "User Options";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(96, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "What Would You Like To Do?";
+            // 
+            // comboBoxOpcionesUsuario
+            // 
+            this.comboBoxOpcionesUsuario.FormattingEnabled = true;
+            this.comboBoxOpcionesUsuario.Items.AddRange(new object[] {
+            "Change Membership",
+            "Add Song",
+            "Add Video",
+            "Change Admin Attribute"});
+            this.comboBoxOpcionesUsuario.Location = new System.Drawing.Point(258, 169);
+            this.comboBoxOpcionesUsuario.Name = "comboBoxOpcionesUsuario";
+            this.comboBoxOpcionesUsuario.Size = new System.Drawing.Size(225, 21);
+            this.comboBoxOpcionesUsuario.TabIndex = 1;
+            // 
+            // bAtrasOpciones
+            // 
+            this.bAtrasOpciones.Location = new System.Drawing.Point(144, 263);
+            this.bAtrasOpciones.Name = "bAtrasOpciones";
+            this.bAtrasOpciones.Size = new System.Drawing.Size(107, 23);
+            this.bAtrasOpciones.TabIndex = 0;
+            this.bAtrasOpciones.Text = "back";
+            this.bAtrasOpciones.UseVisualStyleBackColor = true;
+            this.bAtrasOpciones.Click += new System.EventHandler(this.bAtrasOpciones_Click);
             // 
             // Profile
             // 
