@@ -108,9 +108,9 @@ namespace Spotflix
             // 
             // playerBar1
             // 
-            this.playerBar1.Location = new System.Drawing.Point(7, 285);
+            this.playerBar1.Location = new System.Drawing.Point(0, 286);
             this.playerBar1.Name = "playerBar1";
-            this.playerBar1.Size = new System.Drawing.Size(637, 35);
+            this.playerBar1.Size = new System.Drawing.Size(644, 35);
             this.playerBar1.TabIndex = 8;
             // 
             // Form1
