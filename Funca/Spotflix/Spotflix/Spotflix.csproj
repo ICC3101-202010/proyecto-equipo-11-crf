@@ -89,6 +89,12 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlayerBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerBar.Designer.cs">
+      <DependentUpon>PlayerBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Preferences.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerBar.resx">
+      <DependentUpon>PlayerBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences.resx">
       <DependentUpon>Preferences.cs</DependentUpon>

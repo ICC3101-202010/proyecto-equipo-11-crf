@@ -21,10 +21,11 @@ namespace Spotflix
 {
     public partial class MainMenu : UserControl
     {
-
+        
+        List<Cancion> library = Form1.Reproductor.Library();
         Reproductor tester = new Reproductor();
-        WindowsMediaPlayer player = new WindowsMediaPlayer();
-        private Cancion actual;
+        
+
         List<Panel> song_stack = new List<Panel>();
         
         public MainMenu()
@@ -35,7 +36,7 @@ namespace Spotflix
 
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
             Cancion song1 = tester.Library()[1];
-            foreach (Cancion song in tester.Library())
+            foreach (Cancion song in library)
             {
                 Panel song_panel = new Panel();
                 song_panel.Size = new Size(640, 67);
@@ -83,8 +84,8 @@ namespace Spotflix
                 };
                 song_panel.Click += delegate (object sender, EventArgs e)
                 {
-                    player.URL =song.path;
-                    player.controls.play();
+                    Form1.Player.URL =song.path;
+                    Form1.Player.controls.play();
 
                 };
 
@@ -179,8 +180,8 @@ namespace Spotflix
         private void panelTestSOng_Click(object sender, EventArgs e)
         {
             //WindowsMediaPlayer player = new WindowsMediaPlayer();
-            player.URL = tester.Library()[1].path;
-            player.controls.play();
+            //player.URL = tester.Library()[1].path;
+            //player.controls.play();
         }
         
     }

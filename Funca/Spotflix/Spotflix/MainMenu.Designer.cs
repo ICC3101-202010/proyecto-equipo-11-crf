@@ -45,7 +45,6 @@
             this.buttonFinder = new System.Windows.Forms.Button();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.PanelMiniPlayerFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
@@ -70,7 +69,6 @@
             // 
             // panelMainmenu
             // 
-            this.panelMainmenu.Controls.Add(this.PanelMiniPlayerFlow);
             this.panelMainmenu.Controls.Add(this.SongsContainerPanelFlow);
             this.panelMainmenu.Controls.Add(this.panel2);
             this.panelMainmenu.Controls.Add(this.panelOptions);
@@ -84,9 +82,10 @@
             // 
             this.SongsContainerPanelFlow.AutoScroll = true;
             this.SongsContainerPanelFlow.Controls.Add(this.panelTestSOng);
+            this.SongsContainerPanelFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SongsContainerPanelFlow.Location = new System.Drawing.Point(0, 40);
             this.SongsContainerPanelFlow.Name = "SongsContainerPanelFlow";
-            this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 236);
+            this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 264);
             this.SongsContainerPanelFlow.TabIndex = 3;
             // 
             // panelTestSOng
@@ -238,14 +237,6 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
-            // PanelMiniPlayerFlow
-            // 
-            this.PanelMiniPlayerFlow.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelMiniPlayerFlow.Location = new System.Drawing.Point(0, 276);
-            this.PanelMiniPlayerFlow.Name = "PanelMiniPlayerFlow";
-            this.PanelMiniPlayerFlow.Size = new System.Drawing.Size(643, 28);
-            this.PanelMiniPlayerFlow.TabIndex = 4;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +277,5 @@
         private System.Windows.Forms.Button buttonFinder;
         private System.Windows.Forms.FlowLayoutPanel SongsContainerPanelFlow;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel PanelMiniPlayerFlow;
     }
 }

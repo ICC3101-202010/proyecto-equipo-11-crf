@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using Entrega2;
+using WMPLib;
+using System.Runtime.CompilerServices;
 
 namespace Spotflix
 {
@@ -23,11 +25,14 @@ namespace Spotflix
         private static UserControl mainmenu;
         private static UserControl finderr;
         private static UserControl profile;
+        private static Cancion actual;
+        private static List<Cancion> library = new List<Cancion>();
+        private static WindowsMediaPlayer player = new WindowsMediaPlayer();
 
-
-        //UserControl Main_Menu = new UCMainMenuLoading();
-        //UserControl Loading = new UCLoading();
-
+        private static Reproductor reproductor = new Reproductor();
+        
+        
+        
 
         List<Panel> stackPanels = new List<Panel>();
         static List<UserControl> stackUserControls = new List<UserControl>();
@@ -43,11 +48,15 @@ namespace Spotflix
         public static List<UserControl> StackUserControls { get => stackUserControls; set => stackUserControls = value; }
         public static UserControl Finderr { get => finderr; set => finderr = value; }
         public static UserControl Profile { get => profile; set => profile = value; }
+        public static Reproductor Reproductor { get => reproductor; set => reproductor = value; }
+        public static List<Cancion> Library { get => library; set => library = reproductor.Library(); }
+        public static Cancion Actual { get => actual; set => actual = value; }
+        public static WindowsMediaPlayer Player { get => player; set => player = value; }
 
         public Form1()
         {
             InitializeComponent();
-
+            
 
         }
 
