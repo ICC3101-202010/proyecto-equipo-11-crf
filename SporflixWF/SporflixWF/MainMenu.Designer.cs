@@ -256,6 +256,7 @@
             // 
             // panelSongOptions
             // 
+            this.panelSongOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(39)))), ((int)(((byte)(65)))));
             this.panelSongOptions.Controls.Add(this.labelInfo);
             this.panelSongOptions.Controls.Add(this.label3);
             this.panelSongOptions.Controls.Add(this.label1);

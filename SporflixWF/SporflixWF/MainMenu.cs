@@ -38,7 +38,7 @@ namespace Spotflix
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
             //Cancion song1 = tester.Library()[1];
             Cancion song1 = library[7];
-            foreach (Cancion song in vacia)
+            foreach (Cancion song in library)
             {
                 Panel song_panel = new Panel();
                 song_panel.Size = new Size(640, 67);
@@ -46,6 +46,84 @@ namespace Spotflix
                 song_image.Size = new Size(99, 67);
                 Label name_label = new Label();
                 Label durartion_label = new Label();
+
+                //options panels-labels
+                Panel song_options = new Panel();
+                Panel song_info_panel = new Panel();
+                song_options.Enabled = false;
+                song_info_panel.Enabled = false;
+                song_options.Visible = false;
+                song_info_panel.Visible = false;
+
+                Label song_rating = new Label();
+                Label song_Info = new Label();
+                Label song_favorite = new Label();
+
+                Label song_Artist = new Label();
+                Label song_Genre = new Label();
+                Label song_Date = new Label();
+                Label song_Rate = new Label();
+                Label song_Album = new Label();
+
+                song_options.Size = new Size(200, 97);
+                song_info_panel.Size = new Size(200, 113);
+            
+                song_options.BackColor = Color.FromArgb(82, 39, 65);
+
+                //Color text labels
+                song_Info.ForeColor = Color.White;
+                song_rating.ForeColor = Color.White;
+                song_favorite.ForeColor = Color.White;
+
+                //Tex aling
+                song_Info.TextAlign = ContentAlignment.MiddleCenter;
+                song_rating.TextAlign = ContentAlignment.MiddleCenter;
+                song_favorite.TextAlign = ContentAlignment.MiddleCenter;
+
+                //Text of option labels
+                song_Info.Text = "Info";
+                song_rating.Text = "Rate";
+                song_favorite.Text = "Favorite";
+                
+                
+
+                //Size of option labels
+                song_rating.Size = new Size(200,30);
+                song_Info.Size = new Size(200, 30);
+                song_favorite.Size = new Size(200, 30);
+
+
+                //Size of info labels
+                song_Album.Size = new Size(200, 21);
+                song_Date.Size = new Size(200, 21);
+                song_Rate.Size = new Size(200, 21);
+                song_Artist.Size = new Size(200, 21);
+                song_Genre.Size = new Size(200, 21);
+
+                //Add labels to option songs
+                song_options.Controls.Add(song_rating);
+                song_rating.Dock = DockStyle.Top;
+                song_options.Controls.Add(song_Info);
+                song_Info.Dock = DockStyle.Top;
+                song_options.Controls.Add(song_favorite);
+                song_favorite.Dock = DockStyle.Top;
+
+                //Add labels to info panel
+                song_info_panel.Controls.Add(song_Album);
+                song_Album.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_Date);
+                song_Date.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_Genre);
+                song_Genre.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_Rate);
+                song_Rate.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_Artist);
+                song_Artist.Dock = DockStyle.Top;
+
+                SongsContainerPanelFlow.Controls.Add(song_options);
+                SongsContainerPanelFlow.Controls.Add(song_info_panel);
+
+
 
                 durartion_label.Text = song.Duration;
                 durartion_label.ForeColor = Color.White;
@@ -91,10 +169,57 @@ namespace Spotflix
                     
 
                 };
+                song_panel.MouseDown += delegate (object sender, MouseEventArgs e)
+                {
+                    if (e.Button == MouseButtons.Right) 
+                    {
+                        song_options.Enabled = true;
+                        song_options.Visible = true;
+                    
+                    }
+
+                };
+                song_Info.Click += delegate (object sender, EventArgs e) 
+                {
+
+                    //song_info_panel.BringToFront();
+                    song_info_panel.Location = new Point(40, 80);
+                    song_info_panel.BorderStyle = BorderStyle.FixedSingle;
+                    song_options.Enabled = false;
+                    song_options.Visible = false;
+                    song_info_panel.Enabled = true;
+                    song_info_panel.Visible = true;
+
+                    song_Artist.ForeColor = Color.White;
+                    song_Album.ForeColor = Color.White;
+                    song_Date.ForeColor = Color.White;
+                    song_Genre.ForeColor = Color.White;
+                    song_Rate.ForeColor = Color.White;
+
+                    song_Artist.Text = "Artist :" + song.Banda;
+                    song_Album.Text = "Album :" + song.Album;
+                    song_Date.Text = "Year :" + song.Fecha_Lanzamiento.ToString();
+                    song_Genre.Text = "Genre :" + song.Genero;
+                    song_Rate.Text = "Rate :" + song.Rating.ToString(); 
+                
+                };
+                song_info_panel.MouseLeave += delegate (object sender, EventArgs e)
+                {
+
+                    song_info_panel.Enabled = false;
+                    song_info_panel.Visible = false;
+
+                };
+                song_options.MouseLeave += delegate (object sender, EventArgs e) 
+                {
+                    song_options.Enabled = false;
+                    song_options.Visible = false;
+                
+                };
 
             }
             
-            //Cancion song = new Cancion(ss);
+            
             pbTestSong.Image = song1.Custom_image;
             labelNameSong.Text = song1.Titulo_Cancion;
         }
@@ -218,6 +343,8 @@ namespace Spotflix
             labelLaunchDate.Text = library[7].Fecha_Lanzamiento.ToString();
             label6.Text = library[7].Banda;
             labelRate.Text = library[7].Rating.ToString();
+            panelSongOptions.Enabled = false;
+            panelSongOptions.Visible = false;
         }
     }
 }
