@@ -49,6 +49,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
@@ -87,6 +88,7 @@
             this.SongsContainerPanelFlow.Controls.Add(this.panelTestSOng);
             this.SongsContainerPanelFlow.Controls.Add(this.panelSongOptions);
             this.SongsContainerPanelFlow.Controls.Add(this.panelInfoSong);
+            this.SongsContainerPanelFlow.Controls.Add(this.flowLayoutPanel1);
             this.SongsContainerPanelFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SongsContainerPanelFlow.Location = new System.Drawing.Point(0, 40);
             this.SongsContainerPanelFlow.Name = "SongsContainerPanelFlow";
@@ -294,6 +296,16 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DimGray;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(415, 72);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +318,7 @@
             this.panelLoadingMainMenu.PerformLayout();
             this.panelMainmenu.ResumeLayout(false);
             this.SongsContainerPanelFlow.ResumeLayout(false);
+            this.SongsContainerPanelFlow.PerformLayout();
             this.panelTestSOng.ResumeLayout(false);
             this.panelTestSOng.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).EndInit();
@@ -338,5 +351,6 @@
         private System.Windows.Forms.Label labelAlbum;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelGenre;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
