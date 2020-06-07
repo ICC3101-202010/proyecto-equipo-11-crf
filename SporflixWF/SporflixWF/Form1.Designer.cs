@@ -43,7 +43,6 @@ namespace Spotflix
             // 
             // mainMenu1
             // 
-            this.mainMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainMenu1.Location = new System.Drawing.Point(0, 0);
             this.mainMenu1.Name = "mainMenu1";
             this.mainMenu1.Size = new System.Drawing.Size(644, 372);
@@ -110,18 +109,18 @@ namespace Spotflix
             // menuBar1
             // 
             this.menuBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuBar1.Location = new System.Drawing.Point(0, 320);
+            this.menuBar1.Location = new System.Drawing.Point(0, 314);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(644, 52);
-            this.menuBar1.TabIndex = 10;
+            this.menuBar1.Size = new System.Drawing.Size(644, 58);
+            this.menuBar1.TabIndex = 8;
             // 
             // playerBar1
             // 
             this.playerBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.playerBar1.Location = new System.Drawing.Point(0, 285);
+            this.playerBar1.Location = new System.Drawing.Point(0, 279);
             this.playerBar1.Name = "playerBar1";
             this.playerBar1.Size = new System.Drawing.Size(644, 35);
-            this.playerBar1.TabIndex = 11;
+            this.playerBar1.TabIndex = 9;
             // 
             // Form1
             // 
