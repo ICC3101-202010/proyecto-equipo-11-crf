@@ -114,6 +114,7 @@ namespace Spotflix
             this.menuBar1.Name = "menuBar1";
             this.menuBar1.Size = new System.Drawing.Size(644, 52);
             this.menuBar1.TabIndex = 10;
+            this.menuBar1.Load += new System.EventHandler(this.menuBar1_Load);
             // 
             // playerBar1
             // 

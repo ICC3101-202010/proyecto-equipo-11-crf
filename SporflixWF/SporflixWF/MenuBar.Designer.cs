@@ -76,6 +76,7 @@
             this.buttonFinder.TabIndex = 4;
             this.buttonFinder.Text = "Finder";
             this.buttonFinder.UseVisualStyleBackColor = false;
+            this.buttonFinder.Click += new System.EventHandler(this.buttonFinder_Click);
             // 
             // buttonLibrary
             // 
@@ -102,6 +103,7 @@
             this.buttonProfile.TabIndex = 6;
             this.buttonProfile.Text = "Profile";
             this.buttonProfile.UseVisualStyleBackColor = false;
+            this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
             // 
             // buttonMixer
             // 

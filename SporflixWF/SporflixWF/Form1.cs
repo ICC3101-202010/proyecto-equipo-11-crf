@@ -120,7 +120,7 @@ namespace Spotflix
             Global.allSongs = reproducto.Library();
             Playlist allSongs = new Playlist("allSongs", Global.allSongs, null, "Defect");
             Global.allPlaylists.Add(allSongs);
-
+            Global.allVideos = reproducto.Video_Library();
 
 
         }
@@ -131,6 +131,11 @@ namespace Spotflix
         }
 
         private void finderr1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuBar1_Load(object sender, EventArgs e)
         {
 
         }
