@@ -1,0 +1,83 @@
+﻿
+1)[ ] 
+La aplicación debe adaptarse3 a la resolución de la pantalla que está utilizando, pudiendo
+asumir que la resolución mínima será 1024 × 768 
+
+2)[ ]
+Cada canción debe tener información como el género, cantante, compositor,
+discografía, estudio, año de publicación, letra, etc. Por otra parte, los vídeos deben contener
+información como género, categoría, actores, director, estudio. año de publicación,
+descripción, calificación, etc.
+
+3 [ ]
+Información que puede ser obtenida
+como resultado de operaciones simples como la duración, etc.
+
+4 [ ]
+Cada canción y vídeo debe tener información que se
+genere en la plataforma, por ejemplo, número de reproducciones, cantidad de usuarios
+que les gusta, calificación (nota que ponen los usuarios), etc.
+
+--------BUSQUEDA-----
+5 [ ]
+definir una o más palabras que son buscadas entre la información
+de las canciones (y videos).
+
+6 [ ]
+definir cuales personas deben estar (autores/actores) en la canción
+(o video).
+
+7 [ ]
+definir valores para las distintas características de
+personas que deben estar en la canción (o video) (sexo, edad, …).
+
+8 [ ]
+mayor, menor o igual a algún tamaño.
+
+9 [ ]
+mayor, menor o igual a alguna nota definida.
+
+10 [ ]
+para cada búsqueda se deben poder combinar los filtros
+utilizados. La combinación de los filtros puede ser tanto como un and, es decir, se buscan
+aquellas que cumplan con todos los filtros, o como un or, se buscan las canciones o videos
+que cumplan con al menos un filtro. Para los múltiples filtros se pueden combinar el uso
+de and y or.
+
+
+-----PLAYLISTS-------
+11 [ ]
+crear playlists con canciones (o videos). Un playlist no puede tener canciones
+y videos, los archivos multimedia deben ser el mismo tipo. Estas pueden ser privadas o
+públicas. Si un usuario es privado, no puede tener playlist públicas.
+
+12 [ ]
+Se debe poder crear una cola de reproducción automática (lista que se reproduzca
+automáticamente) tanto para video como para canciones
+
+13 [ ]
+Se debe poder agregar canciones y videos a una lista de
+favoritos. Canciones y vídeos deben estar en listas diferentes.
+
+14 [ ]
+Buscar y seguir: Usuarios, playlist, discos, cantantes, actores, etc.
+
+15 [ ]
+Agregar imágenes, por ejemplo, una imagen para representar un disco o un película.
+
+16 [ ]
+Crear perfiles de usuarios (con información y gustos por ejemplo),
+modificarlos, definir si son privados o públicos, etc.
+
+17 [ ]
+Diferenciar usuarios pagos de no pagos: Esto es abierto, pero una buena base es ver como lo
+hace Spotify.
+
+18 [ ]
+Las canciones pueden o no ser descargadas, pero no las películas.
+
+19 [ ]
+Si el usuario cierra la aplicación y en dicho momento estaba reproduciendo algún archivo,
+entonces se debe guardar el tiempo de reproducción para que cuando vuelva a abrirla pueda
+continuar desde ahí.
+
