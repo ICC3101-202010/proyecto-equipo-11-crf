@@ -29,7 +29,6 @@ namespace Spotflix
         /// </summary>
         private void InitializeComponent()
         {
-            this.profile1 = new Spotflix.Profile();
             this.mainMenu1 = new Spotflix.MainMenu();
             this.preferences1 = new Spotflix.Preferences();
             this.logIn1 = new Spotflix.LogIn();
@@ -37,16 +36,10 @@ namespace Spotflix
             this.register1 = new Spotflix.Register();
             this.welcome1 = new Spotflix.Welcome();
             this.finderr1 = new Spotflix.Finderr();
+            this.profile1 = new Spotflix.Profile();
+            this.menuBar1 = new SporflixWF.MenuBar();
             this.playerBar1 = new Spotflix.PlayerBar();
             this.SuspendLayout();
-            // 
-            // profile1
-            // 
-            this.profile1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.profile1.Location = new System.Drawing.Point(-12, 0);
-            this.profile1.Name = "profile1";
-            this.profile1.Size = new System.Drawing.Size(656, 484);
-            this.profile1.TabIndex = 7;
             // 
             // mainMenu1
             // 
@@ -106,12 +99,29 @@ namespace Spotflix
             this.finderr1.Size = new System.Drawing.Size(644, 372);
             this.finderr1.TabIndex = 6;
             // 
+            // profile1
+            // 
+            this.profile1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.profile1.Location = new System.Drawing.Point(-12, 0);
+            this.profile1.Name = "profile1";
+            this.profile1.Size = new System.Drawing.Size(656, 484);
+            this.profile1.TabIndex = 7;
+            // 
+            // menuBar1
+            // 
+            this.menuBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuBar1.Location = new System.Drawing.Point(0, 320);
+            this.menuBar1.Name = "menuBar1";
+            this.menuBar1.Size = new System.Drawing.Size(644, 52);
+            this.menuBar1.TabIndex = 10;
+            // 
             // playerBar1
             // 
-            this.playerBar1.Location = new System.Drawing.Point(0, 286);
+            this.playerBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.playerBar1.Location = new System.Drawing.Point(0, 285);
             this.playerBar1.Name = "playerBar1";
             this.playerBar1.Size = new System.Drawing.Size(644, 35);
-            this.playerBar1.TabIndex = 8;
+            this.playerBar1.TabIndex = 11;
             // 
             // Form1
             // 
@@ -119,6 +129,7 @@ namespace Spotflix
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 372);
             this.Controls.Add(this.playerBar1);
+            this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.preferences1);
             this.Controls.Add(this.logIn1);
@@ -144,6 +155,7 @@ namespace Spotflix
         private MainMenu mainMenu1;
         private Finderr finderr1;
         private Profile profile1;
+        private SporflixWF.MenuBar menuBar1;
         private PlayerBar playerBar1;
     }
 }

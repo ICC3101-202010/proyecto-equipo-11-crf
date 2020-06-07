@@ -36,35 +36,27 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelNameSong = new System.Windows.Forms.Label();
             this.pbTestSong = new System.Windows.Forms.PictureBox();
+            this.panelSongOptions = new System.Windows.Forms.Panel();
+            this.labelInfo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelInfoSong = new System.Windows.Forms.Panel();
+            this.labelRate = new System.Windows.Forms.Label();
+            this.labelLaunchDate = new System.Windows.Forms.Label();
+            this.labelAlbum = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelGenre = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelOptions = new System.Windows.Forms.Panel();
-            this.panelSearch = new System.Windows.Forms.Panel();
-            this.buttonMixer = new System.Windows.Forms.Button();
-            this.buttonProfile = new System.Windows.Forms.Button();
-            this.buttonLibrary = new System.Windows.Forms.Button();
-            this.buttonFinder = new System.Windows.Forms.Button();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.panelSongOptions = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelInfo = new System.Windows.Forms.Label();
-            this.panelInfoSong = new System.Windows.Forms.Panel();
-            this.labelGenre = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelAlbum = new System.Windows.Forms.Label();
-            this.labelLaunchDate = new System.Windows.Forms.Label();
-            this.labelRate = new System.Windows.Forms.Label();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
             this.panelTestSOng.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).BeginInit();
-            this.panelOptions.SuspendLayout();
-            this.panelSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
             this.panelSongOptions.SuspendLayout();
             this.panelInfoSong.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLoadingMainMenu
@@ -76,18 +68,17 @@
             this.panelLoadingMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLoadingMainMenu.Location = new System.Drawing.Point(0, 0);
             this.panelLoadingMainMenu.Name = "panelLoadingMainMenu";
-            this.panelLoadingMainMenu.Size = new System.Drawing.Size(643, 356);
+            this.panelLoadingMainMenu.Size = new System.Drawing.Size(643, 360);
             this.panelLoadingMainMenu.TabIndex = 0;
             // 
             // panelMainmenu
             // 
             this.panelMainmenu.Controls.Add(this.SongsContainerPanelFlow);
             this.panelMainmenu.Controls.Add(this.panel2);
-            this.panelMainmenu.Controls.Add(this.panelOptions);
             this.panelMainmenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainmenu.Location = new System.Drawing.Point(0, 0);
             this.panelMainmenu.Name = "panelMainmenu";
-            this.panelMainmenu.Size = new System.Drawing.Size(643, 356);
+            this.panelMainmenu.Size = new System.Drawing.Size(643, 360);
             this.panelMainmenu.TabIndex = 4;
             // 
             // SongsContainerPanelFlow
@@ -99,7 +90,7 @@
             this.SongsContainerPanelFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SongsContainerPanelFlow.Location = new System.Drawing.Point(0, 40);
             this.SongsContainerPanelFlow.Name = "SongsContainerPanelFlow";
-            this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 264);
+            this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 320);
             this.SongsContainerPanelFlow.TabIndex = 3;
             // 
             // panelTestSOng
@@ -151,6 +142,124 @@
             this.pbTestSong.TabStop = false;
             this.pbTestSong.Click += new System.EventHandler(this.pbTestSong_Click);
             // 
+            // panelSongOptions
+            // 
+            this.panelSongOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(39)))), ((int)(((byte)(65)))));
+            this.panelSongOptions.Controls.Add(this.labelInfo);
+            this.panelSongOptions.Controls.Add(this.label3);
+            this.panelSongOptions.Controls.Add(this.label1);
+            this.panelSongOptions.Enabled = false;
+            this.panelSongOptions.Location = new System.Drawing.Point(3, 72);
+            this.panelSongOptions.Name = "panelSongOptions";
+            this.panelSongOptions.Size = new System.Drawing.Size(200, 97);
+            this.panelSongOptions.TabIndex = 3;
+            this.panelSongOptions.Visible = false;
+            // 
+            // labelInfo
+            // 
+            this.labelInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelInfo.Location = new System.Drawing.Point(0, 60);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(200, 30);
+            this.labelInfo.TabIndex = 2;
+            this.labelInfo.Text = "Info";
+            this.labelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelInfo.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(0, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 30);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Favorite";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Rate";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelInfoSong
+            // 
+            this.panelInfoSong.Controls.Add(this.labelRate);
+            this.panelInfoSong.Controls.Add(this.labelLaunchDate);
+            this.panelInfoSong.Controls.Add(this.labelAlbum);
+            this.panelInfoSong.Controls.Add(this.label6);
+            this.panelInfoSong.Controls.Add(this.labelGenre);
+            this.panelInfoSong.Enabled = false;
+            this.panelInfoSong.Location = new System.Drawing.Point(209, 72);
+            this.panelInfoSong.Name = "panelInfoSong";
+            this.panelInfoSong.Size = new System.Drawing.Size(200, 113);
+            this.panelInfoSong.TabIndex = 4;
+            this.panelInfoSong.Visible = false;
+            // 
+            // labelRate
+            // 
+            this.labelRate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelRate.Enabled = false;
+            this.labelRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelRate.Location = new System.Drawing.Point(0, 84);
+            this.labelRate.Name = "labelRate";
+            this.labelRate.Size = new System.Drawing.Size(200, 21);
+            this.labelRate.TabIndex = 5;
+            this.labelRate.Text = "Rate";
+            this.labelRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRate.Visible = false;
+            // 
+            // labelLaunchDate
+            // 
+            this.labelLaunchDate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelLaunchDate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelLaunchDate.Location = new System.Drawing.Point(0, 63);
+            this.labelLaunchDate.Name = "labelLaunchDate";
+            this.labelLaunchDate.Size = new System.Drawing.Size(200, 21);
+            this.labelLaunchDate.TabIndex = 4;
+            this.labelLaunchDate.Text = "Launch";
+            this.labelLaunchDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelAlbum
+            // 
+            this.labelAlbum.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelAlbum.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelAlbum.Location = new System.Drawing.Point(0, 42);
+            this.labelAlbum.Name = "labelAlbum";
+            this.labelAlbum.Size = new System.Drawing.Size(200, 21);
+            this.labelAlbum.TabIndex = 3;
+            this.labelAlbum.Text = "Album";
+            this.labelAlbum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(0, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(200, 21);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Artista";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGenre
+            // 
+            this.labelGenre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelGenre.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelGenre.Location = new System.Drawing.Point(0, 0);
+            this.labelGenre.Name = "labelGenre";
+            this.labelGenre.Size = new System.Drawing.Size(200, 21);
+            this.labelGenre.TabIndex = 1;
+            this.labelGenre.Text = "Genre";
+            this.labelGenre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
@@ -160,75 +269,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(643, 40);
             this.panel2.TabIndex = 2;
-            // 
-            // panelOptions
-            // 
-            this.panelOptions.Controls.Add(this.panelSearch);
-            this.panelOptions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelOptions.Location = new System.Drawing.Point(0, 304);
-            this.panelOptions.Name = "panelOptions";
-            this.panelOptions.Size = new System.Drawing.Size(643, 52);
-            this.panelOptions.TabIndex = 0;
-            // 
-            // panelSearch
-            // 
-            this.panelSearch.Controls.Add(this.buttonMixer);
-            this.panelSearch.Controls.Add(this.buttonProfile);
-            this.panelSearch.Controls.Add(this.buttonLibrary);
-            this.panelSearch.Controls.Add(this.buttonFinder);
-            this.panelSearch.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSearch.Location = new System.Drawing.Point(0, 0);
-            this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(643, 52);
-            this.panelSearch.TabIndex = 0;
-            // 
-            // buttonMixer
-            // 
-            this.buttonMixer.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonMixer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMixer.Location = new System.Drawing.Point(516, 3);
-            this.buttonMixer.Name = "buttonMixer";
-            this.buttonMixer.Size = new System.Drawing.Size(124, 46);
-            this.buttonMixer.TabIndex = 5;
-            this.buttonMixer.Text = "Mixer";
-            this.buttonMixer.UseVisualStyleBackColor = false;
-            this.buttonMixer.Click += new System.EventHandler(this.buttonMixer_Click);
-            // 
-            // buttonProfile
-            // 
-            this.buttonProfile.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonProfile.Location = new System.Drawing.Point(352, 3);
-            this.buttonProfile.Name = "buttonProfile";
-            this.buttonProfile.Size = new System.Drawing.Size(119, 46);
-            this.buttonProfile.TabIndex = 4;
-            this.buttonProfile.Text = "Profile";
-            this.buttonProfile.UseVisualStyleBackColor = false;
-            this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click);
-            // 
-            // buttonLibrary
-            // 
-            this.buttonLibrary.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLibrary.Location = new System.Drawing.Point(171, 3);
-            this.buttonLibrary.Name = "buttonLibrary";
-            this.buttonLibrary.Size = new System.Drawing.Size(124, 46);
-            this.buttonLibrary.TabIndex = 3;
-            this.buttonLibrary.Text = "Library";
-            this.buttonLibrary.UseVisualStyleBackColor = false;
-            this.buttonLibrary.Click += new System.EventHandler(this.buttonLibrary_Click);
-            // 
-            // buttonFinder
-            // 
-            this.buttonFinder.BackColor = System.Drawing.Color.RoyalBlue;
-            this.buttonFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFinder.Location = new System.Drawing.Point(3, 3);
-            this.buttonFinder.Name = "buttonFinder";
-            this.buttonFinder.Size = new System.Drawing.Size(124, 46);
-            this.buttonFinder.TabIndex = 2;
-            this.buttonFinder.Text = "Finder";
-            this.buttonFinder.UseVisualStyleBackColor = false;
-            this.buttonFinder.Click += new System.EventHandler(this.buttonFinder_Click);
             // 
             // labelLoading
             // 
@@ -247,130 +287,12 @@
             this.pictureBoxLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxLoading.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoading.Image")));
             this.pictureBoxLoading.InitialImage = null;
-            this.pictureBoxLoading.Location = new System.Drawing.Point(211, 28);
+            this.pictureBoxLoading.Location = new System.Drawing.Point(211, 30);
             this.pictureBoxLoading.Name = "pictureBoxLoading";
             this.pictureBoxLoading.Size = new System.Drawing.Size(226, 221);
             this.pictureBoxLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
-            // 
-            // panelSongOptions
-            // 
-            this.panelSongOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(39)))), ((int)(((byte)(65)))));
-            this.panelSongOptions.Controls.Add(this.labelInfo);
-            this.panelSongOptions.Controls.Add(this.label3);
-            this.panelSongOptions.Controls.Add(this.label1);
-            this.panelSongOptions.Enabled = false;
-            this.panelSongOptions.Location = new System.Drawing.Point(3, 72);
-            this.panelSongOptions.Name = "panelSongOptions";
-            this.panelSongOptions.Size = new System.Drawing.Size(200, 97);
-            this.panelSongOptions.TabIndex = 3;
-            this.panelSongOptions.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Rate";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(0, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 30);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Favorite";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelInfo
-            // 
-            this.labelInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelInfo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelInfo.Location = new System.Drawing.Point(0, 60);
-            this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(200, 30);
-            this.labelInfo.TabIndex = 2;
-            this.labelInfo.Text = "Info";
-            this.labelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelInfo.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // panelInfoSong
-            // 
-            this.panelInfoSong.Controls.Add(this.labelRate);
-            this.panelInfoSong.Controls.Add(this.labelLaunchDate);
-            this.panelInfoSong.Controls.Add(this.labelAlbum);
-            this.panelInfoSong.Controls.Add(this.label6);
-            this.panelInfoSong.Controls.Add(this.labelGenre);
-            this.panelInfoSong.Enabled = false;
-            this.panelInfoSong.Location = new System.Drawing.Point(209, 72);
-            this.panelInfoSong.Name = "panelInfoSong";
-            this.panelInfoSong.Size = new System.Drawing.Size(200, 113);
-            this.panelInfoSong.TabIndex = 4;
-            this.panelInfoSong.Visible = false;
-            // 
-            // labelGenre
-            // 
-            this.labelGenre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelGenre.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelGenre.Location = new System.Drawing.Point(0, 0);
-            this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(200, 21);
-            this.labelGenre.TabIndex = 1;
-            this.labelGenre.Text = "Genre";
-            this.labelGenre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(0, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 21);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Artista";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelAlbum
-            // 
-            this.labelAlbum.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelAlbum.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelAlbum.Location = new System.Drawing.Point(0, 42);
-            this.labelAlbum.Name = "labelAlbum";
-            this.labelAlbum.Size = new System.Drawing.Size(200, 21);
-            this.labelAlbum.TabIndex = 3;
-            this.labelAlbum.Text = "Album";
-            this.labelAlbum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelLaunchDate
-            // 
-            this.labelLaunchDate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelLaunchDate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelLaunchDate.Location = new System.Drawing.Point(0, 63);
-            this.labelLaunchDate.Name = "labelLaunchDate";
-            this.labelLaunchDate.Size = new System.Drawing.Size(200, 21);
-            this.labelLaunchDate.TabIndex = 4;
-            this.labelLaunchDate.Text = "Launch";
-            this.labelLaunchDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelRate
-            // 
-            this.labelRate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelRate.Enabled = false;
-            this.labelRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelRate.Location = new System.Drawing.Point(0, 84);
-            this.labelRate.Name = "labelRate";
-            this.labelRate.Size = new System.Drawing.Size(200, 21);
-            this.labelRate.TabIndex = 5;
-            this.labelRate.Text = "Rate";
-            this.labelRate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelRate.Visible = false;
             // 
             // MainMenu
             // 
@@ -378,7 +300,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelLoadingMainMenu);
             this.Name = "MainMenu";
-            this.Size = new System.Drawing.Size(643, 356);
+            this.Size = new System.Drawing.Size(643, 360);
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.panelLoadingMainMenu.ResumeLayout(false);
             this.panelLoadingMainMenu.PerformLayout();
@@ -387,11 +309,9 @@
             this.panelTestSOng.ResumeLayout(false);
             this.panelTestSOng.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).EndInit();
-            this.panelOptions.ResumeLayout(false);
-            this.panelSearch.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
             this.panelSongOptions.ResumeLayout(false);
             this.panelInfoSong.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,16 +322,10 @@
         private System.Windows.Forms.PictureBox pictureBoxLoading;
         private System.Windows.Forms.Label labelLoading;
         private System.Windows.Forms.Panel panelMainmenu;
-        private System.Windows.Forms.Panel panelOptions;
-        private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelTestSOng;
         private System.Windows.Forms.PictureBox pbTestSong;
         private System.Windows.Forms.Label labelNameSong;
-        private System.Windows.Forms.Button buttonMixer;
-        private System.Windows.Forms.Button buttonProfile;
-        private System.Windows.Forms.Button buttonLibrary;
-        private System.Windows.Forms.Button buttonFinder;
         private System.Windows.Forms.FlowLayoutPanel SongsContainerPanelFlow;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelSongOptions;

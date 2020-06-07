@@ -119,6 +119,7 @@ namespace Spotflix
                     stream1.Close();
                     Form1.MainMenu.Show();
                     Form1.ProgresBar.Show();
+                    Form1.Menubar.Show();
                 }
                 else
                 {

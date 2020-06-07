@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelBarContainer = new System.Windows.Forms.Panel();
-            this.ProgressBarSong = new XComponent.SliderBar.MACTrackBar();
-            this.pbPlayStop = new System.Windows.Forms.PictureBox();
             this.panelDurationContainer = new System.Windows.Forms.Panel();
             this.labelDuration = new System.Windows.Forms.Label();
+            this.pbPlayStop = new System.Windows.Forms.PictureBox();
+            this.ProgressBarSong = new XComponent.SliderBar.MACTrackBar();
             this.panelBarContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPlayStop)).BeginInit();
             this.panelDurationContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayStop)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -57,6 +57,34 @@
             this.panelBarContainer.Name = "panelBarContainer";
             this.panelBarContainer.Size = new System.Drawing.Size(637, 35);
             this.panelBarContainer.TabIndex = 1;
+            // 
+            // panelDurationContainer
+            // 
+            this.panelDurationContainer.Controls.Add(this.labelDuration);
+            this.panelDurationContainer.Location = new System.Drawing.Point(468, 3);
+            this.panelDurationContainer.Name = "panelDurationContainer";
+            this.panelDurationContainer.Size = new System.Drawing.Size(166, 29);
+            this.panelDurationContainer.TabIndex = 17;
+            // 
+            // labelDuration
+            // 
+            this.labelDuration.AutoSize = true;
+            this.labelDuration.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelDuration.Location = new System.Drawing.Point(63, 9);
+            this.labelDuration.Name = "labelDuration";
+            this.labelDuration.Size = new System.Drawing.Size(35, 13);
+            this.labelDuration.TabIndex = 0;
+            this.labelDuration.Text = "label1";
+            // 
+            // pbPlayStop
+            // 
+            this.pbPlayStop.BackColor = System.Drawing.Color.Transparent;
+            this.pbPlayStop.Location = new System.Drawing.Point(3, 3);
+            this.pbPlayStop.Name = "pbPlayStop";
+            this.pbPlayStop.Size = new System.Drawing.Size(65, 29);
+            this.pbPlayStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPlayStop.TabIndex = 16;
+            this.pbPlayStop.TabStop = false;
             // 
             // ProgressBarSong
             // 
@@ -83,34 +111,6 @@
             this.ProgressBarSong.Value = 0;
             this.ProgressBarSong.Scroll += new System.EventHandler(this.ProgressBarSong_Scroll_1);
             // 
-            // pbPlayStop
-            // 
-            this.pbPlayStop.BackColor = System.Drawing.Color.Transparent;
-            this.pbPlayStop.Location = new System.Drawing.Point(3, 3);
-            this.pbPlayStop.Name = "pbPlayStop";
-            this.pbPlayStop.Size = new System.Drawing.Size(65, 29);
-            this.pbPlayStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPlayStop.TabIndex = 16;
-            this.pbPlayStop.TabStop = false;
-            // 
-            // panelDurationContainer
-            // 
-            this.panelDurationContainer.Controls.Add(this.labelDuration);
-            this.panelDurationContainer.Location = new System.Drawing.Point(468, 3);
-            this.panelDurationContainer.Name = "panelDurationContainer";
-            this.panelDurationContainer.Size = new System.Drawing.Size(166, 29);
-            this.panelDurationContainer.TabIndex = 17;
-            // 
-            // labelDuration
-            // 
-            this.labelDuration.AutoSize = true;
-            this.labelDuration.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelDuration.Location = new System.Drawing.Point(63, 9);
-            this.labelDuration.Name = "labelDuration";
-            this.labelDuration.Size = new System.Drawing.Size(35, 13);
-            this.labelDuration.TabIndex = 0;
-            this.labelDuration.Text = "label1";
-            // 
             // PlayerBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,9 +119,9 @@
             this.Name = "PlayerBar";
             this.Size = new System.Drawing.Size(637, 35);
             this.panelBarContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbPlayStop)).EndInit();
             this.panelDurationContainer.ResumeLayout(false);
             this.panelDurationContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayStop)).EndInit();
             this.ResumeLayout(false);
 
         }

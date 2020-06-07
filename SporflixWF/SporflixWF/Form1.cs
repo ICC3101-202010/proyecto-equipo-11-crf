@@ -28,6 +28,7 @@ namespace Spotflix
         private static UserControl profile;
         private static Cancion actual;
         private static UserControl progresBar;
+        private static UserControl menubar;
         private static List<Cancion> library = new List<Cancion>();
         private static WindowsMediaPlayer player = new WindowsMediaPlayer();
 
@@ -55,6 +56,7 @@ namespace Spotflix
         public static Cancion Actual { get => actual; set => actual = value; }
         public static WindowsMediaPlayer Player { get => player; set => player = value; }
         public static UserControl ProgresBar { get => progresBar; set => progresBar = value; }
+        public static UserControl Menubar { get => menubar; set => menubar = value; }
 
         public Form1()
         {
@@ -101,6 +103,7 @@ namespace Spotflix
             Finderr = finderr1;
             Profile = profile1;
             ProgresBar = playerBar1;
+            Menubar = menuBar1;
             Welcome.BringToFront();
 
 
@@ -112,7 +115,7 @@ namespace Spotflix
             Finderr.Hide();
             Profile.Hide();
             ProgresBar.Hide();
-
+            Menubar.Hide();
             Reproductor reproducto = new Reproductor();
             Global.allSongs = reproducto.Library();
             Playlist allSongs = new Playlist("allSongs", Global.allSongs, null, "Defect");

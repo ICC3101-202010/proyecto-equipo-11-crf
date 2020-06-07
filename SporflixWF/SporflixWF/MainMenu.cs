@@ -20,7 +20,7 @@ namespace Spotflix
     public partial class MainMenu : UserControl
     {
         List<Cancion> vacia = new List<Cancion>();
-        List<Cancion> library = Form1.Reproductor.Library();
+        //List<Cancion> library = Form1.Reproductor.Library();
         Reproductor tester = new Reproductor();
         
 
@@ -36,8 +36,8 @@ namespace Spotflix
 
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
             //Cancion song1 = tester.Library()[1];
-            Cancion song1 = library[7];
-            foreach (Cancion song in library)
+            //Cancion song1 = library[7];
+            foreach (Cancion song in vacia)
             {
                 Panel song_panel = new Panel();
                 song_panel.Size = new Size(640, 67);
@@ -174,7 +174,9 @@ namespace Spotflix
                     {
                         song_options.Enabled = true;
                         song_options.Visible = true;
-                    
+
+
+
                     }
 
                 };
@@ -182,7 +184,7 @@ namespace Spotflix
                 {
 
                     //song_info_panel.BringToFront();
-                    song_info_panel.Location = new Point(40, 80);
+                    song_info_panel.Location = new Point(80, 80);
                     song_info_panel.BorderStyle = BorderStyle.FixedSingle;
                     song_options.Enabled = false;
                     song_options.Visible = false;
@@ -215,12 +217,36 @@ namespace Spotflix
                     song_options.Visible = false;
                 
                 };
+                song_favorite.MouseHover += delegate (object sender, EventArgs e) 
+                { 
+                    song_favorite.BackColor = Color.FromArgb(41, 22, 39);
+                };
+                song_favorite.MouseLeave += delegate (object sender, EventArgs e) 
+                {
+                    song_favorite.BackColor = Color.FromArgb(82, 39, 65);
+                };
+                song_Info.MouseHover += delegate (object sender, EventArgs e) 
+                {
+                    song_Info.BackColor = Color.FromArgb(41, 22, 39);
+                };
+                song_Info.MouseLeave += delegate (object sender, EventArgs e) 
+                {
+                    song_Info.BackColor = Color.FromArgb(82, 39, 65);
+                };
+                song_rating.MouseHover += delegate (object sender, EventArgs e) 
+                {
+                    song_rating.BackColor = Color.FromArgb(41, 22, 39);
+                };
+                song_rating.MouseLeave += delegate (object sender, EventArgs e) 
+                {
+                    song_rating.BackColor = Color.FromArgb(82, 39, 65);
+                };
 
             }
             
             
-            pbTestSong.Image = song1.Custom_image;
-            labelNameSong.Text = song1.Titulo_Cancion;
+            //pbTestSong.Image = song1.Custom_image;
+            //labelNameSong.Text = song1.Titulo_Cancion;
         }
 
         private void labelLoading_Click(object sender, EventArgs e)
@@ -337,11 +363,11 @@ namespace Spotflix
         {
             panelInfoSong.Enabled = true;
             panelInfoSong.Visible = true;
-            labelAlbum.Text = library[7].Album;
-            labelGenre.Text = library[7].Genero;
-            labelLaunchDate.Text = library[7].Fecha_Lanzamiento.ToString();
-            label6.Text = library[7].Banda;
-            labelRate.Text = library[7].Rating.ToString();
+           // labelAlbum.Text = library[7].Album;
+            //labelGenre.Text = library[7].Genero;
+           // labelLaunchDate.Text = library[7].Fecha_Lanzamiento.ToString();
+           // label6.Text = library[7].Banda;
+           // labelRate.Text = library[7].Rating.ToString();
             panelSongOptions.Enabled = false;
             panelSongOptions.Visible = false;
         }
