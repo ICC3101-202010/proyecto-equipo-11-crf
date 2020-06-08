@@ -65,12 +65,12 @@
             // 
             this.labelSpotflix.AutoSize = true;
             this.labelSpotflix.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSpotflix.ForeColor = System.Drawing.Color.DarkGray;
-            this.labelSpotflix.Location = new System.Drawing.Point(252, 23);
+            this.labelSpotflix.ForeColor = System.Drawing.Color.Goldenrod;
+            this.labelSpotflix.Location = new System.Drawing.Point(240, 39);
             this.labelSpotflix.Name = "labelSpotflix";
-            this.labelSpotflix.Size = new System.Drawing.Size(111, 31);
+            this.labelSpotflix.Size = new System.Drawing.Size(154, 31);
             this.labelSpotflix.TabIndex = 1;
-            this.labelSpotflix.Text = "Spotflix";
+            this.labelSpotflix.Text = "SPOTFLIX";
             // 
             // buttonRegistrar
             // 

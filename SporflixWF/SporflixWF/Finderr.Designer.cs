@@ -126,12 +126,11 @@
             // labelFinder
             // 
             this.labelFinder.AutoSize = true;
-            this.labelFinder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFinder.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelFinder.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.labelFinder.Location = new System.Drawing.Point(120, 30);
             this.labelFinder.Name = "labelFinder";
-            this.labelFinder.Size = new System.Drawing.Size(62, 22);
+            this.labelFinder.Size = new System.Drawing.Size(60, 20);
             this.labelFinder.TabIndex = 0;
             this.labelFinder.Text = "Finder";
             // 
