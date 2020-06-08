@@ -90,6 +90,7 @@
     <Reference Include="taglib-sharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
       <HintPath>..\packages\taglib.2.1.0.0\lib\taglib-sharp.dll</HintPath>
     </Reference>
+    <Reference Include="TagLibSharp, Version=2.2.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0" />
     <Reference Include="XmpCore, Version=6.1.10.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\XmpCore.6.1.10\lib\net35\XmpCore.dll</HintPath>
     </Reference>
@@ -175,6 +176,12 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="VideoPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VideoPlayer.Designer.cs">
+      <DependentUpon>VideoPlayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,6 +235,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoPlayer.resx">
+      <DependentUpon>VideoPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

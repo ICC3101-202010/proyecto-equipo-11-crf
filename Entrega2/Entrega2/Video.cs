@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MetadataExtractor.Formats.Mpeg;
+using TagLib;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using WMPLib;
+using System.IO;
 
 namespace Entrega2
 {
@@ -25,6 +30,7 @@ namespace Entrega2
         private string resolution;
         private int width;
         private int weight;
+        private Image videoImage;
 
         public string NameVideo { get => nameVideo; set => nameVideo = value; }
         public string DireccionMemoria { get => direccionMemoria; set => direccionMemoria = value; }
@@ -44,6 +50,7 @@ namespace Entrega2
         public string Resolution { get => resolution; set => resolution = value; }
         public int Width { get => width; set => width = value; }
         public int Weight { get => weight; set => weight = value; }
+        public Image VideoImage { get => videoImage; set => videoImage = value; }
 
         public Video(string path)
         {
@@ -55,10 +62,13 @@ namespace Entrega2
             TimeSpan time_prev = video.Properties.Duration;
             this.weight = video.Properties.VideoHeight;
             this.width = video.Properties.VideoWidth;
-            resolution = Weight.ToString() + " x " + Width.ToString();    
+            resolution = Weight.ToString() + " x " + Width.ToString();
+
+            //MemoryStream ms = new MemoryStream(video.Tag.Pictures[0].Data.Data);
+            //this.videoImage = Image.FromStream(ms);
 
 
-            
+
             ;
 
             if (time_prev.Hours == 0)
