@@ -147,6 +147,12 @@
     <Compile Include="Mixer.Designer.cs">
       <DependentUpon>Mixer.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotPremium.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotPremium.Designer.cs">
+      <DependentUpon>NotPremium.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mixer.resx">
       <DependentUpon>Mixer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotPremium.resx">
+      <DependentUpon>NotPremium.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerBar.resx">
       <DependentUpon>PlayerBar.cs</DependentUpon>

@@ -33,6 +33,7 @@ namespace Spotflix
         private static UserControl mixer;
         private static UserControl librarymenu;
         private static UserControl videoPlayer;
+        private static UserControl notpremium;
         private static List<Cancion> library = new List<Cancion>();
         private static WindowsMediaPlayer player = new WindowsMediaPlayer();
         private static AxWindowsMediaPlayer MediaPlayer = new AxWindowsMediaPlayer();
@@ -65,6 +66,7 @@ namespace Spotflix
         public static UserControl Librarymenu { get => librarymenu; set => librarymenu = value; }
         public static UserControl VideoPlayer { get => videoPlayer; set => videoPlayer = value; }
         public static AxWindowsMediaPlayer MediaPlayer1 { get => MediaPlayer; set => MediaPlayer = value; }
+        public static UserControl Notpremium { get => notpremium; set => notpremium = value; }
 
         public Form1()
         {
@@ -114,9 +116,10 @@ namespace Spotflix
             Menubar = menuBar1;
             Mixer = mixer1;
             Librarymenu = library1;
-            videoPlayer = videoPlayer1;
+            VideoPlayer = videoPlayer1;
+            Notpremium = notPremium1;
             Welcome.BringToFront();
-
+            Notpremium.Hide();
             VideoPlayer.Hide();
             Mixer.Hide();
             Librarymenu.Hide();
