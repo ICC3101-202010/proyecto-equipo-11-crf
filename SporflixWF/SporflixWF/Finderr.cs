@@ -43,6 +43,7 @@ namespace Spotflix
             panelMostrar.Visible = true;
             if (comboBoxFind.Text == "Song")
             {
+                panelFinderUser.Visible = false;
                 panelButttons.Visible = true;
                 canciones= finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
@@ -54,6 +55,7 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Video")
             {
+                panelFinderUser.Visible = false;
                 List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Global.allVideos);
                 foreach(Video video in videos)
                 {
@@ -63,6 +65,7 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Playlist")
             {
+                panelFinderUser.Visible = false;
                 List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
                 foreach (Playlist playlist in playlists)
                 {
@@ -72,10 +75,12 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Actor/Director")
             {
+                panelFinderUser.Visible = false;
                 panelButttons.Visible = false;
             }
             else if (comboBoxFind.Text == "Band")
             {
+                panelFinderUser.Visible = false;
                 panelButttons.Visible = true;
                 canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
@@ -87,6 +92,7 @@ namespace Spotflix
            
             else if (comboBoxFind.Text == "Album")
             {
+                panelFinderUser.Visible = false;
                 panelButttons.Visible = true;
                 canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
@@ -97,6 +103,7 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Top Streamed")
             {
+                panelFinderUser.Visible = false;
                 panelButttons.Visible = true;
                 canciones = finder1.ratingReproducciones(Global.allSongs);
                 foreach (Cancion cancion in canciones)
@@ -106,6 +113,7 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Top Rated")
             {
+                panelFinderUser.Visible = false;
                 panelButttons.Visible = true;
                 canciones = finder1.ordenarPorNota(Global.allSongs);
                 foreach (Cancion cancion in canciones)
@@ -115,7 +123,7 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "User")
             {
-
+                panelMostrar.Visible = false;
                 comboBoxUsuarios.Items.Clear();
                 string busqueda = textBoxFind.Text;
                 panelFinderUser.Visible = true;

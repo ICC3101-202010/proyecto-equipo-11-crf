@@ -20,11 +20,13 @@ namespace SporflixWF
 
         
 
-        
+
 
         private void buttonProfile_Click_1(object sender, EventArgs e)
         {
+            Form1.Profile.Refresh();
             Form1.Profile.Show();
+            Form1.Profile.BringToFront();
             Form1.MainMenu.Hide();
             Form1.Register.Hide();
             Form1.Login.Hide();
