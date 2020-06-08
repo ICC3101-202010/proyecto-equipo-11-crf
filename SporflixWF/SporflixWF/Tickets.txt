@@ -65,7 +65,7 @@ Buscar y seguir: Usuarios, playlist, discos, cantantes, actores, etc.
 15 [ ]
 Agregar imágenes, por ejemplo, una imagen para representar un disco o un película.
 
-16 [ ]
+16 [✓]
 Crear perfiles de usuarios (con información y gustos por ejemplo),
 modificarlos, definir si son privados o públicos, etc.
 

@@ -94,6 +94,9 @@ namespace Spotflix
                 usuario.followers = "0";
                 usuario.following = "0";
                 usuario.Member = "false";
+                usuario.artista1 = "None";
+                usuario.artista2 = "None";
+                usuario.artista3 = "None";
                 IFormatter formatter = new BinaryFormatter();
                 Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                 formatter.Serialize(stream, usuario);
@@ -115,6 +118,9 @@ namespace Spotflix
                 data.Add(usuario.followers);
                 data.Add(usuario.Administrador);
                 data.Add(usuario.following);
+                data.Add(usuario.artista1);
+                data.Add(usuario.artista2);
+                data.Add(usuario.artista3);
                 string descripcion = null;
                 foreach (List<string> value in this.registrados.Values)
                 {

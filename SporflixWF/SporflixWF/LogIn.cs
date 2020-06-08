@@ -117,6 +117,31 @@ namespace Spotflix
                     Stream stream1 = new FileStream("nombre.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                     formatter1.Serialize(stream1, nombre);
                     stream1.Close();
+                    foreach (List<string> user in registrados.Values)
+                    {
+
+
+                        if (user[0] == nombre[0])
+                        {
+                            Usuario usuario1 = new Usuario();
+                            usuario1.Username = user[0];
+                            usuario1.Mail = user[1];
+                            usuario1.Contraseña = user[2];
+                            usuario1.privacidad = user[3];
+                            usuario1.Telefono = user[6];
+                            usuario1.Member = user[7];
+                            usuario1.followers = user[8];
+                            usuario1.Administrador = user[9];
+                            usuario1.following = user[10];
+                            usuario1.artista1 = user[11];
+                            usuario1.artista2 = user[12];
+                            usuario1.artista3 = user[13];
+                            Global.UserNow = usuario1;
+                            break;
+                        }
+
+                    }
+
                     Form1.MainMenu.Show();
                     Form1.ProgresBar.Show();
                     Form1.Menubar.Show();
