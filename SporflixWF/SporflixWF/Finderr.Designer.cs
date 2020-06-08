@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelFinderUser = new System.Windows.Forms.Panel();
-            this.buttonFollow = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxUsuarios = new System.Windows.Forms.ComboBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBoxFind = new System.Windows.Forms.ComboBox();
             this.labelFinder = new System.Windows.Forms.Label();
+            this.panelFinderUser = new System.Windows.Forms.Panel();
+            this.buttonFollow = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxUsuarios = new System.Windows.Forms.ComboBox();
             this.panelMostrar = new System.Windows.Forms.Panel();
             this.panelButttons = new System.Windows.Forms.Panel();
             this.buttonPlay = new System.Windows.Forms.Button();
@@ -77,55 +77,6 @@
             this.panel1.Size = new System.Drawing.Size(296, 382);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // panelFinderUser
-            // 
-            this.panelFinderUser.Controls.Add(this.buttonFollow);
-            this.panelFinderUser.Controls.Add(this.label2);
-            this.panelFinderUser.Controls.Add(this.comboBoxUsuarios);
-<<<<<<< HEAD
-            this.panelFinderUser.Location = new System.Drawing.Point(305, 3);
-            this.panelFinderUser.Name = "panelFinderUser";
-            this.panelFinderUser.Size = new System.Drawing.Size(290, 349);
-=======
-            this.panelFinderUser.Location = new System.Drawing.Point(3, 225);
-            this.panelFinderUser.Name = "panelFinderUser";
-            this.panelFinderUser.Size = new System.Drawing.Size(290, 154);
->>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
-            this.panelFinderUser.TabIndex = 11;
-            this.panelFinderUser.Visible = false;
-            // 
-            // buttonFollow
-            // 
-<<<<<<< HEAD
-            this.buttonFollow.Location = new System.Drawing.Point(91, 281);
-=======
-            this.buttonFollow.Location = new System.Drawing.Point(93, 73);
->>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
-            this.buttonFollow.Name = "buttonFollow";
-            this.buttonFollow.Size = new System.Drawing.Size(104, 23);
-            this.buttonFollow.TabIndex = 2;
-            this.buttonFollow.Text = "Follow";
-            this.buttonFollow.UseVisualStyleBackColor = true;
-            this.buttonFollow.Click += new System.EventHandler(this.buttonFollow_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(18, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "This are or Users, select the one you wish to Follow!";
-            // 
-            // comboBoxUsuarios
-            // 
-            this.comboBoxUsuarios.FormattingEnabled = true;
-            this.comboBoxUsuarios.Location = new System.Drawing.Point(7, 33);
-            this.comboBoxUsuarios.Name = "comboBoxUsuarios";
-            this.comboBoxUsuarios.Size = new System.Drawing.Size(270, 21);
-            this.comboBoxUsuarios.TabIndex = 0;
             // 
             // buttonBack
             // 
@@ -184,6 +135,45 @@
             this.labelFinder.TabIndex = 0;
             this.labelFinder.Text = "Finder";
             // 
+            // panelFinderUser
+            // 
+            this.panelFinderUser.Controls.Add(this.buttonFollow);
+            this.panelFinderUser.Controls.Add(this.label2);
+            this.panelFinderUser.Controls.Add(this.comboBoxUsuarios);
+            this.panelFinderUser.Location = new System.Drawing.Point(305, 3);
+            this.panelFinderUser.Name = "panelFinderUser";
+            this.panelFinderUser.Size = new System.Drawing.Size(339, 349);
+            this.panelFinderUser.TabIndex = 11;
+            this.panelFinderUser.Visible = false;
+            // 
+            // buttonFollow
+            // 
+            this.buttonFollow.Location = new System.Drawing.Point(91, 281);
+            this.buttonFollow.Name = "buttonFollow";
+            this.buttonFollow.Size = new System.Drawing.Size(104, 23);
+            this.buttonFollow.TabIndex = 2;
+            this.buttonFollow.Text = "Follow";
+            this.buttonFollow.UseVisualStyleBackColor = true;
+            this.buttonFollow.Click += new System.EventHandler(this.buttonFollow_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(18, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "This are or Users, select the one you wish to Follow!";
+            // 
+            // comboBoxUsuarios
+            // 
+            this.comboBoxUsuarios.FormattingEnabled = true;
+            this.comboBoxUsuarios.Location = new System.Drawing.Point(7, 33);
+            this.comboBoxUsuarios.Name = "comboBoxUsuarios";
+            this.comboBoxUsuarios.Size = new System.Drawing.Size(270, 21);
+            this.comboBoxUsuarios.TabIndex = 0;
+            // 
             // panelMostrar
             // 
             this.panelMostrar.Controls.Add(this.panelButttons);
@@ -221,10 +211,6 @@
             this.buttonPlay.TabIndex = 1;
             this.buttonPlay.Text = "Play";
             this.buttonPlay.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
-=======
-            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
->>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
             // 
             // labelFavorite
             // 

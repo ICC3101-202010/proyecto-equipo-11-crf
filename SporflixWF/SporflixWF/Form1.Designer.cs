@@ -142,8 +142,7 @@ namespace Spotflix
             this.profile1.Size = new System.Drawing.Size(644, 347);
             this.profile1.TabIndex = 13;
             // 
-<<<<<<< HEAD
-=======
+
 
             // videoPlayer1
             // 
@@ -155,17 +154,17 @@ namespace Spotflix
             // 
 
 
->>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
+
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 436);
-<<<<<<< HEAD
+
             this.Controls.Add(this.profile1);
-=======
+
             this.Controls.Add(this.videoPlayer1);
->>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
+
             this.Controls.Add(this.library1);
             this.Controls.Add(this.mixer1);
             this.Controls.Add(this.playerBar1);
