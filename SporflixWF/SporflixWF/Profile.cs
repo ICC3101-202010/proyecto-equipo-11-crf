@@ -56,7 +56,7 @@ namespace Spotflix
                 if (nombre[0] == value[0])
                 {
                     labelFollowing.Text = "Following:    " + value[10];
-                    labelPlaylist.Text = "Playlists:    0";
+                    labelPlaylist.Text = "Playlists:    "+ Global.UserNow.My_Playlist.Count();
                     labelFollowers.Text = "Followers:    " + value[8];
                 }
             }
@@ -96,7 +96,7 @@ namespace Spotflix
                 if (nombre[0] == value[0])
                 {
                     labelFollowing.Text = "Following:    " + value[10];
-                    labelPlaylist.Text = "Playlists:    0";
+                    labelPlaylist.Text = "Playlists:    "+ Global.UserNow.My_Playlist.Count();
                     labelFollowers.Text = "Followers:    " + value[8];
                 }
             }
@@ -120,7 +120,7 @@ namespace Spotflix
                 if (nombre[0] == value[0])
                 {
                     labelFollowing.Text = "Following:    " + value[10];
-                    labelPlaylist.Text = "Playlists:    0";
+                    labelPlaylist.Text = "Playlists:    "+ Global.UserNow.My_Playlist.Count();
                     labelFollowers.Text = "Followers:    " + value[8];
                 }
             }
@@ -143,7 +143,7 @@ namespace Spotflix
                 if (nombre[0] == value[0])
                 {
                     labelFollowing.Text = "Following:    " + value[10];
-                    labelPlaylist.Text = "Playlists:    0";
+                    labelPlaylist.Text = "Playlists:    "+ Global.UserNow.My_Playlist.Count();
                     labelFollowers.Text = "Followers:    " + value[8];
                 }
             }
@@ -171,7 +171,7 @@ namespace Spotflix
                 if (nombre[0] == value[0])
                 {
                     labelFollowing.Text = "Following:    "+ value[10];
-                    labelPlaylist.Text = "Playlists:    0";
+                    labelPlaylist.Text =  "Playlists:    "+ Global.UserNow.My_Playlist.Count();
                     labelFollowers.Text = "Followers:    "+ value[8];
                 }
             }
