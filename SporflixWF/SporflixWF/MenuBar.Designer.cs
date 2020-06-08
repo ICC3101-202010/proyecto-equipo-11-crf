@@ -1,4 +1,6 @@
-﻿namespace SporflixWF
+﻿using Spotflix;
+
+namespace SporflixWF
 {
     partial class MenuBar
     {
@@ -168,6 +170,7 @@
             // 
             // buttonProfile
             // 
+            Profile profile = new Profile();
             this.buttonProfile.BackColor = System.Drawing.Color.RoyalBlue;
             this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
@@ -178,6 +181,7 @@
             this.buttonProfile.Text = "Profile";
             this.buttonProfile.UseVisualStyleBackColor = false;
             this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click_1);
+            this.buttonProfile.Click += new System.EventHandler(profile.buttonProfile_Click_1);
             // 
             // MenuBar
             // 

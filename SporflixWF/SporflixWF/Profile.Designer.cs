@@ -528,7 +528,8 @@
             this.Controls.Add(this.tNombreProfile);
             this.Controls.Add(this.bAtrasProfile);
             this.Name = "Profile";
-            this.Size = new System.Drawing.Size(631, 341);
+            this.Size = new System.Drawing.Size(634, 341);
+            this.Load += new System.EventHandler(this.Profile_Load);
             this.pIntroProfile.ResumeLayout(false);
             this.pIntroProfile.PerformLayout();
             this.pEditarProfile.ResumeLayout(false);

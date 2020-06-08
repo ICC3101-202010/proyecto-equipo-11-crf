@@ -96,6 +96,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cargarProfileEventArgs.cs" />
     <Compile Include="Finderr.cs">
       <SubType>UserControl</SubType>
     </Compile>
