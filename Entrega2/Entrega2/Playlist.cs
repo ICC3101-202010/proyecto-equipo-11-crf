@@ -12,8 +12,9 @@ namespace Entrega2
     public class Playlist
     {
         private string nombrePlaylist;
-        private List<Cancion> canciones;
+        private List<Cancion> canciones = new List<Cancion>();
         private List<Video> videos;
+        
         private Image imagen_personalizada;
         private string NombreCreador;
 
@@ -30,7 +31,13 @@ namespace Entrega2
             this.Canciones = canciones;
             this.Videos = videos;
             this.NombreCreador = NombreCreador;
-
+            
+        }
+        public Playlist(string name, Usuario user) 
+        {
+            this.NombrePlaylist = name;
+            this.NombreCreador = user.NamePerson;
+        
         }
         public void mostrarCanciones()
         {
