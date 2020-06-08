@@ -46,6 +46,8 @@ namespace Spotflix
             // 
             // library1
             // 
+            this.library1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.library1.Enabled = false;
             this.library1.Location = new System.Drawing.Point(0, 0);
             this.library1.Name = "library1";
             this.library1.Size = new System.Drawing.Size(644, 347);
@@ -140,6 +142,7 @@ namespace Spotflix
             this.profile1.Size = new System.Drawing.Size(656, 484);
             this.profile1.TabIndex = 7;
             // 
+
             // videoPlayer1
             // 
             this.videoPlayer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
@@ -148,6 +151,8 @@ namespace Spotflix
             this.videoPlayer1.Size = new System.Drawing.Size(644, 347);
             this.videoPlayer1.TabIndex = 13;
             // 
+
+
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

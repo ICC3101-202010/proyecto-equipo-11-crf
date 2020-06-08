@@ -46,10 +46,11 @@
             this.labelAlbum = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelGenre = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
@@ -193,6 +194,7 @@
             // 
             // panelInfoSong
             // 
+            this.panelInfoSong.Controls.Add(this.label4);
             this.panelInfoSong.Controls.Add(this.labelRate);
             this.panelInfoSong.Controls.Add(this.labelLaunchDate);
             this.panelInfoSong.Controls.Add(this.labelAlbum);
@@ -201,7 +203,7 @@
             this.panelInfoSong.Enabled = false;
             this.panelInfoSong.Location = new System.Drawing.Point(209, 72);
             this.panelInfoSong.Name = "panelInfoSong";
-            this.panelInfoSong.Size = new System.Drawing.Size(200, 113);
+            this.panelInfoSong.Size = new System.Drawing.Size(200, 130);
             this.panelInfoSong.TabIndex = 4;
             this.panelInfoSong.Visible = false;
             // 
@@ -262,6 +264,16 @@
             this.labelGenre.Text = "Genre";
             this.labelGenre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DimGray;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(415, 72);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
@@ -296,15 +308,18 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
-            // flowLayoutPanel1
+            // label4
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DimGray;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(415, 72);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
-            this.flowLayoutPanel1.TabIndex = 5;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Enabled = false;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(0, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 21);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Rate";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Visible = false;
             // 
             // MainMenu
             // 
@@ -352,5 +367,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelGenre;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label4;
     }
 }

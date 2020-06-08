@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entrega2;
 
 namespace Spotflix
 {
@@ -15,8 +16,17 @@ namespace Spotflix
         public Library()
         {
             InitializeComponent();
+            
         }
 
-        
+        private void labelEmptyLibrary_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelLibrary_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
