@@ -52,16 +52,28 @@
             this.panelMetadata = new System.Windows.Forms.Panel();
             this.labelMetadata = new System.Windows.Forms.Label();
             this.listBoxMetadata = new System.Windows.Forms.ListBox();
+
             this.panelButttons = new System.Windows.Forms.Panel();
+
+            this.panelFinderUser = new System.Windows.Forms.Panel();
+            this.comboBoxUsuarios = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonFollow = new System.Windows.Forms.Button();
+
             this.panel1.SuspendLayout();
             this.panelMostrar.SuspendLayout();
             this.panelRate.SuspendLayout();
             this.panelMetadata.SuspendLayout();
+
             this.panelButttons.SuspendLayout();
+
+            this.panelFinderUser.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelFinderUser);
             this.panel1.Controls.Add(this.buttonBack);
             this.panel1.Controls.Add(this.textBoxFind);
             this.panel1.Controls.Add(this.buttonSearch);
@@ -309,6 +321,7 @@
             this.listBoxMetadata.Size = new System.Drawing.Size(279, 95);
             this.listBoxMetadata.TabIndex = 1;
             // 
+
             // panelButttons
             // 
             this.panelButttons.Controls.Add(this.buttonPlay);
@@ -323,6 +336,45 @@
             this.panelButttons.Size = new System.Drawing.Size(148, 157);
             this.panelButttons.TabIndex = 11;
             this.panelButttons.Visible = false;
+
+            // panelFinderUser
+            // 
+            this.panelFinderUser.Controls.Add(this.buttonFollow);
+            this.panelFinderUser.Controls.Add(this.label2);
+            this.panelFinderUser.Controls.Add(this.comboBoxUsuarios);
+            this.panelFinderUser.Location = new System.Drawing.Point(3, 225);
+            this.panelFinderUser.Name = "panelFinderUser";
+            this.panelFinderUser.Size = new System.Drawing.Size(290, 154);
+            this.panelFinderUser.TabIndex = 11;
+            this.panelFinderUser.Visible = false;
+            // 
+            // comboBoxUsuarios
+            // 
+            this.comboBoxUsuarios.FormattingEnabled = true;
+            this.comboBoxUsuarios.Location = new System.Drawing.Point(7, 33);
+            this.comboBoxUsuarios.Name = "comboBoxUsuarios";
+            this.comboBoxUsuarios.Size = new System.Drawing.Size(270, 21);
+            this.comboBoxUsuarios.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(18, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "This are or Users, select the one you wish to Follow!";
+            // 
+            // buttonFollow
+            // 
+            this.buttonFollow.Location = new System.Drawing.Point(93, 73);
+            this.buttonFollow.Name = "buttonFollow";
+            this.buttonFollow.Size = new System.Drawing.Size(104, 23);
+            this.buttonFollow.TabIndex = 2;
+            this.buttonFollow.Text = "Follow";
+            this.buttonFollow.UseVisualStyleBackColor = true;
+
             // 
             // Finderr
             // 
@@ -332,7 +384,7 @@
             this.Controls.Add(this.panelMostrar);
             this.Controls.Add(this.panel1);
             this.Name = "Finderr";
-            this.Size = new System.Drawing.Size(650, 385);
+            this.Size = new System.Drawing.Size(650, 352);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelMostrar.ResumeLayout(false);
@@ -340,8 +392,13 @@
             this.panelRate.PerformLayout();
             this.panelMetadata.ResumeLayout(false);
             this.panelMetadata.PerformLayout();
+
             this.panelButttons.ResumeLayout(false);
             this.panelButttons.PerformLayout();
+
+            this.panelFinderUser.ResumeLayout(false);
+            this.panelFinderUser.PerformLayout();
+
             this.ResumeLayout(false);
 
         }
@@ -372,6 +429,13 @@
         private System.Windows.Forms.ListBox listBoxMetadata;
         private System.Windows.Forms.Label labelMetadata;
         private System.Windows.Forms.Label labelFavorite;
+
         private System.Windows.Forms.Panel panelButttons;
+
+        private System.Windows.Forms.Panel panelFinderUser;
+        private System.Windows.Forms.Button buttonFollow;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxUsuarios;
+
     }
 }

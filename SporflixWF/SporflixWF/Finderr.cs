@@ -115,7 +115,11 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "User")
             {
+
                 panelButttons.Visible = false;
+
+
+                panelFinderUser.Visible = true;
 
             }
         }
@@ -123,6 +127,7 @@ namespace Spotflix
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Form1.MainMenu.Show();
+            panelFinderUser.Visible = false;
             Form1.Finderr.Hide();
             Form1.Register.Hide();
             Form1.Login.Hide();
