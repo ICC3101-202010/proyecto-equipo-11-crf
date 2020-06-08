@@ -120,6 +120,8 @@ namespace Spotflix
                     Form1.MainMenu.Show();
                     Form1.ProgresBar.Show();
                     Form1.Menubar.Show();
+                    textBoxPasswordLogin.Text = "";
+                    textBoxUsernameLogIn.Text = "";
                 }
                 else
                 {

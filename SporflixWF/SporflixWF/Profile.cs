@@ -283,6 +283,20 @@ namespace Spotflix
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
             stream3.Close();
+            if (comboBoxOpcionesUsuario.Text == "Log Out")
+            {
+                Form1.Profile.Hide();
+                Form1.MainMenu.Hide();
+                Form1.Register.Hide();
+                Form1.Login.Hide();
+                Form1.Preferences.Hide();
+                Form1.MailVerified.Hide();
+                Form1.Finderr.Hide();
+                Form1.Librarymenu.Hide();
+                Form1.Mixer.Hide();
+                Form1.Welcome.Show();
+                Form1.Welcome.BringToFront();
+            }
             if (comboBoxOpcionesUsuario.Text == "Change Membership")
             {
                 panelCambiarOpcionesUsuario.Visible = true;
@@ -463,6 +477,7 @@ namespace Spotflix
                 }
                 
             }
+
             if (comboBoxOpcionesUsuario.Text == "Add Song")
             {
                 string path = textBoxPath.Text;

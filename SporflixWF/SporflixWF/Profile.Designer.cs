@@ -348,7 +348,7 @@
             this.panelCambiarOpcionesUsuario.Controls.Add(this.checkBoxSi);
             this.panelCambiarOpcionesUsuario.Location = new System.Drawing.Point(6, 82);
             this.panelCambiarOpcionesUsuario.Name = "panelCambiarOpcionesUsuario";
-            this.panelCambiarOpcionesUsuario.Size = new System.Drawing.Size(607, 255);
+            this.panelCambiarOpcionesUsuario.Size = new System.Drawing.Size(619, 252);
             this.panelCambiarOpcionesUsuario.TabIndex = 5;
             this.panelCambiarOpcionesUsuario.Visible = false;
             // 
@@ -494,7 +494,8 @@
             "Change Membership",
             "Add Song",
             "Add Video",
-            "Change Admin Attribute"});
+            "Change Admin Attribute",
+            "Log Out"});
             this.comboBoxOpcionesUsuario.Location = new System.Drawing.Point(258, 169);
             this.comboBoxOpcionesUsuario.Name = "comboBoxOpcionesUsuario";
             this.comboBoxOpcionesUsuario.Size = new System.Drawing.Size(225, 21);

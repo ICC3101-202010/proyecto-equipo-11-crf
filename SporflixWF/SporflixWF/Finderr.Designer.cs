@@ -356,6 +356,7 @@
             this.buttonFollow.TabIndex = 2;
             this.buttonFollow.Text = "Follow";
             this.buttonFollow.UseVisualStyleBackColor = true;
+            this.buttonFollow.Click += new System.EventHandler(this.buttonFollow_Click);
             // 
             // Finderr
             // 

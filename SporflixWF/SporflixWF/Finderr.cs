@@ -109,7 +109,22 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "User")
             {
+                comboBoxUsuarios.Items.Clear();
+                string busqueda = textBoxFind.Text;
                 panelFinderUser.Visible = true;
+                IFormatter formatter3 = new BinaryFormatter();
+                Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+                stream3.Close();
+                foreach (List<string> value in registrados.Values)
+                {
+                    if (value[0].Contains(busqueda) == true)
+                    {
+                        
+                        comboBoxUsuarios.Items.Add(value[0]);
+                        
+                    }
+                }
             }
         }
 
@@ -250,6 +265,46 @@ namespace Spotflix
         private void panelMostrar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonFollow_Click(object sender, EventArgs e)
+        {
+            IFormatter formatter3 = new BinaryFormatter();
+            Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            stream3.Close();
+            IFormatter formatter2 = new BinaryFormatter();
+            Stream stream2 = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<string> nombre = formatter2.Deserialize(stream2) as List<string>;
+            stream2.Close();
+            string elegido = comboBoxUsuarios.Text;
+            foreach (List<string> data in registrados.Values)
+            {
+                if (elegido == data[0])
+                {
+                    int a= Convert.ToInt32(data[8]);
+                    a += 1;
+                    string b = Convert.ToString(a);
+                    data[8] = b;
+                    foreach (List<string> value in registrados.Values)
+                    {
+                        if (nombre[0] == value[0])
+                        {
+                            a = Convert.ToInt32(value[10]);
+                            a += 1;
+                            
+                            b = Convert.ToString(a);
+                            value[10] = b;
+                            
+                        }
+                    }
+                    MessageBox.Show("You are now Following a new User!");
+                }
+            }
+            IFormatter formatter1 = new BinaryFormatter();
+            Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter1.Serialize(stream1, registrados);
+            stream1.Close();
         }
     }
 }
