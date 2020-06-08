@@ -38,7 +38,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(35, 66);
+            this.label1.Location = new System.Drawing.Point(122, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(433, 22);
             this.label1.TabIndex = 1;
@@ -49,7 +49,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(61, 113);
+            this.label2.Location = new System.Drawing.Point(143, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(374, 18);
             this.label2.TabIndex = 2;
@@ -57,7 +57,7 @@
             // 
             // buttonUpgradeNotPremium
             // 
-            this.buttonUpgradeNotPremium.Location = new System.Drawing.Point(151, 218);
+            this.buttonUpgradeNotPremium.Location = new System.Drawing.Point(225, 224);
             this.buttonUpgradeNotPremium.Name = "buttonUpgradeNotPremium";
             this.buttonUpgradeNotPremium.Size = new System.Drawing.Size(160, 23);
             this.buttonUpgradeNotPremium.TabIndex = 3;
@@ -74,7 +74,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "NotPremium";
-            this.Size = new System.Drawing.Size(512, 314);
+            this.Size = new System.Drawing.Size(631, 363);
             this.ResumeLayout(false);
             this.PerformLayout();
 
