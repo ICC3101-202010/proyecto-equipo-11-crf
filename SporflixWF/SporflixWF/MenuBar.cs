@@ -40,6 +40,7 @@ namespace SporflixWF
             Form1.Librarymenu.Hide();
             Form1.Mixer.Hide();
             Form1.Notpremium.Hide();
+            Form1.VideoPlayer.Hide();
         }
 
         private void buttonFinder_Click_1(object sender, EventArgs e)
@@ -54,6 +55,7 @@ namespace SporflixWF
             Form1.Librarymenu.Hide();
             Form1.Mixer.Hide();
             Form1.Notpremium.Hide();
+            Form1.VideoPlayer.Hide();
 
         }
 
@@ -69,6 +71,7 @@ namespace SporflixWF
             Form1.Librarymenu.Hide();
             Form1.Mixer.Hide();
             Form1.Notpremium.Hide();
+            Form1.VideoPlayer.Hide();
         }
 
         private void buttonLibrary_Click(object sender, EventArgs e)
@@ -97,6 +100,7 @@ namespace SporflixWF
                         Form1.Finderr.Hide();
                         Form1.Librarymenu.Show();
                         Form1.Mixer.Hide();
+                        Form1.VideoPlayer.Hide();
                     }
                     else
                     {
@@ -111,6 +115,7 @@ namespace SporflixWF
                         Form1.Librarymenu.Hide();
                         Form1.Mixer.Hide();
                         Form1.Notpremium.Show();
+                        Form1.VideoPlayer.Hide();
                     }
                 }
 
@@ -144,6 +149,7 @@ namespace SporflixWF
                         Form1.Librarymenu.Hide();
                         Form1.Mixer.Show();
                         Form1.Notpremium.Hide();
+                        Form1.VideoPlayer.Hide();
                     }
                     else
                     {
@@ -157,6 +163,7 @@ namespace SporflixWF
                         Form1.Finderr.Hide();
                         Form1.Librarymenu.Hide();
                         Form1.Mixer.Hide();
+                        Form1.VideoPlayer.Hide();
                         Form1.Notpremium.Show();
                     }
                 }
@@ -164,6 +171,21 @@ namespace SporflixWF
             }
             
 
+        }
+
+        private void buttonVideo_Click(object sender, EventArgs e)
+        {
+            Form1.VideoPlayer.Show();
+            Form1.Register.Hide();
+            Form1.Login.Hide();
+            Form1.MainMenu.Hide();
+            Form1.Preferences.Hide();
+            Form1.MailVerified.Hide();
+            Form1.Profile.Hide();
+            Form1.Finderr.Hide();
+            Form1.Librarymenu.Hide();
+            Form1.Mixer.Hide();
+            Form1.Notpremium.Hide();
         }
     }
 }
