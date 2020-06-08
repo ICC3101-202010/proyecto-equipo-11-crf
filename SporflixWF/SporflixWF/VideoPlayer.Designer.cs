@@ -55,11 +55,12 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(60, 3);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(82, 13);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(436, 340);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(414, 318);
             this.axWindowsMediaPlayer1.TabIndex = 3;
+            this.axWindowsMediaPlayer1.Visible = false;
             // 
             // VideoPlayer
             // 

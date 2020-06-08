@@ -66,13 +66,13 @@ namespace SporflixWF
                 };
                 videoPanel.Click += delegate (object sender, EventArgs e)
                 {
+
                     panelPlayVideo.Visible = true;
                     axWindowsMediaPlayer1.Show();
+                    axWindowsMediaPlayer1.uiMode = "none";
                     axWindowsMediaPlayer1.URL = video.Path ;
-                    axWindowsMediaPlayer1.Ctlcontrols.play() ;
+                    axWindowsMediaPlayer1.Ctlcontrols.play();
                     
-
-
                 };
 
             }
