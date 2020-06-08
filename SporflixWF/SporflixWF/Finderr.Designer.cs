@@ -52,15 +52,23 @@
             this.panelMetadata = new System.Windows.Forms.Panel();
             this.labelMetadata = new System.Windows.Forms.Label();
             this.listBoxMetadata = new System.Windows.Forms.ListBox();
+
+            this.panelButttons = new System.Windows.Forms.Panel();
+
             this.panelFinderUser = new System.Windows.Forms.Panel();
             this.comboBoxUsuarios = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonFollow = new System.Windows.Forms.Button();
+
             this.panel1.SuspendLayout();
             this.panelMostrar.SuspendLayout();
             this.panelRate.SuspendLayout();
             this.panelMetadata.SuspendLayout();
+
+            this.panelButttons.SuspendLayout();
+
             this.panelFinderUser.SuspendLayout();
+
             this.SuspendLayout();
             // 
             // panel1
@@ -136,16 +144,10 @@
             // 
             // panelMostrar
             // 
-            this.panelMostrar.Controls.Add(this.labelFavorite);
+            this.panelMostrar.Controls.Add(this.panelButttons);
             this.panelMostrar.Controls.Add(this.panelRate);
             this.panelMostrar.Controls.Add(this.flowLayoutPanel1);
-            this.panelMostrar.Controls.Add(this.labelDonload);
             this.panelMostrar.Controls.Add(this.comboBoxFound);
-            this.panelMostrar.Controls.Add(this.buttonMetadata);
-            this.panelMostrar.Controls.Add(this.buttonDownload);
-            this.panelMostrar.Controls.Add(this.buttonRate);
-            this.panelMostrar.Controls.Add(this.ButtonFavorite);
-            this.panelMostrar.Controls.Add(this.buttonPlay);
             this.panelMostrar.Controls.Add(this.panelMetadata);
             this.panelMostrar.Location = new System.Drawing.Point(305, 3);
             this.panelMostrar.Name = "panelMostrar";
@@ -158,7 +160,7 @@
             // 
             this.labelFavorite.AutoSize = true;
             this.labelFavorite.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelFavorite.Location = new System.Drawing.Point(276, 79);
+            this.labelFavorite.Location = new System.Drawing.Point(115, 37);
             this.labelFavorite.Name = "labelFavorite";
             this.labelFavorite.Size = new System.Drawing.Size(19, 13);
             this.labelFavorite.TabIndex = 10;
@@ -226,7 +228,7 @@
             // 
             this.labelDonload.AutoSize = true;
             this.labelDonload.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelDonload.Location = new System.Drawing.Point(276, 140);
+            this.labelDonload.Location = new System.Drawing.Point(115, 95);
             this.labelDonload.Name = "labelDonload";
             this.labelDonload.Size = new System.Drawing.Size(19, 13);
             this.labelDonload.TabIndex = 8;
@@ -236,14 +238,14 @@
             // comboBoxFound
             // 
             this.comboBoxFound.FormattingEnabled = true;
-            this.comboBoxFound.Location = new System.Drawing.Point(43, 47);
+            this.comboBoxFound.Location = new System.Drawing.Point(16, 45);
             this.comboBoxFound.Name = "comboBoxFound";
             this.comboBoxFound.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFound.TabIndex = 6;
             // 
             // buttonMetadata
             // 
-            this.buttonMetadata.Location = new System.Drawing.Point(195, 164);
+            this.buttonMetadata.Location = new System.Drawing.Point(34, 119);
             this.buttonMetadata.Name = "buttonMetadata";
             this.buttonMetadata.Size = new System.Drawing.Size(75, 23);
             this.buttonMetadata.TabIndex = 5;
@@ -253,7 +255,7 @@
             // 
             // buttonDownload
             // 
-            this.buttonDownload.Location = new System.Drawing.Point(195, 135);
+            this.buttonDownload.Location = new System.Drawing.Point(34, 90);
             this.buttonDownload.Name = "buttonDownload";
             this.buttonDownload.Size = new System.Drawing.Size(75, 23);
             this.buttonDownload.TabIndex = 4;
@@ -263,7 +265,7 @@
             // 
             // buttonRate
             // 
-            this.buttonRate.Location = new System.Drawing.Point(195, 103);
+            this.buttonRate.Location = new System.Drawing.Point(34, 61);
             this.buttonRate.Name = "buttonRate";
             this.buttonRate.Size = new System.Drawing.Size(75, 23);
             this.buttonRate.TabIndex = 3;
@@ -273,7 +275,7 @@
             // 
             // ButtonFavorite
             // 
-            this.ButtonFavorite.Location = new System.Drawing.Point(195, 74);
+            this.ButtonFavorite.Location = new System.Drawing.Point(34, 32);
             this.ButtonFavorite.Name = "ButtonFavorite";
             this.ButtonFavorite.Size = new System.Drawing.Size(75, 23);
             this.ButtonFavorite.TabIndex = 2;
@@ -283,7 +285,7 @@
             // 
             // buttonPlay
             // 
-            this.buttonPlay.Location = new System.Drawing.Point(195, 45);
+            this.buttonPlay.Location = new System.Drawing.Point(34, 3);
             this.buttonPlay.Name = "buttonPlay";
             this.buttonPlay.Size = new System.Drawing.Size(75, 23);
             this.buttonPlay.TabIndex = 1;
@@ -319,6 +321,22 @@
             this.listBoxMetadata.Size = new System.Drawing.Size(279, 95);
             this.listBoxMetadata.TabIndex = 1;
             // 
+
+            // panelButttons
+            // 
+            this.panelButttons.Controls.Add(this.buttonPlay);
+            this.panelButttons.Controls.Add(this.labelFavorite);
+            this.panelButttons.Controls.Add(this.ButtonFavorite);
+            this.panelButttons.Controls.Add(this.buttonRate);
+            this.panelButttons.Controls.Add(this.buttonDownload);
+            this.panelButttons.Controls.Add(this.labelDonload);
+            this.panelButttons.Controls.Add(this.buttonMetadata);
+            this.panelButttons.Location = new System.Drawing.Point(170, 30);
+            this.panelButttons.Name = "panelButttons";
+            this.panelButttons.Size = new System.Drawing.Size(148, 157);
+            this.panelButttons.TabIndex = 11;
+            this.panelButttons.Visible = false;
+
             // panelFinderUser
             // 
             this.panelFinderUser.Controls.Add(this.buttonFollow);
@@ -356,7 +374,9 @@
             this.buttonFollow.TabIndex = 2;
             this.buttonFollow.Text = "Follow";
             this.buttonFollow.UseVisualStyleBackColor = true;
+
             this.buttonFollow.Click += new System.EventHandler(this.buttonFollow_Click);
+
             // 
             // Finderr
             // 
@@ -370,13 +390,17 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelMostrar.ResumeLayout(false);
-            this.panelMostrar.PerformLayout();
             this.panelRate.ResumeLayout(false);
             this.panelRate.PerformLayout();
             this.panelMetadata.ResumeLayout(false);
             this.panelMetadata.PerformLayout();
+
+            this.panelButttons.ResumeLayout(false);
+            this.panelButttons.PerformLayout();
+
             this.panelFinderUser.ResumeLayout(false);
             this.panelFinderUser.PerformLayout();
+
             this.ResumeLayout(false);
 
         }
@@ -407,9 +431,13 @@
         private System.Windows.Forms.ListBox listBoxMetadata;
         private System.Windows.Forms.Label labelMetadata;
         private System.Windows.Forms.Label labelFavorite;
+
+        private System.Windows.Forms.Panel panelButttons;
+
         private System.Windows.Forms.Panel panelFinderUser;
         private System.Windows.Forms.Button buttonFollow;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxUsuarios;
+
     }
 }

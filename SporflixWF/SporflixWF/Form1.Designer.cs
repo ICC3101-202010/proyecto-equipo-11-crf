@@ -139,6 +139,31 @@ namespace Spotflix
             this.profile1.Size = new System.Drawing.Size(656, 484);
             this.profile1.TabIndex = 7;
             // 
+
+            // menuBar1
+            // 
+            this.menuBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuBar1.Location = new System.Drawing.Point(0, 314);
+            this.menuBar1.Name = "menuBar1";
+
+            this.menuBar1.Size = new System.Drawing.Size(644, 52);
+            this.menuBar1.TabIndex = 10;
+            this.menuBar1.Load += new System.EventHandler(this.menuBar1_Load);
+
+            this.menuBar1.Size = new System.Drawing.Size(644, 58);
+            this.menuBar1.TabIndex = 8;
+
+            // 
+            // playerBar1
+            // 
+            this.playerBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.playerBar1.Location = new System.Drawing.Point(0, 279);
+            this.playerBar1.Name = "playerBar1";
+            this.playerBar1.Size = new System.Drawing.Size(644, 35);
+            this.playerBar1.TabIndex = 9;
+            // 
+
+
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
