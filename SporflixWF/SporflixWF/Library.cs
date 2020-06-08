@@ -87,7 +87,7 @@ namespace Spotflix
                 panel_playlist.Size = new Size(194, 190);
                 pb_playlist.Size = new Size(183, 158);
                 label_type.Size = new Size(36, 13);
-                label_type.Location = new Point(97, 187);
+                label_type.Location = new Point(0, 95);
 
                 actual.NombrePlaylist = textBoxName.Text;
                 label_type.Text = "Song";
@@ -103,8 +103,10 @@ namespace Spotflix
 
                 panel_playlist.BorderStyle = BorderStyle.FixedSingle;
                 panel_playlist.Controls.Add(pb_playlist);
-                pb_playlist.Dock = DockStyle.Top;
+                pb_playlist.Dock = DockStyle.Right;
                 panel_playlist.Controls.Add(label_playlist);
+                //label_playlist.Dock = DockStyle.Left;
+                label_playlist.Font = new Font("Arial", 20);
                 //label_playlist.Dock = DockStyle.Bottom;
 
 
@@ -135,7 +137,7 @@ namespace Spotflix
                 panel_playlist.Size = new Size(194, 190);
                 pb_playlist.Size = new Size(183, 158);
                 label_type.Size = new Size(36, 13);
-                label_type.Location = new Point(97, 187);
+                label_type.Location = new Point(0, 95);
 
                 actual.NombrePlaylist = textBoxName.Text;
                 label_type.Text = "Song";

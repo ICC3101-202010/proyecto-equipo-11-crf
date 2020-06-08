@@ -37,6 +37,7 @@
             this.labelNameSong = new System.Windows.Forms.Label();
             this.pbTestSong = new System.Windows.Forms.PictureBox();
             this.panelSongOptions = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.labelInfo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.panelplaylit = new System.Windows.Forms.Panel();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
@@ -91,6 +92,7 @@
             this.SongsContainerPanelFlow.Controls.Add(this.panelSongOptions);
             this.SongsContainerPanelFlow.Controls.Add(this.panelInfoSong);
             this.SongsContainerPanelFlow.Controls.Add(this.flowLayoutPanel1);
+            this.SongsContainerPanelFlow.Controls.Add(this.panelplaylit);
             this.SongsContainerPanelFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SongsContainerPanelFlow.Location = new System.Drawing.Point(0, 40);
             this.SongsContainerPanelFlow.Name = "SongsContainerPanelFlow";
@@ -159,6 +161,18 @@
             this.panelSongOptions.Size = new System.Drawing.Size(200, 126);
             this.panelSongOptions.TabIndex = 3;
             this.panelSongOptions.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(0, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(200, 30);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Add playlist";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // labelInfo
             // 
@@ -323,16 +337,14 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
-            // label5
+            // panelplaylit
             // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(0, 90);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(200, 30);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Info";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panelplaylit.AutoScroll = true;
+            this.panelplaylit.Location = new System.Drawing.Point(421, 72);
+            this.panelplaylit.Name = "panelplaylit";
+            this.panelplaylit.Size = new System.Drawing.Size(182, 63);
+            this.panelplaylit.TabIndex = 6;
+            this.panelplaylit.Visible = false;
             // 
             // MainMenu
             // 
@@ -382,5 +394,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panelplaylit;
     }
 }
