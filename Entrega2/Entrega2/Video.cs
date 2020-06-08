@@ -31,6 +31,7 @@ namespace Entrega2
         private int width;
         private int weight;
         private Image videoImage;
+        private string path;
 
         public string NameVideo { get => nameVideo; set => nameVideo = value; }
         public string DireccionMemoria { get => direccionMemoria; set => direccionMemoria = value; }
@@ -51,6 +52,7 @@ namespace Entrega2
         public int Width { get => width; set => width = value; }
         public int Weight { get => weight; set => weight = value; }
         public Image VideoImage { get => videoImage; set => videoImage = value; }
+        public string Path { get => path; set => path = value; }
 
         public Video(string path)
         {
@@ -63,7 +65,7 @@ namespace Entrega2
             this.weight = video.Properties.VideoHeight;
             this.width = video.Properties.VideoWidth;
             resolution = Weight.ToString() + " x " + Width.ToString();
-
+            this.path = path;
             //MemoryStream ms = new MemoryStream(video.Tag.Pictures[0].Data.Data);
             //this.videoImage = Image.FromStream(ms);
 

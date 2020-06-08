@@ -34,9 +34,9 @@ namespace Entrega2
         private List<Video> videos_favoritos;
 
 
-        
 
 
+        private List<Playlist> my_Playlist = new List<Playlist>();
         private List<string> seguidosUsuarios;
         private List<Playlist> seguidosPlaylist;
         private List<Album> seguidosAlbum;
@@ -61,6 +61,7 @@ namespace Entrega2
         internal List<Album> SeguidosAlbum { get => seguidosAlbum; set => seguidosAlbum = value; }
         internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
         internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
+        public List<Playlist> My_Playlist { get => my_Playlist; set => my_Playlist = value; }
 
         public Usuario(int ID, string member, DateTime Member_expiration,string Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {

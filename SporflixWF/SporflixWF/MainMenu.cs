@@ -63,9 +63,10 @@ namespace Spotflix
                 Label song_Date = new Label();
                 Label song_Rate = new Label();
                 Label song_Album = new Label();
+                Label song_plays = new Label();
 
                 song_options.Size = new Size(200, 97);
-                song_info_panel.Size = new Size(200, 113);
+                song_info_panel.Size = new Size(200, 130);
             
                 song_options.BackColor = Color.FromArgb(82, 39, 65);
 
@@ -98,6 +99,7 @@ namespace Spotflix
                 song_Rate.Size = new Size(200, 21);
                 song_Artist.Size = new Size(200, 21);
                 song_Genre.Size = new Size(200, 21);
+                song_plays.Size = new Size(200, 21);
 
                 //Add labels to option songs
                 song_options.Controls.Add(song_rating);
@@ -106,7 +108,7 @@ namespace Spotflix
                 song_Info.Dock = DockStyle.Top;
                 song_options.Controls.Add(song_favorite);
                 song_favorite.Dock = DockStyle.Top;
-
+                
                 //Add labels to info panel
                 song_info_panel.Controls.Add(song_Album);
                 song_Album.Dock = DockStyle.Top;
@@ -118,6 +120,8 @@ namespace Spotflix
                 song_Rate.Dock = DockStyle.Top;
                 song_info_panel.Controls.Add(song_Artist);
                 song_Artist.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_plays);
+                song_plays.Dock = DockStyle.Top;
 
                 SongsContainerPanelFlow.Controls.Add(song_options);
                 SongsContainerPanelFlow.Controls.Add(song_info_panel);
@@ -201,7 +205,8 @@ namespace Spotflix
                     song_Album.Text = "Album :" + song.Album;
                     song_Date.Text = "Year :" + song.Fecha_Lanzamiento.ToString();
                     song_Genre.Text = "Genre :" + song.Genero;
-                    song_Rate.Text = "Rate :" + song.Rating.ToString(); 
+                    song_Rate.Text = "Rate :" + song.Rating.ToString();
+                    song_plays.Text = "Plays :" + song.Reproducciones.ToString();
                 
                 };
                 song_info_panel.MouseLeave += delegate (object sender, EventArgs e)

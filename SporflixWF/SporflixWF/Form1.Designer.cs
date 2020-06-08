@@ -41,10 +41,13 @@ namespace Spotflix
             this.welcome1 = new Spotflix.Welcome();
             this.finderr1 = new Spotflix.Finderr();
             this.profile1 = new Spotflix.Profile();
+            this.videoPlayer1 = new SporflixWF.VideoPlayer();
             this.SuspendLayout();
             // 
             // library1
             // 
+            this.library1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.library1.Enabled = false;
             this.library1.Location = new System.Drawing.Point(0, 0);
             this.library1.Name = "library1";
             this.library1.Size = new System.Drawing.Size(644, 347);
@@ -139,12 +142,30 @@ namespace Spotflix
             this.profile1.Size = new System.Drawing.Size(644, 347);
             this.profile1.TabIndex = 13;
             // 
+<<<<<<< HEAD
+=======
+
+            // videoPlayer1
+            // 
+            this.videoPlayer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.videoPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.videoPlayer1.Name = "videoPlayer1";
+            this.videoPlayer1.Size = new System.Drawing.Size(644, 347);
+            this.videoPlayer1.TabIndex = 13;
+            // 
+
+
+>>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 436);
+<<<<<<< HEAD
             this.Controls.Add(this.profile1);
+=======
+            this.Controls.Add(this.videoPlayer1);
+>>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
             this.Controls.Add(this.library1);
             this.Controls.Add(this.mixer1);
             this.Controls.Add(this.playerBar1);
@@ -177,6 +198,7 @@ namespace Spotflix
         private Mixer mixer1;
         private Library library1;
         private Profile profile1;
+        private SporflixWF.VideoPlayer videoPlayer1;
     }
 }
 

@@ -83,15 +83,25 @@
             this.panelFinderUser.Controls.Add(this.buttonFollow);
             this.panelFinderUser.Controls.Add(this.label2);
             this.panelFinderUser.Controls.Add(this.comboBoxUsuarios);
+<<<<<<< HEAD
             this.panelFinderUser.Location = new System.Drawing.Point(305, 3);
             this.panelFinderUser.Name = "panelFinderUser";
             this.panelFinderUser.Size = new System.Drawing.Size(290, 349);
+=======
+            this.panelFinderUser.Location = new System.Drawing.Point(3, 225);
+            this.panelFinderUser.Name = "panelFinderUser";
+            this.panelFinderUser.Size = new System.Drawing.Size(290, 154);
+>>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
             this.panelFinderUser.TabIndex = 11;
             this.panelFinderUser.Visible = false;
             // 
             // buttonFollow
             // 
+<<<<<<< HEAD
             this.buttonFollow.Location = new System.Drawing.Point(91, 281);
+=======
+            this.buttonFollow.Location = new System.Drawing.Point(93, 73);
+>>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
             this.buttonFollow.Name = "buttonFollow";
             this.buttonFollow.Size = new System.Drawing.Size(104, 23);
             this.buttonFollow.TabIndex = 2;
@@ -211,6 +221,10 @@
             this.buttonPlay.TabIndex = 1;
             this.buttonPlay.Text = "Play";
             this.buttonPlay.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+=======
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
+>>>>>>> c698176e8f234c86ec019fe082f6fa0f77d693c6
             // 
             // labelFavorite
             // 

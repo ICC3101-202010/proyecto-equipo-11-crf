@@ -3,17 +3,17 @@
 La aplicación debe adaptarse3 a la resolución de la pantalla que está utilizando, pudiendo
 asumir que la resolución mínima será 1024 × 768 
 
-2)[ ]
+2)[✓] 50% (solo musica)
 Cada canción debe tener información como el género, cantante, compositor,
 discografía, estudio, año de publicación, letra, etc. Por otra parte, los vídeos deben contener
 información como género, categoría, actores, director, estudio. año de publicación,
 descripción, calificación, etc.
 
-3 [ ]
+3 [✓]
 Información que puede ser obtenida
 como resultado de operaciones simples como la duración, etc.
 
-4 [ ]
+4 [✓]
 Cada canción y vídeo debe tener información que se
 genere en la plataforma, por ejemplo, número de reproducciones, cantidad de usuarios
 que les gusta, calificación (nota que ponen los usuarios), etc.

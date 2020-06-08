@@ -73,6 +73,7 @@ namespace SporflixWF
             Form1.Preferences.Hide();
             Form1.MailVerified.Hide();
             Form1.Profile.Hide();
+            Form1.Librarymenu.Enabled = true;
             Form1.Finderr.Hide();
             Form1.Librarymenu.Show();
             Form1.Mixer.Hide();
