@@ -28,5 +28,33 @@ namespace Spotflix
         {
 
         }
+
+        private void Library_Enter(object sender, EventArgs e)
+        {
+            if (Global.UserNow.My_Playlist.Any() == false) 
+            {
+                pbEmpty.Enabled = false;
+                pbEmpty.Visible = false;
+                labelEmptyLibrary.Enabled = false;
+                labelEmptyLibrary.Visible = false;
+                foreach (Playlist playlist in Global.UserNow.My_Playlist) 
+                {
+                    FlowLayoutPanel playlistPanel = new FlowLayoutPanel();
+                    Label playlist_name = new Label();
+                    PictureBox pictureBox = new PictureBox();
+                    label1.Text = playlist.NombrePlaylist;
+                
+                }
+            }
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Playlist nueva = new Playlist("Primera", Global.UserNow);
+            Global.UserNow.My_Playlist.Add(nueva);
+            //label1.Text = Global.UserNow.Username;
+            
+        }
     }
 }
