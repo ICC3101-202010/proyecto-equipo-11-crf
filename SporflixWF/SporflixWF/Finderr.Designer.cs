@@ -211,6 +211,7 @@
             this.buttonPlay.TabIndex = 1;
             this.buttonPlay.Text = "Play";
             this.buttonPlay.UseVisualStyleBackColor = true;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click_1);
             // 
             // labelFavorite
             // 
@@ -373,9 +374,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
-            this.Controls.Add(this.panelFinderUser);
             this.Controls.Add(this.panelMostrar);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelFinderUser);
             this.Name = "Finderr";
             this.Size = new System.Drawing.Size(650, 352);
             this.panel1.ResumeLayout(false);

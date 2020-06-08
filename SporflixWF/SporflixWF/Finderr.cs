@@ -335,5 +335,11 @@ namespace Spotflix
             Form1.VideoPlayer.Show();
             Form1.Finderr.Hide();
         }
+
+        private void buttonPlay_Click_1(object sender, EventArgs e)
+        {
+            Form1.VideoPlayer.Show();
+            Form1.Finderr.Hide();
+        }
     }
 }
