@@ -18,7 +18,24 @@ namespace SporflixWF
             InitializeComponent();
         }
 
-        private void buttonFinder_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void buttonProfile_Click_1(object sender, EventArgs e)
+        {
+            Form1.Profile.Show();
+            Form1.MainMenu.Hide();
+            Form1.Register.Hide();
+            Form1.Login.Hide();
+            Form1.Preferences.Hide();
+            Form1.MailVerified.Hide();
+            Form1.Finderr.Hide();
+            Form1.Librarymenu.Hide();
+            Form1.Mixer.Hide();
+        }
+
+        private void buttonFinder_Click_1(object sender, EventArgs e)
         {
             Form1.Register.Hide();
             Form1.Login.Hide();
@@ -27,20 +44,51 @@ namespace SporflixWF
             Form1.MailVerified.Hide();
             Form1.Profile.Hide();
             Form1.Finderr.Show();
-
-            Form1.MainMenu.Hide();
+            Form1.Librarymenu.Hide();
+            Form1.Mixer.Hide();
+            
         }
 
-        private void buttonProfile_Click(object sender, EventArgs e)
+        private void buttonHome_Click(object sender, EventArgs e)
         {
-            Form1.Profile.Show();
-            Form1.MainMenu.Hide();
+            Form1.Register.Hide();
+            Form1.Login.Hide();
+            Form1.MainMenu.Show();
+            Form1.Preferences.Hide();
+            Form1.MailVerified.Hide();
+            Form1.Profile.Hide();
+            Form1.Finderr.Hide();
+            Form1.Librarymenu.Hide();
+            Form1.Mixer.Hide();
+            
+        }
+
+        private void buttonLibrary_Click(object sender, EventArgs e)
+        {
             Form1.Register.Hide();
             Form1.Login.Hide();
             Form1.MainMenu.Hide();
             Form1.Preferences.Hide();
             Form1.MailVerified.Hide();
+            Form1.Profile.Hide();
             Form1.Finderr.Hide();
+            Form1.Librarymenu.Show();
+            Form1.Mixer.Hide();
+
+        }
+
+        private void buttonMixer_Click(object sender, EventArgs e)
+        {
+            Form1.Register.Hide();
+            Form1.Login.Hide();
+            Form1.MainMenu.Hide();
+            Form1.Preferences.Hide();
+            Form1.MailVerified.Hide();
+            Form1.Profile.Hide();
+            Form1.Finderr.Hide();
+            Form1.Librarymenu.Hide();
+            Form1.Mixer.Show();
+
         }
     }
 }
