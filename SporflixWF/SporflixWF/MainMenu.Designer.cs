@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelInfoSong = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.labelRate = new System.Windows.Forms.Label();
             this.labelLaunchDate = new System.Windows.Forms.Label();
             this.labelAlbum = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
@@ -148,13 +149,14 @@
             // panelSongOptions
             // 
             this.panelSongOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(39)))), ((int)(((byte)(65)))));
+            this.panelSongOptions.Controls.Add(this.label5);
             this.panelSongOptions.Controls.Add(this.labelInfo);
             this.panelSongOptions.Controls.Add(this.label3);
             this.panelSongOptions.Controls.Add(this.label1);
             this.panelSongOptions.Enabled = false;
             this.panelSongOptions.Location = new System.Drawing.Point(3, 72);
             this.panelSongOptions.Name = "panelSongOptions";
-            this.panelSongOptions.Size = new System.Drawing.Size(200, 97);
+            this.panelSongOptions.Size = new System.Drawing.Size(200, 126);
             this.panelSongOptions.TabIndex = 3;
             this.panelSongOptions.Visible = false;
             // 
@@ -206,6 +208,19 @@
             this.panelInfoSong.Size = new System.Drawing.Size(200, 130);
             this.panelInfoSong.TabIndex = 4;
             this.panelInfoSong.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Enabled = false;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(0, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 21);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Rate";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Visible = false;
             // 
             // labelRate
             // 
@@ -308,18 +323,16 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
-            // label4
+            // label5
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Enabled = false;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(0, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 21);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Rate";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Visible = false;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(0, 90);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(200, 30);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Info";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainMenu
             // 
@@ -368,5 +381,6 @@
         private System.Windows.Forms.Label labelGenre;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

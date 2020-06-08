@@ -33,7 +33,12 @@ namespace Spotflix
 
         private void Library_Enter(object sender, EventArgs e)
         {
-
+            if (Global.UserNow.My_Playlist.Any() == false) 
+            { 
+            
+            
+            
+            }
 
         }
 
@@ -65,17 +70,11 @@ namespace Spotflix
 
         private void buttonAddPlaylist_Click(object sender, EventArgs e)
         {
-            if (labelNamePlaylist.Text.Any() == false) 
-            { 
-                
+ 
             
-            
-            }
-            else 
-            {
                 //Playlist new_playlist = new Playlist(labelNamePlaylist.Text, Global.UserNow);
                 
-                Panel panel_playlist = new Panel();
+                FlowLayoutPanel panel_playlist = new FlowLayoutPanel();
                 PictureBox pb_playlist = new PictureBox();
                 Label label_playlist = new Label();
                 Label label_type = new Label();
@@ -100,12 +99,10 @@ namespace Spotflix
                 panel_playlist.Controls.Add(pb_playlist);
                 pb_playlist.Dock = DockStyle.Top;
                 panel_playlist.Controls.Add(label_playlist);
-                label_playlist.Dock = DockStyle.Bottom;
-                panel_playlist.Controls.Add(label_type);
-                label_type.Dock = DockStyle.Bottom;
+                label_playlist.Dock = DockStyle.Bottom; 
 
                 panelLibrary.Controls.Add(panel_playlist);
-                //panel_playlist.Dock = DockStyle.Top;
+                
                 pbEmpty.Visible = false;
                 pbAdd.Visible = false;
                 labelAddPlaylist.Visible = false;
@@ -113,9 +110,13 @@ namespace Spotflix
                 panelNewPlaylist.Enabled = false;
                 panelNewPlaylist.Visible = false;
 
+                pbAddRigth.Enabled = true;
+                pbAddRigth.Visible = true;
 
 
-            }
+
+
+            
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -127,6 +128,19 @@ namespace Spotflix
                 this.actual.Imagen_personalizada = Image.FromFile(openFileDialog1.FileName);
             
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pbEmpty.Enabled = false;
+            pbEmpty.Visible = false;
+            labelEmptyLibrary.Enabled = false;
+            labelEmptyLibrary.Visible = false;
+            pbAdd.Enabled = false;
+            pbAdd.Visible = false;
+
+            panelNewPlaylist.Enabled = true;
+            panelNewPlaylist.Visible = true;
         }
     }
 }

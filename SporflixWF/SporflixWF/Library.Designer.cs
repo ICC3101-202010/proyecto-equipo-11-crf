@@ -44,17 +44,23 @@
             this.labelEmptyLibrary = new System.Windows.Forms.Label();
             this.pbEmpty = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.labelLibraryTitle = new System.Windows.Forms.Label();
+            this.pbAddRigth = new System.Windows.Forms.PictureBox();
+            this.panelLibraruTitle.SuspendLayout();
             this.panelLibrary.SuspendLayout();
             this.panelNewPlaylist.SuspendLayout();
             this.panelTtileAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRigth)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLibraruTitle
             // 
             this.panelLibraruTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(38)))), ((int)(((byte)(55)))));
+            this.panelLibraruTitle.Controls.Add(this.pbAddRigth);
+            this.panelLibraruTitle.Controls.Add(this.labelLibraryTitle);
             this.panelLibraruTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLibraruTitle.Location = new System.Drawing.Point(0, 0);
             this.panelLibraruTitle.Name = "panelLibraruTitle";
@@ -143,6 +149,7 @@
             // 
             this.textBoxName.BackColor = System.Drawing.Color.Gray;
             this.textBoxName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxName.ForeColor = System.Drawing.SystemColors.Window;
             this.textBoxName.Location = new System.Drawing.Point(58, 37);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 13);
@@ -214,6 +221,30 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // labelLibraryTitle
+            // 
+            this.labelLibraryTitle.AutoSize = true;
+            this.labelLibraryTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLibraryTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelLibraryTitle.Location = new System.Drawing.Point(260, 9);
+            this.labelLibraryTitle.Name = "labelLibraryTitle";
+            this.labelLibraryTitle.Size = new System.Drawing.Size(125, 30);
+            this.labelLibraryTitle.TabIndex = 0;
+            this.labelLibraryTitle.Text = "L i b r a r y";
+            // 
+            // pbAddRigth
+            // 
+            this.pbAddRigth.Enabled = false;
+            this.pbAddRigth.Image = ((System.Drawing.Image)(resources.GetObject("pbAddRigth.Image")));
+            this.pbAddRigth.Location = new System.Drawing.Point(571, 4);
+            this.pbAddRigth.Name = "pbAddRigth";
+            this.pbAddRigth.Size = new System.Drawing.Size(69, 38);
+            this.pbAddRigth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAddRigth.TabIndex = 4;
+            this.pbAddRigth.TabStop = false;
+            this.pbAddRigth.Visible = false;
+            this.pbAddRigth.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Library
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +256,8 @@
             this.Name = "Library";
             this.Size = new System.Drawing.Size(643, 360);
             this.Enter += new System.EventHandler(this.Library_Enter);
+            this.panelLibraruTitle.ResumeLayout(false);
+            this.panelLibraruTitle.PerformLayout();
             this.panelLibrary.ResumeLayout(false);
             this.panelLibrary.PerformLayout();
             this.panelNewPlaylist.ResumeLayout(false);
@@ -234,6 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRigth)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +290,7 @@
         private System.Windows.Forms.Panel panelTtileAdd;
         private System.Windows.Forms.Label labelTtilePlaylist;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label labelLibraryTitle;
+        private System.Windows.Forms.PictureBox pbAddRigth;
     }
 }
