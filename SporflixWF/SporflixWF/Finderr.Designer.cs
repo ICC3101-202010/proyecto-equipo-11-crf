@@ -175,11 +175,11 @@
             // 
             // panelMostrar
             // 
-            this.panelMostrar.Controls.Add(this.panelButttons);
-            this.panelMostrar.Controls.Add(this.panelRate);
             this.panelMostrar.Controls.Add(this.flowLayoutPanel1);
             this.panelMostrar.Controls.Add(this.comboBoxFound);
+            this.panelMostrar.Controls.Add(this.panelRate);
             this.panelMostrar.Controls.Add(this.panelMetadata);
+            this.panelMostrar.Controls.Add(this.panelButttons);
             this.panelMostrar.Location = new System.Drawing.Point(305, 3);
             this.panelMostrar.Name = "panelMostrar";
             this.panelMostrar.Size = new System.Drawing.Size(345, 346);
@@ -373,9 +373,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
-            this.Controls.Add(this.panelMostrar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelFinderUser);
+            this.Controls.Add(this.panelMostrar);
             this.Name = "Finderr";
             this.Size = new System.Drawing.Size(650, 352);
             this.panel1.ResumeLayout(false);

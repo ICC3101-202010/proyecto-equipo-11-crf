@@ -65,11 +65,12 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Playlist")
             {
-                panelFinderUser.Visible = false;
+                panelFinderUser.Visible = true;
+                label2.Visible = false;
                 List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
                 foreach (Playlist playlist in playlists)
                 {
-                    comboBoxFound.Items.Add(playlist.NombrePlaylist);
+                    comboBoxUsuarios.Items.Add(playlist.NombrePlaylist);
                 }
                 panelButttons.Visible = false;
             }
@@ -80,12 +81,15 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Band")
             {
-                panelFinderUser.Visible = false;
+                List<Cancion> sinRepetir = new List<Cancion>();
+                label2.Visible = false;
+                panelFinderUser.Visible = true;
                 panelButttons.Visible = true;
                 canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
-                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                    //if (cancion.Banda!=)
+                    comboBoxUsuarios.Items.Add(cancion.Banda);
 
                 }
             }
