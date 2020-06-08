@@ -134,7 +134,7 @@
             this.pIntroProfile.Controls.Add(this.bAtrasIntroProfile);
             this.pIntroProfile.Location = new System.Drawing.Point(0, 0);
             this.pIntroProfile.Name = "pIntroProfile";
-            this.pIntroProfile.Size = new System.Drawing.Size(631, 388);
+            this.pIntroProfile.Size = new System.Drawing.Size(631, 337);
             this.pIntroProfile.TabIndex = 5;
             // 
             // label1
@@ -210,7 +210,7 @@
             this.pEditarProfile.Controls.Add(this.comboBoxEditarProfile);
             this.pEditarProfile.Location = new System.Drawing.Point(3, 0);
             this.pEditarProfile.Name = "pEditarProfile";
-            this.pEditarProfile.Size = new System.Drawing.Size(628, 388);
+            this.pEditarProfile.Size = new System.Drawing.Size(628, 337);
             this.pEditarProfile.TabIndex = 3;
             this.pEditarProfile.Visible = false;
             // 
@@ -330,7 +330,7 @@
             this.panelOpcionesUsuario.Controls.Add(this.bAtrasOpciones);
             this.panelOpcionesUsuario.Location = new System.Drawing.Point(0, 0);
             this.panelOpcionesUsuario.Name = "panelOpcionesUsuario";
-            this.panelOpcionesUsuario.Size = new System.Drawing.Size(628, 385);
+            this.panelOpcionesUsuario.Size = new System.Drawing.Size(628, 337);
             this.panelOpcionesUsuario.TabIndex = 3;
             this.panelOpcionesUsuario.Visible = false;
             // 
@@ -527,7 +527,7 @@
             this.Controls.Add(this.tNombreProfile);
             this.Controls.Add(this.bAtrasProfile);
             this.Name = "Profile";
-            this.Size = new System.Drawing.Size(631, 388);
+            this.Size = new System.Drawing.Size(631, 341);
             this.pIntroProfile.ResumeLayout(false);
             this.pIntroProfile.PerformLayout();
             this.pEditarProfile.ResumeLayout(false);

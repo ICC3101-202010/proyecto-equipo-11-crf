@@ -29,6 +29,10 @@ namespace Spotflix
         /// </summary>
         private void InitializeComponent()
         {
+            this.library1 = new Spotflix.Library();
+            this.mixer1 = new Spotflix.Mixer();
+            this.playerBar1 = new Spotflix.PlayerBar();
+            this.menuBar1 = new SporflixWF.MenuBar();
             this.mainMenu1 = new Spotflix.MainMenu();
             this.preferences1 = new Spotflix.Preferences();
             this.logIn1 = new Spotflix.LogIn();
@@ -37,9 +41,38 @@ namespace Spotflix
             this.welcome1 = new Spotflix.Welcome();
             this.finderr1 = new Spotflix.Finderr();
             this.profile1 = new Spotflix.Profile();
-            this.menuBar1 = new SporflixWF.MenuBar();
-            this.playerBar1 = new Spotflix.PlayerBar();
             this.SuspendLayout();
+            // 
+            // library1
+            // 
+            this.library1.Location = new System.Drawing.Point(0, 0);
+            this.library1.Name = "library1";
+            this.library1.Size = new System.Drawing.Size(644, 347);
+            this.library1.TabIndex = 12;
+            // 
+            // mixer1
+            // 
+            this.mixer1.Location = new System.Drawing.Point(0, 0);
+            this.mixer1.Name = "mixer1";
+            this.mixer1.Size = new System.Drawing.Size(644, 347);
+            this.mixer1.TabIndex = 11;
+            // 
+            // playerBar1
+            // 
+            this.playerBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.playerBar1.Location = new System.Drawing.Point(0, 370);
+            this.playerBar1.Name = "playerBar1";
+            this.playerBar1.Size = new System.Drawing.Size(644, 35);
+            this.playerBar1.TabIndex = 9;
+            // 
+            // menuBar1
+            // 
+            this.menuBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuBar1.Location = new System.Drawing.Point(0, 405);
+            this.menuBar1.Name = "menuBar1";
+            this.menuBar1.Size = new System.Drawing.Size(644, 58);
+            this.menuBar1.TabIndex = 8;
+            this.menuBar1.Load += new System.EventHandler(this.menuBar1_Load);
             // 
             // mainMenu1
             // 
@@ -54,7 +87,7 @@ namespace Spotflix
             this.preferences1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.preferences1.Location = new System.Drawing.Point(0, 0);
             this.preferences1.Name = "preferences1";
-            this.preferences1.Size = new System.Drawing.Size(644, 372);
+            this.preferences1.Size = new System.Drawing.Size(644, 463);
             this.preferences1.TabIndex = 4;
             // 
             // logIn1
@@ -62,7 +95,7 @@ namespace Spotflix
             this.logIn1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logIn1.Location = new System.Drawing.Point(0, 0);
             this.logIn1.Name = "logIn1";
-            this.logIn1.Size = new System.Drawing.Size(644, 372);
+            this.logIn1.Size = new System.Drawing.Size(644, 463);
             this.logIn1.TabIndex = 3;
             // 
             // mailValidation1
@@ -71,7 +104,7 @@ namespace Spotflix
             this.mailValidation1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mailValidation1.Location = new System.Drawing.Point(0, 0);
             this.mailValidation1.Name = "mailValidation1";
-            this.mailValidation1.Size = new System.Drawing.Size(644, 372);
+            this.mailValidation1.Size = new System.Drawing.Size(644, 463);
             this.mailValidation1.TabIndex = 2;
             // 
             // register1
@@ -79,7 +112,7 @@ namespace Spotflix
             this.register1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.register1.Location = new System.Drawing.Point(0, 0);
             this.register1.Name = "register1";
-            this.register1.Size = new System.Drawing.Size(644, 372);
+            this.register1.Size = new System.Drawing.Size(644, 463);
             this.register1.TabIndex = 1;
             // 
             // welcome1
@@ -87,7 +120,7 @@ namespace Spotflix
             this.welcome1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.welcome1.Location = new System.Drawing.Point(0, 0);
             this.welcome1.Name = "welcome1";
-            this.welcome1.Size = new System.Drawing.Size(644, 372);
+            this.welcome1.Size = new System.Drawing.Size(644, 463);
             this.welcome1.TabIndex = 0;
             // 
             // finderr1
@@ -106,33 +139,13 @@ namespace Spotflix
             this.profile1.Size = new System.Drawing.Size(656, 484);
             this.profile1.TabIndex = 7;
             // 
-            // menuBar1
-            // 
-            this.menuBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuBar1.Location = new System.Drawing.Point(0, 314);
-            this.menuBar1.Name = "menuBar1";
-<<<<<<< HEAD
-            this.menuBar1.Size = new System.Drawing.Size(644, 52);
-            this.menuBar1.TabIndex = 10;
-            this.menuBar1.Load += new System.EventHandler(this.menuBar1_Load);
-=======
-            this.menuBar1.Size = new System.Drawing.Size(644, 58);
-            this.menuBar1.TabIndex = 8;
->>>>>>> d886379b7db866563e3b74cdbd6721dc6d392d9c
-            // 
-            // playerBar1
-            // 
-            this.playerBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.playerBar1.Location = new System.Drawing.Point(0, 279);
-            this.playerBar1.Name = "playerBar1";
-            this.playerBar1.Size = new System.Drawing.Size(644, 35);
-            this.playerBar1.TabIndex = 9;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 372);
+            this.ClientSize = new System.Drawing.Size(644, 463);
+            this.Controls.Add(this.library1);
+            this.Controls.Add(this.mixer1);
             this.Controls.Add(this.playerBar1);
             this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.mainMenu1);
@@ -159,9 +172,11 @@ namespace Spotflix
         private Preferences preferences1;
         private MainMenu mainMenu1;
         private Finderr finderr1;
-        private Profile profile1;
         private SporflixWF.MenuBar menuBar1;
         private PlayerBar playerBar1;
+        private Mixer mixer1;
+        private Library library1;
+        private Profile profile1;
     }
 }
 
