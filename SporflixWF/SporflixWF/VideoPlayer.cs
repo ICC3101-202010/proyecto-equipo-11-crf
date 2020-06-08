@@ -69,7 +69,7 @@ namespace SporflixWF
 
                     panelPlayVideo.Visible = true;
                     axWindowsMediaPlayer1.Show();
-                    axWindowsMediaPlayer1.uiMode = "none";
+                    //axWindowsMediaPlayer1.uiMode = "none";
                     axWindowsMediaPlayer1.URL = video.Path ;
                     axWindowsMediaPlayer1.Ctlcontrols.play();
                     
