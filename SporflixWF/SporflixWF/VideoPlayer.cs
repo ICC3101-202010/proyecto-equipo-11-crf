@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entrega2;
 using TagLib;
+using Spotflix;
 
 namespace SporflixWF
 {
@@ -18,7 +19,7 @@ namespace SporflixWF
         {
             InitializeComponent();
 
-            foreach (Video video in Global.allVideos)
+            foreach (Video video in Form1.Reproductor.Video_Library())
             {
                 Panel videoPanel = new Panel();
                 videoPanel.Size= new Size(640, 67);
@@ -43,13 +44,30 @@ namespace SporflixWF
                 name_label.Size = new Size(100, 17);
 
 
-                //videoPanel.Controls.Add(videoImage);
+                videoPanel.Controls.Add(videoImage);
                 videoPanel.Controls.Add(durartion_label);
 
                 videoPanel.Controls.Add(name_label);
 
                 name_label.Location = new Point(158, 25);
                 flowLayoutPanelVideo.Controls.Add(videoPanel);
+
+                videoPanel.MouseHover += delegate (object sender, EventArgs e)
+                {
+                    videoPanel.BackColor = Color.FromArgb(63, 33, 65);
+
+                };
+                videoPanel.MouseLeave += delegate (object sender, EventArgs e)
+                {
+                    videoPanel.BackColor = Color.FromArgb(41, 22, 39);
+
+                };
+                videoPanel.Click += delegate (object sender, EventArgs e)
+                {
+                    
+
+
+                };
 
             }
         }
