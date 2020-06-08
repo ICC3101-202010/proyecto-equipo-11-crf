@@ -60,7 +60,7 @@ namespace Spotflix
             // playerBar1
             // 
             this.playerBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.playerBar1.Location = new System.Drawing.Point(0, 370);
+            this.playerBar1.Location = new System.Drawing.Point(0, 343);
             this.playerBar1.Name = "playerBar1";
             this.playerBar1.Size = new System.Drawing.Size(644, 35);
             this.playerBar1.TabIndex = 9;
@@ -68,7 +68,7 @@ namespace Spotflix
             // menuBar1
             // 
             this.menuBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuBar1.Location = new System.Drawing.Point(0, 405);
+            this.menuBar1.Location = new System.Drawing.Point(0, 378);
             this.menuBar1.Name = "menuBar1";
             this.menuBar1.Size = new System.Drawing.Size(644, 58);
             this.menuBar1.TabIndex = 8;
@@ -87,7 +87,7 @@ namespace Spotflix
             this.preferences1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.preferences1.Location = new System.Drawing.Point(0, 0);
             this.preferences1.Name = "preferences1";
-            this.preferences1.Size = new System.Drawing.Size(644, 463);
+            this.preferences1.Size = new System.Drawing.Size(644, 436);
             this.preferences1.TabIndex = 4;
             // 
             // logIn1
@@ -95,7 +95,7 @@ namespace Spotflix
             this.logIn1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logIn1.Location = new System.Drawing.Point(0, 0);
             this.logIn1.Name = "logIn1";
-            this.logIn1.Size = new System.Drawing.Size(644, 463);
+            this.logIn1.Size = new System.Drawing.Size(644, 436);
             this.logIn1.TabIndex = 3;
             // 
             // mailValidation1
@@ -104,7 +104,7 @@ namespace Spotflix
             this.mailValidation1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mailValidation1.Location = new System.Drawing.Point(0, 0);
             this.mailValidation1.Name = "mailValidation1";
-            this.mailValidation1.Size = new System.Drawing.Size(644, 463);
+            this.mailValidation1.Size = new System.Drawing.Size(644, 436);
             this.mailValidation1.TabIndex = 2;
             // 
             // register1
@@ -112,7 +112,7 @@ namespace Spotflix
             this.register1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.register1.Location = new System.Drawing.Point(0, 0);
             this.register1.Name = "register1";
-            this.register1.Size = new System.Drawing.Size(644, 463);
+            this.register1.Size = new System.Drawing.Size(644, 436);
             this.register1.TabIndex = 1;
             // 
             // welcome1
@@ -120,7 +120,7 @@ namespace Spotflix
             this.welcome1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.welcome1.Location = new System.Drawing.Point(0, 0);
             this.welcome1.Name = "welcome1";
-            this.welcome1.Size = new System.Drawing.Size(644, 463);
+            this.welcome1.Size = new System.Drawing.Size(644, 436);
             this.welcome1.TabIndex = 0;
             // 
             // finderr1
@@ -128,7 +128,7 @@ namespace Spotflix
             this.finderr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.finderr1.Location = new System.Drawing.Point(0, 0);
             this.finderr1.Name = "finderr1";
-            this.finderr1.Size = new System.Drawing.Size(644, 372);
+            this.finderr1.Size = new System.Drawing.Size(644, 347);
             this.finderr1.TabIndex = 6;
             // 
             // profile1
@@ -143,7 +143,7 @@ namespace Spotflix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 463);
+            this.ClientSize = new System.Drawing.Size(644, 436);
             this.Controls.Add(this.library1);
             this.Controls.Add(this.mixer1);
             this.Controls.Add(this.playerBar1);

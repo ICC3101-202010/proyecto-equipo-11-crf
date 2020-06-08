@@ -36,6 +36,11 @@
             this.labelFinder = new System.Windows.Forms.Label();
             this.panelMostrar = new System.Windows.Forms.Panel();
             this.labelFavorite = new System.Windows.Forms.Label();
+            this.panelRate = new System.Windows.Forms.Panel();
+            this.labelRate = new System.Windows.Forms.Label();
+            this.buttonAccept = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxRate = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelDonload = new System.Windows.Forms.Label();
             this.comboBoxFound = new System.Windows.Forms.ComboBox();
@@ -44,22 +49,23 @@
             this.buttonRate = new System.Windows.Forms.Button();
             this.ButtonFavorite = new System.Windows.Forms.Button();
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.panelRate = new System.Windows.Forms.Panel();
-            this.labelRate = new System.Windows.Forms.Label();
-            this.buttonAccept = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxRate = new System.Windows.Forms.TextBox();
             this.panelMetadata = new System.Windows.Forms.Panel();
-            this.listBoxMetadata = new System.Windows.Forms.ListBox();
             this.labelMetadata = new System.Windows.Forms.Label();
+            this.listBoxMetadata = new System.Windows.Forms.ListBox();
+            this.panelFinderUser = new System.Windows.Forms.Panel();
+            this.comboBoxUsuarios = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonFollow = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelMostrar.SuspendLayout();
             this.panelRate.SuspendLayout();
             this.panelMetadata.SuspendLayout();
+            this.panelFinderUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelFinderUser);
             this.panel1.Controls.Add(this.buttonBack);
             this.panel1.Controls.Add(this.textBoxFind);
             this.panel1.Controls.Add(this.buttonSearch);
@@ -159,6 +165,56 @@
             this.labelFavorite.Text = "✅";
             this.labelFavorite.Visible = false;
             // 
+            // panelRate
+            // 
+            this.panelRate.Controls.Add(this.labelRate);
+            this.panelRate.Controls.Add(this.buttonAccept);
+            this.panelRate.Controls.Add(this.label1);
+            this.panelRate.Controls.Add(this.textBoxRate);
+            this.panelRate.Location = new System.Drawing.Point(9, 208);
+            this.panelRate.Name = "panelRate";
+            this.panelRate.Size = new System.Drawing.Size(311, 112);
+            this.panelRate.TabIndex = 7;
+            this.panelRate.Visible = false;
+            // 
+            // labelRate
+            // 
+            this.labelRate.AutoSize = true;
+            this.labelRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelRate.Location = new System.Drawing.Point(25, 73);
+            this.labelRate.Name = "labelRate";
+            this.labelRate.Size = new System.Drawing.Size(105, 13);
+            this.labelRate.TabIndex = 6;
+            this.labelRate.Text = "Insert a valid number";
+            this.labelRate.Visible = false;
+            // 
+            // buttonAccept
+            // 
+            this.buttonAccept.Location = new System.Drawing.Point(180, 30);
+            this.buttonAccept.Name = "buttonAccept";
+            this.buttonAccept.Size = new System.Drawing.Size(75, 23);
+            this.buttonAccept.TabIndex = 5;
+            this.buttonAccept.Text = "Accept";
+            this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(25, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Stars (0-5)";
+            // 
+            // textBoxRate
+            // 
+            this.textBoxRate.Location = new System.Drawing.Point(28, 33);
+            this.textBoxRate.Name = "textBoxRate";
+            this.textBoxRate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRate.TabIndex = 0;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 244);
@@ -234,56 +290,6 @@
             this.buttonPlay.Text = "Play";
             this.buttonPlay.UseVisualStyleBackColor = true;
             // 
-            // panelRate
-            // 
-            this.panelRate.Controls.Add(this.labelRate);
-            this.panelRate.Controls.Add(this.buttonAccept);
-            this.panelRate.Controls.Add(this.label1);
-            this.panelRate.Controls.Add(this.textBoxRate);
-            this.panelRate.Location = new System.Drawing.Point(9, 208);
-            this.panelRate.Name = "panelRate";
-            this.panelRate.Size = new System.Drawing.Size(311, 112);
-            this.panelRate.TabIndex = 7;
-            this.panelRate.Visible = false;
-            // 
-            // labelRate
-            // 
-            this.labelRate.AutoSize = true;
-            this.labelRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelRate.Location = new System.Drawing.Point(25, 73);
-            this.labelRate.Name = "labelRate";
-            this.labelRate.Size = new System.Drawing.Size(105, 13);
-            this.labelRate.TabIndex = 6;
-            this.labelRate.Text = "Insert a valid number";
-            this.labelRate.Visible = false;
-            // 
-            // buttonAccept
-            // 
-            this.buttonAccept.Location = new System.Drawing.Point(180, 30);
-            this.buttonAccept.Name = "buttonAccept";
-            this.buttonAccept.Size = new System.Drawing.Size(75, 23);
-            this.buttonAccept.TabIndex = 5;
-            this.buttonAccept.Text = "Accept";
-            this.buttonAccept.UseVisualStyleBackColor = true;
-            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(25, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Stars (0-5)";
-            // 
-            // textBoxRate
-            // 
-            this.textBoxRate.Location = new System.Drawing.Point(28, 33);
-            this.textBoxRate.Name = "textBoxRate";
-            this.textBoxRate.Size = new System.Drawing.Size(100, 20);
-            this.textBoxRate.TabIndex = 0;
-            // 
             // panelMetadata
             // 
             this.panelMetadata.Controls.Add(this.labelMetadata);
@@ -295,14 +301,6 @@
             this.panelMetadata.Visible = false;
             this.panelMetadata.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // listBoxMetadata
-            // 
-            this.listBoxMetadata.FormattingEnabled = true;
-            this.listBoxMetadata.Location = new System.Drawing.Point(20, 20);
-            this.listBoxMetadata.Name = "listBoxMetadata";
-            this.listBoxMetadata.Size = new System.Drawing.Size(279, 95);
-            this.listBoxMetadata.TabIndex = 1;
-            // 
             // labelMetadata
             // 
             this.labelMetadata.AutoSize = true;
@@ -313,6 +311,52 @@
             this.labelMetadata.TabIndex = 0;
             this.labelMetadata.Text = "Metadada";
             // 
+            // listBoxMetadata
+            // 
+            this.listBoxMetadata.FormattingEnabled = true;
+            this.listBoxMetadata.Location = new System.Drawing.Point(20, 20);
+            this.listBoxMetadata.Name = "listBoxMetadata";
+            this.listBoxMetadata.Size = new System.Drawing.Size(279, 95);
+            this.listBoxMetadata.TabIndex = 1;
+            // 
+            // panelFinderUser
+            // 
+            this.panelFinderUser.Controls.Add(this.buttonFollow);
+            this.panelFinderUser.Controls.Add(this.label2);
+            this.panelFinderUser.Controls.Add(this.comboBoxUsuarios);
+            this.panelFinderUser.Location = new System.Drawing.Point(3, 225);
+            this.panelFinderUser.Name = "panelFinderUser";
+            this.panelFinderUser.Size = new System.Drawing.Size(290, 154);
+            this.panelFinderUser.TabIndex = 11;
+            this.panelFinderUser.Visible = false;
+            // 
+            // comboBoxUsuarios
+            // 
+            this.comboBoxUsuarios.FormattingEnabled = true;
+            this.comboBoxUsuarios.Location = new System.Drawing.Point(7, 33);
+            this.comboBoxUsuarios.Name = "comboBoxUsuarios";
+            this.comboBoxUsuarios.Size = new System.Drawing.Size(270, 21);
+            this.comboBoxUsuarios.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(18, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(252, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "This are or Users, select the one you wish to Follow!";
+            // 
+            // buttonFollow
+            // 
+            this.buttonFollow.Location = new System.Drawing.Point(93, 73);
+            this.buttonFollow.Name = "buttonFollow";
+            this.buttonFollow.Size = new System.Drawing.Size(104, 23);
+            this.buttonFollow.TabIndex = 2;
+            this.buttonFollow.Text = "Follow";
+            this.buttonFollow.UseVisualStyleBackColor = true;
+            // 
             // Finderr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,7 +365,7 @@
             this.Controls.Add(this.panelMostrar);
             this.Controls.Add(this.panel1);
             this.Name = "Finderr";
-            this.Size = new System.Drawing.Size(650, 385);
+            this.Size = new System.Drawing.Size(650, 352);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelMostrar.ResumeLayout(false);
@@ -330,6 +374,8 @@
             this.panelRate.PerformLayout();
             this.panelMetadata.ResumeLayout(false);
             this.panelMetadata.PerformLayout();
+            this.panelFinderUser.ResumeLayout(false);
+            this.panelFinderUser.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -360,5 +406,9 @@
         private System.Windows.Forms.ListBox listBoxMetadata;
         private System.Windows.Forms.Label labelMetadata;
         private System.Windows.Forms.Label labelFavorite;
+        private System.Windows.Forms.Panel panelFinderUser;
+        private System.Windows.Forms.Button buttonFollow;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxUsuarios;
     }
 }
