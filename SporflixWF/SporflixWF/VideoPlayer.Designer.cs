@@ -46,19 +46,19 @@
             // panelPlayVideo
             // 
             this.panelPlayVideo.Controls.Add(this.axWindowsMediaPlayer1);
-            this.panelPlayVideo.Location = new System.Drawing.Point(3, 3);
+            this.panelPlayVideo.Location = new System.Drawing.Point(0, 0);
             this.panelPlayVideo.Name = "panelPlayVideo";
-            this.panelPlayVideo.Size = new System.Drawing.Size(640, 343);
+            this.panelPlayVideo.Size = new System.Drawing.Size(643, 384);
             this.panelPlayVideo.TabIndex = 0;
             this.panelPlayVideo.Visible = false;
             // 
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(3, 3);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(634, 340);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(643, 384);
             this.axWindowsMediaPlayer1.TabIndex = 3;
             this.axWindowsMediaPlayer1.Visible = false;
             // 
@@ -70,7 +70,7 @@
             this.Controls.Add(this.panelPlayVideo);
             this.Controls.Add(this.flowLayoutPanelVideo);
             this.Name = "VideoPlayer";
-            this.Size = new System.Drawing.Size(643, 360);
+            this.Size = new System.Drawing.Size(643, 384);
             this.panelPlayVideo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
