@@ -20,8 +20,9 @@ namespace SporflixWF
         public VideoPlayer()
         {
             InitializeComponent();
-
-            foreach (Video video in Form1.Reproductor.Video_Library())
+            List<Video> videos = new List<Video>();
+            //Form1.Reproductor.Video_Library()
+            foreach (Video video in videos)
             {
                 Panel videoPanel = new Panel();
                 videoPanel.Size= new Size(640, 67);

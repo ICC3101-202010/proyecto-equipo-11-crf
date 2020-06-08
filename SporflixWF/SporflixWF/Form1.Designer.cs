@@ -42,6 +42,7 @@ namespace Spotflix
             this.finderr1 = new Spotflix.Finderr();
             this.profile1 = new Spotflix.Profile();
             this.notPremium1 = new SporflixWF.NotPremium();
+            this.videoPlayer2 = new SporflixWF.VideoPlayer();
             this.SuspendLayout();
             // 
             // library1
@@ -146,21 +147,30 @@ namespace Spotflix
             // 
             // notPremium1
             // 
+            this.notPremium1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.notPremium1.Location = new System.Drawing.Point(0, 0);
             this.notPremium1.Name = "notPremium1";
             this.notPremium1.Size = new System.Drawing.Size(644, 347);
             this.notPremium1.TabIndex = 14;
+            // 
+            // videoPlayer2
+            // 
+            this.videoPlayer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.videoPlayer2.Location = new System.Drawing.Point(0, 0);
+            this.videoPlayer2.Name = "videoPlayer2";
+            this.videoPlayer2.Size = new System.Drawing.Size(643, 347);
+            this.videoPlayer2.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 436);
+            this.Controls.Add(this.videoPlayer2);
             this.Controls.Add(this.notPremium1);
             this.Controls.Add(this.profile1);
             this.Controls.Add(this.library1);
             this.Controls.Add(this.mixer1);
-            this.Controls.Add(this.videoPlayer1);
             this.Controls.Add(this.playerBar1);
             this.Controls.Add(this.menuBar1);
             this.Controls.Add(this.mainMenu1);
@@ -194,6 +204,7 @@ namespace Spotflix
         private Profile profile1;
         private SporflixWF.VideoPlayer videoPlayer1;
         private SporflixWF.NotPremium notPremium1;
+        private SporflixWF.VideoPlayer videoPlayer2;
     }
 }
 
