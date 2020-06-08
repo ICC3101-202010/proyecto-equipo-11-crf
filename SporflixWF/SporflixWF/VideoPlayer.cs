@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Entrega2;
 using TagLib;
 using Spotflix;
+using AxWMPLib;
+using WMPLib;
 
 namespace SporflixWF
 {
@@ -64,6 +66,10 @@ namespace SporflixWF
                 };
                 videoPanel.Click += delegate (object sender, EventArgs e)
                 {
+                    panelPlayVideo.Visible = true;
+                    axWindowsMediaPlayer1.Show();
+                    axWindowsMediaPlayer1.URL = video.Path ;
+                    axWindowsMediaPlayer1.Ctlcontrols.play() ;
                     
 
 

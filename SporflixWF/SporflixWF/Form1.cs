@@ -11,6 +11,7 @@ using System.Threading;
 using Entrega2;
 using WMPLib;
 using System.Runtime.CompilerServices;
+using AxWMPLib;
 
 namespace Spotflix
 {
@@ -34,7 +35,7 @@ namespace Spotflix
         private static UserControl videoPlayer;
         private static List<Cancion> library = new List<Cancion>();
         private static WindowsMediaPlayer player = new WindowsMediaPlayer();
-
+        private static AxWindowsMediaPlayer MediaPlayer = new AxWindowsMediaPlayer();
         private static Reproductor reproductor = new Reproductor();
         
         
@@ -63,6 +64,7 @@ namespace Spotflix
         public static UserControl Mixer { get => mixer; set => mixer = value; }
         public static UserControl Librarymenu { get => librarymenu; set => librarymenu = value; }
         public static UserControl VideoPlayer { get => videoPlayer; set => videoPlayer = value; }
+        public static AxWindowsMediaPlayer MediaPlayer1 { get => MediaPlayer; set => MediaPlayer = value; }
 
         public Form1()
         {
@@ -132,7 +134,7 @@ namespace Spotflix
             Global.allPlaylists.Add(allSongs);
             Global.allVideos = reproducto.Video_Library();
 
-
+            
         }
 
         private void mainMenu1_Load(object sender, EventArgs e)
