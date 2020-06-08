@@ -9,6 +9,7 @@ using System.Threading;
 
 namespace Entrega2
 {
+    [Serializable]
     public class Playlist
     {
         private string nombrePlaylist;
