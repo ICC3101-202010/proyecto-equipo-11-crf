@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Library));
             this.panelLibraruTitle = new System.Windows.Forms.Panel();
+            this.pbAddRigth = new System.Windows.Forms.PictureBox();
+            this.labelLibraryTitle = new System.Windows.Forms.Label();
             this.panelLibrary = new System.Windows.Forms.Panel();
             this.panelNewPlaylist = new System.Windows.Forms.Panel();
             this.panelTtileAdd = new System.Windows.Forms.Panel();
@@ -44,16 +46,14 @@
             this.labelEmptyLibrary = new System.Windows.Forms.Label();
             this.pbEmpty = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.labelLibraryTitle = new System.Windows.Forms.Label();
-            this.pbAddRigth = new System.Windows.Forms.PictureBox();
             this.panelLibraruTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRigth)).BeginInit();
             this.panelLibrary.SuspendLayout();
             this.panelNewPlaylist.SuspendLayout();
             this.panelTtileAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpty)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAddRigth)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLibraruTitle
@@ -67,10 +67,33 @@
             this.panelLibraruTitle.Size = new System.Drawing.Size(643, 42);
             this.panelLibraruTitle.TabIndex = 0;
             // 
+            // pbAddRigth
+            // 
+            this.pbAddRigth.Enabled = false;
+            this.pbAddRigth.Image = ((System.Drawing.Image)(resources.GetObject("pbAddRigth.Image")));
+            this.pbAddRigth.Location = new System.Drawing.Point(571, 4);
+            this.pbAddRigth.Name = "pbAddRigth";
+            this.pbAddRigth.Size = new System.Drawing.Size(69, 38);
+            this.pbAddRigth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbAddRigth.TabIndex = 4;
+            this.pbAddRigth.TabStop = false;
+            this.pbAddRigth.Visible = false;
+            this.pbAddRigth.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // labelLibraryTitle
+            // 
+            this.labelLibraryTitle.AutoSize = true;
+            this.labelLibraryTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLibraryTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelLibraryTitle.Location = new System.Drawing.Point(260, 9);
+            this.labelLibraryTitle.Name = "labelLibraryTitle";
+            this.labelLibraryTitle.Size = new System.Drawing.Size(125, 30);
+            this.labelLibraryTitle.TabIndex = 0;
+            this.labelLibraryTitle.Text = "L i b r a r y";
+            // 
             // panelLibrary
             // 
             this.panelLibrary.AutoScroll = true;
-            this.panelLibrary.AutoSize = true;
             this.panelLibrary.Controls.Add(this.panelNewPlaylist);
             this.panelLibrary.Controls.Add(this.labelAddPlaylist);
             this.panelLibrary.Controls.Add(this.pbAdd);
@@ -221,34 +244,11 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // labelLibraryTitle
-            // 
-            this.labelLibraryTitle.AutoSize = true;
-            this.labelLibraryTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLibraryTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelLibraryTitle.Location = new System.Drawing.Point(260, 9);
-            this.labelLibraryTitle.Name = "labelLibraryTitle";
-            this.labelLibraryTitle.Size = new System.Drawing.Size(125, 30);
-            this.labelLibraryTitle.TabIndex = 0;
-            this.labelLibraryTitle.Text = "L i b r a r y";
-            // 
-            // pbAddRigth
-            // 
-            this.pbAddRigth.Enabled = false;
-            this.pbAddRigth.Image = ((System.Drawing.Image)(resources.GetObject("pbAddRigth.Image")));
-            this.pbAddRigth.Location = new System.Drawing.Point(571, 4);
-            this.pbAddRigth.Name = "pbAddRigth";
-            this.pbAddRigth.Size = new System.Drawing.Size(69, 38);
-            this.pbAddRigth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAddRigth.TabIndex = 4;
-            this.pbAddRigth.TabStop = false;
-            this.pbAddRigth.Visible = false;
-            this.pbAddRigth.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Library
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.Controls.Add(this.panelLibrary);
@@ -258,6 +258,7 @@
             this.Enter += new System.EventHandler(this.Library_Enter);
             this.panelLibraruTitle.ResumeLayout(false);
             this.panelLibraruTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddRigth)).EndInit();
             this.panelLibrary.ResumeLayout(false);
             this.panelLibrary.PerformLayout();
             this.panelNewPlaylist.ResumeLayout(false);
@@ -267,9 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmpty)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAddRigth)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

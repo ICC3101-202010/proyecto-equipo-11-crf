@@ -120,16 +120,49 @@ namespace SporflixWF
 
         private void buttonMixer_Click(object sender, EventArgs e)
         {
-            Form1.Register.Hide();
-            Form1.Login.Hide();
-            Form1.MainMenu.Hide();
-            Form1.Preferences.Hide();
-            Form1.MailVerified.Hide();
-            Form1.Profile.Hide();
-            Form1.Finderr.Hide();
-            Form1.Librarymenu.Hide();
-            Form1.Mixer.Show();
-            Form1.Notpremium.Hide();
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<string> nombre = formatter.Deserialize(stream) as List<string>;
+            stream.Close();
+            IFormatter formatter3 = new BinaryFormatter();
+            Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            stream3.Close();
+            foreach (List<string> value in registrados.Values)
+            {
+                if (nombre[0] == value[0])
+                {
+                    if (value[7] == "true")
+                    {
+                        Form1.Register.Hide();
+                        Form1.Login.Hide();
+                        Form1.MainMenu.Hide();
+                        Form1.Preferences.Hide();
+                        Form1.MailVerified.Hide();
+                        Form1.Profile.Hide();
+                        Form1.Finderr.Hide();
+                        Form1.Librarymenu.Hide();
+                        Form1.Mixer.Show();
+                        Form1.Notpremium.Hide();
+                    }
+                    else
+                    {
+                        Form1.Register.Hide();
+                        Form1.Login.Hide();
+                        Form1.MainMenu.Hide();
+                        Form1.Preferences.Hide();
+                        Form1.MailVerified.Hide();
+                        Form1.Profile.Hide();
+                        Form1.Librarymenu.Enabled = true;
+                        Form1.Finderr.Hide();
+                        Form1.Librarymenu.Hide();
+                        Form1.Mixer.Hide();
+                        Form1.Notpremium.Show();
+                    }
+                }
+
+            }
+            
 
         }
     }

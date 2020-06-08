@@ -15,6 +15,7 @@ namespace Spotflix
     public partial class Library : UserControl
     {
         private Playlist actual;
+        int side = 2;
         public Library()
         {
             InitializeComponent();
@@ -70,18 +71,23 @@ namespace Spotflix
 
         private void buttonAddPlaylist_Click(object sender, EventArgs e)
         {
- 
-            
-                //Playlist new_playlist = new Playlist(labelNamePlaylist.Text, Global.UserNow);
-                
-                FlowLayoutPanel panel_playlist = new FlowLayoutPanel();
+
+
+            //Playlist new_playlist = new Playlist(labelNamePlaylist.Text, Global.UserNow);
+            if (Global.UserNow.My_Playlist.Any() == false)
+            {
+
+
+
+                Panel panel_playlist = new Panel();
                 PictureBox pb_playlist = new PictureBox();
                 Label label_playlist = new Label();
                 Label label_type = new Label();
 
                 panel_playlist.Size = new Size(194, 190);
                 pb_playlist.Size = new Size(183, 158);
-                label_type.Size = new Size(183, 158);
+                label_type.Size = new Size(36, 13);
+                label_type.Location = new Point(97, 187);
 
                 actual.NombrePlaylist = textBoxName.Text;
                 label_type.Text = "Song";
@@ -99,10 +105,59 @@ namespace Spotflix
                 panel_playlist.Controls.Add(pb_playlist);
                 pb_playlist.Dock = DockStyle.Top;
                 panel_playlist.Controls.Add(label_playlist);
-                label_playlist.Dock = DockStyle.Bottom; 
+                //label_playlist.Dock = DockStyle.Bottom;
 
+
+                panel_playlist.Dock = DockStyle.Top;
                 panelLibrary.Controls.Add(panel_playlist);
-                
+
+                pbEmpty.Visible = false;
+                pbAdd.Visible = false;
+                labelAddPlaylist.Visible = false;
+                labelEmptyLibrary.Visible = false;
+                panelNewPlaylist.Enabled = false;
+                panelNewPlaylist.Visible = false;
+
+                pbAddRigth.Enabled = true;
+                pbAddRigth.Visible = true;
+            }
+            else 
+            {
+
+
+
+
+                Panel panel_playlist = new Panel();
+                PictureBox pb_playlist = new PictureBox();
+                Label label_playlist = new Label();
+                Label label_type = new Label();
+
+                panel_playlist.Size = new Size(194, 190);
+                pb_playlist.Size = new Size(183, 158);
+                label_type.Size = new Size(36, 13);
+                label_type.Location = new Point(97, 187);
+
+                actual.NombrePlaylist = textBoxName.Text;
+                label_type.Text = "Song";
+                label_playlist.Text = actual.NombrePlaylist;
+                label_playlist.ForeColor = Color.White;
+                label_type.ForeColor = Color.Yellow;
+
+                pb_playlist.SizeMode = PictureBoxSizeMode.Zoom;
+
+                Global.UserNow.My_Playlist.Add(actual);
+
+                pb_playlist.Image = actual.Imagen_personalizada;
+
+                panel_playlist.BorderStyle = BorderStyle.FixedSingle;
+                panel_playlist.Controls.Add(pb_playlist);
+                pb_playlist.Dock = DockStyle.Top;
+                panel_playlist.Controls.Add(label_playlist);
+               // label_playlist.Dock = DockStyle.Bottom;
+
+                panel_playlist.Dock = DockStyle.Top;
+                panelLibrary.Controls.Add(panel_playlist);
+
                 pbEmpty.Visible = false;
                 pbAdd.Visible = false;
                 labelAddPlaylist.Visible = false;
@@ -113,6 +168,9 @@ namespace Spotflix
                 pbAddRigth.Enabled = true;
                 pbAddRigth.Visible = true;
 
+            }
+
+            
 
 
 
@@ -138,7 +196,8 @@ namespace Spotflix
             labelEmptyLibrary.Visible = false;
             pbAdd.Enabled = false;
             pbAdd.Visible = false;
-
+            Playlist playlist_end = new Playlist(null, Global.UserNow);
+            actual = playlist_end;
             panelNewPlaylist.Enabled = true;
             panelNewPlaylist.Visible = true;
         }
