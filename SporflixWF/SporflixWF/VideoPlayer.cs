@@ -49,6 +49,8 @@ namespace SporflixWF
                 videoPanel.Controls.Add(name_label);
 
                 name_label.Location = new Point(158, 25);
+                flowLayoutPanelVideo.Controls.Add(videoPanel);
+
             }
         }
     }

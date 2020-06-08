@@ -12,7 +12,7 @@ using System.Threading;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-
+using SporflixWF;
 
 namespace Spotflix
 {
@@ -320,6 +320,12 @@ namespace Spotflix
             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter1.Serialize(stream1, registrados);
             stream1.Close();
+        }
+
+        private void buttonPlay_Click(object sender, EventArgs e)
+        {
+            Form1.VideoPlayer.Show();
+            Form1.Finderr.Hide();
         }
     }
 }

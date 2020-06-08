@@ -41,6 +41,7 @@ namespace Spotflix
             this.welcome1 = new Spotflix.Welcome();
             this.finderr1 = new Spotflix.Finderr();
             this.profile1 = new Spotflix.Profile();
+            this.videoPlayer1 = new SporflixWF.VideoPlayer();
             this.SuspendLayout();
             // 
             // library1
@@ -139,36 +140,20 @@ namespace Spotflix
             this.profile1.Size = new System.Drawing.Size(656, 484);
             this.profile1.TabIndex = 7;
             // 
-
-            // menuBar1
+            // videoPlayer1
             // 
-            this.menuBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuBar1.Location = new System.Drawing.Point(0, 314);
-            this.menuBar1.Name = "menuBar1";
-
-            this.menuBar1.Size = new System.Drawing.Size(644, 52);
-            this.menuBar1.TabIndex = 10;
-            this.menuBar1.Load += new System.EventHandler(this.menuBar1_Load);
-
-            this.menuBar1.Size = new System.Drawing.Size(644, 58);
-            this.menuBar1.TabIndex = 8;
-
+            this.videoPlayer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.videoPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.videoPlayer1.Name = "videoPlayer1";
+            this.videoPlayer1.Size = new System.Drawing.Size(644, 347);
+            this.videoPlayer1.TabIndex = 13;
             // 
-            // playerBar1
-            // 
-            this.playerBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.playerBar1.Location = new System.Drawing.Point(0, 279);
-            this.playerBar1.Name = "playerBar1";
-            this.playerBar1.Size = new System.Drawing.Size(644, 35);
-            this.playerBar1.TabIndex = 9;
-            // 
-
-
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 436);
+            this.Controls.Add(this.videoPlayer1);
             this.Controls.Add(this.library1);
             this.Controls.Add(this.mixer1);
             this.Controls.Add(this.playerBar1);
@@ -202,6 +187,7 @@ namespace Spotflix
         private Mixer mixer1;
         private Library library1;
         private Profile profile1;
+        private SporflixWF.VideoPlayer videoPlayer1;
     }
 }
 
