@@ -81,16 +81,20 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Band")
             {
-                List<Cancion> sinRepetir = new List<Cancion>();
+                List<string> Repetidas = new List<string>();
                 label2.Visible = false;
                 panelFinderUser.Visible = true;
                 panelButttons.Visible = true;
                 canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
+                
                 foreach (Cancion cancion in canciones)
                 {
-                    //if (cancion.Banda!=)
-                    comboBoxUsuarios.Items.Add(cancion.Banda);
-
+                    Repetidas.Add(cancion.Banda);
+                }
+                List<string> noRepetidas = Repetidas.Distinct().ToList();
+                foreach(string can in noRepetidas)
+                {
+                    comboBoxUsuarios.Items.Add(can);
                 }
             }
            
