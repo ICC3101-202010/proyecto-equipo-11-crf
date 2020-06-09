@@ -1,34 +1,30 @@
 ﻿
-1)[ ] 
-La aplicación debe adaptarse3 a la resolución de la pantalla que está utilizando, pudiendo
-asumir que la resolución mínima será 1024 × 768 
-
-2)[✓] 50% (solo musica)
+1)[✓] 50% (solo musica)
 Cada canción debe tener información como el género, cantante, compositor,
 discografía, estudio, año de publicación, letra, etc. Por otra parte, los vídeos deben contener
 información como género, categoría, actores, director, estudio. año de publicación,
 descripción, calificación, etc.
 
 --------BUSQUEDA-----
-3 [ ]
+2 [ ]
 definir una o más palabras que son buscadas entre la información
 de las canciones (y videos).
 
-4 [ ]
+3 [ ]
 definir cuales personas deben estar (autores/actores) en la canción
 (o video).
 
-5 [ ]
+4 [ ]
 definir valores para las distintas características de
 personas que deben estar en la canción (o video) (sexo, edad, …).
 
-6 [ ]
+5 [ ]
 mayor, menor o igual a algún tamaño.
 
-7 [ ]
+6 [ ]
 mayor, menor o igual a alguna nota definida.
 
-8 [ ]
+7 [ ]
 para cada búsqueda se deben poder combinar los filtros
 utilizados. La combinación de los filtros puede ser tanto como un and, es decir, se buscan
 aquellas que cumplan con todos los filtros, o como un or, se buscan las canciones o videos
@@ -37,29 +33,21 @@ de and y or.
 
 
 -----PLAYLISTS-------
-9 [ ]
+8 [ ]
 crear playlists con canciones (o videos). Un playlist no puede tener canciones
 y videos, los archivos multimedia deben ser el mismo tipo. Estas pueden ser privadas o
 públicas. Si un usuario es privado, no puede tener playlist públicas.
 
-10 [ ]
+9 [ ]
 Se debe poder crear una cola de reproducción automática (lista que se reproduzca
 automáticamente) tanto para video como para canciones
 
-11 [✓]
-Se debe poder agregar canciones y videos a una lista de
-favoritos. Canciones y vídeos deben estar en listas diferentes.
 
-12 [✓]
-Buscar y seguir: Usuarios, playlist, discos, cantantes, actores, etc.
 
-13 [✓]
-Agregar imágenes, por ejemplo, una imagen para representar un disco o un película.
-
-14 [ ]
+10 [ ]
 Las canciones pueden o no ser descargadas, pero no las películas.
 
-15 [ ]
+11 [ ]
 Si el usuario cierra la aplicación y en dicho momento estaba reproduciendo algún archivo,
 entonces se debe guardar el tiempo de reproducción para que cuando vuelva a abrirla pueda
 continuar desde ahí.

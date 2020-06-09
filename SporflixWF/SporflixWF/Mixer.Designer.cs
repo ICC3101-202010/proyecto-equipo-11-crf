@@ -116,6 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.BackgroundImage = global::SporflixWF.Properties.Resources.dj;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.buttonEfect4);
             this.Controls.Add(this.buttonEfect3);
             this.Controls.Add(this.buttonEfect2);

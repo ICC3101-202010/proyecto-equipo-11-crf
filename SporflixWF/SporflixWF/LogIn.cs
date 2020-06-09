@@ -141,10 +141,23 @@ namespace Spotflix
                         }
 
                     }
-
+                    Form1.Welcome.BringToFront();
+                    Form1.Register.BringToFront();
+                    Form1.Login.BringToFront();
+                    Form1.Preferences.BringToFront();
+                    Form1.MailVerified.BringToFront();
+                    Form1.Mixer.BringToFront();
+                    Form1.Notpremium.BringToFront();
+                    Form1.Profile.BringToFront();
+                    Form1.VideoPlayer.BringToFront();
+                    Form1.Finderr.BringToFront();
+                    Form1.Librarymenu.BringToFront();
                     Form1.MainMenu.Show();
+                    Form1.MainMenu.BringToFront();
                     Form1.ProgresBar.Show();
                     Form1.Menubar.Show();
+                    Form1.ProgresBar.BringToFront();
+                    Form1.Menubar.BringToFront();
                     textBoxPasswordLogin.Text = "";
                     textBoxUsernameLogIn.Text = "";
                 }

@@ -21,12 +21,14 @@ namespace Spotflix
         {
             Form1.Welcome.Hide();
             Form1.Register.Show();
+            Form1.Register.BringToFront();
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             Form1.Welcome.Hide();
             Form1.Login.Show();
+            Form1.Login.BringToFront();
 
         }
     }

@@ -48,7 +48,7 @@
             this.PanelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelMainMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelMainMenu.Name = "PanelMainMenu";
-            this.PanelMainMenu.Size = new System.Drawing.Size(643, 356);
+            this.PanelMainMenu.Size = new System.Drawing.Size(643, 449);
             this.PanelMainMenu.TabIndex = 2;
             // 
             // buttonLogin
@@ -108,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PanelMainMenu);
             this.Name = "Welcome";
-            this.Size = new System.Drawing.Size(643, 356);
+            this.Size = new System.Drawing.Size(643, 449);
             this.PanelMainMenu.ResumeLayout(false);
             this.PanelMainMenu.PerformLayout();
             this.ResumeLayout(false);
