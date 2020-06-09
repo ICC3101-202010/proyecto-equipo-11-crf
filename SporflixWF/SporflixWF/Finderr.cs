@@ -65,6 +65,8 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Playlist")
             {
+                comboBoxUsuarios.Items.Clear();
+                List<string> Repetidas = new List<string>();
                 panelFinderUser.Visible = true;
                 label2.Visible = false;
                 List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
@@ -84,7 +86,8 @@ namespace Spotflix
                 List<string> Repetidas = new List<string>();
                 label2.Visible = false;
                 panelFinderUser.Visible = true;
-                panelButttons.Visible = true;
+                panelButttons.Visible = false;
+                comboBoxUsuarios.Items.Clear();
                 canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
                 
                 foreach (Cancion cancion in canciones)
@@ -100,13 +103,20 @@ namespace Spotflix
            
             else if (comboBoxFind.Text == "Album")
             {
-                panelFinderUser.Visible = false;
-                panelButttons.Visible = true;
+                List<string> Repetidas = new List<string>();
+                label2.Visible = false;
+                panelFinderUser.Visible = true;
+                panelButttons.Visible = false;
                 canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
-                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                    Repetidas.Add(cancion.Album);
                     
+                }
+                List<string> noRepetidas = Repetidas.Distinct().ToList();
+                foreach (string can in noRepetidas)
+                {
+                    comboBoxUsuarios.Items.Add(can);
                 }
             }
             else if (comboBoxFind.Text == "Top Streamed")
@@ -341,9 +351,20 @@ namespace Spotflix
                 formatter1.Serialize(stream1, registrados);
                 stream1.Close();
             }
-            else if (comboBoxFind.Text == "Playlist")
+            else if (comboBoxFind.Text == "Band")
             {
                 Global.UserNow.seguidosBanda.Add(comboBoxUsuarios.Text);
+                MessageBox.Show("You are now Following a new Band!");
+            }
+            else if (comboBoxFind.Text == "Playlist")
+            {
+                Global.UserNow.seguidosPlaylist.Add(comboBoxUsuarios.Text);
+                MessageBox.Show("You are now Following a new Playlist!");
+            }
+            else if (comboBoxFind.Text == "Album")
+            {
+                Global.UserNow.seguidosAlbum.Add(comboBoxUsuarios.Text);
+                MessageBox.Show("You are now Following a new Album!");
             }
         }
 
