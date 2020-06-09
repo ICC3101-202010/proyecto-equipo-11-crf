@@ -52,7 +52,7 @@ namespace Entrega2
         public List<Video> buscarVideo(string videoName, List<Video> todos)
         {
             List<Video> final_search = new List<Video>();
-            foreach (var vid in todos)
+            foreach (Video vid in todos)
             {
                 if (vid.NameVideo.Contains(videoName) == true)
                 {

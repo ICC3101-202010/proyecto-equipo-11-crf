@@ -56,7 +56,7 @@ namespace Spotflix
             else if (comboBoxFind.Text == "Video")
             {
                 panelFinderUser.Visible = false;
-                List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Global.allVideos);
+                List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Form1.Reproductor.Video_Library());
                 foreach (Video video in videos)
                 {
                     comboBoxFound.Items.Add(video.NameVideo);
@@ -379,6 +379,14 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Album")
             {
+                try
+                {
+                    Global.UserNow.seguidosAlbum.Add(comboBoxUsuarios.Text);
+                }
+                catch(Exception ex)
+                {
+
+                }
                 Global.UserNow.seguidosAlbum.Add(comboBoxUsuarios.Text);
                 MessageBox.Show("You are now Following a new Album!");
             }
