@@ -47,6 +47,8 @@
             this.labelEmptyLibrary = new System.Windows.Forms.Label();
             this.pbEmpty = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.labelPrivate = new System.Windows.Forms.Label();
+            this.radioButtonPrivate = new System.Windows.Forms.RadioButton();
             this.panelLibraruTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRigth)).BeginInit();
             this.panelLibrary.SuspendLayout();
@@ -112,10 +114,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(643, 318);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(347, 318);
             this.flowLayoutPanel1.TabIndex = 6;
             this.flowLayoutPanel1.Visible = false;
             // 
@@ -123,6 +124,8 @@
             // 
             this.panelNewPlaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(44)))), ((int)(((byte)(56)))));
             this.panelNewPlaylist.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelNewPlaylist.Controls.Add(this.radioButtonPrivate);
+            this.panelNewPlaylist.Controls.Add(this.labelPrivate);
             this.panelNewPlaylist.Controls.Add(this.panelTtileAdd);
             this.panelNewPlaylist.Controls.Add(this.pictureBox2);
             this.panelNewPlaylist.Controls.Add(this.buttonAddPlaylist);
@@ -132,7 +135,7 @@
             this.panelNewPlaylist.Enabled = false;
             this.panelNewPlaylist.Location = new System.Drawing.Point(379, 76);
             this.panelNewPlaylist.Name = "panelNewPlaylist";
-            this.panelNewPlaylist.Size = new System.Drawing.Size(169, 154);
+            this.panelNewPlaylist.Size = new System.Drawing.Size(169, 180);
             this.panelNewPlaylist.TabIndex = 5;
             this.panelNewPlaylist.Visible = false;
             // 
@@ -160,7 +163,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(70, 69);
+            this.pictureBox2.Location = new System.Drawing.Point(77, 69);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -173,7 +176,7 @@
             this.buttonAddPlaylist.BackColor = System.Drawing.Color.Gray;
             this.buttonAddPlaylist.FlatAppearance.BorderSize = 0;
             this.buttonAddPlaylist.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAddPlaylist.Location = new System.Drawing.Point(44, 110);
+            this.buttonAddPlaylist.Location = new System.Drawing.Point(44, 139);
             this.buttonAddPlaylist.Name = "buttonAddPlaylist";
             this.buttonAddPlaylist.Size = new System.Drawing.Size(76, 26);
             this.buttonAddPlaylist.TabIndex = 4;
@@ -195,7 +198,7 @@
             // 
             this.labelImageAdd.AutoSize = true;
             this.labelImageAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelImageAdd.Location = new System.Drawing.Point(16, 73);
+            this.labelImageAdd.Location = new System.Drawing.Point(17, 78);
             this.labelImageAdd.Name = "labelImageAdd";
             this.labelImageAdd.Size = new System.Drawing.Size(36, 13);
             this.labelImageAdd.TabIndex = 2;
@@ -257,6 +260,26 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // labelPrivate
+            // 
+            this.labelPrivate.AutoSize = true;
+            this.labelPrivate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPrivate.Location = new System.Drawing.Point(13, 110);
+            this.labelPrivate.Name = "labelPrivate";
+            this.labelPrivate.Size = new System.Drawing.Size(40, 13);
+            this.labelPrivate.TabIndex = 7;
+            this.labelPrivate.Text = "Private";
+            // 
+            // radioButtonPrivate
+            // 
+            this.radioButtonPrivate.AutoSize = true;
+            this.radioButtonPrivate.Location = new System.Drawing.Point(96, 110);
+            this.radioButtonPrivate.Name = "radioButtonPrivate";
+            this.radioButtonPrivate.Size = new System.Drawing.Size(14, 13);
+            this.radioButtonPrivate.TabIndex = 8;
+            this.radioButtonPrivate.TabStop = true;
+            this.radioButtonPrivate.UseVisualStyleBackColor = true;
+            // 
             // Library
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,5 +328,7 @@
         private System.Windows.Forms.Label labelLibraryTitle;
         private System.Windows.Forms.PictureBox pbAddRigth;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.RadioButton radioButtonPrivate;
+        private System.Windows.Forms.Label labelPrivate;
     }
 }

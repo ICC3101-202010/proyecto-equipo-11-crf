@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entrega2;
 using System.IO;
+using System.Diagnostics.Contracts;
 
 namespace Spotflix
 {
@@ -50,6 +51,20 @@ namespace Spotflix
             actual = nueva;
             panelNewPlaylist.Enabled = true;
             panelNewPlaylist.Visible = true;
+            if (Global.UserNow.privacidad == "Publica")
+            {
+                labelPrivate.Enabled = true;
+                labelPrivate.Visible = true;
+                radioButtonPrivate.Enabled = true;
+                radioButtonPrivate.Visible = true;
+            }
+            else if (Global.UserNow.privacidad == "Publica")
+            {
+                labelPrivate.Enabled = false;
+                labelPrivate.Visible = false;
+                radioButtonPrivate.Enabled = false;
+                radioButtonPrivate.Visible = false;
+            }
             //label1.Text = Global.UserNow.Username;
             if (Global.UserNow.My_Playlist.Any() == true)
             {
@@ -59,6 +74,7 @@ namespace Spotflix
                 labelEmptyLibrary.Visible = false;
                 pbAdd.Enabled = false;
                 pbAdd.Visible = false;
+
 
             }
 
@@ -151,7 +167,17 @@ namespace Spotflix
                 label_type.ForeColor = Color.Yellow;
 
                 pb_playlist.SizeMode = PictureBoxSizeMode.Zoom;
-
+                if (Global.UserNow.privacidad == "Publica") 
+                {
+                    if (radioButtonPrivate.Checked == true)
+                    {
+                        actual.Privacidad = true;
+                    }
+                    else 
+                    {
+                        actual.Privacidad = false;
+                    }
+                }
                 Global.UserNow.My_Playlist.Add(actual);
 
                 pb_playlist.Image = actual.Imagen_personalizada;
@@ -160,9 +186,9 @@ namespace Spotflix
                 panel_playlist.Controls.Add(pb_playlist);
                 pb_playlist.Dock = DockStyle.Right;
                 panel_playlist.Controls.Add(label_playlist);
-                //label_playlist.Dock = DockStyle.Left;
+                
                 label_playlist.Font = new Font("Arial", 20);
-                //label_playlist.Dock = DockStyle.Bottom;
+              
 
                 panel_playlist.Dock = DockStyle.Top;
                 panelLibrary.Controls.Add(panel_playlist);
@@ -206,6 +232,20 @@ namespace Spotflix
             pbAdd.Enabled = false;
             pbAdd.Visible = false;
             Playlist playlist_end = new Playlist(null, Global.UserNow);
+            if (Global.UserNow.privacidad == "Publica") 
+            {
+                labelPrivate.Enabled = true;
+                labelPrivate.Visible = true;
+                radioButtonPrivate.Enabled = true;
+                radioButtonPrivate.Visible = true;
+            }
+            else if (Global.UserNow.privacidad == "Publica")
+            {
+                labelPrivate.Enabled = false;
+                labelPrivate.Visible = false;
+                radioButtonPrivate.Enabled = false;
+                radioButtonPrivate.Visible = false;
+            }
             actual = playlist_end;
             panelNewPlaylist.Enabled = true;
             panelNewPlaylist.Visible = true;
