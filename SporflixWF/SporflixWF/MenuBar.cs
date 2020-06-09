@@ -12,6 +12,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
+using Entrega2;
 
 namespace SporflixWF
 {
@@ -82,13 +83,13 @@ namespace SporflixWF
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
-            foreach (List<string> value in registrados.Values)
+            foreach (Usuario value in registrados)
             {
-                if (nombre[0] == value[0])
+                if (nombre[0] == value.Username)
                 {
-                    if (value[7] == "true")
+                    if (value.Member == "true")
                     {
                         Form1.Register.Hide();
                         Form1.Login.Hide();
@@ -131,13 +132,13 @@ namespace SporflixWF
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
-            foreach (List<string> value in registrados.Values)
+            foreach (Usuario value in registrados)
             {
-                if (nombre[0] == value[0])
+                if (nombre[0] == value.Username)
                 {
-                    if (value[7] == "true")
+                    if (value.Member == "true")
                     {
                         Form1.Register.Hide();
                         Form1.Login.Hide();

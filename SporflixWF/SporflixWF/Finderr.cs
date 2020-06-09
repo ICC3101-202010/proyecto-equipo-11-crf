@@ -137,14 +137,14 @@ namespace Spotflix
                 panelFinderUser.Visible = true;
                 IFormatter formatter3 = new BinaryFormatter();
                 Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-                Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+                List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
                 stream3.Close();
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (value[0].Contains(busqueda) == true)
+                    if (value.Username.Contains(busqueda) == true)
                     {
                         
-                        comboBoxUsuarios.Items.Add(value[0]);
+                        comboBoxUsuarios.Items.Add(value.Username);
                         
                     }
                 }
@@ -302,33 +302,36 @@ namespace Spotflix
         {
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
             IFormatter formatter2 = new BinaryFormatter();
             Stream stream2 = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             List<string> nombre = formatter2.Deserialize(stream2) as List<string>;
             stream2.Close();
             string elegido = comboBoxUsuarios.Text;
-            foreach (List<string> data in registrados.Values)
+            foreach (Usuario data in registrados)
             {
-                if (elegido == data[0])
+                if (elegido == data.Username)
                 {
-                    int a= Convert.ToInt32(data[8]);
+                    Global.UserNow.SeguidosUsuarios.Add(data);
+                    int a= Convert.ToInt32(data.following);
                     a += 1;
                     string b = Convert.ToString(a);
-                    data[8] = b;
-                    foreach (List<string> value in registrados.Values)
+                    data.following = b;
+                    foreach (Usuario value in registrados)
                     {
-                        if (nombre[0] == value[0])
+                        if (nombre[0] == value.Username)
                         {
-                            a = Convert.ToInt32(value[10]);
+                            Global.UserNow.MeSiguenUsuarios1.Add(value);
+                            a = Convert.ToInt32(value.followers);
                             a += 1;
                             
                             b = Convert.ToString(a);
-                            value[10] = b;
+                            value.followers = b;
                             
                         }
                     }
+                    
                     MessageBox.Show("You are now Following a new User!");
                 }
             }

@@ -36,17 +36,17 @@ namespace Spotflix
             stream1.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
-            foreach (List<string> user in registrados.Values)
+            foreach (Usuario user in registrados)
             {
 
 
-                if (user[0] == usuario1.Username)
+                if (user.Username == usuario1.Username)
                 {
-                    user[11] = textBox1Preference.Text;
-                    user[12] = textBox2reference.Text;
-                    user[13] = textBox3Preference.Text;
+                    user.artista1 = textBox1Preference.Text;
+                    user.artista2 = textBox2reference.Text;
+                    user.artista3 = textBox3Preference.Text;
                     IFormatter formatter = new BinaryFormatter();
                     Stream stream = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                     formatter.Serialize(stream, registrados);

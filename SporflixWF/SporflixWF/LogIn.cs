@@ -83,16 +83,16 @@ namespace Spotflix
 
                 IFormatter formatter = new BinaryFormatter();
                 Stream stream = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-                Dictionary<int, List<string>> registrados = formatter.Deserialize(stream) as Dictionary<int, List<string>>;
+                List<Usuario> registrados = formatter.Deserialize(stream) as List<Usuario>;
                 stream.Close();
                 
                 string descripcion = null;
                 string result = "";
-                foreach (List<string> user in registrados.Values)
+                foreach (Usuario user in registrados)
                 {
 
                     
-                    if (user[0] == usuario && user[2] == contrasena)
+                    if (user.Username == usuario && user.Contraseña == contrasena)
                     {
                         result=  descripcion;
                         break;
@@ -117,13 +117,13 @@ namespace Spotflix
                     Stream stream1 = new FileStream("nombre.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                     formatter1.Serialize(stream1, nombre);
                     stream1.Close();
-                    foreach (List<string> user in registrados.Values)
+                    foreach (Usuario user in registrados)
                     {
 
 
-                        if (user[0] == nombre[0])
+                        if (user.Username == nombre[0])
                         {
-                            Usuario usuario1 = new Usuario();
+                            /*Usuario usuario1 = new Usuario();
                             usuario1.Username = user[0];
                             usuario1.Mail = user[1];
                             usuario1.Contraseña = user[2];
@@ -135,8 +135,8 @@ namespace Spotflix
                             usuario1.following = user[10];
                             usuario1.artista1 = user[11];
                             usuario1.artista2 = user[12];
-                            usuario1.artista3 = user[13];
-                            Global.UserNow = usuario1;
+                            usuario1.artista3 = user[13];*/
+                            Global.UserNow = user;
                             break;
                         }
 

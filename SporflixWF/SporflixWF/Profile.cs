@@ -48,16 +48,16 @@ namespace Spotflix
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
 
-            foreach (List<string> value in registrados.Values)
+            foreach (Usuario value in registrados)
             {
-                if (nombre[0] == value[0])
+                if (nombre[0] == value.Username)
                 {
-                    labelFollowing.Text = "Following:    " + value[10];
+                    labelFollowing.Text = "Following:    " + value.following;
                     labelPlaylist.Text = "Playlists:    "+ Global.UserNow.My_Playlist.Count();
-                    labelFollowers.Text = "Followers:    " + value[8];
+                    labelFollowers.Text = "Followers:    " + value.followers;
                 }
             }
         }
@@ -88,16 +88,16 @@ namespace Spotflix
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
 
-            foreach (List<string> value in registrados.Values)
+            foreach (Usuario value in registrados)
             {
-                if (nombre[0] == value[0])
+                if (nombre[0] == value.Username)
                 {
-                    labelFollowing.Text = "Following:    " + value[10];
+                    labelFollowing.Text = "Following:    " + value.following;
                     labelPlaylist.Text = "Playlists:    "+ Global.UserNow.My_Playlist.Count();
-                    labelFollowers.Text = "Followers:    " + value[8];
+                    labelFollowers.Text = "Followers:    " + value.followers;
                 }
             }
 
@@ -112,16 +112,16 @@ namespace Spotflix
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
 
-            foreach (List<string> value in registrados.Values)
+            foreach (Usuario value in registrados)
             {
-                if (nombre[0] == value[0])
+                if (nombre[0] == value.Username)
                 {
-                    labelFollowing.Text = "Following:    " + value[10];
+                    labelFollowing.Text = "Following:    " + value.following;
                     labelPlaylist.Text = "Playlists:    "+ Global.UserNow.My_Playlist.Count();
-                    labelFollowers.Text = "Followers:    " + value[8];
+                    labelFollowers.Text = "Followers:    " + value.followers;
                 }
             }
         }
@@ -135,16 +135,16 @@ namespace Spotflix
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
 
-            foreach (List<string> value in registrados.Values)
+            foreach (Usuario value in registrados)
             {
-                if (nombre[0] == value[0])
+                if (nombre[0] == value.Username)
                 {
-                    labelFollowing.Text = "Following:    " + value[10];
+                    labelFollowing.Text = "Following:    " + value.following;
                     labelPlaylist.Text = "Playlists:    "+ Global.UserNow.My_Playlist.Count();
-                    labelFollowers.Text = "Followers:    " + value[8];
+                    labelFollowers.Text = "Followers:    " + value.followers;
                 }
             }
         }
@@ -163,16 +163,16 @@ namespace Spotflix
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
 
-            foreach (List<string> value in registrados.Values)
+            foreach (Usuario value in registrados)
             {
-                if (nombre[0] == value[0])
+                if (nombre[0] == value.Username)
                 {
-                    labelFollowing.Text = "Following:    "+ value[10];
+                    labelFollowing.Text = "Following:    " + value.following;
                     labelPlaylist.Text =  "Playlists:    "+ Global.UserNow.My_Playlist.Count();
-                    labelFollowers.Text = "Followers:    "+ value[8];
+                    labelFollowers.Text = "Followers:    " + value.followers;
                 }
             }
             tNombreProfile.Text = nombre[0];
@@ -221,7 +221,7 @@ namespace Spotflix
                 stream.Close();
                 IFormatter formatter3 = new BinaryFormatter();
                 Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-                Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+                List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
                 stream3.Close();
                 checkBoxPrivada.Checked = false;
                 checkBoxPublica.Checked = false;
@@ -229,12 +229,12 @@ namespace Spotflix
                 textBoxIngresarNuevo.Visible = false;
                 checkBoxPrivada.Visible = true;
                 checkBoxPublica.Visible = true;
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
                         LabelIngresarNuevo.Visible = true;
-                        LabelIngresarNuevo.Text = "Your Account is:   " + value[3] + "\n"+ "\n" + "Select the new Privacy";
+                        LabelIngresarNuevo.Text = "Your Account is:   " + value.privacidad + "\n"+ "\n" + "Select the new Privacy";
                     }
                 }        
             }
@@ -248,19 +248,19 @@ namespace Spotflix
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
             if (comboBoxEditarProfile.Text == "Change Username")
             {
                 string nuevo_nombre = textBoxIngresarNuevo.Text;
                 int a = 1;
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
-                        foreach (List<string> valor in registrados.Values)
+                        foreach (Usuario valor in registrados)
                         {
-                            if (nuevo_nombre == valor[0])
+                            if (nuevo_nombre == valor.Username)
                             {
                                 a = 2;
                                 MessageBox.Show("The Username already exists!");
@@ -274,8 +274,8 @@ namespace Spotflix
                         }
                         if (a == 3)
                         {
-                            value[0] = nuevo_nombre;
-                            OnUsernameChanged(value[1], value[5]);
+                            value.Username = nuevo_nombre;
+                            OnUsernameChanged(value.Mail, value.Telefono);
                             IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, registrados);
@@ -292,12 +292,12 @@ namespace Spotflix
             if (comboBoxEditarProfile.Text == "Change Password")
             {
                 string nueva_contrasena = textBoxIngresarNuevo.Text;
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
-                        value[2] = nueva_contrasena;
-                        OnPasswordChanged(value[0], value[1], value[5]);
+                        value.Contraseña = nueva_contrasena;
+                        OnPasswordChanged(value.Username, value.Mail, value.Telefono);
                         IFormatter formatter1 = new BinaryFormatter();
                         Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                         formatter1.Serialize(stream1, registrados);
@@ -311,15 +311,15 @@ namespace Spotflix
             }
             if (comboBoxEditarProfile.Text == "Change Privacy")
             {
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
                         
 
                         if (checkBoxPrivada.Checked == true)
                         {
-                            value[3] = "Privada";
+                            value.privacidad = "Privada";
                             IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, registrados);
@@ -331,7 +331,7 @@ namespace Spotflix
                         }
                         if (checkBoxPublica.Checked == true)
                         {
-                            value[3] = "Publica";
+                            value.privacidad = "Publica";
                             IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, registrados);
@@ -360,7 +360,7 @@ namespace Spotflix
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
             if (comboBoxOpcionesUsuario.Text == "Log Out")
             {
@@ -385,16 +385,16 @@ namespace Spotflix
                 checkBoxNo.Checked = false;
                 checkBoxSi.Checked = false;
                 labelPremium.Visible = true;
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
-                        if (value[7] == "false")
+                        if (value.Member == "false")
                         {
                             labelPremium.Text = "You´re not a Premium User Yet! Purchase Spotflix Premium to Enjoy the best Music & Videos!";
                             
                         }
-                        if (value[7] == "true")
+                        if (value.Member == "true")
                         {
                             labelPremium.Text = "You´re a Premium User!";
                         }
@@ -408,18 +408,18 @@ namespace Spotflix
             }
             if (comboBoxOpcionesUsuario.Text == "Add Song")
             {
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
-                        if (value[9] == "False")
+                        if (value.Administrador == "False")
                         {
                             labelPremium.Text = "You´re not an Admin Yet! Update to Admin to be able to Add Songs!";
                             labelPremium.Visible = true;
                             labelInsertTitle.Visible = false;
                             panelCambiarOpcionesUsuario.Visible = true;
                         }
-                        if (value[9] == "True")
+                        if (value.Administrador == "True")
                         {
                             labelPremium.Text = "You´re an Admin!";
                             labelPremium.Visible = true;
@@ -437,18 +437,18 @@ namespace Spotflix
             }
             if (comboBoxOpcionesUsuario.Text == "Add Video")
             {
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
-                        if (value[9] == "False")
+                        if (value.Administrador == "False")
                         {
                             labelPremium.Text = "You´re not an Admin Yet! Update to Admin to be able to Add Videos!";
                             labelPremium.Visible = true;
                             labelInsertTitle.Visible = false;
                             panelCambiarOpcionesUsuario.Visible = true;
                         }
-                        if (value[9] == "True")
+                        if (value.Administrador == "True")
                         {
                             labelPremium.Text = "You´re an Admin!";
                             labelPremium.Visible = true;
@@ -473,16 +473,16 @@ namespace Spotflix
                 labelPremium.Visible = true;
                 checkBoxNo.Checked = false;
                 checkBoxSi.Checked = false;
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
-                        if (value[9] == "False")
+                        if (value.Administrador == "False")
                         {
                             labelPremium.Text = "You´re not an Admin Yet! Update to Admin to be able to Add Songs and Videos!";
 
                         }
-                        if (value[9] == "True")
+                        if (value.Administrador == "True")
                         {
                             labelPremium.Text = "You´re an Admin!";
                         }
@@ -515,17 +515,17 @@ namespace Spotflix
             stream.Close();
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
             if (comboBoxOpcionesUsuario.Text == "Change Membership")
             {
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
                         if (checkBoxSi.Checked == true)
                         {
-                            value[7] = "true";
+                            value.Member = "true";
                             MessageBox.Show("Congrats! You´ve Upgraded to Spotflix Premium!");
                             IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
@@ -539,7 +539,7 @@ namespace Spotflix
                         }
                         if (checkBoxNo.Checked == true)
                         {
-                            value[7] = "false";
+                            value.Member = "false";
                             MessageBox.Show("We´re sad to see you go... Upgrade to Premium to Enjoy the best App!");
                             IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
@@ -604,13 +604,13 @@ namespace Spotflix
             }
             if (comboBoxOpcionesUsuario.Text == "Change Admin Attribute")
             {
-                foreach (List<string> value in registrados.Values)
+                foreach (Usuario value in registrados)
                 {
-                    if (nombre[0] == value[0])
+                    if (nombre[0] == value.Username)
                     {
                         if (checkBoxSi.Checked == true)
                         {
-                            value[9] = "True";
+                            value.Administrador = "True";
                             MessageBox.Show("Congrats! You´ve Upgraded to Admin! You can Now Add Songs and Videos to the App!");
                             IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
@@ -624,7 +624,7 @@ namespace Spotflix
                         }
                         if (checkBoxNo.Checked == true)
                         {
-                            value[9] = "False";
+                            value.Administrador = "False";
                             MessageBox.Show("You´re Not an Admin Anymore!");
                             IFormatter formatter1 = new BinaryFormatter();
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);

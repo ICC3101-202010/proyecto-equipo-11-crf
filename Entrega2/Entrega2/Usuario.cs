@@ -38,7 +38,8 @@ namespace Entrega2
 
 
         private List<Playlist> my_Playlist = new List<Playlist>();
-        private List<string> seguidosUsuarios;
+        private List<Usuario> seguidosUsuarios;
+        private List<Usuario> MeSiguenUsuarios;
         private List<Playlist> seguidosPlaylist;
         private List<Album> seguidosAlbum;
         private List<Banda> seguidosBanda;
@@ -57,12 +58,13 @@ namespace Entrega2
         public string Username { get => username; set => username = value; }
         public List<Cancion> Canciones_favoritas { get => canciones_favoritas; set => canciones_favoritas = value; }
         internal List<Video> Videos_favoritos { get => videos_favoritos; set => videos_favoritos = value; }
-        public List<string> SeguidosUsuarios { get => seguidosUsuarios; set => seguidosUsuarios = value; }
+        public List<Usuario> SeguidosUsuarios { get => seguidosUsuarios; set => seguidosUsuarios = value; }
         internal List<Playlist> SeguidosPlaylist { get => seguidosPlaylist; set => seguidosPlaylist = value; }
         internal List<Album> SeguidosAlbum { get => seguidosAlbum; set => seguidosAlbum = value; }
         internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
         internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
         public List<Playlist> My_Playlist { get => my_Playlist; set => my_Playlist = value; }
+        public List<Usuario> MeSiguenUsuarios1 { get => MeSiguenUsuarios; set => MeSiguenUsuarios = value; }
 
         public Usuario(int ID, string member, DateTime Member_expiration,string Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {
@@ -298,7 +300,7 @@ namespace Entrega2
 
         public void seguirUsuario(string user)
         {
-            this.SeguidosUsuarios.Add(user);
+            //this.SeguidosUsuarios.Add(user);
         }
         public void seguirPlaylist(Playlist playlist)
         {

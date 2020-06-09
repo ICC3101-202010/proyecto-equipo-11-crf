@@ -19,11 +19,12 @@ namespace Spotflix
     public partial class Register : UserControl
     {
 
-        public Dictionary<int, List<string>> registrados;
+        public Dictionary<int, List<Usuario>> registrados1;
+        public List<Usuario> registrados;
         public Register()
         {
             InitializeComponent();
-            registrados = new Dictionary<int, List<string>>();
+            registrados = new List<Usuario>();
         }
         // 1- Define a Delegate
         public delegate void RegisterEventHandler(object source, RegistrarEventArgs args);
@@ -122,16 +123,19 @@ namespace Spotflix
                 data.Add(usuario.artista2);
                 data.Add(usuario.artista3);
                 string descripcion = null;
-                foreach (List<string> value in this.registrados.Values)
+                foreach (Usuario usuario9 in this.registrados)
                 {
-                    if (data[0] == value[0])
-                    {
-                        descripcion = "El nombre de usuario especificado ya existe";
-                    }
-                    else if (data[1] == value[1])
-                    {
-                        descripcion = "El correo ingresado ya existe";
-                    }
+                    
+                        if (data[0] == usuario9.Username)
+                        {
+                            descripcion = "El nombre de usuario especificado ya existe";
+                        }
+                        else if (data[1] == usuario9.Mail)
+                        {
+                            descripcion = "El correo ingresado ya existe";
+                        }
+                    
+                    
                 }
                 if (descripcion == null)
                 {
@@ -139,9 +143,9 @@ namespace Spotflix
                     {
                         IFormatter formatter3 = new BinaryFormatter();
                         Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-                        Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+                        List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
                         stream3.Close();
-                        registrados.Add(registrados.Count + 1, data);
+                        registrados.Add( usuario);
                         IFormatter formatter1 = new BinaryFormatter();
                         Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                         formatter1.Serialize(stream1, registrados);
@@ -149,7 +153,7 @@ namespace Spotflix
                     }
                     catch (Exception)
                     {
-                        registrados.Add(registrados.Count + 1, data);
+                        registrados.Add( usuario);
                         IFormatter formatter1 = new BinaryFormatter();
                         Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                         formatter1.Serialize(stream1, registrados);
