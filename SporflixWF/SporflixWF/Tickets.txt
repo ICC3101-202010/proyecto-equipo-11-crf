@@ -64,3 +64,9 @@ Si el usuario cierra la aplicación y en dicho momento estaba reproduciendo alg�
 entonces se debe guardar el tiempo de reproducción para que cuando vuelva a abrirla pueda
 continuar desde ahí.
 
+Chopan
+
+agrega next en la barra
+agrega el menu video en main menu
+crea listas publicas o privadas
+crea la opcion de agregar videos

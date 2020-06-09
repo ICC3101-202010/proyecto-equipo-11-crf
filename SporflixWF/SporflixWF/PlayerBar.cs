@@ -79,5 +79,10 @@ namespace Spotflix
         {
             player.controls.currentPosition = ProgressBarSong.Value;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            player.controls.next();
+        }
     }
 }
