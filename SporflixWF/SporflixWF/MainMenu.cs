@@ -20,7 +20,7 @@ namespace Spotflix
     public partial class MainMenu : UserControl
     {
         List<Cancion> vacia = new List<Cancion>();
-        //List<Cancion> library = Form1.Reproductor.Library();
+        List<Cancion> library = Form1.Reproductor.Library();
         Reproductor tester = new Reproductor();
         
 
@@ -37,7 +37,7 @@ namespace Spotflix
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
             //Cancion song1 = tester.Library()[1];
             //Cancion song1 = library[7];
-            foreach (Cancion song in vacia)
+            foreach (Cancion song in library)
             {
                 Panel song_panel = new Panel();
                 song_panel.Size = new Size(640, 67);
@@ -49,14 +49,18 @@ namespace Spotflix
                 //options panels-labels
                 Panel song_options = new Panel();
                 Panel song_info_panel = new Panel();
+                Panel playlist_list = new Panel();
+                playlist_list.Enabled = false;
                 song_options.Enabled = false;
                 song_info_panel.Enabled = false;
                 song_options.Visible = false;
                 song_info_panel.Visible = false;
+                playlist_list.Visible = false;
 
                 Label song_rating = new Label();
                 Label song_Info = new Label();
                 Label song_favorite = new Label();
+                Label song_add_playlist = new Label();
 
                 Label song_Artist = new Label();
                 Label song_Genre = new Label();
@@ -65,33 +69,36 @@ namespace Spotflix
                 Label song_Album = new Label();
                 Label song_plays = new Label();
 
-                song_options.Size = new Size(200, 97);
+                song_options.Size = new Size(200, 126);
                 song_info_panel.Size = new Size(200, 130);
-            
+                playlist_list.Size = new Size(182, 63);
+                playlist_list.AutoScroll = true;
                 song_options.BackColor = Color.FromArgb(82, 39, 65);
 
                 //Color text labels
                 song_Info.ForeColor = Color.White;
                 song_rating.ForeColor = Color.White;
                 song_favorite.ForeColor = Color.White;
+                song_add_playlist.ForeColor = Color.White;
 
                 //Tex aling
                 song_Info.TextAlign = ContentAlignment.MiddleCenter;
                 song_rating.TextAlign = ContentAlignment.MiddleCenter;
                 song_favorite.TextAlign = ContentAlignment.MiddleCenter;
+                song_add_playlist.TextAlign = ContentAlignment.MiddleCenter;
 
                 //Text of option labels
                 song_Info.Text = "Info";
                 song_rating.Text = "Rate";
                 song_favorite.Text = "Favorite";
-                
-                
+                song_add_playlist.Text = "Add playlist";
+
 
                 //Size of option labels
                 song_rating.Size = new Size(200,30);
                 song_Info.Size = new Size(200, 30);
                 song_favorite.Size = new Size(200, 30);
-
+                song_add_playlist.Size = new Size(200, 30);
 
                 //Size of info labels
                 song_Album.Size = new Size(200, 21);
@@ -108,7 +115,9 @@ namespace Spotflix
                 song_Info.Dock = DockStyle.Top;
                 song_options.Controls.Add(song_favorite);
                 song_favorite.Dock = DockStyle.Top;
-                
+                song_options.Controls.Add(song_add_playlist);
+                song_add_playlist.Dock = DockStyle.Top;
+
                 //Add labels to info panel
                 song_info_panel.Controls.Add(song_Album);
                 song_Album.Dock = DockStyle.Top;
@@ -125,6 +134,7 @@ namespace Spotflix
 
                 SongsContainerPanelFlow.Controls.Add(song_options);
                 SongsContainerPanelFlow.Controls.Add(song_info_panel);
+                SongsContainerPanelFlow.Controls.Add(playlist_list);
 
 
 
@@ -245,6 +255,41 @@ namespace Spotflix
                 song_rating.MouseLeave += delegate (object sender, EventArgs e) 
                 {
                     song_rating.BackColor = Color.FromArgb(82, 39, 65);
+                };
+                song_add_playlist.MouseHover += delegate (object sender, EventArgs e)
+                {
+                    song_add_playlist.BackColor = Color.FromArgb(41, 22, 39);
+                };
+                song_add_playlist.MouseLeave += delegate (object sender, EventArgs e)
+                {
+                    song_add_playlist.BackColor = Color.FromArgb(82, 39, 65);
+                };
+                //Add playist
+                song_add_playlist.Click += delegate (object sender, EventArgs e) 
+                {
+                    if (Global.UserNow.My_Playlist.Any() == false)
+                    {
+
+                        //Combo box diciendo que no hay playlist
+                    }
+                    else 
+                    {
+                        playlist_list.Enabled = true;
+                        playlist_list.Visible = true;
+                        foreach (Playlist playlist in Global.UserNow.My_Playlist)
+                        {
+                                Label playlist_name = new Label();
+                                playlist_name.Text = playlist.NombrePlaylist;
+                                playlist_name.ForeColor = Color.White;
+                                playlist_list.Controls.Add(playlist_name);
+                                
+                                playlist_name.Dock = DockStyle.Top;
+
+
+                        }
+                    
+                    
+                    }
                 };
 
             }
@@ -375,6 +420,21 @@ namespace Spotflix
            // labelRate.Text = library[7].Rating.ToString();
             panelSongOptions.Enabled = false;
             panelSongOptions.Visible = false;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            panelplaylit.Enabled = true;
+            panelplaylit.Visible = true;
+            foreach (Playlist playlist in Global.UserNow.My_Playlist) 
+            {
+                Label playlist_name = new Label();
+                playlist_name.Text = playlist.NombrePlaylist;
+                panelplaylit.Controls.Add(playlist_name);
+                playlist_name.Dock = DockStyle.Top;
+
+            
+            }
         }
     }
 }
