@@ -479,11 +479,13 @@ namespace Spotflix
                     {
                         if (value.Administrador == "False")
                         {
+                            labelInsertTitle.Visible = false;
                             labelPremium.Text = "You´re not an Admin Yet! Update to Admin to be able to Add Songs and Videos!";
 
                         }
                         if (value.Administrador == "True")
                         {
+                            labelInsertTitle.Visible = false;
                             labelPremium.Text = "You´re an Admin!";
                         }
 
@@ -576,6 +578,7 @@ namespace Spotflix
                 textBoxPath.Visible = false;
                 panelCambiarOpcionesUsuario.Visible = false;
                 labelPremium.Visible = false;
+                
 
             }
             if (comboBoxOpcionesUsuario.Text == "Add Video")
@@ -604,6 +607,7 @@ namespace Spotflix
             }
             if (comboBoxOpcionesUsuario.Text == "Change Admin Attribute")
             {
+
                 foreach (Usuario value in registrados)
                 {
                     if (nombre[0] == value.Username)
