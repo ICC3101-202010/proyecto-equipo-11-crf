@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelByRating = new System.Windows.Forms.Panel();
+            this.buttonMenor = new System.Windows.Forms.Button();
+            this.buttonMayor = new System.Windows.Forms.Button();
+            this.buttonIgual = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.textBoxFind = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
@@ -57,17 +61,13 @@
             this.buttonDownload = new System.Windows.Forms.Button();
             this.labelDonload = new System.Windows.Forms.Label();
             this.buttonMetadata = new System.Windows.Forms.Button();
-            this.panelByRating = new System.Windows.Forms.Panel();
-            this.buttonMayor = new System.Windows.Forms.Button();
-            this.buttonIgual = new System.Windows.Forms.Button();
-            this.buttonMenor = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panelByRating.SuspendLayout();
             this.panelFinderUser.SuspendLayout();
             this.panelMostrar.SuspendLayout();
             this.panelRate.SuspendLayout();
             this.panelMetadata.SuspendLayout();
             this.panelButttons.SuspendLayout();
-            this.panelByRating.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,9 +80,50 @@
             this.panel1.Controls.Add(this.labelFinder);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 382);
+            this.panel1.Size = new System.Drawing.Size(296, 346);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panelByRating
+            // 
+            this.panelByRating.Controls.Add(this.buttonMenor);
+            this.panelByRating.Controls.Add(this.buttonMayor);
+            this.panelByRating.Controls.Add(this.buttonIgual);
+            this.panelByRating.Location = new System.Drawing.Point(55, 135);
+            this.panelByRating.Name = "panelByRating";
+            this.panelByRating.Size = new System.Drawing.Size(121, 37);
+            this.panelByRating.TabIndex = 6;
+            this.panelByRating.Visible = false;
+            // 
+            // buttonMenor
+            // 
+            this.buttonMenor.Location = new System.Drawing.Point(91, 5);
+            this.buttonMenor.Name = "buttonMenor";
+            this.buttonMenor.Size = new System.Drawing.Size(27, 29);
+            this.buttonMenor.TabIndex = 2;
+            this.buttonMenor.Text = "<";
+            this.buttonMenor.UseVisualStyleBackColor = true;
+            this.buttonMenor.Click += new System.EventHandler(this.buttonMenor_Click);
+            // 
+            // buttonMayor
+            // 
+            this.buttonMayor.Location = new System.Drawing.Point(3, 6);
+            this.buttonMayor.Name = "buttonMayor";
+            this.buttonMayor.Size = new System.Drawing.Size(27, 28);
+            this.buttonMayor.TabIndex = 0;
+            this.buttonMayor.Text = ">";
+            this.buttonMayor.UseVisualStyleBackColor = true;
+            this.buttonMayor.Click += new System.EventHandler(this.buttonMayor_Click);
+            // 
+            // buttonIgual
+            // 
+            this.buttonIgual.Location = new System.Drawing.Point(49, 5);
+            this.buttonIgual.Name = "buttonIgual";
+            this.buttonIgual.Size = new System.Drawing.Size(27, 29);
+            this.buttonIgual.TabIndex = 1;
+            this.buttonIgual.Text = "=";
+            this.buttonIgual.UseVisualStyleBackColor = true;
+            this.buttonIgual.Click += new System.EventHandler(this.buttonIgual_Click);
             // 
             // buttonBack
             // 
@@ -187,9 +228,10 @@
             this.panelMostrar.Controls.Add(this.panelRate);
             this.panelMostrar.Controls.Add(this.panelMetadata);
             this.panelMostrar.Controls.Add(this.panelButttons);
-            this.panelMostrar.Location = new System.Drawing.Point(305, 3);
+            this.panelMostrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelMostrar.Location = new System.Drawing.Point(305, 0);
             this.panelMostrar.Name = "panelMostrar";
-            this.panelMostrar.Size = new System.Drawing.Size(345, 346);
+            this.panelMostrar.Size = new System.Drawing.Size(345, 352);
             this.panelMostrar.TabIndex = 1;
             this.panelMostrar.Visible = false;
             this.panelMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMostrar_Paint);
@@ -375,47 +417,6 @@
             this.buttonMetadata.UseVisualStyleBackColor = true;
             this.buttonMetadata.Click += new System.EventHandler(this.buttonMetadata_Click);
             // 
-            // panelByRating
-            // 
-            this.panelByRating.Controls.Add(this.buttonMenor);
-            this.panelByRating.Controls.Add(this.buttonMayor);
-            this.panelByRating.Controls.Add(this.buttonIgual);
-            this.panelByRating.Location = new System.Drawing.Point(55, 135);
-            this.panelByRating.Name = "panelByRating";
-            this.panelByRating.Size = new System.Drawing.Size(121, 37);
-            this.panelByRating.TabIndex = 6;
-            this.panelByRating.Visible = false;
-            // 
-            // buttonMayor
-            // 
-            this.buttonMayor.Location = new System.Drawing.Point(3, 6);
-            this.buttonMayor.Name = "buttonMayor";
-            this.buttonMayor.Size = new System.Drawing.Size(27, 28);
-            this.buttonMayor.TabIndex = 0;
-            this.buttonMayor.Text = ">";
-            this.buttonMayor.UseVisualStyleBackColor = true;
-            this.buttonMayor.Click += new System.EventHandler(this.buttonMayor_Click);
-            // 
-            // buttonIgual
-            // 
-            this.buttonIgual.Location = new System.Drawing.Point(49, 5);
-            this.buttonIgual.Name = "buttonIgual";
-            this.buttonIgual.Size = new System.Drawing.Size(27, 29);
-            this.buttonIgual.TabIndex = 1;
-            this.buttonIgual.Text = "=";
-            this.buttonIgual.UseVisualStyleBackColor = true;
-            this.buttonIgual.Click += new System.EventHandler(this.buttonIgual_Click);
-            // 
-            // buttonMenor
-            // 
-            this.buttonMenor.Location = new System.Drawing.Point(91, 5);
-            this.buttonMenor.Name = "buttonMenor";
-            this.buttonMenor.Size = new System.Drawing.Size(27, 29);
-            this.buttonMenor.TabIndex = 2;
-            this.buttonMenor.Text = "<";
-            this.buttonMenor.UseVisualStyleBackColor = true;
-            this.buttonMenor.Click += new System.EventHandler(this.buttonMenor_Click);
-            // 
             // Finderr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,6 +429,7 @@
             this.Size = new System.Drawing.Size(650, 352);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelByRating.ResumeLayout(false);
             this.panelFinderUser.ResumeLayout(false);
             this.panelFinderUser.PerformLayout();
             this.panelMostrar.ResumeLayout(false);
@@ -437,7 +439,6 @@
             this.panelMetadata.PerformLayout();
             this.panelButttons.ResumeLayout(false);
             this.panelButttons.PerformLayout();
-            this.panelByRating.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
