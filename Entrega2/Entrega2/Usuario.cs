@@ -41,7 +41,7 @@ namespace Entrega2
         private List<string> seguidosUsuarios;
         private List<Playlist> seguidosPlaylist;
         private List<Album> seguidosAlbum;
-        private List<string> seguidosBanda=new List<string>;
+        public List<string> seguidosBanda=new List<string>();
         private List<Actor> seguidosActor;
 
         
@@ -315,7 +315,7 @@ namespace Entrega2
         }
         public void seguirBanda(Banda banda)
         {
-            this.seguidosBanda.Add(banda);
+            //this.seguidosBanda.Add(banda);
         }
 
 

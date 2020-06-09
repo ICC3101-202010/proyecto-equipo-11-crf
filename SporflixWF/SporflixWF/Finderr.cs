@@ -343,7 +343,7 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Playlist")
             {
-                Global.UserNow.seguidosBanda.add(comboBoxUsuarios.Text);
+                Global.UserNow.seguidosBanda.Add(comboBoxUsuarios.Text);
             }
         }
 
