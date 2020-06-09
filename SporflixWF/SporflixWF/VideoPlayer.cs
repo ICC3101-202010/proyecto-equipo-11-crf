@@ -22,7 +22,7 @@ namespace SporflixWF
             InitializeComponent();
             List<Video> videos = new List<Video>();
             //Form1.Reproductor.Video_Library()
-            foreach (Video video in Form1.Reproductor.Video_Library())
+            foreach (Video video in videos)
             {
                 Panel videoPanel = new Panel();
                 videoPanel.Size= new Size(640, 67);
@@ -91,6 +91,12 @@ namespace SporflixWF
 
         private void buttonStop_Click(object sender, EventArgs e)
         {
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            panelPlayVideo.Visible = false;
             axWindowsMediaPlayer1.Ctlcontrols.stop();
         }
     }

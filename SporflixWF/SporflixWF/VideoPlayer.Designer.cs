@@ -32,6 +32,7 @@
             this.flowLayoutPanelVideo = new System.Windows.Forms.FlowLayoutPanel();
             this.panelPlayVideo = new System.Windows.Forms.Panel();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelPlayVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // 
             // panelPlayVideo
             // 
+            this.panelPlayVideo.Controls.Add(this.button1);
             this.panelPlayVideo.Controls.Add(this.axWindowsMediaPlayer1);
             this.panelPlayVideo.Location = new System.Drawing.Point(0, 0);
             this.panelPlayVideo.Name = "panelPlayVideo";
@@ -55,12 +57,22 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 31);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(643, 384);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(643, 353);
             this.axWindowsMediaPlayer1.TabIndex = 3;
             this.axWindowsMediaPlayer1.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Video Library";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // VideoPlayer
             // 
@@ -82,5 +94,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelVideo;
         private System.Windows.Forms.Panel panelPlayVideo;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.Button button1;
     }
 }
