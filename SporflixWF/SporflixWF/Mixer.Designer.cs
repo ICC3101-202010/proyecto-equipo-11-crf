@@ -28,24 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxMixer = new System.Windows.Forms.ComboBox();
+            this.buttonPlayMixer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // comboBoxMixer
             // 
-            this.button1.Location = new System.Drawing.Point(224, 170);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Mixer";
-            this.button1.UseVisualStyleBackColor = true;
+            this.comboBoxMixer.FormattingEnabled = true;
+            this.comboBoxMixer.Location = new System.Drawing.Point(34, 18);
+            this.comboBoxMixer.Name = "comboBoxMixer";
+            this.comboBoxMixer.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxMixer.TabIndex = 0;
+            // 
+            // buttonPlayMixer
+            // 
+            this.buttonPlayMixer.Location = new System.Drawing.Point(184, 18);
+            this.buttonPlayMixer.Name = "buttonPlayMixer";
+            this.buttonPlayMixer.Size = new System.Drawing.Size(75, 23);
+            this.buttonPlayMixer.TabIndex = 1;
+            this.buttonPlayMixer.Text = "Play";
+            this.buttonPlayMixer.UseVisualStyleBackColor = true;
+            this.buttonPlayMixer.Click += new System.EventHandler(this.buttonPlayMixer_Click);
             // 
             // Mixer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
-            this.Controls.Add(this.button1);
+            this.BackgroundImage = global::SporflixWF.Properties.Resources.dj;
+            this.Controls.Add(this.buttonPlayMixer);
+            this.Controls.Add(this.comboBoxMixer);
             this.Name = "Mixer";
             this.Size = new System.Drawing.Size(552, 349);
             this.ResumeLayout(false);
@@ -54,6 +66,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxMixer;
+        private System.Windows.Forms.Button buttonPlayMixer;
     }
 }
