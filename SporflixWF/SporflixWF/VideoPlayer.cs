@@ -21,6 +21,7 @@ namespace SporflixWF
         {
             InitializeComponent();
             List<Video> videos = new List<Video>();
+            
             //Form1.Reproductor.Video_Library()
             foreach (Video video in Form1.Reproductor.Video_Library())
             {
@@ -98,6 +99,26 @@ namespace SporflixWF
         {
             panelPlayVideo.Visible = false;
             axWindowsMediaPlayer1.Ctlcontrols.stop();
+        }
+
+        private void buttonNextVideo_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            int numberOnList = 0;
+            foreach(Video vid in Form1.Reproductor.Video_Library())
+            {
+                if (axWindowsMediaPlayer1.URL == vid.Path)
+                {
+                    numberOnList = count;
+                }
+                count += 1;
+            }
+            if (numberOnList < count-1)
+            {
+                axWindowsMediaPlayer1.URL = Form1.Reproductor.Video_Library()[numberOnList + 1].Path;
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+            
         }
     }
 }

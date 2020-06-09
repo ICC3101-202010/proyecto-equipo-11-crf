@@ -38,9 +38,13 @@ namespace Spotflix
         private static WindowsMediaPlayer player = new WindowsMediaPlayer();
         private static AxWindowsMediaPlayer MediaPlayer = new AxWindowsMediaPlayer();
         private static Reproductor reproductor = new Reproductor();
-        
-        
-        
+
+
+        private static List<Cancion> queue_home = new List<Cancion>();
+        //List<Cancion> auto_queue = tester.Queue(null);
+
+
+
 
         List<Panel> stackPanels = new List<Panel>();
         static List<UserControl> stackUserControls = new List<UserControl>();
@@ -67,6 +71,7 @@ namespace Spotflix
         public static UserControl VideoPlayer { get => videoPlayer; set => videoPlayer = value; }
         public static AxWindowsMediaPlayer MediaPlayer1 { get => MediaPlayer; set => MediaPlayer = value; }
         public static UserControl Notpremium { get => notpremium; set => notpremium = value; }
+        public static List<Cancion> Queue_home { get => queue_home; set => queue_home = value; }
 
         public Form1()
         {

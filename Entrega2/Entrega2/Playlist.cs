@@ -18,6 +18,7 @@ namespace Entrega2
         
         private Image imagen_personalizada;
         private string NombreCreador;
+        private bool privacidad;
 
         public string NombrePlaylist { get => nombrePlaylist; set => nombrePlaylist = value; }
         public List<Cancion> Canciones { get => canciones; set => canciones = value; }
@@ -25,6 +26,7 @@ namespace Entrega2
 
         public Image Imagen_personalizada { get => imagen_personalizada; set => imagen_personalizada = value; }
         public string NombreCreador1 { get => NombreCreador; set => NombreCreador = value; }
+        public bool Privacidad { get => privacidad; set => privacidad = value; }
 
         public Playlist(string nombrePlaylist, List<Cancion> canciones, List<Video> videos, string NombreCreador)
         {

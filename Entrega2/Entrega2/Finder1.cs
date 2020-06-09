@@ -164,6 +164,7 @@ namespace Entrega2
         public List<Video> buscarVideo(string song_name, List<Video> songs)
         {
             List<Video> final_search = new List<Video>();
+<<<<<<< HEAD
             
             if (song_name.Contains("or"))
             {
@@ -200,6 +201,9 @@ namespace Entrega2
                 }
             }
             else if (song_name.Contains("and"))
+=======
+            foreach (Video vid in todos)
+>>>>>>> 56acc4207fdd31bc7e77f2572ddea32dd0ccbf33
             {
                 string[] separator = { "and" };
                 string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);

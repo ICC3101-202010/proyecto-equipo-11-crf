@@ -23,6 +23,7 @@ namespace Spotflix
         List<Cancion> vacia = new List<Cancion>();
         List<Cancion> library = Form1.Reproductor.Library();
         Reproductor tester = new Reproductor();
+
         
 
         List<Panel> song_stack = new List<Panel>();
@@ -178,10 +179,16 @@ namespace Spotflix
                 };
                 song_panel.Click += delegate (object sender, EventArgs e)
                 {
+                   
                     Form1.Player.URL =song.path;
                     Form1.Player.controls.play();
                     Form1.Actual = song;
                     Form1.ProgresBar.Show();
+                    
+                
+                        
+                    
+                    
 
                 };
                 song_panel.MouseDown += delegate (object sender, MouseEventArgs e)

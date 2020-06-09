@@ -44,7 +44,7 @@ namespace Entrega2
         private List<Usuario> MeSiguenUsuarios;
 
         public List<string> seguidosPlaylist=new List<string>();
-        public List<string> seguidosAlbum;
+        public List<string> seguidosAlbum=new List<string>();
         public List<string> seguidosBanda=new List<string>();
 
         private List<Actor> seguidosActor;

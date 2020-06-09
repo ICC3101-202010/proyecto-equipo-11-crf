@@ -8,12 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.IO;
+using Entrega2;
 
 namespace Spotflix
 {
     public partial class PlayerBar : UserControl
     {
         WindowsMediaPlayer player = Form1.Player;
+        int status = 0;
+        int cant = Form1.Reproductor.Queue(Form1.Actual).Count;
+        int current = 0;
         public PlayerBar()
         {
             InitializeComponent();
@@ -82,7 +87,44 @@ namespace Spotflix
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            player.controls.next();
+
+            Form1.Queue_home = Form1.Reproductor.Queue(Form1.Actual);
+            if (current < cant) 
+            {
+                player.URL = Form1.Queue_home[current].path;
+                current++;
+                player.controls.next();
+            
+            }
+            
+                    
+
+
+                
+            
+            
+        }
+
+        private void pbPlayStop_Click(object sender, EventArgs e)
+        {
+            //int status = 0;
+            if (status == 0)
+            {
+                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/pausa.png"));
+                pbPlayStop.Image = Image.FromFile(path);
+                player.controls.pause();
+                status = 1;
+            }
+            else if (status == 1) 
+            {
+                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/video (1).png"));
+                pbPlayStop.Image = Image.FromFile(path);
+                player.controls.play();
+                status = 0;
+
+            }
+            RefreshSongStatus();
+            
         }
     }
 }

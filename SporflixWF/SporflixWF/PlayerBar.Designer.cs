@@ -72,6 +72,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelDurationContainer
             // 
@@ -95,17 +96,19 @@
             // 
             this.pbPlayStop.BackColor = System.Drawing.Color.Transparent;
             this.pbPlayStop.Image = ((System.Drawing.Image)(resources.GetObject("pbPlayStop.Image")));
+            this.pbPlayStop.InitialImage = null;
             this.pbPlayStop.Location = new System.Drawing.Point(3, 3);
             this.pbPlayStop.Name = "pbPlayStop";
             this.pbPlayStop.Size = new System.Drawing.Size(39, 29);
             this.pbPlayStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPlayStop.TabIndex = 16;
             this.pbPlayStop.TabStop = false;
+            this.pbPlayStop.Click += new System.EventHandler(this.pbPlayStop_Click);
             // 
             // ProgressBarSong
             // 
             this.ProgressBarSong.BackColor = System.Drawing.Color.Transparent;
-            this.ProgressBarSong.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ProgressBarSong.BorderColor = System.Drawing.Color.Transparent;
             this.ProgressBarSong.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProgressBarSong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(125)))), ((int)(((byte)(123)))));
             this.ProgressBarSong.IndentHeight = 6;
@@ -116,42 +119,17 @@
             this.ProgressBarSong.Size = new System.Drawing.Size(388, 29);
             this.ProgressBarSong.TabIndex = 15;
             this.ProgressBarSong.TextTickStyle = System.Windows.Forms.TickStyle.None;
-            this.ProgressBarSong.TickColor = System.Drawing.Color.Indigo;
+            this.ProgressBarSong.TickColor = System.Drawing.Color.Transparent;
             this.ProgressBarSong.TickHeight = 4;
             this.ProgressBarSong.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.ProgressBarSong.TrackerColor = System.Drawing.Color.Gray;
+            this.ProgressBarSong.TrackerColor = System.Drawing.Color.Silver;
             this.ProgressBarSong.TrackerSize = new System.Drawing.Size(8, 17);
-            this.ProgressBarSong.TrackLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProgressBarSong.TrackLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ProgressBarSong.TrackLineHeight = 3;
-            this.ProgressBarSong.TrackLineSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
+            this.ProgressBarSong.TrackLineSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ProgressBarSong.Value = 0;
             this.ProgressBarSong.Scroll += new System.EventHandler(this.ProgressBarSong_Scroll_1);
             // 
-
-            // pbPlayStop
-            // 
-            this.pbPlayStop.BackColor = System.Drawing.Color.Transparent;
-            this.pbPlayStop.Image = ((System.Drawing.Image)(resources.GetObject("pbPlayStop.Image")));
-            this.pbPlayStop.Location = new System.Drawing.Point(3, 3);
-            this.pbPlayStop.Name = "pbPlayStop";
-            this.pbPlayStop.Size = new System.Drawing.Size(39, 29);
-            this.pbPlayStop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPlayStop.TabIndex = 16;
-            this.pbPlayStop.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(48, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-
             // PlayerBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
