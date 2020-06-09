@@ -46,14 +46,14 @@ públicas. Si un usuario es privado, no puede tener playlist públicas.
 Se debe poder crear una cola de reproducción automática (lista que se reproduzca
 automáticamente) tanto para video como para canciones
 
-11 [ ]
+11 [✓]
 Se debe poder agregar canciones y videos a una lista de
 favoritos. Canciones y vídeos deben estar en listas diferentes.
 
-12 [ ]
+12 [✓]
 Buscar y seguir: Usuarios, playlist, discos, cantantes, actores, etc.
 
-13 [ ]
+13 [✓]
 Agregar imágenes, por ejemplo, una imagen para representar un disco o un película.
 
 14 [ ]

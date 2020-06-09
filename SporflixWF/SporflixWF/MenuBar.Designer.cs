@@ -30,6 +30,7 @@ namespace SporflixWF
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuBar));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonMixer = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@ namespace SporflixWF
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Gray;
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
@@ -72,7 +73,7 @@ namespace SporflixWF
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Gray;
             this.flowLayoutPanel2.Controls.Add(this.buttonMixer);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -82,7 +83,9 @@ namespace SporflixWF
             // buttonMixer
             // 
             this.buttonMixer.AutoSize = true;
-            this.buttonMixer.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonMixer.BackColor = System.Drawing.Color.Transparent;
+            this.buttonMixer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMixer.BackgroundImage")));
+            this.buttonMixer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonMixer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonMixer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMixer.Location = new System.Drawing.Point(3, 3);
@@ -90,13 +93,12 @@ namespace SporflixWF
             this.buttonMixer.Name = "buttonMixer";
             this.buttonMixer.Size = new System.Drawing.Size(94, 43);
             this.buttonMixer.TabIndex = 6;
-            this.buttonMixer.Text = "Mixer";
             this.buttonMixer.UseVisualStyleBackColor = false;
             this.buttonMixer.Click += new System.EventHandler(this.buttonMixer_Click);
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.Gray;
             this.flowLayoutPanel3.Controls.Add(this.buttonLibrary);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(106, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -107,7 +109,9 @@ namespace SporflixWF
             // 
             this.buttonLibrary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLibrary.AutoSize = true;
-            this.buttonLibrary.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonLibrary.BackColor = System.Drawing.Color.Transparent;
+            this.buttonLibrary.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonLibrary.BackgroundImage")));
+            this.buttonLibrary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonLibrary.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonLibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLibrary.Location = new System.Drawing.Point(3, 3);
@@ -115,13 +119,12 @@ namespace SporflixWF
             this.buttonLibrary.Name = "buttonLibrary";
             this.buttonLibrary.Size = new System.Drawing.Size(93, 43);
             this.buttonLibrary.TabIndex = 8;
-            this.buttonLibrary.Text = "Library";
             this.buttonLibrary.UseVisualStyleBackColor = false;
             this.buttonLibrary.Click += new System.EventHandler(this.buttonLibrary_Click);
             // 
             // flowLayoutPanel4
             // 
-            this.flowLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.Gray;
             this.flowLayoutPanel4.Controls.Add(this.buttonHome);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(208, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
@@ -132,7 +135,9 @@ namespace SporflixWF
             // 
             this.buttonHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonHome.AutoSize = true;
-            this.buttonHome.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonHome.BackColor = System.Drawing.Color.Transparent;
+            this.buttonHome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonHome.BackgroundImage")));
+            this.buttonHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHome.Location = new System.Drawing.Point(3, 3);
@@ -140,13 +145,12 @@ namespace SporflixWF
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(94, 43);
             this.buttonHome.TabIndex = 7;
-            this.buttonHome.Text = "Home";
             this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // flowLayoutPanel5
             // 
-            this.flowLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.flowLayoutPanel5.BackColor = System.Drawing.Color.Gray;
             this.flowLayoutPanel5.Controls.Add(this.buttonFinder);
             this.flowLayoutPanel5.Location = new System.Drawing.Point(311, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
@@ -157,7 +161,9 @@ namespace SporflixWF
             // 
             this.buttonFinder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonFinder.AutoSize = true;
-            this.buttonFinder.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonFinder.BackColor = System.Drawing.Color.Transparent;
+            this.buttonFinder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonFinder.BackgroundImage")));
+            this.buttonFinder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonFinder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonFinder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonFinder.Location = new System.Drawing.Point(3, 3);
@@ -165,13 +171,12 @@ namespace SporflixWF
             this.buttonFinder.Name = "buttonFinder";
             this.buttonFinder.Size = new System.Drawing.Size(102, 43);
             this.buttonFinder.TabIndex = 7;
-            this.buttonFinder.Text = "Finder";
             this.buttonFinder.UseVisualStyleBackColor = false;
             this.buttonFinder.Click += new System.EventHandler(this.buttonFinder_Click_1);
             // 
             // flowLayoutPanel6
             // 
-            this.flowLayoutPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.flowLayoutPanel6.BackColor = System.Drawing.Color.Gray;
             this.flowLayoutPanel6.Controls.Add(this.buttonProfile);
             this.flowLayoutPanel6.Location = new System.Drawing.Point(422, 3);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
@@ -180,17 +185,17 @@ namespace SporflixWF
             // 
             // buttonProfile
             // 
-            this.buttonProfile.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonProfile.BackColor = System.Drawing.Color.Transparent;
+            this.buttonProfile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonProfile.BackgroundImage")));
+            this.buttonProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.buttonProfile.Location = new System.Drawing.Point(3, 3);
             this.buttonProfile.Name = "buttonProfile";
             this.buttonProfile.Size = new System.Drawing.Size(94, 43);
             this.buttonProfile.TabIndex = 0;
-            this.buttonProfile.Text = "Profile";
             this.buttonProfile.UseVisualStyleBackColor = false;
             this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click_1);
-            this.buttonProfile.Click += new System.EventHandler(profile.buttonProfile_Click_1);
             // 
             // profile
             // 
@@ -210,14 +215,15 @@ namespace SporflixWF
             // 
             // buttonVideo
             // 
-            this.buttonVideo.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonVideo.BackColor = System.Drawing.Color.Transparent;
+            this.buttonVideo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonVideo.BackgroundImage")));
+            this.buttonVideo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonVideo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.buttonVideo.Location = new System.Drawing.Point(3, 3);
             this.buttonVideo.Name = "buttonVideo";
             this.buttonVideo.Size = new System.Drawing.Size(104, 43);
             this.buttonVideo.TabIndex = 7;
-            this.buttonVideo.Text = "Video";
             this.buttonVideo.UseVisualStyleBackColor = false;
             this.buttonVideo.Click += new System.EventHandler(this.buttonVideo_Click);
             // 

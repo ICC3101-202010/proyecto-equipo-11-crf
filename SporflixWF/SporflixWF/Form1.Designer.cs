@@ -29,43 +29,75 @@ namespace Spotflix
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.videoPlayer2 = new SporflixWF.VideoPlayer();
+            this.notPremium1 = new SporflixWF.NotPremium();
+            this.profile1 = new Spotflix.Profile();
             this.library1 = new Spotflix.Library();
-            this.mixer1 = new Spotflix.Mixer();
             this.playerBar1 = new Spotflix.PlayerBar();
             this.menuBar1 = new SporflixWF.MenuBar();
-            this.mainMenu1 = new Spotflix.MainMenu();
             this.preferences1 = new Spotflix.Preferences();
             this.logIn1 = new Spotflix.LogIn();
             this.mailValidation1 = new Spotflix.MailValidation();
             this.register1 = new Spotflix.Register();
             this.welcome1 = new Spotflix.Welcome();
             this.finderr1 = new Spotflix.Finderr();
-            this.profile1 = new Spotflix.Profile();
-            this.notPremium1 = new SporflixWF.NotPremium();
-            this.videoPlayer2 = new SporflixWF.VideoPlayer();
+            this.mixer2 = new Spotflix.Mixer();
+            this.mainMenu2 = new Spotflix.MainMenu();
             this.SuspendLayout();
+            // 
+            // videoPlayer2
+            // 
+            this.videoPlayer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.videoPlayer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.videoPlayer2.Location = new System.Drawing.Point(0, 0);
+            this.videoPlayer2.Name = "videoPlayer2";
+            this.videoPlayer2.Size = new System.Drawing.Size(641, 378);
+            this.videoPlayer2.TabIndex = 15;
+            // 
+            // notPremium1
+            // 
+            this.notPremium1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.notPremium1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.notPremium1.Location = new System.Drawing.Point(0, 0);
+            this.notPremium1.Name = "notPremium1";
+            this.notPremium1.Size = new System.Drawing.Size(641, 347);
+            this.notPremium1.TabIndex = 14;
+            // 
+            // profile1
+            // 
+            this.profile1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.profile1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.profile1.Location = new System.Drawing.Point(0, 0);
+            this.profile1.Name = "profile1";
+            this.profile1.Size = new System.Drawing.Size(641, 347);
+            this.profile1.TabIndex = 13;
             // 
             // library1
             // 
+            this.library1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.library1.AutoScroll = true;
             this.library1.AutoSize = true;
             this.library1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.library1.Enabled = false;
             this.library1.Location = new System.Drawing.Point(0, 0);
             this.library1.Name = "library1";
-            this.library1.Size = new System.Drawing.Size(644, 347);
+            this.library1.Size = new System.Drawing.Size(641, 347);
             this.library1.TabIndex = 12;
-            // 
-            // mixer1
-            // 
-            this.mixer1.Location = new System.Drawing.Point(0, 0);
-            this.mixer1.Name = "mixer1";
-            this.mixer1.Size = new System.Drawing.Size(644, 347);
-            this.mixer1.TabIndex = 11;
             // 
             // playerBar1
             // 
-            this.playerBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.playerBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.playerBar1.Location = new System.Drawing.Point(0, 343);
             this.playerBar1.Name = "playerBar1";
             this.playerBar1.Size = new System.Drawing.Size(644, 35);
@@ -77,104 +109,107 @@ namespace Spotflix
             this.menuBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuBar1.Location = new System.Drawing.Point(0, 378);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(644, 58);
+            this.menuBar1.Size = new System.Drawing.Size(641, 58);
             this.menuBar1.TabIndex = 8;
             this.menuBar1.Load += new System.EventHandler(this.menuBar1_Load);
             // 
-            // mainMenu1
-            // 
-            this.mainMenu1.Location = new System.Drawing.Point(0, 0);
-            this.mainMenu1.Name = "mainMenu1";
-            this.mainMenu1.Size = new System.Drawing.Size(644, 372);
-            this.mainMenu1.TabIndex = 5;
-            this.mainMenu1.Load += new System.EventHandler(this.mainMenu1_Load);
-            // 
             // preferences1
             // 
-            this.preferences1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.preferences1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.preferences1.Location = new System.Drawing.Point(0, 0);
             this.preferences1.Name = "preferences1";
-            this.preferences1.Size = new System.Drawing.Size(644, 436);
+            this.preferences1.Size = new System.Drawing.Size(641, 436);
             this.preferences1.TabIndex = 4;
             // 
             // logIn1
             // 
-            this.logIn1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logIn1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.logIn1.Location = new System.Drawing.Point(0, 0);
             this.logIn1.Name = "logIn1";
-            this.logIn1.Size = new System.Drawing.Size(644, 436);
+            this.logIn1.Size = new System.Drawing.Size(641, 436);
             this.logIn1.TabIndex = 3;
             // 
             // mailValidation1
             // 
+            this.mailValidation1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mailValidation1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
-            this.mailValidation1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mailValidation1.Location = new System.Drawing.Point(0, 0);
             this.mailValidation1.Name = "mailValidation1";
-            this.mailValidation1.Size = new System.Drawing.Size(644, 436);
+            this.mailValidation1.Size = new System.Drawing.Size(641, 436);
             this.mailValidation1.TabIndex = 2;
             // 
             // register1
             // 
-            this.register1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.register1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.register1.Location = new System.Drawing.Point(0, 0);
             this.register1.Name = "register1";
-            this.register1.Size = new System.Drawing.Size(644, 436);
+            this.register1.Size = new System.Drawing.Size(641, 436);
             this.register1.TabIndex = 1;
             // 
             // welcome1
             // 
-            this.welcome1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.welcome1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.welcome1.Location = new System.Drawing.Point(0, 0);
             this.welcome1.Name = "welcome1";
-            this.welcome1.Size = new System.Drawing.Size(644, 436);
+            this.welcome1.Size = new System.Drawing.Size(641, 436);
             this.welcome1.TabIndex = 0;
             // 
             // finderr1
             // 
+            this.finderr1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.finderr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.finderr1.Location = new System.Drawing.Point(0, 0);
             this.finderr1.Name = "finderr1";
             this.finderr1.Size = new System.Drawing.Size(644, 347);
             this.finderr1.TabIndex = 6;
             // 
-            // profile1
+            // mixer2
             // 
-            this.profile1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.profile1.Location = new System.Drawing.Point(0, 0);
-            this.profile1.Name = "profile1";
-            this.profile1.Size = new System.Drawing.Size(644, 347);
-            this.profile1.TabIndex = 13;
+            this.mixer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mixer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.mixer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mixer2.BackgroundImage")));
+            this.mixer2.Location = new System.Drawing.Point(0, 0);
+            this.mixer2.Name = "mixer2";
+            this.mixer2.Size = new System.Drawing.Size(641, 347);
+            this.mixer2.TabIndex = 16;
             // 
-            // notPremium1
+            // mainMenu2
             // 
-            this.notPremium1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.notPremium1.Location = new System.Drawing.Point(0, 0);
-            this.notPremium1.Name = "notPremium1";
-            this.notPremium1.Size = new System.Drawing.Size(644, 347);
-            this.notPremium1.TabIndex = 14;
-            // 
-            // videoPlayer2
-            // 
-            this.videoPlayer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
-            this.videoPlayer2.Location = new System.Drawing.Point(0, 0);
-            this.videoPlayer2.Name = "videoPlayer2";
-            this.videoPlayer2.Size = new System.Drawing.Size(644, 378);
-            this.videoPlayer2.TabIndex = 15;
+            this.mainMenu2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainMenu2.Location = new System.Drawing.Point(0, 0);
+            this.mainMenu2.Name = "mainMenu2";
+            this.mainMenu2.Size = new System.Drawing.Size(643, 347);
+            this.mainMenu2.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 436);
+            this.ClientSize = new System.Drawing.Size(641, 436);
+            this.Controls.Add(this.mainMenu2);
+            this.Controls.Add(this.mixer2);
             this.Controls.Add(this.videoPlayer2);
             this.Controls.Add(this.notPremium1);
             this.Controls.Add(this.profile1);
             this.Controls.Add(this.library1);
-            this.Controls.Add(this.mixer1);
             this.Controls.Add(this.playerBar1);
             this.Controls.Add(this.menuBar1);
-            this.Controls.Add(this.mainMenu1);
             this.Controls.Add(this.preferences1);
             this.Controls.Add(this.logIn1);
             this.Controls.Add(this.mailValidation1);
@@ -182,7 +217,9 @@ namespace Spotflix
             this.Controls.Add(this.welcome1);
             this.Controls.Add(this.finderr1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -206,6 +243,8 @@ namespace Spotflix
         private SporflixWF.VideoPlayer videoPlayer1;
         private SporflixWF.NotPremium notPremium1;
         private SporflixWF.VideoPlayer videoPlayer2;
+        private Mixer mixer2;
+        private MainMenu mainMenu2;
     }
 }
 
