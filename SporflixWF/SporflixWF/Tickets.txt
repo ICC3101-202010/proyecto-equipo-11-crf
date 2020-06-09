@@ -33,21 +33,21 @@ de and y or.
 
 
 -----PLAYLISTS-------
-8 [ ]
+8 [ ] Chopan
 crear playlists con canciones (o videos). Un playlist no puede tener canciones
 y videos, los archivos multimedia deben ser el mismo tipo. Estas pueden ser privadas o
 públicas. Si un usuario es privado, no puede tener playlist públicas.
 
-9 [ ]
+9 [ ] Chopan-->Canciones
 Se debe poder crear una cola de reproducción automática (lista que se reproduzca
 automáticamente) tanto para video como para canciones
 
 
 
-10 [ ]
+10 [✓]
 Las canciones pueden o no ser descargadas, pero no las películas.
 
-11 [ ]
+11 [ ] BONUS
 Si el usuario cierra la aplicación y en dicho momento estaba reproduciendo algún archivo,
 entonces se debe guardar el tiempo de reproducción para que cuando vuelva a abrirla pueda
 continuar desde ahí.

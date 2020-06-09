@@ -13,21 +13,67 @@ namespace Entrega2
         public List<Cancion> buscarCancion(string song_name, List<Cancion> songs)
         {//busca una determinada cancion en una determinada lista
             List<Cancion> final_search = new List<Cancion>();
-            
-            
+            if (song_name.Contains("or"))
+            {
+
+                string[] separator = { "or" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
+                {
+                    if (item.Contains("and"))
+                    {
+                        string[] sep = { "and" };
+                        string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string subitem in subfilters)
+                        {
+                            foreach (var song in songs)
+                            {
+                                if (song.Titulo_Cancion.Contains(subitem) == true)
+                                {
+                                    final_search.Add(song);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (var song in songs)
+                        {
+                            if (song.Titulo_Cancion.Contains(item) == true)
+                            {
+                                final_search.Add(song);
+                            }
+                        }
+                    }
+                }
+            }
+            else if (song_name.Contains("and"))
+            {
+                string[] separator = { "and" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
+                {
+                    foreach (var song in songs)
+                    {
+                        
+                        if (song.Titulo_Cancion.Contains(item) == true)
+                        {
+                            final_search.Add(song);
+                        }
+                    }
+                }
+            }
+            else
+            {
                 foreach (var song in songs)
                 {
+
                     if (song.Titulo_Cancion.Contains(song_name) == true)
                     {
                         final_search.Add(song);
                     }
                 }
-            
-            
-            
-                
-            
-            
+            }
             return final_search;
             int index = 0;
             if (final_search.Any() == true)
@@ -48,18 +94,138 @@ namespace Entrega2
             }
 
         }
-
-        public List<Video> buscarVideo(string videoName, List<Video> todos)
+        public List<Usuario> buscar_usuario(string song_name, List<Usuario> songs)
         {
-            List<Video> final_search = new List<Video>();
-            foreach (var vid in todos)
+            List<Usuario> final_search = new List<Usuario>();
+            if (song_name.Contains("or"))
             {
-                if (vid.NameVideo.Contains(videoName) == true)
+
+                string[] separator = { "or" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
                 {
-                    final_search.Add(vid);
+                    
+                    if (item.Contains("and"))
+                    {
+                        string[] sep = { "and" };
+                        string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string subitem in subfilters)
+                        {
+                            foreach (var song in songs)
+                            {
+                                if (song.Username.Contains(subitem) == true)
+                                {
+                                    final_search.Add(song);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (var song in songs)
+                        {
+                            if (song.Username.Contains(item) == true)
+                            {
+                                final_search.Add(song);
+                            }
+                        }
+                    }
                 }
             }
-            Console.WriteLine("Select one");
+            else if (song_name.Contains("and"))
+            {
+                string[] separator = { "and" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
+                {
+                    foreach (var song in songs)
+                    {
+
+                        if (song.Username.Contains(item) == true)
+                        {
+                            final_search.Add(song);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (var song in songs)
+                {
+
+                    if (song.Username.Contains(song_name) == true)
+                    {
+                        final_search.Add(song);
+                    }
+                }
+            }
+            return final_search;
+        }
+        public List<Video> buscarVideo(string song_name, List<Video> songs)
+        {
+            List<Video> final_search = new List<Video>();
+            
+            if (song_name.Contains("or"))
+            {
+
+                string[] separator = { "or" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
+                {
+                    if (item.Contains("and"))
+                    {
+                        string[] sep = { "and" };
+                        string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string subitem in subfilters)
+                        {
+                            foreach (var song in songs)
+                            {
+                                if (song.NameVideo.Contains(subitem) == true)
+                                {
+                                    final_search.Add(song);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (var song in songs)
+                        {
+                            if (song.NameVideo.Contains(item) == true)
+                            {
+                                final_search.Add(song);
+                            }
+                        }
+                    }
+                }
+            }
+            else if (song_name.Contains("and"))
+            {
+                string[] separator = { "and" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
+                {
+                    foreach (var song in songs)
+                    {
+
+                        if (song.NameVideo.Contains(item) == true)
+                        {
+                            final_search.Add(song);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (var song in songs)
+                {
+
+                    if (song.NameVideo.Contains(song_name) == true)
+                    {
+                        final_search.Add(song);
+                    }
+                }
+            }
             return final_search;
             int index = 0;
             foreach (var vid in final_search)
@@ -80,70 +246,208 @@ namespace Entrega2
 
 
 
-        public List<Playlist> buscarPlaylist(string playlist_name, List<Playlist> playlists)
+        public List<Playlist> buscarPlaylist(string song_name, List<Playlist> songs)
         {//busca una determinada cancion en una determinada lista
             List<Playlist> final_search = new List<Playlist>();
-            foreach (var playlist in playlists)
+            if (song_name.Contains("or"))
             {
-                if (playlist.NombrePlaylist.Contains(playlist_name) == true)
+
+                string[] separator = { "or" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
                 {
-                    final_search.Add(playlist);
+                    if (item.Contains("and"))
+                    {
+                        string[] sep = { "and" };
+                        string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string subitem in subfilters)
+                        {
+                            foreach (var song in songs)
+                            {
+                                if (song.NombrePlaylist.Contains(subitem) == true)
+                                {
+                                    final_search.Add(song);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (var song in songs)
+                        {
+                            if (song.NombrePlaylist.Contains(item) == true)
+                            {
+                                final_search.Add(song);
+                            }
+                        }
+                    }
                 }
             }
-            Console.WriteLine("Select one");
-            int index = 0;
+            else if (song_name.Contains("and"))
+            {
+                string[] separator = { "and" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
+                {
+                    foreach (var song in songs)
+                    {
+
+                        if (song.NombrePlaylist.Contains(item) == true)
+                        {
+                            final_search.Add(song);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (var song in songs)
+                {
+
+                    if (song.NombrePlaylist.Contains(song_name) == true)
+                    {
+                        final_search.Add(song);
+                    }
+                }
+            }
             return final_search;
-            foreach (var playlist in final_search)
-            {
-                Console.WriteLine("(" + index + ")" + playlist.NombrePlaylist);
-                index++;
-
-            }
-            int selected = Convert.ToInt32(Console.ReadLine());
-
-            //return final_search[selected];
+            
         }
 
-        public List<Cancion> buscarArtista(string artista, List<Cancion> todasLasCanciones)
+        public List<Cancion> buscarArtista(string song_name, List<Cancion> songs)
         {
-            List<Cancion> finalSearch = new List<Cancion>();
-            foreach (Cancion song in todasLasCanciones)
+            List<Cancion> final_search = new List<Cancion>();
+            if (song_name.Contains("or"))
             {
-                if (song.Banda.Contains(artista) == true)
+
+                string[] separator = { "or" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
                 {
-                    finalSearch.Add(song);
+                    if (item.Contains("and"))
+                    {
+                        string[] sep = { "and" };
+                        string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string subitem in subfilters)
+                        {
+                            foreach (var song in songs)
+                            {
+                                if (song.Banda.Contains(subitem) == true)
+                                {
+                                    final_search.Add(song);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (var song in songs)
+                        {
+                            if (song.Banda.Contains(item) == true)
+                            {
+                                final_search.Add(song);
+                            }
+                        }
+                    }
                 }
             }
-            /*int index = 0;
-            foreach (Cancion song in finalSearch)
+            else if (song_name.Contains("and"))
             {
-                Console.WriteLine("(" + index + ")" + song.Titulo_Cancion+ "-"+ song.Banda);
-                index++;
-            }*/
-            return finalSearch;
+                string[] separator = { "and" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
+                {
+                    foreach (var song in songs)
+                    {
+
+                        if (song.Banda.Contains(item) == true)
+                        {
+                            final_search.Add(song);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (var song in songs)
+                {
+
+                    if (song.Banda.Contains(song_name) == true)
+                    {
+                        final_search.Add(song);
+                    }
+                }
+            }
+            return final_search;
 
 
         }
-        public List<Cancion> searchAlbum(string album_name, List<Cancion> cancions)
+        public List<Cancion> searchAlbum(string song_name, List<Cancion> songs)
         {
             //busca un determinado album en una determinada lista de albums
             List<Cancion> final_search = new List<Cancion>();
-            foreach (var can in cancions)
+            if (song_name.Contains("or"))
             {
-                if (can.Album.Contains(album_name) == true)
+
+                string[] separator = { "or" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
                 {
-                    final_search.Add(can);
+                    if (item.Contains("and"))
+                    {
+                        string[] sep = { "and" };
+                        string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+                        foreach (string subitem in subfilters)
+                        {
+                            foreach (var song in songs)
+                            {
+                                if (song.Album.Contains(subitem) == true)
+                                {
+                                    final_search.Add(song);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (var song in songs)
+                        {
+                            if (song.Album.Contains(item) == true)
+                            {
+                                final_search.Add(song);
+                            }
+                        }
+                    }
                 }
             }
-            
-            //int index = 0;
-            /*foreach (var can in final_search)
+            else if (song_name.Contains("and"))
             {
-                Console.WriteLine("(" + index + ")" + can.Titulo_Cancion+" -"+can.Album);
-                index++;
+                string[] separator = { "and" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
+                {
+                    foreach (var song in songs)
+                    {
 
-            }*/
-            
+                        if (song.Album.Contains(item) == true)
+                        {
+                            final_search.Add(song);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (var song in songs)
+                {
+
+                    if (song.Album.Contains(song_name) == true)
+                    {
+                        final_search.Add(song);
+                    }
+                }
+            }
+
             return final_search;
 
 
@@ -152,7 +456,7 @@ namespace Entrega2
         {
             List<Video> finalSearch = new List<Video>();
 
-            {
+            
                 foreach (Video vid in todosLosVideos)
                 {
                     int i = 0;
@@ -179,7 +483,7 @@ namespace Entrega2
                    
                 }
 
-            }
+            
             return finalSearch;
 
         }

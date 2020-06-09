@@ -36,7 +36,7 @@ namespace Spotflix
             comboBoxFound.Items.Clear();
             labelDonload.Visible = false;
             labelFavorite.Visible = false;
-
+            textBoxFind.Text = textBoxFind.Text.ToLower();
 
             List<Cancion> canciones;
 
@@ -56,7 +56,7 @@ namespace Spotflix
             else if (comboBoxFind.Text == "Video")
             {
                 panelFinderUser.Visible = false;
-                List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Global.allVideos);
+                List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Form1.Reproductor.Video_Library());
                 foreach (Video video in videos)
                 {
                     comboBoxFound.Items.Add(video.NameVideo);
@@ -152,14 +152,10 @@ namespace Spotflix
                 Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
                 List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
                 stream3.Close();
-                foreach (Usuario value in registrados)
+                List<Usuario> usuarios = finder1.buscar_usuario(busqueda, registrados);
+                foreach (Usuario value in usuarios)
                 {
-                    if (value.Username.Contains(busqueda) == true)
-                    {
-
-                        comboBoxUsuarios.Items.Add(value.Username);
-
-                    }
+                   comboBoxUsuarios.Items.Add(value.Username);
                 }
                 
 

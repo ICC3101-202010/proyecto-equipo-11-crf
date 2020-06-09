@@ -393,6 +393,7 @@ namespace Spotflix
         private void bAtrasOpciones_Click(object sender, EventArgs e)
         {
             panelOpcionesUsuario.Visible = false;
+            buttonUpdateOpciones.Visible = true;
         }
 
         private void buttonSeleccionarOpcionUsuario_Click(object sender, EventArgs e)
@@ -421,6 +422,7 @@ namespace Spotflix
             }
             if (comboBoxOpcionesUsuario.Text == "Change Membership")
             {
+                buttonUpdateOpciones.Visible = true;
                 textBoxNombreCancion.Visible = false;
                 labelInsertTitle.Visible = false;
                 panelCambiarOpcionesUsuario.Visible = true;
@@ -463,6 +465,7 @@ namespace Spotflix
                             labelPremium.Visible = true;
                             labelInsertTitle.Visible = false;
                             panelCambiarOpcionesUsuario.Visible = true;
+                            buttonUpdateOpciones.Visible = false;
                         }
                         if (value.Administrador == "True")
                         {
@@ -497,6 +500,7 @@ namespace Spotflix
                             labelPremium.Visible = true;
                             labelInsertTitle.Visible = false;
                             panelCambiarOpcionesUsuario.Visible = true;
+                            buttonUpdateOpciones.Visible = false;
                         }
                         if (value.Administrador == "True")
                         {
@@ -521,6 +525,7 @@ namespace Spotflix
             }
             if (comboBoxOpcionesUsuario.Text == "Change Admin Attribute")
             {
+                buttonUpdateOpciones.Visible = true;
                 textBoxNombreCancion.Visible = false;
                 labelInsertTitle.Visible = false;
                 panelCambiarOpcionesUsuario.Visible = true;
@@ -618,45 +623,136 @@ namespace Spotflix
 
             if (comboBoxOpcionesUsuario.Text == "Add Song")
             {
-                string path = textBoxPath.Text;
-                string titulo_Cancion = textBoxNombreCancion.Text;
-                string sourcePath = path;
-                string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca");
-                string destPath = System.IO.Path.Combine(targetPath, titulo_Cancion+".mp3");
-                System.IO.File.Copy(sourcePath, destPath, true);
-                FileAttributes attributes = File.GetAttributes(sourcePath);
-                File.SetAttributes(destPath, attributes);
-                MessageBox.Show("You´ve Successfully Added a Song!");
-                labelPath.Visible = false;
-                labelInsertTitle.Visible = false;
-                textBoxNombreCancion.Text = "";
-                textBoxNombreCancion.Visible = false;
-                textBoxPath.Text = "";
-                textBoxPath.Visible = false;
-                panelCambiarOpcionesUsuario.Visible = false;
-                labelPremium.Visible = false;
                 
+                foreach (Usuario value in registrados)
+                {
+                    if (nombre[0] == value.Username)
+                    {
+                        if (value.Administrador == "False")
+                        {
+                            
+                            /*textBoxNombreCancion.Visible = false;
+                            labelInsertTitle.Visible = false;
+                            panelCambiarOpcionesUsuario.Visible = true;
+                            labelCambio.Visible = true;
+                            checkBoxNo.Visible = true;
+                            checkBoxSi.Visible = true;
+                            labelPremium.Visible = true;
+                            checkBoxNo.Checked = false;
+                            checkBoxSi.Checked = false;
+                            foreach (Usuario data in registrados)
+                            {
+                                if (nombre[0] == data.Username)
+                                {
+                                    if (data.Administrador == "False")
+                                    {
+                                        labelInsertTitle.Visible = false;
+                                        labelPremium.Text = "You´re not an Admin Yet! Update to Admin to be able to Add Songs and Videos!";
+                                        comboBoxOpcionesUsuario.Text = "Change Admin Attribute";
+                                    }
+                                    if (data.Administrador == "True")
+                                    {
+                                        labelInsertTitle.Visible = false;
+                                        labelPremium.Text = "You´re an Admin!";
+                                    }
 
+                                }
+                            }
+                            labelCambio.Text = "Would you like to be Admin?";
+                            checkBoxSi.Text = "Yes";
+                            checkBoxNo.Text = "No";*/
+
+                        }
+                        
+                        if (value.Administrador == "True")
+                        {
+                            string path = textBoxPath.Text;
+                            string titulo_Cancion = textBoxNombreCancion.Text;
+                            string sourcePath = path;
+                            string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca");
+                            string destPath = System.IO.Path.Combine(targetPath, titulo_Cancion + ".mp3");
+                            System.IO.File.Copy(sourcePath, destPath, true);
+                            FileAttributes attributes = File.GetAttributes(sourcePath);
+                            File.SetAttributes(destPath, attributes);
+                            MessageBox.Show("You´ve Successfully Added a Song!");
+                            labelPath.Visible = false;
+                            labelInsertTitle.Visible = false;
+                            textBoxNombreCancion.Text = "";
+                            textBoxNombreCancion.Visible = false;
+                            textBoxPath.Text = "";
+                            textBoxPath.Visible = false;
+                            panelCambiarOpcionesUsuario.Visible = false;
+                            labelPremium.Visible = false;
+                        }
+
+                    }
+                }
             }
             if (comboBoxOpcionesUsuario.Text == "Add Video")
             {
-                string path = textBoxPath.Text;
-                string titulo_Video = textBoxNombreCancion.Text;
-                string sourcePath = path;
-                string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Video");
-                string destPath = System.IO.Path.Combine(targetPath, titulo_Video+".mp4");
-                System.IO.File.Copy(sourcePath, destPath, true);
-                FileAttributes attributes=  File.GetAttributes(sourcePath);
-                File.SetAttributes(destPath, attributes);
-                MessageBox.Show("You´ve Successfully Added a Video!");
-                textBoxPath.Text = "";
-                labelPath.Visible = false;
-                labelInsertTitle.Visible = false;
-                textBoxNombreCancion.Text = "";
-                textBoxNombreCancion.Visible = false;
-                textBoxPath.Visible = false;
-                panelCambiarOpcionesUsuario.Visible = false;
-                labelPremium.Visible = false;
+                foreach (Usuario value in registrados)
+                {
+                    if (nombre[0] == value.Username)
+                    {
+                        if (value.Administrador == "False")
+                        {
+                            
+                            /*
+                            textBoxNombreCancion.Visible = false;
+                            labelInsertTitle.Visible = false;
+                            panelCambiarOpcionesUsuario.Visible = true;
+                            labelCambio.Visible = true;
+                            checkBoxNo.Visible = true;
+                            checkBoxSi.Visible = true;
+                            labelPremium.Visible = true;
+                            checkBoxNo.Checked = false;
+                            checkBoxSi.Checked = false;
+                            foreach (Usuario data in registrados)
+                            {
+                                if (nombre[0] == data.Username)
+                                {
+                                    if (data.Administrador == "False")
+                                    {
+                                        labelInsertTitle.Visible = false;
+                                        labelPremium.Text = "You´re not an Admin Yet! Update to Admin to be able to Add Songs and Videos!";
+                                        comboBoxOpcionesUsuario.Text = "Change Admin Attribute";
+                                    }
+                                    if (data.Administrador == "True")
+                                    {
+                                        labelInsertTitle.Visible = false;
+                                        labelPremium.Text = "You´re an Admin!";
+                                    }
+
+                                }
+                            }
+                            labelCambio.Text = "Would you like to be Admin?";
+                            checkBoxSi.Text = "Yes";
+                            checkBoxNo.Text = "No";*/
+
+                        }
+                        
+                        if (value.Administrador == "True")
+                        {
+                            string path = textBoxPath.Text;
+                            string titulo_Video = textBoxNombreCancion.Text;
+                            string sourcePath = path;
+                            string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Video");
+                            string destPath = System.IO.Path.Combine(targetPath, titulo_Video + ".mp4");
+                            System.IO.File.Copy(sourcePath, destPath, true);
+                            FileAttributes attributes = File.GetAttributes(sourcePath);
+                            File.SetAttributes(destPath, attributes);
+                            MessageBox.Show("You´ve Successfully Added a Video!");
+                            textBoxPath.Text = "";
+                            labelPath.Visible = false;
+                            labelInsertTitle.Visible = false;
+                            textBoxNombreCancion.Text = "";
+                            textBoxNombreCancion.Visible = false;
+                            textBoxPath.Visible = false;
+                            panelCambiarOpcionesUsuario.Visible = false;
+                            labelPremium.Visible = false;
+                        }
+                    }
+                }
             }
             if (comboBoxOpcionesUsuario.Text == "Change Admin Attribute")
             {
