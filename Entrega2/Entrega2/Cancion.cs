@@ -82,9 +82,16 @@ namespace Entrega2
             {
                 this.duration = Convert.ToString(song.Properties.Duration.Seconds);
             }
+            try
+            {
+                MemoryStream ms = new MemoryStream(song.Tag.Pictures[0].Data.Data);
+                this.Custom_image = Image.FromStream(ms);
+            }
+            catch (Exception ex)
+            {
 
-            MemoryStream ms = new MemoryStream(song.Tag.Pictures[0].Data.Data);
-            this.Custom_image = Image.FromStream(ms);
+            }
+           
 
 
 
