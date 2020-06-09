@@ -127,7 +127,7 @@
             this.ProgressBarSong.Value = 0;
             this.ProgressBarSong.Scroll += new System.EventHandler(this.ProgressBarSong_Scroll_1);
             // 
-<<<<<<< HEAD
+
             // pbPlayStop
             // 
             this.pbPlayStop.BackColor = System.Drawing.Color.Transparent;
@@ -151,8 +151,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-=======
->>>>>>> 71f05affa25c367310a5468b6e427ab5a9d46365
+
             // PlayerBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
