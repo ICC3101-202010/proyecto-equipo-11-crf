@@ -389,8 +389,14 @@ namespace Spotflix
 
         private void buttonPlay_Click_1(object sender, EventArgs e)
         {
-            Form1.VideoPlayer.Show();
-            Form1.Finderr.Hide();
+            foreach(Cancion can in Form1.Reproductor.Library())
+            {
+                if (comboBoxFound.Text == can.Titulo_Cancion)
+                {
+                    Form1.Player.URL = can.path;
+                    Form1.Player.controls.play();
+                }
+            }
         }
 
         private void buttonMayor_Click(object sender, EventArgs e)
