@@ -93,5 +93,11 @@ namespace SporflixWF
         {
             axWindowsMediaPlayer1.Ctlcontrols.stop();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            panelPlayVideo.Visible = false;
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+        }
     }
 }
