@@ -158,6 +158,7 @@ namespace Spotflix
 
                     }
                 }
+                
 
 
                 panelButttons.Visible = false;
@@ -166,6 +167,11 @@ namespace Spotflix
                 panelFinderUser.Visible = true;
 
 
+            }
+            else if (comboBoxFind.Text == "By Rating")
+            {
+                panelByRating.Visible = true;
+                panelMostrar.Visible = true;
             }
         }
 
@@ -385,6 +391,45 @@ namespace Spotflix
         {
             Form1.VideoPlayer.Show();
             Form1.Finderr.Hide();
+        }
+
+        private void buttonMayor_Click(object sender, EventArgs e)
+        {
+            List<Cancion> ByRating = new List<Cancion>();
+            foreach (Cancion can in Global.allSongs)
+            {
+                if (can.Rating > Int32.Parse(textBoxFind.Text))
+                {
+                    ByRating.Add(can);
+                    comboBoxFound.Items.Add(can.Titulo_Cancion);
+                }
+            }
+        }
+
+        private void buttonIgual_Click(object sender, EventArgs e)
+        {
+            List<Cancion> ByRating = new List<Cancion>();
+            foreach (Cancion can in Global.allSongs)
+            {
+                if (can.Rating ==Int32.Parse(textBoxFind.Text))
+                {
+                    ByRating.Add(can);
+                    comboBoxFound.Items.Add(can.Titulo_Cancion);
+                }
+            }
+        }
+
+        private void buttonMenor_Click(object sender, EventArgs e)
+        {
+            List<Cancion> ByRating = new List<Cancion>();
+            foreach (Cancion can in Global.allSongs)
+            {
+                if (can.Rating < Int32.Parse(textBoxFind.Text))
+                {
+                    ByRating.Add(can);
+                    comboBoxFound.Items.Add(can.Titulo_Cancion);
+                }
+            }
         }
     }
 }

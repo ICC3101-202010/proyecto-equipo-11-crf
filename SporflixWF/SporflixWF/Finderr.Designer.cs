@@ -39,6 +39,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxUsuarios = new System.Windows.Forms.ComboBox();
             this.panelMostrar = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBoxFound = new System.Windows.Forms.ComboBox();
+            this.panelRate = new System.Windows.Forms.Panel();
+            this.labelRate = new System.Windows.Forms.Label();
+            this.buttonAccept = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxRate = new System.Windows.Forms.TextBox();
+            this.panelMetadata = new System.Windows.Forms.Panel();
+            this.labelMetadata = new System.Windows.Forms.Label();
+            this.listBoxMetadata = new System.Windows.Forms.ListBox();
             this.panelButttons = new System.Windows.Forms.Panel();
             this.buttonPlay = new System.Windows.Forms.Button();
             this.labelFavorite = new System.Windows.Forms.Label();
@@ -47,26 +57,22 @@
             this.buttonDownload = new System.Windows.Forms.Button();
             this.labelDonload = new System.Windows.Forms.Label();
             this.buttonMetadata = new System.Windows.Forms.Button();
-            this.panelRate = new System.Windows.Forms.Panel();
-            this.labelRate = new System.Windows.Forms.Label();
-            this.buttonAccept = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxRate = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.comboBoxFound = new System.Windows.Forms.ComboBox();
-            this.panelMetadata = new System.Windows.Forms.Panel();
-            this.labelMetadata = new System.Windows.Forms.Label();
-            this.listBoxMetadata = new System.Windows.Forms.ListBox();
+            this.panelByRating = new System.Windows.Forms.Panel();
+            this.buttonMayor = new System.Windows.Forms.Button();
+            this.buttonIgual = new System.Windows.Forms.Button();
+            this.buttonMenor = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelFinderUser.SuspendLayout();
             this.panelMostrar.SuspendLayout();
-            this.panelButttons.SuspendLayout();
             this.panelRate.SuspendLayout();
             this.panelMetadata.SuspendLayout();
+            this.panelButttons.SuspendLayout();
+            this.panelByRating.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelByRating);
             this.panel1.Controls.Add(this.buttonBack);
             this.panel1.Controls.Add(this.textBoxFind);
             this.panel1.Controls.Add(this.buttonSearch);
@@ -117,7 +123,8 @@
             "Album",
             "Top Streamed",
             "Top Rated",
-            "User"});
+            "User",
+            "By Rating"});
             this.comboBoxFind.Location = new System.Drawing.Point(10, 88);
             this.comboBoxFind.Name = "comboBoxFind";
             this.comboBoxFind.Size = new System.Drawing.Size(121, 21);
@@ -186,6 +193,100 @@
             this.panelMostrar.TabIndex = 1;
             this.panelMostrar.Visible = false;
             this.panelMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMostrar_Paint);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 244);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.TabIndex = 9;
+            // 
+            // comboBoxFound
+            // 
+            this.comboBoxFound.FormattingEnabled = true;
+            this.comboBoxFound.Location = new System.Drawing.Point(16, 45);
+            this.comboBoxFound.Name = "comboBoxFound";
+            this.comboBoxFound.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxFound.TabIndex = 6;
+            // 
+            // panelRate
+            // 
+            this.panelRate.Controls.Add(this.labelRate);
+            this.panelRate.Controls.Add(this.buttonAccept);
+            this.panelRate.Controls.Add(this.label1);
+            this.panelRate.Controls.Add(this.textBoxRate);
+            this.panelRate.Location = new System.Drawing.Point(9, 208);
+            this.panelRate.Name = "panelRate";
+            this.panelRate.Size = new System.Drawing.Size(311, 112);
+            this.panelRate.TabIndex = 7;
+            this.panelRate.Visible = false;
+            // 
+            // labelRate
+            // 
+            this.labelRate.AutoSize = true;
+            this.labelRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelRate.Location = new System.Drawing.Point(25, 73);
+            this.labelRate.Name = "labelRate";
+            this.labelRate.Size = new System.Drawing.Size(105, 13);
+            this.labelRate.TabIndex = 6;
+            this.labelRate.Text = "Insert a valid number";
+            this.labelRate.Visible = false;
+            // 
+            // buttonAccept
+            // 
+            this.buttonAccept.Location = new System.Drawing.Point(180, 30);
+            this.buttonAccept.Name = "buttonAccept";
+            this.buttonAccept.Size = new System.Drawing.Size(75, 23);
+            this.buttonAccept.TabIndex = 5;
+            this.buttonAccept.Text = "Accept";
+            this.buttonAccept.UseVisualStyleBackColor = true;
+            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(25, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Stars (0-5)";
+            // 
+            // textBoxRate
+            // 
+            this.textBoxRate.Location = new System.Drawing.Point(28, 33);
+            this.textBoxRate.Name = "textBoxRate";
+            this.textBoxRate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRate.TabIndex = 0;
+            // 
+            // panelMetadata
+            // 
+            this.panelMetadata.Controls.Add(this.labelMetadata);
+            this.panelMetadata.Controls.Add(this.listBoxMetadata);
+            this.panelMetadata.Location = new System.Drawing.Point(19, 193);
+            this.panelMetadata.Name = "panelMetadata";
+            this.panelMetadata.Size = new System.Drawing.Size(323, 128);
+            this.panelMetadata.TabIndex = 7;
+            this.panelMetadata.Visible = false;
+            this.panelMetadata.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // labelMetadata
+            // 
+            this.labelMetadata.AutoSize = true;
+            this.labelMetadata.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelMetadata.Location = new System.Drawing.Point(9, 4);
+            this.labelMetadata.Name = "labelMetadata";
+            this.labelMetadata.Size = new System.Drawing.Size(55, 13);
+            this.labelMetadata.TabIndex = 0;
+            this.labelMetadata.Text = "Metadada";
+            // 
+            // listBoxMetadata
+            // 
+            this.listBoxMetadata.FormattingEnabled = true;
+            this.listBoxMetadata.Location = new System.Drawing.Point(20, 20);
+            this.listBoxMetadata.Name = "listBoxMetadata";
+            this.listBoxMetadata.Size = new System.Drawing.Size(279, 95);
+            this.listBoxMetadata.TabIndex = 1;
             // 
             // panelButttons
             // 
@@ -274,99 +375,46 @@
             this.buttonMetadata.UseVisualStyleBackColor = true;
             this.buttonMetadata.Click += new System.EventHandler(this.buttonMetadata_Click);
             // 
-            // panelRate
+            // panelByRating
             // 
-            this.panelRate.Controls.Add(this.labelRate);
-            this.panelRate.Controls.Add(this.buttonAccept);
-            this.panelRate.Controls.Add(this.label1);
-            this.panelRate.Controls.Add(this.textBoxRate);
-            this.panelRate.Location = new System.Drawing.Point(9, 208);
-            this.panelRate.Name = "panelRate";
-            this.panelRate.Size = new System.Drawing.Size(311, 112);
-            this.panelRate.TabIndex = 7;
-            this.panelRate.Visible = false;
+            this.panelByRating.Controls.Add(this.buttonMenor);
+            this.panelByRating.Controls.Add(this.buttonMayor);
+            this.panelByRating.Controls.Add(this.buttonIgual);
+            this.panelByRating.Location = new System.Drawing.Point(55, 135);
+            this.panelByRating.Name = "panelByRating";
+            this.panelByRating.Size = new System.Drawing.Size(121, 37);
+            this.panelByRating.TabIndex = 6;
+            this.panelByRating.Visible = false;
             // 
-            // labelRate
+            // buttonMayor
             // 
-            this.labelRate.AutoSize = true;
-            this.labelRate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelRate.Location = new System.Drawing.Point(25, 73);
-            this.labelRate.Name = "labelRate";
-            this.labelRate.Size = new System.Drawing.Size(105, 13);
-            this.labelRate.TabIndex = 6;
-            this.labelRate.Text = "Insert a valid number";
-            this.labelRate.Visible = false;
+            this.buttonMayor.Location = new System.Drawing.Point(3, 6);
+            this.buttonMayor.Name = "buttonMayor";
+            this.buttonMayor.Size = new System.Drawing.Size(27, 28);
+            this.buttonMayor.TabIndex = 0;
+            this.buttonMayor.Text = ">";
+            this.buttonMayor.UseVisualStyleBackColor = true;
+            this.buttonMayor.Click += new System.EventHandler(this.buttonMayor_Click);
             // 
-            // buttonAccept
+            // buttonIgual
             // 
-            this.buttonAccept.Location = new System.Drawing.Point(180, 30);
-            this.buttonAccept.Name = "buttonAccept";
-            this.buttonAccept.Size = new System.Drawing.Size(75, 23);
-            this.buttonAccept.TabIndex = 5;
-            this.buttonAccept.Text = "Accept";
-            this.buttonAccept.UseVisualStyleBackColor = true;
-            this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
+            this.buttonIgual.Location = new System.Drawing.Point(49, 5);
+            this.buttonIgual.Name = "buttonIgual";
+            this.buttonIgual.Size = new System.Drawing.Size(27, 29);
+            this.buttonIgual.TabIndex = 1;
+            this.buttonIgual.Text = "=";
+            this.buttonIgual.UseVisualStyleBackColor = true;
+            this.buttonIgual.Click += new System.EventHandler(this.buttonIgual_Click);
             // 
-            // label1
+            // buttonMenor
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(25, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Stars (0-5)";
-            // 
-            // textBoxRate
-            // 
-            this.textBoxRate.Location = new System.Drawing.Point(28, 33);
-            this.textBoxRate.Name = "textBoxRate";
-            this.textBoxRate.Size = new System.Drawing.Size(100, 20);
-            this.textBoxRate.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 244);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
-            this.flowLayoutPanel1.TabIndex = 9;
-            // 
-            // comboBoxFound
-            // 
-            this.comboBoxFound.FormattingEnabled = true;
-            this.comboBoxFound.Location = new System.Drawing.Point(16, 45);
-            this.comboBoxFound.Name = "comboBoxFound";
-            this.comboBoxFound.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxFound.TabIndex = 6;
-            // 
-            // panelMetadata
-            // 
-            this.panelMetadata.Controls.Add(this.labelMetadata);
-            this.panelMetadata.Controls.Add(this.listBoxMetadata);
-            this.panelMetadata.Location = new System.Drawing.Point(19, 193);
-            this.panelMetadata.Name = "panelMetadata";
-            this.panelMetadata.Size = new System.Drawing.Size(323, 128);
-            this.panelMetadata.TabIndex = 7;
-            this.panelMetadata.Visible = false;
-            this.panelMetadata.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // labelMetadata
-            // 
-            this.labelMetadata.AutoSize = true;
-            this.labelMetadata.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelMetadata.Location = new System.Drawing.Point(9, 4);
-            this.labelMetadata.Name = "labelMetadata";
-            this.labelMetadata.Size = new System.Drawing.Size(55, 13);
-            this.labelMetadata.TabIndex = 0;
-            this.labelMetadata.Text = "Metadada";
-            // 
-            // listBoxMetadata
-            // 
-            this.listBoxMetadata.FormattingEnabled = true;
-            this.listBoxMetadata.Location = new System.Drawing.Point(20, 20);
-            this.listBoxMetadata.Name = "listBoxMetadata";
-            this.listBoxMetadata.Size = new System.Drawing.Size(279, 95);
-            this.listBoxMetadata.TabIndex = 1;
+            this.buttonMenor.Location = new System.Drawing.Point(91, 5);
+            this.buttonMenor.Name = "buttonMenor";
+            this.buttonMenor.Size = new System.Drawing.Size(27, 29);
+            this.buttonMenor.TabIndex = 2;
+            this.buttonMenor.Text = "<";
+            this.buttonMenor.UseVisualStyleBackColor = true;
+            this.buttonMenor.Click += new System.EventHandler(this.buttonMenor_Click);
             // 
             // Finderr
             // 
@@ -374,8 +422,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelFinderUser);
             this.Controls.Add(this.panelMostrar);
+            this.Controls.Add(this.panelFinderUser);
             this.Name = "Finderr";
             this.Size = new System.Drawing.Size(650, 352);
             this.panel1.ResumeLayout(false);
@@ -383,12 +431,13 @@
             this.panelFinderUser.ResumeLayout(false);
             this.panelFinderUser.PerformLayout();
             this.panelMostrar.ResumeLayout(false);
-            this.panelButttons.ResumeLayout(false);
-            this.panelButttons.PerformLayout();
             this.panelRate.ResumeLayout(false);
             this.panelRate.PerformLayout();
             this.panelMetadata.ResumeLayout(false);
             this.panelMetadata.PerformLayout();
+            this.panelButttons.ResumeLayout(false);
+            this.panelButttons.PerformLayout();
+            this.panelByRating.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -426,6 +475,9 @@
         private System.Windows.Forms.Button buttonFollow;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxUsuarios;
-
+        private System.Windows.Forms.Panel panelByRating;
+        private System.Windows.Forms.Button buttonMenor;
+        private System.Windows.Forms.Button buttonMayor;
+        private System.Windows.Forms.Button buttonIgual;
     }
 }
