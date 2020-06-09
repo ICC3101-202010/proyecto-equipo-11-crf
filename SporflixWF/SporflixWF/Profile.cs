@@ -166,14 +166,26 @@ namespace Spotflix
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
             stream3.Close();
-
+            
             foreach (Usuario value in registrados)
             {
                 if (nombre[0] == value.Username)
                 {
-                    labelFollowing.Text = "Following:    " + value.following;
-                    labelPlaylist.Text =  "Playlists:    "+ Global.UserNow.My_Playlist.Count();
-                    labelFollowers.Text = "Followers:    " + value.followers;
+                    try
+                    {
+                        panelImagenPerfil.BackgroundImage = System.Drawing.Image.FromFile(value.FotoPerfil);
+                        labelFollowing.Text = "Following:    " + value.following;
+                        labelPlaylist.Text = "Playlists:    " + Global.UserNow.My_Playlist.Count();
+                        labelFollowers.Text = "Followers:    " + value.followers;
+                    }
+                    catch (Exception)
+                    {
+
+                        labelFollowing.Text = "Following:    " + value.following;
+                        labelPlaylist.Text = "Playlists:    " + Global.UserNow.My_Playlist.Count();
+                        labelFollowers.Text = "Followers:    " + value.followers;
+                    }
+                    
                 }
             }
             tNombreProfile.Text = nombre[0];
@@ -238,6 +250,36 @@ namespace Spotflix
                         LabelIngresarNuevo.Text = "Your Account is:   " + value.privacidad + "\n"+ "\n" + "Select the new Privacy";
                     }
                 }        
+            }
+            if (comboBoxEditarProfile.Text == "Change Profile Picture")
+            {
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<string> nombre = formatter.Deserialize(stream) as List<string>;
+                stream.Close();
+                IFormatter formatter3 = new BinaryFormatter();
+                Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
+                stream3.Close();
+                if (openFoto.ShowDialog() == DialogResult.OK)
+                {
+
+                    // codigo para abrir y leer el archivo
+                    var pathFoto = openFoto.FileName;
+                    panelImagenPerfil.BackgroundImage = System.Drawing.Image.FromFile(pathFoto);
+                    foreach (Usuario value in registrados)
+                    {
+                        if (nombre[0] == value.Username)
+                        {
+                            value.FotoPerfil = pathFoto;
+                            IFormatter formatter1 = new BinaryFormatter();
+                            Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                            formatter1.Serialize(stream1, registrados);
+                            stream1.Close();
+                            MessageBox.Show("Haz Cambiado con Exito tu Foto de Perfil!");
+                        }
+                    }
+                }
             }
         }
 

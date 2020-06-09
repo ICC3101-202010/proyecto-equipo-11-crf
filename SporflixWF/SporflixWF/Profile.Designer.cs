@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             this.bAtrasProfile = new System.Windows.Forms.Button();
             this.tNombreProfile = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelImagenPerfil = new System.Windows.Forms.Panel();
             this.bEditProfile = new System.Windows.Forms.Button();
             this.bUserOptions = new System.Windows.Forms.Button();
             this.pIntroProfile = new System.Windows.Forms.Panel();
@@ -69,6 +69,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxOpcionesUsuario = new System.Windows.Forms.ComboBox();
             this.bAtrasOpciones = new System.Windows.Forms.Button();
+            this.openFoto = new System.Windows.Forms.OpenFileDialog();
             this.pIntroProfile.SuspendLayout();
             this.pEditarProfile.SuspendLayout();
             this.panelEditarNombre.SuspendLayout();
@@ -99,14 +100,14 @@
             this.tNombreProfile.Text = "Nombre Usuario";
             this.tNombreProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel1
+            // panelImagenPerfil
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Location = new System.Drawing.Point(256, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(123, 119);
-            this.panel1.TabIndex = 2;
+            this.panelImagenPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelImagenPerfil.BackgroundImage")));
+            this.panelImagenPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImagenPerfil.Location = new System.Drawing.Point(256, 48);
+            this.panelImagenPerfil.Name = "panelImagenPerfil";
+            this.panelImagenPerfil.Size = new System.Drawing.Size(123, 119);
+            this.panelImagenPerfil.TabIndex = 2;
             // 
             // bEditProfile
             // 
@@ -135,7 +136,7 @@
             this.pIntroProfile.Controls.Add(this.bAtrasIntroProfile);
             this.pIntroProfile.Location = new System.Drawing.Point(0, 0);
             this.pIntroProfile.Name = "pIntroProfile";
-            this.pIntroProfile.Size = new System.Drawing.Size(631, 341);
+            this.pIntroProfile.Size = new System.Drawing.Size(631, 364);
             this.pIntroProfile.TabIndex = 5;
             // 
             // label1
@@ -211,7 +212,7 @@
             this.pEditarProfile.Controls.Add(this.comboBoxEditarProfile);
             this.pEditarProfile.Location = new System.Drawing.Point(3, 0);
             this.pEditarProfile.Name = "pEditarProfile";
-            this.pEditarProfile.Size = new System.Drawing.Size(622, 338);
+            this.pEditarProfile.Size = new System.Drawing.Size(625, 361);
             this.pEditarProfile.TabIndex = 3;
             this.pEditarProfile.Visible = false;
             // 
@@ -224,7 +225,7 @@
             this.panelEditarNombre.Controls.Add(this.textBoxIngresarNuevo);
             this.panelEditarNombre.Location = new System.Drawing.Point(56, 48);
             this.panelEditarNombre.Name = "panelEditarNombre";
-            this.panelEditarNombre.Size = new System.Drawing.Size(551, 289);
+            this.panelEditarNombre.Size = new System.Drawing.Size(506, 286);
             this.panelEditarNombre.TabIndex = 4;
             this.panelEditarNombre.Visible = false;
             // 
@@ -315,7 +316,8 @@
             this.comboBoxEditarProfile.Items.AddRange(new object[] {
             "Change Username",
             "Change Password",
-            "Change Privacy"});
+            "Change Privacy",
+            "Change Profile Picture"});
             this.comboBoxEditarProfile.Location = new System.Drawing.Point(173, 170);
             this.comboBoxEditarProfile.Name = "comboBoxEditarProfile";
             this.comboBoxEditarProfile.Size = new System.Drawing.Size(238, 21);
@@ -331,7 +333,7 @@
             this.panelOpcionesUsuario.Controls.Add(this.bAtrasOpciones);
             this.panelOpcionesUsuario.Location = new System.Drawing.Point(0, 0);
             this.panelOpcionesUsuario.Name = "panelOpcionesUsuario";
-            this.panelOpcionesUsuario.Size = new System.Drawing.Size(628, 341);
+            this.panelOpcionesUsuario.Size = new System.Drawing.Size(625, 358);
             this.panelOpcionesUsuario.TabIndex = 3;
             this.panelOpcionesUsuario.Visible = false;
             // 
@@ -512,6 +514,11 @@
             this.bAtrasOpciones.UseVisualStyleBackColor = true;
             this.bAtrasOpciones.Click += new System.EventHandler(this.bAtrasOpciones_Click);
             // 
+            // openFoto
+            // 
+            this.openFoto.FileName = "openFileDialog1";
+            this.openFoto.Filter = "Archivos PNG (*.png)|*.png";
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,11 +532,11 @@
             this.Controls.Add(this.pIntroProfile);
             this.Controls.Add(this.bUserOptions);
             this.Controls.Add(this.bEditProfile);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelImagenPerfil);
             this.Controls.Add(this.tNombreProfile);
             this.Controls.Add(this.bAtrasProfile);
             this.Name = "Profile";
-            this.Size = new System.Drawing.Size(634, 341);
+            this.Size = new System.Drawing.Size(634, 364);
             this.Load += new System.EventHandler(this.Profile_Load);
             this.pIntroProfile.ResumeLayout(false);
             this.pIntroProfile.PerformLayout();
@@ -550,7 +557,7 @@
 
         private System.Windows.Forms.Button bAtrasProfile;
         private System.Windows.Forms.TextBox tNombreProfile;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelImagenPerfil;
         private System.Windows.Forms.Button bEditProfile;
         private System.Windows.Forms.Button bUserOptions;
         private System.Windows.Forms.Panel pIntroProfile;
@@ -588,5 +595,6 @@
         private System.Windows.Forms.Label labelPath;
         private System.Windows.Forms.Label labelInsertTitle;
         private System.Windows.Forms.TextBox textBoxNombreCancion;
+        private System.Windows.Forms.OpenFileDialog openFoto;
     }
 }

@@ -29,6 +29,7 @@ namespace Entrega2
         public string artista1;
         public string artista2;
         public string artista3;
+        public string FotoPerfil;
 
 
         public List<Cancion> canciones_favoritas=new List<Cancion>();
