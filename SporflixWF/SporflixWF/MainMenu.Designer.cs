@@ -50,9 +50,10 @@
             this.labelGenre = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelplaylit = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelHomeTitle = new System.Windows.Forms.Label();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
@@ -61,6 +62,7 @@
             this.panelSongOptions.SuspendLayout();
             this.panelInfoSong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLoadingMainMenu
@@ -313,16 +315,6 @@
             this.panelplaylit.TabIndex = 6;
             this.panelplaylit.Visible = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(643, 40);
-            this.panel2.TabIndex = 2;
-            // 
             // labelLoading
             // 
             this.labelLoading.AutoSize = true;
@@ -347,6 +339,28 @@
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(38)))), ((int)(((byte)(55)))));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Controls.Add(this.labelHomeTitle);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(643, 40);
+            this.panel2.TabIndex = 2;
+            // 
+            // labelHomeTitle
+            // 
+            this.labelHomeTitle.AutoSize = true;
+            this.labelHomeTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHomeTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelHomeTitle.Location = new System.Drawing.Point(256, 7);
+            this.labelHomeTitle.Name = "labelHomeTitle";
+            this.labelHomeTitle.Size = new System.Drawing.Size(100, 30);
+            this.labelHomeTitle.TabIndex = 1;
+            this.labelHomeTitle.Text = "H o m e";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,6 +381,8 @@
             this.panelSongOptions.ResumeLayout(false);
             this.panelInfoSong.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -377,7 +393,6 @@
         private System.Windows.Forms.PictureBox pictureBoxLoading;
         private System.Windows.Forms.Label labelLoading;
         private System.Windows.Forms.Panel panelMainmenu;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelTestSOng;
         private System.Windows.Forms.PictureBox pbTestSong;
         private System.Windows.Forms.Label labelNameSong;
@@ -397,5 +412,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelplaylit;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelHomeTitle;
     }
 }

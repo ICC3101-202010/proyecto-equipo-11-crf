@@ -118,6 +118,7 @@ namespace Spotflix
             Librarymenu = library1;
             VideoPlayer = videoPlayer2;
             Notpremium = notPremium1;
+            
             Welcome.BringToFront();
             Notpremium.Hide();
             VideoPlayer.Hide();

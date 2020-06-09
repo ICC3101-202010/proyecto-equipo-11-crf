@@ -181,7 +181,7 @@ namespace Spotflix
                     Form1.Player.URL =song.path;
                     Form1.Player.controls.play();
                     Form1.Actual = song;
-                    
+                    Form1.ProgresBar.Show();
 
                 };
                 song_panel.MouseDown += delegate (object sender, MouseEventArgs e)
