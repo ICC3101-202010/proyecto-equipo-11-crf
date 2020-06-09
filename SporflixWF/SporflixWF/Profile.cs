@@ -622,10 +622,10 @@ namespace Spotflix
                 string titulo_Cancion = textBoxNombreCancion.Text;
                 string sourcePath = path;
                 string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Biblioteca");
-                
-                
                 string destPath = System.IO.Path.Combine(targetPath, titulo_Cancion+".mp3");
                 System.IO.File.Copy(sourcePath, destPath, true);
+                FileAttributes attributes = File.GetAttributes(sourcePath);
+                File.SetAttributes(destPath, attributes);
                 MessageBox.Show("You´ve Successfully Added a Song!");
                 labelPath.Visible = false;
                 labelInsertTitle.Visible = false;
@@ -644,18 +644,10 @@ namespace Spotflix
                 string titulo_Video = textBoxNombreCancion.Text;
                 string sourcePath = path;
                 string targetPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../Video");
-<<<<<<< HEAD
-                string destPath = System.IO.Path.Combine(targetPath, titulo_Video);
-=======
-                string ruta = System.IO.Path.Combine(targetPath, "usuario.Username");
-                if (!System.IO.Directory.Exists(ruta))
-                {
-                    Console.WriteLine("Creando Carpeta Usuario");
-                    DirectoryInfo di = System.IO.Directory.CreateDirectory(ruta);
-                }
                 string destPath = System.IO.Path.Combine(targetPath, titulo_Video+".mp4");
->>>>>>> d2f564f5ed63dcc6bf5dfb04289856aa8b194160
                 System.IO.File.Copy(sourcePath, destPath, true);
+                FileAttributes attributes=  File.GetAttributes(sourcePath);
+                File.SetAttributes(destPath, attributes);
                 MessageBox.Show("You´ve Successfully Added a Video!");
                 textBoxPath.Text = "";
                 labelPath.Visible = false;

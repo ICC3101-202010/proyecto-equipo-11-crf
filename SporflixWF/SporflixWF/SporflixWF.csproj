@@ -111,6 +111,7 @@
     <Compile Include="Library.Designer.cs">
       <DependentUpon>Library.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibreriaMedia.cs" />
     <Compile Include="Loading.cs">
       <SubType>UserControl</SubType>
     </Compile>

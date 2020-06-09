@@ -147,6 +147,8 @@ namespace SporflixWF
             this.buttonHome.TabIndex = 7;
             this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            MainMenu mainMenu = new MainMenu();
+            this.buttonHome.Click += new System.EventHandler(mainMenu.buttonHome_Click1);
             // 
             // flowLayoutPanel5
             // 
