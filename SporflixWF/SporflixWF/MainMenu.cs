@@ -310,8 +310,28 @@ namespace Spotflix
                     }
 
                 };
+                song_favorite.Click += delegate (object sender, EventArgs e) 
+                {
 
+                    if (Global.UserNow.Canciones_favoritas.Any() == false) 
+                    {
+                        Playlist playlist_fav = new Playlist("✪Favorite✪", Global.UserNow);
+                        playlist_fav.agregarCancionPlaylist(song);
+                        Global.UserNow.My_Playlist.Add(playlist_fav);
+                    }
+                    else 
+                    {
+                        Global.UserNow.Canciones_favoritas.Add(song);
+
+
+                    }
+                    
                 
+                
+                };
+
+
+
             }
             
             
