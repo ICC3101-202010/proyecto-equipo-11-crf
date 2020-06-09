@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.IO;
 
 namespace Spotflix
 {
     public partial class PlayerBar : UserControl
     {
         WindowsMediaPlayer player = Form1.Player;
+        int status = 0;
         public PlayerBar()
         {
             InitializeComponent();
@@ -83,6 +85,28 @@ namespace Spotflix
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             player.controls.next();
+        }
+
+        private void pbPlayStop_Click(object sender, EventArgs e)
+        {
+            //int status = 0;
+            if (status == 0)
+            {
+                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/pausa.png"));
+                pbPlayStop.Image = Image.FromFile(path);
+                player.controls.pause();
+                status = 1;
+            }
+            else if (status == 1) 
+            {
+                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/video (1)"));
+                pbPlayStop.Image = Image.FromFile(path);
+                player.controls.play();
+                status = 0;
+
+            }
+            RefreshSongStatus();
+            
         }
     }
 }
