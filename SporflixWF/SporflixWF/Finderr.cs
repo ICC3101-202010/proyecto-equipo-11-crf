@@ -329,22 +329,24 @@ namespace Spotflix
                 {
                     if (elegido == data.Username)
                     {
-                        Global.UserNow.SeguidosUsuarios.Add(data);
-                        int a = Convert.ToInt32(data.following);
+                        //Global.UserNow.SeguidosUsuarios.Add(data);
+                        
+                        int a = Convert.ToInt32(data.followers);
                         a += 1;
                         string b = Convert.ToString(a);
-                        data.following = b;
+                        
+                        data.followers = b;
                         foreach (Usuario value in registrados)
                         {
                             if (nombre[0] == value.Username)
                             {
-                                Global.UserNow.MeSiguenUsuarios1.Add(value);
-                                a = Convert.ToInt32(value.followers);
+                                //Global.UserNow.MeSiguenUsuarios1.Add(value);
+                                a = Convert.ToInt32(value.following);
                                 a += 1;
 
                                 b = Convert.ToString(a);
-                                value.followers = b;
-
+                                
+                                value.following = b;
                             }
 
                         }
