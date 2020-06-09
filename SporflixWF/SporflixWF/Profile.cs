@@ -40,6 +40,7 @@ namespace Spotflix
 
         public void buttonProfile_Click_1(object sender, EventArgs e)
         {
+            //MessageBox.Show("entre");
             pIntroProfile.Visible = true;
             pIntroProfile.BringToFront();
             IFormatter formatter = new BinaryFormatter();
@@ -378,6 +379,8 @@ namespace Spotflix
             }
             if (comboBoxOpcionesUsuario.Text == "Change Membership")
             {
+                textBoxNombreCancion.Visible = false;
+                labelInsertTitle.Visible = false;
                 panelCambiarOpcionesUsuario.Visible = true;
                 labelCambio.Visible = true;
                 checkBoxNo.Visible = true;
@@ -466,6 +469,8 @@ namespace Spotflix
             }
             if (comboBoxOpcionesUsuario.Text == "Change Admin Attribute")
             {
+                textBoxNombreCancion.Visible = false;
+                labelInsertTitle.Visible = false;
                 panelCambiarOpcionesUsuario.Visible = true;
                 labelCambio.Visible = true;
                 checkBoxNo.Visible = true;

@@ -189,7 +189,9 @@ namespace SporflixWF
             this.buttonProfile.TabIndex = 0;
             this.buttonProfile.Text = "Profile";
             this.buttonProfile.UseVisualStyleBackColor = false;
+            Profile profile = new Profile();
             this.buttonProfile.Click += new System.EventHandler(this.buttonProfile_Click_1);
+            this.buttonProfile.Click += new System.EventHandler(profile.buttonProfile_Click_1);
             // 
             // profile
             // 
