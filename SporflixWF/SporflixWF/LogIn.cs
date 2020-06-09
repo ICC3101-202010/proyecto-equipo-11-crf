@@ -159,7 +159,7 @@ namespace Spotflix
                     Form1.Librarymenu.BringToFront();
                     Form1.MainMenu.Show();
                     Form1.MainMenu.BringToFront();
-                    Form1.ProgresBar.Show();
+                    //Form1.ProgresBar.Show();
                     Form1.Menubar.Show();
                     Form1.ProgresBar.BringToFront();
                     Form1.Menubar.BringToFront();
