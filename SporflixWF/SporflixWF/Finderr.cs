@@ -395,6 +395,7 @@ namespace Spotflix
 
         private void buttonMayor_Click(object sender, EventArgs e)
         {
+            comboBoxFound.Items.Clear();
             List<Cancion> ByRating = new List<Cancion>();
             foreach (Cancion can in Global.allSongs)
             {
@@ -408,6 +409,7 @@ namespace Spotflix
 
         private void buttonIgual_Click(object sender, EventArgs e)
         {
+            comboBoxFound.Items.Clear();
             List<Cancion> ByRating = new List<Cancion>();
             foreach (Cancion can in Global.allSongs)
             {
@@ -421,6 +423,7 @@ namespace Spotflix
 
         private void buttonMenor_Click(object sender, EventArgs e)
         {
+            comboBoxFound.Items.Clear();
             List<Cancion> ByRating = new List<Cancion>();
             foreach (Cancion can in Global.allSongs)
             {
