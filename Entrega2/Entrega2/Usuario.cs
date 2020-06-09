@@ -41,7 +41,7 @@ namespace Entrega2
         private List<string> seguidosUsuarios;
         private List<Playlist> seguidosPlaylist;
         private List<Album> seguidosAlbum;
-        private List<Banda> seguidosBanda;
+        private List<string> seguidosBanda=new List<string>;
         private List<Actor> seguidosActor;
 
         
@@ -60,7 +60,7 @@ namespace Entrega2
         public List<string> SeguidosUsuarios { get => seguidosUsuarios; set => seguidosUsuarios = value; }
         internal List<Playlist> SeguidosPlaylist { get => seguidosPlaylist; set => seguidosPlaylist = value; }
         internal List<Album> SeguidosAlbum { get => seguidosAlbum; set => seguidosAlbum = value; }
-        internal List<Banda> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
+        internal List<string> SeguidosBanda { get => seguidosBanda; set => seguidosBanda = value; }
         internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
         public List<Playlist> My_Playlist { get => my_Playlist; set => my_Playlist = value; }
 
