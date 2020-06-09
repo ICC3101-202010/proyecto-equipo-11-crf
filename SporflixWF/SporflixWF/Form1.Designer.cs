@@ -95,6 +95,9 @@ namespace Spotflix
             // 
             // playerBar1
             // 
+            this.playerBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.playerBar1.Location = new System.Drawing.Point(0, 343);
             this.playerBar1.Name = "playerBar1";
             this.playerBar1.Size = new System.Drawing.Size(644, 35);
@@ -103,9 +106,10 @@ namespace Spotflix
             // menuBar1
             // 
             this.menuBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
+            this.menuBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuBar1.Location = new System.Drawing.Point(0, 378);
             this.menuBar1.Name = "menuBar1";
-            this.menuBar1.Size = new System.Drawing.Size(663, 58);
+            this.menuBar1.Size = new System.Drawing.Size(641, 58);
             this.menuBar1.TabIndex = 8;
             this.menuBar1.Load += new System.EventHandler(this.menuBar1_Load);
             // 
@@ -162,6 +166,9 @@ namespace Spotflix
             // 
             // finderr1
             // 
+            this.finderr1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.finderr1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.finderr1.Location = new System.Drawing.Point(0, 0);
             this.finderr1.Name = "finderr1";
@@ -177,11 +184,14 @@ namespace Spotflix
             this.mixer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mixer2.BackgroundImage")));
             this.mixer2.Location = new System.Drawing.Point(0, 0);
             this.mixer2.Name = "mixer2";
-            this.mixer2.Size = new System.Drawing.Size(641, 337);
+            this.mixer2.Size = new System.Drawing.Size(641, 347);
             this.mixer2.TabIndex = 16;
             // 
             // mainMenu2
             // 
+            this.mainMenu2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mainMenu2.Location = new System.Drawing.Point(0, 0);
             this.mainMenu2.Name = "mainMenu2";
             this.mainMenu2.Size = new System.Drawing.Size(643, 347);
@@ -209,6 +219,7 @@ namespace Spotflix
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
