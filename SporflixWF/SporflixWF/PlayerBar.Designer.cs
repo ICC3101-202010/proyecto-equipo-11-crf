@@ -122,11 +122,11 @@
             this.ProgressBarSong.TickColor = System.Drawing.Color.Indigo;
             this.ProgressBarSong.TickHeight = 4;
             this.ProgressBarSong.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.ProgressBarSong.TrackerColor = System.Drawing.Color.Gray;
+            this.ProgressBarSong.TrackerColor = System.Drawing.Color.Silver;
             this.ProgressBarSong.TrackerSize = new System.Drawing.Size(8, 17);
-            this.ProgressBarSong.TrackLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProgressBarSong.TrackLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ProgressBarSong.TrackLineHeight = 3;
-            this.ProgressBarSong.TrackLineSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(93)))), ((int)(((byte)(90)))));
+            this.ProgressBarSong.TrackLineSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ProgressBarSong.Value = 0;
             this.ProgressBarSong.Scroll += new System.EventHandler(this.ProgressBarSong_Scroll_1);
             // 

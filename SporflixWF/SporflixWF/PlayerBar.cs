@@ -99,7 +99,7 @@ namespace Spotflix
             }
             else if (status == 1) 
             {
-                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/video (1)"));
+                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/video (1).png"));
                 pbPlayStop.Image = Image.FromFile(path);
                 player.controls.play();
                 status = 0;
