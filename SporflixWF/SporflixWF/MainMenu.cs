@@ -300,6 +300,7 @@ namespace Spotflix
                         Label playlist_name = new Label();
                         playlist_name.Text = playlist.NombrePlaylist;
                         playlist_name.ForeColor = Color.White;
+                        playlist_name.BackColor = Color.FromArgb(58, 31, 50);
                         playlist_list.Controls.Add(playlist_name);
                         playlist_label.Add(playlist_name);
                         playlist_name.Dock = DockStyle.Top;
