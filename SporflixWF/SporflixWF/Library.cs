@@ -19,7 +19,7 @@ namespace Spotflix
         public Library()
         {
             InitializeComponent();
-            
+
         }
 
         private void labelEmptyLibrary_Click(object sender, EventArgs e)
@@ -34,11 +34,11 @@ namespace Spotflix
 
         private void Library_Enter(object sender, EventArgs e)
         {
-            if (Global.UserNow.My_Playlist.Any() == false) 
-            { 
-            
-            
-            
+            if (Global.UserNow.My_Playlist.Any() == false)
+            {
+
+
+
             }
 
         }
@@ -122,8 +122,9 @@ namespace Spotflix
 
                 pbAddRigth.Enabled = true;
                 pbAddRigth.Visible = true;
+                panel_playlist.Click += new EventHandler(InLibrary);
             }
-            else 
+            else
             {
 
 
@@ -155,7 +156,7 @@ namespace Spotflix
                 panel_playlist.Controls.Add(pb_playlist);
                 pb_playlist.Dock = DockStyle.Top;
                 panel_playlist.Controls.Add(label_playlist);
-               // label_playlist.Dock = DockStyle.Bottom;
+                // label_playlist.Dock = DockStyle.Bottom;
 
                 panel_playlist.Dock = DockStyle.Top;
                 panelLibrary.Controls.Add(panel_playlist);
@@ -169,14 +170,14 @@ namespace Spotflix
 
                 pbAddRigth.Enabled = true;
                 pbAddRigth.Visible = true;
-
+                panel_playlist.Click += new EventHandler(InLibrary);
             }
 
-            
 
 
 
-            
+
+
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
@@ -186,7 +187,7 @@ namespace Spotflix
                 //MemoryStream ms = new MemoryStream(Convert.ToInt32(openFileDialog1.FileName));
                 //Image imagen = new Image(openFileDialog1.FileName);
                 this.actual.Imagen_personalizada = Image.FromFile(openFileDialog1.FileName);
-            
+
             }
         }
 
@@ -202,6 +203,143 @@ namespace Spotflix
             actual = playlist_end;
             panelNewPlaylist.Enabled = true;
             panelNewPlaylist.Visible = true;
+        }
+        private void InLibrary(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Enabled = true;
+            flowLayoutPanel1.Visible = true;
+            flowLayoutPanel1.Controls.Clear();
+            //panelLibrary.Visible = false;
+            foreach (Cancion song in actual.Canciones) 
+            {
+                
+                Panel song_panel = new Panel();
+                song_panel.Size = new Size(640, 67);
+                PictureBox song_image = new PictureBox();
+                song_image.Size = new Size(99, 67);
+                Label name_label = new Label();
+                Label durartion_label = new Label();
+
+                //options panels-labels
+                Panel song_options = new Panel();
+                Panel song_info_panel = new Panel();
+                Panel playlist_list = new Panel();
+                playlist_list.Enabled = false;
+                song_options.Enabled = false;
+                song_info_panel.Enabled = false;
+                song_options.Visible = false;
+                song_info_panel.Visible = false;
+                playlist_list.Visible = false;
+
+                Label song_rating = new Label();
+                Label song_Info = new Label();
+                Label song_favorite = new Label();
+                Label song_add_playlist = new Label();
+
+                Label song_Artist = new Label();
+                Label song_Genre = new Label();
+                Label song_Date = new Label();
+                Label song_Rate = new Label();
+                Label song_Album = new Label();
+                Label song_plays = new Label();
+
+                song_options.Size = new Size(200, 126);
+                song_info_panel.Size = new Size(200, 130);
+                playlist_list.Size = new Size(182, 63);
+                playlist_list.AutoScroll = true;
+                song_options.BackColor = Color.FromArgb(82, 39, 65);
+
+                //Color text labels
+                song_Info.ForeColor = Color.White;
+                song_rating.ForeColor = Color.White;
+                song_favorite.ForeColor = Color.White;
+                song_add_playlist.ForeColor = Color.White;
+
+                //Tex aling
+                song_Info.TextAlign = ContentAlignment.MiddleCenter;
+                song_rating.TextAlign = ContentAlignment.MiddleCenter;
+                song_favorite.TextAlign = ContentAlignment.MiddleCenter;
+                song_add_playlist.TextAlign = ContentAlignment.MiddleCenter;
+
+                //Text of option labels
+                song_Info.Text = "Info";
+                song_rating.Text = "Rate";
+                song_favorite.Text = "Favorite";
+                song_add_playlist.Text = "Add playlist";
+
+
+                //Size of option labels
+                song_rating.Size = new Size(200, 30);
+                song_Info.Size = new Size(200, 30);
+                song_favorite.Size = new Size(200, 30);
+                song_add_playlist.Size = new Size(200, 30);
+
+                //Size of info labels
+                song_Album.Size = new Size(200, 21);
+                song_Date.Size = new Size(200, 21);
+                song_Rate.Size = new Size(200, 21);
+                song_Artist.Size = new Size(200, 21);
+                song_Genre.Size = new Size(200, 21);
+                song_plays.Size = new Size(200, 21);
+
+                //Add labels to option songs
+                song_options.Controls.Add(song_rating);
+                song_rating.Dock = DockStyle.Top;
+                song_options.Controls.Add(song_Info);
+                song_Info.Dock = DockStyle.Top;
+                song_options.Controls.Add(song_favorite);
+                song_favorite.Dock = DockStyle.Top;
+                song_options.Controls.Add(song_add_playlist);
+                song_add_playlist.Dock = DockStyle.Top;
+
+                //Add labels to info panel
+                song_info_panel.Controls.Add(song_Album);
+                song_Album.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_Date);
+                song_Date.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_Genre);
+                song_Genre.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_Rate);
+                song_Rate.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_Artist);
+                song_Artist.Dock = DockStyle.Top;
+                song_info_panel.Controls.Add(song_plays);
+                song_plays.Dock = DockStyle.Top;
+
+                flowLayoutPanel1.Controls.Add(song_options);
+                flowLayoutPanel1.Controls.Add(song_info_panel);
+                flowLayoutPanel1.Controls.Add(playlist_list);
+
+
+
+                durartion_label.Text = song.Duration;
+                durartion_label.ForeColor = Color.White;
+                durartion_label.Location = new Point(528, 25);
+
+                song_panel.Dock = DockStyle.Top;
+                song_panel.Margin = new Padding(0, 0, 3, 0);
+
+                song_image.Image = song.Custom_image;
+                song_image.SizeMode = PictureBoxSizeMode.Zoom;
+
+                name_label.Text = song.Titulo_Cancion;
+                name_label.ForeColor = Color.White;
+                name_label.AutoSize = false;
+                name_label.Size = new Size(100, 17);
+
+
+                song_panel.Controls.Add(song_image);
+                song_panel.Controls.Add(durartion_label);
+
+                song_panel.Controls.Add(name_label);
+
+                name_label.Location = new Point(158, 25);
+
+
+                flowLayoutPanel1.Controls.Add(song_panel);
+
+            }
+        
         }
     }
 }

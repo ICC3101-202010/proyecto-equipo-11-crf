@@ -354,6 +354,7 @@
             this.Name = "MainMenu";
             this.Size = new System.Drawing.Size(643, 360);
             this.Load += new System.EventHandler(this.MainMenu_Load);
+            this.Enter += new System.EventHandler(this.MainMenu_Enter);
             this.panelLoadingMainMenu.ResumeLayout(false);
             this.panelLoadingMainMenu.PerformLayout();
             this.panelMainmenu.ResumeLayout(false);

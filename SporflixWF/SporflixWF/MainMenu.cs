@@ -14,6 +14,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Drawing.Printing;
+using System.Drawing.Text;
 
 namespace Spotflix
 {
@@ -25,8 +26,8 @@ namespace Spotflix
         
 
         List<Panel> song_stack = new List<Panel>();
-        
-
+        Cancion actual_song;
+        private List<Label> playlist_label = new List<Label>();
         public MainMenu()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace Spotflix
             //Cancion song = new Cancion("C:/Users/Francisco/Desktop/proyecto-equipo-11-crf/Biblioteca/Love.mp3");
             //Cancion song1 = tester.Library()[1];
             //Cancion song1 = library[7];
+            
             foreach (Cancion song in library)
             {
                 Panel song_panel = new Panel();
@@ -186,6 +188,7 @@ namespace Spotflix
                 {
                     if (e.Button == MouseButtons.Right) 
                     {
+                        actual_song = song;
                         song_options.Enabled = true;
                         song_options.Visible = true;
 
@@ -264,6 +267,13 @@ namespace Spotflix
                 {
                     song_add_playlist.BackColor = Color.FromArgb(82, 39, 65);
                 };
+                playlist_list.MouseLeave += delegate (object sender, EventArgs e) 
+                {
+                    playlist_list.Enabled = false;
+                    playlist_list.Visible = false;
+                
+                
+                };
                 //Add playist
                 song_add_playlist.Click += delegate (object sender, EventArgs e) 
                 {
@@ -276,28 +286,63 @@ namespace Spotflix
                     {
                         playlist_list.Enabled = true;
                         playlist_list.Visible = true;
-                        foreach (Playlist playlist in Global.UserNow.My_Playlist)
-                        {
-                                Label playlist_name = new Label();
-                                playlist_name.Text = playlist.NombrePlaylist;
-                                playlist_name.ForeColor = Color.White;
-                                playlist_list.Controls.Add(playlist_name);
-                                
-                                playlist_name.Dock = DockStyle.Top;
 
-
-                        }
                     
                     
                     }
+
+                };
+                playlist_list.EnabledChanged += delegate (object sender, EventArgs e)
+                {
+                    playlist_label = new List<Label>();
+                    foreach (Playlist playlist in Global.UserNow.My_Playlist)
+                    {
+                        Label playlist_name = new Label();
+                        playlist_name.Text = playlist.NombrePlaylist;
+                        playlist_name.ForeColor = Color.White;
+                        playlist_list.Controls.Add(playlist_name);
+                        playlist_label.Add(playlist_name);
+                        playlist_name.Dock = DockStyle.Top;
+                        playlist_name.Click += new EventHandler(Addsong);
+                        //playlist_name.MouseHover += new EventHandler(Playlist_hover);
+                        //playlist_name.MouseLeave += new EventHandler(Playlist_leave);
+                    }
+
                 };
 
+                
             }
             
             
             //pbTestSong.Image = song1.Custom_image;
             //labelNameSong.Text = song1.Titulo_Cancion;
         }
+        public void Addsong(object sender, EventArgs e) 
+        {
+            foreach (Playlist playlist in Global.UserNow.My_Playlist)
+            {
+                foreach (Label label in playlist_label) 
+                {
+                    if (playlist.NombrePlaylist == label.Text) 
+                    {
+                        playlist.agregarCancionPlaylist(actual_song);
+                        labelNameSong.Text = actual_song.Titulo_Cancion;
+                    }
+
+
+                }
+                
+            
+            }
+        
+        }
+
+
+        private void Playlist_list_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+        
 
         private void labelLoading_Click(object sender, EventArgs e)
         {
@@ -435,6 +480,11 @@ namespace Spotflix
 
             
             }
+        }
+
+        private void MainMenu_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

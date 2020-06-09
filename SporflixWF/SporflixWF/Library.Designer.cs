@@ -46,6 +46,7 @@
             this.labelEmptyLibrary = new System.Windows.Forms.Label();
             this.pbEmpty = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLibraruTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddRigth)).BeginInit();
             this.panelLibrary.SuspendLayout();
@@ -69,11 +70,12 @@
             // 
             // pbAddRigth
             // 
+            this.pbAddRigth.Dock = System.Windows.Forms.DockStyle.Right;
             this.pbAddRigth.Enabled = false;
             this.pbAddRigth.Image = ((System.Drawing.Image)(resources.GetObject("pbAddRigth.Image")));
-            this.pbAddRigth.Location = new System.Drawing.Point(571, 4);
+            this.pbAddRigth.Location = new System.Drawing.Point(574, 0);
             this.pbAddRigth.Name = "pbAddRigth";
-            this.pbAddRigth.Size = new System.Drawing.Size(69, 38);
+            this.pbAddRigth.Size = new System.Drawing.Size(69, 42);
             this.pbAddRigth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAddRigth.TabIndex = 4;
             this.pbAddRigth.TabStop = false;
@@ -94,6 +96,8 @@
             // panelLibrary
             // 
             this.panelLibrary.AutoScroll = true;
+            this.panelLibrary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelLibrary.Controls.Add(this.flowLayoutPanel1);
             this.panelLibrary.Controls.Add(this.panelNewPlaylist);
             this.panelLibrary.Controls.Add(this.labelAddPlaylist);
             this.panelLibrary.Controls.Add(this.pbAdd);
@@ -244,6 +248,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(641, 316);
+            this.flowLayoutPanel1.TabIndex = 6;
+            this.flowLayoutPanel1.Visible = false;
+            // 
             // Library
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,5 +305,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label labelLibraryTitle;
         private System.Windows.Forms.PictureBox pbAddRigth;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
