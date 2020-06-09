@@ -17,6 +17,7 @@ namespace SporflixWF
 {
     public partial class NotPremium : UserControl
     {
+        
         public NotPremium()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace SporflixWF
 
         private void buttonUpgradeNotPremium_Click(object sender, EventArgs e)
         {
+
             Form1.Profile.Refresh();
             Form1.Profile.Show();
             Form1.Profile.BringToFront();

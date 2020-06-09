@@ -14,14 +14,15 @@ namespace Spotflix
 {
     static class Program
     {
+        
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
         static void Main()
         {
+
             List<string> nombre = new List<string>();
-            
             IFormatter formatter1 = new BinaryFormatter();
             Stream stream1 = new FileStream("nombre.bin", FileMode.Create, FileAccess.Write, FileShare.None);
             formatter1.Serialize(stream1, nombre);

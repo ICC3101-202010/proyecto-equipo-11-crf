@@ -108,6 +108,11 @@ namespace Spotflix
                 //datosLogin.Add(usuario);
                 if ( result == null)
                 {
+
+                    Color myColor = Color.FromArgb(41, 22, 39);
+                    Form1.Notpremium.BackColor = myColor;
+                    Form1.Profile.BackColor = myColor;
+                    Form1.Finderr.BackColor = myColor;
                     IFormatter formatter2 = new BinaryFormatter();
                     Stream stream2 = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
                     List<string> nombre = formatter2.Deserialize(stream2) as List<string>;

@@ -21,7 +21,7 @@ namespace Spotflix
 
             WindowsMediaPlayer SongPlayer = new WindowsMediaPlayer();
             WindowsMediaPlayer EffectPlayer = new WindowsMediaPlayer();
-            /*foreach (Cancion can in Form1.Reproductor.Library())
+            
 
             
             
@@ -29,7 +29,7 @@ namespace Spotflix
 
             {
                 comboBoxMixer.Items.Add(can.Titulo_Cancion);
-            }*/
+            }
         }
 
         private void buttonPlayMixer_Click(object sender, EventArgs e)

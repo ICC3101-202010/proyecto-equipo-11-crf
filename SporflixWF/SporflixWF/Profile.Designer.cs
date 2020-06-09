@@ -88,15 +88,16 @@
             // 
             // tNombreProfile
             // 
-            this.tNombreProfile.BackColor = System.Drawing.SystemColors.MenuText;
+            this.tNombreProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.tNombreProfile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tNombreProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tNombreProfile.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tNombreProfile.ForeColor = System.Drawing.SystemColors.Window;
-            this.tNombreProfile.Location = new System.Drawing.Point(279, 182);
+            this.tNombreProfile.Location = new System.Drawing.Point(256, 182);
             this.tNombreProfile.Name = "tNombreProfile";
-            this.tNombreProfile.Size = new System.Drawing.Size(123, 17);
+            this.tNombreProfile.Size = new System.Drawing.Size(123, 20);
             this.tNombreProfile.TabIndex = 1;
             this.tNombreProfile.Text = "Nombre Usuario";
+            this.tNombreProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -134,7 +135,7 @@
             this.pIntroProfile.Controls.Add(this.bAtrasIntroProfile);
             this.pIntroProfile.Location = new System.Drawing.Point(0, 0);
             this.pIntroProfile.Name = "pIntroProfile";
-            this.pIntroProfile.Size = new System.Drawing.Size(631, 337);
+            this.pIntroProfile.Size = new System.Drawing.Size(631, 341);
             this.pIntroProfile.TabIndex = 5;
             // 
             // label1
@@ -210,7 +211,7 @@
             this.pEditarProfile.Controls.Add(this.comboBoxEditarProfile);
             this.pEditarProfile.Location = new System.Drawing.Point(3, 0);
             this.pEditarProfile.Name = "pEditarProfile";
-            this.pEditarProfile.Size = new System.Drawing.Size(628, 337);
+            this.pEditarProfile.Size = new System.Drawing.Size(622, 338);
             this.pEditarProfile.TabIndex = 3;
             this.pEditarProfile.Visible = false;
             // 
@@ -330,7 +331,7 @@
             this.panelOpcionesUsuario.Controls.Add(this.bAtrasOpciones);
             this.panelOpcionesUsuario.Location = new System.Drawing.Point(0, 0);
             this.panelOpcionesUsuario.Name = "panelOpcionesUsuario";
-            this.panelOpcionesUsuario.Size = new System.Drawing.Size(628, 337);
+            this.panelOpcionesUsuario.Size = new System.Drawing.Size(628, 341);
             this.panelOpcionesUsuario.TabIndex = 3;
             this.panelOpcionesUsuario.Visible = false;
             // 
@@ -382,7 +383,7 @@
             // labelPath
             // 
             this.labelPath.AutoSize = true;
-            this.labelPath.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.labelPath.ForeColor = System.Drawing.SystemColors.Window;
             this.labelPath.Location = new System.Drawing.Point(39, 78);
             this.labelPath.Name = "labelPath";
@@ -515,7 +516,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.Controls.Add(this.panelOpcionesUsuario);
             this.Controls.Add(this.pEditarProfile);
             this.Controls.Add(this.labelFollowing);

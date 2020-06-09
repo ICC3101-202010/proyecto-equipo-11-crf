@@ -71,6 +71,7 @@ namespace Spotflix
             this.mixer2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.mixer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.mixer2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mixer2.BackgroundImage")));
+            this.mixer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mixer2.Location = new System.Drawing.Point(0, 0);
             this.mixer2.Name = "mixer2";
             this.mixer2.Size = new System.Drawing.Size(641, 347);
@@ -205,6 +206,7 @@ namespace Spotflix
             this.Controls.Add(this.register1);
             this.Controls.Add(this.welcome1);
             this.Controls.Add(this.finderr1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

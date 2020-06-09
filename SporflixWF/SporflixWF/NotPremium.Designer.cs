@@ -57,22 +57,24 @@
             // 
             // buttonUpgradeNotPremium
             // 
-            this.buttonUpgradeNotPremium.Location = new System.Drawing.Point(225, 224);
+            this.buttonUpgradeNotPremium.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonUpgradeNotPremium.Location = new System.Drawing.Point(253, 226);
             this.buttonUpgradeNotPremium.Name = "buttonUpgradeNotPremium";
             this.buttonUpgradeNotPremium.Size = new System.Drawing.Size(160, 23);
             this.buttonUpgradeNotPremium.TabIndex = 3;
             this.buttonUpgradeNotPremium.Text = "Go Upgrade!";
-            this.buttonUpgradeNotPremium.UseVisualStyleBackColor = true;
+            this.buttonUpgradeNotPremium.UseVisualStyleBackColor = false;
             this.buttonUpgradeNotPremium.Click += new System.EventHandler(this.buttonUpgradeNotPremium_Click);
             // 
             // NotPremium
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.buttonUpgradeNotPremium);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.Name = "NotPremium";
             this.Size = new System.Drawing.Size(631, 363);
             this.ResumeLayout(false);
