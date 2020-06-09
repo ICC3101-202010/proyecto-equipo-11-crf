@@ -55,5 +55,29 @@ namespace Spotflix
             efectPlayer.URL = efectos[0].path;
             efectPlayer.controls.play();
         }
+
+        private void buttonEfect2_Click(object sender, EventArgs e)
+        {
+            WindowsMediaPlayer efectPlayer = new WindowsMediaPlayer();
+            List<Efecto> efectos = Form1.Reproductor.BibliotecaEfectos();
+            efectPlayer.URL = efectos[1].path;
+            efectPlayer.controls.play();
+        }
+
+        private void buttonEfect3_Click(object sender, EventArgs e)
+        {
+            WindowsMediaPlayer efectPlayer = new WindowsMediaPlayer();
+            List<Efecto> efectos = Form1.Reproductor.BibliotecaEfectos();
+            efectPlayer.URL = efectos[2].path;
+            efectPlayer.controls.play();
+        }
+
+        private void buttonEfect4_Click(object sender, EventArgs e)
+        {
+            WindowsMediaPlayer efectPlayer = new WindowsMediaPlayer();
+            List<Efecto> efectos = Form1.Reproductor.BibliotecaEfectos();
+            efectPlayer.URL = efectos[3].path;
+            efectPlayer.controls.play();
+        }
     }
 }

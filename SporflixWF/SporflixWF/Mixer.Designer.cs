@@ -86,6 +86,7 @@
             this.buttonEfect2.TabIndex = 4;
             this.buttonEfect2.Text = "◥";
             this.buttonEfect2.UseVisualStyleBackColor = false;
+            this.buttonEfect2.Click += new System.EventHandler(this.buttonEfect2_Click);
             // 
             // buttonEfect3
             // 
@@ -96,6 +97,7 @@
             this.buttonEfect3.TabIndex = 5;
             this.buttonEfect3.Text = "◣";
             this.buttonEfect3.UseVisualStyleBackColor = false;
+            this.buttonEfect3.Click += new System.EventHandler(this.buttonEfect3_Click);
             // 
             // buttonEfect4
             // 
@@ -106,6 +108,7 @@
             this.buttonEfect4.TabIndex = 6;
             this.buttonEfect4.Text = "◢";
             this.buttonEfect4.UseVisualStyleBackColor = false;
+            this.buttonEfect4.Click += new System.EventHandler(this.buttonEfect4_Click);
             // 
             // Mixer
             // 
