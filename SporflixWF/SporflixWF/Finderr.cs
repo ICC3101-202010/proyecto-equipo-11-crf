@@ -69,6 +69,7 @@ namespace Spotflix
                 List<string> Repetidas = new List<string>();
                 panelFinderUser.Visible = true;
                 label2.Visible = false;
+                panelMostrar.Visible = false;
                 List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
                 foreach (Playlist playlist in playlists)
                 {
@@ -86,6 +87,7 @@ namespace Spotflix
                 List<string> Repetidas = new List<string>();
                 label2.Visible = false;
                 panelFinderUser.Visible = true;
+                panelMostrar.Visible = false;
                 panelButttons.Visible = false;
                 comboBoxUsuarios.Items.Clear();
                 canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
@@ -107,6 +109,7 @@ namespace Spotflix
                 label2.Visible = false;
                 panelFinderUser.Visible = true;
                 panelButttons.Visible = false;
+                panelMostrar.Visible = false;
                 canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
