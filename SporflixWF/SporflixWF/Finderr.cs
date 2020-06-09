@@ -65,6 +65,8 @@ namespace Spotflix
             }
             else if (comboBoxFind.Text == "Playlist")
             {
+                comboBoxUsuarios.Items.Clear();
+                List<string> Repetidas = new List<string>();
                 panelFinderUser.Visible = true;
                 label2.Visible = false;
                 List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
@@ -84,7 +86,8 @@ namespace Spotflix
                 List<string> Repetidas = new List<string>();
                 label2.Visible = false;
                 panelFinderUser.Visible = true;
-                panelButttons.Visible = true;
+                panelButttons.Visible = false;
+                comboBoxUsuarios.Items.Clear();
                 canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
                 
                 foreach (Cancion cancion in canciones)
@@ -100,13 +103,20 @@ namespace Spotflix
            
             else if (comboBoxFind.Text == "Album")
             {
-                panelFinderUser.Visible = false;
-                panelButttons.Visible = true;
+                List<string> Repetidas = new List<string>();
+                label2.Visible = false;
+                panelFinderUser.Visible = true;
+                panelButttons.Visible = false;
                 canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
-                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                    Repetidas.Add(cancion.Album);
                     
+                }
+                List<string> noRepetidas = Repetidas.Distinct().ToList();
+                foreach (string can in noRepetidas)
+                {
+                    comboBoxUsuarios.Items.Add(can);
                 }
             }
             else if (comboBoxFind.Text == "Top Streamed")
@@ -300,6 +310,7 @@ namespace Spotflix
 
         private void buttonFollow_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             IFormatter formatter3 = new BinaryFormatter();
             Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
             List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
@@ -329,16 +340,69 @@ namespace Spotflix
                             b = Convert.ToString(a);
                             value.followers = b;
                             
+=======
+            if (comboBoxFind.Text == "User")
+            {
+
+
+                IFormatter formatter3 = new BinaryFormatter();
+                Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+                stream3.Close();
+                IFormatter formatter2 = new BinaryFormatter();
+                Stream stream2 = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<string> nombre = formatter2.Deserialize(stream2) as List<string>;
+                stream2.Close();
+                string elegido = comboBoxUsuarios.Text;
+                foreach (List<string> data in registrados.Values)
+                {
+                    if (elegido == data[0])
+                    {
+                        int a = Convert.ToInt32(data[8]);
+                        a += 1;
+                        string b = Convert.ToString(a);
+                        data[8] = b;
+                        foreach (List<string> value in registrados.Values)
+                        {
+                            if (nombre[0] == value[0])
+                            {
+                                a = Convert.ToInt32(value[10]);
+                                a += 1;
+
+                                b = Convert.ToString(a);
+                                value[10] = b;
+
+                            }
+>>>>>>> 30193f644ba9ebe511db951672384af24c35629f
                         }
+                        MessageBox.Show("You are now Following a new User!");
                     }
+<<<<<<< HEAD
                     
                     MessageBox.Show("You are now Following a new User!");
+=======
+>>>>>>> 30193f644ba9ebe511db951672384af24c35629f
                 }
+                IFormatter formatter1 = new BinaryFormatter();
+                Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter1.Serialize(stream1, registrados);
+                stream1.Close();
             }
-            IFormatter formatter1 = new BinaryFormatter();
-            Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
-            formatter1.Serialize(stream1, registrados);
-            stream1.Close();
+            else if (comboBoxFind.Text == "Band")
+            {
+                Global.UserNow.seguidosBanda.Add(comboBoxUsuarios.Text);
+                MessageBox.Show("You are now Following a new Band!");
+            }
+            else if (comboBoxFind.Text == "Playlist")
+            {
+                Global.UserNow.seguidosPlaylist.Add(comboBoxUsuarios.Text);
+                MessageBox.Show("You are now Following a new Playlist!");
+            }
+            else if (comboBoxFind.Text == "Album")
+            {
+                Global.UserNow.seguidosAlbum.Add(comboBoxUsuarios.Text);
+                MessageBox.Show("You are now Following a new Album!");
+            }
         }
 
         private void buttonPlay_Click(object sender, EventArgs e)
