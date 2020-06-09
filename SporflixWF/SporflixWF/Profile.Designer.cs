@@ -70,6 +70,8 @@
             this.comboBoxOpcionesUsuario = new System.Windows.Forms.ComboBox();
             this.bAtrasOpciones = new System.Windows.Forms.Button();
             this.openFoto = new System.Windows.Forms.OpenFileDialog();
+            this.openMusic = new System.Windows.Forms.OpenFileDialog();
+            this.openVideo = new System.Windows.Forms.OpenFileDialog();
             this.pIntroProfile.SuspendLayout();
             this.pEditarProfile.SuspendLayout();
             this.panelEditarNombre.SuspendLayout();
@@ -519,6 +521,16 @@
             this.openFoto.FileName = "openFileDialog1";
             this.openFoto.Filter = "Archivos PNG (*.png)|*.png";
             // 
+            // openMusic
+            // 
+            this.openMusic.FileName = "openMusic";
+            this.openMusic.Filter = "Archivos MP3 (*.mp3)|*.mp3";
+            // 
+            // openVideo
+            // 
+            this.openVideo.FileName = "openFileDialog2";
+            this.openVideo.Filter = "Archivos MP4 (*.mp4)|*.mp4";
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -596,5 +608,7 @@
         private System.Windows.Forms.Label labelInsertTitle;
         private System.Windows.Forms.TextBox textBoxNombreCancion;
         private System.Windows.Forms.OpenFileDialog openFoto;
+        private System.Windows.Forms.OpenFileDialog openMusic;
+        private System.Windows.Forms.OpenFileDialog openVideo;
     }
 }

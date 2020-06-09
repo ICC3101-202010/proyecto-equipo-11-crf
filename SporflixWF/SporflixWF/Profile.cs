@@ -276,7 +276,7 @@ namespace Spotflix
                             Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
                             formatter1.Serialize(stream1, registrados);
                             stream1.Close();
-                            MessageBox.Show("Haz Cambiado con Exito tu Foto de Perfil!");
+                            MessageBox.Show("You´ve Succesfully Changed Your Profile Picture!");
                         }
                     }
                 }
@@ -474,6 +474,11 @@ namespace Spotflix
                             labelInsertTitle.Visible = true;
                             labelInsertTitle.Text = "Insert the Title of the Song";
                             textBoxNombreCancion.Visible = true;
+                            if (openMusic.ShowDialog() == DialogResult.OK)
+                            {
+                                var pathSong = openMusic.FileName;
+                                textBoxPath.Text = pathSong;
+                            }
                         }
 
                     }
@@ -503,6 +508,11 @@ namespace Spotflix
                             labelInsertTitle.Visible = true;
                             labelInsertTitle.Text = "Insert the Title of the Video";
                             textBoxNombreCancion.Visible = true;
+                            if (openVideo.ShowDialog() == DialogResult.OK)
+                            {
+                                var pathVideo = openVideo.FileName;
+                                textBoxPath.Text = pathVideo;
+                            }
                         }
 
                     }
