@@ -21,14 +21,14 @@ namespace Spotflix
     {
         Finder1 finder1 = new Entrega2.Finder1();
 
-        
-        
-        
-        
+
+
+
+
         public Finderr()
         {
             InitializeComponent();
-            
+
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -37,27 +37,27 @@ namespace Spotflix
             labelDonload.Visible = false;
             labelFavorite.Visible = false;
 
-            
+
             List<Cancion> canciones;
-            
+
             panelMostrar.Visible = true;
             if (comboBoxFind.Text == "Song")
             {
                 panelFinderUser.Visible = false;
                 panelButttons.Visible = true;
-                canciones= finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
+                canciones = finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
                 foreach (Cancion cancion in canciones)
                 {
                     comboBoxFound.Items.Add(cancion.Titulo_Cancion);
                 }
-                
-                
+
+
             }
             else if (comboBoxFind.Text == "Video")
             {
                 panelFinderUser.Visible = false;
                 List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Global.allVideos);
-                foreach(Video video in videos)
+                foreach (Video video in videos)
                 {
                     comboBoxFound.Items.Add(video.NameVideo);
                 }
@@ -89,18 +89,18 @@ namespace Spotflix
                 panelButttons.Visible = false;
                 comboBoxUsuarios.Items.Clear();
                 canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
-                
+
                 foreach (Cancion cancion in canciones)
                 {
                     Repetidas.Add(cancion.Banda);
                 }
                 List<string> noRepetidas = Repetidas.Distinct().ToList();
-                foreach(string can in noRepetidas)
+                foreach (string can in noRepetidas)
                 {
                     comboBoxUsuarios.Items.Add(can);
                 }
             }
-           
+
             else if (comboBoxFind.Text == "Album")
             {
                 List<string> Repetidas = new List<string>();
@@ -111,7 +111,7 @@ namespace Spotflix
                 foreach (Cancion cancion in canciones)
                 {
                     Repetidas.Add(cancion.Album);
-                    
+
                 }
                 List<string> noRepetidas = Repetidas.Distinct().ToList();
                 foreach (string can in noRepetidas)
@@ -147,15 +147,15 @@ namespace Spotflix
                 panelFinderUser.Visible = true;
                 IFormatter formatter3 = new BinaryFormatter();
                 Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-                List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
+                List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
                 stream3.Close();
                 foreach (Usuario value in registrados)
                 {
                     if (value.Username.Contains(busqueda) == true)
                     {
-                        
+
                         comboBoxUsuarios.Items.Add(value.Username);
-                        
+
                     }
                 }
 
@@ -179,21 +179,21 @@ namespace Spotflix
             Form1.Preferences.Hide();
             Form1.MailVerified.Hide();
             Form1.Profile.Hide();
-            
+
         }
 
         private void ButtonFavorite_Click(object sender, EventArgs e)
         {
-            
+
 
             Cancion seleccionada;
-            foreach(Cancion cancion in Global.allSongs)
+            foreach (Cancion cancion in Global.allSongs)
             {
                 if (cancion.Titulo_Cancion == comboBoxFound.Text)
                 {
                     seleccionada = cancion;
                     seleccionada.agregarFavoritos(Global.UserNow);
-                    
+
                     labelFavorite.Visible = true;
                     /*Usuario usuario1 = Global.UserNow;
                     IFormatter formatter = new BinaryFormatter();
@@ -210,7 +210,7 @@ namespace Spotflix
         private void buttonRate_Click(object sender, EventArgs e)
         {
             panelMetadata.Visible = false;
-            if(panelRate.Visible == false)
+            if (panelRate.Visible == false)
             {
                 panelRate.Visible = true;
             }
@@ -218,7 +218,7 @@ namespace Spotflix
             {
                 panelRate.Visible = false;
             }
-            
+
 
         }
 
@@ -227,8 +227,8 @@ namespace Spotflix
             int puntuation = Int32.Parse(textBoxRate.Text);
             List<Cancion> canciones = Global.allSongs;
             Cancion seleccionada;
-            
-            if (puntuation<0 || puntuation > 5)
+
+            if (puntuation < 0 || puntuation > 5)
             {
                 labelRate.Visible = true;
             }
@@ -246,7 +246,7 @@ namespace Spotflix
                 Thread.Sleep(1000);
                 panelRate.Visible = false;
             }
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -266,7 +266,7 @@ namespace Spotflix
                     seleccionada = cancion;
                     seleccionada.descargarCancion();
                     labelDonload.Visible = true;
-                    
+
                 }
             }
         }
@@ -275,19 +275,19 @@ namespace Spotflix
         {
             panelRate.Visible = false;
             listBoxMetadata.Items.Clear();
-            if(panelMetadata.Visible == false)
+            if (panelMetadata.Visible == false)
             {
                 panelMetadata.Visible = true;
                 foreach (Cancion cancion in Global.allSongs)
                 {
                     if (cancion.Titulo_Cancion == comboBoxFound.Text)
                     {
-                        listBoxMetadata.Items.Add("Title: "+cancion.Titulo_Cancion);
-                        listBoxMetadata.Items.Add("Band: "+cancion.Banda);
-                        listBoxMetadata.Items.Add("Genre: "+cancion.Genero);
-                        listBoxMetadata.Items.Add("Album: "+cancion.Album);
+                        listBoxMetadata.Items.Add("Title: " + cancion.Titulo_Cancion);
+                        listBoxMetadata.Items.Add("Band: " + cancion.Banda);
+                        listBoxMetadata.Items.Add("Genre: " + cancion.Genero);
+                        listBoxMetadata.Items.Add("Album: " + cancion.Album);
                         listBoxMetadata.Items.Add("Launching date: " + cancion.Fecha_Lanzamiento);
-                        
+
                     }
                 }
             }
@@ -295,7 +295,7 @@ namespace Spotflix
             {
                 panelMetadata.Visible = false;
             }
-            
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -310,78 +310,46 @@ namespace Spotflix
 
         private void buttonFollow_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            IFormatter formatter3 = new BinaryFormatter();
-            Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List < Usuario > registrados = formatter3.Deserialize(stream3) as List<Usuario>;
-            stream3.Close();
-            IFormatter formatter2 = new BinaryFormatter();
-            Stream stream2 = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-            List<string> nombre = formatter2.Deserialize(stream2) as List<string>;
-            stream2.Close();
-            string elegido = comboBoxUsuarios.Text;
-            foreach (Usuario data in registrados)
-            {
-                if (elegido == data.Username)
-                {
-                    Global.UserNow.SeguidosUsuarios.Add(data);
-                    int a= Convert.ToInt32(data.following);
-                    a += 1;
-                    string b = Convert.ToString(a);
-                    data.following = b;
-                    foreach (Usuario value in registrados)
-                    {
-                        if (nombre[0] == value.Username)
-                        {
-                            Global.UserNow.MeSiguenUsuarios1.Add(value);
-                            a = Convert.ToInt32(value.followers);
-                            a += 1;
-                            
-                            b = Convert.ToString(a);
-                            value.followers = b;
-                            
-=======
+
+
             if (comboBoxFind.Text == "User")
             {
 
 
                 IFormatter formatter3 = new BinaryFormatter();
                 Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
-                Dictionary<int, List<string>> registrados = formatter3.Deserialize(stream3) as Dictionary<int, List<string>>;
+                List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
                 stream3.Close();
                 IFormatter formatter2 = new BinaryFormatter();
                 Stream stream2 = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
                 List<string> nombre = formatter2.Deserialize(stream2) as List<string>;
                 stream2.Close();
                 string elegido = comboBoxUsuarios.Text;
-                foreach (List<string> data in registrados.Values)
+                foreach (Usuario data in registrados)
                 {
-                    if (elegido == data[0])
+                    if (elegido == data.Username)
                     {
-                        int a = Convert.ToInt32(data[8]);
+                        Global.UserNow.SeguidosUsuarios.Add(data);
+                        int a = Convert.ToInt32(data.following);
                         a += 1;
                         string b = Convert.ToString(a);
-                        data[8] = b;
-                        foreach (List<string> value in registrados.Values)
+                        data.following = b;
+                        foreach (Usuario value in registrados)
                         {
-                            if (nombre[0] == value[0])
+                            if (nombre[0] == value.Username)
                             {
-                                a = Convert.ToInt32(value[10]);
+                                Global.UserNow.MeSiguenUsuarios1.Add(value);
+                                a = Convert.ToInt32(value.followers);
                                 a += 1;
 
                                 b = Convert.ToString(a);
-                                value[10] = b;
+                                value.followers = b;
 
                             }
->>>>>>> 30193f644ba9ebe511db951672384af24c35629f
+
                         }
                         MessageBox.Show("You are now Following a new User!");
                     }
-<<<<<<< HEAD
-                    
-                    MessageBox.Show("You are now Following a new User!");
-=======
->>>>>>> 30193f644ba9ebe511db951672384af24c35629f
                 }
                 IFormatter formatter1 = new BinaryFormatter();
                 Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
