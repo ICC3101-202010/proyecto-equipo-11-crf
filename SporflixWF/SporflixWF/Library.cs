@@ -58,14 +58,13 @@ namespace Spotflix
                 radioButtonPrivate.Enabled = true;
                 radioButtonPrivate.Visible = true;
             }
-            else if (Global.UserNow.privacidad == "Publica")
+            else if (Global.UserNow.privacidad == "Privada")
             {
                 labelPrivate.Enabled = false;
                 labelPrivate.Visible = false;
                 radioButtonPrivate.Enabled = false;
                 radioButtonPrivate.Visible = false;
             }
-            //label1.Text = Global.UserNow.Username;
             if (Global.UserNow.My_Playlist.Any() == true)
             {
                 pbEmpty.Enabled = false;
@@ -104,7 +103,6 @@ namespace Spotflix
                 pb_playlist.Size = new Size(183, 115);
                 label_playlist.AutoSize = false;
                 label_playlist.TextAlign = ContentAlignment.MiddleLeft;
-                //label_type.Size = new Size(36, 35);
                 label_type.Location = new Point(0, 60);
 
                 actual.NombrePlaylist = textBoxName.Text;
@@ -123,11 +121,11 @@ namespace Spotflix
                 panel_playlist.Controls.Add(pb_playlist);
                 pb_playlist.Dock = DockStyle.Right;
                 panel_playlist.Controls.Add(label_playlist);
-                //label_playlist.Dock = DockStyle.Left;
+
                 label_playlist.Font = new Font("Arial", 15);
                 label_type.Location = new Point(0, 60);
                 label_type.Anchor = AnchorStyles.Left;
-                //label_playlist.Dock = DockStyle.Bottom;
+
 
 
                 panel_playlist.Dock = DockStyle.Top;
@@ -167,17 +165,24 @@ namespace Spotflix
                 label_type.ForeColor = Color.Yellow;
 
                 pb_playlist.SizeMode = PictureBoxSizeMode.Zoom;
-                if (Global.UserNow.privacidad == "Publica") 
+                if (Global.UserNow.privacidad == "Publica")
                 {
                     if (radioButtonPrivate.Checked == true)
                     {
                         actual.Privacidad = true;
                     }
-                    else 
+                    else
                     {
                         actual.Privacidad = false;
                     }
                 }
+                else if (Global.UserNow.privacidad == "Privada") 
+                {
+                    actual.Privacidad = true;
+
+                }
+            
+     
                 Global.UserNow.My_Playlist.Add(actual);
 
                 pb_playlist.Image = actual.Imagen_personalizada;
@@ -239,7 +244,7 @@ namespace Spotflix
                 radioButtonPrivate.Enabled = true;
                 radioButtonPrivate.Visible = true;
             }
-            else if (Global.UserNow.privacidad == "Publica")
+            else if (Global.UserNow.privacidad == "Privada")
             {
                 labelPrivate.Enabled = false;
                 labelPrivate.Visible = false;
@@ -386,6 +391,11 @@ namespace Spotflix
 
             }
         
+        }
+
+        private void radioButtonPrivate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
