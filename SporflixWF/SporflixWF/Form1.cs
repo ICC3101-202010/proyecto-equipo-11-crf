@@ -109,12 +109,12 @@ namespace Spotflix
             Welcome = welcome1;
             MailVerified = mailValidation1;
             Preferences = preferences1;
-            MainMenu = mainMenu1;
+            MainMenu = mainMenu2;
             Finderr = finderr1;
             Profile = profile1;
             ProgresBar = playerBar1;
             Menubar = menuBar1;
-            Mixer = mixer1;
+            Mixer = mixer2;
             Librarymenu = library1;
             VideoPlayer = videoPlayer2;
             Notpremium = notPremium1;
