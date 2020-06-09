@@ -153,6 +153,7 @@ namespace Spotflix
                     }
                     catch (Exception)
                     {
+                        MessageBox.Show("No habia Registro Creado asi que cree uno nuevo!");
                         registrados.Add( usuario);
                         IFormatter formatter1 = new BinaryFormatter();
                         Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
