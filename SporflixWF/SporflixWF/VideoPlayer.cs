@@ -113,7 +113,7 @@ namespace SporflixWF
                 }
                 count += 1;
             }
-            if (numberOnList < Form1.Reproductor.Video_Library().Count())
+            if (numberOnList < count-1)
             {
                 axWindowsMediaPlayer1.URL = Form1.Reproductor.Video_Library()[numberOnList + 1].Path;
                 axWindowsMediaPlayer1.Ctlcontrols.play();
