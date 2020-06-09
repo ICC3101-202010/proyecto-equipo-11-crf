@@ -33,6 +33,7 @@
             this.panelPlayVideo = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.buttonNextVideo = new System.Windows.Forms.Button();
             this.panelPlayVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // 
             // panelPlayVideo
             // 
+            this.panelPlayVideo.Controls.Add(this.buttonNextVideo);
             this.panelPlayVideo.Controls.Add(this.button1);
             this.panelPlayVideo.Controls.Add(this.axWindowsMediaPlayer1);
             this.panelPlayVideo.Location = new System.Drawing.Point(0, 0);
@@ -71,17 +73,27 @@
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 31);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(643, 353);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(643, 338);
             this.axWindowsMediaPlayer1.TabIndex = 3;
             this.axWindowsMediaPlayer1.Visible = false;
+            // 
+            // buttonNextVideo
+            // 
+            this.buttonNextVideo.Location = new System.Drawing.Point(578, 0);
+            this.buttonNextVideo.Name = "buttonNextVideo";
+            this.buttonNextVideo.Size = new System.Drawing.Size(62, 31);
+            this.buttonNextVideo.TabIndex = 5;
+            this.buttonNextVideo.Text = ">>";
+            this.buttonNextVideo.UseVisualStyleBackColor = true;
+            this.buttonNextVideo.Click += new System.EventHandler(this.buttonNextVideo_Click);
             // 
             // VideoPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
-            this.Controls.Add(this.flowLayoutPanelVideo);
             this.Controls.Add(this.panelPlayVideo);
+            this.Controls.Add(this.flowLayoutPanelVideo);
             this.Name = "VideoPlayer";
             this.Size = new System.Drawing.Size(643, 384);
             this.panelPlayVideo.ResumeLayout(false);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Panel panelPlayVideo;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonNextVideo;
     }
 }
