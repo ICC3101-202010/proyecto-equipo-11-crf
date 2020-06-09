@@ -49,10 +49,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.labelGenre = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelplaylit = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelLoading = new System.Windows.Forms.Label();
             this.pictureBoxLoading = new System.Windows.Forms.PictureBox();
-            this.panelplaylit = new System.Windows.Forms.Panel();
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
@@ -284,6 +284,7 @@
             // 
             // labelGenre
             // 
+            this.labelGenre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(31)))), ((int)(((byte)(50)))));
             this.labelGenre.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelGenre.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelGenre.Location = new System.Drawing.Point(0, 0);
@@ -302,6 +303,15 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
             this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // panelplaylit
+            // 
+            this.panelplaylit.AutoScroll = true;
+            this.panelplaylit.Location = new System.Drawing.Point(421, 72);
+            this.panelplaylit.Name = "panelplaylit";
+            this.panelplaylit.Size = new System.Drawing.Size(182, 63);
+            this.panelplaylit.TabIndex = 6;
+            this.panelplaylit.Visible = false;
             // 
             // panel2
             // 
@@ -336,15 +346,6 @@
             this.pictureBoxLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLoading.TabIndex = 2;
             this.pictureBoxLoading.TabStop = false;
-            // 
-            // panelplaylit
-            // 
-            this.panelplaylit.AutoScroll = true;
-            this.panelplaylit.Location = new System.Drawing.Point(421, 72);
-            this.panelplaylit.Name = "panelplaylit";
-            this.panelplaylit.Size = new System.Drawing.Size(182, 63);
-            this.panelplaylit.TabIndex = 6;
-            this.panelplaylit.Visible = false;
             // 
             // MainMenu
             // 
