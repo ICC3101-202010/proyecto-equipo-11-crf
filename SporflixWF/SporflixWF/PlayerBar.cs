@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 using System.IO;
+using Entrega2;
 
 namespace Spotflix
 {
@@ -16,6 +17,8 @@ namespace Spotflix
     {
         WindowsMediaPlayer player = Form1.Player;
         int status = 0;
+        int cant = Form1.Reproductor.Queue(Form1.Actual).Count;
+        int current = 0;
         public PlayerBar()
         {
             InitializeComponent();
@@ -84,7 +87,22 @@ namespace Spotflix
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            player.controls.next();
+
+            Form1.Queue_home = Form1.Reproductor.Queue(Form1.Actual);
+            if (current < cant) 
+            {
+                player.URL = Form1.Queue_home[current].path;
+                current++;
+                player.controls.next();
+            
+            }
+            
+                    
+
+
+                
+            
+            
         }
 
         private void pbPlayStop_Click(object sender, EventArgs e)

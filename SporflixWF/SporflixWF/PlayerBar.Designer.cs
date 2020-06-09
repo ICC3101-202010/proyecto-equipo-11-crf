@@ -108,7 +108,7 @@
             // ProgressBarSong
             // 
             this.ProgressBarSong.BackColor = System.Drawing.Color.Transparent;
-            this.ProgressBarSong.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ProgressBarSong.BorderColor = System.Drawing.Color.Transparent;
             this.ProgressBarSong.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProgressBarSong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(125)))), ((int)(((byte)(123)))));
             this.ProgressBarSong.IndentHeight = 6;
@@ -119,7 +119,7 @@
             this.ProgressBarSong.Size = new System.Drawing.Size(388, 29);
             this.ProgressBarSong.TabIndex = 15;
             this.ProgressBarSong.TextTickStyle = System.Windows.Forms.TickStyle.None;
-            this.ProgressBarSong.TickColor = System.Drawing.Color.Indigo;
+            this.ProgressBarSong.TickColor = System.Drawing.Color.Transparent;
             this.ProgressBarSong.TickHeight = 4;
             this.ProgressBarSong.TickStyle = System.Windows.Forms.TickStyle.None;
             this.ProgressBarSong.TrackerColor = System.Drawing.Color.Silver;
