@@ -663,7 +663,7 @@ namespace Spotflix
                     if (playlist.NombrePlaylist == label.Text) 
                     {
                         playlist.agregarCancionPlaylist(actual_song);
-                        labelNameSong.Text = actual_song.Titulo_Cancion;
+                        
                     }
 
 

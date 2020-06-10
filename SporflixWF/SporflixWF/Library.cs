@@ -142,6 +142,7 @@ namespace Spotflix
                 pbAddRigth.Enabled = true;
                 pbAddRigth.Visible = true;
                 panel_playlist.Click += new EventHandler(InLibrary);
+                textBoxName.Clear();
             }
             else
             {
@@ -209,7 +210,7 @@ namespace Spotflix
                 pbAddRigth.Enabled = true;
                 pbAddRigth.Visible = true;
                 panel_playlist.Click += new EventHandler(InLibrary);
-                
+                textBoxName.Clear();
             }
 
 
@@ -223,8 +224,6 @@ namespace Spotflix
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                //MemoryStream ms = new MemoryStream(Convert.ToInt32(openFileDialog1.FileName));
-                //Image imagen = new Image(openFileDialog1.FileName);
                 this.actual.Imagen_personalizada = Image.FromFile(openFileDialog1.FileName);
 
             }

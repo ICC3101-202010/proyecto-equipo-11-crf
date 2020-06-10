@@ -57,7 +57,7 @@ namespace Entrega2
         public Video(string path)
         {
             TagLib.File video = TagLib.File.Create(path);
-            this.nameVideo=video.Tag.Title;
+            this.nameVideo = video.Tag.Title;
             this.genero = video.Tag.FirstGenre;
             this.year = video.Tag.Year;
             this.coment = video.Tag.Comment;
@@ -66,8 +66,10 @@ namespace Entrega2
             this.width = video.Properties.VideoWidth;
             resolution = Weight.ToString() + " x " + Width.ToString();
             this.path = path;
+            
             //MemoryStream ms = new MemoryStream(video.Tag.Pictures[0].Data.Data);
             //this.videoImage = Image.FromStream(ms);
+            
 
 
 

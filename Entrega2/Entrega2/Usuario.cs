@@ -33,7 +33,7 @@ namespace Entrega2
 
 
         public List<Cancion> canciones_favoritas=new List<Cancion>();
-        private List<Video> videos_favoritos;
+        private List<Video> videos_favoritos = new List<Video>();
 
 
 
@@ -61,7 +61,7 @@ namespace Entrega2
 
         public string Username { get => username; set => username = value; }
         public List<Cancion> Canciones_favoritas { get => canciones_favoritas; set => canciones_favoritas = value; }
-        internal List<Video> Videos_favoritos { get => videos_favoritos; set => videos_favoritos = value; }
+        //internal List<Video> Videos_favoritos { get => Videos_favoritos1; set => Videos_favoritos1 = value; }
 
         public List<Usuario> SeguidosUsuarios { get => seguidosUsuarios; set => seguidosUsuarios = value; }
 
@@ -73,6 +73,7 @@ namespace Entrega2
         internal List<Actor> SeguidosActor { get => seguidosActor; set => seguidosActor = value; }
         public List<Playlist> My_Playlist { get => my_Playlist; set => my_Playlist = value; }
         public List<Usuario> MeSiguenUsuarios1 { get => MeSiguenUsuarios; set => MeSiguenUsuarios = value; }
+        public List<Video> Videos_favoritos { get => videos_favoritos; set => videos_favoritos = value; }
 
         public Usuario(int ID, string member, DateTime Member_expiration,string Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
         {
