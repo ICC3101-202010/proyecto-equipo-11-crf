@@ -32,10 +32,6 @@
             this.panelLoadingMainMenu = new System.Windows.Forms.Panel();
             this.panelMainmenu = new System.Windows.Forms.Panel();
             this.SongsContainerPanelFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelTestSOng = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelNameSong = new System.Windows.Forms.Label();
-            this.pbTestSong = new System.Windows.Forms.PictureBox();
             this.panelSongOptions = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelInfo = new System.Windows.Forms.Label();
@@ -57,8 +53,6 @@
             this.panelLoadingMainMenu.SuspendLayout();
             this.panelMainmenu.SuspendLayout();
             this.SongsContainerPanelFlow.SuspendLayout();
-            this.panelTestSOng.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).BeginInit();
             this.panelSongOptions.SuspendLayout();
             this.panelInfoSong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).BeginInit();
@@ -90,7 +84,6 @@
             // SongsContainerPanelFlow
             // 
             this.SongsContainerPanelFlow.AutoScroll = true;
-            this.SongsContainerPanelFlow.Controls.Add(this.panelTestSOng);
             this.SongsContainerPanelFlow.Controls.Add(this.panelSongOptions);
             this.SongsContainerPanelFlow.Controls.Add(this.panelInfoSong);
             this.SongsContainerPanelFlow.Controls.Add(this.flowLayoutPanel1);
@@ -101,58 +94,6 @@
             this.SongsContainerPanelFlow.Size = new System.Drawing.Size(643, 320);
             this.SongsContainerPanelFlow.TabIndex = 3;
             // 
-            // panelTestSOng
-            // 
-            this.panelTestSOng.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
-            this.panelTestSOng.Controls.Add(this.label2);
-            this.panelTestSOng.Controls.Add(this.labelNameSong);
-            this.panelTestSOng.Controls.Add(this.pbTestSong);
-            this.panelTestSOng.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTestSOng.Enabled = false;
-            this.panelTestSOng.Location = new System.Drawing.Point(1, 1);
-            this.panelTestSOng.Margin = new System.Windows.Forms.Padding(1);
-            this.panelTestSOng.Name = "panelTestSOng";
-            this.panelTestSOng.Size = new System.Drawing.Size(637, 67);
-            this.panelTestSOng.TabIndex = 0;
-            this.panelTestSOng.Visible = false;
-            this.panelTestSOng.Click += new System.EventHandler(this.panelTestSOng_Click);
-            this.panelTestSOng.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTestSOng_Paint);
-            this.panelTestSOng.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTestSOng_MouseDown);
-            this.panelTestSOng.MouseLeave += new System.EventHandler(this.panelTestSOng_MouseLeave);
-            this.panelTestSOng.MouseHover += new System.EventHandler(this.panelTestSOng_MouseHover);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(528, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
-            // 
-            // labelNameSong
-            // 
-            this.labelNameSong.AutoSize = true;
-            this.labelNameSong.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelNameSong.Location = new System.Drawing.Point(167, 28);
-            this.labelNameSong.Name = "labelNameSong";
-            this.labelNameSong.Size = new System.Drawing.Size(114, 13);
-            this.labelNameSong.TabIndex = 1;
-            this.labelNameSong.Text = "ASI DFLKSDFKLSDJF";
-            this.labelNameSong.Click += new System.EventHandler(this.labelNameSong_Click);
-            // 
-            // pbTestSong
-            // 
-            this.pbTestSong.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbTestSong.Location = new System.Drawing.Point(0, 0);
-            this.pbTestSong.Name = "pbTestSong";
-            this.pbTestSong.Size = new System.Drawing.Size(99, 67);
-            this.pbTestSong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbTestSong.TabIndex = 0;
-            this.pbTestSong.TabStop = false;
-            this.pbTestSong.Click += new System.EventHandler(this.pbTestSong_Click);
-            // 
             // panelSongOptions
             // 
             this.panelSongOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(39)))), ((int)(((byte)(65)))));
@@ -161,7 +102,7 @@
             this.panelSongOptions.Controls.Add(this.label3);
             this.panelSongOptions.Controls.Add(this.label1);
             this.panelSongOptions.Enabled = false;
-            this.panelSongOptions.Location = new System.Drawing.Point(3, 72);
+            this.panelSongOptions.Location = new System.Drawing.Point(3, 3);
             this.panelSongOptions.Name = "panelSongOptions";
             this.panelSongOptions.Size = new System.Drawing.Size(200, 126);
             this.panelSongOptions.TabIndex = 3;
@@ -222,7 +163,7 @@
             this.panelInfoSong.Controls.Add(this.label6);
             this.panelInfoSong.Controls.Add(this.labelGenre);
             this.panelInfoSong.Enabled = false;
-            this.panelInfoSong.Location = new System.Drawing.Point(209, 72);
+            this.panelInfoSong.Location = new System.Drawing.Point(209, 3);
             this.panelInfoSong.Name = "panelInfoSong";
             this.panelInfoSong.Size = new System.Drawing.Size(200, 130);
             this.panelInfoSong.TabIndex = 4;
@@ -304,7 +245,7 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.DimGray;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(415, 72);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(415, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
             this.flowLayoutPanel1.TabIndex = 5;
@@ -312,7 +253,7 @@
             // panelplaylit
             // 
             this.panelplaylit.AutoScroll = true;
-            this.panelplaylit.Location = new System.Drawing.Point(421, 72);
+            this.panelplaylit.Location = new System.Drawing.Point(421, 3);
             this.panelplaylit.Name = "panelplaylit";
             this.panelplaylit.Size = new System.Drawing.Size(182, 63);
             this.panelplaylit.TabIndex = 6;
@@ -378,9 +319,6 @@
             this.panelMainmenu.ResumeLayout(false);
             this.SongsContainerPanelFlow.ResumeLayout(false);
             this.SongsContainerPanelFlow.PerformLayout();
-            this.panelTestSOng.ResumeLayout(false);
-            this.panelTestSOng.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTestSong)).EndInit();
             this.panelSongOptions.ResumeLayout(false);
             this.panelInfoSong.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoading)).EndInit();
@@ -396,11 +334,7 @@
         private System.Windows.Forms.PictureBox pictureBoxLoading;
         private System.Windows.Forms.Label labelLoading;
         private System.Windows.Forms.Panel panelMainmenu;
-        private System.Windows.Forms.Panel panelTestSOng;
-        private System.Windows.Forms.PictureBox pbTestSong;
-        private System.Windows.Forms.Label labelNameSong;
         private System.Windows.Forms.FlowLayoutPanel SongsContainerPanelFlow;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelSongOptions;
         private System.Windows.Forms.Label labelInfo;
         private System.Windows.Forms.Label label3;
