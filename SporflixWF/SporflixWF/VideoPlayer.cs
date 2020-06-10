@@ -12,6 +12,7 @@ using TagLib;
 using Spotflix;
 using AxWMPLib;
 using WMPLib;
+using System.IO;
 
 namespace SporflixWF
 {

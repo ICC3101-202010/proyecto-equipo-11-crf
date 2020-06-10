@@ -24,22 +24,33 @@ namespace Entrega2
                     {
                         string[] sep = { "and" };
                         string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
-                        foreach (string subitem in subfilters)
+
+
+                        foreach (var song in songs)
                         {
-                            foreach (var song in songs)
+                            int a = 1;
+                            foreach (string subitem in subfilters)
                             {
-                                if (song.Titulo_Cancion.Contains(subitem) == true)
+                                string sub = subitem.Replace(" ", "");
+                                if (song.Titulo_Cancion.Contains(sub) == false)
                                 {
-                                    final_search.Add(song);
+                                    a = 2;
                                 }
+
                             }
+                            if (a == 1)
+                            {
+                                final_search.Add(song);
+                            }
+
                         }
                     }
                     else
                     {
                         foreach (var song in songs)
                         {
-                            if (song.Titulo_Cancion.Contains(item) == true)
+                            string it = item.Replace(" ", "");
+                            if (song.Titulo_Cancion.Contains(it) == true)
                             {
                                 final_search.Add(song);
                             }
@@ -51,16 +62,27 @@ namespace Entrega2
             {
                 string[] separator = { "and" };
                 string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-                foreach (string item in filters)
+
+
+                foreach (var song in songs)
                 {
-                    foreach (var song in songs)
+                    int a = 1;
+                    foreach (string item in filters)
                     {
-                        
-                        if (song.Titulo_Cancion.Contains(item) == true)
+                        string it = item.Replace(" ", "");
+                        Console.WriteLine(it);
+                        if (song.Titulo_Cancion.Contains(it) == false)
                         {
-                            final_search.Add(song);
+                            a = 2;
+                            Console.WriteLine("entre");
                         }
+
                     }
+                    if (a == 1)
+                    {
+                        final_search.Add(song);
+                    }
+
                 }
             }
             else
@@ -104,27 +126,37 @@ namespace Entrega2
                 string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
                 foreach (string item in filters)
                 {
-                    
                     if (item.Contains("and"))
                     {
                         string[] sep = { "and" };
                         string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
-                        foreach (string subitem in subfilters)
+                        
+                        
+                        foreach (var song in songs)
                         {
-                            foreach (var song in songs)
+                            int a = 1;
+                            foreach (string subitem in subfilters)
                             {
-                                if (song.Username.Contains(subitem) == true)
+                                string sub = subitem.Replace(" ", "");
+                                if (song.Username.Contains(sub) == false)
                                 {
-                                    final_search.Add(song);
+                                    a = 2;
                                 }
+
                             }
+                            if (a == 1)
+                            {
+                                final_search.Add(song);
+                            }
+
                         }
                     }
                     else
                     {
+                        string it = item.Replace(" ", "");
                         foreach (var song in songs)
                         {
-                            if (song.Username.Contains(item) == true)
+                            if (song.Username.Contains(it) == true)
                             {
                                 final_search.Add(song);
                             }
@@ -136,16 +168,27 @@ namespace Entrega2
             {
                 string[] separator = { "and" };
                 string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-                foreach (string item in filters)
+                
+                
+                foreach (var song in songs)
                 {
-                    foreach (var song in songs)
+                    int a = 1;
+                    foreach (string item in filters)
                     {
-
-                        if (song.Username.Contains(item) == true)
+                        string it = item.Replace(" ", "");
+                        Console.WriteLine(it);
+                        if (song.Username.Contains(it) == false)
                         {
-                            final_search.Add(song);
+                            a = 2;
+                            Console.WriteLine("entre");
                         }
+                        
                     }
+                    if (a == 1)
+                    {
+                        final_search.Add(song);
+                    }
+
                 }
             }
             else
@@ -177,22 +220,33 @@ namespace Entrega2
                     {
                         string[] sep = { "and" };
                         string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
-                        foreach (string subitem in subfilters)
+
+
+                        foreach (var song in songs)
                         {
-                            foreach (var song in songs)
+                            int a = 1;
+                            foreach (string subitem in subfilters)
                             {
-                                if (song.NameVideo.Contains(subitem) == true)
+                                string sub = subitem.Replace(" ", "");
+                                if (song.NameVideo.Contains(sub) == false)
                                 {
-                                    final_search.Add(song);
+                                    a = 2;
                                 }
+
                             }
+                            if (a == 1)
+                            {
+                                final_search.Add(song);
+                            }
+
                         }
                     }
                     else
                     {
+                        string it = item.Replace(" ", "");
                         foreach (var song in songs)
                         {
-                            if (song.NameVideo.Contains(item) == true)
+                            if (song.NameVideo.Contains(it) == true)
                             {
                                 final_search.Add(song);
                             }
@@ -204,16 +258,27 @@ namespace Entrega2
             {
                 string[] separator = { "and" };
                 string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-                foreach (string item in filters)
-                {
-                    foreach (var song in songs)
-                    {
 
-                        if (song.NameVideo.Contains(item) == true)
+
+                foreach (var song in songs)
+                {
+                    int a = 1;
+                    foreach (string item in filters)
+                    {
+                        string it = item.Replace(" ", "");
+                        Console.WriteLine(it);
+                        if (song.NameVideo.Contains(it) == false)
                         {
-                            final_search.Add(song);
+                            a = 2;
+                            Console.WriteLine("entre");
                         }
+
                     }
+                    if (a == 1)
+                    {
+                        final_search.Add(song);
+                    }
+
                 }
             }
             else
@@ -261,22 +326,33 @@ namespace Entrega2
                     {
                         string[] sep = { "and" };
                         string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
-                        foreach (string subitem in subfilters)
+
+
+                        foreach (var song in songs)
                         {
-                            foreach (var song in songs)
+                            int a = 1;
+                            foreach (string subitem in subfilters)
                             {
-                                if (song.NombrePlaylist.Contains(subitem) == true)
+                                string sub = subitem.Replace(" ", "");
+                                if (song.NombrePlaylist.Contains(sub) == false)
                                 {
-                                    final_search.Add(song);
+                                    a = 2;
                                 }
+
                             }
+                            if (a == 1)
+                            {
+                                final_search.Add(song);
+                            }
+
                         }
                     }
                     else
                     {
+                        string it = item.Replace(" ", "");
                         foreach (var song in songs)
                         {
-                            if (song.NombrePlaylist.Contains(item) == true)
+                            if (song.NombrePlaylist.Contains(it) == true)
                             {
                                 final_search.Add(song);
                             }
@@ -288,16 +364,27 @@ namespace Entrega2
             {
                 string[] separator = { "and" };
                 string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-                foreach (string item in filters)
-                {
-                    foreach (var song in songs)
-                    {
 
-                        if (song.NombrePlaylist.Contains(item) == true)
+
+                foreach (var song in songs)
+                {
+                    int a = 1;
+                    foreach (string item in filters)
+                    {
+                        string it = item.Replace(" ", "");
+                        Console.WriteLine(it);
+                        if (song.NombrePlaylist.Contains(it) == false)
                         {
-                            final_search.Add(song);
+                            a = 2;
+                            Console.WriteLine("entre");
                         }
+
                     }
+                    if (a == 1)
+                    {
+                        final_search.Add(song);
+                    }
+
                 }
             }
             else
@@ -329,22 +416,33 @@ namespace Entrega2
                     {
                         string[] sep = { "and" };
                         string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
-                        foreach (string subitem in subfilters)
+
+
+                        foreach (var song in songs)
                         {
-                            foreach (var song in songs)
+                            int a = 1;
+                            foreach (string subitem in subfilters)
                             {
-                                if (song.Banda.Contains(subitem) == true)
+                                string sub = subitem.Replace(" ", "");
+                                if (song.Banda.Contains(sub) == false)
                                 {
-                                    final_search.Add(song);
+                                    a = 2;
                                 }
+
                             }
+                            if (a == 1)
+                            {
+                                final_search.Add(song);
+                            }
+
                         }
                     }
                     else
                     {
+                        string it = item.Replace(" ", "");
                         foreach (var song in songs)
                         {
-                            if (song.Banda.Contains(item) == true)
+                            if (song.Banda.Contains(it) == true)
                             {
                                 final_search.Add(song);
                             }
@@ -356,16 +454,27 @@ namespace Entrega2
             {
                 string[] separator = { "and" };
                 string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-                foreach (string item in filters)
-                {
-                    foreach (var song in songs)
-                    {
 
-                        if (song.Banda.Contains(item) == true)
+
+                foreach (var song in songs)
+                {
+                    int a = 1;
+                    foreach (string item in filters)
+                    {
+                        string it = item.Replace(" ", "");
+                        Console.WriteLine(it);
+                        if (song.Banda.Contains(it) == false)
                         {
-                            final_search.Add(song);
+                            a = 2;
+                            Console.WriteLine("entre");
                         }
+
                     }
+                    if (a == 1)
+                    {
+                        final_search.Add(song);
+                    }
+
                 }
             }
             else
@@ -398,22 +507,33 @@ namespace Entrega2
                     {
                         string[] sep = { "and" };
                         string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
-                        foreach (string subitem in subfilters)
+
+
+                        foreach (var song in songs)
                         {
-                            foreach (var song in songs)
+                            int a = 1;
+                            foreach (string subitem in subfilters)
                             {
-                                if (song.Album.Contains(subitem) == true)
+                                string sub = subitem.Replace(" ", "");
+                                if (song.Album.Contains(sub) == false)
                                 {
-                                    final_search.Add(song);
+                                    a = 2;
                                 }
+
                             }
+                            if (a == 1)
+                            {
+                                final_search.Add(song);
+                            }
+
                         }
                     }
                     else
                     {
+                        string it = item.Replace(" ", "");
                         foreach (var song in songs)
                         {
-                            if (song.Album.Contains(item) == true)
+                            if (song.Album.Contains(it) == true)
                             {
                                 final_search.Add(song);
                             }
@@ -425,16 +545,27 @@ namespace Entrega2
             {
                 string[] separator = { "and" };
                 string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-                foreach (string item in filters)
-                {
-                    foreach (var song in songs)
-                    {
 
-                        if (song.Album.Contains(item) == true)
+
+                foreach (var song in songs)
+                {
+                    int a = 1;
+                    foreach (string item in filters)
+                    {
+                        string it = item.Replace(" ", "");
+                        Console.WriteLine(it);
+                        if (song.Album.Contains(it) == false)
                         {
-                            final_search.Add(song);
+                            a = 2;
+                            Console.WriteLine("entre");
                         }
+
                     }
+                    if (a == 1)
+                    {
+                        final_search.Add(song);
+                    }
+
                 }
             }
             else
