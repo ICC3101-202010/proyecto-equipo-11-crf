@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using Entrega2;
 using System.IO;
 using System.Diagnostics.Contracts;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 
 namespace Spotflix
 {
@@ -113,7 +117,25 @@ namespace Spotflix
                 label_type.ForeColor = Color.Yellow;
 
                 pb_playlist.SizeMode = PictureBoxSizeMode.Zoom;
-
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<string> nombre = formatter.Deserialize(stream) as List<string>;
+                stream.Close();
+                IFormatter formatter3 = new BinaryFormatter();
+                Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
+                stream3.Close();
+                foreach (Usuario value in registrados)
+                {
+                    if (nombre[0] == value.Username)
+                    {
+                        value.My_Playlist.Add(actual);
+                    }
+                }
+                IFormatter formatter1 = new BinaryFormatter();
+                Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter1.Serialize(stream1, registrados);
+                stream1.Close();
                 Global.UserNow.My_Playlist.Add(actual);
 
                 pb_playlist.Image = actual.Imagen_personalizada;
@@ -183,8 +205,26 @@ namespace Spotflix
                     actual.Privacidad = true;
 
                 }
-            
-     
+
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("nombre.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<string> nombre = formatter.Deserialize(stream) as List<string>;
+                stream.Close();
+                IFormatter formatter3 = new BinaryFormatter();
+                Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
+                stream3.Close();
+                foreach (Usuario value in registrados)
+                {
+                    if (nombre[0] == value.Username)
+                    {
+                        value.My_Playlist.Add(actual);
+                    }
+                }
+                IFormatter formatter1 = new BinaryFormatter();
+                Stream stream1 = new FileStream("Registrados.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+                formatter1.Serialize(stream1, registrados);
+                stream1.Close();
                 Global.UserNow.My_Playlist.Add(actual);
 
                 pb_playlist.Image = actual.Imagen_personalizada;
