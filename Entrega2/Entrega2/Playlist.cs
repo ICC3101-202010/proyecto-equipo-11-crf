@@ -101,7 +101,14 @@ namespace Entrega2
             
             
         }
-       
-        
+        public void agregarVideoPlaylist(Video video)
+        {
+
+            videos.Add(video);
+            //Console.WriteLine("Cancion " + video.Titulo_Cancion + " agregada");
+
+        }
+
+
     }
 }

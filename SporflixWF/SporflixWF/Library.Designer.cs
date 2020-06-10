@@ -114,9 +114,10 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(347, 318);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(643, 318);
             this.flowLayoutPanel1.TabIndex = 6;
             this.flowLayoutPanel1.Visible = false;
             // 
@@ -163,7 +164,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(77, 69);
+            this.pictureBox2.Location = new System.Drawing.Point(77, 65);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 35);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -279,6 +280,7 @@
             this.radioButtonPrivate.TabIndex = 8;
             this.radioButtonPrivate.TabStop = true;
             this.radioButtonPrivate.UseVisualStyleBackColor = true;
+            this.radioButtonPrivate.Click += new System.EventHandler(this.radioButtonPrivate_Click);
             // 
             // Library
             // 

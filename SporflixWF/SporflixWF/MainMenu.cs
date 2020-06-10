@@ -77,6 +77,7 @@ namespace Spotflix
                 playlist_list.Size = new Size(182, 63);
                 playlist_list.AutoScroll = true;
                 song_options.BackColor = Color.FromArgb(82, 39, 65);
+                name_label.AutoSize = true;
 
                 //Color text labels
                 song_Info.ForeColor = Color.White;
@@ -153,8 +154,8 @@ namespace Spotflix
 
                 name_label.Text = song.Titulo_Cancion;
                 name_label.ForeColor = Color.White;
-                name_label.AutoSize = false;
-                name_label.Size = new Size(100, 17);
+                name_label.AutoSize = true;
+                //name_label.Size = new Size(100, 17);
 
 
                 song_panel.Controls.Add(song_image);
@@ -220,6 +221,7 @@ namespace Spotflix
                     song_Date.ForeColor = Color.White;
                     song_Genre.ForeColor = Color.White;
                     song_Rate.ForeColor = Color.White;
+                    song_plays.ForeColor = Color.White;
 
                     song_Artist.Text = "Artist :" + song.Banda;
                     song_Album.Text = "Album :" + song.Album;
@@ -624,8 +626,7 @@ namespace Spotflix
                         playlist_label.Add(playlist_name);
                         playlist_name.Dock = DockStyle.Top;
                         playlist_name.Click += new EventHandler(Addsong);
-                        //playlist_name.MouseHover += new EventHandler(Playlist_hover);
-                        //playlist_name.MouseLeave += new EventHandler(Playlist_leave);
+
                     }
 
                 };
@@ -662,7 +663,7 @@ namespace Spotflix
                     if (playlist.NombrePlaylist == label.Text) 
                     {
                         playlist.agregarCancionPlaylist(actual_song);
-                        labelNameSong.Text = actual_song.Titulo_Cancion;
+                        
                     }
 
 
@@ -819,6 +820,11 @@ namespace Spotflix
         }
 
         private void MainMenu_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelNameSong_Click(object sender, EventArgs e)
         {
 
         }
