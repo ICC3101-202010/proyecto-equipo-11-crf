@@ -10,29 +10,13 @@ descripción, calificación, etc.
 definir una o más palabras que son buscadas entre la información
 de las canciones (y videos).
 
-3 [ ]
-definir cuales personas deben estar (autores/actores) en la canción
-(o video).
-
 4 [ ]
 definir valores para las distintas características de
 personas que deben estar en la canción (o video) (sexo, edad, …).
 
-5 [ ]
-mayor, menor o igual a algún tamaño.
-
-6 [ ]
-mayor, menor o igual a alguna nota definida.
-
-7 [ ]
-para cada búsqueda se deben poder combinar los filtros
-utilizados. La combinación de los filtros puede ser tanto como un and, es decir, se buscan
-aquellas que cumplan con todos los filtros, o como un or, se buscan las canciones o videos
-que cumplan con al menos un filtro. Para los múltiples filtros se pueden combinar el uso
-de and y or.
-
-
 -----PLAYLISTS-------
+<<<<<<< HEAD
+=======
 8 [50%] Chopan (solo canciones)
 crear playlists con canciones (o videos). Un playlist no puede tener canciones
 y videos, los archivos multimedia deben ser el mismo tipo. Estas pueden ser privadas o
@@ -41,20 +25,9 @@ públicas. Si un usuario es privado, no puede tener playlist públicas.
 9 [✓] Chopan-->Canciones
 Se debe poder crear una cola de reproducción automática (lista que se reproduzca
 automáticamente) tanto para video como para canciones
+>>>>>>> 8313ce7896214e646e2ce55c09a62c5ffe2877b3
 
-
-
-10 [✓]
-Las canciones pueden o no ser descargadas, pero no las películas.
-
-11 [ ] BONUS
+6 [ ] BONUS
 Si el usuario cierra la aplicación y en dicho momento estaba reproduciendo algún archivo,
 entonces se debe guardar el tiempo de reproducción para que cuando vuelva a abrirla pueda
 continuar desde ahí.
-
-Chopan
-
-agrega next en la barra
-agrega el menu video en main menu
-crea listas publicas o privadas
-crea la opcion de agregar videos
