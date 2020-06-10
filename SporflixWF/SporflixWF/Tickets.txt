@@ -1,19 +1,2 @@
 ﻿
-1)[✓] 50% (solo musica)
-Cada canción debe tener información como el género, cantante, compositor,
-discografía, estudio, año de publicación, letra, etc. Por otra parte, los vídeos deben contener
-información como género, categoría, actores, director, estudio. año de publicación,
-descripción, calificación, etc.
 
---------BUSQUEDA-----
-
-4 [ ]
-definir valores para las distintas características de
-personas que deben estar en la canción (o video) (sexo, edad, …).
-
------PLAYLISTS-------
-
-6 [ ] BONUS
-Si el usuario cierra la aplicación y en dicho momento estaba reproduciendo algún archivo,
-entonces se debe guardar el tiempo de reproducción para que cuando vuelva a abrirla pueda
-continuar desde ahí.
