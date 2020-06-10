@@ -33,12 +33,12 @@ de and y or.
 
 
 -----PLAYLISTS-------
-8 [ ] Chopan
+8 [50%] Chopan (solo canciones)
 crear playlists con canciones (o videos). Un playlist no puede tener canciones
 y videos, los archivos multimedia deben ser el mismo tipo. Estas pueden ser privadas o
 públicas. Si un usuario es privado, no puede tener playlist públicas.
 
-9 [ ] Chopan-->Canciones
+9 [✓] Chopan-->Canciones
 Se debe poder crear una cola de reproducción automática (lista que se reproduzca
 automáticamente) tanto para video como para canciones
 

@@ -108,11 +108,13 @@
             this.panelTestSOng.Controls.Add(this.labelNameSong);
             this.panelTestSOng.Controls.Add(this.pbTestSong);
             this.panelTestSOng.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTestSOng.Enabled = false;
             this.panelTestSOng.Location = new System.Drawing.Point(1, 1);
             this.panelTestSOng.Margin = new System.Windows.Forms.Padding(1);
             this.panelTestSOng.Name = "panelTestSOng";
             this.panelTestSOng.Size = new System.Drawing.Size(637, 67);
             this.panelTestSOng.TabIndex = 0;
+            this.panelTestSOng.Visible = false;
             this.panelTestSOng.Click += new System.EventHandler(this.panelTestSOng_Click);
             this.panelTestSOng.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTestSOng_Paint);
             this.panelTestSOng.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTestSOng_MouseDown);
@@ -135,9 +137,10 @@
             this.labelNameSong.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelNameSong.Location = new System.Drawing.Point(167, 28);
             this.labelNameSong.Name = "labelNameSong";
-            this.labelNameSong.Size = new System.Drawing.Size(35, 13);
+            this.labelNameSong.Size = new System.Drawing.Size(114, 13);
             this.labelNameSong.TabIndex = 1;
-            this.labelNameSong.Text = "label2";
+            this.labelNameSong.Text = "ASI DFLKSDFKLSDJF";
+            this.labelNameSong.Click += new System.EventHandler(this.labelNameSong_Click);
             // 
             // pbTestSong
             // 

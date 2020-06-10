@@ -16,7 +16,8 @@ namespace Spotflix
     public partial class Library : UserControl
     {
         private Playlist actual;
-        int side = 2;
+        private Cancion actual_song;
+        int index;
         public Library()
         {
             InitializeComponent();
@@ -208,6 +209,7 @@ namespace Spotflix
                 pbAddRigth.Enabled = true;
                 pbAddRigth.Visible = true;
                 panel_playlist.Click += new EventHandler(InLibrary);
+                
             }
 
 
@@ -261,9 +263,9 @@ namespace Spotflix
             flowLayoutPanel1.Visible = true;
             flowLayoutPanel1.Controls.Clear();
             //panelLibrary.Visible = false;
-            foreach (Cancion song in actual.Canciones) 
+            foreach (Cancion song in actual.Canciones)
             {
-                
+
                 Panel song_panel = new Panel();
                 song_panel.Size = new Size(640, 67);
                 PictureBox song_image = new PictureBox();
@@ -388,12 +390,28 @@ namespace Spotflix
 
 
                 flowLayoutPanel1.Controls.Add(song_panel);
+                actual_song = song;
+               
+                
+                
 
             }
         
         }
 
         private void radioButtonPrivate_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Play(object sender, EventArgs e) 
+        {
+
+            
+            Form1.Queue_home = actual.Canciones;
+            Form1.Player.URL = actual_song.path;
+            Form1.Player.controls.play();
+        }
+        private void Selcted_Song() 
         {
 
         }
