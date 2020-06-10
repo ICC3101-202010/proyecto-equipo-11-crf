@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.PanelRegisterInformation = new System.Windows.Forms.Panel();
+            this.checkBoxAdminNo = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkboxAdminYes = new System.Windows.Forms.CheckBox();
             this.tConfirmPasswordRegistration = new System.Windows.Forms.TextBox();
             this.tPasswordRegistration = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,9 +51,6 @@
             this.labelMobileRegister = new System.Windows.Forms.Label();
             this.labelMailRegister = new System.Windows.Forms.Label();
             this.labelUsernameRegister = new System.Windows.Forms.Label();
-            this.checkboxAdminYes = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBoxAdminNo = new System.Windows.Forms.CheckBox();
             this.PanelRegisterInformation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +84,40 @@
             this.PanelRegisterInformation.Name = "PanelRegisterInformation";
             this.PanelRegisterInformation.Size = new System.Drawing.Size(643, 360);
             this.PanelRegisterInformation.TabIndex = 7;
+            // 
+            // checkBoxAdminNo
+            // 
+            this.checkBoxAdminNo.AutoSize = true;
+            this.checkBoxAdminNo.ForeColor = System.Drawing.SystemColors.Window;
+            this.checkBoxAdminNo.Location = new System.Drawing.Point(552, 75);
+            this.checkBoxAdminNo.Name = "checkBoxAdminNo";
+            this.checkBoxAdminNo.Size = new System.Drawing.Size(40, 17);
+            this.checkBoxAdminNo.TabIndex = 23;
+            this.checkBoxAdminNo.Text = "No";
+            this.checkBoxAdminNo.UseVisualStyleBackColor = true;
+            this.checkBoxAdminNo.CheckedChanged += new System.EventHandler(this.checkBoxAdminNo_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(370, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Admin?";
+            // 
+            // checkboxAdminYes
+            // 
+            this.checkboxAdminYes.AutoSize = true;
+            this.checkboxAdminYes.ForeColor = System.Drawing.SystemColors.Window;
+            this.checkboxAdminYes.Location = new System.Drawing.Point(460, 75);
+            this.checkboxAdminYes.Name = "checkboxAdminYes";
+            this.checkboxAdminYes.Size = new System.Drawing.Size(44, 17);
+            this.checkboxAdminYes.TabIndex = 8;
+            this.checkboxAdminYes.Text = "Yes";
+            this.checkboxAdminYes.UseVisualStyleBackColor = true;
+            this.checkboxAdminYes.CheckedChanged += new System.EventHandler(this.checkboxAdminYes_CheckedChanged);
             // 
             // tConfirmPasswordRegistration
             // 
@@ -169,6 +203,7 @@
             this.checkBoxNoRegister.TabStop = false;
             this.checkBoxNoRegister.Text = "No";
             this.checkBoxNoRegister.UseVisualStyleBackColor = true;
+            this.checkBoxNoRegister.CheckedChanged += new System.EventHandler(this.checkBoxNoRegister_CheckedChanged);
             // 
             // checkBoxYesRegister
             // 
@@ -181,6 +216,7 @@
             this.checkBoxYesRegister.TabStop = false;
             this.checkBoxYesRegister.Text = "Yes";
             this.checkBoxYesRegister.UseVisualStyleBackColor = true;
+            this.checkBoxYesRegister.CheckedChanged += new System.EventHandler(this.checkBoxYesRegister_CheckedChanged);
             // 
             // labelPreferencesRegister
             // 
@@ -203,6 +239,7 @@
             this.checkBoxPublicRegister.TabStop = false;
             this.checkBoxPublicRegister.Text = "Public";
             this.checkBoxPublicRegister.UseVisualStyleBackColor = true;
+            this.checkBoxPublicRegister.CheckedChanged += new System.EventHandler(this.checkBoxPublicRegister_CheckedChanged);
             // 
             // checkBoxPrivateRegister
             // 
@@ -214,6 +251,7 @@
             this.checkBoxPrivateRegister.TabIndex = 9;
             this.checkBoxPrivateRegister.Text = "Private";
             this.checkBoxPrivateRegister.UseVisualStyleBackColor = true;
+            this.checkBoxPrivateRegister.CheckedChanged += new System.EventHandler(this.checkBoxPrivateRegister_CheckedChanged);
             // 
             // labelPrivacityRegister
             // 
@@ -281,38 +319,6 @@
             this.labelUsernameRegister.Size = new System.Drawing.Size(55, 13);
             this.labelUsernameRegister.TabIndex = 0;
             this.labelUsernameRegister.Text = "Username";
-            // 
-            // checkboxAdminYes
-            // 
-            this.checkboxAdminYes.AutoSize = true;
-            this.checkboxAdminYes.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkboxAdminYes.Location = new System.Drawing.Point(460, 75);
-            this.checkboxAdminYes.Name = "checkboxAdminYes";
-            this.checkboxAdminYes.Size = new System.Drawing.Size(44, 17);
-            this.checkboxAdminYes.TabIndex = 8;
-            this.checkboxAdminYes.Text = "Yes";
-            this.checkboxAdminYes.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(370, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Admin?";
-            // 
-            // checkBoxAdminNo
-            // 
-            this.checkBoxAdminNo.AutoSize = true;
-            this.checkBoxAdminNo.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkBoxAdminNo.Location = new System.Drawing.Point(552, 75);
-            this.checkBoxAdminNo.Name = "checkBoxAdminNo";
-            this.checkBoxAdminNo.Size = new System.Drawing.Size(40, 17);
-            this.checkBoxAdminNo.TabIndex = 23;
-            this.checkBoxAdminNo.Text = "No";
-            this.checkBoxAdminNo.UseVisualStyleBackColor = true;
             // 
             // Register
             // 

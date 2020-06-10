@@ -46,7 +46,8 @@ namespace Spotflix
                 panelFinderUser.Visible = false;
                 panelButttons.Visible = true;
                 canciones = finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
-                foreach (Cancion cancion in canciones)
+                List<Cancion> can = canciones.Distinct().ToList();
+                foreach (Cancion cancion in can)
                 {
                     comboBoxFound.Items.Add(cancion.Titulo_Cancion);
                 }
@@ -153,6 +154,7 @@ namespace Spotflix
                 List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
                 stream3.Close();
                 List<Usuario> usuarios = finder1.buscar_usuario(busqueda, registrados);
+                usuarios = usuarios.Distinct().ToList();
                 foreach (Usuario value in usuarios)
                 {
                    comboBoxUsuarios.Items.Add(value.Username);

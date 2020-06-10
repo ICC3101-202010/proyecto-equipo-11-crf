@@ -76,21 +76,25 @@ namespace Spotflix
                 {
                     string privacidad = "Privada";
                     usuario.privacidad = privacidad;
+                    checkBoxPublicRegister.Checked = false;
                 }
                 if (checkBoxPublicRegister.Checked == true)
                 {
                     string privacidad = "Publica";
                     usuario.privacidad = privacidad;
+                    checkBoxPrivateRegister.Checked = false;
                 }
                 if (checkboxAdminYes.Checked == true)
                 {
                     string admin = "True";
                     usuario.Administrador = admin;
+                    checkBoxAdminNo.Checked = false;
                 }
                 if (checkBoxAdminNo.Checked == true)
                 {
                     string admin = "False";
                     usuario.Administrador = admin;
+                    checkboxAdminYes.Checked = false;
                 }
                 usuario.followers = "0";
                 usuario.following = "0";
@@ -174,17 +178,19 @@ namespace Spotflix
                     {
                         Form1.Preferences.BringToFront();
                         Form1.Preferences.Show();
+                        checkBoxNoRegister.Checked = false;
 
                     }
                     if (checkBoxNoRegister.Checked == true)
                     {
                         Form1.MailVerified.BringToFront();
                         Form1.MailVerified.Show();
+                        checkBoxYesRegister.Checked = false;
                     }
-                    if (checkBoxNoRegister.Checked == false & checkBoxYesRegister.Checked == false)
+                    /*if (checkBoxNoRegister.Checked == false & checkBoxYesRegister.Checked == false)
                     {
                         Form1.Welcome.Show();
-                    }
+                    }*/
                 }
                 else
                 {
@@ -210,6 +216,36 @@ namespace Spotflix
         {
             this.Hide();
             Form1.Welcome.Show();
+        }
+
+        private void checkBoxYesRegister_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxNoRegister.Checked = false;
+        }
+
+        private void checkBoxNoRegister_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxYesRegister.Checked = false;
+        }
+
+        private void checkboxAdminYes_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxAdminNo.Checked = false;
+        }
+
+        private void checkBoxAdminNo_CheckedChanged(object sender, EventArgs e)
+        {
+            checkboxAdminYes.Checked = false;
+        }
+
+        private void checkBoxPrivateRegister_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxPublicRegister.Checked = false;
+        }
+
+        private void checkBoxPublicRegister_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBoxPrivateRegister.Checked = false;
         }
     }
 }
