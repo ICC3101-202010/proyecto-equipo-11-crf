@@ -58,6 +58,7 @@ namespace Spotflix
             {
                 panelFinderUser.Visible = false;
                 List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Form1.Reproductor.Video_Library());
+                videos = videos.Distinct().ToList();
                 foreach (Video video in videos)
                 {
                     comboBoxFound.Items.Add(video.NameVideo);
@@ -72,6 +73,7 @@ namespace Spotflix
                 label2.Visible = false;
                 panelMostrar.Visible = false;
                 List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
+                playlists = playlists.Distinct().ToList();
                 foreach (Playlist playlist in playlists)
                 {
                     comboBoxUsuarios.Items.Add(playlist.NombrePlaylist);
@@ -92,7 +94,7 @@ namespace Spotflix
                 panelButttons.Visible = false;
                 comboBoxUsuarios.Items.Clear();
                 canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
-
+                canciones= canciones.Distinct().ToList();
                 foreach (Cancion cancion in canciones)
                 {
                     Repetidas.Add(cancion.Banda);
@@ -112,6 +114,7 @@ namespace Spotflix
                 panelButttons.Visible = false;
                 panelMostrar.Visible = false;
                 canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
+                canciones= canciones.Distinct().ToList();
                 foreach (Cancion cancion in canciones)
                 {
                     Repetidas.Add(cancion.Album);
@@ -128,6 +131,7 @@ namespace Spotflix
                 panelFinderUser.Visible = false;
                 panelButttons.Visible = true;
                 canciones = finder1.ratingReproducciones(Global.allSongs);
+                canciones= canciones.Distinct().ToList();
                 foreach (Cancion cancion in canciones)
                 {
                     comboBoxFound.Items.Add(cancion.Titulo_Cancion);
@@ -138,6 +142,7 @@ namespace Spotflix
                 panelFinderUser.Visible = false;
                 panelButttons.Visible = true;
                 canciones = finder1.ordenarPorNota(Global.allSongs);
+                canciones= canciones.Distinct().ToList();
                 foreach (Cancion cancion in canciones)
                 {
                     comboBoxFound.Items.Add(cancion.Titulo_Cancion);
@@ -169,7 +174,60 @@ namespace Spotflix
 
 
             }
+            else if (comboBoxFind.Text == "All")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = true;
+                canciones = finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
+                List<Cancion> can = canciones.Distinct().ToList();
+                foreach (Cancion cancion in can)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                }
+                List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Form1.Reproductor.Video_Library());
+                videos = videos.Distinct().ToList();
+                foreach (Video video in videos)
+                {
+                    comboBoxFound.Items.Add(video.NameVideo);
+                }
+                List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
+                playlists = playlists.Distinct().ToList();
+                foreach (Playlist playlist in playlists)
+                {
+                    comboBoxFound.Items.Add(playlist.NombrePlaylist);
+                }
+                canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                }
+                canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+
+                }
+                List<object> final = new List<object>();
+                foreach (var item in comboBoxFound.Items)
+                {
+                    final.Add(item);
+                }
+                final = final.Distinct().ToList();
+                comboBoxFound.Items.Clear();
+                foreach (var item in final)
+                {
+                    comboBoxFound.Items.Add(item);
+                }
+
+            }
             else if (comboBoxFind.Text == "By Rating")
+            {
+                panelByRating.Visible = true;
+                panelMostrar.Visible = true;
+            }
+            else if (comboBoxFind.Text == "By Size")
             {
                 panelByRating.Visible = true;
                 panelMostrar.Visible = true;
@@ -406,48 +464,138 @@ namespace Spotflix
                     Form1.Player.controls.play();
                 }
             }
+
         }
 
         private void buttonMayor_Click(object sender, EventArgs e)
         {
-            comboBoxFound.Items.Clear();
-            List<Cancion> ByRating = new List<Cancion>();
-            foreach (Cancion can in Global.allSongs)
+            if (comboBoxFind.Text == "By Rating")
             {
-                if (can.Rating > Int32.Parse(textBoxFind.Text))
+                comboBoxFound.Items.Clear();
+                List<Cancion> ByRating = new List<Cancion>();
+                foreach (Cancion can in Global.allSongs)
                 {
-                    ByRating.Add(can);
-                    comboBoxFound.Items.Add(can.Titulo_Cancion);
+                    if (can.Rating > Int32.Parse(textBoxFind.Text))
+                    {
+                        ByRating.Add(can);
+                        comboBoxFound.Items.Add(can.Titulo_Cancion);
+                    }
                 }
             }
+            else
+            {
+                comboBoxFound.Items.Clear();
+                List<Cancion> BySize = new List<Cancion>();
+                List<Video> BySize2 = new List<Video>();
+                foreach (Cancion can in Global.allSongs)
+                {
+                    long size = new System.IO.FileInfo(can.path).Length;
+                    if (size > Int32.Parse(textBoxFind.Text))
+                    {
+                        BySize.Add(can);
+                        comboBoxFound.Items.Add(can.Titulo_Cancion);
+                    }
+                }
+                foreach (Video vid in Global.allVideos)
+                {
+                    long size = new System.IO.FileInfo(vid.Path).Length;
+                    if (size > Int32.Parse(textBoxFind.Text))
+                    {
+                        BySize2.Add(vid);
+                        comboBoxFound.Items.Add(vid.NameVideo);
+                    }
+                }
+
+
+            }
+
         }
 
         private void buttonIgual_Click(object sender, EventArgs e)
         {
             comboBoxFound.Items.Clear();
-            List<Cancion> ByRating = new List<Cancion>();
-            foreach (Cancion can in Global.allSongs)
+            if (comboBoxFind.Text == "By Rating")
             {
-                if (can.Rating ==Int32.Parse(textBoxFind.Text))
+                List<Cancion> ByRating = new List<Cancion>();
+                foreach (Cancion can in Global.allSongs)
                 {
-                    ByRating.Add(can);
-                    comboBoxFound.Items.Add(can.Titulo_Cancion);
+                    if (can.Rating == Int32.Parse(textBoxFind.Text))
+                    {
+                        ByRating.Add(can);
+                        comboBoxFound.Items.Add(can.Titulo_Cancion);
+                    }
                 }
             }
+            else
+            {
+                comboBoxFound.Items.Clear();
+                List<Cancion> BySize = new List<Cancion>();
+                List<Video> BySize2 = new List<Video>();
+                foreach (Cancion can in Global.allSongs)
+                {
+                    long size = new System.IO.FileInfo(can.path).Length;
+                    if (size == Int32.Parse(textBoxFind.Text))
+                    {
+                        BySize.Add(can);
+                        comboBoxFound.Items.Add(can.Titulo_Cancion);
+                    }
+                }
+                foreach (Video vid in Global.allVideos)
+                {
+                    long size = new System.IO.FileInfo(vid.Path).Length;
+                    if (size == Int32.Parse(textBoxFind.Text))
+                    {
+                        BySize2.Add(vid);
+                        comboBoxFound.Items.Add(vid.NameVideo);
+                    }
+                }
+
+
+            }
+
         }
 
         private void buttonMenor_Click(object sender, EventArgs e)
         {
             comboBoxFound.Items.Clear();
-            List<Cancion> ByRating = new List<Cancion>();
-            foreach (Cancion can in Global.allSongs)
+            if (comboBoxFind.Text == "By Rating")
             {
-                if (can.Rating < Int32.Parse(textBoxFind.Text))
+                List<Cancion> ByRating = new List<Cancion>();
+                foreach (Cancion can in Global.allSongs)
                 {
-                    ByRating.Add(can);
-                    comboBoxFound.Items.Add(can.Titulo_Cancion);
+                    if (can.Rating < Int32.Parse(textBoxFind.Text))
+                    {
+                        ByRating.Add(can);
+                        comboBoxFound.Items.Add(can.Titulo_Cancion);
+                    }
                 }
             }
+            else
+            {
+                comboBoxFound.Items.Clear();
+                List<Cancion> BySize = new List<Cancion>();
+                List<Video> BySize2 = new List<Video>();
+                foreach (Cancion can in Global.allSongs)
+                {
+                    long size = new System.IO.FileInfo(can.path).Length;
+                    if (size < Int32.Parse(textBoxFind.Text))
+                    {
+                        BySize.Add(can);
+                        comboBoxFound.Items.Add(can.Titulo_Cancion);
+                    }
+                }
+                foreach(Video vid in Global.allVideos)
+                {
+                    long size = new System.IO.FileInfo(vid.Path).Length;
+                    if (size < Int32.Parse(textBoxFind.Text))
+                    {
+                        BySize2.Add(vid);
+                        comboBoxFound.Items.Add(vid.NameVideo);
+                    }
+                }
+
+            }
+            
         }
     }
 }

@@ -162,10 +162,12 @@
             "Actor/Director",
             "Band",
             "Album",
+            "User",
+            "All",
             "Top Streamed",
             "Top Rated",
-            "User",
-            "By Rating"});
+            "By Rating",
+            "By Size"});
             this.comboBoxFind.Location = new System.Drawing.Point(10, 88);
             this.comboBoxFind.Name = "comboBoxFind";
             this.comboBoxFind.Size = new System.Drawing.Size(121, 21);

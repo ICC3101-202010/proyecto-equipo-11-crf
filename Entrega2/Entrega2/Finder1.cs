@@ -584,39 +584,209 @@ namespace Entrega2
 
 
         }
-        public List<Video> buscarActorDirector(string name, List<Video> todosLosVideos)
+        public List<Video> buscarActorDirector(string song_name, List<Video> songs)
         {
-            List<Video> finalSearch = new List<Video>();
+            List<Video> final_search = new List<Video>();
 
-            
-                foreach (Video vid in todosLosVideos)
+            try
+            {
+                if (song_name.Contains("or"))
                 {
-                    int i = 0;
-                    try
+
+                    string[] separator = { "or" };
+                    string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string item in filters)
                     {
-                        if (vid.Director.NamePerson == name)
+                        if (item.Contains("and"))
                         {
-                            finalSearch.Add(vid);
-                        }
-                        while (i < vid.Actores.Count())
-                        {
-                            if (vid.Actores[i].NamePerson == name)
+                            string[] sep = { "and" };
+                            string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+
+
+                            foreach (var song in songs)
                             {
-                                finalSearch.Add(vid);
+                                int a = 1;
+                                foreach (string subitem in subfilters)
+                                {
+                                    string sub = subitem.Replace(" ", "");
+                                    if (song.Director.NamePerson.Contains(sub) == false)
+                                    {
+                                        a = 2;
+                                    }
+
+                                }
+                                if (a == 1)
+                                {
+                                    final_search.Add(song);
+                                }
+
                             }
                         }
-
+                        else
+                        {
+                            string it = item.Replace(" ", "");
+                            foreach (var song in songs)
+                            {
+                                if (song.Director.NamePerson.Contains(it) == true)
+                                {
+                                    final_search.Add(song);
+                                }
+                            }
+                        }
                     }
-                    catch (Exception ex)
+                }
+                else if (song_name.Contains("and"))
+                {
+                    string[] separator = { "and" };
+                    string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+
+
+                    foreach (var song in songs)
                     {
-                        Console.WriteLine("Error: "+ex.Message);
-                    }
+                        int a = 1;
+                        foreach (string item in filters)
+                        {
+                            string it = item.Replace(" ", "");
+                            Console.WriteLine(it);
+                            if (song.Director.NamePerson.Contains(it) == false)
+                            {
+                                a = 2;
+                                Console.WriteLine("entre");
+                            }
 
-                   
+                        }
+                        if (a == 1)
+                        {
+                            final_search.Add(song);
+                        }
+
+                    }
+                }
+                else
+                {
+                    foreach (var song in songs)
+                    {
+
+                        if (song.Director.NamePerson.Contains(song_name) == true)
+                        {
+                            final_search.Add(song);
+                        }
+                    }
                 }
 
-            
-            return finalSearch;
+                if (song_name.Contains("or"))
+                {
+
+                    string[] separator = { "or" };
+                    string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string item in filters)
+                    {
+                        if (item.Contains("and"))
+                        {
+                            string[] sep = { "and" };
+                            string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+
+
+                            foreach (var song in songs)
+                            {
+                                
+                                foreach (string subitem in subfilters)
+                                {
+                                    string sub = subitem.Replace(" ", "");
+                                    foreach (Actor ac in song.Actores)
+                                    {
+                                        int a = 1;
+                                        if (ac.NamePerson.Contains(sub) == false)
+                                        {
+                                            a = 2;
+                                        }
+                                        if (a == 1)
+                                        {
+                                            final_search.Add(song);
+                                        }
+                                    }
+                                    
+
+                                }
+                                
+
+                            }
+                        }
+                        else
+                        {
+                            string it = item.Replace(" ", "");
+                            foreach (var song in songs)
+                            {
+                                foreach(Actor ac in song.Actores)
+                                {
+                                    if (ac.NamePerson.Contains(it) == true)
+                                    {
+                                        final_search.Add(song);
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+                else if (song_name.Contains("and"))
+                {
+                    string[] separator = { "and" };
+                    string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+
+
+                    foreach (var song in songs)
+                    {
+                        
+                        foreach (string item in filters)
+                        {
+                            string it = item.Replace(" ", "");
+                            Console.WriteLine(it);
+                            foreach(Actor ac in song.Actores)
+                            {
+                                int a = 1;
+                                if (ac.NamePerson.Contains(it) == false)
+                                {
+                                    a = 2;
+                                }
+                                if (a == 1)
+                                {
+                                    final_search.Add(song);
+                                }
+                            }
+                            
+
+                        }
+                        
+
+                    }
+                }
+                else
+                {
+                    foreach (var song in songs)
+                    {
+                        foreach(Actor ac in song.Actores)
+                        {
+                            if (ac.NamePerson.Contains(song_name) == true)
+                            {
+                                final_search.Add(song);
+                            }
+                        }
+                        
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: "+ex.Message);
+            }
+
+            return final_search;
+
+
+
+
 
         }
         public List<Cancion> ratingReproducciones(List<Cancion> todasLasCanciones)
