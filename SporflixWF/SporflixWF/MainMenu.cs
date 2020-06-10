@@ -795,11 +795,7 @@ namespace Spotflix
         {
             panelInfoSong.Enabled = true;
             panelInfoSong.Visible = true;
-           // labelAlbum.Text = library[7].Album;
-            //labelGenre.Text = library[7].Genero;
-           // labelLaunchDate.Text = library[7].Fecha_Lanzamiento.ToString();
-           // label6.Text = library[7].Banda;
-           // labelRate.Text = library[7].Rating.ToString();
+
             panelSongOptions.Enabled = false;
             panelSongOptions.Visible = false;
         }
