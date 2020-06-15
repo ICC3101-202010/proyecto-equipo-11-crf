@@ -12,6 +12,7 @@ using System.IO;
 
 namespace Entrega2
 {
+    [Serializable]
     public class Video
     {
         private string nameVideo;
