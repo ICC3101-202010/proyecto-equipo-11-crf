@@ -45,6 +45,19 @@ namespace Spotflix
                 timer1.Stop();
                 ProgressBarSong.Value = 0;
             }
+            else if (player.playState == WMPLib.WMPPlayState.wmppsMediaEnded) 
+            {
+                labelDuration.Text = "0:00";
+                Form1.Queue_home = Form1.Reproductor.Queue(Form1.Actual);
+                if (current < cant)
+                {
+                    player.URL = Form1.Queue_home[current].path;
+                    current++;
+                    player.controls.next();
+
+                }
+
+            }
 
         }
         int min = 0;
@@ -96,6 +109,7 @@ namespace Spotflix
                 player.controls.next();
             
             }
+            RefreshSongStatus();
             
                     
 
@@ -110,14 +124,14 @@ namespace Spotflix
             //int status = 0;
             if (status == 0)
             {
-                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/pausa.png"));
+                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/video (1).png"));
                 pbPlayStop.Image = Image.FromFile(path);
                 player.controls.pause();
                 status = 1;
             }
             else if (status == 1) 
             {
-                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/video (1).png"));
+                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/pausa.png"));
                 pbPlayStop.Image = Image.FromFile(path);
                 player.controls.play();
                 status = 0;
