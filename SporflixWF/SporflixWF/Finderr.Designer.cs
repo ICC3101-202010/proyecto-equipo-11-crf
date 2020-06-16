@@ -61,6 +61,7 @@
             this.buttonDownload = new System.Windows.Forms.Button();
             this.labelDonload = new System.Windows.Forms.Label();
             this.buttonMetadata = new System.Windows.Forms.Button();
+            this.buttonLyrics = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelByRating.SuspendLayout();
             this.panelFinderUser.SuspendLayout();
@@ -226,10 +227,10 @@
             // 
             // panelMostrar
             // 
+            this.panelMostrar.Controls.Add(this.panelMetadata);
             this.panelMostrar.Controls.Add(this.flowLayoutPanel1);
             this.panelMostrar.Controls.Add(this.comboBoxFound);
             this.panelMostrar.Controls.Add(this.panelRate);
-            this.panelMostrar.Controls.Add(this.panelMetadata);
             this.panelMostrar.Controls.Add(this.panelButttons);
             this.panelMostrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelMostrar.Location = new System.Drawing.Point(305, 0);
@@ -335,6 +336,7 @@
             // 
             // panelButttons
             // 
+            this.panelButttons.Controls.Add(this.buttonLyrics);
             this.panelButttons.Controls.Add(this.buttonPlay);
             this.panelButttons.Controls.Add(this.labelFavorite);
             this.panelButttons.Controls.Add(this.ButtonFavorite);
@@ -342,9 +344,9 @@
             this.panelButttons.Controls.Add(this.buttonDownload);
             this.panelButttons.Controls.Add(this.labelDonload);
             this.panelButttons.Controls.Add(this.buttonMetadata);
-            this.panelButttons.Location = new System.Drawing.Point(170, 30);
+            this.panelButttons.Location = new System.Drawing.Point(170, 6);
             this.panelButttons.Name = "panelButttons";
-            this.panelButttons.Size = new System.Drawing.Size(148, 157);
+            this.panelButttons.Size = new System.Drawing.Size(148, 181);
             this.panelButttons.TabIndex = 11;
             this.panelButttons.Visible = false;
             // 
@@ -420,6 +422,16 @@
             this.buttonMetadata.UseVisualStyleBackColor = true;
             this.buttonMetadata.Click += new System.EventHandler(this.buttonMetadata_Click);
             // 
+            // buttonLyrics
+            // 
+            this.buttonLyrics.Location = new System.Drawing.Point(34, 148);
+            this.buttonLyrics.Name = "buttonLyrics";
+            this.buttonLyrics.Size = new System.Drawing.Size(75, 23);
+            this.buttonLyrics.TabIndex = 11;
+            this.buttonLyrics.Text = "Lyrics";
+            this.buttonLyrics.UseVisualStyleBackColor = true;
+            this.buttonLyrics.Click += new System.EventHandler(this.buttonLyrics_Click);
+            // 
             // Finderr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -483,5 +495,6 @@
         private System.Windows.Forms.Button buttonMenor;
         private System.Windows.Forms.Button buttonMayor;
         private System.Windows.Forms.Button buttonIgual;
+        private System.Windows.Forms.Button buttonLyrics;
     }
 }

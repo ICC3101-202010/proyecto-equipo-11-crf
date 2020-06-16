@@ -44,7 +44,19 @@ namespace Spotflix
 
                 timer1.Stop();
                 ProgressBarSong.Value = 0;
+                labelDuration.Text = "0:00";
+                Form1.Queue_home = Form1.Reproductor.Queue(Form1.Actual);
+                if (current < cant)
+                {
+                    player.URL = Form1.Queue_home[current].path;
+                    current++;
+                    player.controls.next();
+
+                }
+                timer1.Start();
+
             }
+
 
         }
         int min = 0;
@@ -57,7 +69,8 @@ namespace Spotflix
             int m = (int)time.Minutes;
             int s = (int)time.TotalSeconds;
             if( m == 59) { min = min + 1; }
-            labelDuration.Text = Convert.ToString(min) +":"+ Convert.ToString(m);
+            //labelDuration.Text = Convert.ToString(min) +":"+ Convert.ToString(m);
+            labelDuration.Text = (TimeSpan.FromMinutes(player.controls.currentPosition)).Hours.ToString() + ":" + (TimeSpan.FromMinutes(player.controls.currentPosition)).Minutes.ToString();
         }
 
         private void ProgressBarSong_ValueChanged(object sender, decimal value)
@@ -83,6 +96,7 @@ namespace Spotflix
         private void ProgressBarSong_Scroll_1(object sender, EventArgs e)
         {
             player.controls.currentPosition = ProgressBarSong.Value;
+            labelDuration.Text = (TimeSpan.FromMinutes(player.controls.currentPosition)).Hours.ToString() +":"+ (TimeSpan.FromMinutes(player.controls.currentPosition)).Minutes.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -96,6 +110,7 @@ namespace Spotflix
                 player.controls.next();
             
             }
+            RefreshSongStatus();
             
                     
 
@@ -110,14 +125,14 @@ namespace Spotflix
             //int status = 0;
             if (status == 0)
             {
-                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/pausa.png"));
+                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/video (1).png"));
                 pbPlayStop.Image = Image.FromFile(path);
                 player.controls.pause();
                 status = 1;
             }
             else if (status == 1) 
             {
-                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/video (1).png"));
+                string path = (Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../../ImagenesForm/pausa.png"));
                 pbPlayStop.Image = Image.FromFile(path);
                 player.controls.play();
                 status = 0;

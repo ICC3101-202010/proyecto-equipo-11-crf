@@ -610,5 +610,26 @@ namespace Spotflix
             }
             
         }
+
+        private void buttonLyrics_Click(object sender, EventArgs e)
+        {
+            foreach (Cancion cancion in Global.allSongs)
+            {
+                if (cancion.Titulo_Cancion == comboBoxFound.Text)
+                {
+                    if (cancion.Letra != null)
+                    {
+                        MessageBox.Show(cancion.Letra);
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("No Lyrics added to the Song");
+                    }
+
+                }
+            }
+
+        }
     }
 }
