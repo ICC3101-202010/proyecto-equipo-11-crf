@@ -137,7 +137,120 @@ namespace Entrega2
 
                 }
             }
+            if (song_name.Contains("or"))
+            {
+
+                string[] separator = { "or" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string item in filters)
+                {
+                    if (item.Contains("and"))
+                    {
+                        string[] sep = { "and" };
+                        string[] subfilters = item.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+
+
+                        foreach (var song in songs)
+                        {
+                            int a = 1;
+                            foreach (string subitem in subfilters)
+                            {
+                                string sub = subitem.Replace(" ", "");
+                                foreach (Actor actor in song.Actores)
+                                {
+                                    if (actor.Gender.Contains(sub) == false)
+                                    {
+                                        a = 2;
+                                    }
+                                    if (Convert.ToString(actor.Edad).Contains(sub) == false)
+                                    {
+                                        a = 2;
+                                    }
+
+                                }
+                            }
+                            if (a == 1)
+                            {
+                                final_search.Add(song);
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        string it = item.Replace(" ", "");
+                        foreach (var video in songs)
+                        {
+                            foreach (Actor actor in video.Actores)
+                            {
+                                if (actor.Gender.Contains(it) == true)
+                                {
+                                    final_search.Add(video);
+                                }
+                                if (Convert.ToString(actor.Edad).Contains(it) == true)
+                                {
+                                    final_search.Add(video);
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+            else if (song_name.Contains("and"))
+            {
+                string[] separator = { "and" };
+                string[] filters = song_name.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+
+
+                foreach (var song in songs)
+                {
+                    int a = 1;
+                    foreach (string item in filters)
+                    {
+                        string it = item.Replace(" ", "");
+                        foreach (Actor actor in song.Actores)
+                        {
+                            if (actor.Gender.Contains(it) == false)
+                            {
+                                a = 2;
+                            }
+                            if (Convert.ToString(actor.Edad).Contains(it) == false)
+                            {
+                                a = 2;
+                            }
+
+                        }
+
+                    }
+                    if (a == 1)
+                    {
+                        final_search.Add(song);
+                    }
+
+                }
+            }
+            else
+            {
+                foreach (var song in songs)
+                {
+
+                    foreach (Actor actor in song.Actores)
+                    {
+                        if (actor.Gender.Contains(song_name) == true)
+                        {
+                            final_search.Add(song);
+                        }
+                        if (Convert.ToString(actor.Edad).Contains(song_name) == true)
+                        {
+                            final_search.Add(song);
+                        }
+
+                    }
+                }
+            }
             return final_search;
+            
         }
         public List<Usuario> buscar_usuario(string song_name, List<Usuario> songs)
         {
