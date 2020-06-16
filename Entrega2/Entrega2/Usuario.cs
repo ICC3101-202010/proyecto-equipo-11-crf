@@ -75,7 +75,7 @@ namespace Entrega2
         public List<Usuario> MeSiguenUsuarios1 { get => MeSiguenUsuarios; set => MeSiguenUsuarios = value; }
         public List<Video> Videos_favoritos { get => videos_favoritos; set => videos_favoritos = value; }
 
-        public Usuario(int ID, string member, DateTime Member_expiration,string Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation, DateTime BirthDate) 
+        public Usuario(int ID, string member, DateTime Member_expiration,string Administrador,string Mail,string contraseña,string telefono, string NamePerson, string LastName, string Rut, string Nation) 
         {
             this.id = ID;
             this.member_expiration = Member_expiration;
@@ -87,7 +87,6 @@ namespace Entrega2
             this.namePerson = NamePerson;
             this.lastName = LastName;        
             this.nation = Nation;
-            this.birthDate = BirthDate;
             //this.canciones_favoritas = canciones_favoritas;
             //this.videos_favoritos = videos_favoritos;
         }

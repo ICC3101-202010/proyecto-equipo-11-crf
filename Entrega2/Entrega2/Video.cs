@@ -12,13 +12,14 @@ using System.IO;
 
 namespace Entrega2
 {
+    [Serializable]
     public class Video
     {
         private string nameVideo;
         private string direccionMemoria;
         private string genero;
         private int vistos;
-        private List<Actor> actores;
+        private List<Actor> actores1 = new List<Actor>();
         private Director director;
         private string estudio;
         private string caratula;
@@ -39,7 +40,7 @@ namespace Entrega2
         public int Vistos { get => vistos; set => vistos = value; }
         public string Estudio { get => estudio; set => estudio = value; }
         public string Caratula { get => caratula; set => caratula = value; }
-        internal List<Actor> Actores { get => actores; set => actores = value; }
+        internal List<Actor> Actores { get => Actores1; set => Actores1 = value; }
         internal Director Director { get => director; set => director = value; }
         public string Coment { get => coment; set => coment = value; }
         public uint Year { get => year; set => year = value; }
@@ -53,6 +54,7 @@ namespace Entrega2
         public int Weight { get => weight; set => weight = value; }
         public Image VideoImage { get => videoImage; set => videoImage = value; }
         public string Path { get => path; set => path = value; }
+        public List<Actor> Actores1 { get => actores1; set => actores1 = value; }
 
         public Video(string path)
         {

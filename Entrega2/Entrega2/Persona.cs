@@ -13,15 +13,16 @@ namespace Entrega2
         protected string lastName;
         protected string rut;
         protected string nation;
-        protected DateTime birthDate;
+        private int edad;
         protected string gender;
 
         public string NamePerson { get => namePerson; set => namePerson = value; }
         public string LastName { get => lastName; set => lastName = value; }
         public string Rut { get => rut; set => rut = value; }
         public string Nacion { get => nation; set => nation = value; }
-        public DateTime BirthDate { get => birthDate; set => birthDate = value; }
+        
         public string Gender { get => gender; set => gender = value; }
+        public int Edad { get => edad; set => edad = value; }
 
         /*public Persona(string namePerson, string lastName, string rut, string nation, DateTime birthDate, string gender)
         {

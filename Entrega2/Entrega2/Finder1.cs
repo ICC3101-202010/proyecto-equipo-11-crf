@@ -116,6 +116,29 @@ namespace Entrega2
             }
 
         }
+        public List<Video> buscarPorCaracteristica(string song_name, List<Video> songs)
+        {
+            List<Video> final_search = new List<Video>();
+            foreach (Video video in songs)
+            {
+                
+                video.Actores.Add(new Actor(songs, "Carlo", "Vitali", "Chile", 21, "male"));
+                video.Actores.Add(new Actor(songs, "Raimundo", "Correa", "Chile", 25, "male"));
+                foreach (Actor actor in video.Actores)
+                {
+                    if (actor.Gender.Contains(song_name) == true)
+                    {
+                        final_search.Add(video);
+                    }
+                    if (Convert.ToString(actor.Edad).Contains(song_name) == true)
+                    {
+                        final_search.Add(video);
+                    }
+
+                }
+            }
+            return final_search;
+        }
         public List<Usuario> buscar_usuario(string song_name, List<Usuario> songs)
         {
             List<Usuario> final_search = new List<Usuario>();

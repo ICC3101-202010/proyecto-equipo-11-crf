@@ -65,6 +65,19 @@ namespace Spotflix
                 }
                 panelButttons.Visible = false;
             }
+            else if (comboBoxFind.Text == "Person Characteristics")
+            {
+                panelFinderUser.Visible = false;
+                List<Video> nombres9 = finder1.buscarPorCaracteristica(textBoxFind.Text, Form1.Reproductor.Video_Library());
+                
+                nombres9 = nombres9.Distinct().ToList();
+                foreach (var video in nombres9)
+                {
+                    
+                    comboBoxFound.Items.Add(video.NameVideo);
+                }
+                panelButttons.Visible = false;
+            }
             else if (comboBoxFind.Text == "Playlist")
             {
                 comboBoxUsuarios.Items.Clear();

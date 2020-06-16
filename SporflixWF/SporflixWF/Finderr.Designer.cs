@@ -163,6 +163,7 @@
             "Band",
             "Album",
             "User",
+            "Person Characteristics",
             "All",
             "Top Streamed",
             "Top Rated",
