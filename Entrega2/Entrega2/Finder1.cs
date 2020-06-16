@@ -124,18 +124,7 @@ namespace Entrega2
                 
                 video.Actores.Add(new Actor(songs, "Carlo", "Vitali", "Chile", 21, "male"));
                 video.Actores.Add(new Actor(songs, "Raimundo", "Correa", "Chile", 25, "male"));
-                foreach (Actor actor in video.Actores)
-                {
-                    if (actor.Gender.Contains(song_name) == true)
-                    {
-                        final_search.Add(video);
-                    }
-                    if (Convert.ToString(actor.Edad).Contains(song_name) == true)
-                    {
-                        final_search.Add(video);
-                    }
-
-                }
+                
             }
             if (song_name.Contains("or"))
             {
@@ -155,18 +144,15 @@ namespace Entrega2
                             int a = 1;
                             foreach (string subitem in subfilters)
                             {
+                                
                                 string sub = subitem.Replace(" ", "");
                                 foreach (Actor actor in song.Actores)
                                 {
-                                    if (actor.Gender.Contains(sub) == false)
-                                    {
-                                        a = 2;
-                                    }
-                                    if (Convert.ToString(actor.Edad).Contains(sub) == false)
-                                    {
-                                        a = 2;
-                                    }
 
+                                    if ((actor.Gender.Contains(sub) == false) && (Convert.ToString(actor.Edad).Contains(sub) == false))
+                                    {
+                                        a = 2;
+                                    }
                                 }
                             }
                             if (a == 1)
@@ -209,24 +195,23 @@ namespace Entrega2
                     foreach (string item in filters)
                     {
                         string it = item.Replace(" ", "");
+                        Console.WriteLine(it);
                         foreach (Actor actor in song.Actores)
                         {
-                            if (actor.Gender.Contains(it) == false)
+                            Console.WriteLine(actor.Gender);
+                            Console.WriteLine(Convert.ToString(actor.Edad));
+                            if ((actor.Gender.Contains(it) == false) && (Convert.ToString(actor.Edad).Contains(it) == false))
                             {
+                                Console.WriteLine(song_name);
                                 a = 2;
                             }
-                            if (Convert.ToString(actor.Edad).Contains(it) == false)
-                            {
-                                a = 2;
-                            }
-
                         }
-
+                        if (a == 1)
+                        {
+                            final_search.Add(song);
+                        }
                     }
-                    if (a == 1)
-                    {
-                        final_search.Add(song);
-                    }
+                    
 
                 }
             }
