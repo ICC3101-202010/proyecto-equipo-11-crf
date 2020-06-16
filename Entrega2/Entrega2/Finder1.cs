@@ -153,12 +153,14 @@ namespace Entrega2
                                     {
                                         a = 2;
                                     }
+
+                                }
+                                if (a == 1)
+                                {
+                                    final_search.Add(song);
                                 }
                             }
-                            if (a == 1)
-                            {
-                                final_search.Add(song);
-                            }
+                            
 
                         }
                     }
@@ -202,7 +204,6 @@ namespace Entrega2
                             Console.WriteLine(Convert.ToString(actor.Edad));
                             if ((actor.Gender.Contains(it) == false) && (Convert.ToString(actor.Edad).Contains(it) == false))
                             {
-                                Console.WriteLine(song_name);
                                 a = 2;
                             }
                         }
