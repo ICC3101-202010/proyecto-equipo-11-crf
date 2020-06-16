@@ -44,9 +44,6 @@ namespace Spotflix
 
                 timer1.Stop();
                 ProgressBarSong.Value = 0;
-            }
-            else if (player.playState == WMPLib.WMPPlayState.wmppsMediaEnded) 
-            {
                 labelDuration.Text = "0:00";
                 Form1.Queue_home = Form1.Reproductor.Queue(Form1.Actual);
                 if (current < cant)
@@ -56,8 +53,10 @@ namespace Spotflix
                     player.controls.next();
 
                 }
+                timer1.Start();
 
             }
+
 
         }
         int min = 0;
