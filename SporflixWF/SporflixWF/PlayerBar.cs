@@ -69,7 +69,8 @@ namespace Spotflix
             int m = (int)time.Minutes;
             int s = (int)time.TotalSeconds;
             if( m == 59) { min = min + 1; }
-            labelDuration.Text = Convert.ToString(min) +":"+ Convert.ToString(m);
+            //labelDuration.Text = Convert.ToString(min) +":"+ Convert.ToString(m);
+            labelDuration.Text = (TimeSpan.FromMinutes(player.controls.currentPosition)).Hours.ToString() + ":" + (TimeSpan.FromMinutes(player.controls.currentPosition)).Minutes.ToString();
         }
 
         private void ProgressBarSong_ValueChanged(object sender, decimal value)
@@ -95,6 +96,7 @@ namespace Spotflix
         private void ProgressBarSong_Scroll_1(object sender, EventArgs e)
         {
             player.controls.currentPosition = ProgressBarSong.Value;
+            labelDuration.Text = (TimeSpan.FromMinutes(player.controls.currentPosition)).Hours.ToString() +":"+ (TimeSpan.FromMinutes(player.controls.currentPosition)).Minutes.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
