@@ -97,6 +97,12 @@ namespace Spotflix
             {
                 panelFinderUser.Visible = false;
                 panelButttons.Visible = false;
+                List<Video> videos = finder1.buscarActorDirector(textBoxFind.Text, Form1.Reproductor.Video_Library());
+                videos = videos.Distinct().ToList();
+                foreach (Video video in videos)
+                {
+                    comboBoxUsuarios.Items.Add(video);
+                }
             }
             else if (comboBoxFind.Text == "Band")
             {
