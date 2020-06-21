@@ -131,7 +131,9 @@ namespace Entrega2
                     video.Actores.Add(new Actor(songs, "Raimundo", "Correa", "Chile", 25, "male"));
                 }
                 cont += 1;
-                
+
+            
+
             }
             if (song_name.Contains("or"))
             {
@@ -716,7 +718,19 @@ namespace Entrega2
         public List<Video> buscarActorDirector(string song_name, List<Video> songs)
         {
             List<Video> final_search = new List<Video>();
-
+            int cont = 0;
+            foreach (Video video in songs)
+            {
+                if (cont < 2)
+                {
+                    video.Actores.Add(new Actor(songs, "carlo", "vitali", "Chile", 21, "male"));
+                }
+                else
+                {
+                    video.Actores.Add(new Actor(songs, "raimundo", "correa", "Chile", 25, "male"));
+                }
+                cont += 1;
+            }
             try
             {
                 if (song_name.Contains("or"))
@@ -738,16 +752,16 @@ namespace Entrega2
                                 foreach (string subitem in subfilters)
                                 {
                                     string sub = subitem.Replace(" ", "");
-                                    if (song.Director.NamePerson.Contains(sub) == false)
+                                    foreach (var actor in song.Actores)
                                     {
-                                        a = 2;
+                                        if (actor.NamePerson.Contains(sub) == false)
+                                        {
+                                            final_search.Add(song);
+                                        }
                                     }
-
+                                    
                                 }
-                                if (a == 1)
-                                {
-                                    final_search.Add(song);
-                                }
+                                
 
                             }
                         }
@@ -756,9 +770,12 @@ namespace Entrega2
                             string it = item.Replace(" ", "");
                             foreach (var song in songs)
                             {
-                                if (song.Director.NamePerson.Contains(it) == true)
+                                foreach (var actor in song.Actores)
                                 {
-                                    final_search.Add(song);
+                                    if (actor.NamePerson.Contains(song_name) == true)
+                                    {
+                                        final_search.Add(song);
+                                    }
                                 }
                             }
                         }
@@ -777,17 +794,19 @@ namespace Entrega2
                         {
                             string it = item.Replace(" ", "");
                             Console.WriteLine(it);
-                            if (song.Director.NamePerson.Contains(it) == false)
+                            foreach (var actor in song.Actores)
                             {
-                                a = 2;
-                                Console.WriteLine("entre");
+                                if (actor.NamePerson.Contains(song_name) == false)
+                                {
+                                    a = 2;
+                                }
                             }
-
+                            if (a == 1)
+                            {
+                                final_search.Add(song);
+                            }
                         }
-                        if (a == 1)
-                        {
-                            final_search.Add(song);
-                        }
+                        
 
                     }
                 }
@@ -795,11 +814,14 @@ namespace Entrega2
                 {
                     foreach (var song in songs)
                     {
-
-                        if (song.Director.NamePerson.Contains(song_name) == true)
+                        foreach (var actor in song.Actores)
                         {
-                            final_search.Add(song);
+                            if (actor.NamePerson.Contains(song_name) == true)
+                            {
+                                final_search.Add(song);
+                            }
                         }
+                        
                     }
                 }
 
@@ -908,6 +930,17 @@ namespace Entrega2
             }
             catch (Exception ex)
             {
+                foreach (var song in songs)
+                {
+                    foreach (Actor ac in song.Actores)
+                    {
+                        if (ac.NamePerson.Contains(song_name) == true)
+                        {
+                            final_search.Add(song);
+                        }
+                    }
+
+                }
                 Console.WriteLine("Error: "+ex.Message);
             }
 
