@@ -131,6 +131,9 @@ namespace Entrega2
                     video.Actores.Add(new Actor(songs, "Raimundo", "Correa", "Chile", 25, "male"));
                 }
                 cont += 1;
+
+            
+
             }
             if (song_name.Contains("or"))
             {
