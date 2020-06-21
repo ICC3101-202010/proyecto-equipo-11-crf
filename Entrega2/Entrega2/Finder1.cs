@@ -119,11 +119,18 @@ namespace Entrega2
         public List<Video> buscarPorCaracteristica(string song_name, List<Video> songs)
         {
             List<Video> final_search = new List<Video>();
+            int cont = 0;
             foreach (Video video in songs)
             {
-                
-                video.Actores.Add(new Actor(songs, "Carlo", "Vitali", "Chile", 21, "male"));
-                video.Actores.Add(new Actor(songs, "Raimundo", "Correa", "Chile", 25, "male"));
+                if (cont < 2)
+                {
+                    video.Actores.Add(new Actor(songs, "Carlo", "Vitali", "Chile", 21, "male"));
+                }
+                else
+                {
+                    video.Actores.Add(new Actor(songs, "Raimundo", "Correa", "Chile", 25, "male"));
+                }
+                cont += 1;
                 
             }
             if (song_name.Contains("or"))
