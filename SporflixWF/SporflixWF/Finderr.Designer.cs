@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelByRating = new System.Windows.Forms.Panel();
             this.buttonMenor = new System.Windows.Forms.Button();
@@ -43,6 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxUsuarios = new System.Windows.Forms.ComboBox();
             this.panelMostrar = new System.Windows.Forms.Panel();
+            this.panelMetadata = new System.Windows.Forms.Panel();
+            this.labelMetadata = new System.Windows.Forms.Label();
+            this.listBoxMetadata = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.comboBoxFound = new System.Windows.Forms.ComboBox();
             this.panelRate = new System.Windows.Forms.Panel();
@@ -50,10 +54,8 @@
             this.buttonAccept = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxRate = new System.Windows.Forms.TextBox();
-            this.panelMetadata = new System.Windows.Forms.Panel();
-            this.labelMetadata = new System.Windows.Forms.Label();
-            this.listBoxMetadata = new System.Windows.Forms.ListBox();
             this.panelButttons = new System.Windows.Forms.Panel();
+            this.buttonLyrics = new System.Windows.Forms.Button();
             this.buttonPlay = new System.Windows.Forms.Button();
             this.labelFavorite = new System.Windows.Forms.Label();
             this.ButtonFavorite = new System.Windows.Forms.Button();
@@ -61,18 +63,27 @@
             this.buttonDownload = new System.Windows.Forms.Button();
             this.labelDonload = new System.Windows.Forms.Label();
             this.buttonMetadata = new System.Windows.Forms.Button();
-            this.buttonLyrics = new System.Windows.Forms.Button();
+            this.panelCompuesta = new System.Windows.Forms.Panel();
+            this.comboBoxCompuesta = new System.Windows.Forms.ComboBox();
+            this.textBoxCompuesta = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSearchCompuesta = new System.Windows.Forms.Button();
+            this.buttonBackCompuesta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelByRating.SuspendLayout();
             this.panelFinderUser.SuspendLayout();
             this.panelMostrar.SuspendLayout();
-            this.panelRate.SuspendLayout();
             this.panelMetadata.SuspendLayout();
+            this.panelRate.SuspendLayout();
             this.panelButttons.SuspendLayout();
+            this.panelCompuesta.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.panelCompuesta);
             this.panel1.Controls.Add(this.panelByRating);
             this.panel1.Controls.Add(this.buttonBack);
             this.panel1.Controls.Add(this.textBoxFind);
@@ -240,6 +251,35 @@
             this.panelMostrar.Visible = false;
             this.panelMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMostrar_Paint);
             // 
+            // panelMetadata
+            // 
+            this.panelMetadata.Controls.Add(this.labelMetadata);
+            this.panelMetadata.Controls.Add(this.listBoxMetadata);
+            this.panelMetadata.Location = new System.Drawing.Point(19, 193);
+            this.panelMetadata.Name = "panelMetadata";
+            this.panelMetadata.Size = new System.Drawing.Size(323, 128);
+            this.panelMetadata.TabIndex = 7;
+            this.panelMetadata.Visible = false;
+            this.panelMetadata.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // labelMetadata
+            // 
+            this.labelMetadata.AutoSize = true;
+            this.labelMetadata.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelMetadata.Location = new System.Drawing.Point(9, 4);
+            this.labelMetadata.Name = "labelMetadata";
+            this.labelMetadata.Size = new System.Drawing.Size(55, 13);
+            this.labelMetadata.TabIndex = 0;
+            this.labelMetadata.Text = "Metadada";
+            // 
+            // listBoxMetadata
+            // 
+            this.listBoxMetadata.FormattingEnabled = true;
+            this.listBoxMetadata.Location = new System.Drawing.Point(20, 20);
+            this.listBoxMetadata.Name = "listBoxMetadata";
+            this.listBoxMetadata.Size = new System.Drawing.Size(279, 95);
+            this.listBoxMetadata.TabIndex = 1;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 244);
@@ -305,35 +345,6 @@
             this.textBoxRate.Size = new System.Drawing.Size(100, 20);
             this.textBoxRate.TabIndex = 0;
             // 
-            // panelMetadata
-            // 
-            this.panelMetadata.Controls.Add(this.labelMetadata);
-            this.panelMetadata.Controls.Add(this.listBoxMetadata);
-            this.panelMetadata.Location = new System.Drawing.Point(19, 193);
-            this.panelMetadata.Name = "panelMetadata";
-            this.panelMetadata.Size = new System.Drawing.Size(323, 128);
-            this.panelMetadata.TabIndex = 7;
-            this.panelMetadata.Visible = false;
-            this.panelMetadata.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // labelMetadata
-            // 
-            this.labelMetadata.AutoSize = true;
-            this.labelMetadata.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelMetadata.Location = new System.Drawing.Point(9, 4);
-            this.labelMetadata.Name = "labelMetadata";
-            this.labelMetadata.Size = new System.Drawing.Size(55, 13);
-            this.labelMetadata.TabIndex = 0;
-            this.labelMetadata.Text = "Metadada";
-            // 
-            // listBoxMetadata
-            // 
-            this.listBoxMetadata.FormattingEnabled = true;
-            this.listBoxMetadata.Location = new System.Drawing.Point(20, 20);
-            this.listBoxMetadata.Name = "listBoxMetadata";
-            this.listBoxMetadata.Size = new System.Drawing.Size(279, 95);
-            this.listBoxMetadata.TabIndex = 1;
-            // 
             // panelButttons
             // 
             this.panelButttons.Controls.Add(this.buttonLyrics);
@@ -349,6 +360,16 @@
             this.panelButttons.Size = new System.Drawing.Size(148, 181);
             this.panelButttons.TabIndex = 11;
             this.panelButttons.Visible = false;
+            // 
+            // buttonLyrics
+            // 
+            this.buttonLyrics.Location = new System.Drawing.Point(34, 148);
+            this.buttonLyrics.Name = "buttonLyrics";
+            this.buttonLyrics.Size = new System.Drawing.Size(75, 23);
+            this.buttonLyrics.TabIndex = 11;
+            this.buttonLyrics.Text = "Lyrics";
+            this.buttonLyrics.UseVisualStyleBackColor = true;
+            this.buttonLyrics.Click += new System.EventHandler(this.buttonLyrics_Click);
             // 
             // buttonPlay
             // 
@@ -422,15 +443,81 @@
             this.buttonMetadata.UseVisualStyleBackColor = true;
             this.buttonMetadata.Click += new System.EventHandler(this.buttonMetadata_Click);
             // 
-            // buttonLyrics
+            // panelCompuesta
             // 
-            this.buttonLyrics.Location = new System.Drawing.Point(34, 148);
-            this.buttonLyrics.Name = "buttonLyrics";
-            this.buttonLyrics.Size = new System.Drawing.Size(75, 23);
-            this.buttonLyrics.TabIndex = 11;
-            this.buttonLyrics.Text = "Lyrics";
-            this.buttonLyrics.UseVisualStyleBackColor = true;
-            this.buttonLyrics.Click += new System.EventHandler(this.buttonLyrics_Click);
+            this.panelCompuesta.Controls.Add(this.buttonBackCompuesta);
+            this.panelCompuesta.Controls.Add(this.buttonSearchCompuesta);
+            this.panelCompuesta.Controls.Add(this.textBoxCompuesta);
+            this.panelCompuesta.Controls.Add(this.comboBoxCompuesta);
+            this.panelCompuesta.Location = new System.Drawing.Point(3, 238);
+            this.panelCompuesta.Name = "panelCompuesta";
+            this.panelCompuesta.Size = new System.Drawing.Size(290, 105);
+            this.panelCompuesta.TabIndex = 12;
+            this.panelCompuesta.Visible = false;
+            // 
+            // comboBoxCompuesta
+            // 
+            this.comboBoxCompuesta.FormattingEnabled = true;
+            this.comboBoxCompuesta.Items.AddRange(new object[] {
+            "Song",
+            "Video",
+            "Playlist",
+            "Actor/Director",
+            "Band",
+            "Album",
+            "User",
+            "Person Characteristics",
+            "All",
+            "Top Streamed",
+            "Top Rated",
+            "By Rating",
+            "By Size"});
+            this.comboBoxCompuesta.Location = new System.Drawing.Point(7, 0);
+            this.comboBoxCompuesta.Name = "comboBoxCompuesta";
+            this.comboBoxCompuesta.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCompuesta.TabIndex = 0;
+            // 
+            // textBoxCompuesta
+            // 
+            this.textBoxCompuesta.Location = new System.Drawing.Point(154, 1);
+            this.textBoxCompuesta.Name = "textBoxCompuesta";
+            this.textBoxCompuesta.Size = new System.Drawing.Size(119, 20);
+            this.textBoxCompuesta.TabIndex = 1;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(20, 178);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Composed Search";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonSearchCompuesta
+            // 
+            this.buttonSearchCompuesta.Location = new System.Drawing.Point(179, 35);
+            this.buttonSearchCompuesta.Name = "buttonSearchCompuesta";
+            this.buttonSearchCompuesta.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchCompuesta.TabIndex = 4;
+            this.buttonSearchCompuesta.Text = "Search";
+            this.buttonSearchCompuesta.UseVisualStyleBackColor = true;
+            this.buttonSearchCompuesta.Click += new System.EventHandler(this.buttonSearchCompuesta_Click);
+            // 
+            // buttonBackCompuesta
+            // 
+            this.buttonBackCompuesta.Location = new System.Drawing.Point(179, 72);
+            this.buttonBackCompuesta.Name = "buttonBackCompuesta";
+            this.buttonBackCompuesta.Size = new System.Drawing.Size(75, 23);
+            this.buttonBackCompuesta.TabIndex = 6;
+            this.buttonBackCompuesta.Text = "Back";
+            this.buttonBackCompuesta.UseVisualStyleBackColor = true;
+            this.buttonBackCompuesta.Click += new System.EventHandler(this.buttonBackCompuesta_Click);
             // 
             // Finderr
             // 
@@ -448,12 +535,14 @@
             this.panelFinderUser.ResumeLayout(false);
             this.panelFinderUser.PerformLayout();
             this.panelMostrar.ResumeLayout(false);
-            this.panelRate.ResumeLayout(false);
-            this.panelRate.PerformLayout();
             this.panelMetadata.ResumeLayout(false);
             this.panelMetadata.PerformLayout();
+            this.panelRate.ResumeLayout(false);
+            this.panelRate.PerformLayout();
             this.panelButttons.ResumeLayout(false);
             this.panelButttons.PerformLayout();
+            this.panelCompuesta.ResumeLayout(false);
+            this.panelCompuesta.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -496,5 +585,12 @@
         private System.Windows.Forms.Button buttonMayor;
         private System.Windows.Forms.Button buttonIgual;
         private System.Windows.Forms.Button buttonLyrics;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelCompuesta;
+        private System.Windows.Forms.TextBox textBoxCompuesta;
+        private System.Windows.Forms.ComboBox comboBoxCompuesta;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button buttonBackCompuesta;
+        private System.Windows.Forms.Button buttonSearchCompuesta;
     }
 }

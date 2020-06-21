@@ -728,6 +728,17 @@ namespace Entrega2
                 }
                 cont += 1;
             }
+            foreach (var song in songs)
+            {
+                foreach (Actor ac in song.Actores)
+                {
+                    if (ac.NamePerson.Contains(song_name) == true)
+                    {
+                        final_search.Add(song);
+                    }
+                }
+                final_search.Add(song);
+            }
             try
             {
                 if (song_name.Contains("or"))

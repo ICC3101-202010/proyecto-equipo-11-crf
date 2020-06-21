@@ -101,8 +101,18 @@ namespace Spotflix
                 videos = videos.Distinct().ToList();
                 foreach (Video video in videos)
                 {
-                    comboBoxUsuarios.Items.Add(video);
+                    comboBoxUsuarios.Items.Add(video.NameVideo);
                 }
+
+                List<Video> nombres9 = finder1.buscarPorCaracteristica(textBoxFind.Text, Form1.Reproductor.Video_Library());
+
+                nombres9 = nombres9.Distinct().ToList();
+                foreach (var video in nombres9)
+                {
+
+                    comboBoxFound.Items.Add(video.NameVideo);
+                }
+               
             }
             else if (comboBoxFind.Text == "Band")
             {
@@ -636,6 +646,491 @@ namespace Spotflix
                 }
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelCompuesta.Visible = true;
+            buttonSearch.Visible = false;
+            buttonBack.Visible = false;
+        }
+
+        private void buttonBackCompuesta_Click(object sender, EventArgs e)
+        {
+            panelCompuesta.Visible = false;
+            buttonSearch.Visible = true;
+            buttonBack.Visible = true;
+            comboBoxFind.Text = "";
+            textBoxFind.Text = "";
+            Form1.MainMenu.Show();
+            panelFinderUser.Visible = false;
+            Form1.Finderr.Hide();
+            Form1.Register.Hide();
+            Form1.Login.Hide();
+            Form1.Preferences.Hide();
+            Form1.MailVerified.Hide();
+            Form1.Profile.Hide();
+        }
+
+        private void buttonSearchCompuesta_Click(object sender, EventArgs e)
+        {
+            comboBoxFound.Items.Clear();
+            labelDonload.Visible = false;
+            labelFavorite.Visible = false;
+            panelMostrar.Visible = true;
+            panelFinderUser.Visible = false;
+            panelButttons.Visible = true;
+            textBoxFind.Text = textBoxFind.Text.ToLower();
+
+            List<Cancion> canciones;
+
+            panelMostrar.Visible = true;
+            if (comboBoxFind.Text == "Song")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = true;
+                canciones = finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
+                List<Cancion> can = canciones.Distinct().ToList();
+                foreach (Cancion cancion in can)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                }
+
+
+            }
+            else if (comboBoxFind.Text == "Video")
+            {
+                panelFinderUser.Visible = false;
+                List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Form1.Reproductor.Video_Library());
+                videos = videos.Distinct().ToList();
+                foreach (Video video in videos)
+                {
+                    comboBoxFound.Items.Add(video.NameVideo);
+                }
+                panelButttons.Visible = false;
+            }
+            else if (comboBoxFind.Text == "Person Characteristics")
+            {
+                panelFinderUser.Visible = false;
+                List<Video> nombres9 = finder1.buscarPorCaracteristica(textBoxFind.Text, Form1.Reproductor.Video_Library());
+
+                nombres9 = nombres9.Distinct().ToList();
+                foreach (var video in nombres9)
+                {
+
+                    comboBoxFound.Items.Add(video.NameVideo);
+                }
+                panelButttons.Visible = false;
+            }
+            else if (comboBoxFind.Text == "Playlist")
+            {
+                comboBoxUsuarios.Items.Clear();
+                List<string> Repetidas = new List<string>();
+                List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
+                playlists = playlists.Distinct().ToList();
+                foreach (Playlist playlist in playlists)
+                {
+                    
+                    comboBoxFound.Items.Add(playlist.NombrePlaylist);
+                }
+                panelButttons.Visible = false;
+            }
+            else if (comboBoxFind.Text == "Actor/Director")
+            {
+                List<Video> videos = finder1.buscarActorDirector(textBoxFind.Text, Form1.Reproductor.Video_Library());
+                videos = videos.Distinct().ToList();
+                foreach (Video video in videos)
+                {
+                    comboBoxFound.Items.Add(video.NameVideo);
+                }
+
+                List<Video> nombres9 = finder1.buscarPorCaracteristica(textBoxFind.Text, Form1.Reproductor.Video_Library());
+
+                nombres9 = nombres9.Distinct().ToList();
+                foreach (var video in nombres9)
+                {
+
+                    comboBoxFound.Items.Add(video.NameVideo);
+                }
+
+            }
+            else if (comboBoxFind.Text == "Band")
+            {
+                List<string> Repetidas = new List<string>();
+                comboBoxUsuarios.Items.Clear();
+                canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    Repetidas.Add(cancion.Titulo_Cancion);
+                }
+                List<string> noRepetidas = Repetidas.Distinct().ToList();
+                foreach (string can in noRepetidas)
+                {
+                    comboBoxFound.Items.Add(can);
+                }
+            }
+
+            else if (comboBoxFind.Text == "Album")
+            {
+                List<string> Repetidas = new List<string>();
+                canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    Repetidas.Add(cancion.Titulo_Cancion);
+
+                }
+                List<string> noRepetidas = Repetidas.Distinct().ToList();
+                foreach (string can in noRepetidas)
+                {
+                    comboBoxFound.Items.Add(can);
+                }
+            }
+            else if (comboBoxFind.Text == "Top Streamed")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = true;
+                canciones = finder1.ratingReproducciones(Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                }
+            }
+            else if (comboBoxFind.Text == "Top Rated")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = true;
+                canciones = finder1.ordenarPorNota(Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                }
+            }
+            else if (comboBoxFind.Text == "User")
+            {
+                panelMostrar.Visible = false;
+                comboBoxUsuarios.Items.Clear();
+                string busqueda = textBoxFind.Text;
+                panelFinderUser.Visible = true;
+                IFormatter formatter3 = new BinaryFormatter();
+                Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
+                stream3.Close();
+                List<Usuario> usuarios = finder1.buscar_usuario(busqueda, registrados);
+                usuarios = usuarios.Distinct().ToList();
+                foreach (Usuario value in usuarios)
+                {
+                    comboBoxUsuarios.Items.Add(value.Username);
+                }
+
+
+
+                panelButttons.Visible = false;
+
+
+                panelFinderUser.Visible = true;
+
+
+            }
+            else if (comboBoxFind.Text == "All")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = true;
+                canciones = finder1.buscarCancion(textBoxFind.Text, Global.allSongs);
+                List<Cancion> can = canciones.Distinct().ToList();
+                foreach (Cancion cancion in can)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                }
+                List<Video> videos = finder1.buscarVideo(textBoxFind.Text, Form1.Reproductor.Video_Library());
+                videos = videos.Distinct().ToList();
+                foreach (Video video in videos)
+                {
+                    comboBoxFound.Items.Add(video.NameVideo);
+                }
+                List<Playlist> playlists = finder1.buscarPlaylist(textBoxFind.Text, Global.allPlaylists);
+                playlists = playlists.Distinct().ToList();
+                foreach (Playlist playlist in playlists)
+                {
+                    comboBoxFound.Items.Add(playlist.NombrePlaylist);
+                }
+                canciones = finder1.buscarArtista(textBoxFind.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+                }
+                canciones = finder1.searchAlbum(textBoxFind.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    comboBoxFound.Items.Add(cancion.Titulo_Cancion);
+
+                }
+                List<object> final = new List<object>();
+                foreach (var item in comboBoxFound.Items)
+                {
+                    final.Add(item);
+                }
+                final = final.Distinct().ToList();
+                comboBoxFound.Items.Clear();
+                foreach (var item in final)
+                {
+                    comboBoxFound.Items.Add(item);
+                }
+
+            }
+            else if (comboBoxFind.Text == "By Rating")
+            {
+                panelByRating.Visible = true;
+                panelMostrar.Visible = true;
+            }
+            else if (comboBoxFind.Text == "By Size")
+            {
+                panelByRating.Visible = true;
+                panelMostrar.Visible = true;
+            }
+
+
+
+            List<string> SegundaBusqueda = new List<string>();
+            List<string> BusquedaCompuesta = new List<string>();
+
+            if (comboBoxCompuesta.Text == "Song")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = true;
+                canciones = finder1.buscarCancion(textBoxCompuesta.Text, Global.allSongs);
+                List<Cancion> can = canciones.Distinct().ToList();
+                foreach (Cancion cancion in can)
+                {
+                    SegundaBusqueda.Add(cancion.Titulo_Cancion);
+                }
+
+                
+            }
+            else if (comboBoxCompuesta.Text == "Video")
+            {
+                panelFinderUser.Visible = false;
+                List<Video> videos = finder1.buscarVideo(textBoxCompuesta.Text, Form1.Reproductor.Video_Library());
+                videos = videos.Distinct().ToList();
+                foreach (Video video in videos)
+                {
+                    SegundaBusqueda.Add(video.NameVideo);
+                }
+                panelButttons.Visible = false;
+            }
+            else if (comboBoxCompuesta.Text == "Person Characteristics")
+            {
+                panelFinderUser.Visible = false;
+                List<Video> nombres9 = finder1.buscarPorCaracteristica(textBoxCompuesta.Text, Form1.Reproductor.Video_Library());
+
+                nombres9 = nombres9.Distinct().ToList();
+                foreach (var video in nombres9)
+                {
+
+                    SegundaBusqueda.Add(video.NameVideo);
+                }
+                panelButttons.Visible = false;
+            }
+            else if (comboBoxCompuesta.Text == "Playlist")
+            {
+                comboBoxUsuarios.Items.Clear();
+                List<string> Repetidas = new List<string>();
+                panelFinderUser.Visible = true;
+                label2.Visible = false;
+                panelMostrar.Visible = false;
+                List<Playlist> playlists = finder1.buscarPlaylist(textBoxCompuesta.Text, Global.allPlaylists);
+                playlists = playlists.Distinct().ToList();
+                foreach (Playlist playlist in playlists)
+                {
+                    comboBoxUsuarios.Items.Add(playlist.NombrePlaylist);
+                }
+                panelButttons.Visible = false;
+            }
+            else if (comboBoxCompuesta.Text == "Actor/Director")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = false;
+                List<Video> videos = finder1.buscarActorDirector(textBoxCompuesta.Text, Form1.Reproductor.Video_Library());
+                videos = videos.Distinct().ToList();
+                foreach (Video video in videos)
+                {
+                    comboBoxUsuarios.Items.Add(video.NameVideo);
+                }
+
+                List<Video> nombres9 = finder1.buscarPorCaracteristica(textBoxCompuesta.Text, Form1.Reproductor.Video_Library());
+
+                nombres9 = nombres9.Distinct().ToList();
+                foreach (var video in nombres9)
+                {
+
+                    SegundaBusqueda.Add(video.NameVideo);
+                }
+
+            }
+            else if (comboBoxCompuesta.Text == "Band")
+            {
+                List<string> Repetidas = new List<string>();
+                comboBoxUsuarios.Items.Clear();
+                canciones = finder1.buscarArtista(textBoxCompuesta.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    Repetidas.Add(cancion.Titulo_Cancion);
+                }
+                List<string> noRepetidas = Repetidas.Distinct().ToList();
+                foreach (string can in noRepetidas)
+                {
+                    SegundaBusqueda.Add(can);
+                }
+            }
+
+            else if (comboBoxCompuesta.Text == "Album")
+            {
+                List<string> Repetidas = new List<string>();
+                canciones = finder1.searchAlbum(textBoxCompuesta.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    Repetidas.Add(cancion.Titulo_Cancion);
+
+                }
+                List<string> noRepetidas = Repetidas.Distinct().ToList();
+                foreach (string can in noRepetidas)
+                {
+                    SegundaBusqueda.Add(can);
+                }
+            }
+            else if (comboBoxCompuesta.Text == "Top Streamed")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = true;
+                canciones = finder1.ratingReproducciones(Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    SegundaBusqueda.Add(cancion.Titulo_Cancion);
+                }
+            }
+            else if (comboBoxCompuesta.Text == "Top Rated")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = true;
+                canciones = finder1.ordenarPorNota(Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    SegundaBusqueda.Add(cancion.Titulo_Cancion);
+                }
+            }
+            else if (comboBoxCompuesta.Text == "User")
+            {
+                panelMostrar.Visible = false;
+                comboBoxUsuarios.Items.Clear();
+                string busqueda = textBoxFind.Text;
+                panelFinderUser.Visible = true;
+                IFormatter formatter3 = new BinaryFormatter();
+                Stream stream3 = new FileStream("Registrados.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+                List<Usuario> registrados = formatter3.Deserialize(stream3) as List<Usuario>;
+                stream3.Close();
+                List<Usuario> usuarios = finder1.buscar_usuario(busqueda, registrados);
+                usuarios = usuarios.Distinct().ToList();
+                foreach (Usuario value in usuarios)
+                {
+                    comboBoxUsuarios.Items.Add(value.Username);
+                }
+
+
+
+                panelButttons.Visible = false;
+
+
+                panelFinderUser.Visible = true;
+
+
+            }
+            else if (comboBoxCompuesta.Text == "All")
+            {
+                panelFinderUser.Visible = false;
+                panelButttons.Visible = true;
+                canciones = finder1.buscarCancion(textBoxCompuesta.Text, Global.allSongs);
+                List<Cancion> can = canciones.Distinct().ToList();
+                foreach (Cancion cancion in can)
+                {
+                    SegundaBusqueda.Add(cancion.Titulo_Cancion);
+                }
+                List<Video> videos = finder1.buscarVideo(textBoxCompuesta.Text, Form1.Reproductor.Video_Library());
+                videos = videos.Distinct().ToList();
+                foreach (Video video in videos)
+                {
+                    SegundaBusqueda.Add(video.NameVideo);
+                }
+                List<Playlist> playlists = finder1.buscarPlaylist(textBoxCompuesta.Text, Global.allPlaylists);
+                playlists = playlists.Distinct().ToList();
+                foreach (Playlist playlist in playlists)
+                {
+                    SegundaBusqueda.Add(playlist.NombrePlaylist);
+                }
+                canciones = finder1.buscarArtista(textBoxCompuesta.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    SegundaBusqueda.Add(cancion.Titulo_Cancion);
+                }
+                canciones = finder1.searchAlbum(textBoxCompuesta.Text, Global.allSongs);
+                canciones = canciones.Distinct().ToList();
+                foreach (Cancion cancion in canciones)
+                {
+                    SegundaBusqueda.Add(cancion.Titulo_Cancion);
+
+                }
+                List<object> final = new List<object>();
+                foreach (var item in SegundaBusqueda)
+                {
+                    final.Add(item);
+                }
+                final = final.Distinct().ToList();
+                SegundaBusqueda.Clear();
+                foreach (var item in final)
+                {
+                    SegundaBusqueda.Add(Convert.ToString(item));
+                }
+
+            }
+            else if (comboBoxCompuesta.Text == "By Rating")
+            {
+                panelByRating.Visible = true;
+                panelMostrar.Visible = true;
+            }
+            else if (comboBoxCompuesta.Text == "By Size")
+            {
+                panelByRating.Visible = true;
+                panelMostrar.Visible = true;
+            }
+
+            
+            foreach (var item in comboBoxFound.Items)
+            {
+                
+                foreach (string nombre in SegundaBusqueda)
+                {
+                    
+                    if (Convert.ToString(item) == nombre)
+                    {
+                        BusquedaCompuesta.Add(nombre);
+                    }
+                }
+            }
+            comboBoxFound.Items.Clear();
+            BusquedaCompuesta = BusquedaCompuesta.Distinct().ToList();
+            foreach (string found in BusquedaCompuesta)
+            {
+                comboBoxFound.Items.Add(found);
+            }
         }
     }
 }
