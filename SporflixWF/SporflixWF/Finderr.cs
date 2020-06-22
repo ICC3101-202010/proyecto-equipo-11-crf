@@ -485,6 +485,7 @@ namespace Spotflix
 
         private void buttonPlay_Click_1(object sender, EventArgs e)
         {
+            Form1.ProgresBar.Show();
             foreach(Cancion can in Form1.Reproductor.Library())
             {
                 if (comboBoxFound.Text == can.Titulo_Cancion)

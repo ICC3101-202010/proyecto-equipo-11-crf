@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using Entrega2;
 using WMPLib;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Spotflix
 {
     public partial class Mixer : UserControl
     {
+        
         public Mixer()
         {
             InitializeComponent();
@@ -84,6 +86,36 @@ namespace Spotflix
             List<Efecto> efectos = Form1.Reproductor.BibliotecaEfectos();
             efectPlayer.URL = efectos[3].path;
             efectPlayer.controls.play();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = "http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = "http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio2_mf_p";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = "http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p";
+        }
+
+        private void buttonRadio_Click(object sender, EventArgs e)
+        {
+            if (panelRadio.Visible == false)
+            {
+                panelRadio.Visible = true;
+                axWindowsMediaPlayer1.Visible = true;
+            }
+            else
+            {
+                panelRadio.Visible = false;
+                axWindowsMediaPlayer1.Ctlcontrols.stop();
+            }
+   
         }
     }
 }

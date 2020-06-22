@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mixer));
             this.comboBoxMixer = new System.Windows.Forms.ComboBox();
             this.buttonPlayMixer = new System.Windows.Forms.Button();
             this.buttonPause = new System.Windows.Forms.Button();
@@ -35,6 +36,14 @@
             this.buttonEfect2 = new System.Windows.Forms.Button();
             this.buttonEfect3 = new System.Windows.Forms.Button();
             this.buttonEfect4 = new System.Windows.Forms.Button();
+            this.buttonRadio = new System.Windows.Forms.Button();
+            this.panelRadio = new System.Windows.Forms.Panel();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panelRadio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxMixer
@@ -110,6 +119,71 @@
             this.buttonEfect4.UseVisualStyleBackColor = false;
             this.buttonEfect4.Click += new System.EventHandler(this.buttonEfect4_Click);
             // 
+            // buttonRadio
+            // 
+            this.buttonRadio.Location = new System.Drawing.Point(184, 76);
+            this.buttonRadio.Name = "buttonRadio";
+            this.buttonRadio.Size = new System.Drawing.Size(75, 23);
+            this.buttonRadio.TabIndex = 7;
+            this.buttonRadio.Text = "Radio";
+            this.buttonRadio.UseVisualStyleBackColor = true;
+            this.buttonRadio.Click += new System.EventHandler(this.buttonRadio_Click);
+            // 
+            // panelRadio
+            // 
+            this.panelRadio.Controls.Add(this.button3);
+            this.panelRadio.Controls.Add(this.button2);
+            this.panelRadio.Controls.Add(this.button1);
+            this.panelRadio.Controls.Add(this.axWindowsMediaPlayer1);
+            this.panelRadio.Location = new System.Drawing.Point(151, 180);
+            this.panelRadio.Name = "panelRadio";
+            this.panelRadio.Size = new System.Drawing.Size(398, 166);
+            this.panelRadio.TabIndex = 8;
+            this.panelRadio.Visible = false;
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(295, 166);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
+            this.axWindowsMediaPlayer1.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(291, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 51);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(291, 58);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(109, 51);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(291, 115);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(109, 51);
+            this.button3.TabIndex = 3;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Mixer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,6 +191,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(39)))));
             this.BackgroundImage = global::SporflixWF.Properties.Resources.dj;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.panelRadio);
+            this.Controls.Add(this.buttonRadio);
             this.Controls.Add(this.buttonEfect4);
             this.Controls.Add(this.buttonEfect3);
             this.Controls.Add(this.buttonEfect2);
@@ -126,6 +202,8 @@
             this.Controls.Add(this.comboBoxMixer);
             this.Name = "Mixer";
             this.Size = new System.Drawing.Size(552, 349);
+            this.panelRadio.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -139,5 +217,11 @@
         private System.Windows.Forms.Button buttonEfect2;
         private System.Windows.Forms.Button buttonEfect3;
         private System.Windows.Forms.Button buttonEfect4;
+        private System.Windows.Forms.Button buttonRadio;
+        private System.Windows.Forms.Panel panelRadio;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
